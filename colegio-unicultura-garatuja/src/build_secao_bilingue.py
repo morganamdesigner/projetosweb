@@ -12,12 +12,14 @@ import os
 import build_elementor_json as base
 from build_elementor_json import (
     DMSANS, HANKEN, INTER, NAVY, WHITE, YELLOW,
-    add, anim, button, container, dims, gap, heading, icon_list, image, px, text, typo, widget,
+    add, anim, button, container, dims, gap, heading, icon_list, image, image_setting, px, text, typo,
+    widget,
 )
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "secao-bilingue-elementor.json")
 CSS_FILE = os.path.join(HERE, "gt-bilingue.css")
+JS_FILE = os.path.join(HERE, "gt-bilingue.js")
 
 # IDs em outra faixa para não coincidir com os da página
 base._counter[0] = 5000
@@ -259,6 +261,8 @@ def marquee():
 def build_section():
     with open(CSS_FILE, encoding="utf-8") as fh:
         css = fh.read().strip()
+    with open(JS_FILE, encoding="utf-8") as fh:
+        js = fh.read().strip()
 
     row = container({
         "content_width": "full",
@@ -280,6 +284,14 @@ def build_section():
         "overflow": "hidden",
         "background_background": "classic",
         "background_color": YELLOW,
+        # Bandeira EUA/Reino Unido no Background Overlay. A opacidade abaixo (0.28) é o
+        # máximo: o gt-bilingue.js leva de 0 até ela conforme o card sobe na tela.
+        "background_overlay_background": "classic",
+        "background_overlay_image": image_setting("bandeira-eua-reino-unido.webp", ""),
+        "background_overlay_position": "center center",
+        "background_overlay_repeat": "no-repeat",
+        "background_overlay_size": "cover",
+        "background_overlay_opacity": px(0.28),
         "border_radius": dims(40),
         "border_radius_mobile": dims(24),
         "css_classes": "gt-bi-card",
@@ -294,7 +306,9 @@ def build_section():
         "padding": dims(40, 0, 0, 0),
         "padding_mobile": dims(24, 0, 0, 0),
         "css_classes": "gt-root gt-bilingue",
-    }, [card, widget("html", {"html": "<style>\n" + css + "\n</style>"})], inner=False)
+    }, [card, widget("html", {
+        "html": "<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>",
+    })], inner=False)
 
 
 def main():

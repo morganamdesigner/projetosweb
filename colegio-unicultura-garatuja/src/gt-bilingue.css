@@ -13,6 +13,12 @@
   white-space: nowrap;
 }
 
+/* Bandeira no fundo do card: a opacidade do overlay é controlada pelo scroll
+   (gt-bilingue.js); a transição curta deixa a mudança suave */
+.gt-bilingue .gt-bi-card::before {
+  transition: opacity 0.25s linear;
+}
+
 /* --------------------------------------------------------------------------
    Balões de fala sobre a foto ("Hello!" / "Olá!")
    -------------------------------------------------------------------------- */

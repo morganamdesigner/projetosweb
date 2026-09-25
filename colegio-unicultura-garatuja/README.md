@@ -251,6 +251,7 @@ Seção criada à parte, fora do Figma, para reforçar que a Garatuja é bilíng
 | Texto | Selo "Escola bilíngue · Bilingual school", H2 "Aqui, a infância fala **dois idiomas**" (faixa azul que se desenha ao aparecer), parágrafo, 3 destaques e o botão "Agendar uma visita". |
 | Foto | Foto de aula de inglês (placeholder `bilingue-aula-de-ingles.jpg`, 520 px de altura, raio 32) com dois balões de fala flutuando: **"Hello!"** (branco) e **"Olá!"** (azul). |
 | Cards que viram | Quatro cards com a palavra em português na frente. Ao passar o mouse ou tocar, o card gira e mostra a palavra em inglês: Brincar → Play, Cores → Colors, Amigos → Friends, Histórias → Stories. Ficam em 4 colunas no desktop e 2 × 2 no celular. |
+| Bandeira ao rolar | Conforme o card sobe na tela, uma imagem da bandeira EUA/Reino Unido aparece suavemente sobre o amarelo, de 0% até **28%** de opacidade. É o *Background Overlay* nativo do card, com a opacidade controlada por `src/gt-bilingue.js`. |
 | Faixa rolante | Faixa azul inclinada (−2°) com pares de palavras (HELLO · OLÁ ✦ PLAY · BRINCAR ✦ …). Pausa no hover e fica oculta para leitores de tela (atributo `aria-hidden`, do Pro). |
 
 **Como inserir logo abaixo do hero:**
@@ -261,6 +262,8 @@ Seção criada à parte, fora do Figma, para reforçar que a Garatuja é bilíng
 A seção também funciona se ficar solta entre dois containers da página.
 
 **Textos:** foram escritos a partir do que a escola informou (bilíngue, com aulas de inglês desde a Educação Infantil) e do que já está na página. Não há números nem cargas horárias inventados. Revise e ajuste à vontade.
+
+**Bandeira:** no editor, selecione o container do card (`gt-bi-card`) → *Estilo → Background Overlay* e troque a imagem (placeholder `bandeira-eua-reino-unido.webp`). A **opacidade** definida ali é o **máximo** que a bandeira atinge; o script vai de 0 até esse valor durante o scroll. Para uma versão monocromática dourada, mude *Blend Mode* para **Luminosity** (0.35 funciona bem). No editor a bandeira aparece sempre na opacidade máxima, porque o script não roda dentro dele. Para quem ativou "reduzir movimento" no sistema, ela aparece direto no máximo.
 
 **Imagem a substituir:** `bilingue-aula-de-ingles.jpg`, com o alt sugerido "Crianças da Garatuja em aula de inglês". Não existe no Figma, então é preciso uma foto nova.
 
