@@ -12,6 +12,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "garatuja-elementor.json")
+OUT_NAV = os.path.join(HERE, "..", "garatuja-menu-navbar.json")
 CSS_FILE = os.path.join(HERE, "gt-page.css")
 
 # ---------------------------------------------------------------------------
@@ -364,6 +365,21 @@ def build_top():
     ])
 
     # --- Navbar (vidro) ---------------------------------------------------------
+    # Espaço para os logos que aparecem SÓ quando o menu fica fixo (após o scroll).
+    # Ficam ocultos no topo da página e visíveis no editor para permitir trocar as imagens.
+    nav_logos = container({
+        "content_width": "full",
+        "width": px(172),
+        "flex_direction": "row",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "center",
+        "flex_gap": gap(14),
+        "_flex_size": "none",
+        "css_classes": "gt-navbar-logos",
+    }, [
+        image("logo-colegio-unicultura-menu.svg", "Colégio Unicultura", width_px=77),
+        image("logo-garatuja-menu.png", "Garatuja - Educação Infantil e Fundamental I", width_px=81),
+    ])
     nav_links = icon_list(
         ["Home", "Unicultura", "Garatuja", "Diferenciais", "Parceiros", "Contato"],
         typo("icon_typography", DMSANS, 13, 700, lh=17.315),
@@ -416,13 +432,13 @@ def build_top():
         "border_radius_mobile": dims(24),
         "css_classes": "gt-navbar",
         # Elementor Pro > Sticky: a navbar acompanha o scroll (desktop e tablet).
-        # Após 120px de scroll o Pro adiciona .elementor-sticky--effects, usado no CSS
-        # para escurecer o vidro e manter o menu legível sobre as seções claras.
+        # Após 40px de scroll o Pro adiciona .elementor-sticky--effects, usado no CSS
+        # para escurecer o vidro, centralizar o menu e mostrar os logos.
         "sticky": "top",
         "sticky_on": ["desktop", "tablet"],
         "sticky_offset": 16,
-        "sticky_effects_offset": 120,
-    }, [nav_links, nav_social, nav_cta])
+        "sticky_effects_offset": 40,
+    }, [nav_logos, nav_links, nav_social, nav_cta])
 
     # --- Conteúdo do hero ---------------------------------------------------
     hero_tag = heading(
@@ -1267,6 +1283,24 @@ def build_css_holder():
     }, [widget("html", {"html": "<style>\n" + css + "\n</style>"})], inner=False)
 
 
+def export_navbar(page_content):
+    """Grava só o container da navbar como template "container" para substituir o menu."""
+    hero = page_content[0]["elements"][0]
+    navbar = next(e for e in hero["elements"] if "gt-navbar" in e["settings"].get("css_classes", ""))
+    navbar = json.loads(json.dumps(navbar))
+    navbar["isInner"] = False
+    data = {
+        "content": [navbar],
+        "page_settings": [],
+        "version": "0.4",
+        "title": "Garatuja - Menu (navbar)",
+        "type": "container",
+    }
+    with open(OUT_NAV, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+
+
 def main():
     content = [
         build_top(),
@@ -1291,7 +1325,9 @@ def main():
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
+    export_navbar(content)
     print(f"OK: {os.path.normpath(OUT)} ({_counter[0]} ids)")
+    print(f"OK: {os.path.normpath(OUT_NAV)}")
 
 
 if __name__ == "__main__":

@@ -229,14 +229,55 @@
   to   { background-size: 123% auto; }
 }
 
-/* Navbar fixa (Elementor Pro Sticky): escurece o vidro depois de 120px de scroll */
+/* Navbar fixa (Elementor Pro Sticky). Depois de 40px de scroll o Pro adiciona
+   .elementor-sticky--effects: o vidro escurece, o menu vai para o centro da tela,
+   fica mais largo e os dois logos aparecem à esquerda. */
 .gt-top .gt-hero .gt-navbar {
   transition: background-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .gt-top .gt-hero .gt-navbar.elementor-sticky--effects {
+  /* O Pro grava left/width inline no elemento fixo; !important é necessário
+     só aqui, para sobrescrever esses valores inline. */
+  left: 50% !important;
+  right: auto !important;
+  width: min(1040px, calc(100% - 32px)) !important;
+  transform: translateX(-50%);
+  --justify-content: space-between;
+  --padding-top: 10px;
+  --padding-right: 16px;
+  --padding-bottom: 10px;
+  --padding-left: 24px;
   background-color: rgba(1, 6, 88, 0.82);
   box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);
+  animation: gt-nav-drop 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes gt-nav-drop {
+  from { opacity: 0; transform: translate(-50%, -12px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Logos do menu: ocultos no topo da página, visíveis no menu fixo */
+.gt-top .gt-hero .gt-navbar .gt-navbar-logos {
+  display: none;
+}
+
+.gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos {
+  display: flex;
+  animation: gt-fade-in-logos 0.5s 0.15s ease both;
+}
+
+@keyframes gt-fade-in-logos {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* No editor o sticky não roda: mostra o espaço dos logos (tracejado) para trocar as imagens */
+.elementor-editor-active .gt-top .gt-hero .gt-navbar .gt-navbar-logos {
+  display: flex;
+  outline: 1px dashed rgba(255, 255, 255, 0.5);
+  outline-offset: 4px;
 }
 
 /* Botões em gradiente: sobem 2px e um brilho atravessa o botão */
@@ -330,6 +371,8 @@
 @media (prefers-reduced-motion: reduce) {
   .gt-hero,
   .gt-lion img,
+  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects,
+  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos,
   .elementor-widget.animated .gt-highlight {
     animation: none;
   }

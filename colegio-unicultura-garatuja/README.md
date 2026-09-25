@@ -197,7 +197,7 @@ Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em 
 |---|---|---|
 | Hero | Selo, H1, texto e botão entram em cascata (0 / 120 / 240 / 360 ms). | Entrance Animation *Fade In Up* (nativa) |
 | Hero | A foto de fundo faz um zoom lento de 135% para 123% ao carregar (só desktop). | CSS (`.gt-hero`) |
-| Navbar | Fica fixa no topo ao rolar, com 16 px de distância. Depois de 120 px de scroll, o vidro escurece e ganha sombra para continuar legível sobre as seções claras. Desktop e tablet. | **Pro**: *Sticky: Top* + *Effects Offset*. CSS: `.elementor-sticky--effects` |
+| Navbar | Fica fixa no topo ao rolar, com 16 px de distância. Depois de 40 px de scroll, vai para o **centro da tela** (até 1040 px de largura), o vidro escurece, ganha sombra e os **dois logos aparecem à esquerda**, com fade. Desktop e tablet. | **Pro**: *Sticky: Top* + *Effects Offset 40*. CSS: `.elementor-sticky--effects`, `.gt-navbar-logos` |
 | "Duas etapas" | O título aparece e a faixa amarela se desenha da esquerda para a direita. A coluna da direita sobe logo depois. | *Fade In* + CSS (`.gt-highlight`) · *Fade In Up* |
 | Cards das etapas | Eyebrow, H2 e texto em cascata. Os itens do checklist entram em ziguezague (40–80 ms entre eles). | *Fade In Up* |
 | Cards das etapas | As fotos fazem parallax leve ao rolar (velocidade 1, só desktop). | **Pro**: *Motion Effects → Vertical Scroll* |
@@ -214,6 +214,10 @@ Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em 
 - **Entradas:** *Advanced → Motion Effects → Entrance Animation* do widget ou container.
 - **Navbar fixa:** container da navbar → *Advanced → Motion Effects → Sticky*.
 - **Parallax:** widget de imagem → *Advanced → Motion Effects → Scrolling Effects*.
+
+**Logos do menu fixo:** ficam no container `gt-navbar-logos`, o primeiro item da navbar, com as imagens `logo-colegio-unicultura-menu.svg` (77 px) e `logo-garatuja-menu.png` (81 px). Como o menu fixo tem fundo azul-escuro, use as **versões brancas (negativas)** dos logos. No topo da página esse espaço fica oculto. No editor ele aparece com contorno tracejado, para você poder trocar as imagens.
+
+**Trocar só o menu:** importe `garatuja-menu-navbar.json` em *Templates → Import*. Na página, apague a navbar antiga, insira o template "Garatuja - Menu (navbar)" e arraste-o pelo *Navigator* para dentro do hero, entre o recorte dos logos e o conteúdo. Depois substitua o conteúdo do widget HTML (container `gt-css`, no fim da página) pelo `src/gt-page.css` novo, dentro de `<style>…</style>`.
 
 **Não incluída:** a faixa rolante "MATRÍCULAS ABERTAS 2026 ✦ VAGAS LIMITADAS" (camadas `DiagonalTape`) está **oculta** no Figma, então não foi adicionada. Se o designer confirmar, ela pode ser criada com CSS.
 

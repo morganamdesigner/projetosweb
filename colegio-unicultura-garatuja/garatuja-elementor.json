@@ -1,7 +1,7 @@
 {
   "content": [
     {
-      "id": "1100481",
+      "id": "e37e5c0",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -44,7 +44,7 @@
       },
       "elements": [
         {
-          "id": "3404d1c",
+          "id": "a3da6c6",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -343,7 +343,7 @@
               ]
             },
             {
-              "id": "f592b55",
+              "id": "6dc551a",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -445,7 +445,7 @@
                   "tablet"
                 ],
                 "sticky_offset": 16,
-                "sticky_effects_offset": 120,
+                "sticky_effects_offset": 40,
                 "__globals__": {
                   "background_color": "",
                   "border_color": ""
@@ -453,7 +453,100 @@
               },
               "elements": [
                 {
-                  "id": "e05df84",
+                  "id": "fc20231",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "width": {
+                      "unit": "px",
+                      "size": 172,
+                      "sizes": []
+                    },
+                    "flex_direction": "row",
+                    "flex_justify_content": "flex-start",
+                    "flex_align_items": "center",
+                    "_flex_size": "none",
+                    "css_classes": "gt-navbar-logos"
+                  },
+                  "elements": [
+                    {
+                      "id": "53d2943",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://example.com/substituir-asset-figma/logo-colegio-unicultura-menu.svg",
+                          "id": "",
+                          "size": "",
+                          "alt": "Colégio Unicultura"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "link_to": "none",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 77,
+                          "sizes": []
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c1b6675",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "url": "https://example.com/substituir-asset-figma/logo-garatuja-menu.png",
+                          "id": "",
+                          "size": "",
+                          "alt": "Garatuja - Educação Infantil e Fundamental I"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "link_to": "none",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 81,
+                          "sizes": []
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "94189d2",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -461,7 +554,7 @@
                     "view": "inline",
                     "icon_list": [
                       {
-                        "_id": "53d2943",
+                        "_id": "6960954",
                         "text": "Home",
                         "selected_icon": {
                           "value": "",
@@ -475,7 +568,7 @@
                         }
                       },
                       {
-                        "_id": "c1b6675",
+                        "_id": "1f095b0",
                         "text": "Unicultura",
                         "selected_icon": {
                           "value": "",
@@ -489,7 +582,7 @@
                         }
                       },
                       {
-                        "_id": "fc20231",
+                        "_id": "777fa4d",
                         "text": "Garatuja",
                         "selected_icon": {
                           "value": "",
@@ -503,7 +596,7 @@
                         }
                       },
                       {
-                        "_id": "6960954",
+                        "_id": "e05df84",
                         "text": "Diferenciais",
                         "selected_icon": {
                           "value": "",
@@ -517,7 +610,7 @@
                         }
                       },
                       {
-                        "_id": "1f095b0",
+                        "_id": "32307c2",
                         "text": "Parceiros",
                         "selected_icon": {
                           "value": "",
@@ -531,7 +624,7 @@
                         }
                       },
                       {
-                        "_id": "777fa4d",
+                        "_id": "8d3896a",
                         "text": "Contato",
                         "selected_icon": {
                           "value": "",
@@ -607,14 +700,14 @@
                   "elements": []
                 },
                 {
-                  "id": "93fc586",
+                  "id": "8a5674a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "social-icons",
                   "settings": {
                     "social_icon_list": [
                       {
-                        "_id": "32307c2",
+                        "_id": "93fc586",
                         "social_icon": {
                           "value": "fab fa-facebook-f",
                           "library": "fa-brands"
@@ -628,7 +721,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "8d3896a",
+                        "_id": "86473db",
                         "social_icon": {
                           "value": "fab fa-instagram",
                           "library": "fa-brands"
@@ -642,7 +735,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "94189d2",
+                        "_id": "f592b55",
                         "social_icon": {
                           "value": "fab fa-linkedin-in",
                           "library": "fa-brands"
@@ -705,7 +798,7 @@
                   "elements": []
                 },
                 {
-                  "id": "86473db",
+                  "id": "5dd17bd",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -787,7 +880,7 @@
               ]
             },
             {
-              "id": "c1a9f7a",
+              "id": "053018e",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -853,7 +946,7 @@
               },
               "elements": [
                 {
-                  "id": "8a5674a",
+                  "id": "f06b880",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -939,7 +1032,7 @@
                   "elements": []
                 },
                 {
-                  "id": "5dd17bd",
+                  "id": "c1a9f7a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1013,7 +1106,7 @@
                   "elements": []
                 },
                 {
-                  "id": "6dc551a",
+                  "id": "0b45f97",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -1066,7 +1159,7 @@
                   "elements": []
                 },
                 {
-                  "id": "f06b880",
+                  "id": "3404d1c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -1183,7 +1276,7 @@
               ]
             },
             {
-              "id": "0b45f97",
+              "id": "a8c0a08",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1226,7 +1319,7 @@
           ]
         },
         {
-          "id": "ef4924b",
+          "id": "3844fbc",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -1283,7 +1376,7 @@
           },
           "elements": [
             {
-              "id": "053018e",
+              "id": "87036ce",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -1372,7 +1465,7 @@
               "elements": []
             },
             {
-              "id": "87036ce",
+              "id": "a7a9910",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1417,7 +1510,7 @@
               },
               "elements": [
                 {
-                  "id": "a8c0a08",
+                  "id": "ef4924b",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -1461,7 +1554,7 @@
                   "elements": []
                 },
                 {
-                  "id": "a3da6c6",
+                  "id": "1100481",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -1546,7 +1639,7 @@
       ]
     },
     {
-      "id": "5b86424",
+      "id": "38edc40",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -1590,7 +1683,7 @@
       },
       "elements": [
         {
-          "id": "4f3ecfd",
+          "id": "ce6e2b9",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -1674,7 +1767,7 @@
           },
           "elements": [
             {
-              "id": "e08333e",
+              "id": "763344d",
               "elType": "widget",
               "isInner": false,
               "widgetType": "image",
@@ -1753,7 +1846,7 @@
               "elements": []
             },
             {
-              "id": "f535ba1",
+              "id": "ca01193",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1810,7 +1903,7 @@
               },
               "elements": [
                 {
-                  "id": "a7a9910",
+                  "id": "8d0fc91",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1848,7 +1941,7 @@
                   "elements": []
                 },
                 {
-                  "id": "3844fbc",
+                  "id": "c887789",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1911,7 +2004,7 @@
                   "elements": []
                 },
                 {
-                  "id": "e37e5c0",
+                  "id": "3f63762",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -1958,7 +2051,7 @@
                   "elements": []
                 },
                 {
-                  "id": "4100e79",
+                  "id": "4f3ecfd",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -2014,7 +2107,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3f63762",
+                      "id": "83b504d",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2078,141 +2171,6 @@
                       },
                       "elements": [
                         {
-                          "id": "c887789",
-                          "elType": "widget",
-                          "isInner": false,
-                          "widgetType": "icon-list",
-                          "settings": {
-                            "view": "traditional",
-                            "icon_list": [
-                              {
-                                "_id": "8d0fc91",
-                                "text": "Identidade e autonomia",
-                                "selected_icon": {
-                                  "value": "far fa-dot-circle",
-                                  "library": "fa-regular"
-                                },
-                                "link": {
-                                  "url": "",
-                                  "is_external": "",
-                                  "nofollow": "",
-                                  "custom_attributes": ""
-                                }
-                              }
-                            ],
-                            "space_between": {
-                              "unit": "px",
-                              "size": 12,
-                              "sizes": []
-                            },
-                            "text_color": "#010658",
-                            "text_color_hover": "#010658",
-                            "icon_size": {
-                              "unit": "px",
-                              "size": 16,
-                              "sizes": []
-                            },
-                            "text_indent": {
-                              "unit": "px",
-                              "size": 11,
-                              "sizes": []
-                            },
-                            "icon_color": "#F2CA50",
-                            "icon_color_hover": "#F2CA50",
-                            "icon_typography_typography": "custom",
-                            "icon_typography_font_family": "Inter",
-                            "icon_typography_font_size": {
-                              "unit": "px",
-                              "size": 14,
-                              "sizes": []
-                            },
-                            "icon_typography_font_weight": "400",
-                            "icon_typography_line_height": {
-                              "unit": "px",
-                              "size": 19.6,
-                              "sizes": []
-                            },
-                            "icon_typography_letter_spacing": {
-                              "unit": "px",
-                              "size": -0.1,
-                              "sizes": []
-                            },
-                            "__globals__": {
-                              "text_color": "",
-                              "icon_color": "",
-                              "icon_typography_typography": ""
-                            }
-                          },
-                          "elements": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "83b504d",
-                      "elType": "container",
-                      "isInner": true,
-                      "settings": {
-                        "flex_gap": {
-                          "column": "0",
-                          "row": "0",
-                          "isLinked": true,
-                          "unit": "px",
-                          "size": 0
-                        },
-                        "padding": {
-                          "unit": "px",
-                          "top": "0",
-                          "right": "18",
-                          "bottom": "0",
-                          "left": "18",
-                          "isLinked": false
-                        },
-                        "content_width": "full",
-                        "min_height": {
-                          "unit": "px",
-                          "size": 71.59,
-                          "sizes": []
-                        },
-                        "flex_direction": "column",
-                        "flex_justify_content": "center",
-                        "padding_mobile": {
-                          "unit": "px",
-                          "top": "14",
-                          "right": "18",
-                          "bottom": "14",
-                          "left": "18",
-                          "isLinked": false
-                        },
-                        "background_background": "classic",
-                        "background_color": "#FFFFFF",
-                        "border_border": "solid",
-                        "border_width": {
-                          "unit": "px",
-                          "top": "1",
-                          "right": "1",
-                          "bottom": "1",
-                          "left": "1",
-                          "isLinked": true
-                        },
-                        "border_color": "rgba(1, 6, 88, 0.32)",
-                        "border_radius": {
-                          "unit": "px",
-                          "top": "12",
-                          "right": "12",
-                          "bottom": "12",
-                          "left": "12",
-                          "isLinked": true
-                        },
-                        "__globals__": {
-                          "background_color": "",
-                          "border_color": ""
-                        },
-                        "animation": "fadeInUp",
-                        "animation_duration": "fast",
-                        "animation_delay": 40
-                      },
-                      "elements": [
-                        {
                           "id": "1d2401d",
                           "elType": "widget",
                           "isInner": false,
@@ -2222,7 +2180,7 @@
                             "icon_list": [
                               {
                                 "_id": "7098e8d",
-                                "text": "Linguagem oral",
+                                "text": "Identidade e autonomia",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -2344,7 +2302,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 80
+                        "animation_delay": 40
                       },
                       "elements": [
                         {
@@ -2357,7 +2315,7 @@
                             "icon_list": [
                               {
                                 "_id": "ba1cfe7",
-                                "text": "Aproximação com a cultura escrita",
+                                "text": "Linguagem oral",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -2479,7 +2437,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 120
+                        "animation_delay": 80
                       },
                       "elements": [
                         {
@@ -2492,7 +2450,7 @@
                             "icon_list": [
                               {
                                 "_id": "fd996d4",
-                                "text": "Pensamento lógico",
+                                "text": "Aproximação com a cultura escrita",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -2614,7 +2572,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 160
+                        "animation_delay": 120
                       },
                       "elements": [
                         {
@@ -2627,7 +2585,7 @@
                             "icon_list": [
                               {
                                 "_id": "a8286f7",
-                                "text": "Coordenação motora",
+                                "text": "Pensamento lógico",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -2749,7 +2707,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 200
+                        "animation_delay": 160
                       },
                       "elements": [
                         {
@@ -2762,7 +2720,7 @@
                             "icon_list": [
                               {
                                 "_id": "a6c4da6",
-                                "text": "Criatividade e expressão artística",
+                                "text": "Coordenação motora",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -2884,7 +2842,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 240
+                        "animation_delay": 200
                       },
                       "elements": [
                         {
@@ -2897,7 +2855,7 @@
                             "icon_list": [
                               {
                                 "_id": "f117615",
-                                "text": "Desenvolvimento socioemocional",
+                                "text": "Criatividade e expressão artística",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -3019,7 +2977,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 280
+                        "animation_delay": 240
                       },
                       "elements": [
                         {
@@ -3032,7 +2990,7 @@
                             "icon_list": [
                               {
                                 "_id": "1f5b263",
-                                "text": "Interação e convivência",
+                                "text": "Desenvolvimento socioemocional",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -3154,7 +3112,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 320
+                        "animation_delay": 280
                       },
                       "elements": [
                         {
@@ -3167,7 +3125,7 @@
                             "icon_list": [
                               {
                                 "_id": "b445c0e",
-                                "text": "Investigação e curiosidade",
+                                "text": "Interação e convivência",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -3289,7 +3247,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 360
+                        "animation_delay": 320
                       },
                       "elements": [
                         {
@@ -3302,6 +3260,141 @@
                             "icon_list": [
                               {
                                 "_id": "160ad43",
+                                "text": "Investigação e curiosidade",
+                                "selected_icon": {
+                                  "value": "far fa-dot-circle",
+                                  "library": "fa-regular"
+                                },
+                                "link": {
+                                  "url": "",
+                                  "is_external": "",
+                                  "nofollow": "",
+                                  "custom_attributes": ""
+                                }
+                              }
+                            ],
+                            "space_between": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "text_color": "#010658",
+                            "text_color_hover": "#010658",
+                            "icon_size": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "text_indent": {
+                              "unit": "px",
+                              "size": 11,
+                              "sizes": []
+                            },
+                            "icon_color": "#F2CA50",
+                            "icon_color_hover": "#F2CA50",
+                            "icon_typography_typography": "custom",
+                            "icon_typography_font_family": "Inter",
+                            "icon_typography_font_size": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "icon_typography_font_weight": "400",
+                            "icon_typography_line_height": {
+                              "unit": "px",
+                              "size": 19.6,
+                              "sizes": []
+                            },
+                            "icon_typography_letter_spacing": {
+                              "unit": "px",
+                              "size": -0.1,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "icon_color": "",
+                              "icon_typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "e08333e",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "0",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "min_height": {
+                          "unit": "px",
+                          "size": 71.59,
+                          "sizes": []
+                        },
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "14",
+                          "right": "18",
+                          "bottom": "14",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(1, 6, 88, 0.32)",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "12",
+                          "bottom": "12",
+                          "left": "12",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "background_color": "",
+                          "border_color": ""
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 360
+                      },
+                      "elements": [
+                        {
+                          "id": "f535ba1",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "icon-list",
+                          "settings": {
+                            "view": "traditional",
+                            "icon_list": [
+                              {
+                                "_id": "4100e79",
                                 "text": "Contato com a literatura",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3369,7 +3462,7 @@
           ]
         },
         {
-          "id": "bca467b",
+          "id": "25c1259",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -3472,7 +3565,7 @@
           },
           "elements": [
             {
-              "id": "ad560ae",
+              "id": "5088495",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3506,7 +3599,7 @@
               },
               "elements": [
                 {
-                  "id": "ca01193",
+                  "id": "9642aac",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -3544,7 +3637,7 @@
                   "elements": []
                 },
                 {
-                  "id": "763344d",
+                  "id": "6ca68d7",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -3607,7 +3700,7 @@
                   "elements": []
                 },
                 {
-                  "id": "ce6e2b9",
+                  "id": "209860c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3654,7 +3747,7 @@
                   "elements": []
                 },
                 {
-                  "id": "dba0335",
+                  "id": "bca467b",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -3710,7 +3803,7 @@
                   },
                   "elements": [
                     {
-                      "id": "209860c",
+                      "id": "fccb7c5",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -3774,141 +3867,6 @@
                       },
                       "elements": [
                         {
-                          "id": "6ca68d7",
-                          "elType": "widget",
-                          "isInner": false,
-                          "widgetType": "icon-list",
-                          "settings": {
-                            "view": "traditional",
-                            "icon_list": [
-                              {
-                                "_id": "9642aac",
-                                "text": "Alfabetização e letramento",
-                                "selected_icon": {
-                                  "value": "far fa-dot-circle",
-                                  "library": "fa-regular"
-                                },
-                                "link": {
-                                  "url": "",
-                                  "is_external": "",
-                                  "nofollow": "",
-                                  "custom_attributes": ""
-                                }
-                              }
-                            ],
-                            "space_between": {
-                              "unit": "px",
-                              "size": 12,
-                              "sizes": []
-                            },
-                            "text_color": "#010658",
-                            "text_color_hover": "#010658",
-                            "icon_size": {
-                              "unit": "px",
-                              "size": 16,
-                              "sizes": []
-                            },
-                            "text_indent": {
-                              "unit": "px",
-                              "size": 11,
-                              "sizes": []
-                            },
-                            "icon_color": "#F2CA50",
-                            "icon_color_hover": "#F2CA50",
-                            "icon_typography_typography": "custom",
-                            "icon_typography_font_family": "Inter",
-                            "icon_typography_font_size": {
-                              "unit": "px",
-                              "size": 14,
-                              "sizes": []
-                            },
-                            "icon_typography_font_weight": "400",
-                            "icon_typography_line_height": {
-                              "unit": "px",
-                              "size": 19.6,
-                              "sizes": []
-                            },
-                            "icon_typography_letter_spacing": {
-                              "unit": "px",
-                              "size": -0.1,
-                              "sizes": []
-                            },
-                            "__globals__": {
-                              "text_color": "",
-                              "icon_color": "",
-                              "icon_typography_typography": ""
-                            }
-                          },
-                          "elements": []
-                        }
-                      ]
-                    },
-                    {
-                      "id": "fccb7c5",
-                      "elType": "container",
-                      "isInner": true,
-                      "settings": {
-                        "flex_gap": {
-                          "column": "0",
-                          "row": "0",
-                          "isLinked": true,
-                          "unit": "px",
-                          "size": 0
-                        },
-                        "padding": {
-                          "unit": "px",
-                          "top": "0",
-                          "right": "18",
-                          "bottom": "0",
-                          "left": "18",
-                          "isLinked": false
-                        },
-                        "content_width": "full",
-                        "min_height": {
-                          "unit": "px",
-                          "size": 71.59,
-                          "sizes": []
-                        },
-                        "flex_direction": "column",
-                        "flex_justify_content": "center",
-                        "padding_mobile": {
-                          "unit": "px",
-                          "top": "14",
-                          "right": "18",
-                          "bottom": "14",
-                          "left": "18",
-                          "isLinked": false
-                        },
-                        "background_background": "classic",
-                        "background_color": "#FFFFFF",
-                        "border_border": "solid",
-                        "border_width": {
-                          "unit": "px",
-                          "top": "1",
-                          "right": "1",
-                          "bottom": "1",
-                          "left": "1",
-                          "isLinked": true
-                        },
-                        "border_color": "rgba(1, 6, 88, 0.32)",
-                        "border_radius": {
-                          "unit": "px",
-                          "top": "12",
-                          "right": "12",
-                          "bottom": "12",
-                          "left": "12",
-                          "isLinked": true
-                        },
-                        "__globals__": {
-                          "background_color": "",
-                          "border_color": ""
-                        },
-                        "animation": "fadeInUp",
-                        "animation_duration": "fast",
-                        "animation_delay": 40
-                      },
-                      "elements": [
-                        {
                           "id": "7d7872e",
                           "elType": "widget",
                           "isInner": false,
@@ -3918,7 +3876,7 @@
                             "icon_list": [
                               {
                                 "_id": "e2dbe74",
-                                "text": "Leitura e interpretação",
+                                "text": "Alfabetização e letramento",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4040,7 +3998,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 80
+                        "animation_delay": 40
                       },
                       "elements": [
                         {
@@ -4053,7 +4011,7 @@
                             "icon_list": [
                               {
                                 "_id": "f7958aa",
-                                "text": "Produção escrita",
+                                "text": "Leitura e interpretação",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4175,7 +4133,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 120
+                        "animation_delay": 80
                       },
                       "elements": [
                         {
@@ -4188,7 +4146,7 @@
                             "icon_list": [
                               {
                                 "_id": "7387390",
-                                "text": "Raciocínio lógico-matemático",
+                                "text": "Produção escrita",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4310,7 +4268,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 160
+                        "animation_delay": 120
                       },
                       "elements": [
                         {
@@ -4323,7 +4281,7 @@
                             "icon_list": [
                               {
                                 "_id": "829d29a",
-                                "text": "Investigação e iniciação científica",
+                                "text": "Raciocínio lógico-matemático",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4445,7 +4403,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 200
+                        "animation_delay": 160
                       },
                       "elements": [
                         {
@@ -4458,7 +4416,7 @@
                             "icon_list": [
                               {
                                 "_id": "358f795",
-                                "text": "Formação do hábito de estudo",
+                                "text": "Investigação e iniciação científica",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4580,7 +4538,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 240
+                        "animation_delay": 200
                       },
                       "elements": [
                         {
@@ -4593,7 +4551,7 @@
                             "icon_list": [
                               {
                                 "_id": "e14ddb2",
-                                "text": "Literatura e criatividade",
+                                "text": "Formação do hábito de estudo",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4715,7 +4673,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 280
+                        "animation_delay": 240
                       },
                       "elements": [
                         {
@@ -4728,7 +4686,7 @@
                             "icon_list": [
                               {
                                 "_id": "697092b",
-                                "text": "Autonomia e responsabilidade",
+                                "text": "Literatura e criatividade",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4850,7 +4808,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 320
+                        "animation_delay": 280
                       },
                       "elements": [
                         {
@@ -4863,7 +4821,7 @@
                             "icon_list": [
                               {
                                 "_id": "6711dc6",
-                                "text": "Desenvolvimento socioemocional",
+                                "text": "Autonomia e responsabilidade",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -4985,7 +4943,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 360
+                        "animation_delay": 320
                       },
                       "elements": [
                         {
@@ -4998,7 +4956,7 @@
                             "icon_list": [
                               {
                                 "_id": "ca87626",
-                                "text": "Educação financeira e empreendedora",
+                                "text": "Desenvolvimento socioemocional",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -5120,7 +5078,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 400
+                        "animation_delay": 360
                       },
                       "elements": [
                         {
@@ -5133,7 +5091,7 @@
                             "icon_list": [
                               {
                                 "_id": "b16dd40",
-                                "text": "Língua inglesa",
+                                "text": "Educação financeira e empreendedora",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
                                   "library": "fa-regular"
@@ -5255,7 +5213,7 @@
                         },
                         "animation": "fadeInUp",
                         "animation_duration": "fast",
-                        "animation_delay": 440
+                        "animation_delay": 400
                       },
                       "elements": [
                         {
@@ -5268,6 +5226,141 @@
                             "icon_list": [
                               {
                                 "_id": "1dccc75",
+                                "text": "Língua inglesa",
+                                "selected_icon": {
+                                  "value": "far fa-dot-circle",
+                                  "library": "fa-regular"
+                                },
+                                "link": {
+                                  "url": "",
+                                  "is_external": "",
+                                  "nofollow": "",
+                                  "custom_attributes": ""
+                                }
+                              }
+                            ],
+                            "space_between": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "text_color": "#010658",
+                            "text_color_hover": "#010658",
+                            "icon_size": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "text_indent": {
+                              "unit": "px",
+                              "size": 11,
+                              "sizes": []
+                            },
+                            "icon_color": "#F2CA50",
+                            "icon_color_hover": "#F2CA50",
+                            "icon_typography_typography": "custom",
+                            "icon_typography_font_family": "Inter",
+                            "icon_typography_font_size": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "icon_typography_font_weight": "400",
+                            "icon_typography_line_height": {
+                              "unit": "px",
+                              "size": 19.6,
+                              "sizes": []
+                            },
+                            "icon_typography_letter_spacing": {
+                              "unit": "px",
+                              "size": -0.1,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "icon_color": "",
+                              "icon_typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "75ef244",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "0",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "min_height": {
+                          "unit": "px",
+                          "size": 71.59,
+                          "sizes": []
+                        },
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "14",
+                          "right": "18",
+                          "bottom": "14",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(1, 6, 88, 0.32)",
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "12",
+                          "bottom": "12",
+                          "left": "12",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "background_color": "",
+                          "border_color": ""
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 440
+                      },
+                      "elements": [
+                        {
+                          "id": "ad560ae",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "icon-list",
+                          "settings": {
+                            "view": "traditional",
+                            "icon_list": [
+                              {
+                                "_id": "dba0335",
                                 "text": "Tecnologia e robótica",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -5333,7 +5426,7 @@
               ]
             },
             {
-              "id": "75ef244",
+              "id": "5b86424",
               "elType": "widget",
               "isInner": false,
               "widgetType": "image",
@@ -5430,7 +5523,7 @@
           ]
         },
         {
-          "id": "5088495",
+          "id": "d04918c",
           "elType": "widget",
           "isInner": false,
           "widgetType": "button",
@@ -5534,7 +5627,7 @@
       ]
     },
     {
-      "id": "de00b7f",
+      "id": "6cfaef1",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -5560,7 +5653,7 @@
       },
       "elements": [
         {
-          "id": "25c1259",
+          "id": "00d36e1",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5619,7 +5712,7 @@
           "elements": []
         },
         {
-          "id": "d04918c",
+          "id": "de00b7f",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5679,7 +5772,7 @@
           "elements": []
         },
         {
-          "id": "38edc40",
+          "id": "d37b955",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5739,7 +5832,7 @@
           "elements": []
         },
         {
-          "id": "00d36e1",
+          "id": "4b39b3c",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5801,7 +5894,7 @@
       ]
     },
     {
-      "id": "f598ac7",
+      "id": "9bc4c77",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -5861,7 +5954,7 @@
       },
       "elements": [
         {
-          "id": "d37b955",
+          "id": "68144cf",
           "elType": "widget",
           "isInner": false,
           "widgetType": "heading",
@@ -5924,7 +6017,7 @@
           "elements": []
         },
         {
-          "id": "67a1f92",
+          "id": "65bd130",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -6001,7 +6094,7 @@
           },
           "elements": [
             {
-              "id": "6cfaef1",
+              "id": "d327e7c",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6060,7 +6153,7 @@
               },
               "elements": [
                 {
-                  "id": "4b39b3c",
+                  "id": "65ccf7e",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6167,7 +6260,7 @@
               ]
             },
             {
-              "id": "65ccf7e",
+              "id": "c11f6aa",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6227,7 +6320,7 @@
               },
               "elements": [
                 {
-                  "id": "68144cf",
+                  "id": "33b1889",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6334,7 +6427,7 @@
               ]
             },
             {
-              "id": "33b1889",
+              "id": "d85075f",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6394,7 +6487,7 @@
               },
               "elements": [
                 {
-                  "id": "d327e7c",
+                  "id": "973451b",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6501,7 +6594,7 @@
               ]
             },
             {
-              "id": "973451b",
+              "id": "1427ed8",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6561,7 +6654,7 @@
               },
               "elements": [
                 {
-                  "id": "c11f6aa",
+                  "id": "6164496",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6668,7 +6761,7 @@
               ]
             },
             {
-              "id": "6164496",
+              "id": "67a1f92",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6728,7 +6821,7 @@
               },
               "elements": [
                 {
-                  "id": "d85075f",
+                  "id": "897b7ee",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6835,7 +6928,7 @@
               ]
             },
             {
-              "id": "897b7ee",
+              "id": "f598ac7",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6895,7 +6988,7 @@
               },
               "elements": [
                 {
-                  "id": "1427ed8",
+                  "id": "6e64653",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -7004,7 +7097,7 @@
           ]
         },
         {
-          "id": "6e64653",
+          "id": "e7e8c68",
           "elType": "widget",
           "isInner": false,
           "widgetType": "button",
@@ -7128,7 +7221,7 @@
       ]
     },
     {
-      "id": "a92e6c3",
+      "id": "4122536",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7208,7 +7301,7 @@
       },
       "elements": [
         {
-          "id": "65bd130",
+          "id": "7d7b4ec",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -7251,7 +7344,7 @@
           "elements": []
         },
         {
-          "id": "7d7b4ec",
+          "id": "cb76edd",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7290,7 +7383,7 @@
           },
           "elements": [
             {
-              "id": "e7e8c68",
+              "id": "a92e6c3",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -7351,7 +7444,7 @@
               "elements": []
             },
             {
-              "id": "9bc4c77",
+              "id": "4c52ef8",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -7407,7 +7500,7 @@
       ]
     },
     {
-      "id": "977ca00",
+      "id": "27560ef",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7459,7 +7552,7 @@
       },
       "elements": [
         {
-          "id": "08fac89",
+          "id": "81ac57c",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7520,7 +7613,7 @@
           },
           "elements": [
             {
-              "id": "5904ccd",
+              "id": "111a5b1",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -7604,7 +7697,7 @@
               },
               "elements": [
                 {
-                  "id": "4122536",
+                  "id": "785f551",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -7655,7 +7748,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4c52ef8",
+                      "id": "5904ccd",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -7684,7 +7777,7 @@
                       "elements": []
                     },
                     {
-                      "id": "cb76edd",
+                      "id": "24956bb",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -7717,7 +7810,7 @@
               ]
             },
             {
-              "id": "95679a2",
+              "id": "1a04874",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -7774,7 +7867,7 @@
               },
               "elements": [
                 {
-                  "id": "0a24ef1",
+                  "id": "08fac89",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -7819,7 +7912,7 @@
                   "elements": []
                 },
                 {
-                  "id": "0c83d6e",
+                  "id": "977ca00",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -7867,7 +7960,7 @@
                   "elements": []
                 },
                 {
-                  "id": "111a5b1",
+                  "id": "95679a2",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "form",
@@ -7875,7 +7968,7 @@
                     "form_name": "Agendar visita - Garatuja",
                     "form_fields": [
                       {
-                        "_id": "24956bb",
+                        "_id": "0a24ef1",
                         "custom_id": "name",
                         "field_type": "text",
                         "field_label": "Nome completo",
@@ -7884,7 +7977,7 @@
                         "width": "100"
                       },
                       {
-                        "_id": "785f551",
+                        "_id": "0c83d6e",
                         "custom_id": "phone",
                         "field_type": "tel",
                         "field_label": "Telefone / WhatsApp",
@@ -8025,7 +8118,7 @@
       ]
     },
     {
-      "id": "f7e0653",
+      "id": "58b7515",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -8076,7 +8169,7 @@
       },
       "elements": [
         {
-          "id": "12281ba",
+          "id": "f7e0653",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -8141,7 +8234,7 @@
           },
           "elements": [
             {
-              "id": "dfa21e4",
+              "id": "f93e106",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8181,7 +8274,7 @@
               },
               "elements": [
                 {
-                  "id": "1a04874",
+                  "id": "db21d29",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "image",
@@ -8218,14 +8311,14 @@
                   "elements": []
                 },
                 {
-                  "id": "f512e0e",
+                  "id": "f60cfc4",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "social-icons",
                   "settings": {
                     "social_icon_list": [
                       {
-                        "_id": "81ac57c",
+                        "_id": "f512e0e",
                         "social_icon": {
                           "value": "fab fa-facebook-f",
                           "library": "fa-brands"
@@ -8239,7 +8332,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "27560ef",
+                        "_id": "ef1d69d",
                         "social_icon": {
                           "value": "fab fa-instagram",
                           "library": "fa-brands"
@@ -8253,7 +8346,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "db21d29",
+                        "_id": "b5f3ace",
                         "social_icon": {
                           "value": "fab fa-linkedin-in",
                           "library": "fa-brands"
@@ -8315,7 +8408,7 @@
                   "elements": []
                 },
                 {
-                  "id": "f60cfc4",
+                  "id": "ebe6155",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -8323,7 +8416,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "ef1d69d",
+                        "_id": "dfa21e4",
                         "text": "Política de privacidade",
                         "selected_icon": {
                           "value": "",
@@ -8337,7 +8430,7 @@
                         }
                       },
                       {
-                        "_id": "b5f3ace",
+                        "_id": "0718015",
                         "text": "Termos de uso",
                         "selected_icon": {
                           "value": "",
@@ -8399,7 +8492,7 @@
               ]
             },
             {
-              "id": "6b6a563",
+              "id": "6a6ccee",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8454,7 +8547,7 @@
               },
               "elements": [
                 {
-                  "id": "0718015",
+                  "id": "63d7726",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -8490,7 +8583,7 @@
                   "elements": []
                 },
                 {
-                  "id": "33a9133",
+                  "id": "2fce639",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -8498,7 +8591,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "ebe6155",
+                        "_id": "e4e0e54",
                         "text": "(11) 12345-6789",
                         "selected_icon": {
                           "value": "fas fa-phone-alt",
@@ -8512,7 +8605,7 @@
                         }
                       },
                       {
-                        "_id": "f93e106",
+                        "_id": "33a9133",
                         "text": "(11) 12345-6789",
                         "selected_icon": {
                           "value": "fas fa-phone-alt",
@@ -8526,7 +8619,7 @@
                         }
                       },
                       {
-                        "_id": "63d7726",
+                        "_id": "6b6a563",
                         "text": "contato@colegiounicultura.com.br",
                         "selected_icon": {
                           "value": "fas fa-envelope",
@@ -8540,7 +8633,7 @@
                         }
                       },
                       {
-                        "_id": "e4e0e54",
+                        "_id": "d3d3bfd",
                         "text": "Endereço Completo",
                         "selected_icon": {
                           "value": "fas fa-map-marker-alt",
@@ -8597,7 +8690,7 @@
               ]
             },
             {
-              "id": "69f84dd",
+              "id": "355f721",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8652,7 +8745,7 @@
               },
               "elements": [
                 {
-                  "id": "d3d3bfd",
+                  "id": "3a6da99",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -8688,7 +8781,7 @@
                   "elements": []
                 },
                 {
-                  "id": "63308a4",
+                  "id": "de69b07",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -8696,7 +8789,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "2fce639",
+                        "_id": "9557b3a",
                         "text": "Unicultura",
                         "selected_icon": {
                           "value": "",
@@ -8710,7 +8803,7 @@
                         }
                       },
                       {
-                        "_id": "6a6ccee",
+                        "_id": "2f5299b",
                         "text": "Garatuja",
                         "selected_icon": {
                           "value": "",
@@ -8724,7 +8817,7 @@
                         }
                       },
                       {
-                        "_id": "3a6da99",
+                        "_id": "63308a4",
                         "text": "Diferenciais",
                         "selected_icon": {
                           "value": "",
@@ -8738,7 +8831,7 @@
                         }
                       },
                       {
-                        "_id": "9557b3a",
+                        "_id": "69f84dd",
                         "text": "Parceiros",
                         "selected_icon": {
                           "value": "",
@@ -8752,7 +8845,7 @@
                         }
                       },
                       {
-                        "_id": "2f5299b",
+                        "_id": "12281ba",
                         "text": "Contato",
                         "selected_icon": {
                           "value": "",
@@ -8808,7 +8901,7 @@
           ]
         },
         {
-          "id": "355f721",
+          "id": "48ae51a",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -8850,7 +8943,7 @@
           },
           "elements": [
             {
-              "id": "de69b07",
+              "id": "6dc7b0d",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -8883,7 +8976,7 @@
       ]
     },
     {
-      "id": "48ae51a",
+      "id": "dea6aae",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -8912,12 +9005,12 @@
       },
       "elements": [
         {
-          "id": "6dc7b0d",
+          "id": "77932cc",
           "elType": "widget",
           "isInner": false,
           "widgetType": "html",
           "settings": {
-            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero {\n  isolation: isolate;\n}\n\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-image: linear-gradient(#F2CA50, #F2CA50);\n  background-repeat: no-repeat;\n  background-position: left center;\n  background-size: 100% 100%;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* A faixa \"se desenha\" da esquerda para a direita quando o título entra na tela\n   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */\n.elementor-widget.animated .gt-highlight {\n  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-highlight-draw {\n  from { background-size: 0% 100%; }\n  to   { background-size: 100% 100%; }\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */\n@media (min-width: 1025px) {\n  .gt-hero {\n    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n}\n\n@keyframes gt-hero-zoom {\n  from { background-size: 135% auto; }\n  to   { background-size: 123% auto; }\n}\n\n/* Navbar fixa (Elementor Pro Sticky): escurece o vidro depois de 120px de scroll */\n.gt-top .gt-hero .gt-navbar {\n  transition: background-color 0.35s ease, box-shadow 0.35s ease;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects {\n  background-color: rgba(1, 6, 88, 0.82);\n  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);\n}\n\n/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */\n.gt-btn-shine .elementor-button {\n  position: relative;\n  overflow: hidden;\n  transition: translate 0.3s ease, box-shadow 0.3s ease;\n}\n\n.gt-btn-shine .elementor-button::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -60%;\n  width: 40%;\n  height: 100%;\n  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);\n  transform: skewX(-20deg);\n  transition: left 0.6s ease;\n  pointer-events: none;\n}\n\n.gt-btn-shine .elementor-button:hover {\n  translate: 0 -2px;\n}\n\n.gt-btn-shine .elementor-button:hover::after {\n  left: 120%;\n}\n\n/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */\n.gt-btn-arrow .elementor-button-icon,\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transition: transform 0.3s ease;\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: scale(1.1);\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n  transform: rotate(-45deg) translateX(3px);\n}\n\n/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.\n   Usa \"translate\" (e não transform) para não conflitar com a animação de entrada. */\n.gt-card-hover {\n  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;\n}\n\n.gt-card-hover:hover {\n  translate: 0 -6px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);\n}\n\n.gt-card-hover .elementor-icon {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-card-hover:hover .elementor-icon {\n  transform: rotate(-8deg) scale(1.08);\n}\n\n/* Galeria: zoom suave da foto no hover */\n.gt-zoom {\n  overflow: hidden;\n}\n\n.gt-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-zoom:hover img {\n  transform: scale(1.06);\n}\n\n/* Leão: \"respiração\" lenta e contínua */\n.gt-lion img {\n  transform-origin: 50% 80%;\n  animation: gt-breathe 6s ease-in-out infinite;\n}\n\n@keyframes gt-breathe {\n  0%, 100% { transform: scale(1) rotate(0deg); }\n  50%      { transform: scale(1.03) rotate(-1deg); }\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-hero,\n  .gt-lion img,\n  .elementor-widget.animated .gt-highlight {\n    animation: none;\n  }\n\n  .gt-btn-shine .elementor-button::after {\n    display: none;\n  }\n\n  .gt-btn-shine .elementor-button:hover,\n  .gt-card-hover:hover {\n    translate: none;\n  }\n\n  .gt-zoom:hover img,\n  .gt-card-hover:hover .elementor-icon,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n    transform: none;\n  }\n\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n    transform: rotate(-45deg);\n  }\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>"
+            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero {\n  isolation: isolate;\n}\n\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-image: linear-gradient(#F2CA50, #F2CA50);\n  background-repeat: no-repeat;\n  background-position: left center;\n  background-size: 100% 100%;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* A faixa \"se desenha\" da esquerda para a direita quando o título entra na tela\n   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */\n.elementor-widget.animated .gt-highlight {\n  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-highlight-draw {\n  from { background-size: 0% 100%; }\n  to   { background-size: 100% 100%; }\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */\n@media (min-width: 1025px) {\n  .gt-hero {\n    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n}\n\n@keyframes gt-hero-zoom {\n  from { background-size: 135% auto; }\n  to   { background-size: 123% auto; }\n}\n\n/* Navbar fixa (Elementor Pro Sticky). Depois de 40px de scroll o Pro adiciona\n   .elementor-sticky--effects: o vidro escurece, o menu vai para o centro da tela,\n   fica mais largo e os dois logos aparecem à esquerda. */\n.gt-top .gt-hero .gt-navbar {\n  transition: background-color 0.35s ease, box-shadow 0.35s ease;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects {\n  /* O Pro grava left/width inline no elemento fixo; !important é necessário\n     só aqui, para sobrescrever esses valores inline. */\n  left: 50% !important;\n  right: auto !important;\n  width: min(1040px, calc(100% - 32px)) !important;\n  transform: translateX(-50%);\n  --justify-content: space-between;\n  --padding-top: 10px;\n  --padding-right: 16px;\n  --padding-bottom: 10px;\n  --padding-left: 24px;\n  background-color: rgba(1, 6, 88, 0.82);\n  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);\n  animation: gt-nav-drop 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-nav-drop {\n  from { opacity: 0; transform: translate(-50%, -12px); }\n  to   { opacity: 1; transform: translate(-50%, 0); }\n}\n\n/* Logos do menu: ocultos no topo da página, visíveis no menu fixo */\n.gt-top .gt-hero .gt-navbar .gt-navbar-logos {\n  display: none;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos {\n  display: flex;\n  animation: gt-fade-in-logos 0.5s 0.15s ease both;\n}\n\n@keyframes gt-fade-in-logos {\n  from { opacity: 0; transform: translateX(-8px); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* No editor o sticky não roda: mostra o espaço dos logos (tracejado) para trocar as imagens */\n.elementor-editor-active .gt-top .gt-hero .gt-navbar .gt-navbar-logos {\n  display: flex;\n  outline: 1px dashed rgba(255, 255, 255, 0.5);\n  outline-offset: 4px;\n}\n\n/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */\n.gt-btn-shine .elementor-button {\n  position: relative;\n  overflow: hidden;\n  transition: translate 0.3s ease, box-shadow 0.3s ease;\n}\n\n.gt-btn-shine .elementor-button::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -60%;\n  width: 40%;\n  height: 100%;\n  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);\n  transform: skewX(-20deg);\n  transition: left 0.6s ease;\n  pointer-events: none;\n}\n\n.gt-btn-shine .elementor-button:hover {\n  translate: 0 -2px;\n}\n\n.gt-btn-shine .elementor-button:hover::after {\n  left: 120%;\n}\n\n/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */\n.gt-btn-arrow .elementor-button-icon,\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transition: transform 0.3s ease;\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: scale(1.1);\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n  transform: rotate(-45deg) translateX(3px);\n}\n\n/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.\n   Usa \"translate\" (e não transform) para não conflitar com a animação de entrada. */\n.gt-card-hover {\n  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;\n}\n\n.gt-card-hover:hover {\n  translate: 0 -6px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);\n}\n\n.gt-card-hover .elementor-icon {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-card-hover:hover .elementor-icon {\n  transform: rotate(-8deg) scale(1.08);\n}\n\n/* Galeria: zoom suave da foto no hover */\n.gt-zoom {\n  overflow: hidden;\n}\n\n.gt-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-zoom:hover img {\n  transform: scale(1.06);\n}\n\n/* Leão: \"respiração\" lenta e contínua */\n.gt-lion img {\n  transform-origin: 50% 80%;\n  animation: gt-breathe 6s ease-in-out infinite;\n}\n\n@keyframes gt-breathe {\n  0%, 100% { transform: scale(1) rotate(0deg); }\n  50%      { transform: scale(1.03) rotate(-1deg); }\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-hero,\n  .gt-lion img,\n  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects,\n  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos,\n  .elementor-widget.animated .gt-highlight {\n    animation: none;\n  }\n\n  .gt-btn-shine .elementor-button::after {\n    display: none;\n  }\n\n  .gt-btn-shine .elementor-button:hover,\n  .gt-card-hover:hover {\n    translate: none;\n  }\n\n  .gt-zoom:hover img,\n  .gt-card-hover:hover .elementor-icon,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n    transform: none;\n  }\n\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n    transform: rotate(-45deg);\n  }\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>"
           },
           "elements": []
         }
