@@ -60,13 +60,35 @@ Todos têm tipografia própria, então o visual não muda.
 
 Quem ativou "reduzir movimento" no sistema vê a página sem as animações de entrada; o Elementor já as desliga, e o CSS desliga o restante.
 
-## 3. CSS e JS
+## 3. Ajustes (2ª rodada)
+
+- **Celular:** a foto do slideshow não se repete mais para baixo. O slideshow do Elementor não define `no-repeat`; o CSS agora define, com o azul #020659 atrás.
+- **Menu fixo:**
+  - fundo **azul** (rgba(1, 6, 88, 0.94)) ao rolar, com seletor reforçado para vencer a cor do container;
+  - **20 px** do topo;
+  - logada no WordPress, fica 20 px abaixo da barra de administração.
+- **Editor:** o espaço tracejado dos logos do menu fixo só aparece no desktop e no tablet, não mais no celular.
+
+### Animações e scroll novos
+
+| Efeito | Onde | Como |
+|---|---|---|
+| Barra de progresso de leitura | Topo da tela, vermelha, avançando com o scroll | `un-home.js` + `.un-progress` |
+| Contador | "+1.200 famílias" conta de 0 a 1.200 quando a prova social aparece (espera os 3,5 s da animação dela) | Classe `un-count` + atributo `data-delay` (Pro → *Custom Attributes*) |
+| Títulos com cortina | "Duas escolas", "Nossa Proposta"/"Pedagógica", "Etapas", "O que os pais…", "Perguntas frequentes" se revelam da esquerda para a direita | Classe `un-reveal` + entrada *Fade In* |
+| Parallax | Fotos de "Duas escolas" e de "Nossa Proposta" (só desktop) | **Pro**: *Motion Effects → Vertical Scroll*, velocidade 1 |
+
+Com "reduzir movimento" ativado no sistema:
+- **Desligados:** o contador (mostra direto 1.200) e a cortina dos títulos.
+- **Mantida:** a barra de progresso, que só acompanha a leitura.
+
+## 4. CSS e JS
 
 Ficam num widget HTML sem altura, no fim do bloco do topo. O código fonte está em `src/un-home.css` e `src/un-home.js`.
 
 As classes são as mesmas da Garatuja (`gt-top`, `gt-hero`, `gt-notch`, `gt-navbar`, `gt-navbar-logos`, `gt-scrolled`...), mais `un-zoom`. O CSS da página (`p { margin: 0 }`) foi mantido.
 
-## 4. Como aplicar
+## 5. Como aplicar
 
 1. Faça um backup da Home atual (*Templates → Salvar como template*).
 2. Importe `home-elementor.json` em *Templates → Import*.

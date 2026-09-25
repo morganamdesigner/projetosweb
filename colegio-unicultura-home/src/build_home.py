@@ -190,6 +190,10 @@ def build_hero():
     buttons = home_widget("259b49ac")
     buttons["settings"]["width"] = px(100, "%")
     proof = home_widget("9d83c1a")  # já tem animação própria (CSS, 3,5 s)
+    # "+1.200 famílias": contador (un-home.js) começa quando a prova social aparece (3,5 s)
+    count = next(c for c in proof["elements"] if c["id"] == "62825cdb")
+    add_class(count, "un-count")
+    count["settings"]["_attributes"] = "data-delay|3500"
     content["settings"]["flex_gap"] = {"column": "10", "row": "10", "isLinked": True, "unit": "px", "size": 10}
     content["settings"]["flex_gap_mobile"] = {"column": "10", "row": "10", "isLinked": True, "unit": "px", "size": 10}
     content["elements"] = [
@@ -210,6 +214,18 @@ def build_hero():
 # ---------------------------------------------------------------------------
 # 2. Demais seções: SEO, correção e animações
 # ---------------------------------------------------------------------------
+
+def parallax(el, speed=1):
+    """Elementor Pro > Motion Effects > Vertical Scroll (só desktop)."""
+    el["settings"].update({
+        "motion_fx_motion_fx_scrolling": "yes",
+        "motion_fx_translateY_effect": "yes",
+        "motion_fx_translateY_speed": px(speed),
+        "motion_fx_translateY_affectedRange": {"unit": "%", "size": "", "sizes": {"start": 0, "end": 100}},
+        "motion_fx_devices": ["desktop"],
+    })
+    return el
+
 
 def improve_sections():
     # títulos: eyebrow "TIRE SUAS DÚVIDAS" vira <p>; títulos dos cards do carrossel viram H3
@@ -250,6 +266,15 @@ def improve_sections():
     anim(H["7f3dea3c"])
     # FAQ
     anim(H["22d1cd18"]); anim(H["4b7a45c4"], delay=100); anim(H["6e28a468"], delay=200)
+
+    # Títulos das seções: "cortina" da esquerda para a direita (CSS .un-reveal)
+    for i in ("2b30f144", "7b9bea32", "4ba47a7b", "4f6d53cb", "7c49bc4c", "4b7a45c4"):
+        H[i]["settings"]["_animation"] = "fadeIn"
+        add_class(H[i], "un-reveal")
+
+    # Parallax leve nas fotos (Duas escolas e Nossa Proposta)
+    for i in ("d74b1cc", "2e6e5e76", "1e746b21"):
+        parallax(H[i])
 
 
 def main():
