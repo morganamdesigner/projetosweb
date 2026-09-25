@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Garatuja | Seção "Galeria de polaroids" - CSS da seção (vai embutido no JSON dela)
+   Escopo: .gt-galeria-polaroid. Estiliza o widget nativo Image Carousel.
+   ========================================================================== */
+
+/* Espaço dentro do carrossel para as inclinações, a fita e a sombra não serem cortadas */
+.gt-galeria-polaroid .gt-polaroids .elementor-image-carousel-wrapper {
+  padding: 34px 8px 44px;
+}
+
+/* A moldura polaroid: borda branca, base mais alta para a legenda, leve inclinação */
+.gt-galeria-polaroid .gt-polaroids .swiper-slide-inner {
+  position: relative;
+  margin: 0;
+  padding: 12px 12px 14px;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transform: rotate(var(--gt-tilt, -2deg));
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease;
+}
+
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 1) { --gt-tilt: -3deg; }
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 2) { --gt-tilt: 2deg; }
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 3) { --gt-tilt: -1.5deg; }
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 4) { --gt-tilt: 3deg; }
+
+/* Fita adesiva amarela no topo de cada foto */
+.gt-galeria-polaroid .gt-polaroids .swiper-slide-inner::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  z-index: 1;
+  width: 84px;
+  height: 26px;
+  background-color: rgba(242, 202, 80, 0.88);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%) rotate(-4deg);
+}
+
+/* Todas as fotos no mesmo formato (4:5), independentemente do arquivo enviado */
+.gt-galeria-polaroid .gt-polaroids .swiper-slide-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+/* Legenda "escrita à mão" na base da polaroid (texto = Legenda da imagem na Biblioteca de Mídia) */
+.gt-galeria-polaroid .gt-polaroids .elementor-image-carousel-caption {
+  min-height: 30px;
+}
+
+/* Hover: a foto endireita, cresce e fica por cima das vizinhas */
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:hover {
+  z-index: 2;
+}
+
+.gt-galeria-polaroid .gt-polaroids .swiper-slide:hover .swiper-slide-inner {
+  transform: rotate(0deg) scale(1.04);
+  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* Setas: círculos amarelos com seta azul */
+.gt-galeria-polaroid .gt-polaroids .elementor-swiper-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #F2CA50;
+  transition: transform 0.3s ease;
+}
+
+.gt-galeria-polaroid .gt-polaroids .elementor-swiper-button:hover {
+  transform: translateY(-50%) scale(1.08);
+}

@@ -10,6 +10,7 @@ com 1920 × 7027 px no desktop.
 | `src/gt-page.css` | CSS complementar. O JSON já traz esse CSS embutido. |
 | `src/gt-page.js` | JS de 15 linhas que marca a página como "rolada" (menu fixo). O JSON também já traz esse JS embutido. |
 | `secao-bilingue-elementor.json` | Seção extra "Escola bilíngue", que não está no Figma. É um template de container separado, com o próprio CSS embutido (seção 11). |
+| `secao-galeria-polaroids-elementor.json` | Seção extra "Galeria de polaroids": carrossel com 10 fotos, fora do Figma (seção 12). |
 | `src/build_elementor_json.py` | Script que gera o JSON. Rode `python3 src/build_elementor_json.py` para regenerar. |
 
 ---
@@ -266,4 +267,32 @@ A seção também funciona se ficar solta entre dois containers da página.
 **Bandeira:** no editor, selecione o container do card (`gt-bi-card`) → *Estilo → Background Overlay* e troque a imagem (placeholder `bandeira-eua-reino-unido.webp`). A **opacidade** definida ali é o **máximo** que a bandeira atinge; o script vai de 0 até esse valor durante o scroll. Para uma versão monocromática dourada, mude *Blend Mode* para **Luminosity** (0.35 funciona bem). No editor a bandeira aparece sempre na opacidade máxima, porque o script não roda dentro dele. Para quem ativou "reduzir movimento" no sistema, ela aparece direto no máximo.
 
 **Imagem a substituir:** `bilingue-aula-de-ingles.jpg`, com o alt sugerido "Crianças da Garatuja em aula de inglês". Não existe no Figma, então é preciso uma foto nova.
+
+---
+
+## 12. Seção extra: "Galeria de polaroids"
+
+Carrossel de fotos das crianças em estilo polaroid. Foi feito com o widget nativo **Image Carousel** (gratuito) e o CSS de `src/gt-galeria.css`, embutido num widget HTML da própria seção. O gerador é `src/build_secao_galeria.py`.
+
+| Parte | Detalhe |
+|---|---|
+| Cabeçalho | "NOSSO DIA A DIA" · H2 "Momentos que viram **memória**" · texto curto. |
+| Polaroids | Moldura branca, fita adesiva amarela no topo, inclinações alternadas (−3°, 2°, −1,5°, 3°) e fotos cortadas em 4:5. No hover, a foto endireita e cresce. |
+| Carrossel | 4 fotos visíveis no desktop, 3 no tablet e 1 no celular. Passa sozinho a cada 3,5 s, pausa no hover e no toque, e é infinito. Tem setas amarelas e pontos. |
+| Lightbox | Clicando, a foto abre em tela cheia, com navegação entre todas. |
+| Legendas | Ficam abaixo de cada foto em fonte manuscrita (**Caveat**, Google Fonts). O texto vem do campo **Legenda** de cada imagem na Biblioteca de Mídia. |
+
+**Onde colocar:** entre "Experiências que enriquecem a aprendizagem" e "E depois da Garatuja?". O fundo é o mesmo azul das Experiências (#010658), então a curva azul do topo de "E depois" continua encaixando.
+
+**Trocar as fotos:**
+1. Selecione o carrossel e, em *Content → Images*, clique na galeria.
+2. Remova o placeholder e adicione as 10 fotos.
+3. Na mesma janela, preencha em cada foto a **Legenda** (aparece na polaroid) e o **Texto alternativo**, para acessibilidade.
+4. Depois apague da Biblioteca de Mídia o placeholder amarelo (`010658.png`), que a importação baixou.
+
+A importação baixa **uma** imagem-placeholder real (placehold.co) e a repete nos 10 slides, para o carrossel já aparecer montado. Se o seu servidor não conseguir baixá-la, o carrossel vem vazio; é só adicionar as fotos como acima.
+
+**Fotos:**
+- **Autorização:** como são crianças, garanta a autorização por escrito dos responsáveis para uso de imagem (LGPD e ECA).
+- **Formato:** use 4:5, com uns 1200 px no lado maior, em WebP.
 

@@ -1,0 +1,424 @@
+{
+  "content": [
+    {
+      "id": "510c5a6",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "28",
+          "row": "28",
+          "isLinked": true,
+          "unit": "px",
+          "size": 28
+        },
+        "padding": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "boxed",
+        "html_tag": "section",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1400,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_gap_mobile": {
+          "column": "16",
+          "row": "16",
+          "isLinked": true,
+          "unit": "px",
+          "size": 16
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "80",
+          "right": "24",
+          "bottom": "96",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "16",
+          "bottom": "80",
+          "left": "16",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#010658",
+        "css_classes": "gt-root gt-galeria-polaroid",
+        "__globals__": {
+          "background_color": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "4112323",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "18",
+              "row": "18",
+              "isLinked": true,
+              "unit": "px",
+              "size": 18
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "px",
+              "size": 720,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center"
+          },
+          "elements": [
+            {
+              "id": "f3c0da4",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Nosso dia a dia",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#F2CA50",
+                "typography_typography": "custom",
+                "typography_font_family": "DM Sans",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast"
+              },
+              "elements": []
+            },
+            {
+              "id": "178b2a6",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Momentos que viram <span style=\"color:#F2CA50\">memória</span>",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -2.2,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 34,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 48,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -1.4,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 100
+              },
+              "elements": []
+            },
+            {
+              "id": "740c07e",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Um pouco do que as crianças vivem na Garatuja: descobertas, amizades, brincadeiras e muito aprendizado — todos os dias.</p>",
+                "align": "center",
+                "text_color": "rgba(255, 255, 255, 0.75)",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 27,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "75ef1f5",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "animation": "fadeIn",
+            "animation_duration": "fast",
+            "animation_delay": 250
+          },
+          "elements": [
+            {
+              "id": "a104edb",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image-carousel",
+              "settings": {
+                "carousel_name": "Galeria Garatuja",
+                "carousel": [
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  },
+                  {
+                    "id": "",
+                    "url": "https://placehold.co/960x1200/F2CA50/010658.png"
+                  }
+                ],
+                "thumbnail_size": "large",
+                "slides_to_show": "4",
+                "slides_to_show_tablet": "3",
+                "slides_to_show_mobile": "1",
+                "slides_to_scroll": "1",
+                "image_stretch": "yes",
+                "navigation": "both",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "caption_type": "caption",
+                "lazyload": "yes",
+                "autoplay": "yes",
+                "pause_on_hover": "yes",
+                "pause_on_interaction": "yes",
+                "autoplay_speed": 3500,
+                "infinite": "yes",
+                "effect": "slide",
+                "speed": 700,
+                "arrows_position": "outside",
+                "arrows_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "arrows_color": "#010658",
+                "dots_position": "outside",
+                "dots_size": {
+                  "unit": "px",
+                  "size": 9,
+                  "sizes": []
+                },
+                "dots_gap": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "dots_inactive_color": "rgba(255, 255, 255, 0.35)",
+                "dots_color": "#F2CA50",
+                "gallery_vertical_align": "center",
+                "image_spacing": "custom",
+                "image_spacing_custom": {
+                  "unit": "px",
+                  "size": 28,
+                  "sizes": []
+                },
+                "image_spacing_custom_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "caption_align": "center",
+                "caption_text_color": "#010658",
+                "caption_space": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "caption_typography_typography": "custom",
+                "caption_typography_font_family": "Caveat",
+                "caption_typography_font_size": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "caption_typography_font_weight": "600",
+                "caption_typography_line_height": {
+                  "unit": "px",
+                  "size": 28,
+                  "sizes": []
+                },
+                "_css_classes": "gt-polaroids",
+                "__globals__": {
+                  "arrows_color": "",
+                  "dots_inactive_color": "",
+                  "dots_color": "",
+                  "caption_text_color": "",
+                  "caption_typography_typography": ""
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "5a9cf37",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<style>\n/* ==========================================================================\n   Garatuja | Seção \"Galeria de polaroids\" - CSS da seção (vai embutido no JSON dela)\n   Escopo: .gt-galeria-polaroid. Estiliza o widget nativo Image Carousel.\n   ========================================================================== */\n\n/* Espaço dentro do carrossel para as inclinações, a fita e a sombra não serem cortadas */\n.gt-galeria-polaroid .gt-polaroids .elementor-image-carousel-wrapper {\n  padding: 34px 8px 44px;\n}\n\n/* A moldura polaroid: borda branca, base mais alta para a legenda, leve inclinação */\n.gt-galeria-polaroid .gt-polaroids .swiper-slide-inner {\n  position: relative;\n  margin: 0;\n  padding: 12px 12px 14px;\n  border-radius: 6px;\n  background-color: #FFFFFF;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);\n  transform: rotate(var(--gt-tilt, -2deg));\n  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease;\n}\n\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 1) { --gt-tilt: -3deg; }\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 2) { --gt-tilt: 2deg; }\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 3) { --gt-tilt: -1.5deg; }\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:nth-child(4n + 4) { --gt-tilt: 3deg; }\n\n/* Fita adesiva amarela no topo de cada foto */\n.gt-galeria-polaroid .gt-polaroids .swiper-slide-inner::before {\n  content: \"\";\n  position: absolute;\n  top: -12px;\n  left: 50%;\n  z-index: 1;\n  width: 84px;\n  height: 26px;\n  background-color: rgba(242, 202, 80, 0.88);\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n  transform: translateX(-50%) rotate(-4deg);\n}\n\n/* Todas as fotos no mesmo formato (4:5), independentemente do arquivo enviado */\n.gt-galeria-polaroid .gt-polaroids .swiper-slide-image {\n  display: block;\n  width: 100%;\n  aspect-ratio: 4 / 5;\n  object-fit: cover;\n  border-radius: 2px;\n}\n\n/* Legenda \"escrita à mão\" na base da polaroid (texto = Legenda da imagem na Biblioteca de Mídia) */\n.gt-galeria-polaroid .gt-polaroids .elementor-image-carousel-caption {\n  min-height: 30px;\n}\n\n/* Hover: a foto endireita, cresce e fica por cima das vizinhas */\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:hover {\n  z-index: 2;\n}\n\n.gt-galeria-polaroid .gt-polaroids .swiper-slide:hover .swiper-slide-inner {\n  transform: rotate(0deg) scale(1.04);\n  box-shadow: 0 26px 50px rgba(0, 0, 0, 0.45);\n}\n\n/* Setas: círculos amarelos com seta azul */\n.gt-galeria-polaroid .gt-polaroids .elementor-swiper-button {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 48px;\n  height: 48px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  transition: transform 0.3s ease;\n}\n\n.gt-galeria-polaroid .gt-polaroids .elementor-swiper-button:hover {\n  transform: translateY(-50%) scale(1.08);\n}\n</style>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Garatuja - Seção Galeria de polaroids",
+  "type": "container"
+}
