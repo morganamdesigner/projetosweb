@@ -144,8 +144,8 @@
             },
             "background_position_tablet": "center right",
             "background_size_tablet": "cover",
-            "background_position_mobile": "center center",
-            "background_size_mobile": "cover",
+            "background_position_mobile": "initial",
+            "background_size_mobile": "initial",
             "background_overlay_background": "gradient",
             "background_overlay_color": "#060720",
             "background_overlay_color_b": "rgba(1, 6, 88, 0)",
@@ -161,7 +161,7 @@
             },
             "background_overlay_color_b_stop_mobile": {
               "unit": "%",
-              "size": 130,
+              "size": 70,
               "sizes": []
             },
             "background_overlay_gradient_angle": {
@@ -179,6 +179,31 @@
               "background_color": "",
               "background_overlay_color": "",
               "background_overlay_color_b": ""
+            },
+            "background_xpos_mobile": {
+              "unit": "%",
+              "size": 55,
+              "sizes": []
+            },
+            "background_ypos_mobile": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            },
+            "background_bg_width_mobile": {
+              "unit": "%",
+              "size": 200,
+              "sizes": []
+            },
+            "background_overlay_gradient_angle_mobile": {
+              "unit": "deg",
+              "size": 0,
+              "sizes": []
+            },
+            "background_overlay_color_stop_mobile": {
+              "unit": "%",
+              "size": 50,
+              "sizes": []
             }
           },
           "elements": [
@@ -850,8 +875,8 @@
                   "isLinked": false
                 },
                 "margin_mobile": {
-                  "unit": "px",
-                  "top": "40",
+                  "unit": "vw",
+                  "top": "77",
                   "right": "0",
                   "bottom": "0",
                   "left": "0",
