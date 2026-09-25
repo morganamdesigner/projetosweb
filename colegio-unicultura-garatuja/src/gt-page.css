@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Garatuja | Colégio Unicultura - CSS complementar da página Elementor
+   Escopo: todas as regras usam classes com prefixo "gt-" definidas nos
+   containers/widgets desta página. Nada aqui afeta outras páginas.
+   ========================================================================== */
+
+/* Cor de fundo da área do topo (usada também pelos recortes do hero) */
+.gt-top {
+  --gt-page-bg: #EEEFF4;
+}
+
+/* Parágrafos do Text Editor sem margem extra no último item */
+.gt-root .elementor-widget-text-editor p:last-child {
+  margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   HERO - recortes (notches) do cartão, reproduzindo a máscara "Subtract"
+   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.
+   -------------------------------------------------------------------------- */
+.gt-hero {
+  isolation: isolate;
+}
+
+.gt-hero > .gt-notch,
+.gt-hero > .e-con-inner > .gt-notch {
+  position: absolute;
+  z-index: 3;
+  background-color: var(--gt-page-bg, #EEEFF4);
+}
+
+.gt-hero .gt-notch--tl {
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 40px;
+}
+
+.gt-hero .gt-notch--br {
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 40px;
+}
+
+/* Cantos côncavos (substitui o ::before/::after padrão do container) */
+.gt-hero .gt-notch::before,
+.gt-hero .gt-notch::after {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 0;
+  opacity: 1;
+  mix-blend-mode: normal;
+  pointer-events: none;
+}
+
+.gt-hero .gt-notch--tl::before {
+  top: 0;
+  left: 100%;
+  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);
+}
+
+.gt-hero .gt-notch--tl::after {
+  top: 100%;
+  left: 0;
+  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);
+}
+
+.gt-hero .gt-notch--br::before {
+  bottom: 100%;
+  right: 0;
+  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);
+}
+
+.gt-hero .gt-notch--br::after {
+  bottom: 0;
+  right: 100%;
+  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);
+}
+
+/* --------------------------------------------------------------------------
+   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor
+   -------------------------------------------------------------------------- */
+.gt-navbar {
+  -webkit-backdrop-filter: blur(51.5px);
+  backdrop-filter: blur(51.5px);
+}
+
+.gt-glass {
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+}
+
+/* --------------------------------------------------------------------------
+   Destaque amarelo atrás de "transição cuidada"
+   -------------------------------------------------------------------------- */
+.gt-highlight {
+  display: inline;
+  margin-left: -17px;
+  padding: 0 17px;
+  border-radius: 20px;
+  background-color: #F2CA50;
+  color: #020659;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* --------------------------------------------------------------------------
+   Botões com seta ↗ dentro de um círculo
+   (ícone nativo "arrow-right" do Elementor, rotacionado -45°)
+   -------------------------------------------------------------------------- */
+.gt-btn-arrow .elementor-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #F2CA50;
+  color: #020659;
+  fill: #020659;
+  font-size: 12px;
+}
+
+.gt-btn-arrow .elementor-button-icon i,
+.gt-btn-arrow .elementor-button-icon svg {
+  transform: rotate(-45deg);
+}
+
+.gt-btn-arrow .elementor-button-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+/* Variante pequena (botão "Matricule-se" da navbar): círculo branco, seta amarela */
+.gt-btn-arrow--light .elementor-button-icon {
+  width: 17px;
+  height: 17px;
+  background-color: #FFFFFF;
+  color: #F2CA50;
+  fill: #F2CA50;
+  font-size: 9px;
+}
+
+/* --------------------------------------------------------------------------
+   Formulário do CTA (Elementor Pro Form)
+   -------------------------------------------------------------------------- */
+.gt-form .elementor-field-group .elementor-field-textual {
+  min-height: 50.5px;
+  padding: 14px 20px;
+}
+
+.gt-form .elementor-field-textual::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.gt-form .elementor-button {
+  min-height: 56px;
+}
+
+/* --------------------------------------------------------------------------
+   Responsivo
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .gt-hero .gt-notch--tl {
+    border-bottom-right-radius: 24px;
+  }
+
+  .gt-hero .gt-notch::before,
+  .gt-hero .gt-notch::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .gt-hero .gt-notch--tl::before,
+  .gt-hero .gt-notch--tl::after {
+    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);
+  }
+
+  .gt-highlight {
+    margin-left: -10px;
+    padding: 0 10px;
+    border-radius: 12px;
+  }
+}
