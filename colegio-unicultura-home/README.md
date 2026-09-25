@@ -123,3 +123,32 @@ Tenha a autorização das famílias para publicar nomes e depoimentos.
 2. Na Home, apague a seção antiga de depoimentos.
 3. Insira o template "Unicultura - Seção Depoimentos" no mesmo lugar.
 
+---
+
+## Hero v2 (`hero-home-elementor.json`)
+
+Hero novo inspirado na referência enviada pelo cliente, com a tipografia e as cores da Home (Hanken Grotesk, azul, vermelho e o laranja #FFB867). **Substitui o 1º bloco da Home** (o topo antigo). Gerador: `src/build_home_hero.py`. CSS/JS: `src/un-home-v2.css` e `src/un-home-v2.js`.
+
+| Parte | Como é |
+|---|---|
+| Cabeçalho branco | Logos coloridos à esquerda, menu do WordPress no centro (ponto vermelho no item ativo, hover vermelho), redes sociais em círculos e botão azul "Agendar visita" com seta em círculo vermelho. |
+| Cabeçalho ao rolar | Vira uma barra azul flutuante, centralizada, a 20 px do topo, com **logos brancos**, textos brancos e botão branco (desktop e tablet). |
+| Cartão | Azul #0D1261 com raio de 40 px. As duas fotos (slideshow com Ken Burns) ficam à direita e dissolvem no azul à esquerda. |
+| Conteúdo | Selo "● Educação Infantil ao Ensino Médio", **H1** com "trajetória" em laranja, texto, botão "Agendar visita" e link "Conhecer a proposta ↓". Entram em cascata. |
+| Faixa inferior | ★★★★★ **+1.200 famílias** (contador) à esquerda. À direita, os segmentos separados por pontos vermelhos, que podem receber links. |
+| Celular | Cabeçalho com logos e hambúrguer (redes e botão ocultos). A foto fica no topo do cartão e dissolve no azul. Faixa inferior empilhada. |
+
+**Textos:** o título foi encurtado seguindo a referência ("Do primeiro dia de aula à formatura, aqui começa a trajetória do seu filho."). O texto antigo pode ser recolocado no editor.
+
+**CSS/JS da página:** o widget HTML deste bloco leva **tudo o que a página usa**:
+- cabeçalho flutuante;
+- barra de progresso;
+- contador;
+- cortina dos títulos;
+- parallax/zoom das fotos;
+- entradas suaves.
+
+Por isso dá para apagar o bloco antigo sem perder os efeitos das outras seções. A seção de Depoimentos tem CSS/JS próprios.
+
+**Fotos:** o enquadramento no celular (`88% 0`) supõe o rosto à direita da foto. Se for outra foto, ajuste `background-position` na regra `.un-hero .elementor-background-slideshow__slide__image` do CSS.
+

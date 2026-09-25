@@ -1,0 +1,303 @@
+/* ==========================================================================
+   Colégio Unicultura | Home - CSS da página (hero v2 + efeitos gerais)
+   Vai embutido no widget HTML do bloco do hero. Classes: un-*, gt-root, gt-scrolled.
+   ========================================================================== */
+
+/* Parágrafos do Text Editor sem margem extra no último item */
+.gt-root .elementor-widget-text-editor p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* --------------------------------------------------------------------------
+   ANIMAÇÕES
+   -------------------------------------------------------------------------- */
+
+/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da
+   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */
+.gt-root .animated {
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gt-root .fadeInUp {
+  animation-name: gt-fade-in-up;
+}
+
+.gt-root .fadeInLeft {
+  animation-name: gt-fade-in-left;
+}
+
+.gt-root .zoomIn {
+  animation-name: gt-zoom-in;
+}
+
+@keyframes gt-fade-in-up {
+  from { opacity: 0; transform: translate3d(0, 32px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes gt-fade-in-left {
+  from { opacity: 0; transform: translate3d(-32px, 0, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes gt-zoom-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+
+
+
+/* --------------------------------------------------------------------------
+   HOVERS
+   -------------------------------------------------------------------------- */
+
+/* Fotos: zoom suave no hover (Duas escolas) */
+.un-zoom {
+  overflow: hidden;
+}
+
+.un-zoom img {
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.un-zoom:hover img {
+  transform: scale(1.05);
+}
+
+/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */
+@media (prefers-reduced-motion: reduce) {
+  .gt-top.gt-scrolled .gt-hero .gt-navbar,
+  .gt-top.gt-scrolled .gt-navbar-logos {
+    animation: none;
+  }
+
+  .un-zoom:hover img {
+    transform: none;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   SCROLL E ANIMAÇÕES EXTRAS
+   -------------------------------------------------------------------------- */
+
+/* Barra de progresso de leitura (criada pelo un-home.js) */
+.un-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #F10505, #FF5A36);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  pointer-events: none;
+}
+
+body.admin-bar .un-progress {
+  top: 32px;
+}
+
+@media (max-width: 782px) {
+  body.admin-bar .un-progress {
+    top: 46px;
+  }
+}
+
+/* Títulos das seções: "cortina" da esquerda para a direita ao entrar na tela */
+.un-reveal.animated .elementor-heading-title {
+  animation: un-reveal 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes un-reveal {
+  from { clip-path: inset(0 100% 0 0); transform: translateX(-12px); }
+  to   { clip-path: inset(0 0 0 0); transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-reveal.animated .elementor-heading-title {
+    animation: none;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   CABEÇALHO (fora do cartão)
+   -------------------------------------------------------------------------- */
+
+/* Ponto vermelho sob o item ativo do menu (pointer do widget = nenhum) */
+.un-header .elementor-nav-menu--main .elementor-item {
+  position: relative;
+}
+
+.un-header .elementor-nav-menu--main .elementor-item.elementor-item-active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #F10505;
+  transform: translateX(-50%);
+}
+
+/* Logos brancos: só no cabeçalho flutuante (ao rolar) */
+.un-header .un-logos--white {
+  display: none;
+}
+
+/* Botões com seta em círculo vermelho (gira no hover) */
+.un-btn-arrow .elementor-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #F10505;
+  color: #FFFFFF;
+  fill: #FFFFFF;
+  font-size: 12px;
+  transition: transform 0.4s ease;
+}
+
+.un-btn-arrow .elementor-button-icon svg {
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+.un-btn-arrow .elementor-button-icon i,
+.un-btn-arrow .elementor-button-icon svg {
+  transform: rotate(-45deg);
+}
+
+.un-btn-arrow .elementor-button:hover .elementor-button-icon {
+  transform: rotate(45deg);
+}
+
+/* Link "Conhecer a proposta ↓": a seta desce no hover */
+.un-btn-link .elementor-button-icon {
+  transition: transform 0.3s ease;
+}
+
+.un-btn-link .elementor-button:hover .elementor-button-icon {
+  transform: translateY(3px);
+}
+
+/* --------------------------------------------------------------------------
+   CABEÇALHO FLUTUANTE ao rolar (desktop e tablet)
+   O un-home.js adiciona .gt-scrolled ao .un-top depois de 40px de scroll.
+   O .un-header-wrap guarda a altura do cabeçalho, então nada "pula".
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  body .un-top.gt-scrolled .un-header.un-header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    z-index: 999;
+    width: min(1240px, calc(100% - 48px));
+    min-height: 68px;
+    transform: translateX(-50%);
+    --padding-top: 8px;
+    --padding-right: 10px;
+    --padding-bottom: 8px;
+    --padding-left: 28px;
+    border-radius: 999px;
+    background-color: rgba(1, 6, 88, 0.94);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 12px 34px rgba(1, 6, 88, 0.28);
+    animation: un-header-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  body.admin-bar .un-top.gt-scrolled .un-header.un-header {
+    top: 52px;
+  }
+
+  .un-top.gt-scrolled .un-header .un-logos--color {
+    display: none;
+  }
+
+  .un-top.gt-scrolled .un-header .un-logos--white {
+    display: flex;
+  }
+
+  body .un-top.gt-scrolled .un-header .elementor-nav-menu--main .elementor-item.elementor-item {
+    color: #FFFFFF;
+  }
+
+  body .un-top.gt-scrolled .un-header .elementor-social-icon.elementor-social-icon {
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  body .un-top.gt-scrolled .un-header .elementor-social-icon i,
+  body .un-top.gt-scrolled .un-header .elementor-social-icon svg {
+    color: #FFFFFF;
+    fill: #FFFFFF;
+  }
+
+  body .un-top.gt-scrolled .un-header .un-btn-arrow .elementor-button.elementor-button {
+    background-color: #FFFFFF;
+    color: #010658;
+  }
+
+  /* No editor: mostra o espaço dos logos brancos (tracejado) para trocar as imagens */
+  .elementor-editor-active .un-header .un-logos--white {
+    display: flex;
+    outline: 1px dashed rgba(1, 6, 88, 0.4);
+    outline-offset: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 782px) {
+  body.admin-bar .un-top.gt-scrolled .un-header.un-header {
+    top: 66px;
+  }
+}
+
+@keyframes un-header-in {
+  from { opacity: 0.6; width: 1000px; transform: translate(-50%, -8px); }
+  to   { opacity: 1; width: min(1240px, calc(100% - 48px)); transform: translate(-50%, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   CARTÃO DO HERO
+   -------------------------------------------------------------------------- */
+
+/* Selo e segmentos: pontinhos vermelhos */
+.un-hero .un-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #F10505;
+  vertical-align: middle;
+  box-shadow: 0 0 0 4px rgba(241, 5, 5, 0.18);
+}
+
+/* Segmentos: o 1º item não tem o ponto separador */
+.un-hero .un-segments .elementor-icon-list-item:first-child .elementor-icon-list-icon {
+  display: none;
+}
+
+/* Celular: foto no topo do cartão, dissolvendo no azul (slideshow nativo) */
+@media (max-width: 767px) {
+  .un-top .un-hero .elementor-background-slideshow .elementor-background-slideshow__slide__image {
+    background-size: 230% auto;
+    background-position: 88% 0;
+    background-repeat: no-repeat;
+    background-color: #0D1261;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-top.gt-scrolled .un-header {
+    animation: none;
+  }
+}
