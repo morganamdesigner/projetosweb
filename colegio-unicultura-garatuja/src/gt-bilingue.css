@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Garatuja | Seção "Escola bilíngue" - CSS da seção (vai embutido no JSON dela)
+   Escopo: .gt-bilingue. Reaproveita .gt-highlight e .gt-btn-arrow do CSS da página.
+   ========================================================================== */
+
+/* Palavra em destaque do título: faixa azul com texto amarelo (desenha ao aparecer) */
+.gt-bilingue .gt-highlight--navy {
+  margin-left: 0;
+  padding: 0 14px;
+  border-radius: 16px;
+  background-image: linear-gradient(#010658, #010658);
+  color: #F2CA50;
+  white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   Balões de fala sobre a foto ("Hello!" / "Olá!")
+   -------------------------------------------------------------------------- */
+.gt-bilingue .gt-bubble .elementor-heading-title {
+  position: relative;
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(1, 6, 88, 0.25);
+  animation: gt-bubble-float 5s ease-in-out infinite;
+}
+
+.gt-bilingue .gt-bubble .elementor-heading-title::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  transform: rotate(45deg);
+}
+
+.gt-bilingue .gt-bubble--light .elementor-heading-title,
+.gt-bilingue .gt-bubble--light .elementor-heading-title::after {
+  background-color: #FFFFFF;
+}
+
+.gt-bilingue .gt-bubble--light .elementor-heading-title::after {
+  left: 30px;
+}
+
+.gt-bilingue .gt-bubble--dark .elementor-heading-title,
+.gt-bilingue .gt-bubble--dark .elementor-heading-title::after {
+  background-color: #010658;
+}
+
+.gt-bilingue .gt-bubble--dark .elementor-heading-title {
+  animation-delay: -2.5s;
+}
+
+.gt-bilingue .gt-bubble--dark .elementor-heading-title::after {
+  right: 30px;
+}
+
+@keyframes gt-bubble-float {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -10px; }
+}
+
+/* --------------------------------------------------------------------------
+   Cards que viram (português na frente, inglês no verso)
+   -------------------------------------------------------------------------- */
+.gt-bilingue .gt-flip {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.gt-bilingue .gt-flip .gt-flip__inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gt-bilingue .gt-flip:hover .gt-flip__inner,
+.gt-bilingue .gt-flip:focus-within .gt-flip__inner {
+  transform: rotateY(180deg);
+}
+
+.gt-bilingue .gt-flip .gt-flip__face {
+  position: absolute;
+  inset: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.gt-bilingue .gt-flip .gt-flip__back {
+  transform: rotateY(180deg);
+}
+
+/* --------------------------------------------------------------------------
+   Faixa rolante com pares de palavras
+   -------------------------------------------------------------------------- */
+.gt-bilingue .gt-marquee {
+  transform: rotate(-2deg);
+}
+
+.gt-bilingue .gt-marquee .elementor-heading-title {
+  display: inline-block;
+  width: max-content;
+  white-space: nowrap;
+  animation: gt-marquee 60s linear infinite;
+}
+
+.gt-bilingue .gt-marquee:hover .elementor-heading-title {
+  animation-play-state: paused;
+}
+
+@keyframes gt-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Movimento reduzido: balões e faixa param; os cards viram sem animação */
+@media (prefers-reduced-motion: reduce) {
+  .gt-bilingue .gt-bubble .elementor-heading-title,
+  .gt-bilingue .gt-marquee .elementor-heading-title {
+    animation: none;
+  }
+}

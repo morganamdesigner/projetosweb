@@ -9,6 +9,7 @@ com 1920 × 7027 px no desktop.
 | `garatuja-elementor.json` | Template pronto para importar no Elementor: 60 containers e 72 widgets. |
 | `src/gt-page.css` | CSS complementar. O JSON já traz esse CSS embutido. |
 | `src/gt-page.js` | JS de 15 linhas que marca a página como "rolada" (menu fixo). O JSON também já traz esse JS embutido. |
+| `secao-bilingue-elementor.json` | Seção extra "Escola bilíngue", que não está no Figma. É um template de container separado, com o próprio CSS embutido (seção 11). |
 | `src/build_elementor_json.py` | Script que gera o JSON. Rode `python3 src/build_elementor_json.py` para regenerar. |
 
 ---
@@ -238,3 +239,28 @@ Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em 
   - o 2º botão "Conhecer proposta";
   - legendas da galeria.
 - **Largura do texto dos checklists:** algumas quebras de linha podem diferir levemente do Figma, onde cada caixa de texto tinha uma largura manual (174–209 px). No Elementor, o texto ocupa a largura do card.
+
+---
+
+## 11. Seção extra: "Escola bilíngue"
+
+Seção criada à parte, fora do Figma, para reforçar que a Garatuja é bilíngue e tem aulas de inglês desde a Educação Infantil. Ela é gerada por `src/build_secao_bilingue.py` e o CSS dela fica em `src/gt-bilingue.css`, embutido num widget HTML dentro da própria seção. Visual: card amarelo com raio de 40 px, no mesmo padrão da página.
+
+| Bloco | O que faz |
+|---|---|
+| Texto | Selo "Escola bilíngue · Bilingual school", H2 "Aqui, a infância fala **dois idiomas**" (faixa azul que se desenha ao aparecer), parágrafo, 3 destaques e o botão "Agendar uma visita". |
+| Foto | Foto de aula de inglês (placeholder `bilingue-aula-de-ingles.jpg`, 520 px de altura, raio 32) com dois balões de fala flutuando: **"Hello!"** (branco) e **"Olá!"** (azul). |
+| Cards que viram | Quatro cards com a palavra em português na frente. Ao passar o mouse ou tocar, o card gira e mostra a palavra em inglês: Brincar → Play, Cores → Colors, Amigos → Friends, Histórias → Stories. Ficam em 4 colunas no desktop e 2 × 2 no celular. |
+| Faixa rolante | Faixa azul inclinada (−2°) com pares de palavras (HELLO · OLÁ ✦ PLAY · BRINCAR ✦ …). Pausa no hover e fica oculta para leitores de tela (atributo `aria-hidden`, do Pro). |
+
+**Como inserir logo abaixo do hero:**
+1. Importe `secao-bilingue-elementor.json` em *Templates → Import*.
+2. Na página, insira o template "Garatuja - Seção Escola bilíngue".
+3. No *Navigator*, arraste-o para **dentro do container `gt-top`**, entre o hero e a seção "Duas etapas".
+
+A seção também funciona se ficar solta entre dois containers da página.
+
+**Textos:** foram escritos a partir do que a escola informou (bilíngue, com aulas de inglês desde a Educação Infantil) e do que já está na página. Não há números nem cargas horárias inventados. Revise e ajuste à vontade.
+
+**Imagem a substituir:** `bilingue-aula-de-ingles.jpg`, com o alt sugerido "Crianças da Garatuja em aula de inglês". Não existe no Figma, então é preciso uma foto nova.
+
