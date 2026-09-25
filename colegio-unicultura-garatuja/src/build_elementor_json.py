@@ -12,7 +12,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "garatuja-elementor.json")
-OUT_NAV = os.path.join(HERE, "..", "garatuja-menu-navbar.json")
+JS_FILE = os.path.join(HERE, "gt-page.js")
 CSS_FILE = os.path.join(HERE, "gt-page.css")
 
 # ---------------------------------------------------------------------------
@@ -407,8 +407,7 @@ def build_top():
     navbar = container({
         "content_width": "full",
         "html_tag": "nav",
-        "width": px(803),
-        "width_tablet": px(100, "%"),
+        "width": px(100, "%"),
         "min_height": px(72),
         "flex_direction": "row",
         "flex_direction_mobile": "column",
@@ -421,8 +420,6 @@ def build_top():
         "padding": dims(0, 39, 0, 96),
         "padding_tablet": dims(0, 24, 0, 24),
         "padding_mobile": dims(16),
-        "_flex_align_self": "flex-end",
-        "_flex_align_self_tablet": "stretch",
         "background_background": "classic",
         "background_color": "rgba(2, 6, 89, 0.02)",
         "border_border": "solid",
@@ -431,14 +428,20 @@ def build_top():
         "border_radius": dims(40),
         "border_radius_mobile": dims(24),
         "css_classes": "gt-navbar",
-        # Elementor Pro > Sticky: a navbar acompanha o scroll (desktop e tablet).
-        # Após 40px de scroll o Pro adiciona .elementor-sticky--effects, usado no CSS
-        # para escurecer o vidro, centralizar o menu e mostrar os logos.
-        "sticky": "top",
-        "sticky_on": ["desktop", "tablet"],
-        "sticky_offset": 16,
-        "sticky_effects_offset": 40,
     }, [nav_logos, nav_links, nav_social, nav_cta])
+    # O wrapper segura a posição/altura do menu no hero. Ao rolar, o menu interno fica
+    # fixo, centralizado e mais largo (CSS .gt-scrolled + gt-page.js) e o wrapper
+    # mantém o espaço, então o conteúdo do hero não sobe.
+    navbar_wrap = container({
+        "content_width": "full",
+        "width": px(803),
+        "width_tablet": px(100, "%"),
+        "min_height": px(72),
+        "flex_direction": "column",
+        "_flex_align_self": "flex-end",
+        "_flex_align_self_tablet": "stretch",
+        "css_classes": "gt-navbar-wrap",
+    }, [navbar])
 
     # --- Conteúdo do hero ---------------------------------------------------
     hero_tag = heading(
@@ -550,7 +553,7 @@ def build_top():
         "background_overlay_gradient_angle": px(90, "deg"),
         "background_overlay_opacity": px(1),
         "css_classes": "gt-hero",
-    }, [notch_tl, navbar, hero_content, notch_br])
+    }, [notch_tl, navbar_wrap, hero_content, notch_br])
 
     # --- Seção "Duas etapas, uma transição cuidada" --------------------------
     duas_title = heading(
@@ -1269,36 +1272,21 @@ def build_footer():
 
 
 # ---------------------------------------------------------------------------
-# 8. CSS complementar (widget HTML único, sem altura visível)
+# 8. CSS + JS complementares (widget HTML único, sem altura visível)
 # ---------------------------------------------------------------------------
 
 def build_css_holder():
     with open(CSS_FILE, encoding="utf-8") as fh:
         css = fh.read().strip()
+    with open(JS_FILE, encoding="utf-8") as fh:
+        js = fh.read().strip()
+    html = "<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"
     return container({
         "content_width": "full",
         "padding": dims(0),
         "min_height": px(0),
         "css_classes": "gt-root gt-css",
-    }, [widget("html", {"html": "<style>\n" + css + "\n</style>"})], inner=False)
-
-
-def export_navbar(page_content):
-    """Grava só o container da navbar como template "container" para substituir o menu."""
-    hero = page_content[0]["elements"][0]
-    navbar = next(e for e in hero["elements"] if "gt-navbar" in e["settings"].get("css_classes", ""))
-    navbar = json.loads(json.dumps(navbar))
-    navbar["isInner"] = False
-    data = {
-        "content": [navbar],
-        "page_settings": [],
-        "version": "0.4",
-        "title": "Garatuja - Menu (navbar)",
-        "type": "container",
-    }
-    with open(OUT_NAV, "w", encoding="utf-8") as fh:
-        json.dump(data, fh, ensure_ascii=False, indent=2)
-        fh.write("\n")
+    }, [widget("html", {"html": html})], inner=False)
 
 
 def main():
@@ -1325,9 +1313,7 @@ def main():
     with open(OUT, "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
-    export_navbar(content)
     print(f"OK: {os.path.normpath(OUT)} ({_counter[0]} ids)")
-    print(f"OK: {os.path.normpath(OUT_NAV)}")
 
 
 if __name__ == "__main__":

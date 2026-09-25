@@ -8,6 +8,7 @@ com 1920 × 7027 px no desktop.
 |---|---|
 | `garatuja-elementor.json` | Template pronto para importar no Elementor: 60 containers e 72 widgets. |
 | `src/gt-page.css` | CSS complementar. O JSON já traz esse CSS embutido. |
+| `src/gt-page.js` | JS de 15 linhas que marca a página como "rolada" (menu fixo). O JSON também já traz esse JS embutido. |
 | `src/build_elementor_json.py` | Script que gera o JSON. Rode `python3 src/build_elementor_json.py` para regenerar. |
 
 ---
@@ -34,7 +35,8 @@ Página (Elementor Canvas)
 ├─ [gt-top]  Container boxed 1480 · fundo #EEEFF4
 │  ├─ <header> HERO [gt-hero]  1480×768 · imagem de fundo + overlay gradiente · raio 40
 │  │  ├─ Recorte sup. esq. [gt-notch--tl] → 2 × Image (logos)
-│  │  ├─ <nav> Navbar de vidro [gt-navbar] → Icon List (menu) · Social Icons · Button "Matricule-se"
+│  │  ├─ [gt-navbar-wrap] (reserva o espaço do menu)
+│  │  │  └─ <nav> Navbar de vidro [gt-navbar] → [gt-navbar-logos] 2 × Image · Icon List (menu) · Social Icons · Button "Matricule-se"
 │  │  ├─ Conteúdo (570px) → Heading <p> (selo) · Heading H1 · Text Editor · Button
 │  │  └─ Recorte inf. dir. [gt-notch--br] (decorativo, oculto no mobile)
 │  └─ <section> "Duas etapas" (boxed 1048, 2 colunas) → Heading H2 · Text Editor · Button
@@ -197,7 +199,7 @@ Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em 
 |---|---|---|
 | Hero | Selo, H1, texto e botão entram em cascata (0 / 120 / 240 / 360 ms). | Entrance Animation *Fade In Up* (nativa) |
 | Hero | A foto de fundo faz um zoom lento de 135% para 123% ao carregar (só desktop). | CSS (`.gt-hero`) |
-| Navbar | Fica fixa no topo ao rolar, com 16 px de distância. Depois de 40 px de scroll, vai para o **centro da tela** (até 1040 px de largura), o vidro escurece, ganha sombra e os **dois logos aparecem à esquerda**, com fade. Desktop e tablet. | **Pro**: *Sticky: Top* + *Effects Offset 40*. CSS: `.elementor-sticky--effects`, `.gt-navbar-logos` |
+| Navbar | Depois de 40 px de scroll, fica **fixa no topo** (16 px de distância), vai para o **centro da tela** e **se expande** de 803 px para até 1240 px. O vidro escurece, ganha sombra e os **dois logos aparecem à esquerda**. Os links ficam no centro e as redes sociais e o botão à direita. Desktop e tablet. | CSS (`.gt-scrolled`, `.gt-navbar-logos`) + `gt-page.js` |
 | "Duas etapas" | O título aparece e a faixa amarela se desenha da esquerda para a direita. A coluna da direita sobe logo depois. | *Fade In* + CSS (`.gt-highlight`) · *Fade In Up* |
 | Cards das etapas | Eyebrow, H2 e texto em cascata. Os itens do checklist entram em ziguezague (40–80 ms entre eles). | *Fade In Up* |
 | Cards das etapas | As fotos fazem parallax leve ao rolar (velocidade 1, só desktop). | **Pro**: *Motion Effects → Vertical Scroll* |
@@ -212,12 +214,12 @@ Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em 
 
 **Para ajustar no editor:**
 - **Entradas:** *Advanced → Motion Effects → Entrance Animation* do widget ou container.
-- **Navbar fixa:** container da navbar → *Advanced → Motion Effects → Sticky*.
+- **Navbar fixa:** controlada pelo CSS e pelo JS da página, não pelo *Sticky* do Pro. **Não ative o Sticky** nesse container, porque os dois brigariam pela posição do menu.
 - **Parallax:** widget de imagem → *Advanced → Motion Effects → Scrolling Effects*.
 
 **Logos do menu fixo:** ficam no container `gt-navbar-logos`, o primeiro item da navbar, com as imagens `logo-colegio-unicultura-menu.svg` (77 px) e `logo-garatuja-menu.png` (81 px). Como o menu fixo tem fundo azul-escuro, use as **versões brancas (negativas)** dos logos. No topo da página esse espaço fica oculto. No editor ele aparece com contorno tracejado, para você poder trocar as imagens.
 
-**Trocar só o menu:** importe `garatuja-menu-navbar.json` em *Templates → Import*. Na página, apague a navbar antiga, insira o template "Garatuja - Menu (navbar)" e arraste-o pelo *Navigator* para dentro do hero, entre o recorte dos logos e o conteúdo. Depois substitua o conteúdo do widget HTML (container `gt-css`, no fim da página) pelo `src/gt-page.css` novo, dentro de `<style>…</style>`.
+**Por que o menu fixo não usa o Sticky do Pro:** o Sticky grava posição e largura direto no elemento. Isso impedia centralizar e alargar o menu de forma confiável. Agora o `gt-page.js` só adiciona a classe `gt-scrolled` ao topo da página depois de 40 px de scroll, e o CSS faz o resto. O container `gt-navbar-wrap` guarda a altura do menu no hero, então o conteúdo não "pula" quando o menu fica fixo. No celular o menu continua sem ficar fixo.
 
 **Não incluída:** a faixa rolante "MATRÍCULAS ABERTAS 2026 ✦ VAGAS LIMITADAS" (camadas `DiagonalTape`) está **oculta** no Figma, então não foi adicionada. Se o designer confirmar, ela pode ser criada com CSS.
 

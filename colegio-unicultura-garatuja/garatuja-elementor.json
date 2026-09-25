@@ -1,7 +1,7 @@
 {
   "content": [
     {
-      "id": "e37e5c0",
+      "id": "8d0fc91",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -44,7 +44,7 @@
       },
       "elements": [
         {
-          "id": "a3da6c6",
+          "id": "87036ce",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -343,27 +343,26 @@
               ]
             },
             {
-              "id": "6dc551a",
+              "id": "f06b880",
               "elType": "container",
               "isInner": true,
               "settings": {
                 "flex_gap": {
-                  "column": "12.3",
-                  "row": "12.3",
+                  "column": "0",
+                  "row": "0",
                   "isLinked": true,
                   "unit": "px",
-                  "size": 12.3
+                  "size": 0
                 },
                 "padding": {
                   "unit": "px",
                   "top": "0",
-                  "right": "39",
+                  "right": "0",
                   "bottom": "0",
-                  "left": "96",
-                  "isLinked": false
+                  "left": "0",
+                  "isLinked": true
                 },
                 "content_width": "full",
-                "html_tag": "nav",
                 "width": {
                   "unit": "px",
                   "size": 803,
@@ -379,508 +378,539 @@
                   "size": 72,
                   "sizes": []
                 },
-                "flex_direction": "row",
-                "flex_direction_mobile": "column",
-                "flex_justify_content": "flex-start",
-                "flex_justify_content_tablet": "space-between",
-                "flex_align_items": "center",
-                "flex_wrap_mobile": "wrap",
-                "flex_gap_mobile": {
-                  "column": "14",
-                  "row": "14",
-                  "isLinked": true,
-                  "unit": "px",
-                  "size": 14
-                },
-                "padding_tablet": {
-                  "unit": "px",
-                  "top": "0",
-                  "right": "24",
-                  "bottom": "0",
-                  "left": "24",
-                  "isLinked": false
-                },
-                "padding_mobile": {
-                  "unit": "px",
-                  "top": "16",
-                  "right": "16",
-                  "bottom": "16",
-                  "left": "16",
-                  "isLinked": true
-                },
+                "flex_direction": "column",
                 "_flex_align_self": "flex-end",
                 "_flex_align_self_tablet": "stretch",
-                "background_background": "classic",
-                "background_color": "rgba(2, 6, 89, 0.02)",
-                "border_border": "solid",
-                "border_width": {
-                  "unit": "px",
-                  "top": "1",
-                  "right": "1",
-                  "bottom": "1",
-                  "left": "1",
-                  "isLinked": true
-                },
-                "border_color": "rgba(255, 255, 255, 0.11)",
-                "border_radius": {
-                  "unit": "px",
-                  "top": "40",
-                  "right": "40",
-                  "bottom": "40",
-                  "left": "40",
-                  "isLinked": true
-                },
-                "border_radius_mobile": {
-                  "unit": "px",
-                  "top": "24",
-                  "right": "24",
-                  "bottom": "24",
-                  "left": "24",
-                  "isLinked": true
-                },
-                "css_classes": "gt-navbar",
-                "sticky": "top",
-                "sticky_on": [
-                  "desktop",
-                  "tablet"
-                ],
-                "sticky_offset": 16,
-                "sticky_effects_offset": 40,
-                "__globals__": {
-                  "background_color": "",
-                  "border_color": ""
-                }
+                "css_classes": "gt-navbar-wrap"
               },
               "elements": [
                 {
-                  "id": "fc20231",
+                  "id": "6dc551a",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
                     "flex_gap": {
+                      "column": "12.3",
+                      "row": "12.3",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 12.3
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "39",
+                      "bottom": "0",
+                      "left": "96",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "html_tag": "nav",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "min_height": {
+                      "unit": "px",
+                      "size": 72,
+                      "sizes": []
+                    },
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "column",
+                    "flex_justify_content": "flex-start",
+                    "flex_justify_content_tablet": "space-between",
+                    "flex_align_items": "center",
+                    "flex_wrap_mobile": "wrap",
+                    "flex_gap_mobile": {
                       "column": "14",
                       "row": "14",
                       "isLinked": true,
                       "unit": "px",
                       "size": 14
                     },
-                    "padding": {
+                    "padding_tablet": {
                       "unit": "px",
                       "top": "0",
-                      "right": "0",
+                      "right": "24",
                       "bottom": "0",
-                      "left": "0",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "16",
+                      "left": "16",
                       "isLinked": true
                     },
-                    "content_width": "full",
-                    "width": {
+                    "background_background": "classic",
+                    "background_color": "rgba(2, 6, 89, 0.02)",
+                    "border_border": "solid",
+                    "border_width": {
                       "unit": "px",
-                      "size": 172,
-                      "sizes": []
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
                     },
-                    "flex_direction": "row",
-                    "flex_justify_content": "flex-start",
-                    "flex_align_items": "center",
-                    "_flex_size": "none",
-                    "css_classes": "gt-navbar-logos"
+                    "border_color": "rgba(255, 255, 255, 0.11)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "40",
+                      "right": "40",
+                      "bottom": "40",
+                      "left": "40",
+                      "isLinked": true
+                    },
+                    "border_radius_mobile": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "24",
+                      "left": "24",
+                      "isLinked": true
+                    },
+                    "css_classes": "gt-navbar",
+                    "__globals__": {
+                      "background_color": "",
+                      "border_color": ""
+                    }
                   },
                   "elements": [
                     {
-                      "id": "53d2943",
+                      "id": "fc20231",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "14",
+                          "row": "14",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 14
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "width": {
+                          "unit": "px",
+                          "size": 172,
+                          "sizes": []
+                        },
+                        "flex_direction": "row",
+                        "flex_justify_content": "flex-start",
+                        "flex_align_items": "center",
+                        "_flex_size": "none",
+                        "css_classes": "gt-navbar-logos"
+                      },
+                      "elements": [
+                        {
+                          "id": "53d2943",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "url": "https://example.com/substituir-asset-figma/logo-colegio-unicultura-menu.svg",
+                              "id": "",
+                              "size": "",
+                              "alt": "Colégio Unicultura"
+                            },
+                            "image_size": "full",
+                            "align": "left",
+                            "link_to": "none",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 77,
+                              "sizes": []
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "c1b6675",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "url": "https://example.com/substituir-asset-figma/logo-garatuja-menu.png",
+                              "id": "",
+                              "size": "",
+                              "alt": "Garatuja - Educação Infantil e Fundamental I"
+                            },
+                            "image_size": "full",
+                            "align": "left",
+                            "link_to": "none",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 81,
+                              "sizes": []
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "94189d2",
                       "elType": "widget",
                       "isInner": false,
-                      "widgetType": "image",
+                      "widgetType": "icon-list",
                       "settings": {
-                        "image": {
-                          "url": "https://example.com/substituir-asset-figma/logo-colegio-unicultura-menu.svg",
-                          "id": "",
-                          "size": "",
-                          "alt": "Colégio Unicultura"
-                        },
-                        "image_size": "full",
-                        "align": "left",
-                        "link_to": "none",
-                        "width": {
-                          "unit": "%",
-                          "size": 100,
-                          "sizes": []
-                        },
-                        "_element_width": "initial",
-                        "_element_custom_width": {
+                        "view": "inline",
+                        "icon_list": [
+                          {
+                            "_id": "6960954",
+                            "text": "Home",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          },
+                          {
+                            "_id": "1f095b0",
+                            "text": "Unicultura",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          },
+                          {
+                            "_id": "777fa4d",
+                            "text": "Garatuja",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          },
+                          {
+                            "_id": "e05df84",
+                            "text": "Diferenciais",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          },
+                          {
+                            "_id": "32307c2",
+                            "text": "Parceiros",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          },
+                          {
+                            "_id": "8d3896a",
+                            "text": "Contato",
+                            "selected_icon": {
+                              "value": "",
+                              "library": ""
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            }
+                          }
+                        ],
+                        "space_between": {
                           "unit": "px",
-                          "size": 77,
+                          "size": 24,
                           "sizes": []
+                        },
+                        "text_color": "#FFFFFF",
+                        "text_color_hover": "#FFFFFF",
+                        "icon_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "text_indent": {
+                          "unit": "px",
+                          "size": 0,
+                          "sizes": []
+                        },
+                        "icon_typography_typography": "custom",
+                        "icon_typography_font_family": "DM Sans",
+                        "icon_typography_font_size": {
+                          "unit": "px",
+                          "size": 13,
+                          "sizes": []
+                        },
+                        "icon_typography_font_weight": "700",
+                        "icon_typography_line_height": {
+                          "unit": "px",
+                          "size": 17.315,
+                          "sizes": []
+                        },
+                        "space_between_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_margin": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "10",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "_margin_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "icon_align": "left",
+                        "icon_align_mobile": "center",
+                        "_flex_size": "none",
+                        "__globals__": {
+                          "text_color": "",
+                          "icon_typography_typography": ""
                         }
                       },
                       "elements": []
                     },
                     {
-                      "id": "c1b6675",
+                      "id": "8a5674a",
                       "elType": "widget",
                       "isInner": false,
-                      "widgetType": "image",
+                      "widgetType": "social-icons",
                       "settings": {
-                        "image": {
-                          "url": "https://example.com/substituir-asset-figma/logo-garatuja-menu.png",
-                          "id": "",
-                          "size": "",
-                          "alt": "Garatuja - Educação Infantil e Fundamental I"
-                        },
-                        "image_size": "full",
+                        "social_icon_list": [
+                          {
+                            "_id": "93fc586",
+                            "social_icon": {
+                              "value": "fab fa-facebook-f",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "item_icon_color": "default"
+                          },
+                          {
+                            "_id": "86473db",
+                            "social_icon": {
+                              "value": "fab fa-instagram",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "item_icon_color": "default"
+                          },
+                          {
+                            "_id": "f592b55",
+                            "social_icon": {
+                              "value": "fab fa-linkedin-in",
+                              "library": "fa-brands"
+                            },
+                            "link": {
+                              "url": "",
+                              "is_external": "",
+                              "nofollow": "",
+                              "custom_attributes": ""
+                            },
+                            "item_icon_color": "default"
+                          }
+                        ],
+                        "shape": "rounded",
                         "align": "left",
-                        "link_to": "none",
-                        "width": {
-                          "unit": "%",
-                          "size": 100,
+                        "icon_color": "custom",
+                        "icon_primary_color": "#F2CA50",
+                        "icon_secondary_color": "#010658",
+                        "icon_size": {
+                          "unit": "px",
+                          "size": 10,
                           "sizes": []
                         },
-                        "_element_width": "initial",
-                        "_element_custom_width": {
-                          "unit": "px",
-                          "size": 81,
+                        "icon_padding": {
+                          "unit": "em",
+                          "size": 0.9,
                           "sizes": []
+                        },
+                        "icon_spacing": {
+                          "unit": "px",
+                          "size": 12.3,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10",
+                          "isLinked": true
+                        },
+                        "image_border_border": "solid",
+                        "image_border_width": {
+                          "unit": "px",
+                          "top": "0.77",
+                          "right": "0.77",
+                          "bottom": "0.77",
+                          "left": "0.77",
+                          "isLinked": true
+                        },
+                        "image_border_color": "rgba(1, 6, 88, 0.14)",
+                        "_flex_size": "none",
+                        "__globals__": {
+                          "icon_color": "",
+                          "icon_primary_color": "",
+                          "icon_secondary_color": "",
+                          "image_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "5dd17bd",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Matricule-se",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#010658",
+                        "hover_color": "#010658",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "8.66",
+                          "right": "12.3",
+                          "bottom": "8.66",
+                          "left": "16.87",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "769",
+                          "right": "769",
+                          "bottom": "769",
+                          "left": "769",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "#FFFFFF",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "DM Sans",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 10.004,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 15.007,
+                          "sizes": []
+                        },
+                        "button_box_shadow_box_shadow_type": "yes",
+                        "button_box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 1.539,
+                          "blur": 3.078,
+                          "spread": 0,
+                          "color": "#F2CA50"
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-arrow-right",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "icon_indent": {
+                          "unit": "px",
+                          "size": 7,
+                          "sizes": []
+                        },
+                        "_css_classes": "gt-btn-arrow gt-btn-arrow--light",
+                        "_flex_size": "none",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": ""
                         }
                       },
                       "elements": []
                     }
                   ]
-                },
-                {
-                  "id": "94189d2",
-                  "elType": "widget",
-                  "isInner": false,
-                  "widgetType": "icon-list",
-                  "settings": {
-                    "view": "inline",
-                    "icon_list": [
-                      {
-                        "_id": "6960954",
-                        "text": "Home",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
-                      {
-                        "_id": "1f095b0",
-                        "text": "Unicultura",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
-                      {
-                        "_id": "777fa4d",
-                        "text": "Garatuja",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
-                      {
-                        "_id": "e05df84",
-                        "text": "Diferenciais",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
-                      {
-                        "_id": "32307c2",
-                        "text": "Parceiros",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
-                      {
-                        "_id": "8d3896a",
-                        "text": "Contato",
-                        "selected_icon": {
-                          "value": "",
-                          "library": ""
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      }
-                    ],
-                    "space_between": {
-                      "unit": "px",
-                      "size": 24,
-                      "sizes": []
-                    },
-                    "text_color": "#FFFFFF",
-                    "text_color_hover": "#FFFFFF",
-                    "icon_size": {
-                      "unit": "px",
-                      "size": 14,
-                      "sizes": []
-                    },
-                    "text_indent": {
-                      "unit": "px",
-                      "size": 0,
-                      "sizes": []
-                    },
-                    "icon_typography_typography": "custom",
-                    "icon_typography_font_family": "DM Sans",
-                    "icon_typography_font_size": {
-                      "unit": "px",
-                      "size": 13,
-                      "sizes": []
-                    },
-                    "icon_typography_font_weight": "700",
-                    "icon_typography_line_height": {
-                      "unit": "px",
-                      "size": 17.315,
-                      "sizes": []
-                    },
-                    "space_between_mobile": {
-                      "unit": "px",
-                      "size": 16,
-                      "sizes": []
-                    },
-                    "_margin": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "10",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": false
-                    },
-                    "_margin_mobile": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "0",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": true
-                    },
-                    "icon_align": "left",
-                    "icon_align_mobile": "center",
-                    "_flex_size": "none",
-                    "__globals__": {
-                      "text_color": "",
-                      "icon_typography_typography": ""
-                    }
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "8a5674a",
-                  "elType": "widget",
-                  "isInner": false,
-                  "widgetType": "social-icons",
-                  "settings": {
-                    "social_icon_list": [
-                      {
-                        "_id": "93fc586",
-                        "social_icon": {
-                          "value": "fab fa-facebook-f",
-                          "library": "fa-brands"
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        },
-                        "item_icon_color": "default"
-                      },
-                      {
-                        "_id": "86473db",
-                        "social_icon": {
-                          "value": "fab fa-instagram",
-                          "library": "fa-brands"
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        },
-                        "item_icon_color": "default"
-                      },
-                      {
-                        "_id": "f592b55",
-                        "social_icon": {
-                          "value": "fab fa-linkedin-in",
-                          "library": "fa-brands"
-                        },
-                        "link": {
-                          "url": "",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        },
-                        "item_icon_color": "default"
-                      }
-                    ],
-                    "shape": "rounded",
-                    "align": "left",
-                    "icon_color": "custom",
-                    "icon_primary_color": "#F2CA50",
-                    "icon_secondary_color": "#010658",
-                    "icon_size": {
-                      "unit": "px",
-                      "size": 10,
-                      "sizes": []
-                    },
-                    "icon_padding": {
-                      "unit": "em",
-                      "size": 0.9,
-                      "sizes": []
-                    },
-                    "icon_spacing": {
-                      "unit": "px",
-                      "size": 12.3,
-                      "sizes": []
-                    },
-                    "border_radius": {
-                      "unit": "px",
-                      "top": "10",
-                      "right": "10",
-                      "bottom": "10",
-                      "left": "10",
-                      "isLinked": true
-                    },
-                    "image_border_border": "solid",
-                    "image_border_width": {
-                      "unit": "px",
-                      "top": "0.77",
-                      "right": "0.77",
-                      "bottom": "0.77",
-                      "left": "0.77",
-                      "isLinked": true
-                    },
-                    "image_border_color": "rgba(1, 6, 88, 0.14)",
-                    "_flex_size": "none",
-                    "__globals__": {
-                      "icon_color": "",
-                      "icon_primary_color": "",
-                      "icon_secondary_color": "",
-                      "image_border_color": ""
-                    }
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "5dd17bd",
-                  "elType": "widget",
-                  "isInner": false,
-                  "widgetType": "button",
-                  "settings": {
-                    "text": "Matricule-se",
-                    "link": {
-                      "url": "",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    },
-                    "align": "left",
-                    "size": "md",
-                    "button_text_color": "#010658",
-                    "hover_color": "#010658",
-                    "text_padding": {
-                      "unit": "px",
-                      "top": "8.66",
-                      "right": "12.3",
-                      "bottom": "8.66",
-                      "left": "16.87",
-                      "isLinked": false
-                    },
-                    "border_radius": {
-                      "unit": "px",
-                      "top": "769",
-                      "right": "769",
-                      "bottom": "769",
-                      "left": "769",
-                      "isLinked": true
-                    },
-                    "background_background": "classic",
-                    "background_color": "#FFFFFF",
-                    "button_background_hover_background": "classic",
-                    "button_background_hover_color": "#FFFFFF",
-                    "typography_typography": "custom",
-                    "typography_font_family": "DM Sans",
-                    "typography_font_size": {
-                      "unit": "px",
-                      "size": 10.004,
-                      "sizes": []
-                    },
-                    "typography_font_weight": "700",
-                    "typography_line_height": {
-                      "unit": "px",
-                      "size": 15.007,
-                      "sizes": []
-                    },
-                    "button_box_shadow_box_shadow_type": "yes",
-                    "button_box_shadow_box_shadow": {
-                      "horizontal": 0,
-                      "vertical": 1.539,
-                      "blur": 3.078,
-                      "spread": 0,
-                      "color": "#F2CA50"
-                    },
-                    "selected_icon": {
-                      "value": "fas fa-arrow-right",
-                      "library": "fa-solid"
-                    },
-                    "icon_align": "right",
-                    "icon_indent": {
-                      "unit": "px",
-                      "size": 7,
-                      "sizes": []
-                    },
-                    "_css_classes": "gt-btn-arrow gt-btn-arrow--light",
-                    "_flex_size": "none",
-                    "__globals__": {
-                      "button_text_color": "",
-                      "hover_color": "",
-                      "background_color": "",
-                      "button_background_hover_color": "",
-                      "typography_typography": ""
-                    }
-                  },
-                  "elements": []
                 }
               ]
             },
             {
-              "id": "053018e",
+              "id": "a8c0a08",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -946,7 +976,7 @@
               },
               "elements": [
                 {
-                  "id": "f06b880",
+                  "id": "c1a9f7a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1032,7 +1062,7 @@
                   "elements": []
                 },
                 {
-                  "id": "c1a9f7a",
+                  "id": "0b45f97",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1106,7 +1136,7 @@
                   "elements": []
                 },
                 {
-                  "id": "0b45f97",
+                  "id": "3404d1c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -1159,7 +1189,7 @@
                   "elements": []
                 },
                 {
-                  "id": "3404d1c",
+                  "id": "053018e",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -1276,7 +1306,7 @@
               ]
             },
             {
-              "id": "a8c0a08",
+              "id": "a3da6c6",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1319,7 +1349,7 @@
           ]
         },
         {
-          "id": "3844fbc",
+          "id": "e37e5c0",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -1376,7 +1406,7 @@
           },
           "elements": [
             {
-              "id": "87036ce",
+              "id": "ef4924b",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -1465,7 +1495,7 @@
               "elements": []
             },
             {
-              "id": "a7a9910",
+              "id": "3844fbc",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1510,7 +1540,7 @@
               },
               "elements": [
                 {
-                  "id": "ef4924b",
+                  "id": "1100481",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -1554,7 +1584,7 @@
                   "elements": []
                 },
                 {
-                  "id": "1100481",
+                  "id": "a7a9910",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -1639,7 +1669,7 @@
       ]
     },
     {
-      "id": "38edc40",
+      "id": "00d36e1",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -1683,7 +1713,7 @@
       },
       "elements": [
         {
-          "id": "ce6e2b9",
+          "id": "9642aac",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -1767,7 +1797,7 @@
           },
           "elements": [
             {
-              "id": "763344d",
+              "id": "ce6e2b9",
               "elType": "widget",
               "isInner": false,
               "widgetType": "image",
@@ -1846,7 +1876,7 @@
               "elements": []
             },
             {
-              "id": "ca01193",
+              "id": "763344d",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -1903,7 +1933,7 @@
               },
               "elements": [
                 {
-                  "id": "8d0fc91",
+                  "id": "c887789",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -1941,7 +1971,7 @@
                   "elements": []
                 },
                 {
-                  "id": "c887789",
+                  "id": "3f63762",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -2004,7 +2034,7 @@
                   "elements": []
                 },
                 {
-                  "id": "3f63762",
+                  "id": "7098e8d",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -2051,7 +2081,7 @@
                   "elements": []
                 },
                 {
-                  "id": "4f3ecfd",
+                  "id": "ca01193",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -2107,7 +2137,7 @@
                   },
                   "elements": [
                     {
-                      "id": "83b504d",
+                      "id": "ba1cfe7",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2171,7 +2201,7 @@
                       },
                       "elements": [
                         {
-                          "id": "1d2401d",
+                          "id": "83b504d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2179,7 +2209,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "7098e8d",
+                                "_id": "1d2401d",
                                 "text": "Identidade e autonomia",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2241,7 +2271,7 @@
                       ]
                     },
                     {
-                      "id": "28a24f9",
+                      "id": "fd996d4",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2306,7 +2336,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f999cb6",
+                          "id": "28a24f9",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2314,7 +2344,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "ba1cfe7",
+                                "_id": "f999cb6",
                                 "text": "Linguagem oral",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2376,7 +2406,7 @@
                       ]
                     },
                     {
-                      "id": "b475361",
+                      "id": "a8286f7",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2441,7 +2471,7 @@
                       },
                       "elements": [
                         {
-                          "id": "35e7b02",
+                          "id": "b475361",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2449,7 +2479,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "fd996d4",
+                                "_id": "35e7b02",
                                 "text": "Aproximação com a cultura escrita",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2511,7 +2541,7 @@
                       ]
                     },
                     {
-                      "id": "0b7815a",
+                      "id": "a6c4da6",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2576,7 +2606,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f647997",
+                          "id": "0b7815a",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2584,7 +2614,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "a8286f7",
+                                "_id": "f647997",
                                 "text": "Pensamento lógico",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2646,7 +2676,7 @@
                       ]
                     },
                     {
-                      "id": "745214d",
+                      "id": "f117615",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2711,7 +2741,7 @@
                       },
                       "elements": [
                         {
-                          "id": "8f4a735",
+                          "id": "745214d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2719,7 +2749,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "a6c4da6",
+                                "_id": "8f4a735",
                                 "text": "Coordenação motora",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2781,7 +2811,7 @@
                       ]
                     },
                     {
-                      "id": "a6b46be",
+                      "id": "1f5b263",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2846,7 +2876,7 @@
                       },
                       "elements": [
                         {
-                          "id": "c8d413f",
+                          "id": "a6b46be",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2854,7 +2884,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "f117615",
+                                "_id": "c8d413f",
                                 "text": "Criatividade e expressão artística",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -2916,7 +2946,7 @@
                       ]
                     },
                     {
-                      "id": "cc65682",
+                      "id": "b445c0e",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -2981,7 +3011,7 @@
                       },
                       "elements": [
                         {
-                          "id": "169c4ec",
+                          "id": "cc65682",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -2989,7 +3019,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "1f5b263",
+                                "_id": "169c4ec",
                                 "text": "Desenvolvimento socioemocional",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3051,7 +3081,7 @@
                       ]
                     },
                     {
-                      "id": "f58fa70",
+                      "id": "160ad43",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -3116,7 +3146,7 @@
                       },
                       "elements": [
                         {
-                          "id": "8b6aef1",
+                          "id": "f58fa70",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -3124,7 +3154,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "b445c0e",
+                                "_id": "8b6aef1",
                                 "text": "Interação e convivência",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3186,7 +3216,7 @@
                       ]
                     },
                     {
-                      "id": "89c1258",
+                      "id": "4100e79",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -3251,7 +3281,7 @@
                       },
                       "elements": [
                         {
-                          "id": "a61845b",
+                          "id": "89c1258",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -3259,7 +3289,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "160ad43",
+                                "_id": "a61845b",
                                 "text": "Investigação e curiosidade",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3321,7 +3351,7 @@
                       ]
                     },
                     {
-                      "id": "e08333e",
+                      "id": "4f3ecfd",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -3386,7 +3416,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f535ba1",
+                          "id": "e08333e",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -3394,7 +3424,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "4100e79",
+                                "_id": "f535ba1",
                                 "text": "Contato com a literatura",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3462,7 +3492,7 @@
           ]
         },
         {
-          "id": "25c1259",
+          "id": "d04918c",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -3565,7 +3595,7 @@
           },
           "elements": [
             {
-              "id": "5088495",
+              "id": "5b86424",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3599,7 +3629,7 @@
               },
               "elements": [
                 {
-                  "id": "9642aac",
+                  "id": "6ca68d7",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -3637,7 +3667,7 @@
                   "elements": []
                 },
                 {
-                  "id": "6ca68d7",
+                  "id": "209860c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -3700,7 +3730,7 @@
                   "elements": []
                 },
                 {
-                  "id": "209860c",
+                  "id": "e2dbe74",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3747,7 +3777,7 @@
                   "elements": []
                 },
                 {
-                  "id": "bca467b",
+                  "id": "5088495",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -3803,7 +3833,7 @@
                   },
                   "elements": [
                     {
-                      "id": "fccb7c5",
+                      "id": "f7958aa",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -3867,7 +3897,7 @@
                       },
                       "elements": [
                         {
-                          "id": "7d7872e",
+                          "id": "fccb7c5",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -3875,7 +3905,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "e2dbe74",
+                                "_id": "7d7872e",
                                 "text": "Alfabetização e letramento",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -3937,7 +3967,7 @@
                       ]
                     },
                     {
-                      "id": "9500deb",
+                      "id": "7387390",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4002,7 +4032,7 @@
                       },
                       "elements": [
                         {
-                          "id": "6b0f969",
+                          "id": "9500deb",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4010,7 +4040,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "f7958aa",
+                                "_id": "6b0f969",
                                 "text": "Leitura e interpretação",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4072,7 +4102,7 @@
                       ]
                     },
                     {
-                      "id": "47df755",
+                      "id": "829d29a",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4137,7 +4167,7 @@
                       },
                       "elements": [
                         {
-                          "id": "b34e0a7",
+                          "id": "47df755",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4145,7 +4175,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "7387390",
+                                "_id": "b34e0a7",
                                 "text": "Produção escrita",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4207,7 +4237,7 @@
                       ]
                     },
                     {
-                      "id": "316f017",
+                      "id": "358f795",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4272,7 +4302,7 @@
                       },
                       "elements": [
                         {
-                          "id": "2f171ee",
+                          "id": "316f017",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4280,7 +4310,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "829d29a",
+                                "_id": "2f171ee",
                                 "text": "Raciocínio lógico-matemático",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4342,7 +4372,7 @@
                       ]
                     },
                     {
-                      "id": "c73e8d8",
+                      "id": "e14ddb2",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4407,7 +4437,7 @@
                       },
                       "elements": [
                         {
-                          "id": "0923b88",
+                          "id": "c73e8d8",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4415,7 +4445,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "358f795",
+                                "_id": "0923b88",
                                 "text": "Investigação e iniciação científica",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4477,7 +4507,7 @@
                       ]
                     },
                     {
-                      "id": "7d4091a",
+                      "id": "697092b",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4542,7 +4572,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f0a5214",
+                          "id": "7d4091a",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4550,7 +4580,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "e14ddb2",
+                                "_id": "f0a5214",
                                 "text": "Formação do hábito de estudo",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4612,7 +4642,7 @@
                       ]
                     },
                     {
-                      "id": "3ba23a3",
+                      "id": "6711dc6",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4677,7 +4707,7 @@
                       },
                       "elements": [
                         {
-                          "id": "d274a7b",
+                          "id": "3ba23a3",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4685,7 +4715,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "697092b",
+                                "_id": "d274a7b",
                                 "text": "Literatura e criatividade",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4747,7 +4777,7 @@
                       ]
                     },
                     {
-                      "id": "1d7014e",
+                      "id": "ca87626",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4812,7 +4842,7 @@
                       },
                       "elements": [
                         {
-                          "id": "b508003",
+                          "id": "1d7014e",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4820,7 +4850,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "6711dc6",
+                                "_id": "b508003",
                                 "text": "Autonomia e responsabilidade",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -4882,7 +4912,7 @@
                       ]
                     },
                     {
-                      "id": "aaa2c31",
+                      "id": "b16dd40",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4947,7 +4977,7 @@
                       },
                       "elements": [
                         {
-                          "id": "d0706ff",
+                          "id": "aaa2c31",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -4955,7 +4985,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "ca87626",
+                                "_id": "d0706ff",
                                 "text": "Desenvolvimento socioemocional",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -5017,7 +5047,7 @@
                       ]
                     },
                     {
-                      "id": "40e33ee",
+                      "id": "1dccc75",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -5082,7 +5112,7 @@
                       },
                       "elements": [
                         {
-                          "id": "0866a0c",
+                          "id": "40e33ee",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -5090,7 +5120,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "b16dd40",
+                                "_id": "0866a0c",
                                 "text": "Educação financeira e empreendedora",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -5152,7 +5182,7 @@
                       ]
                     },
                     {
-                      "id": "4c3abab",
+                      "id": "dba0335",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -5217,7 +5247,7 @@
                       },
                       "elements": [
                         {
-                          "id": "00be333",
+                          "id": "4c3abab",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -5225,7 +5255,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "1dccc75",
+                                "_id": "00be333",
                                 "text": "Língua inglesa",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -5287,7 +5317,7 @@
                       ]
                     },
                     {
-                      "id": "75ef244",
+                      "id": "bca467b",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -5352,7 +5382,7 @@
                       },
                       "elements": [
                         {
-                          "id": "ad560ae",
+                          "id": "75ef244",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "icon-list",
@@ -5360,7 +5390,7 @@
                             "view": "traditional",
                             "icon_list": [
                               {
-                                "_id": "dba0335",
+                                "_id": "ad560ae",
                                 "text": "Tecnologia e robótica",
                                 "selected_icon": {
                                   "value": "far fa-dot-circle",
@@ -5426,7 +5456,7 @@
               ]
             },
             {
-              "id": "5b86424",
+              "id": "25c1259",
               "elType": "widget",
               "isInner": false,
               "widgetType": "image",
@@ -5523,7 +5553,7 @@
           ]
         },
         {
-          "id": "d04918c",
+          "id": "38edc40",
           "elType": "widget",
           "isInner": false,
           "widgetType": "button",
@@ -5627,7 +5657,7 @@
       ]
     },
     {
-      "id": "6cfaef1",
+      "id": "68144cf",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -5653,7 +5683,7 @@
       },
       "elements": [
         {
-          "id": "00d36e1",
+          "id": "de00b7f",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5712,7 +5742,7 @@
           "elements": []
         },
         {
-          "id": "de00b7f",
+          "id": "d37b955",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5772,7 +5802,7 @@
           "elements": []
         },
         {
-          "id": "d37b955",
+          "id": "4b39b3c",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5832,7 +5862,7 @@
           "elements": []
         },
         {
-          "id": "4b39b3c",
+          "id": "6cfaef1",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -5894,7 +5924,7 @@
       ]
     },
     {
-      "id": "9bc4c77",
+      "id": "7d7b4ec",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -5954,7 +5984,7 @@
       },
       "elements": [
         {
-          "id": "68144cf",
+          "id": "65ccf7e",
           "elType": "widget",
           "isInner": false,
           "widgetType": "heading",
@@ -6017,7 +6047,7 @@
           "elements": []
         },
         {
-          "id": "65bd130",
+          "id": "e7e8c68",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -6094,7 +6124,7 @@
           },
           "elements": [
             {
-              "id": "d327e7c",
+              "id": "33b1889",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6153,7 +6183,7 @@
               },
               "elements": [
                 {
-                  "id": "65ccf7e",
+                  "id": "d327e7c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6260,7 +6290,7 @@
               ]
             },
             {
-              "id": "c11f6aa",
+              "id": "973451b",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6320,7 +6350,7 @@
               },
               "elements": [
                 {
-                  "id": "33b1889",
+                  "id": "c11f6aa",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6427,7 +6457,7 @@
               ]
             },
             {
-              "id": "d85075f",
+              "id": "6164496",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6487,7 +6517,7 @@
               },
               "elements": [
                 {
-                  "id": "973451b",
+                  "id": "d85075f",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6594,7 +6624,7 @@
               ]
             },
             {
-              "id": "1427ed8",
+              "id": "897b7ee",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6654,7 +6684,7 @@
               },
               "elements": [
                 {
-                  "id": "6164496",
+                  "id": "1427ed8",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6761,7 +6791,7 @@
               ]
             },
             {
-              "id": "67a1f92",
+              "id": "6e64653",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6821,7 +6851,7 @@
               },
               "elements": [
                 {
-                  "id": "897b7ee",
+                  "id": "67a1f92",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -6928,7 +6958,7 @@
               ]
             },
             {
-              "id": "f598ac7",
+              "id": "65bd130",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6988,7 +7018,7 @@
               },
               "elements": [
                 {
-                  "id": "6e64653",
+                  "id": "f598ac7",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-box",
@@ -7097,7 +7127,7 @@
           ]
         },
         {
-          "id": "e7e8c68",
+          "id": "9bc4c77",
           "elType": "widget",
           "isInner": false,
           "widgetType": "button",
@@ -7221,7 +7251,7 @@
       ]
     },
     {
-      "id": "4122536",
+      "id": "5904ccd",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7301,7 +7331,7 @@
       },
       "elements": [
         {
-          "id": "7d7b4ec",
+          "id": "a92e6c3",
           "elType": "widget",
           "isInner": false,
           "widgetType": "image",
@@ -7344,7 +7374,7 @@
           "elements": []
         },
         {
-          "id": "cb76edd",
+          "id": "4122536",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7383,7 +7413,7 @@
           },
           "elements": [
             {
-              "id": "a92e6c3",
+              "id": "4c52ef8",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -7444,7 +7474,7 @@
               "elements": []
             },
             {
-              "id": "4c52ef8",
+              "id": "cb76edd",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -7500,7 +7530,7 @@
       ]
     },
     {
-      "id": "27560ef",
+      "id": "db21d29",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7552,7 +7582,7 @@
       },
       "elements": [
         {
-          "id": "81ac57c",
+          "id": "27560ef",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7613,7 +7643,7 @@
           },
           "elements": [
             {
-              "id": "111a5b1",
+              "id": "0a24ef1",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -7697,7 +7727,7 @@
               },
               "elements": [
                 {
-                  "id": "785f551",
+                  "id": "111a5b1",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -7748,7 +7778,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5904ccd",
+                      "id": "24956bb",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -7777,7 +7807,7 @@
                       "elements": []
                     },
                     {
-                      "id": "24956bb",
+                      "id": "785f551",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -7810,7 +7840,7 @@
               ]
             },
             {
-              "id": "1a04874",
+              "id": "81ac57c",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -7867,7 +7897,7 @@
               },
               "elements": [
                 {
-                  "id": "08fac89",
+                  "id": "977ca00",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -7912,7 +7942,7 @@
                   "elements": []
                 },
                 {
-                  "id": "977ca00",
+                  "id": "1a04874",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -7960,7 +7990,7 @@
                   "elements": []
                 },
                 {
-                  "id": "95679a2",
+                  "id": "08fac89",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "form",
@@ -7968,7 +7998,7 @@
                     "form_name": "Agendar visita - Garatuja",
                     "form_fields": [
                       {
-                        "_id": "0a24ef1",
+                        "_id": "0c83d6e",
                         "custom_id": "name",
                         "field_type": "text",
                         "field_label": "Nome completo",
@@ -7977,7 +8007,7 @@
                         "width": "100"
                       },
                       {
-                        "_id": "0c83d6e",
+                        "_id": "95679a2",
                         "custom_id": "phone",
                         "field_type": "tel",
                         "field_label": "Telefone / WhatsApp",
@@ -8118,7 +8148,7 @@
       ]
     },
     {
-      "id": "58b7515",
+      "id": "77932cc",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -8169,7 +8199,7 @@
       },
       "elements": [
         {
-          "id": "f7e0653",
+          "id": "6dc7b0d",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -8234,7 +8264,7 @@
           },
           "elements": [
             {
-              "id": "f93e106",
+              "id": "63d7726",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8274,7 +8304,7 @@
               },
               "elements": [
                 {
-                  "id": "db21d29",
+                  "id": "f512e0e",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "image",
@@ -8311,14 +8341,14 @@
                   "elements": []
                 },
                 {
-                  "id": "f60cfc4",
+                  "id": "dfa21e4",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "social-icons",
                   "settings": {
                     "social_icon_list": [
                       {
-                        "_id": "f512e0e",
+                        "_id": "ef1d69d",
                         "social_icon": {
                           "value": "fab fa-facebook-f",
                           "library": "fa-brands"
@@ -8332,7 +8362,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "ef1d69d",
+                        "_id": "b5f3ace",
                         "social_icon": {
                           "value": "fab fa-instagram",
                           "library": "fa-brands"
@@ -8346,7 +8376,7 @@
                         "item_icon_color": "default"
                       },
                       {
-                        "_id": "b5f3ace",
+                        "_id": "f60cfc4",
                         "social_icon": {
                           "value": "fab fa-linkedin-in",
                           "library": "fa-brands"
@@ -8408,7 +8438,7 @@
                   "elements": []
                 },
                 {
-                  "id": "ebe6155",
+                  "id": "f93e106",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -8416,7 +8446,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "dfa21e4",
+                        "_id": "0718015",
                         "text": "Política de privacidade",
                         "selected_icon": {
                           "value": "",
@@ -8430,7 +8460,7 @@
                         }
                       },
                       {
-                        "_id": "0718015",
+                        "_id": "ebe6155",
                         "text": "Termos de uso",
                         "selected_icon": {
                           "value": "",
@@ -8492,7 +8522,7 @@
               ]
             },
             {
-              "id": "6a6ccee",
+              "id": "3a6da99",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8547,7 +8577,7 @@
               },
               "elements": [
                 {
-                  "id": "63d7726",
+                  "id": "e4e0e54",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -8583,27 +8613,13 @@
                   "elements": []
                 },
                 {
-                  "id": "2fce639",
+                  "id": "6a6ccee",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
                   "settings": {
                     "view": "traditional",
                     "icon_list": [
-                      {
-                        "_id": "e4e0e54",
-                        "text": "(11) 12345-6789",
-                        "selected_icon": {
-                          "value": "fas fa-phone-alt",
-                          "library": "fa-solid"
-                        },
-                        "link": {
-                          "url": "tel:+551112345678",
-                          "is_external": "",
-                          "nofollow": "",
-                          "custom_attributes": ""
-                        }
-                      },
                       {
                         "_id": "33a9133",
                         "text": "(11) 12345-6789",
@@ -8620,6 +8636,20 @@
                       },
                       {
                         "_id": "6b6a563",
+                        "text": "(11) 12345-6789",
+                        "selected_icon": {
+                          "value": "fas fa-phone-alt",
+                          "library": "fa-solid"
+                        },
+                        "link": {
+                          "url": "tel:+551112345678",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      },
+                      {
+                        "_id": "d3d3bfd",
                         "text": "contato@colegiounicultura.com.br",
                         "selected_icon": {
                           "value": "fas fa-envelope",
@@ -8633,7 +8663,7 @@
                         }
                       },
                       {
-                        "_id": "d3d3bfd",
+                        "_id": "2fce639",
                         "text": "Endereço Completo",
                         "selected_icon": {
                           "value": "fas fa-map-marker-alt",
@@ -8690,7 +8720,7 @@
               ]
             },
             {
-              "id": "355f721",
+              "id": "f7e0653",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8745,7 +8775,7 @@
               },
               "elements": [
                 {
-                  "id": "3a6da99",
+                  "id": "9557b3a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -8781,7 +8811,7 @@
                   "elements": []
                 },
                 {
-                  "id": "de69b07",
+                  "id": "355f721",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -8789,7 +8819,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "9557b3a",
+                        "_id": "2f5299b",
                         "text": "Unicultura",
                         "selected_icon": {
                           "value": "",
@@ -8803,7 +8833,7 @@
                         }
                       },
                       {
-                        "_id": "2f5299b",
+                        "_id": "63308a4",
                         "text": "Garatuja",
                         "selected_icon": {
                           "value": "",
@@ -8817,7 +8847,7 @@
                         }
                       },
                       {
-                        "_id": "63308a4",
+                        "_id": "69f84dd",
                         "text": "Diferenciais",
                         "selected_icon": {
                           "value": "",
@@ -8831,7 +8861,7 @@
                         }
                       },
                       {
-                        "_id": "69f84dd",
+                        "_id": "12281ba",
                         "text": "Parceiros",
                         "selected_icon": {
                           "value": "",
@@ -8845,7 +8875,7 @@
                         }
                       },
                       {
-                        "_id": "12281ba",
+                        "_id": "de69b07",
                         "text": "Contato",
                         "selected_icon": {
                           "value": "",
@@ -8901,7 +8931,7 @@
           ]
         },
         {
-          "id": "48ae51a",
+          "id": "58b7515",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -8943,7 +8973,7 @@
           },
           "elements": [
             {
-              "id": "6dc7b0d",
+              "id": "48ae51a",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -8976,7 +9006,7 @@
       ]
     },
     {
-      "id": "dea6aae",
+      "id": "6650658",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -9005,12 +9035,12 @@
       },
       "elements": [
         {
-          "id": "77932cc",
+          "id": "dea6aae",
           "elType": "widget",
           "isInner": false,
           "widgetType": "html",
           "settings": {
-            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero {\n  isolation: isolate;\n}\n\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-image: linear-gradient(#F2CA50, #F2CA50);\n  background-repeat: no-repeat;\n  background-position: left center;\n  background-size: 100% 100%;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* A faixa \"se desenha\" da esquerda para a direita quando o título entra na tela\n   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */\n.elementor-widget.animated .gt-highlight {\n  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-highlight-draw {\n  from { background-size: 0% 100%; }\n  to   { background-size: 100% 100%; }\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */\n@media (min-width: 1025px) {\n  .gt-hero {\n    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n}\n\n@keyframes gt-hero-zoom {\n  from { background-size: 135% auto; }\n  to   { background-size: 123% auto; }\n}\n\n/* Navbar fixa (Elementor Pro Sticky). Depois de 40px de scroll o Pro adiciona\n   .elementor-sticky--effects: o vidro escurece, o menu vai para o centro da tela,\n   fica mais largo e os dois logos aparecem à esquerda. */\n.gt-top .gt-hero .gt-navbar {\n  transition: background-color 0.35s ease, box-shadow 0.35s ease;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects {\n  /* O Pro grava left/width inline no elemento fixo; !important é necessário\n     só aqui, para sobrescrever esses valores inline. */\n  left: 50% !important;\n  right: auto !important;\n  width: min(1040px, calc(100% - 32px)) !important;\n  transform: translateX(-50%);\n  --justify-content: space-between;\n  --padding-top: 10px;\n  --padding-right: 16px;\n  --padding-bottom: 10px;\n  --padding-left: 24px;\n  background-color: rgba(1, 6, 88, 0.82);\n  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);\n  animation: gt-nav-drop 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-nav-drop {\n  from { opacity: 0; transform: translate(-50%, -12px); }\n  to   { opacity: 1; transform: translate(-50%, 0); }\n}\n\n/* Logos do menu: ocultos no topo da página, visíveis no menu fixo */\n.gt-top .gt-hero .gt-navbar .gt-navbar-logos {\n  display: none;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos {\n  display: flex;\n  animation: gt-fade-in-logos 0.5s 0.15s ease both;\n}\n\n@keyframes gt-fade-in-logos {\n  from { opacity: 0; transform: translateX(-8px); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* No editor o sticky não roda: mostra o espaço dos logos (tracejado) para trocar as imagens */\n.elementor-editor-active .gt-top .gt-hero .gt-navbar .gt-navbar-logos {\n  display: flex;\n  outline: 1px dashed rgba(255, 255, 255, 0.5);\n  outline-offset: 4px;\n}\n\n/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */\n.gt-btn-shine .elementor-button {\n  position: relative;\n  overflow: hidden;\n  transition: translate 0.3s ease, box-shadow 0.3s ease;\n}\n\n.gt-btn-shine .elementor-button::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -60%;\n  width: 40%;\n  height: 100%;\n  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);\n  transform: skewX(-20deg);\n  transition: left 0.6s ease;\n  pointer-events: none;\n}\n\n.gt-btn-shine .elementor-button:hover {\n  translate: 0 -2px;\n}\n\n.gt-btn-shine .elementor-button:hover::after {\n  left: 120%;\n}\n\n/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */\n.gt-btn-arrow .elementor-button-icon,\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transition: transform 0.3s ease;\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: scale(1.1);\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n  transform: rotate(-45deg) translateX(3px);\n}\n\n/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.\n   Usa \"translate\" (e não transform) para não conflitar com a animação de entrada. */\n.gt-card-hover {\n  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;\n}\n\n.gt-card-hover:hover {\n  translate: 0 -6px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);\n}\n\n.gt-card-hover .elementor-icon {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-card-hover:hover .elementor-icon {\n  transform: rotate(-8deg) scale(1.08);\n}\n\n/* Galeria: zoom suave da foto no hover */\n.gt-zoom {\n  overflow: hidden;\n}\n\n.gt-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-zoom:hover img {\n  transform: scale(1.06);\n}\n\n/* Leão: \"respiração\" lenta e contínua */\n.gt-lion img {\n  transform-origin: 50% 80%;\n  animation: gt-breathe 6s ease-in-out infinite;\n}\n\n@keyframes gt-breathe {\n  0%, 100% { transform: scale(1) rotate(0deg); }\n  50%      { transform: scale(1.03) rotate(-1deg); }\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-hero,\n  .gt-lion img,\n  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects,\n  .gt-top .gt-hero .gt-navbar.elementor-sticky--effects .gt-navbar-logos,\n  .elementor-widget.animated .gt-highlight {\n    animation: none;\n  }\n\n  .gt-btn-shine .elementor-button::after {\n    display: none;\n  }\n\n  .gt-btn-shine .elementor-button:hover,\n  .gt-card-hover:hover {\n    translate: none;\n  }\n\n  .gt-zoom:hover img,\n  .gt-card-hover:hover .elementor-icon,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n    transform: none;\n  }\n\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n    transform: rotate(-45deg);\n  }\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>"
+            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-image: linear-gradient(#F2CA50, #F2CA50);\n  background-repeat: no-repeat;\n  background-position: left center;\n  background-size: 100% 100%;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* A faixa \"se desenha\" da esquerda para a direita quando o título entra na tela\n   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */\n.elementor-widget.animated .gt-highlight {\n  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-highlight-draw {\n  from { background-size: 0% 100%; }\n  to   { background-size: 100% 100%; }\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */\n@media (min-width: 1025px) {\n  .gt-hero {\n    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n}\n\n@keyframes gt-hero-zoom {\n  from { background-size: 135% auto; }\n  to   { background-size: 123% auto; }\n}\n\n/* --------------------------------------------------------------------------\n   MENU FIXO (desktop e tablet)\n   Ao rolar 40px, o gt-page.js adiciona .gt-scrolled ao .gt-top e o menu:\n   - fica fixo no topo (16px), centralizado na tela;\n   - se expande a partir do centro (803px -> até 1240px);\n   - escurece o vidro e mostra os dois logos à esquerda.\n   O container .gt-navbar-wrap reserva a altura do menu, então o hero não \"pula\".\n   -------------------------------------------------------------------------- */\n.gt-top .gt-hero .gt-navbar {\n  transition: background-color 0.35s ease, box-shadow 0.35s ease;\n}\n\n.gt-top .gt-navbar-logos {\n  display: none;\n}\n\n@media (min-width: 768px) {\n  .gt-top.gt-scrolled .gt-hero .gt-navbar {\n    position: fixed;\n    top: 16px;\n    left: 50%;\n    z-index: 999;\n    width: min(1240px, calc(100% - 48px));\n    transform: translateX(-50%);\n    --justify-content: flex-start;\n    --padding-top: 10px;\n    --padding-right: 16px;\n    --padding-bottom: 10px;\n    --padding-left: 24px;\n    background-color: rgba(1, 6, 88, 0.82);\n    box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);\n    animation: gt-nav-expand 0.55s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n\n  .gt-top.gt-scrolled .gt-navbar-logos {\n    display: flex;\n    animation: gt-fade-in-logos 0.5s 0.2s ease both;\n  }\n\n  /* logos à esquerda · links no centro · redes + botão à direita */\n  .gt-top.gt-scrolled .gt-hero .gt-navbar > .elementor-widget-icon-list,\n  .gt-top.gt-scrolled .gt-hero .gt-navbar > .elementor-widget-social-icons {\n    margin-left: auto;\n  }\n}\n\n@keyframes gt-nav-expand {\n  from { width: 803px; opacity: 0.6; transform: translate(-50%, -8px); }\n  to   { width: min(1240px, calc(100% - 48px)); opacity: 1; transform: translate(-50%, 0); }\n}\n\n@keyframes gt-fade-in-logos {\n  from { opacity: 0; transform: translateX(-8px); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* No editor o menu não fica fixo: mostra o espaço dos logos (tracejado) para trocar as imagens */\n.elementor-editor-active .gt-top .gt-navbar-logos {\n  display: flex;\n  outline: 1px dashed rgba(255, 255, 255, 0.5);\n  outline-offset: 4px;\n}\n\n/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */\n.gt-btn-shine .elementor-button {\n  position: relative;\n  overflow: hidden;\n  transition: translate 0.3s ease, box-shadow 0.3s ease;\n}\n\n.gt-btn-shine .elementor-button::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -60%;\n  width: 40%;\n  height: 100%;\n  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);\n  transform: skewX(-20deg);\n  transition: left 0.6s ease;\n  pointer-events: none;\n}\n\n.gt-btn-shine .elementor-button:hover {\n  translate: 0 -2px;\n}\n\n.gt-btn-shine .elementor-button:hover::after {\n  left: 120%;\n}\n\n/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */\n.gt-btn-arrow .elementor-button-icon,\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transition: transform 0.3s ease;\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: scale(1.1);\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n  transform: rotate(-45deg) translateX(3px);\n}\n\n/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.\n   Usa \"translate\" (e não transform) para não conflitar com a animação de entrada. */\n.gt-card-hover {\n  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;\n}\n\n.gt-card-hover:hover {\n  translate: 0 -6px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);\n}\n\n.gt-card-hover .elementor-icon {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-card-hover:hover .elementor-icon {\n  transform: rotate(-8deg) scale(1.08);\n}\n\n/* Galeria: zoom suave da foto no hover */\n.gt-zoom {\n  overflow: hidden;\n}\n\n.gt-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-zoom:hover img {\n  transform: scale(1.06);\n}\n\n/* Leão: \"respiração\" lenta e contínua */\n.gt-lion img {\n  transform-origin: 50% 80%;\n  animation: gt-breathe 6s ease-in-out infinite;\n}\n\n@keyframes gt-breathe {\n  0%, 100% { transform: scale(1) rotate(0deg); }\n  50%      { transform: scale(1.03) rotate(-1deg); }\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-hero,\n  .gt-lion img,\n  .gt-top.gt-scrolled .gt-hero .gt-navbar,\n  .gt-top.gt-scrolled .gt-navbar-logos,\n  .elementor-widget.animated .gt-highlight {\n    animation: none;\n  }\n\n  .gt-btn-shine .elementor-button::after {\n    display: none;\n  }\n\n  .gt-btn-shine .elementor-button:hover,\n  .gt-card-hover:hover {\n    translate: none;\n  }\n\n  .gt-zoom:hover img,\n  .gt-card-hover:hover .elementor-icon,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n    transform: none;\n  }\n\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n    transform: rotate(-45deg);\n  }\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>\n<script>\n/* Garatuja | Colégio Unicultura - adiciona .gt-scrolled ao topo da página após 40px de scroll.\n   Usado pelo CSS do menu fixo (gt-page.css). Não roda dentro do editor do Elementor. */\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  var tops = document.querySelectorAll('.gt-top');\n  function update() {\n    var scrolled = window.scrollY > 40;\n    tops.forEach(function (el) {\n      el.classList.toggle('gt-scrolled', scrolled);\n    });\n  }\n  update();\n  window.addEventListener('scroll', update, { passive: true });\n})();\n</script>"
           },
           "elements": []
         }
