@@ -94,3 +94,32 @@ As classes são as mesmas da Garatuja (`gt-top`, `gt-hero`, `gt-notch`, `gt-navb
 2. Importe `home-elementor.json` em *Templates → Import*.
 3. Na Home, apague o conteúdo e insira o template importado.
 4. Salve e confira no desktop, no tablet e no celular.
+
+---
+
+## Seção extra: Depoimentos (`secao-depoimentos-elementor.json`)
+
+Substitui a seção atual "O que os pais dizem sobre nós?". Gerador: `src/build_secao_depoimentos.py`. O CSS e o JS (`src/un-depoimentos.css` e `src/un-depoimentos.js`) vão embutidos num widget HTML da própria seção.
+
+| Parte | Como é |
+|---|---|
+| Esquerda | Selo "★★★★★ Famílias Unicultura", título com "dizem sobre nós?" em itálico laranja #FFB867 (entra com efeito de cortina), texto, 2 números com barra vermelha e o botão "Agendar visita" com seta em círculo vermelho. |
+| Números | **+1.200** famílias (o mesmo dado do hero, conta de 0 a 1.200) e **2** escolas, uma trajetória. |
+| Direita (desktop/tablet) | **Duas colunas de cards rolando sem fim**, uma subindo e outra descendo. Os cards ficam em zigue-zague, com fade no topo e embaixo, e a rolagem pausa com o mouse em cima. |
+| Celular | Carrossel horizontal de arrastar, um card por vez, com o próximo aparecendo na borda. |
+| Card | Aspas vermelhas, **etiqueta do segmento** (Garatuja em amarelo, Fundamental em azul, Ensino Médio em vermelho), 5 estrelas, depoimento, iniciais e "Mãe do Theo · Garatuja". Sobe 4 px no hover. |
+| Fundo | Azul #0D1261 (o mesmo da seção atual), aspas gigantes translúcidas e um brilho vermelho suave. |
+
+**⚠️ Os 8 depoimentos são EXEMPLOS.** No editor, cada card mostra a etiqueta vermelha "EXEMPLO - substituir"; ela não aparece no site publicado.
+
+**Como substituir um depoimento:**
+- Edite o card e troque o texto, o nome, a relação, as iniciais e a etiqueta do segmento.
+- Cada coluna tem o **conjunto original** e uma **cópia** logo abaixo (`un-depo-dup`), que só serve para a rolagem não ter emenda. Ao editar um card, **faça a mesma alteração na cópia**. Outra opção: edite o conjunto original, apague a cópia e duplique o original de novo, adicionando a classe `un-depo-dup` e o atributo `aria-hidden|true`.
+
+Tenha a autorização das famílias para publicar nomes e depoimentos.
+
+**Como aplicar:**
+1. Importe o JSON em *Templates → Import*.
+2. Na Home, apague a seção antiga de depoimentos.
+3. Insira o template "Unicultura - Seção Depoimentos" no mesmo lugar.
+

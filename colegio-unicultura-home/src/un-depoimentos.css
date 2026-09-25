@@ -1,0 +1,156 @@
+/* ==========================================================================
+   Colégio Unicultura | Home - Seção "Depoimentos" (vai embutido no JSON dela)
+   Escopo: .un-depo. Desktop/tablet: duas colunas de cards subindo/descendo sem
+   fim (pausa no hover). Celular: carrossel horizontal de arrastar.
+   ========================================================================== */
+
+/* Aspas gigantes decorativas no fundo + brilho vermelho suave */
+.un-depo {
+  position: relative;
+  overflow: hidden;
+}
+
+.un-depo::after {
+  content: "\201C";
+  position: absolute;
+  top: -80px;
+  left: -20px;
+  z-index: 0;
+  font: 700 520px/1 "Hanken Grotesk", sans-serif;
+  color: rgba(255, 255, 255, 0.04);
+  pointer-events: none;
+}
+
+.un-depo > .e-con-inner::before {
+  content: "";
+  position: absolute;
+  right: 8%;
+  bottom: 10%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(241, 5, 5, 0.28), rgba(241, 5, 5, 0) 70%);
+  filter: blur(20px);
+  pointer-events: none;
+}
+
+.un-depo > .e-con-inner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Colunas com rolagem infinita
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .un-depo .un-depo-cols {
+    height: 640px;
+    overflow: hidden;
+  }
+}
+
+.un-depo .un-depo-cols {
+  -webkit-mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(transparent, #000 12%, #000 88%, transparent);
+}
+
+.un-depo .un-depo-track {
+  animation: un-depo-up 46s linear infinite;
+}
+
+.un-depo .un-depo-track--down {
+  animation-duration: 54s;
+  animation-direction: reverse;
+}
+
+.un-depo .un-depo-cols:hover .un-depo-track {
+  animation-play-state: paused;
+}
+
+@keyframes un-depo-up {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-50%); }
+}
+
+/* Zigue-zague: cards alternam um recuo, como no Figma */
+.un-depo .un-depo-set > .un-depo-card:nth-child(even) {
+  margin-left: 24px;
+}
+
+/* --------------------------------------------------------------------------
+   Card
+   -------------------------------------------------------------------------- */
+.un-depo .un-depo-card {
+  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.un-depo .un-depo-card:hover {
+  translate: 0 -4px;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.35);
+}
+
+/* Aspas vermelhas do card */
+.un-depo .un-depo-quote .elementor-heading-title {
+  height: 34px;
+  overflow: visible;
+}
+
+/* Avatar com iniciais */
+.un-depo .un-depo-avatar {
+  flex-shrink: 0;
+}
+
+/* No editor: marca os cards como EXEMPLO (não aparece no site publicado) */
+.elementor-editor-active .un-depo .un-depo-card::after {
+  content: "EXEMPLO - substituir";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: #F10505;
+  color: #FFFFFF;
+  font: 700 10px/16px sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Celular: carrossel horizontal de arrastar (sem rolagem automática)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .un-depo .un-depo-cols {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 14px;
+    padding-bottom: 12px;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .un-depo .un-depo-track,
+  .un-depo .un-depo-set {
+    display: contents;
+  }
+
+  .un-depo .un-depo-dup {
+    display: none;
+  }
+
+  .un-depo .un-depo-card,
+  .un-depo .un-depo-set > .un-depo-card:nth-child(even) {
+    flex: 0 0 84%;
+    margin-left: 0;
+    scroll-snap-align: start;
+  }
+}
+
+/* Movimento reduzido: colunas paradas (dá para rolar dentro delas) */
+@media (prefers-reduced-motion: reduce) {
+  .un-depo .un-depo-track {
+    animation: none;
+  }
+
+  .un-depo .un-depo-cols {
+    overflow-y: auto;
+  }
+}
