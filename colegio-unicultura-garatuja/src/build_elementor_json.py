@@ -141,6 +141,46 @@ def image_setting(filename, alt):
 
 
 # ---------------------------------------------------------------------------
+# Animações
+# ---------------------------------------------------------------------------
+
+def anim(name, delay=0, duration="fast"):
+    """Entrance Animation nativa (widgets usam prefixo "_", containers não).
+    As distâncias/escala de fadeInUp, fadeInLeft e zoomIn são suavizadas no CSS (gt-page.css)."""
+    return {"__anim__": (name, delay, duration)}
+
+
+def parallax(speed=1):
+    """Elementor Pro > Motion Effects > Scrolling Effects > Vertical Scroll (só desktop)."""
+    return {
+        "motion_fx_motion_fx_scrolling": "yes",
+        "motion_fx_translateY_effect": "yes",
+        "motion_fx_translateY_speed": px(speed),
+        "motion_fx_translateY_affectedRange": {"unit": "%", "size": "", "sizes": {"start": 0, "end": 100}},
+        "motion_fx_devices": ["desktop"],
+    }
+
+
+def add(el, *parts, classes=""):
+    """Acrescenta configurações (animação, efeitos, classes) a um elemento já criado."""
+    is_widget = el["elType"] == "widget"
+    for part in parts:
+        part = dict(part)
+        if "__anim__" in part:
+            name, delay, duration = part.pop("__anim__")
+            prefix = "_" if is_widget else ""
+            el["settings"][f"{prefix}animation"] = name
+            el["settings"]["animation_duration"] = duration
+            if delay:
+                el["settings"][f"{prefix}animation_delay"] = delay
+        el["settings"].update(part)
+    if classes:
+        key = "_css_classes" if is_widget else "css_classes"
+        el["settings"][key] = (el["settings"].get(key, "") + " " + classes).strip()
+    return el
+
+
+# ---------------------------------------------------------------------------
 # Widgets reutilizáveis
 # ---------------------------------------------------------------------------
 
@@ -375,6 +415,13 @@ def build_top():
         "border_radius": dims(40),
         "border_radius_mobile": dims(24),
         "css_classes": "gt-navbar",
+        # Elementor Pro > Sticky: a navbar acompanha o scroll (desktop e tablet).
+        # Após 120px de scroll o Pro adiciona .elementor-sticky--effects, usado no CSS
+        # para escurecer o vidro e manter o menu legível sobre as seções claras.
+        "sticky": "top",
+        "sticky_on": ["desktop", "tablet"],
+        "sticky_offset": 16,
+        "sticky_effects_offset": 120,
     }, [nav_links, nav_social, nav_cta])
 
     # --- Conteúdo do hero ---------------------------------------------------
@@ -427,7 +474,12 @@ def build_top():
         "margin": dims(146, 0, 0, 0),
         "margin_tablet": dims(90, 0, 0, 0),
         "margin_mobile": dims(40, 0, 0, 0),
-    }, [hero_tag, hero_h1, hero_p, hero_btn])
+    }, [
+        add(hero_tag, anim("fadeInUp")),
+        add(hero_h1, anim("fadeInUp", 120)),
+        add(hero_p, anim("fadeInUp", 240)),
+        add(hero_btn, anim("fadeInUp", 360), classes="gt-btn-shine"),
+    ])
 
     # --- Recorte inferior direito (decorativo) ------------------------------
     notch_br = container({
@@ -536,7 +588,11 @@ def build_top():
         "padding": dims(129, 0, 137, 0),
         "padding_tablet": dims(80, 20, 90, 20),
         "padding_mobile": dims(56, 4, 64, 4),
-    }, [duas_title, duas_right])
+    }, [
+        # a animação de entrada também dispara o "desenho" da faixa amarela (CSS .animated .gt-highlight)
+        add(duas_title, anim("fadeIn")),
+        add(duas_right, anim("fadeInUp", 150)),
+    ])
 
     return container({
         "content_width": "boxed",
@@ -555,8 +611,8 @@ def build_top():
 # 2. ETAPAS (fundo amarelo): Educação Infantil + 1º e 2º anos
 # ---------------------------------------------------------------------------
 
-def check_item(label):
-    return container({
+def check_item(label, delay=0):
+    return add(container({
         "content_width": "full",
         "min_height": px(71.59),
         "flex_direction": "column",
@@ -575,7 +631,7 @@ def check_item(label):
             typo("icon_typography", INTER, 14, 400, lh=19.6, ls=-0.1),
             NAVY, icon_color=YELLOW, icon_size=16, text_indent=11,
         ),
-    ])
+    ]), anim("fadeInUp", delay))
 
 
 def check_grid(labels):
@@ -589,26 +645,27 @@ def check_grid(labels):
         "grid_rows_grid_mobile": px(len(labels), "fr"),
         "grid_gaps": {"column": "16", "row": "16", "isLinked": True, "unit": "px"},
         "grid_auto_flow": "row",
-    }, [check_item(l) for l in labels])
+    }, [check_item(l, (i // 2) * 80 + (i % 2) * 40) for i, l in enumerate(labels)])
 
 
 def eyebrow(label):
-    return heading(
+    return add(heading(
         label, "p", YELLOW,
         typo("typography", INTER, 12, 700, lh=12, ls=1.4, transform="uppercase"),
-    )
+    ), anim("fadeInUp"))
 
 
 def etapa_title(html, lh):
-    return heading(
+    return add(heading(
         html, "h2", WHITE,
         typo("typography", HANKEN, 60, 600, lh=lh, ls=-2.4,
              size_t=48, size_m=36, lh_t=50, lh_m=38, ls_m=-1.4),
-    )
+    ), anim("fadeInUp", 100))
 
 
 def etapa_text(html):
-    return text(html, WHITE, typo("typography", HANKEN, 18, 400, lh=25.2, ls=-0.1, size_m=16, lh_m=24))
+    return add(text(html, WHITE, typo("typography", HANKEN, 18, 400, lh=25.2, ls=-0.1, size_m=16, lh_m=24)),
+               anim("fadeInUp", 200))
 
 
 def build_etapas():
@@ -657,10 +714,11 @@ def build_etapas():
         "border_radius": dims(40),
         "border_radius_mobile": dims(24),
     }, [
-        image("img-1142-educacao-infantil.jpg", "Menino brincando com massinha em atividade da Educação Infantil",
+        add(image("img-1142-educacao-infantil.jpg", "Menino brincando com massinha em atividade da Educação Infantil",
               width_px=541, height=812, radius=20,
               extra={"_element_custom_width_tablet": px(100, "%"),
                      "height_tablet": px(560), "height_mobile": px(380)}),
+            anim("fadeIn"), parallax(1)),
         infantil_col,
     ])
 
@@ -712,11 +770,12 @@ def build_etapas():
         "border_radius_mobile": dims(24),
     }, [
         fundamental_col,
-        image("img-1142-ensino-fundamental.jpg", "Crianças do 1º e 2º anos em atividade em sala de aula",
+        add(image("img-1142-ensino-fundamental.jpg", "Crianças do 1º e 2º anos em atividade em sala de aula",
               width_px=541, height=812, radius=20,
               extra={"_element_custom_width_tablet": px(100, "%"),
                      "height_tablet": px(560), "height_mobile": px(380),
                      "_margin": dims(36, 0, 0, 0), "_margin_tablet": dims(0)}),
+            anim("fadeIn"), parallax(1)),
     ])
 
     etapas_btn = button(
@@ -742,7 +801,7 @@ def build_etapas():
         "background_background": "classic",
         "background_color": YELLOW,
         "css_classes": "gt-root gt-etapas",
-    }, [card_infantil, card_fundamental, etapas_btn], inner=False)
+    }, [card_infantil, card_fundamental, add(etapas_btn, anim("fadeInUp"))], inner=False)
 
 
 # ---------------------------------------------------------------------------
@@ -757,14 +816,14 @@ def build_gallery():
         ("comunidade-seleta.jpg", "Espaço de brincar temático com bombeiros"),
     ]
     imgs = [
-        image(f, alt, height=652, extra={
+        add(image(f, alt, height=652, extra={
             "_element_width": "initial",
             "_element_custom_width": px(25, "%"),
             "_element_custom_width_tablet": px(50, "%"),
             "_element_custom_width_mobile": px(50, "%"),
             "height_tablet": px(480),
             "height_mobile": px(240),
-        }) for f, alt in photos
+        }), anim("fadeIn", i * 100), classes="gt-zoom") for i, (f, alt) in enumerate(photos)
     ]
     return container({
         "content_width": "full",
@@ -780,7 +839,7 @@ def build_gallery():
 # 4. EXPERIÊNCIAS (fundo azul)
 # ---------------------------------------------------------------------------
 
-def exp_card(icon, title, desc):
+def exp_card(i, icon, title, desc):
     box = widget("icon-box", {
         "selected_icon": icon,
         "view": "stacked",
@@ -801,7 +860,7 @@ def exp_card(icon, title, desc):
         "description_color": NAVY,
         **typo("description_typography", HANKEN, 15, 400, lh=21, ls=-0.1),
     })
-    return container({
+    return add(container({
         "content_width": "full",
         "min_height": px(272.75),
         "min_height_mobile": px(0),
@@ -812,7 +871,7 @@ def exp_card(icon, title, desc):
         "background_background": "classic",
         "background_color": WHITE,
         "border_radius": dims(16),
-    }, [box])
+    }, [box]), anim("fadeInUp", (i % 3) * 120 + (i // 3) * 80), classes="gt-card-hover")
 
 
 def build_experiencias():
@@ -825,22 +884,22 @@ def build_experiencias():
                "_element_custom_width_mobile": px(100, "%")},
     )
     cards = [
-        exp_card({"value": "fas fa-brain", "library": "fa-solid"}, "Educação Criativa",
+        exp_card(0, {"value": "fas fa-brain", "library": "fa-solid"}, "Educação Criativa",
                  "Experiências que estimulam imaginação, autoria, expressão, experimentação e diferentes "
                  "maneiras de solucionar problemas."),
-        exp_card({"value": "fas fa-language", "library": "fa-solid"}, "Sistema Bilíngue",
+        exp_card(1, {"value": "fas fa-language", "library": "fa-solid"}, "Sistema Bilíngue",
                  "Contato progressivo e significativo com a língua inglesa, ampliando comunicação, "
                  "repertório cultural e possibilidades de interação com o mundo."),
-        exp_card({"value": "fas fa-robot", "library": "fa-solid"}, "Robótica Educacional",
+        exp_card(2, {"value": "fas fa-robot", "library": "fa-solid"}, "Robótica Educacional",
                  "Experiências baseadas em tecnologia, Cultura Maker e resolução de problemas, "
                  "desenvolvendo raciocínio lógico, criatividade e pensamento computacional."),
-        exp_card({"value": "far fa-heart", "library": "fa-regular"}, "Educação Abrangente",
+        exp_card(3, {"value": "far fa-heart", "library": "fa-regular"}, "Educação Abrangente",
                  "Desenvolvimento do autoconhecimento, das relações, da responsabilidade, do planejamento, "
                  "da criatividade, da tomada de decisões e do protagonismo."),
-        exp_card({"value": "fas fa-cubes", "library": "fa-solid"}, "Projetos Pedagógicos",
+        exp_card(4, {"value": "fas fa-cubes", "library": "fa-solid"}, "Projetos Pedagógicos",
                  "Propostas que conectam diferentes áreas do conhecimento e permitem que as crianças "
                  "pesquisem, experimentem, construam e compartilhem suas descobertas."),
-        exp_card({"value": "fas fa-volleyball-ball", "library": "fa-solid"}, "Escola de Esportes",
+        exp_card(5, {"value": "fas fa-volleyball-ball", "library": "fa-solid"}, "Escola de Esportes",
                  "O movimento integra a formação da criança, contribuindo para o desenvolvimento físico, "
                  "social e emocional."),
     ]
@@ -883,7 +942,11 @@ def build_experiencias():
         "background_background": "classic",
         "background_color": NAVY,
         "css_classes": "gt-root gt-experiencias",
-    }, [title, grid, btn], inner=False)
+    }, [
+        add(title, anim("fadeInUp")),
+        grid,
+        add(btn, anim("fadeInUp"), classes="gt-btn-shine"),
+    ], inner=False)
 
 
 # ---------------------------------------------------------------------------
@@ -936,7 +999,10 @@ def build_depois():
         "shape_divider_top_height": px(66),
         "shape_divider_top_height_mobile": px(28),
         "css_classes": "gt-root gt-depois",
-    }, [lion, col], inner=False)
+    }, [
+        add(lion, anim("zoomIn"), classes="gt-lion"),
+        add(col, anim("fadeInUp", 150)),
+    ], inner=False)
 
 
 # ---------------------------------------------------------------------------
@@ -955,6 +1021,9 @@ def build_cta():
         "background_color": "rgba(1, 6, 88, 0.77)",
         "border_radius": dims(19.42),
         "css_classes": "gt-glass",
+        "animation": "fadeInLeft",
+        "animation_duration": "fast",
+        "animation_delay": 450,
     }, [
         text("<p>\"A melhor decisão que tomamos pela nossa família foi escolher a Garatuja\"</p>",
              "rgba(255, 255, 255, 0.9)", typo("typography", DMSANS, 15.779, 400, lh=23.668)),
@@ -1071,7 +1140,7 @@ def build_cta():
         "background_background": "classic",
         "background_color": YELLOW,
         "css_classes": "gt-root gt-cta",
-    }, [card], inner=False)
+    }, [add(card, anim("fadeInUp"))], inner=False)
 
 
 # ---------------------------------------------------------------------------

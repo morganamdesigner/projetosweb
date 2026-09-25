@@ -439,6 +439,13 @@
                   "isLinked": true
                 },
                 "css_classes": "gt-navbar",
+                "sticky": "top",
+                "sticky_on": [
+                  "desktop",
+                  "tablet"
+                ],
+                "sticky_offset": 16,
+                "sticky_effects_offset": 120,
                 "__globals__": {
                   "background_color": "",
                   "border_color": ""
@@ -925,7 +932,9 @@
                       "title_color": "",
                       "typography_typography": "",
                       "_background_color": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
                   },
                   "elements": []
                 },
@@ -996,7 +1005,10 @@
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 120
                   },
                   "elements": []
                 },
@@ -1046,7 +1058,10 @@
                     "__globals__": {
                       "text_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 240
                   },
                   "elements": []
                 },
@@ -1157,7 +1172,11 @@
                       "button_background_hover_color": "",
                       "button_background_hover_color_b": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 360,
+                    "_css_classes": "gt-btn-shine"
                   },
                   "elements": []
                 }
@@ -1346,7 +1365,9 @@
                 "__globals__": {
                   "title_color": "",
                   "typography_typography": ""
-                }
+                },
+                "_animation": "fadeIn",
+                "animation_duration": "fast"
               },
               "elements": []
             },
@@ -1389,7 +1410,10 @@
                   "isLinked": true,
                   "unit": "px",
                   "size": 28
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 150
               },
               "elements": [
                 {
@@ -1704,7 +1728,27 @@
                   "unit": "px",
                   "size": 380,
                   "sizes": []
-                }
+                },
+                "_animation": "fadeIn",
+                "animation_duration": "fast",
+                "motion_fx_motion_fx_scrolling": "yes",
+                "motion_fx_translateY_effect": "yes",
+                "motion_fx_translateY_speed": {
+                  "unit": "px",
+                  "size": 1,
+                  "sizes": []
+                },
+                "motion_fx_translateY_affectedRange": {
+                  "unit": "%",
+                  "size": "",
+                  "sizes": {
+                    "start": 0,
+                    "end": 100
+                  }
+                },
+                "motion_fx_devices": [
+                  "desktop"
+                ]
               },
               "elements": []
             },
@@ -1797,7 +1841,9 @@
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
                   },
                   "elements": []
                 },
@@ -1857,7 +1903,10 @@
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 100
                   },
                   "elements": []
                 },
@@ -1901,7 +1950,10 @@
                     "__globals__": {
                       "text_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 200
                   },
                   "elements": []
                 },
@@ -2020,7 +2072,9 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast"
                       },
                       "elements": [
                         {
@@ -2152,7 +2206,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 40
                       },
                       "elements": [
                         {
@@ -2284,7 +2341,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 80
                       },
                       "elements": [
                         {
@@ -2416,7 +2476,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 120
                       },
                       "elements": [
                         {
@@ -2548,7 +2611,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 160
                       },
                       "elements": [
                         {
@@ -2680,7 +2746,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 200
                       },
                       "elements": [
                         {
@@ -2812,7 +2881,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 240
                       },
                       "elements": [
                         {
@@ -2944,7 +3016,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 280
                       },
                       "elements": [
                         {
@@ -3076,7 +3151,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 320
                       },
                       "elements": [
                         {
@@ -3208,7 +3286,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 360
                       },
                       "elements": [
                         {
@@ -3456,7 +3537,9 @@
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
                   },
                   "elements": []
                 },
@@ -3516,7 +3599,10 @@
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 100
                   },
                   "elements": []
                 },
@@ -3560,7 +3646,10 @@
                     "__globals__": {
                       "text_color": "",
                       "typography_typography": ""
-                    }
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 200
                   },
                   "elements": []
                 },
@@ -3679,7 +3768,9 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast"
                       },
                       "elements": [
                         {
@@ -3811,7 +3902,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 40
                       },
                       "elements": [
                         {
@@ -3943,7 +4037,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 80
                       },
                       "elements": [
                         {
@@ -4075,7 +4172,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 120
                       },
                       "elements": [
                         {
@@ -4207,7 +4307,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 160
                       },
                       "elements": [
                         {
@@ -4339,7 +4442,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 200
                       },
                       "elements": [
                         {
@@ -4471,7 +4577,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 240
                       },
                       "elements": [
                         {
@@ -4603,7 +4712,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 280
                       },
                       "elements": [
                         {
@@ -4735,7 +4847,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 320
                       },
                       "elements": [
                         {
@@ -4867,7 +4982,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 360
                       },
                       "elements": [
                         {
@@ -4999,7 +5117,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 400
                       },
                       "elements": [
                         {
@@ -5131,7 +5252,10 @@
                         "__globals__": {
                           "background_color": "",
                           "border_color": ""
-                        }
+                        },
+                        "animation": "fadeInUp",
+                        "animation_duration": "fast",
+                        "animation_delay": 440
                       },
                       "elements": [
                         {
@@ -5279,7 +5403,27 @@
                   "bottom": "0",
                   "left": "0",
                   "isLinked": true
-                }
+                },
+                "_animation": "fadeIn",
+                "animation_duration": "fast",
+                "motion_fx_motion_fx_scrolling": "yes",
+                "motion_fx_translateY_effect": "yes",
+                "motion_fx_translateY_speed": {
+                  "unit": "px",
+                  "size": 1,
+                  "sizes": []
+                },
+                "motion_fx_translateY_affectedRange": {
+                  "unit": "%",
+                  "size": "",
+                  "sizes": {
+                    "start": 0,
+                    "end": 100
+                  }
+                },
+                "motion_fx_devices": [
+                  "desktop"
+                ]
               },
               "elements": []
             }
@@ -5381,7 +5525,9 @@
               "background_color": "",
               "button_background_hover_color": "",
               "typography_typography": ""
-            }
+            },
+            "_animation": "fadeInUp",
+            "animation_duration": "fast"
           },
           "elements": []
         }
@@ -5465,7 +5611,10 @@
               "unit": "px",
               "size": 240,
               "sizes": []
-            }
+            },
+            "_animation": "fadeIn",
+            "animation_duration": "fast",
+            "_css_classes": "gt-zoom"
           },
           "elements": []
         },
@@ -5521,7 +5670,11 @@
               "unit": "px",
               "size": 240,
               "sizes": []
-            }
+            },
+            "_animation": "fadeIn",
+            "animation_duration": "fast",
+            "_animation_delay": 100,
+            "_css_classes": "gt-zoom"
           },
           "elements": []
         },
@@ -5577,7 +5730,11 @@
               "unit": "px",
               "size": 240,
               "sizes": []
-            }
+            },
+            "_animation": "fadeIn",
+            "animation_duration": "fast",
+            "_animation_delay": 200,
+            "_css_classes": "gt-zoom"
           },
           "elements": []
         },
@@ -5633,7 +5790,11 @@
               "unit": "px",
               "size": 240,
               "sizes": []
-            }
+            },
+            "_animation": "fadeIn",
+            "animation_duration": "fast",
+            "_animation_delay": 300,
+            "_css_classes": "gt-zoom"
           },
           "elements": []
         }
@@ -5756,7 +5917,9 @@
             "__globals__": {
               "title_color": "",
               "typography_typography": ""
-            }
+            },
+            "_animation": "fadeInUp",
+            "animation_duration": "fast"
           },
           "elements": []
         },
@@ -5890,7 +6053,10 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6053,7 +6219,11 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 120,
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6216,7 +6386,11 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 240,
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6379,7 +6553,11 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 80,
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6542,7 +6720,11 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 200,
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6705,7 +6887,11 @@
                 },
                 "__globals__": {
                   "background_color": ""
-                }
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 320,
+                "css_classes": "gt-card-hover"
               },
               "elements": [
                 {
@@ -6932,7 +7118,10 @@
               "button_background_hover_color": "",
               "button_background_hover_color_b": "",
               "typography_typography": ""
-            }
+            },
+            "_animation": "fadeInUp",
+            "animation_duration": "fast",
+            "_css_classes": "gt-btn-shine"
           },
           "elements": []
         }
@@ -7054,7 +7243,10 @@
               "size": 200,
               "sizes": []
             },
-            "_flex_size": "none"
+            "_flex_size": "none",
+            "_animation": "zoomIn",
+            "animation_duration": "fast",
+            "_css_classes": "gt-lion"
           },
           "elements": []
         },
@@ -7091,7 +7283,10 @@
             },
             "flex_direction": "column",
             "flex_align_items": "flex-start",
-            "flex_align_items_tablet": "center"
+            "flex_align_items_tablet": "center",
+            "animation": "fadeInUp",
+            "animation_duration": "fast",
+            "animation_delay": 150
           },
           "elements": [
             {
@@ -7319,7 +7514,9 @@
             },
             "__globals__": {
               "background_color": ""
-            }
+            },
+            "animation": "fadeInUp",
+            "animation_duration": "fast"
           },
           "elements": [
             {
@@ -7449,6 +7646,9 @@
                       "isLinked": true
                     },
                     "css_classes": "gt-glass",
+                    "animation": "fadeInLeft",
+                    "animation_duration": "fast",
+                    "animation_delay": 450,
                     "__globals__": {
                       "background_color": ""
                     }
@@ -8717,7 +8917,7 @@
           "isInner": false,
           "widgetType": "html",
           "settings": {
-            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero {\n  isolation: isolate;\n}\n\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-color: #F2CA50;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>"
+            "html": "<style>\n/* ==========================================================================\n   Garatuja | Colégio Unicultura - CSS complementar da página Elementor\n   Escopo: todas as regras usam classes com prefixo \"gt-\" definidas nos\n   containers/widgets desta página. Nada aqui afeta outras páginas.\n   ========================================================================== */\n\n/* Cor de fundo da área do topo (usada também pelos recortes do hero) */\n.gt-top {\n  --gt-page-bg: #EEEFF4;\n}\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n/* --------------------------------------------------------------------------\n   HERO - recortes (notches) do cartão, reproduzindo a máscara \"Subtract\"\n   do Figma. Os recortes têm a cor do fundo da página e cantos côncavos.\n   -------------------------------------------------------------------------- */\n.gt-hero {\n  isolation: isolate;\n}\n\n.gt-hero > .gt-notch,\n.gt-hero > .e-con-inner > .gt-notch {\n  position: absolute;\n  z-index: 3;\n  background-color: var(--gt-page-bg, #EEEFF4);\n}\n\n.gt-hero .gt-notch--tl {\n  top: 0;\n  left: 0;\n  border-bottom-right-radius: 40px;\n}\n\n.gt-hero .gt-notch--br {\n  right: 0;\n  bottom: 0;\n  border-top-left-radius: 40px;\n}\n\n/* Cantos côncavos (substitui o ::before/::after padrão do container) */\n.gt-hero .gt-notch::before,\n.gt-hero .gt-notch::after {\n  content: \"\";\n  position: absolute;\n  top: auto;\n  right: auto;\n  bottom: auto;\n  left: auto;\n  width: 40px;\n  height: 40px;\n  border: 0;\n  border-radius: 0;\n  opacity: 1;\n  mix-blend-mode: normal;\n  pointer-events: none;\n}\n\n.gt-hero .gt-notch--tl::before {\n  top: 0;\n  left: 100%;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--tl::after {\n  top: 100%;\n  left: 0;\n  background: radial-gradient(circle at 100% 100%, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::before {\n  bottom: 100%;\n  right: 0;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n.gt-hero .gt-notch--br::after {\n  bottom: 0;\n  right: 100%;\n  background: radial-gradient(circle at 0 0, transparent 39.5px, var(--gt-page-bg, #EEEFF4) 40px);\n}\n\n/* --------------------------------------------------------------------------\n   Efeitos de vidro (backdrop blur) - não há controle nativo no Elementor\n   -------------------------------------------------------------------------- */\n.gt-navbar {\n  -webkit-backdrop-filter: blur(51.5px);\n  backdrop-filter: blur(51.5px);\n}\n\n.gt-glass {\n  -webkit-backdrop-filter: blur(9px);\n  backdrop-filter: blur(9px);\n}\n\n/* --------------------------------------------------------------------------\n   Destaque amarelo atrás de \"transição cuidada\"\n   -------------------------------------------------------------------------- */\n.gt-highlight {\n  display: inline;\n  margin-left: -17px;\n  padding: 0 17px;\n  border-radius: 20px;\n  background-image: linear-gradient(#F2CA50, #F2CA50);\n  background-repeat: no-repeat;\n  background-position: left center;\n  background-size: 100% 100%;\n  color: #020659;\n  -webkit-box-decoration-break: clone;\n  box-decoration-break: clone;\n}\n\n/* A faixa \"se desenha\" da esquerda para a direita quando o título entra na tela\n   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */\n.elementor-widget.animated .gt-highlight {\n  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes gt-highlight-draw {\n  from { background-size: 0% 100%; }\n  to   { background-size: 100% 100%; }\n}\n\n/* --------------------------------------------------------------------------\n   Botões com seta ↗ dentro de um círculo\n   (ícone nativo \"arrow-right\" do Elementor, rotacionado -45°)\n   -------------------------------------------------------------------------- */\n.gt-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 28px;\n  height: 28px;\n  border-radius: 50%;\n  background-color: #F2CA50;\n  color: #020659;\n  fill: #020659;\n  font-size: 12px;\n}\n\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.gt-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n/* Variante pequena (botão \"Matricule-se\" da navbar): círculo branco, seta amarela */\n.gt-btn-arrow--light .elementor-button-icon {\n  width: 17px;\n  height: 17px;\n  background-color: #FFFFFF;\n  color: #F2CA50;\n  fill: #F2CA50;\n  font-size: 9px;\n}\n\n/* --------------------------------------------------------------------------\n   Formulário do CTA (Elementor Pro Form)\n   -------------------------------------------------------------------------- */\n.gt-form .elementor-field-group .elementor-field-textual {\n  min-height: 50.5px;\n  padding: 14px 20px;\n}\n\n.gt-form .elementor-field-textual::placeholder {\n  color: rgba(255, 255, 255, 0.5);\n  opacity: 1;\n}\n\n.gt-form .elementor-button {\n  min-height: 56px;\n}\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */\n@media (min-width: 1025px) {\n  .gt-hero {\n    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n}\n\n@keyframes gt-hero-zoom {\n  from { background-size: 135% auto; }\n  to   { background-size: 123% auto; }\n}\n\n/* Navbar fixa (Elementor Pro Sticky): escurece o vidro depois de 120px de scroll */\n.gt-top .gt-hero .gt-navbar {\n  transition: background-color 0.35s ease, box-shadow 0.35s ease;\n}\n\n.gt-top .gt-hero .gt-navbar.elementor-sticky--effects {\n  background-color: rgba(1, 6, 88, 0.82);\n  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);\n}\n\n/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */\n.gt-btn-shine .elementor-button {\n  position: relative;\n  overflow: hidden;\n  transition: translate 0.3s ease, box-shadow 0.3s ease;\n}\n\n.gt-btn-shine .elementor-button::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  left: -60%;\n  width: 40%;\n  height: 100%;\n  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);\n  transform: skewX(-20deg);\n  transition: left 0.6s ease;\n  pointer-events: none;\n}\n\n.gt-btn-shine .elementor-button:hover {\n  translate: 0 -2px;\n}\n\n.gt-btn-shine .elementor-button:hover::after {\n  left: 120%;\n}\n\n/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */\n.gt-btn-arrow .elementor-button-icon,\n.gt-btn-arrow .elementor-button-icon i,\n.gt-btn-arrow .elementor-button-icon svg {\n  transition: transform 0.3s ease;\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: scale(1.1);\n}\n\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n  transform: rotate(-45deg) translateX(3px);\n}\n\n/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.\n   Usa \"translate\" (e não transform) para não conflitar com a animação de entrada. */\n.gt-card-hover {\n  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;\n}\n\n.gt-card-hover:hover {\n  translate: 0 -6px;\n  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);\n}\n\n.gt-card-hover .elementor-icon {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-card-hover:hover .elementor-icon {\n  transform: rotate(-8deg) scale(1.08);\n}\n\n/* Galeria: zoom suave da foto no hover */\n.gt-zoom {\n  overflow: hidden;\n}\n\n.gt-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-zoom:hover img {\n  transform: scale(1.06);\n}\n\n/* Leão: \"respiração\" lenta e contínua */\n.gt-lion img {\n  transform-origin: 50% 80%;\n  animation: gt-breathe 6s ease-in-out infinite;\n}\n\n@keyframes gt-breathe {\n  0%, 100% { transform: scale(1) rotate(0deg); }\n  50%      { transform: scale(1.03) rotate(-1deg); }\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-hero,\n  .gt-lion img,\n  .elementor-widget.animated .gt-highlight {\n    animation: none;\n  }\n\n  .gt-btn-shine .elementor-button::after {\n    display: none;\n  }\n\n  .gt-btn-shine .elementor-button:hover,\n  .gt-card-hover:hover {\n    translate: none;\n  }\n\n  .gt-zoom:hover img,\n  .gt-card-hover:hover .elementor-icon,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {\n    transform: none;\n  }\n\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,\n  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {\n    transform: rotate(-45deg);\n  }\n}\n\n/* --------------------------------------------------------------------------\n   Responsivo\n   -------------------------------------------------------------------------- */\n@media (max-width: 767px) {\n  .gt-hero .gt-notch--tl {\n    border-bottom-right-radius: 24px;\n  }\n\n  .gt-hero .gt-notch::before,\n  .gt-hero .gt-notch::after {\n    width: 24px;\n    height: 24px;\n  }\n\n  .gt-hero .gt-notch--tl::before,\n  .gt-hero .gt-notch--tl::after {\n    background: radial-gradient(circle at 100% 100%, transparent 23.5px, var(--gt-page-bg, #EEEFF4) 24px);\n  }\n\n  .gt-highlight {\n    margin-left: -10px;\n    padding: 0 10px;\n    border-radius: 12px;\n  }\n}\n</style>"
           },
           "elements": []
         }

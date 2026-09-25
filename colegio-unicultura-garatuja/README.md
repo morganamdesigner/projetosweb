@@ -167,7 +167,8 @@ O CSS foi usado só onde o Elementor não tem controle nativo:
 | `gt-highlight` | Faixa amarela arredondada atrás de "transição cuidada", que acompanha a quebra de linha (`box-decoration-break`). |
 | `gt-btn-arrow`, `gt-btn-arrow--light` | Círculo amarelo ou branco atrás da seta ↗ dos botões. A seta é o ícone nativo `arrow-right` girado −45°. |
 | `gt-form` | Cor do placeholder e padding/altura dos campos (inexistentes nos controles do Form). |
-| `gt-root` | Zera a margem do último `<p>` dos Text Editors, porque alguns temas adicionam margem. |
+| `gt-root` | Zera a margem do último `<p>` dos Text Editors, porque alguns temas adicionam margem. Também suaviza as animações de entrada. |
+| `gt-btn-shine`, `gt-card-hover`, `gt-zoom`, `gt-lion` | Efeitos de hover e loop (seção 9). |
 
 ---
 
@@ -188,7 +189,37 @@ O Figma só tem a versão desktop. O comportamento em tablet (≤1024 px) e mobi
 
 ---
 
-## 9. Decisões e diferenças conhecidas
+## 9. Animações e efeitos de scroll
+
+Os efeitos combinam recursos nativos do Elementor e do Elementor Pro com CSS em `gt-page.css`. São 53 elementos com animação de entrada, todas na duração **Fast** (0,75 s). No CSS, o deslocamento dessas entradas foi reduzido para 32 px. A animação nativa desloca 100% da altura do elemento, o que numa foto de 812 px ficaria exagerado.
+
+| Onde | Efeito | Como foi feito |
+|---|---|---|
+| Hero | Selo, H1, texto e botão entram em cascata (0 / 120 / 240 / 360 ms). | Entrance Animation *Fade In Up* (nativa) |
+| Hero | A foto de fundo faz um zoom lento de 135% para 123% ao carregar (só desktop). | CSS (`.gt-hero`) |
+| Navbar | Fica fixa no topo ao rolar, com 16 px de distância. Depois de 120 px de scroll, o vidro escurece e ganha sombra para continuar legível sobre as seções claras. Desktop e tablet. | **Pro**: *Sticky: Top* + *Effects Offset*. CSS: `.elementor-sticky--effects` |
+| "Duas etapas" | O título aparece e a faixa amarela se desenha da esquerda para a direita. A coluna da direita sobe logo depois. | *Fade In* + CSS (`.gt-highlight`) · *Fade In Up* |
+| Cards das etapas | Eyebrow, H2 e texto em cascata. Os itens do checklist entram em ziguezague (40–80 ms entre eles). | *Fade In Up* |
+| Cards das etapas | As fotos fazem parallax leve ao rolar (velocidade 1, só desktop). | **Pro**: *Motion Effects → Vertical Scroll* |
+| Galeria | As fotos aparecem em sequência. No hover, dão um zoom de 6%. | *Fade In* + CSS (`.gt-zoom`) |
+| Experiências | Os cards entram em cascata por coluna. No hover, o card sobe 6 px, ganha sombra e o ícone gira levemente. | *Fade In Up* + CSS (`.gt-card-hover`) |
+| E depois da Garatuja? | O leão entra com zoom suave e depois "respira" em loop lento (6 s). | *Zoom In* + CSS (`.gt-lion`) |
+| CTA | O card sobe. O depoimento de vidro desliza da esquerda (450 ms). | *Fade In Up* · *Fade In Left* |
+| Botões amarelos | No hover, sobem 2 px e um brilho atravessa o botão. | CSS (`.gt-btn-shine`) |
+| Botões com seta | No hover, o círculo cresce e a seta ↗ anda na diagonal. | CSS (`.gt-btn-arrow`) |
+
+**Acessibilidade:** quando o sistema do usuário pede "reduzir movimento", o Elementor já desliga as animações de entrada. O CSS desliga o restante: zoom do hero, faixa, leão, brilho e hovers com deslocamento.
+
+**Para ajustar no editor:**
+- **Entradas:** *Advanced → Motion Effects → Entrance Animation* do widget ou container.
+- **Navbar fixa:** container da navbar → *Advanced → Motion Effects → Sticky*.
+- **Parallax:** widget de imagem → *Advanced → Motion Effects → Scrolling Effects*.
+
+**Não incluída:** a faixa rolante "MATRÍCULAS ABERTAS 2026 ✦ VAGAS LIMITADAS" (camadas `DiagonalTape`) está **oculta** no Figma, então não foi adicionada. Se o designer confirmar, ela pode ser criada com CSS.
+
+---
+
+## 10. Decisões e diferenças conhecidas
 
 - **Formulário:** usa o widget *Form* do Elementor Pro, porque o Elementor gratuito não tem formulário. As chaves desse widget não puderam ser conferidas no código-fonte, que é fechado.
 - **Emojis dos contatos no rodapé** (📞 ✉️ 📍) foram trocados por ícones Font Awesome no Icon List. Emojis mudam de aparência entre sistemas e não aceitam cor. Se quiser os emojis de volta, remova os ícones e cole o emoji no início do texto de cada item.

@@ -104,10 +104,24 @@
   margin-left: -17px;
   padding: 0 17px;
   border-radius: 20px;
-  background-color: #F2CA50;
+  background-image: linear-gradient(#F2CA50, #F2CA50);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 100% 100%;
   color: #020659;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+}
+
+/* A faixa "se desenha" da esquerda para a direita quando o título entra na tela
+   (o Elementor adiciona .animated ao widget ao disparar a Entrance Animation). */
+.elementor-widget.animated .gt-highlight {
+  animation: gt-highlight-draw 0.9s 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes gt-highlight-draw {
+  from { background-size: 0% 100%; }
+  to   { background-size: 100% 100%; }
 }
 
 /* --------------------------------------------------------------------------
@@ -164,6 +178,181 @@
 
 .gt-form .elementor-button {
   min-height: 56px;
+}
+
+/* --------------------------------------------------------------------------
+   ANIMAÇÕES
+   -------------------------------------------------------------------------- */
+
+/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da
+   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */
+.gt-root .animated {
+  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gt-root .fadeInUp {
+  animation-name: gt-fade-in-up;
+}
+
+.gt-root .fadeInLeft {
+  animation-name: gt-fade-in-left;
+}
+
+.gt-root .zoomIn {
+  animation-name: gt-zoom-in;
+}
+
+@keyframes gt-fade-in-up {
+  from { opacity: 0; transform: translate3d(0, 32px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes gt-fade-in-left {
+  from { opacity: 0; transform: translate3d(-32px, 0, 0); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes gt-zoom-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* Hero: zoom lento da foto ao carregar (desktop, onde o fundo usa 123%) */
+@media (min-width: 1025px) {
+  .gt-hero {
+    animation: gt-hero-zoom 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+}
+
+@keyframes gt-hero-zoom {
+  from { background-size: 135% auto; }
+  to   { background-size: 123% auto; }
+}
+
+/* Navbar fixa (Elementor Pro Sticky): escurece o vidro depois de 120px de scroll */
+.gt-top .gt-hero .gt-navbar {
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.gt-top .gt-hero .gt-navbar.elementor-sticky--effects {
+  background-color: rgba(1, 6, 88, 0.82);
+  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.25);
+}
+
+/* Botões em gradiente: sobem 2px e um brilho atravessa o botão */
+.gt-btn-shine .elementor-button {
+  position: relative;
+  overflow: hidden;
+  transition: translate 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gt-btn-shine .elementor-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.gt-btn-shine .elementor-button:hover {
+  translate: 0 -2px;
+}
+
+.gt-btn-shine .elementor-button:hover::after {
+  left: 120%;
+}
+
+/* Botões com seta: o círculo cresce e a seta anda na diagonal ↗ */
+.gt-btn-arrow .elementor-button-icon,
+.gt-btn-arrow .elementor-button-icon i,
+.gt-btn-arrow .elementor-button-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.gt-btn-arrow .elementor-button:hover .elementor-button-icon {
+  transform: scale(1.1);
+}
+
+.gt-btn-arrow .elementor-button:hover .elementor-button-icon i,
+.gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {
+  transform: rotate(-45deg) translateX(3px);
+}
+
+/* Cards de experiências: sobem 6px, ganham sombra e o ícone gira levemente.
+   Usa "translate" (e não transform) para não conflitar com a animação de entrada. */
+.gt-card-hover {
+  transition: translate 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
+}
+
+.gt-card-hover:hover {
+  translate: 0 -6px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+.gt-card-hover .elementor-icon {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gt-card-hover:hover .elementor-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* Galeria: zoom suave da foto no hover */
+.gt-zoom {
+  overflow: hidden;
+}
+
+.gt-zoom img {
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.gt-zoom:hover img {
+  transform: scale(1.06);
+}
+
+/* Leão: "respiração" lenta e contínua */
+.gt-lion img {
+  transform-origin: 50% 80%;
+  animation: gt-breathe 6s ease-in-out infinite;
+}
+
+@keyframes gt-breathe {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  50%      { transform: scale(1.03) rotate(-1deg); }
+}
+
+/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */
+@media (prefers-reduced-motion: reduce) {
+  .gt-hero,
+  .gt-lion img,
+  .elementor-widget.animated .gt-highlight {
+    animation: none;
+  }
+
+  .gt-btn-shine .elementor-button::after {
+    display: none;
+  }
+
+  .gt-btn-shine .elementor-button:hover,
+  .gt-card-hover:hover {
+    translate: none;
+  }
+
+  .gt-zoom:hover img,
+  .gt-card-hover:hover .elementor-icon,
+  .gt-btn-arrow .elementor-button:hover .elementor-button-icon {
+    transform: none;
+  }
+
+  .gt-btn-arrow .elementor-button:hover .elementor-button-icon i,
+  .gt-btn-arrow .elementor-button:hover .elementor-button-icon svg {
+    transform: rotate(-45deg);
+  }
 }
 
 /* --------------------------------------------------------------------------
