@@ -570,8 +570,9 @@ def build_bilingue():
 # 07 Projetos Pedagógicos: 3 etapas ligadas por uma linha que se desenha
 # ---------------------------------------------------------------------------
 
-def step(n, title, delay):
-    return add(container({
+def step(n, title):
+    # sem Entrance Animation do Elementor: quem acende cada etapa é o scroll (un-dif.js)
+    return container({
         "content_width": "full",
         "flex_direction": "column",
         "flex_gap": gap(12),
@@ -580,8 +581,12 @@ def step(n, title, delay):
         "css_classes": "un-step",
     }, [heading(f"{n:02d}", "p", WHITE, typo("typography", HANKEN, 18, 800, lh=18),
                 extra={"_css_classes": "un-step-dot"}),
-        heading(title, "h3", WHITE, typo("typography", HANKEN, 28, 700, lh=32, ls=-0.8, size_m=22, lh_m=27))]),
-        anim("fadeInUp", delay))
+        heading(title, "h3", WHITE, typo("typography", HANKEN, 28, 700, lh=32, ls=-0.8, size_m=22, lh_m=27))])
+
+
+# Linha das etapas: um elemento próprio (o ::before dos containers é a camada de sobreposição do Elementor,
+# que força largura/altura de 100% e bordas). --un-p (0 a 1) vem do un-dif.js conforme o scroll.
+STEPS_LINE = '<div class="un-steps-fill"></div>'
 
 
 def build_projetos():
@@ -599,8 +604,9 @@ def build_projetos():
         "flex_gap": gap(24),
         "flex_gap_mobile": gap(28),
         "padding": dims(8, 0, 0, 0),
-        "css_classes": "un-steps un-io",
-    }, [step(1, "Investigação", 0), step(2, "Produção", 150), step(3, "Conhecimento aplicado", 300)])
+        "css_classes": "un-steps",
+    }, [html(STEPS_LINE, "un-steps-line"),
+        step(1, "Investigação"), step(2, "Produção"), step(3, "Conhecimento aplicado")])
     challenge = container({
         "content_width": "full",
         "flex_direction": "row",

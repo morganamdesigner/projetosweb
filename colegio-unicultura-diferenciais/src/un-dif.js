@@ -81,10 +81,46 @@
     });
   }
 
+  // Projetos: a linha (--un-p) se preenche enquanto o bloco sobe de 85% a 35% da tela,
+  // e cada etapa acende (.is-on) quando a linha chega nela
+  function steps() {
+    if (reduceMotion) {
+      return;
+    }
+    var blocks = Array.prototype.slice.call(document.querySelectorAll('.un-steps'));
+    if (!blocks.length) {
+      return;
+    }
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var vh = window.innerHeight;
+      blocks.forEach(function (block) {
+        var top = block.getBoundingClientRect().top;
+        var p = Math.max(0, Math.min(1, (vh * 0.85 - top) / (vh * 0.5)));
+        block.style.setProperty('--un-p', p.toFixed(3));
+        var items = block.querySelectorAll('.un-step');
+        items.forEach(function (item, i) {
+          var at = items.length > 1 ? i / (items.length - 1) : 0;
+          item.classList.toggle('is-on', p > 0 && p >= at - 0.02);
+        });
+      });
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    }, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  }
+
   // este script fica no topo da página: espera o resto do HTML carregar
   function start() {
     buildNav();
     tilt();
+    steps();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', start);

@@ -48,6 +48,7 @@
   right: -25%;
   z-index: -1;
   width: 70%;
+  height: auto; /* o Elementor força 100% no ::before dos containers */
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255, 184, 103, 0.35), rgba(241, 5, 5, 0.12) 45%, transparent 70%);
@@ -87,6 +88,7 @@
   left: 0;
   width: 4px;
   height: 100%;
+  border: 0; /* o ::before dos containers herda a borda do card no Elementor */
   background: linear-gradient(180deg, #F10505, #FF5A36);
   transform: scaleY(0);
   transform-origin: 50% 0;

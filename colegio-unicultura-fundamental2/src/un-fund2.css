@@ -75,6 +75,7 @@
   bottom: 8px;
   left: 13px;
   width: 2px;
+  height: auto; /* o Elementor força 100% no ::before dos containers */
   border-radius: 2px;
   background-color: rgba(1, 6, 88, 0.1);
 }

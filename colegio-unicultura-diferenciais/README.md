@@ -15,7 +15,7 @@ A copy é a enviada pela cliente.
 | 04 | Pensamento Computacional | Fundo azul com grade, um "terminal" que **digita** "criar, testar, resolver" com cursor piscando, e 3 cards (Tecnologia, Cultura Maker, Metodologia STEAM) que **inclinam em 3D** seguindo o mouse. |
 | 05 | Socioemocional, Financeira e Empreendedora | 3 cards com ícone (Emoções · Relações · Escolhas / Planejamento · Recursos / Desafios · Projetos) e a faixa "Habilidades tão importantes *quanto o conteúdo acadêmico.*". |
 | 06 | Sistema Bilíngue | Foto (placeholder) com os balões **"Hello!" e "Olá!" flutuando**, texto e 3 checks. |
-| 07 | Projetos Pedagógicos | Fundo azul, 3 etapas (Investigação → Produção → Conhecimento aplicado) ligadas por uma **linha que se desenha** ao aparecer (vertical no celular), e o quadro "Diferentes áreas do saber, um mesmo desafio.". |
+| 07 | Projetos Pedagógicos | Fundo azul, 3 etapas (Investigação → Produção → Conhecimento aplicado) ligadas por uma **linha que se preenche com o scroll** e acende cada etapa quando chega nela (vertical no celular), e o quadro "Diferentes áreas do saber, um mesmo desafio.". |
 | 08 | Escola de Esportes | Foto grande (placeholder), texto, pílulas Físico/Emocional/Social e 4 cards de valores (Disciplina, Cooperação, Perseverança, Respeito). |
 | — | CTA final | Cartão azul com anéis pulsando, "Agendar visita" (→ /matriculas) e "Falar pelo WhatsApp" (fica verde no hover). |
 
