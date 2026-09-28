@@ -23,7 +23,7 @@ Em todas as seções: **número gigante vazado** (01 a 08) ao fundo com parallax
 
 ## Para completar
 
-- **Fotos**: 5 placeholders do Elementor (Monitoria, Leitura, Bilíngue, Esportes). O texto alternativo de cada um diz qual foto usar. Substitua no widget Imagem e troque também o texto alternativo.
+- **Fotos**: 4 placeholders do Elementor (Monitoria, Leitura, Bilíngue, Esportes). O texto alternativo de cada um diz qual foto usar. Substitua no widget Imagem e troque também o texto alternativo.
 - **Link do WhatsApp**: o botão "Falar pelo WhatsApp" está sem link. Use `https://wa.me/55DDDNUMERO`.
 - **Textos de apoio que não estavam na copy**: rótulos das seções ("Leitura e repertório", "Tecnologia · Maker · STEAM"...), "Navegue:", "Para desenvolver", "Venha nos visitar", o terminal "criar, testar, resolver", as áreas do quadro de Projetos (Linguagens, Matemática, Ciências, Humanas, Artes) e os títulos dos cards, que saíram da própria copy. Ajuste à vontade.
 - O índice lateral usa o atributo `data-chapter` das seções (Avançado > Atributos, recurso do Elementor Pro).
