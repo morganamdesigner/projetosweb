@@ -177,6 +177,11 @@
                       "unit": "px",
                       "size": 10
                     },
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
                     "_flex_size": "none",
                     "css_classes": "un-logos--color"
                   },
@@ -280,6 +285,11 @@
                       "isLinked": true,
                       "unit": "px",
                       "size": 10
+                    },
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
                     },
                     "_flex_size": "none",
                     "css_classes": "un-logos--white"
@@ -1311,6 +1321,11 @@
                         "flex_direction_mobile": "row",
                         "flex_wrap_mobile": "nowrap",
                         "flex_align_items": "center",
+                        "width": {
+                          "unit": "custom",
+                          "size": "max-content",
+                          "sizes": []
+                        },
                         "_flex_size": "none",
                         "css_classes": "un-avatars"
                       },

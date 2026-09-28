@@ -123,6 +123,7 @@ def avatars():
         "flex_direction_mobile": "row",
         "flex_wrap_mobile": "nowrap",
         "flex_align_items": "center",
+        "width": {"unit": "custom", "size": "max-content", "sizes": []},  # senão 100% sem encolher
         "_flex_size": "none",
         "css_classes": "un-avatars",
     }, imgs)

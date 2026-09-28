@@ -172,7 +172,7 @@ def dif_tile(index, icon, title, note):
         "content_width": "full",
         "flex_direction": "column",
         "flex_gap": gap(4),
-        "_flex_size": "grow",
+        # sem "_flex_size": o padrão (encolher) faz o texto ocupar só o espaço ao lado do ícone
     }, [
         heading(f"{index:02d}", "p", "#F10505", typo("typography", HANKEN, 13, 700, lh=16, ls=1.3)),
         heading(title, "h3", NAVY, typo("typography", HANKEN, 22, 700, lh=28, ls=-0.5, size_m=18, lh_m=24)),

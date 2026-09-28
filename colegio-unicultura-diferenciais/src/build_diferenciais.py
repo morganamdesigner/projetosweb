@@ -172,6 +172,28 @@ def row(children, gap_px=72, reverse=False, align="center"):
     }, children)
 
 
+def grid3(children, cols_tablet=3, cols_mobile=1, gap_px=20, gap_m=14, classes=""):
+    """3 colunas iguais. Uma linha de contêineres com 100% cada não encolhe se tiver "grow"/"none"
+    no tamanho flex, e sai da tela; a grade resolve sem depender disso."""
+    n = len(children)
+    s = {
+        "content_width": "full",
+        "container_type": "grid",
+        "grid_columns_grid": {"unit": "fr", "size": 3, "sizes": []},
+        "grid_columns_grid_tablet": {"unit": "fr", "size": cols_tablet, "sizes": []},
+        "grid_columns_grid_mobile": {"unit": "fr", "size": cols_mobile, "sizes": []},
+        "grid_rows_grid": {"unit": "fr", "size": 1, "sizes": []},
+        "grid_rows_grid_tablet": {"unit": "fr", "size": -(-n // cols_tablet), "sizes": []},
+        "grid_rows_grid_mobile": {"unit": "fr", "size": -(-n // cols_mobile), "sizes": []},
+        "grid_gaps": {"column": str(gap_px), "row": str(gap_px), "isLinked": True, "unit": "px"},
+        "grid_gaps_mobile": {"column": str(gap_m), "row": str(gap_m), "isLinked": True, "unit": "px"},
+        "grid_auto_flow": "row",
+    }
+    if classes:
+        s["css_classes"] = classes
+    return container(s, children)
+
+
 def col(children, width, gap_px=22, classes=""):
     s = {
         "content_width": "full",
@@ -489,16 +511,10 @@ def build_computacional():
                  "computacional, criatividade e resolução de problemas.", "rgba(255, 255, 255, 0.8)", width=620),
             anim("fadeInUp", 200)),
     ], 100)
-    cards = container({
-        "content_width": "full",
-        "flex_direction": "row",
-        "flex_direction_tablet": "column",
-        "flex_gap": gap(20),
-    }, [icon_card("fas fa-microchip", "Tecnologia", "", dark=True, delay=0, classes="un-tilt"),
-        icon_card("fas fa-tools", "Cultura Maker", "", dark=True, delay=120, classes="un-tilt"),
-        icon_card("fas fa-flask", "Metodologia STEAM", "", dark=True, delay=240, classes="un-tilt")])
-    for c in cards["elements"]:
-        c["settings"]["_flex_size"] = "grow"
+    cards = grid3([icon_card("fas fa-microchip", "Tecnologia", "", dark=True, delay=0, classes="un-tilt"),
+                   icon_card("fas fa-tools", "Cultura Maker", "", dark=True, delay=120, classes="un-tilt"),
+                   icon_card("fas fa-flask", "Metodologia STEAM", "", dark=True, delay=240, classes="un-tilt")],
+                  cols_tablet=1)
     outcomes = container({
         "content_width": "full",
         "flex_direction": "row",
@@ -526,16 +542,10 @@ def build_socioemocional():
         col([add(para("Formação que prepara nossos estudantes para lidar com emoções, relações, escolhas, "
                       "planejamento, recursos, desafios e projetos."), anim("fadeInUp", 200))], 45),
     ], align="flex-end")
-    cards = container({
-        "content_width": "full",
-        "flex_direction": "row",
-        "flex_direction_tablet": "column",
-        "flex_gap": gap(20),
-    }, [icon_card("fas fa-heart", "Socioemocional", "<p>Emoções · Relações · Escolhas</p>", delay=0),
-        icon_card("fas fa-piggy-bank", "Financeira", "<p>Planejamento · Recursos</p>", delay=120),
-        icon_card("fas fa-rocket", "Empreendedora", "<p>Desafios · Projetos</p>", delay=240)])
-    for c in cards["elements"]:
-        c["settings"]["_flex_size"] = "grow"
+    cards = grid3([icon_card("fas fa-heart", "Socioemocional", "<p>Emoções · Relações · Escolhas</p>", delay=0),
+                   icon_card("fas fa-piggy-bank", "Financeira", "<p>Planejamento · Recursos</p>", delay=120),
+                   icon_card("fas fa-rocket", "Empreendedora", "<p>Desafios · Projetos</p>", delay=240)],
+                  cols_tablet=1)
     banner = heading('Habilidades tão importantes <span class="un-mark">quanto o conteúdo acadêmico.</span>', "p",
                      NAVY, typo("typography", HANKEN, 34, 700, lh=42, ls=-1, size_m=24, lh_m=31), align="center",
                      extra={"_css_classes": "un-io un-banner"})
@@ -577,7 +587,6 @@ def step(n, title):
         "flex_direction": "column",
         "flex_gap": gap(12),
         "padding": dims(0, 12, 0, 0),
-        "_flex_size": "grow",
         "css_classes": "un-step",
     }, [heading(f"{n:02d}", "p", WHITE, typo("typography", HANKEN, 18, 800, lh=18),
                 extra={"_css_classes": "un-step-dot"}),
@@ -602,16 +611,12 @@ def build_projetos():
                       "conhecimento aplicado — conectando diferentes áreas do saber em torno de um mesmo desafio.",
                       "rgba(255, 255, 255, 0.8)"), anim("fadeInUp", 200))], 50),
     ], align="flex-end")
-    steps = container({
-        "content_width": "full",
-        "flex_direction": "row",
-        "flex_direction_mobile": "column",
-        "flex_gap": gap(24),
-        "flex_gap_mobile": gap(28),
-        "padding": dims(8, 0, 0, 0),
-        "css_classes": "un-steps",
-    }, [html(steps_line_html(), "un-steps-line"),
-        step(1, "Investigação"), step(2, "Produção"), step(3, "Conhecimento aplicado")])
+    # a linha é absoluta (fora da grade); as 3 etapas ocupam as colunas
+    steps = grid3([html(steps_line_html(), "un-steps-line"),
+                   step(1, "Investigação"), step(2, "Produção"), step(3, "Conhecimento aplicado")],
+                  cols_tablet=3, cols_mobile=1, gap_px=24, gap_m=28, classes="un-steps")
+    steps["settings"]["grid_rows_grid_mobile"] = {"unit": "fr", "size": 3, "sizes": []}
+    steps["settings"]["padding"] = dims(8, 0, 0, 0)
     challenge = container({
         "content_width": "full",
         "flex_direction": "row",

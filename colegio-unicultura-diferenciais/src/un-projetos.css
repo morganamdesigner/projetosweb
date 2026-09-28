@@ -1,6 +1,8 @@
 /* Colégio Unicultura | Diferenciais - 07 Projetos: linha das etapas.
    Vai DENTRO do widget da linha (a seção funciona sozinha, sem depender do CSS do topo).
-   --un-p (0 a 1) e .is-on vêm do un-projetos.js. Sem JS (e no editor) fica tudo aceso. */
+   O un-projetos.js mede as bolinhas 01 e 03 e passa a posição da linha em variáveis
+   (--un-lx, --un-lr, --un-ly, --un-lb); --un-p (0 a 1) e .is-on controlam o preenchimento.
+   Sem JS (e no editor) a linha usa a posição padrão e fica tudo aceso. */
 
 .un-steps {
   position: relative;
@@ -11,12 +13,12 @@
   z-index: 1;
 }
 
-/* O widget da linha sai do fluxo: fica atrás das etapas, do centro da 1ª bolinha ao centro da 3ª */
+/* O widget da linha sai do fluxo e fica atrás das etapas, do centro da bolinha 01 ao da 03 */
 body .un-steps > .elementor-element.un-steps-line {
   position: absolute !important;
-  top: 37px;
-  left: 30px;
-  right: calc((100% - 48px) / 3 - 30px);
+  top: var(--un-ly, 37px);
+  left: var(--un-lx, 30px);
+  right: var(--un-lr, calc((100% - 48px) / 3 - 30px));
   z-index: 0;
   width: auto !important;
   max-width: none !important;
@@ -26,6 +28,7 @@ body .un-steps > .elementor-element.un-steps-line {
   border-radius: 2px;
   background: rgba(255, 255, 255, 0.14);
   pointer-events: none;
+  grid-area: auto;
 }
 
 .un-steps-line .elementor-widget-container {
@@ -42,6 +45,33 @@ body .un-steps > .elementor-element.un-steps-line {
   transform: scaleX(var(--un-p, 1));
   transform-origin: 0 50%;
   transition: transform 0.15s linear;
+}
+
+/* Etapas empilhadas (celular, ou se o layout mudar): a linha desce */
+body .un-steps.un-steps--v > .elementor-element.un-steps-line {
+  top: var(--un-ly, 38px);
+  bottom: var(--un-lb, 30px);
+  right: auto;
+  width: 2px !important;
+  height: auto;
+}
+
+.un-steps--v .un-steps-fill {
+  background: linear-gradient(180deg, #F10505, #FFB867);
+  transform: scaleY(var(--un-p, 1));
+  transform-origin: 50% 0;
+}
+
+/* Sem JS: no celular a linha também desce */
+@media (max-width: 767px) {
+  body .un-steps:not(.un-steps--js) > .elementor-element.un-steps-line {
+    top: 38px;
+    bottom: 30px;
+    left: 29px;
+    right: auto;
+    width: 2px !important;
+    height: auto;
+  }
 }
 
 /* Bolinhas numeradas */
@@ -71,22 +101,4 @@ body .un-steps > .elementor-element.un-steps-line {
 .un-steps--js .un-step:not(.is-on) .elementor-widget-heading:not(.un-step-dot) {
   opacity: 0.3;
   transform: translate3d(0, 10px, 0);
-}
-
-/* Celular: etapas em coluna, a linha desce */
-@media (max-width: 767px) {
-  body .un-steps > .elementor-element.un-steps-line {
-    top: 38px;
-    bottom: 30px;
-    left: 29px;
-    right: auto;
-    width: 2px !important;
-    height: auto;
-  }
-
-  .un-steps-fill {
-    background: linear-gradient(180deg, #F10505, #FFB867);
-    transform: scaleY(var(--un-p, 1));
-    transform-origin: 50% 0;
-  }
 }

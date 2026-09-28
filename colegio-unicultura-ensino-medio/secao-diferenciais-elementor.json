@@ -548,8 +548,7 @@
                       "isLinked": true
                     },
                     "content_width": "full",
-                    "flex_direction": "column",
-                    "_flex_size": "grow"
+                    "flex_direction": "column"
                   },
                   "elements": [
                     {
@@ -817,8 +816,7 @@
                       "isLinked": true
                     },
                     "content_width": "full",
-                    "flex_direction": "column",
-                    "_flex_size": "grow"
+                    "flex_direction": "column"
                   },
                   "elements": [
                     {
@@ -1086,8 +1084,7 @@
                       "isLinked": true
                     },
                     "content_width": "full",
-                    "flex_direction": "column",
-                    "_flex_size": "grow"
+                    "flex_direction": "column"
                   },
                   "elements": [
                     {

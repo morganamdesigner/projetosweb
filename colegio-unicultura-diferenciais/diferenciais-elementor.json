@@ -177,6 +177,11 @@
                       "unit": "px",
                       "size": 10
                     },
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
                     "_flex_size": "none",
                     "css_classes": "un-logos--color"
                   },
@@ -280,6 +285,11 @@
                       "isLinked": true,
                       "unit": "px",
                       "size": 10
+                    },
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
                     },
                     "_flex_size": "none",
                     "css_classes": "un-logos--white"
@@ -3928,11 +3938,11 @@
           "isInner": true,
           "settings": {
             "flex_gap": {
-              "column": "20",
-              "row": "20",
+              "column": "0",
+              "row": "0",
               "isLinked": true,
               "unit": "px",
-              "size": 20
+              "size": 0
             },
             "padding": {
               "unit": "px",
@@ -3943,8 +3953,50 @@
               "isLinked": true
             },
             "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_tablet": "column"
+            "container_type": "grid",
+            "grid_columns_grid": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_columns_grid_tablet": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_columns_grid_mobile": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid_tablet": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_rows_grid_mobile": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_gaps": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "grid_gaps_mobile": {
+              "column": "14",
+              "row": "14",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "grid_auto_flow": "row"
           },
           "elements": [
             {
@@ -4003,8 +4055,7 @@
                   "border_color": ""
                 },
                 "animation": "fadeInUp",
-                "animation_duration": "fast",
-                "_flex_size": "grow"
+                "animation_duration": "fast"
               },
               "elements": [
                 {
@@ -4144,8 +4195,7 @@
                 },
                 "animation": "fadeInUp",
                 "animation_duration": "fast",
-                "animation_delay": 120,
-                "_flex_size": "grow"
+                "animation_delay": 120
               },
               "elements": [
                 {
@@ -4285,8 +4335,7 @@
                 },
                 "animation": "fadeInUp",
                 "animation_duration": "fast",
-                "animation_delay": 240,
-                "_flex_size": "grow"
+                "animation_delay": 240
               },
               "elements": [
                 {
@@ -4956,11 +5005,11 @@
           "isInner": true,
           "settings": {
             "flex_gap": {
-              "column": "20",
-              "row": "20",
+              "column": "0",
+              "row": "0",
               "isLinked": true,
               "unit": "px",
-              "size": 20
+              "size": 0
             },
             "padding": {
               "unit": "px",
@@ -4971,8 +5020,50 @@
               "isLinked": true
             },
             "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_tablet": "column"
+            "container_type": "grid",
+            "grid_columns_grid": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_columns_grid_tablet": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_columns_grid_mobile": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid_tablet": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_rows_grid_mobile": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_gaps": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "grid_gaps_mobile": {
+              "column": "14",
+              "row": "14",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "grid_auto_flow": "row"
           },
           "elements": [
             {
@@ -5031,8 +5122,7 @@
                   "border_color": ""
                 },
                 "animation": "fadeInUp",
-                "animation_duration": "fast",
-                "_flex_size": "grow"
+                "animation_duration": "fast"
               },
               "elements": [
                 {
@@ -5211,8 +5301,7 @@
                 },
                 "animation": "fadeInUp",
                 "animation_duration": "fast",
-                "animation_delay": 120,
-                "_flex_size": "grow"
+                "animation_delay": 120
               },
               "elements": [
                 {
@@ -5391,8 +5480,7 @@
                 },
                 "animation": "fadeInUp",
                 "animation_duration": "fast",
-                "animation_delay": 240,
-                "_flex_size": "grow"
+                "animation_delay": 240
               },
               "elements": [
                 {
@@ -6572,11 +6660,11 @@
           "isInner": true,
           "settings": {
             "flex_gap": {
-              "column": "24",
-              "row": "24",
+              "column": "0",
+              "row": "0",
               "isLinked": true,
               "unit": "px",
-              "size": 24
+              "size": 0
             },
             "padding": {
               "unit": "px",
@@ -6587,15 +6675,50 @@
               "isLinked": false
             },
             "content_width": "full",
-            "flex_direction": "row",
-            "flex_direction_mobile": "column",
-            "flex_gap_mobile": {
+            "container_type": "grid",
+            "grid_columns_grid": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_columns_grid_tablet": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_columns_grid_mobile": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid": {
+              "unit": "fr",
+              "size": 1,
+              "sizes": []
+            },
+            "grid_rows_grid_tablet": {
+              "unit": "fr",
+              "size": 2,
+              "sizes": []
+            },
+            "grid_rows_grid_mobile": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_gaps": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "grid_gaps_mobile": {
               "column": "28",
               "row": "28",
               "isLinked": true,
-              "unit": "px",
-              "size": 28
+              "unit": "px"
             },
+            "grid_auto_flow": "row",
             "css_classes": "un-steps"
           },
           "elements": [
@@ -6605,7 +6728,7 @@
               "isInner": false,
               "widgetType": "html",
               "settings": {
-                "html": "<div class=\"un-steps-fill\"></div>\n<style>\n/* Colégio Unicultura | Diferenciais - 07 Projetos: linha das etapas.\n   Vai DENTRO do widget da linha (a seção funciona sozinha, sem depender do CSS do topo).\n   --un-p (0 a 1) e .is-on vêm do un-projetos.js. Sem JS (e no editor) fica tudo aceso. */\n\n.un-steps {\n  position: relative;\n}\n\n.un-steps > .un-step {\n  position: relative;\n  z-index: 1;\n}\n\n/* O widget da linha sai do fluxo: fica atrás das etapas, do centro da 1ª bolinha ao centro da 3ª */\nbody .un-steps > .elementor-element.un-steps-line {\n  position: absolute !important;\n  top: 37px;\n  left: 30px;\n  right: calc((100% - 48px) / 3 - 30px);\n  z-index: 0;\n  width: auto !important;\n  max-width: none !important;\n  height: 2px;\n  margin: 0 !important;\n  padding: 0 !important;\n  border-radius: 2px;\n  background: rgba(255, 255, 255, 0.14);\n  pointer-events: none;\n}\n\n.un-steps-line .elementor-widget-container {\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.un-steps-fill {\n  width: 100%;\n  height: 100%;\n  border-radius: 2px;\n  background: linear-gradient(90deg, #F10505, #FFB867);\n  transform: scaleX(var(--un-p, 1));\n  transform-origin: 0 50%;\n  transition: transform 0.15s linear;\n}\n\n/* Bolinhas numeradas */\n.un-step .un-step-dot .elementor-heading-title {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  background-color: #F10505;\n  box-shadow: 0 0 0 8px #010658, 0 0 0 9px rgba(241, 5, 5, 0.55), 0 0 28px rgba(241, 5, 5, 0.45);\n  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n\n.un-step .elementor-widget-heading:not(.un-step-dot) {\n  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n/* Etapa que a linha ainda não alcançou: apagada (.un-steps--js é posto pelo script) */\n.un-steps--js .un-step:not(.is-on) .un-step-dot .elementor-heading-title {\n  background-color: #1A1F6E;\n  box-shadow: 0 0 0 8px #010658, 0 0 0 9px rgba(255, 255, 255, 0.18);\n  transform: scale(0.82);\n}\n\n.un-steps--js .un-step:not(.is-on) .elementor-widget-heading:not(.un-step-dot) {\n  opacity: 0.3;\n  transform: translate3d(0, 10px, 0);\n}\n\n/* Celular: etapas em coluna, a linha desce */\n@media (max-width: 767px) {\n  body .un-steps > .elementor-element.un-steps-line {\n    top: 38px;\n    bottom: 30px;\n    left: 29px;\n    right: auto;\n    width: 2px !important;\n    height: auto;\n  }\n\n  .un-steps-fill {\n    background: linear-gradient(180deg, #F10505, #FFB867);\n    transform: scaleY(var(--un-p, 1));\n    transform-origin: 50% 0;\n  }\n}\n</style>\n<script>\n/* Colégio Unicultura | Diferenciais - 07 Projetos (CSS em un-projetos.css).\n   A linha (--un-p) se preenche enquanto as etapas sobem de 85% a 35% da tela,\n   e cada etapa acende (.is-on) quando a linha chega nela. Volta ao rolar para cima.\n   Não roda no editor do Elementor nem com \"reduzir movimento\" (fica tudo aceso). */\n(function () {\n  var script = document.currentScript;\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {\n    return;\n  }\n  var block = script && script.closest('.un-steps');\n  if (!block || block.classList.contains('un-steps--js')) {\n    return;\n  }\n  block.classList.add('un-steps--js');\n  var ticking = false;\n\n  function update() {\n    ticking = false;\n    var vh = window.innerHeight;\n    var top = block.getBoundingClientRect().top;\n    var p = Math.max(0, Math.min(1, (vh * 0.85 - top) / (vh * 0.5)));\n    block.style.setProperty('--un-p', p.toFixed(3));\n    var items = block.querySelectorAll('.un-step');\n    items.forEach(function (item, i) {\n      var at = items.length > 1 ? i / (items.length - 1) : 0;\n      item.classList.toggle('is-on', p > 0 && p >= at - 0.02);\n    });\n  }\n\n  function requestUpdate() {\n    if (!ticking) {\n      ticking = true;\n      window.requestAnimationFrame(update);\n    }\n  }\n\n  // as etapas vêm depois deste widget no HTML: começa quando a página terminar de carregar\n  function start() {\n    update();\n    window.addEventListener('scroll', requestUpdate, { passive: true });\n    window.addEventListener('resize', requestUpdate);\n  }\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start);\n  } else {\n    start();\n  }\n})();\n</script>",
+                "html": "<div class=\"un-steps-fill\"></div>\n<style>\n/* Colégio Unicultura | Diferenciais - 07 Projetos: linha das etapas.\n   Vai DENTRO do widget da linha (a seção funciona sozinha, sem depender do CSS do topo).\n   O un-projetos.js mede as bolinhas 01 e 03 e passa a posição da linha em variáveis\n   (--un-lx, --un-lr, --un-ly, --un-lb); --un-p (0 a 1) e .is-on controlam o preenchimento.\n   Sem JS (e no editor) a linha usa a posição padrão e fica tudo aceso. */\n\n.un-steps {\n  position: relative;\n}\n\n.un-steps > .un-step {\n  position: relative;\n  z-index: 1;\n}\n\n/* O widget da linha sai do fluxo e fica atrás das etapas, do centro da bolinha 01 ao da 03 */\nbody .un-steps > .elementor-element.un-steps-line {\n  position: absolute !important;\n  top: var(--un-ly, 37px);\n  left: var(--un-lx, 30px);\n  right: var(--un-lr, calc((100% - 48px) / 3 - 30px));\n  z-index: 0;\n  width: auto !important;\n  max-width: none !important;\n  height: 2px;\n  margin: 0 !important;\n  padding: 0 !important;\n  border-radius: 2px;\n  background: rgba(255, 255, 255, 0.14);\n  pointer-events: none;\n  grid-area: auto;\n}\n\n.un-steps-line .elementor-widget-container {\n  height: 100%;\n  margin: 0;\n  padding: 0;\n}\n\n.un-steps-fill {\n  width: 100%;\n  height: 100%;\n  border-radius: 2px;\n  background: linear-gradient(90deg, #F10505, #FFB867);\n  transform: scaleX(var(--un-p, 1));\n  transform-origin: 0 50%;\n  transition: transform 0.15s linear;\n}\n\n/* Etapas empilhadas (celular, ou se o layout mudar): a linha desce */\nbody .un-steps.un-steps--v > .elementor-element.un-steps-line {\n  top: var(--un-ly, 38px);\n  bottom: var(--un-lb, 30px);\n  right: auto;\n  width: 2px !important;\n  height: auto;\n}\n\n.un-steps--v .un-steps-fill {\n  background: linear-gradient(180deg, #F10505, #FFB867);\n  transform: scaleY(var(--un-p, 1));\n  transform-origin: 50% 0;\n}\n\n/* Sem JS: no celular a linha também desce */\n@media (max-width: 767px) {\n  body .un-steps:not(.un-steps--js) > .elementor-element.un-steps-line {\n    top: 38px;\n    bottom: 30px;\n    left: 29px;\n    right: auto;\n    width: 2px !important;\n    height: auto;\n  }\n}\n\n/* Bolinhas numeradas */\n.un-step .un-step-dot .elementor-heading-title {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 60px;\n  height: 60px;\n  border-radius: 50%;\n  background-color: #F10505;\n  box-shadow: 0 0 0 8px #010658, 0 0 0 9px rgba(241, 5, 5, 0.55), 0 0 28px rgba(241, 5, 5, 0.45);\n  transition: background-color 0.5s ease, box-shadow 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n\n.un-step .elementor-widget-heading:not(.un-step-dot) {\n  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n/* Etapa que a linha ainda não alcançou: apagada (.un-steps--js é posto pelo script) */\n.un-steps--js .un-step:not(.is-on) .un-step-dot .elementor-heading-title {\n  background-color: #1A1F6E;\n  box-shadow: 0 0 0 8px #010658, 0 0 0 9px rgba(255, 255, 255, 0.18);\n  transform: scale(0.82);\n}\n\n.un-steps--js .un-step:not(.is-on) .elementor-widget-heading:not(.un-step-dot) {\n  opacity: 0.3;\n  transform: translate3d(0, 10px, 0);\n}\n</style>\n<script>\n/* Colégio Unicultura | Diferenciais - 07 Projetos (CSS em un-projetos.css).\n   1. Mede as bolinhas numeradas e posiciona a linha do centro da primeira ao da última\n      (horizontal se estão lado a lado, vertical se estão empilhadas).\n   2. A linha (--un-p) se preenche enquanto as etapas sobem de 85% a 35% da tela e cada\n      etapa acende (.is-on) quando a linha chega nela. Volta ao rolar para cima.\n   Não roda no editor do Elementor nem com \"reduzir movimento\" (fica tudo aceso). */\n(function () {\n  var script = document.currentScript;\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {\n    return;\n  }\n  var block = script && script.closest('.un-steps');\n  if (!block || block.classList.contains('un-steps--js')) {\n    return;\n  }\n  block.classList.add('un-steps--js');\n  var ticking = false;\n\n  function dotCenter(step, box) {\n    var dot = step.querySelector('.un-step-dot .elementor-heading-title') || step;\n    var r = dot.getBoundingClientRect();\n    return { x: r.left + r.width / 2 - box.left, y: r.top + r.height / 2 - box.top };\n  }\n\n  function place() {\n    var items = block.querySelectorAll('.un-step');\n    if (items.length < 2) {\n      return;\n    }\n    var box = block.getBoundingClientRect();\n    var a = dotCenter(items[0], box);\n    var b = dotCenter(items[items.length - 1], box);\n    var vertical = Math.abs(b.y - a.y) > Math.abs(b.x - a.x);\n    block.classList.toggle('un-steps--v', vertical);\n    if (vertical) {\n      block.style.setProperty('--un-lx', (a.x - 1).toFixed(1) + 'px');\n      block.style.setProperty('--un-ly', a.y.toFixed(1) + 'px');\n      block.style.setProperty('--un-lb', (box.height - b.y).toFixed(1) + 'px');\n    } else {\n      block.style.setProperty('--un-lx', a.x.toFixed(1) + 'px');\n      block.style.setProperty('--un-lr', (box.width - b.x).toFixed(1) + 'px');\n      block.style.setProperty('--un-ly', (a.y - 1).toFixed(1) + 'px');\n    }\n  }\n\n  function update() {\n    ticking = false;\n    var vh = window.innerHeight;\n    var top = block.getBoundingClientRect().top;\n    var p = Math.max(0, Math.min(1, (vh * 0.85 - top) / (vh * 0.5)));\n    block.style.setProperty('--un-p', p.toFixed(3));\n    var items = block.querySelectorAll('.un-step');\n    items.forEach(function (item, i) {\n      var at = items.length > 1 ? i / (items.length - 1) : 0;\n      item.classList.toggle('is-on', p > 0 && p >= at - 0.02);\n    });\n  }\n\n  function requestUpdate() {\n    if (!ticking) {\n      ticking = true;\n      window.requestAnimationFrame(update);\n    }\n  }\n\n  // as etapas vêm depois deste widget no HTML: começa quando a página terminar de carregar\n  function start() {\n    place();\n    update();\n    window.addEventListener('scroll', requestUpdate, { passive: true });\n    window.addEventListener('resize', function () {\n      place();\n      requestUpdate();\n    });\n    window.addEventListener('load', place); // fontes carregadas mudam o tamanho das bolinhas\n  }\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start);\n  } else {\n    start();\n  }\n})();\n</script>",
                 "_css_classes": "un-steps-line"
               },
               "elements": []
@@ -6632,7 +6755,6 @@
                 },
                 "content_width": "full",
                 "flex_direction": "column",
-                "_flex_size": "grow",
                 "css_classes": "un-step"
               },
               "elements": [
@@ -6736,7 +6858,6 @@
                 },
                 "content_width": "full",
                 "flex_direction": "column",
-                "_flex_size": "grow",
                 "css_classes": "un-step"
               },
               "elements": [
@@ -6840,7 +6961,6 @@
                 },
                 "content_width": "full",
                 "flex_direction": "column",
-                "_flex_size": "grow",
                 "css_classes": "un-step"
               },
               "elements": [

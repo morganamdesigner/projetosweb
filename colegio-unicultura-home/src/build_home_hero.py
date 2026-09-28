@@ -75,6 +75,8 @@ def logos(color):
         "flex_align_items": "center",
         "flex_gap": gap(14),
         "flex_gap_mobile": gap(10),
+        # contêiner filho nasce com 100% de largura; com "none" ele não encolhe e empurra o menu
+        "width": {"unit": "custom", "size": "max-content", "sizes": []},
         "_flex_size": "none",
         "css_classes": "un-logos--color" if color else "un-logos--white",
     }, imgs)
