@@ -1,0 +1,2027 @@
+{
+  "content": [
+    {
+      "id": "72b7ebd2",
+      "settings": {
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "24",
+          "bottom": "0",
+          "left": "24",
+          "isLinked": false
+        },
+        "boxed_width": {
+          "unit": "px",
+          "size": 1480,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "0",
+          "right": "16",
+          "bottom": "0",
+          "left": "16",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "0",
+          "right": "12",
+          "bottom": "0",
+          "left": "12",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FDFDFF",
+        "css_classes": "gt-root un-top",
+        "__globals__": {
+          "background_color": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "79ab1426",
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "min_height": {
+              "unit": "px",
+              "size": 100,
+              "sizes": []
+            },
+            "min_height_mobile": {
+              "unit": "px",
+              "size": 72,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "z_index": 20,
+            "css_classes": "un-header-wrap"
+          },
+          "elements": [
+            {
+              "id": "258b77ca",
+              "settings": {
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "20",
+                  "bottom": "0",
+                  "left": "44",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "html_tag": "header",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "min_height": {
+                  "unit": "px",
+                  "size": 100,
+                  "sizes": []
+                },
+                "min_height_mobile": {
+                  "unit": "px",
+                  "size": 72,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_align_items": "center",
+                "flex_justify_content": "space-between",
+                "flex_wrap_mobile": "nowrap",
+                "padding_tablet": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "12",
+                  "bottom": "0",
+                  "left": "20",
+                  "isLinked": false
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "4",
+                  "bottom": "0",
+                  "left": "4",
+                  "isLinked": false
+                },
+                "css_classes": "un-header"
+              },
+              "elements": [
+                {
+                  "id": "5c906397",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "_flex_size": "none",
+                    "css_classes": "un-logos--color",
+                    "width": {
+                      "unit": "%",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "width_mobile": {
+                      "unit": "px",
+                      "size": 200,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "7ff1676a",
+                      "settings": {
+                        "image": {
+                          "id": "812",
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-unicultura-svg-1-1.svg"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 104,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 82,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "48514e10",
+                      "settings": {
+                        "image": {
+                          "id": "813",
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-garatuha-1.webp"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 80,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 62,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "287aa12a",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "_flex_size": "none",
+                    "css_classes": "un-logos--white",
+                    "width": {
+                      "unit": "%",
+                      "size": 20,
+                      "sizes": []
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "617e6d27",
+                      "settings": {
+                        "image": {
+                          "id": "814",
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-branca-uni-1.svg"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 84,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 70,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "7c95eb2c",
+                      "settings": {
+                        "image": {
+                          "id": "815",
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-garatuja-branca-1.webp"
+                        },
+                        "image_size": "full",
+                        "align": "left",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 70,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 58,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "722cc37d",
+                  "settings": {
+                    "menu_name": "Menu",
+                    "menu": "menu",
+                    "menu_typography_typography": "custom",
+                    "menu_typography_font_family": "Hanken Grotesk",
+                    "menu_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "menu_typography_font_weight": "500",
+                    "color_menu_item": "#1C1F4F",
+                    "color_menu_item_hover": "#F10505",
+                    "pointer_color_menu_item_hover": "#F10505",
+                    "padding_horizontal_menu_item": {
+                      "unit": "px",
+                      "size": 9,
+                      "sizes": []
+                    },
+                    "_element_width_mobile": "initial",
+                    "_flex_align_self_mobile": "center",
+                    "color_dropdown_item_hover": "#010658",
+                    "background_color_dropdown_item_hover": "#F0F2FA",
+                    "dropdown_typography_typography": "custom",
+                    "dropdown_typography_font_family": "Hanken Grotesk",
+                    "dropdown_typography_font_weight": "500",
+                    "menu_id": 3,
+                    "pointer": "none",
+                    "align_items": "center",
+                    "color_menu_item_active": "#1C1F4F",
+                    "toggle_color": "#010658",
+                    "toggle_background_color": "#F0F2FA",
+                    "_flex_size": "grow",
+                    "full_width": "stretch"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "nav-menu",
+                  "elType": "widget"
+                },
+                {
+                  "id": "78adafe",
+                  "settings": {
+                    "social_icon_list": [
+                      {
+                        "_id": "44f9976",
+                        "social_icon": {
+                          "value": "fab fa-facebook-f",
+                          "library": "fa-brands"
+                        }
+                      },
+                      {
+                        "_id": "a698212",
+                        "social_icon": {
+                          "value": "fab fa-instagram",
+                          "library": "fa-brands"
+                        }
+                      }
+                    ],
+                    "shape": "circle",
+                    "icon_color": "custom",
+                    "icon_primary_color": "rgba(255, 255, 255, 0)",
+                    "icon_secondary_color": "#1C1F4F",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "icon_padding": {
+                      "unit": "em",
+                      "size": 0.95,
+                      "sizes": []
+                    },
+                    "icon_spacing": {
+                      "unit": "px",
+                      "size": 10,
+                      "sizes": []
+                    },
+                    "image_border_border": "solid",
+                    "image_border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "image_border_color": "#D7D8E5",
+                    "hover_primary_color": "#F10505",
+                    "hover_secondary_color": "#FFFFFF",
+                    "_flex_size": "none",
+                    "hide_mobile": "hidden-mobile",
+                    "__globals__": {
+                      "icon_color": "",
+                      "icon_primary_color": "",
+                      "icon_secondary_color": "",
+                      "image_border_color": "",
+                      "hover_primary_color": "",
+                      "hover_secondary_color": ""
+                    }
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "social-icons",
+                  "elType": "widget"
+                },
+                {
+                  "id": "3dde0150",
+                  "settings": {
+                    "text": "Agendar visita",
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "align": "left",
+                    "size": "md",
+                    "button_text_color": "#FFFFFF",
+                    "hover_color": "#FFFFFF",
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "12",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "999",
+                      "right": "999",
+                      "bottom": "999",
+                      "left": "999",
+                      "isLinked": true
+                    },
+                    "background_color": "#010658",
+                    "button_background_hover_color": "#010658",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-arrow-right",
+                      "library": "fa-solid"
+                    },
+                    "icon_align": "right",
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "_css_classes": "un-btn-arrow",
+                    "_flex_size": "none",
+                    "hide_mobile": "hidden-mobile",
+                    "__globals__": {
+                      "button_text_color": "",
+                      "hover_color": "",
+                      "background_color": "",
+                      "button_background_hover_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "button",
+                  "elType": "widget"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "24bafc09",
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "138",
+              "right": "88",
+              "bottom": "0",
+              "left": "88",
+              "isLinked": false
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "px",
+              "size": 768,
+              "sizes": []
+            },
+            "min_height_tablet": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            },
+            "min_height_mobile": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "space-between",
+            "padding_tablet": {
+              "unit": "px",
+              "top": "64",
+              "right": "48",
+              "bottom": "0",
+              "left": "48",
+              "isLinked": false
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "24",
+              "right": "22",
+              "bottom": "0",
+              "left": "22",
+              "isLinked": false
+            },
+            "overflow": "hidden",
+            "border_radius": {
+              "unit": "px",
+              "top": "40",
+              "right": "40",
+              "bottom": "40",
+              "left": "40",
+              "isLinked": true
+            },
+            "border_radius_mobile": {
+              "unit": "px",
+              "top": "28",
+              "right": "28",
+              "bottom": "28",
+              "left": "28",
+              "isLinked": true
+            },
+            "background_background": "classic",
+            "background_color": "#0D1261",
+            "css_classes": "un-hero",
+            "__globals__": {
+              "background_color": "",
+              "background_overlay_color": "",
+              "background_overlay_color_b": ""
+            }
+          },
+          "elements": [
+            {
+              "id": "67caa51",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"un-story\" aria-hidden=\"true\"><div class=\"un-story-img un-story-img--a\" style=\"background-image:url('https://colegiounicultura.com.br/wp-content/uploads/2026/09/bg_1_garatuja-uni.webp')\"></div><div class=\"un-story-img un-story-img--b\" style=\"background-image:url('https://colegiounicultura.com.br/wp-content/uploads/2026/09/bg_1_unicultura-novo.webp')\"></div><div class=\"un-story-shade\"></div><div class=\"un-story-line\"><span class=\"un-story-handle\">‹›</span></div><div class=\"un-story-time\"><span class=\"un-t-a\">1º dia de aula</span><span class=\"un-story-bar\"><i></i></span><span class=\"un-t-b\">Formatura</span></div></div>\n<style>\n/* Colégio Unicultura | Home - hero \"do primeiro dia à formatura\" (JS em un-story.js)\n   Vai DENTRO do widget HTML da história, no cartão azul do hero (funciona sozinho).\n   --x (onde está a linha, em % da largura) e --p (0 = primeiro dia, 1 = formatura) vêm do JS. */\n\n/* O widget ocupa o cartão inteiro, atrás do conteúdo */\nbody .un-hero > .elementor-element.un-story-wrap {\n  position: absolute !important;\n  inset: 0;\n  z-index: 0;\n  width: auto !important;\n  max-width: none !important;\n  margin: 0 !important;\n}\n\n.un-story-wrap .elementor-widget-container {\n  height: 100%;\n}\n\n.un-hero > .e-con {\n  position: relative;\n  z-index: 1;\n}\n\n.un-story {\n  --x: 100%;\n  --p: 0;\n  position: absolute;\n  inset: 0;\n  overflow: hidden;\n  background: #0D1261;\n}\n\n/* As duas fotos, uma sobre a outra; a formatura é \"recortada\" a partir da linha */\n.un-story-img {\n  position: absolute;\n  inset: 0;\n  background-position: center right;\n  background-repeat: no-repeat;\n  background-size: cover;\n  animation: un-story-zoom 16s ease-in-out infinite alternate;\n}\n\n.un-story-img--b {\n  clip-path: inset(0 0 0 var(--x));\n  animation-delay: -8s;\n}\n\n@keyframes un-story-zoom {\n  from { transform: scale(1.06); }\n  to   { transform: scale(1); }\n}\n\n/* Azul sólido à esquerda (atrás do texto) dissolvendo na foto */\n.un-story-shade {\n  position: absolute;\n  inset: 0;\n  background:\n    linear-gradient(0deg, rgba(13, 18, 97, 0.9) 0, rgba(13, 18, 97, 0) 26%),  /* base: faixa de segmentos legível */\n    linear-gradient(90deg, #0D1261 20%, rgba(13, 18, 97, 0.85) 32%, rgba(13, 18, 97, 0) 52%);\n  pointer-events: none;\n}\n\n/* Linha de luz na borda do recorte */\n.un-story-line {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: var(--x);\n  width: 3px;\n  margin-left: -1.5px;\n  background: linear-gradient(180deg, rgba(255, 184, 103, 0), #FFB867 20%, #F10505 80%, rgba(241, 5, 5, 0));\n  box-shadow: 0 0 24px 6px rgba(241, 5, 5, 0.45);\n  opacity: var(--lo, 1);\n  pointer-events: none;\n}\n\n.un-story-handle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 46px;\n  height: 46px;\n  border-radius: 50%;\n  background: #FFFFFF;\n  color: #010658;\n  font: 800 18px/1 \"Hanken Grotesk\", sans-serif;\n  letter-spacing: 2px;\n  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);\n  transform: translate(-50%, -50%);\n}\n\n/* Selo \"1º dia de aula ●━━● Formatura\" */\n.un-story-time {\n  position: absolute;\n  right: 40px;\n  bottom: 150px;\n  display: flex;\n  align-items: center;\n  gap: 12px;\n  padding: 12px 18px;\n  border: 1px solid rgba(255, 255, 255, 0.22);\n  border-radius: 999px;\n  background: rgba(1, 6, 88, 0.55);\n  -webkit-backdrop-filter: blur(10px);\n  backdrop-filter: blur(10px);\n  color: rgba(255, 255, 255, 0.55);\n  font: 700 13px/1 \"Hanken Grotesk\", sans-serif;\n  letter-spacing: 0.04em;\n  text-transform: uppercase;\n  pointer-events: none;\n}\n\n.un-story-time span {\n  transition: color 0.4s ease;\n}\n\n.un-story-bar {\n  position: relative;\n  width: 90px;\n  height: 4px;\n  border-radius: 4px;\n  background: rgba(255, 255, 255, 0.2);\n}\n\n.un-story-bar i {\n  position: absolute;\n  inset: 0;\n  border-radius: 4px;\n  background: linear-gradient(90deg, #FFB867, #F10505);\n  transform: scaleX(var(--p));\n  transform-origin: 0 50%;\n}\n\n.un-story-bar::before,\n.un-story-bar::after {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  width: 10px;\n  height: 10px;\n  margin-top: -5px;\n  border-radius: 50%;\n  background: #FFB867;\n}\n\n.un-story-bar::before { left: -5px; }\n.un-story-bar::after  { right: -5px; background: #F10505; }\n\n.un-hero:not(.is-future) .un-story-time .un-t-a,\n.un-hero.is-future .un-story-time .un-t-b {\n  color: #FFFFFF;\n}\n\n/* Título: o trecho da foto atual fica destacado */\n.un-hero .un-hl {\n  background: linear-gradient(transparent 64%, rgba(255, 184, 103, 0.35) 64%) no-repeat 0 0 / 0% 100%;\n  transition: background-size 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.4s ease;\n}\n\n.un-hero:not(.is-future) .un-hl--a,\n.un-hero.is-future .un-hl--b {\n  color: #FFB867;\n  background-size: 100% 100%;\n}\n\n/* Celular: foto no topo do cartão, dissolvendo no azul para baixo */\n@media (max-width: 767px) {\n  .un-story-img {\n    background-size: 230% auto;\n    background-position: 88% 0;\n  }\n\n  .un-story-shade {\n    background: linear-gradient(0deg, #0D1261 48%, rgba(13, 18, 97, 0.6) 58%, rgba(13, 18, 97, 0) 74%);\n  }\n\n  .un-story-line {\n    bottom: auto;\n    height: 64vw;\n  }\n\n  .un-story-handle {\n    width: 34px;\n    height: 34px;\n    font-size: 14px;\n  }\n\n  .un-story-time {\n    top: calc(62vw - 52px);\n    right: 50%;\n    bottom: auto;\n    transform: translateX(50%);\n    padding: 9px 14px;\n    font-size: 11px;\n    white-space: nowrap;\n  }\n\n  .un-story-bar {\n    width: 56px;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-story-img {\n    animation: none;\n  }\n}\n</style>\n<script>\n/* Colégio Unicultura | Home - hero \"do primeiro dia à formatura\" (CSS em un-story.css).\n   Ciclo automático: primeiro dia (parado) -> a linha atravessa a foto revelando a formatura\n   -> formatura (parada) -> volta. No computador, com o mouse sobre a foto, a posição do mouse\n   controla a linha; ao sair, o ciclo continua.\n   No editor do Elementor fica parado no \"primeiro dia\"; com \"reduzir movimento\", sem ciclo. */\n(function () {\n  var script = document.currentScript;\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  var card = script && script.closest('.un-hero');\n  var story = card && card.querySelector('.un-story');\n  if (!story) {\n    return;\n  }\n  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var canHover = window.matchMedia('(hover: hover) and (min-width: 1025px)').matches;\n\n  var HOLD = 3600;  // ms parado em cada foto\n  var MOVE = 1700;  // ms da linha atravessando\n  var CYCLE = 2 * (HOLD + MOVE);\n\n  function ease(t) {\n    return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;\n  }\n\n  function setP(p) {\n    // a linha vai de 100% (direita) até -5% (a formatura cobre tudo)\n    var x = 100 - p * 105;\n    var lineOpacity = Math.max(0, Math.min(1, (x - 30) / 12)) * Math.min(1, (100 - x) / 4);\n    story.style.setProperty('--x', x.toFixed(2) + '%');\n    story.style.setProperty('--p', p.toFixed(3));\n    story.style.setProperty('--lo', lineOpacity.toFixed(3));\n    card.style.setProperty('--p', p.toFixed(3));\n    card.classList.toggle('is-future', p > 0.5);\n  }\n\n  function auto(t) {\n    var k = t % CYCLE;\n    if (k < HOLD) {\n      return 0;\n    }\n    if (k < HOLD + MOVE) {\n      return ease((k - HOLD) / MOVE);\n    }\n    if (k < 2 * HOLD + MOVE) {\n      return 1;\n    }\n    return 1 - ease((k - 2 * HOLD - MOVE) / MOVE);\n  }\n\n  setP(0);\n  if (reduceMotion) {\n    return;\n  }\n\n  var manual = null;   // p controlado pelo mouse (null = automático)\n  var shown = 0;       // p mostrado (suavizado)\n  var clock = 0;\n  var last = null;\n\n  function frame(now) {\n    var dt = last === null ? 0 : Math.min(64, now - last);\n    last = now;\n    if (manual === null) {\n      clock += dt;\n      shown = auto(clock);\n    } else {\n      shown += (manual - shown) * 0.18;\n    }\n    setP(shown);\n    window.requestAnimationFrame(frame);\n  }\n  window.requestAnimationFrame(frame);\n\n  if (canHover) {\n    card.addEventListener('pointermove', function (e) {\n      var r = card.getBoundingClientRect();\n      var xPct = ((e.clientX - r.left) / r.width) * 100;\n      if (xPct < 45) {        // sobre o texto: deixa o ciclo seguir\n        manual = null;\n        return;\n      }\n      manual = Math.max(0, Math.min(1, (100 - xPct) / 55));\n    });\n    card.addEventListener('pointerleave', function () {\n      if (manual !== null) {\n        // continua o ciclo a partir de onde o mouse deixou\n        clock = manual > 0.5 ? HOLD + MOVE : 0;\n      }\n      manual = null;\n    });\n  }\n})();\n</script>",
+                "_css_classes": "un-story-wrap"
+              },
+              "elements": []
+            },
+            {
+              "id": "70657ca7",
+              "settings": {
+                "flex_gap": {
+                  "column": "26",
+                  "row": "26",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 26
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "width": {
+                  "unit": "px",
+                  "size": 600,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "flex_gap_mobile": {
+                  "column": "18",
+                  "row": "18",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 18
+                },
+                "margin_mobile": {
+                  "unit": "vw",
+                  "top": "62",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": [
+                {
+                  "id": "21634ab6",
+                  "settings": {
+                    "title": "EDUCAÇÃO INFANTIL AO ENSINO MÉDIO",
+                    "align": "center",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Poppins",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 9,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "title_color": "#FFFFFF",
+                    "_padding": {
+                      "unit": "px",
+                      "top": "5",
+                      "right": "13",
+                      "bottom": "5",
+                      "left": "25",
+                      "isLinked": false
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "custom_css": "selector{\n    border-radius: 794.984px;\nbackground: #F20505;\ndisplay: flex;\nalign-content: center;\nalign-items: center;\n}",
+                    "align_widescreen": "",
+                    "align_laptop": "",
+                    "typography_font_size_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_font_size_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_line_height_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_line_height_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_letter_spacing_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_letter_spacing_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_word_spacing_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "typography_word_spacing_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "text_stroke_text_stroke_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "text_stroke_text_stroke_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_margin_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_margin_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_padding_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_padding_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_element_width_widescreen": "",
+                    "_element_width_laptop": "",
+                    "_element_custom_width_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_element_custom_width_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_grid_column_widescreen": "",
+                    "_grid_column_laptop": "",
+                    "_grid_column_custom_widescreen": "",
+                    "_grid_column_custom_laptop": "",
+                    "_grid_row_widescreen": "",
+                    "_grid_row_laptop": "",
+                    "_grid_row_custom_widescreen": "",
+                    "_grid_row_custom_laptop": "",
+                    "_flex_align_self_widescreen": "",
+                    "_flex_align_self_laptop": "",
+                    "_flex_order_widescreen": "",
+                    "_flex_order_laptop": "",
+                    "_flex_order_custom_widescreen": "",
+                    "_flex_order_custom_laptop": "",
+                    "_flex_size_widescreen": "",
+                    "_flex_size_laptop": "",
+                    "_flex_grow_widescreen": "",
+                    "_flex_grow_laptop": "",
+                    "_flex_shrink_widescreen": "",
+                    "_flex_shrink_laptop": "",
+                    "_element_vertical_align_widescreen": "",
+                    "_element_vertical_align_laptop": "",
+                    "_offset_x_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_x_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_x_end_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_x_end_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_y_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_y_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_y_end_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_offset_y_end_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_z_index_widescreen": "",
+                    "_z_index_laptop": "",
+                    "motion_fx_devices": [
+                      "widescreen",
+                      "desktop",
+                      "laptop",
+                      "tablet",
+                      "mobile"
+                    ],
+                    "sticky_on": [
+                      "widescreen",
+                      "desktop",
+                      "laptop",
+                      "tablet",
+                      "mobile"
+                    ],
+                    "sticky_offset_widescreen": "",
+                    "sticky_offset_laptop": "",
+                    "sticky_effects_offset_widescreen": "",
+                    "sticky_effects_offset_laptop": "",
+                    "sticky_anchor_link_offset_widescreen": "",
+                    "sticky_anchor_link_offset_laptop": "",
+                    "_animation_widescreen": "",
+                    "_animation_laptop": "",
+                    "_transform_rotateZ_effect_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateZ_effect_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateX_effect_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateX_effect_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateY_effect_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateY_effect_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_perspective_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_perspective_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateX_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateX_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateY_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateY_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scale_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scale_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleX_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleX_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleY_effect_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleY_effect_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewX_effect_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewX_effect_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewY_effect_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewY_effect_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateZ_effect_hover_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateZ_effect_hover_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateX_effect_hover_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateX_effect_hover_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateY_effect_hover_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_rotateY_effect_hover_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_perspective_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_perspective_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateX_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateX_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateY_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_translateY_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scale_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scale_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleX_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleX_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleY_effect_hover_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_scaleY_effect_hover_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewX_effect_hover_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewX_effect_hover_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewY_effect_hover_widescreen": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_transform_skewY_effect_hover_laptop": {
+                      "unit": "deg",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "motion_fx_transform_x_anchor_point_widescreen": "",
+                    "motion_fx_transform_x_anchor_point_laptop": "",
+                    "motion_fx_transform_y_anchor_point_widescreen": "",
+                    "motion_fx_transform_y_anchor_point_laptop": "",
+                    "_background_color_stop_widescreen": {
+                      "unit": "%"
+                    },
+                    "_background_color_stop_laptop": {
+                      "unit": "%"
+                    },
+                    "_background_color_b_stop_widescreen": {
+                      "unit": "%"
+                    },
+                    "_background_color_b_stop_laptop": {
+                      "unit": "%"
+                    },
+                    "_background_gradient_angle_widescreen": {
+                      "unit": "deg"
+                    },
+                    "_background_gradient_angle_laptop": {
+                      "unit": "deg"
+                    },
+                    "_background_gradient_position_widescreen": "",
+                    "_background_gradient_position_laptop": "",
+                    "_background_image_widescreen": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_background_image_laptop": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_background_position_widescreen": "",
+                    "_background_position_laptop": "",
+                    "_background_xpos_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_xpos_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_ypos_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_ypos_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_repeat_widescreen": "",
+                    "_background_repeat_laptop": "",
+                    "_background_size_widescreen": "",
+                    "_background_size_laptop": "",
+                    "_background_bg_width_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_bg_width_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_slideshow_background_size_widescreen": "",
+                    "_background_slideshow_background_size_laptop": "",
+                    "_background_slideshow_background_position_widescreen": "",
+                    "_background_slideshow_background_position_laptop": "",
+                    "_background_hover_color_stop_widescreen": {
+                      "unit": "%"
+                    },
+                    "_background_hover_color_stop_laptop": {
+                      "unit": "%"
+                    },
+                    "_background_hover_color_b_stop_widescreen": {
+                      "unit": "%"
+                    },
+                    "_background_hover_color_b_stop_laptop": {
+                      "unit": "%"
+                    },
+                    "_background_hover_gradient_angle_widescreen": {
+                      "unit": "deg"
+                    },
+                    "_background_hover_gradient_angle_laptop": {
+                      "unit": "deg"
+                    },
+                    "_background_hover_gradient_position_widescreen": "",
+                    "_background_hover_gradient_position_laptop": "",
+                    "_background_hover_image_widescreen": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_background_hover_image_laptop": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_background_hover_position_widescreen": "",
+                    "_background_hover_position_laptop": "",
+                    "_background_hover_xpos_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_xpos_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_ypos_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_ypos_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_repeat_widescreen": "",
+                    "_background_hover_repeat_laptop": "",
+                    "_background_hover_size_widescreen": "",
+                    "_background_hover_size_laptop": "",
+                    "_background_hover_bg_width_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_bg_width_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_background_hover_slideshow_background_size_widescreen": "",
+                    "_background_hover_slideshow_background_size_laptop": "",
+                    "_background_hover_slideshow_background_position_widescreen": "",
+                    "_background_hover_slideshow_background_position_laptop": "",
+                    "_border_width_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_width_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_radius_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_radius_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_hover_width_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_hover_width_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_radius_hover_widescreen": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_border_radius_hover_laptop": {
+                      "unit": "px",
+                      "top": "",
+                      "right": "",
+                      "bottom": "",
+                      "left": "",
+                      "isLinked": true
+                    },
+                    "_mask_image_widescreen": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_mask_image_laptop": {
+                      "url": "",
+                      "id": "",
+                      "size": ""
+                    },
+                    "_mask_size_widescreen": "",
+                    "_mask_size_laptop": "",
+                    "_mask_size_scale_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_size_scale_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_position_widescreen": "",
+                    "_mask_position_laptop": "",
+                    "_mask_position_x_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_position_x_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_position_y_widescreen": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_position_y_laptop": {
+                      "unit": "px",
+                      "size": "",
+                      "sizes": []
+                    },
+                    "_mask_repeat_widescreen": "",
+                    "_mask_repeat_laptop": "",
+                    "hide_widescreen": "",
+                    "hide_laptop": "",
+                    "align_mobile": "start",
+                    "_padding_mobile": {
+                      "unit": "px",
+                      "top": "5",
+                      "right": "15",
+                      "bottom": "5",
+                      "left": "15",
+                      "isLinked": false
+                    },
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "px",
+                      "size": 233,
+                      "sizes": []
+                    },
+                    "header_size": "p",
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "elType": "widget"
+                },
+                {
+                  "id": "71d0d534",
+                  "settings": {
+                    "title": "Do <span class=\"un-hl un-hl--a\">primeiro dia de aula</span> à <span class=\"un-hl un-hl--b\">formatura</span>, aqui começa a <strong>trajetória</strong> do seu filho.",
+                    "header_size": "h1",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 53,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.1,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "em",
+                      "size": -0.05,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 54,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_line_height_tablet": {
+                      "unit": "px",
+                      "size": 56,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "em",
+                      "size": 1.1,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing_mobile": {
+                      "unit": "em",
+                      "size": -0.04,
+                      "sizes": []
+                    },
+                    "_element_width": "initial",
+                    "_element_custom_width": {
+                      "unit": "px",
+                      "size": 475,
+                      "sizes": []
+                    },
+                    "_element_custom_width_tablet": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 120,
+                    "typography_letter_spacing_tablet": {
+                      "unit": "em",
+                      "size": "",
+                      "sizes": []
+                    }
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "elType": "widget"
+                },
+                {
+                  "id": "59e9661c",
+                  "settings": {
+                    "editor": "<p>Acompanhamos cada fase com acolhimento, intencionalidade pedagógica e excelência acadêmica.</p>",
+                    "align": "left",
+                    "text_color": "rgba(255, 255, 255, 0.85)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 19,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 25,
+                      "sizes": []
+                    },
+                    "_element_width": "initial",
+                    "_element_custom_width": {
+                      "unit": "px",
+                      "size": 470,
+                      "sizes": []
+                    },
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 240
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "elType": "widget"
+                },
+                {
+                  "id": "33546af2",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "28",
+                      "row": "28",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 28
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "5",
+                      "row": "5",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 5
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "animation_delay": 360
+                  },
+                  "elements": [
+                    {
+                      "id": "a069fc5",
+                      "settings": {
+                        "text": "Agendar visita",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#1C1F4F",
+                        "hover_color": "#1C1F4F",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "14",
+                          "right": "14",
+                          "bottom": "14",
+                          "left": "28",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_color": "#FFFFFF",
+                        "button_background_hover_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 24,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "button_box_shadow_box_shadow_type": "yes",
+                        "button_box_shadow_box_shadow": {
+                          "horizontal": 0,
+                          "vertical": 8,
+                          "blur": 24,
+                          "spread": 0,
+                          "color": "rgba(241, 5, 5, 0.25)"
+                        },
+                        "selected_icon": {
+                          "value": "fas fa-arrow-right",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "icon_indent": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-btn-arrow",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "button",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "3229fc5b",
+                      "settings": {
+                        "text": "Conhecer a proposta",
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "14",
+                          "right": "8",
+                          "bottom": "14",
+                          "left": "8",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_color": "rgba(255, 255, 255, 0)",
+                        "button_background_hover_color": "rgba(255, 255, 255, 0)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 24,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-btn-link",
+                        "selected_icon": {
+                          "value": "fas fa-arrow-down",
+                          "library": "fa-solid"
+                        },
+                        "icon_align": "right",
+                        "icon_indent": {
+                          "unit": "px",
+                          "size": 10,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "button",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "24c2b27c",
+              "settings": {
+                "flex_gap": {
+                  "column": "24",
+                  "row": "24",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 24
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "34",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_justify_content": "space-between",
+                "flex_align_items": "center",
+                "flex_align_items_mobile": "flex-start",
+                "flex_gap_mobile": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "0",
+                  "bottom": "26",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "64",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "margin_mobile": {
+                  "unit": "px",
+                  "top": "40",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_color": "rgba(255, 255, 255, 0.16)",
+                "__globals__": {
+                  "border_color": ""
+                },
+                "animation": "fadeIn",
+                "animation_duration": "fast",
+                "animation_delay": 500
+              },
+              "elements": [
+                {
+                  "id": "4a39343e",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap_mobile": "nowrap",
+                    "flex_align_items": "center"
+                  },
+                  "elements": [
+                    {
+                      "id": "ee7fcf2",
+                      "settings": {
+                        "title": "★★★★★",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#FFB867",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 3,
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "6fe0d6bd",
+                      "settings": {
+                        "title": "<strong style=\"font-weight:700;color:#FFFFFF\">+1.200 famílias</strong> confiam na nossa escola",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "rgba(255, 255, 255, 0.8)",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-count",
+                        "_attributes": "data-delay|700",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "32b82985",
+                  "settings": {
+                    "view": "inline",
+                    "icon_list": [
+                      {
+                        "_id": "fc89bad",
+                        "text": "Educação Infantil",
+                        "selected_icon": {
+                          "value": "fas fa-circle",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "395b986",
+                        "text": "Fundamental I",
+                        "selected_icon": {
+                          "value": "fas fa-circle",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "8fff442",
+                        "text": "Fundamental II",
+                        "selected_icon": {
+                          "value": "fas fa-circle",
+                          "library": "fa-solid"
+                        }
+                      },
+                      {
+                        "_id": "19b57d9",
+                        "text": "Ensino Médio",
+                        "selected_icon": {
+                          "value": "fas fa-circle",
+                          "library": "fa-solid"
+                        }
+                      }
+                    ],
+                    "space_between": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "text_color": "#FFFFFF",
+                    "text_color_hover": "#FFB867",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 6,
+                      "sizes": []
+                    },
+                    "text_indent": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "icon_color": "#F10505",
+                    "icon_color_hover": "#F10505",
+                    "icon_typography_typography": "custom",
+                    "icon_typography_font_family": "Hanken Grotesk",
+                    "icon_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "icon_typography_font_weight": "600",
+                    "icon_typography_line_height": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "icon_typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "_css_classes": "un-segments",
+                    "space_between_mobile": {
+                      "unit": "px",
+                      "size": 10,
+                      "sizes": []
+                    },
+                    "text_indent_mobile": {
+                      "unit": "px",
+                      "size": 10,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "icon_color": "",
+                      "icon_typography_typography": ""
+                    },
+                    "_element_width": "inherit",
+                    "hide_mobile": "hidden-mobile"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "icon-list",
+                  "elType": "widget"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "6891b00d",
+          "settings": {
+            "html": "<style>\n/* ==========================================================================\n   Colégio Unicultura | Home - CSS da página (hero v2 + efeitos gerais)\n   Vai embutido no widget HTML do bloco do hero. Classes: un-*, gt-root, gt-scrolled.\n   ========================================================================== */\n\n/* Parágrafos do Text Editor sem margem extra no último item */\n.gt-root .elementor-widget-text-editor p:last-child {\n  margin-bottom: 0;\n}\n\n\n/* --------------------------------------------------------------------------\n   ANIMAÇÕES\n   -------------------------------------------------------------------------- */\n\n/* Entradas mais suaves: as animações nativas do Elementor deslocam 100% da\n   altura do elemento (ex.: 812px numa foto). Aqui o deslocamento é de 32px. */\n.gt-root .animated {\n  animation-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.gt-root .fadeInUp {\n  animation-name: gt-fade-in-up;\n}\n\n.gt-root .fadeInLeft {\n  animation-name: gt-fade-in-left;\n}\n\n.gt-root .zoomIn {\n  animation-name: gt-zoom-in;\n}\n\n@keyframes gt-fade-in-up {\n  from { opacity: 0; transform: translate3d(0, 32px, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-fade-in-left {\n  from { opacity: 0; transform: translate3d(-32px, 0, 0); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes gt-zoom-in {\n  from { opacity: 0; transform: scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n\n\n/* --------------------------------------------------------------------------\n   HOVERS\n   -------------------------------------------------------------------------- */\n\n/* Fotos: zoom suave no hover (Duas escolas) */\n.un-zoom {\n  overflow: hidden;\n}\n\n.un-zoom img {\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.un-zoom:hover img {\n  transform: scale(1.05);\n}\n\n/* Movimento reduzido: o Elementor já desliga as entradas; aqui desligamos o resto */\n@media (prefers-reduced-motion: reduce) {\n  .gt-top.gt-scrolled .gt-hero .gt-navbar,\n  .gt-top.gt-scrolled .gt-navbar-logos {\n    animation: none;\n  }\n\n  .un-zoom:hover img {\n    transform: none;\n  }\n}\n\n\n/* --------------------------------------------------------------------------\n   SCROLL E ANIMAÇÕES EXTRAS\n   -------------------------------------------------------------------------- */\n\n/* Barra de progresso de leitura (criada pelo un-home.js) */\n.un-progress {\n  position: fixed;\n  top: 0;\n  left: 0;\n  z-index: 10000;\n  width: 100%;\n  height: 3px;\n  background: linear-gradient(90deg, #F10505, #FF5A36);\n  transform: scaleX(0);\n  transform-origin: 0 50%;\n  pointer-events: none;\n}\n\nbody.admin-bar .un-progress {\n  top: 32px;\n}\n\n@media (max-width: 782px) {\n  body.admin-bar .un-progress {\n    top: 46px;\n  }\n}\n\n/* Títulos das seções: \"cortina\" da esquerda para a direita ao entrar na tela */\n.un-reveal.animated .elementor-heading-title {\n  animation: un-reveal 1s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n@keyframes un-reveal {\n  from { clip-path: inset(0 100% 0 0); transform: translateX(-12px); }\n  to   { clip-path: inset(0 0 0 0); transform: none; }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-reveal.animated .elementor-heading-title {\n    animation: none;\n  }\n}\n\n\n/* --------------------------------------------------------------------------\n   CABEÇALHO (fora do cartão)\n   -------------------------------------------------------------------------- */\n\n/* Ponto vermelho sob o item ativo do menu (pointer do widget = nenhum) */\n.un-header .elementor-nav-menu--main .elementor-item {\n  position: relative;\n}\n\n.un-header .elementor-nav-menu--main .elementor-item.elementor-item-active::after {\n  content: \"\";\n  position: absolute;\n  left: 50%;\n  bottom: -2px;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background-color: #F10505;\n  transform: translateX(-50%);\n}\n\n/* Logos brancos: só no cabeçalho flutuante (ao rolar) */\n.un-header .un-logos--white {\n  display: none;\n}\n\n/* Botões com seta em círculo vermelho (gira no hover) */\n.un-btn-arrow .elementor-button-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  flex-shrink: 0;\n  width: 30px;\n  height: 30px;\n  border-radius: 50%;\n  background-color: #F10505;\n  color: #FFFFFF;\n  fill: #FFFFFF;\n  font-size: 12px;\n  transition: transform 0.4s ease;\n}\n\n.un-btn-arrow .elementor-button-icon svg {\n  width: 1em;\n  height: 1em;\n  fill: currentColor;\n}\n\n.un-btn-arrow .elementor-button-icon i,\n.un-btn-arrow .elementor-button-icon svg {\n  transform: rotate(-45deg);\n}\n\n.un-btn-arrow .elementor-button:hover .elementor-button-icon {\n  transform: rotate(45deg);\n}\n\n/* Link \"Conhecer a proposta ↓\": a seta desce no hover */\n.un-btn-link .elementor-button-icon {\n  transition: transform 0.3s ease;\n}\n\n.un-btn-link .elementor-button:hover .elementor-button-icon {\n  transform: translateY(3px);\n}\n\n/* --------------------------------------------------------------------------\n   CABEÇALHO FLUTUANTE ao rolar (desktop e tablet)\n   O un-home.js adiciona .gt-scrolled ao .un-top depois de 40px de scroll.\n   O .un-header-wrap guarda a altura do cabeçalho, então nada \"pula\".\n   -------------------------------------------------------------------------- */\n@media (min-width: 768px) {\n  body .un-top.gt-scrolled .un-header.un-header {\n    position: fixed;\n    top: 20px;\n    left: 50%;\n    z-index: 999;\n    width: min(1240px, calc(100% - 48px));\n    min-height: 68px;\n    transform: translateX(-50%);\n    --padding-top: 8px;\n    --padding-right: 10px;\n    --padding-bottom: 8px;\n    --padding-left: 28px;\n    border-radius: 999px;\n    background-color: rgba(1, 6, 88, 0.94);\n    -webkit-backdrop-filter: blur(20px);\n    backdrop-filter: blur(20px);\n    box-shadow: 0 12px 34px rgba(1, 6, 88, 0.28);\n    animation: un-header-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n  }\n\n  body.admin-bar .un-top.gt-scrolled .un-header.un-header {\n    top: 52px;\n  }\n\n  .un-top.gt-scrolled .un-header .un-logos--color {\n    display: none;\n  }\n\n  .un-top.gt-scrolled .un-header .un-logos--white {\n    display: flex;\n  }\n\n  body .un-top.gt-scrolled .un-header .elementor-nav-menu--main .elementor-item.elementor-item {\n    color: #FFFFFF;\n  }\n\n  body .un-top.gt-scrolled .un-header .elementor-social-icon.elementor-social-icon {\n    border-color: rgba(255, 255, 255, 0.3);\n  }\n\n  body .un-top.gt-scrolled .un-header .elementor-social-icon i,\n  body .un-top.gt-scrolled .un-header .elementor-social-icon svg {\n    color: #FFFFFF;\n    fill: #FFFFFF;\n  }\n\n  body .un-top.gt-scrolled .un-header .un-btn-arrow .elementor-button.elementor-button {\n    background-color: #FFFFFF;\n    color: #010658;\n  }\n\n  /* No editor: mostra o espaço dos logos brancos (tracejado) para trocar as imagens */\n  .elementor-editor-active .un-header .un-logos--white {\n    display: flex;\n    outline: 1px dashed rgba(1, 6, 88, 0.4);\n    outline-offset: 4px;\n  }\n}\n\n@media (min-width: 768px) and (max-width: 782px) {\n  body.admin-bar .un-top.gt-scrolled .un-header.un-header {\n    top: 66px;\n  }\n}\n\n@keyframes un-header-in {\n  from { opacity: 0.6; width: 1000px; transform: translate(-50%, -8px); }\n  to   { opacity: 1; width: min(1240px, calc(100% - 48px)); transform: translate(-50%, 0); }\n}\n\n/* --------------------------------------------------------------------------\n   CARTÃO DO HERO\n   -------------------------------------------------------------------------- */\n\n/* Selo e segmentos: pontinhos vermelhos */\n.un-hero .un-dot {\n  display: inline-block;\n  width: 7px;\n  height: 7px;\n  margin-right: 10px;\n  border-radius: 50%;\n  background-color: #F10505;\n  vertical-align: middle;\n  box-shadow: 0 0 0 4px rgba(241, 5, 5, 0.18);\n}\n\n/* Segmentos: o 1º item não tem o ponto separador */\n.un-hero .un-segments .elementor-icon-list-item:first-child .elementor-icon-list-icon {\n  display: none;\n}\n\n/* Celular: foto no topo do cartão, dissolvendo no azul (slideshow nativo) */\n@media (max-width: 767px) {\n  .un-top .un-hero .elementor-background-slideshow .elementor-background-slideshow__slide__image {\n    background-size: 230% auto;\n    background-position: 88% 0;\n    background-repeat: no-repeat;\n    background-color: #0D1261;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-top.gt-scrolled .un-header {\n    animation: none;\n  }\n}\n</style>\n<script>\n/* Colégio Unicultura | Home - comportamentos da página (CSS em un-home-v2.css).\n   Nenhum deles roda dentro do editor do Elementor. */\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  /* 1. Cabeçalho flutuante: adiciona .gt-scrolled ao .un-top após 40px de scroll */\n  var tops = document.querySelectorAll('.un-top');\n\n  /* 2. Barra de progresso de leitura (vermelha, no topo da tela) */\n  var bar = document.createElement('div');\n  bar.className = 'un-progress';\n  bar.setAttribute('aria-hidden', 'true');\n  document.body.appendChild(bar);\n\n  var ticking = false;\n  function onScroll() {\n    ticking = false;\n    var y = window.scrollY;\n    tops.forEach(function (el) {\n      el.classList.toggle('gt-scrolled', y > 40);\n    });\n    var max = document.documentElement.scrollHeight - window.innerHeight;\n    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';\n  }\n  function requestScroll() {\n    if (!ticking) {\n      ticking = true;\n      window.requestAnimationFrame(onScroll);\n    }\n  }\n  onScroll();\n  window.addEventListener('scroll', requestScroll, { passive: true });\n  window.addEventListener('resize', requestScroll);\n\n  /* 3. Contador: o primeiro número do título com a classe .un-count (ex.: \"+1.200 famílias\")\n        conta de 0 até o valor quando aparece. data-delay (ms) espera outra animação terminar. */\n  function countUp(title) {\n    // primeiro trecho de texto com número (pode estar dentro de <strong>, <span>...)\n    var walker = document.createTreeWalker(title, NodeFilter.SHOW_TEXT);\n    var node = null;\n    var match = null;\n    while (walker.nextNode()) {\n      match = walker.currentNode.nodeValue.match(/([\\d.]+)/);\n      if (match) {\n        node = walker.currentNode;\n        break;\n      }\n    }\n    if (!node) {\n      return;\n    }\n    var target = parseInt(match[1].replace(/\\./g, ''), 10);\n    var before = node.nodeValue.slice(0, match.index);\n    var after = node.nodeValue.slice(match.index + match[1].length);\n    var duration = 1600;\n    var start = null;\n    function frame(now) {\n      if (start === null) {\n        start = now;\n      }\n      var t = Math.min(1, (now - start) / duration);\n      var eased = 1 - Math.pow(1 - t, 3);\n      node.nodeValue = before + Math.round(target * eased).toLocaleString('pt-BR') + after;\n      if (t < 1) {\n        window.requestAnimationFrame(frame);\n      }\n    }\n    node.nodeValue = before + '0' + after;\n    window.requestAnimationFrame(frame);\n  }\n\n  if (!reduceMotion && 'IntersectionObserver' in window) {\n    document.querySelectorAll('.un-count').forEach(function (widget) {\n      var title = widget.querySelector('.elementor-heading-title');\n      if (!title) {\n        return;\n      }\n      var delay = parseInt(widget.getAttribute('data-delay') || '0', 10);\n      var observer = new IntersectionObserver(function (entries) {\n        if (entries[0].isIntersecting) {\n          observer.disconnect();\n          window.setTimeout(function () {\n            countUp(title);\n          }, delay);\n        }\n      }, { threshold: 0.6 });\n      observer.observe(widget);\n    });\n  }\n})();\n</script>"
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "html",
+          "elType": "widget"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Unicultura - Home Hero (primeiro dia -> formatura)",
+  "type": "container"
+}

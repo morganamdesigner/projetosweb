@@ -1,0 +1,210 @@
+/* Colégio Unicultura | Home - hero "do primeiro dia à formatura" (JS em un-story.js)
+   Vai DENTRO do widget HTML da história, no cartão azul do hero (funciona sozinho).
+   --x (onde está a linha, em % da largura) e --p (0 = primeiro dia, 1 = formatura) vêm do JS. */
+
+/* O widget ocupa o cartão inteiro, atrás do conteúdo */
+body .un-hero > .elementor-element.un-story-wrap {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.un-story-wrap .elementor-widget-container {
+  height: 100%;
+}
+
+.un-hero > .e-con {
+  position: relative;
+  z-index: 1;
+}
+
+.un-story {
+  --x: 100%;
+  --p: 0;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #0D1261;
+}
+
+/* As duas fotos, uma sobre a outra; a formatura é "recortada" a partir da linha */
+.un-story-img {
+  position: absolute;
+  inset: 0;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: un-story-zoom 16s ease-in-out infinite alternate;
+}
+
+.un-story-img--b {
+  clip-path: inset(0 0 0 var(--x));
+  animation-delay: -8s;
+}
+
+@keyframes un-story-zoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+
+/* Azul sólido à esquerda (atrás do texto) dissolvendo na foto */
+.un-story-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(13, 18, 97, 0.9) 0, rgba(13, 18, 97, 0) 26%),  /* base: faixa de segmentos legível */
+    linear-gradient(90deg, #0D1261 20%, rgba(13, 18, 97, 0.85) 32%, rgba(13, 18, 97, 0) 52%);
+  pointer-events: none;
+}
+
+/* Linha de luz na borda do recorte */
+.un-story-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--x);
+  width: 3px;
+  margin-left: -1.5px;
+  background: linear-gradient(180deg, rgba(255, 184, 103, 0), #FFB867 20%, #F10505 80%, rgba(241, 5, 5, 0));
+  box-shadow: 0 0 24px 6px rgba(241, 5, 5, 0.45);
+  opacity: var(--lo, 1);
+  pointer-events: none;
+}
+
+.un-story-handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #010658;
+  font: 800 18px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+/* Selo "1º dia de aula ●━━● Formatura" */
+.un-story-time {
+  position: absolute;
+  right: 40px;
+  bottom: 150px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: rgba(1, 6, 88, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: rgba(255, 255, 255, 0.55);
+  font: 700 13px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.un-story-time span {
+  transition: color 0.4s ease;
+}
+
+.un-story-bar {
+  position: relative;
+  width: 90px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.un-story-bar i {
+  position: absolute;
+  inset: 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #FFB867, #F10505);
+  transform: scaleX(var(--p));
+  transform-origin: 0 50%;
+}
+
+.un-story-bar::before,
+.un-story-bar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #FFB867;
+}
+
+.un-story-bar::before { left: -5px; }
+.un-story-bar::after  { right: -5px; background: #F10505; }
+
+.un-hero:not(.is-future) .un-story-time .un-t-a,
+.un-hero.is-future .un-story-time .un-t-b {
+  color: #FFFFFF;
+}
+
+/* Título: o trecho da foto atual fica destacado */
+.un-hero .un-hl {
+  background: linear-gradient(transparent 64%, rgba(255, 184, 103, 0.35) 64%) no-repeat 0 0 / 0% 100%;
+  transition: background-size 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.4s ease;
+}
+
+.un-hero:not(.is-future) .un-hl--a,
+.un-hero.is-future .un-hl--b {
+  color: #FFB867;
+  background-size: 100% 100%;
+}
+
+/* Celular: foto no topo do cartão, dissolvendo no azul para baixo */
+@media (max-width: 767px) {
+  .un-story-img {
+    background-size: 230% auto;
+    background-position: 88% 0;
+  }
+
+  .un-story-shade {
+    background: linear-gradient(0deg, #0D1261 48%, rgba(13, 18, 97, 0.6) 58%, rgba(13, 18, 97, 0) 74%);
+  }
+
+  .un-story-line {
+    bottom: auto;
+    height: 64vw;
+  }
+
+  .un-story-handle {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .un-story-time {
+    top: calc(62vw - 52px);
+    right: 50%;
+    bottom: auto;
+    transform: translateX(50%);
+    padding: 9px 14px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .un-story-bar {
+    width: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-story-img {
+    animation: none;
+  }
+}
