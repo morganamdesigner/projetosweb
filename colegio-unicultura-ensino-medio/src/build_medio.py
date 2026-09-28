@@ -329,6 +329,48 @@ def main():
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     print(f"OK: {os.path.normpath(OUT)}")
+    write_section(data["content"][3], OUT_DIFERENCIAIS, "Unicultura - Ensino Médio - Diferenciais")
+
+
+# ---------------------------------------------------------------------------
+# JSON só da seção "Diferenciais" (para trocar a seção sem reimportar a página)
+# ---------------------------------------------------------------------------
+
+OUT_DIFERENCIAIS = os.path.join(HERE, "..", "secao-diferenciais-elementor.json")
+
+
+def css_between(path, start, end=None):
+    css = open(path, encoding="utf-8").read()
+    i = css.index(start)
+    j = css.index(end, i + 1) if end else len(css)
+    return css[i:j].strip()
+
+
+def section_css():
+    """O CSS que esta seção usa, para ela funcionar sozinha (repetir o do topo não tem problema)."""
+    home_css = os.path.join(f1.HOME_SRC_DIR, "un-home-v2.css")
+    medio_css = os.path.join(HERE, "un-medio.css")
+    parts = [
+        css_between(home_css, "/* Entradas mais suaves", "/* ----"),                    # entradas de 32px
+        css_between(home_css, "/* Títulos das seções", "/* ----"),                      # cortina do título
+        css_between(home_css, "/* Botões com seta", "/* Link \"Conhecer"),              # botão com seta
+        css_between(medio_css, "/* ----------------------------------------------------------------------"
+                               "----\n   DIFERENCIAIS", "/* ----------------------------------------------------------------------"
+                               "----\n   MANIFESTO"),
+        "@media (prefers-reduced-motion: reduce) {\n"
+        "  .un-diferenciais .un-dif-card::before {\n    animation: none;\n  }\n}",
+    ]
+    return "\n\n".join(parts)
+
+
+def write_section(section, out, title):
+    section = json.loads(json.dumps(section))
+    section["elements"].append(widget("html", {"html": "<style>\n" + section_css() + "\n</style>"}))
+    data = {"content": [section], "page_settings": [], "version": "0.4", "title": title, "type": "container"}
+    with open(out, "w", encoding="utf-8") as fh:
+        json.dump(data, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    print(f"OK: {os.path.normpath(out)}")
 
 
 if __name__ == "__main__":
