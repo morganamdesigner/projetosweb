@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Colégio Unicultura | Sobre - efeitos da página
+   Vai embutido no widget HTML do topo, depois de un-home-v2, un-fund1, un-fund2 e un-dif
+   (cabeçalho, hero, .un-io/.is-in, faixa de palavras, cards, galeria, Poliedro, CTA).
+   ========================================================================== */
+
+/* Destaque do título: marca-texto vermelho suave, texto branco (sem amarelo) */
+.un-mark-red {
+  background: linear-gradient(transparent 60%, rgba(241, 5, 5, 0.32) 60%) no-repeat 0 0 / 100% 100%;
+}
+
+/* Faixa de palavras: estrelas em vermelho claro */
+.un-mq .un-star {
+  color: #FF8A8A;
+}
+
+/* --------------------------------------------------------------------------
+   TRAJETÓRIA: colagem de fotos
+   -------------------------------------------------------------------------- */
+
+.un-trajetoria .un-collage {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.un-trajetoria .un-clip {
+  overflow: hidden;
+  border-radius: 32px;
+}
+
+.un-trajetoria .un-clip.animated img {
+  animation: un-clip 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes un-clip {
+  from { clip-path: inset(100% 0 0 0); transform: scale(1.15); }
+  to   { clip-path: inset(0 0 0 0); transform: none; }
+}
+
+/* Foto menor sobreposta no canto, com borda branca */
+body .un-trajetoria .un-collage-small.elementor-widget {
+  position: absolute;
+  right: -28px;
+  bottom: 0;
+  z-index: 2;
+  margin: 0;
+}
+
+.un-trajetoria .un-collage-small img {
+  border: 6px solid #FDFDFF;
+  box-shadow: 0 20px 44px rgba(1, 6, 88, 0.2);
+}
+
+/* Selo azul flutuando no alto da foto */
+body .un-trajetoria .un-collage-badge.e-con {
+  position: absolute;
+  top: 32px;
+  left: -22px;
+  z-index: 2;
+  box-shadow: 0 16px 36px rgba(1, 6, 88, 0.25);
+  transition: opacity 0.7s ease 0.6s, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s;
+}
+
+.un-js .un-trajetoria .un-collage:not(.is-in) .un-collage-badge {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+}
+
+@media (max-width: 1024px) {
+  body .un-trajetoria .un-collage-small.elementor-widget {
+    right: 12px;
+  }
+
+  body .un-trajetoria .un-collage-badge.e-con {
+    left: 12px;
+    top: 16px;
+  }
+}
+
+/* Chamada para a Garatuja */
+.un-trajetoria .un-garatuja {
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+@media (hover: hover) {
+  .un-trajetoria .un-garatuja:hover {
+    transform: translateY(-4px);
+    border-color: rgba(241, 5, 5, 0.3) !important;
+    box-shadow: 0 16px 36px rgba(1, 6, 88, 0.1);
+  }
+}
+
+.un-garatuja-link a {
+  color: inherit;
+}
+
+/* --------------------------------------------------------------------------
+   PROPOSTA PEDAGÓGICA: título fixo, cartões acendem ao chegar na tela
+   -------------------------------------------------------------------------- */
+
+@media (min-width: 1025px) {
+  body .un-proposta-sobre .un-sticky.e-con {
+    position: sticky;
+    top: 130px;
+  }
+}
+
+.un-proposta-sobre .un-pcard {
+  transition: opacity 0.7s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.6s ease,
+    background-color 0.6s ease;
+}
+
+.un-proposta-sobre .un-pcard.is-in {
+  border-color: rgba(255, 138, 138, 0.35) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.un-js .un-proposta-sobre .un-pcard:not(.is-in) {
+  opacity: 0.3;
+  transform: translate3d(24px, 0, 0);
+}
+
+/* --------------------------------------------------------------------------
+   O QUE BUSCAMOS FORMAR: ícone vira vermelho no hover
+   -------------------------------------------------------------------------- */
+
+.un-formar .un-prio .elementor-icon {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease, color 0.4s ease;
+}
+
+@media (hover: hover) {
+  .un-formar .un-prio:hover .elementor-icon {
+    background-color: #F10505 !important;
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+  }
+}
