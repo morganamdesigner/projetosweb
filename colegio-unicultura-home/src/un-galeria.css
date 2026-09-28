@@ -1,0 +1,121 @@
+/* ==========================================================================
+   Colégio Unicultura | Home - Seção "Galeria" (vai embutido no JSON dela)
+   Duas fileiras de fotos em movimento contínuo (sentidos opostos) que também
+   deslizam com o scroll (un-galeria.js). Hover: fileira pausa, foto em foco.
+   Escopo: .un-gal
+   ========================================================================== */
+
+.un-gal {
+  overflow: hidden;
+}
+
+/* Fileira: recebe o deslocamento do scroll (--un-gal-shift, via JS) */
+.un-gal .un-gal-row {
+  transform: translate3d(var(--un-gal-shift, 0px), 0, 0);
+  will-change: transform;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Trilho: movimento contínuo. Contém o conjunto original + uma cópia. */
+.un-gal .un-gal-track {
+  width: max-content;
+  /* começa 140px antes da borda: o deslocamento do scroll (até 120px) nunca mostra vão */
+  margin-left: -140px;
+  animation: un-gal-left 70s linear infinite;
+}
+
+.un-gal .un-gal-row--right .un-gal-track {
+  animation-duration: 80s;
+  animation-direction: reverse;
+}
+
+.un-gal .un-gal-row:hover .un-gal-track {
+  animation-play-state: paused;
+}
+
+@keyframes un-gal-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Conjunto: padding igual ao gap, para a emenda da cópia ficar invisível */
+.un-gal .un-gal-set {
+  flex-wrap: nowrap;
+}
+
+/* Foto */
+.un-gal .un-gal-photo {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.un-gal .un-gal-photo img {
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Foco: as outras fotos da fileira escurecem, a do mouse cresce */
+.un-gal .un-gal-row:hover .un-gal-photo {
+  opacity: 0.55;
+}
+
+.un-gal .un-gal-row:hover .un-gal-photo:hover {
+  opacity: 1;
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+.un-gal .un-gal-photo:hover img {
+  transform: scale(1.06);
+}
+
+/* "+" vermelho: indica que abre em tela cheia */
+.un-gal .un-gal-photo::after {
+  content: "+";
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #F10505;
+  color: #FFFFFF;
+  font: 400 26px/38px "Hanken Grotesk", sans-serif;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.un-gal .un-gal-photo:hover::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Celular: fotos menores, sem foco de hover (toque abre o lightbox) */
+@media (max-width: 767px) {
+  .un-gal .un-gal-track {
+    animation-duration: 50s;
+  }
+
+  .un-gal .un-gal-row--right .un-gal-track {
+    animation-duration: 58s;
+  }
+}
+
+/* Movimento reduzido: fileiras paradas e sem deslocamento de scroll */
+@media (prefers-reduced-motion: reduce) {
+  .un-gal .un-gal-track {
+    animation: none;
+  }
+
+  .un-gal .un-gal-row {
+    transform: none;
+    overflow-x: auto;
+  }
+}

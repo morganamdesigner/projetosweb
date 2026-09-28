@@ -1,0 +1,2055 @@
+{
+  "content": [
+    {
+      "id": "22e685d",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "56",
+          "row": "56",
+          "isLinked": true,
+          "unit": "px",
+          "size": 56
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "110",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "flex_gap_mobile": {
+          "column": "32",
+          "row": "32",
+          "isLinked": true,
+          "unit": "px",
+          "size": 32
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "88",
+          "right": "0",
+          "bottom": "88",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "0",
+          "bottom": "64",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F5F5",
+        "css_classes": "gt-root un-gal",
+        "__globals__": {
+          "background_color": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "a6d581e",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "40",
+              "row": "40",
+              "isLinked": true,
+              "unit": "px",
+              "size": 40
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "24",
+              "bottom": "0",
+              "left": "24",
+              "isLinked": false
+            },
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1240,
+              "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_direction_tablet": "column",
+            "flex_justify_content": "space-between",
+            "flex_align_items": "flex-end",
+            "flex_align_items_tablet": "flex-start",
+            "flex_gap_mobile": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "0",
+              "right": "16",
+              "bottom": "0",
+              "left": "16",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "fe8de8e",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "_flex_size": "none"
+              },
+              "elements": [
+                {
+                  "id": "1538c76",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Nosso dia a dia",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#F10505",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.4,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "3a3a00d",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Momentos que <span style=\"color:#42468D;font-style:italic;font-weight:400\">fazem história</span>",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#010658",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 52,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 56,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -2,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 44,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_line_height_tablet": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 38,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing_mobile": {
+                      "unit": "px",
+                      "size": -1.2,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeIn",
+                    "animation_duration": "fast",
+                    "_animation_delay": 100,
+                    "_css_classes": "un-reveal"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "6162f91",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Descobertas, amizades, projetos e conquistas: um pouco do que se vive todos os dias na Unicultura. <strong>Clique nas fotos para ampliar.</strong></p>",
+                "align": "left",
+                "text_color": "#1C1F4F",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 26,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 420,
+                  "sizes": []
+                },
+                "_element_custom_width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "c1b8ec3",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px",
+              "size": 20
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_gap_mobile": {
+              "column": "12",
+              "row": "12",
+              "isLinked": true,
+              "unit": "px",
+              "size": 12
+            },
+            "animation": "fadeIn",
+            "animation_duration": "fast",
+            "animation_delay": 200
+          },
+          "elements": [
+            {
+              "id": "4573037",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_direction_mobile": "row",
+                "flex_wrap_mobile": "nowrap",
+                "overflow": "hidden",
+                "css_classes": "un-gal-row"
+              },
+              "elements": [
+                {
+                  "id": "a0916a9",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "row",
+                    "flex_wrap_mobile": "nowrap",
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
+                    "css_classes": "un-gal-track"
+                  },
+                  "elements": [
+                    {
+                      "id": "6761fb3",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "20",
+                          "row": "20",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 20
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "20",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_direction_mobile": "row",
+                        "flex_wrap_mobile": "nowrap",
+                        "flex_gap_mobile": {
+                          "column": "12",
+                          "row": "12",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "12",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "width": {
+                          "unit": "custom",
+                          "size": "max-content",
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "css_classes": "un-gal-set"
+                      },
+                      "elements": [
+                        {
+                          "id": "5298248",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 333,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-3-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 440,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 273,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "eaaa498",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 334,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-4-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 198,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "334c66c",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 335,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-5-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 520,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 322,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "0c0925d",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 336,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-6-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 360,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 223,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "8c33558",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 337,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto2-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 460,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 285,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "965d445",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 338,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 340,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 211,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3a9bc6f",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "20",
+                          "row": "20",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 20
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "20",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_direction_mobile": "row",
+                        "flex_wrap_mobile": "nowrap",
+                        "flex_gap_mobile": {
+                          "column": "12",
+                          "row": "12",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "12",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "width": {
+                          "unit": "custom",
+                          "size": "max-content",
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "css_classes": "un-gal-set un-gal-dup",
+                        "_attributes": "aria-hidden|true"
+                      },
+                      "elements": [
+                        {
+                          "id": "14d20c3",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 333,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-3-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 440,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 273,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "ee14859",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 334,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-4-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 198,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "cfbf2a2",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 335,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-5-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 520,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 322,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "d40ac07",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 336,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-6-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 360,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 223,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "5c8f915",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 337,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto2-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 460,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 285,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "50155d7",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 338,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 200,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 340,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 211,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "13c4446",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_direction_mobile": "row",
+                "flex_wrap_mobile": "nowrap",
+                "overflow": "hidden",
+                "css_classes": "un-gal-row un-gal-row--right"
+              },
+              "elements": [
+                {
+                  "id": "429e4ca",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "row",
+                    "flex_wrap_mobile": "nowrap",
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
+                    "css_classes": "un-gal-track"
+                  },
+                  "elements": [
+                    {
+                      "id": "4ee91d6",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "20",
+                          "row": "20",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 20
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "20",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_direction_mobile": "row",
+                        "flex_wrap_mobile": "nowrap",
+                        "flex_gap_mobile": {
+                          "column": "12",
+                          "row": "12",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "12",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "width": {
+                          "unit": "custom",
+                          "size": "max-content",
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "css_classes": "un-gal-set"
+                      },
+                      "elements": [
+                        {
+                          "id": "a014a63",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 336,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-6-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 380,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 236,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "741c0e5",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 338,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 500,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 310,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "fbb08ca",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 333,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-3-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 198,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "89f040b",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 337,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto2-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 420,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "60732b9",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 334,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-4-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 480,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 298,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "d7ba254",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 335,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-5-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 340,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 211,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "5fb455f",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "20",
+                          "row": "20",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 20
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "20",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "row",
+                        "flex_direction_mobile": "row",
+                        "flex_wrap_mobile": "nowrap",
+                        "flex_gap_mobile": {
+                          "column": "12",
+                          "row": "12",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 12
+                        },
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "12",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "width": {
+                          "unit": "custom",
+                          "size": "max-content",
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "css_classes": "un-gal-set un-gal-dup",
+                        "_attributes": "aria-hidden|true"
+                      },
+                      "elements": [
+                        {
+                          "id": "8cb1a54",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 336,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-6-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 380,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 236,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "7f3d223",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 338,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 500,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 310,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "17bde37",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 333,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-3-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 320,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 198,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "35e0284",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 337,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto2-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 420,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "1226b6c",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 334,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-4-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 480,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 298,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "a50d1fd",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "image",
+                          "settings": {
+                            "image": {
+                              "id": 335,
+                              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-5-home.webp",
+                              "alt": "",
+                              "source": "library",
+                              "size": ""
+                            },
+                            "image_size": "large",
+                            "align": "left",
+                            "link_to": "file",
+                            "open_lightbox": "yes",
+                            "width": {
+                              "unit": "%",
+                              "size": 100,
+                              "sizes": []
+                            },
+                            "height": {
+                              "unit": "px",
+                              "size": 260,
+                              "sizes": []
+                            },
+                            "height_mobile": {
+                              "unit": "px",
+                              "size": 170,
+                              "sizes": []
+                            },
+                            "object-fit": "cover",
+                            "object-position": "center center",
+                            "image_border_radius": {
+                              "unit": "px",
+                              "top": "24",
+                              "right": "24",
+                              "bottom": "24",
+                              "left": "24",
+                              "isLinked": true
+                            },
+                            "_element_width": "initial",
+                            "_element_custom_width": {
+                              "unit": "px",
+                              "size": 340,
+                              "sizes": []
+                            },
+                            "_element_custom_width_mobile": {
+                              "unit": "px",
+                              "size": 211,
+                              "sizes": []
+                            },
+                            "_css_classes": "un-gal-photo"
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "fbca3e0",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<style>\n/* ==========================================================================\n   Colégio Unicultura | Home - Seção \"Galeria\" (vai embutido no JSON dela)\n   Duas fileiras de fotos em movimento contínuo (sentidos opostos) que também\n   deslizam com o scroll (un-galeria.js). Hover: fileira pausa, foto em foco.\n   Escopo: .un-gal\n   ========================================================================== */\n\n.un-gal {\n  overflow: hidden;\n}\n\n/* Fileira: recebe o deslocamento do scroll (--un-gal-shift, via JS) */\n.un-gal .un-gal-row {\n  transform: translate3d(var(--un-gal-shift, 0px), 0, 0);\n  will-change: transform;\n  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);\n}\n\n/* Trilho: movimento contínuo. Contém o conjunto original + uma cópia. */\n.un-gal .un-gal-track {\n  width: max-content;\n  /* começa 140px antes da borda: o deslocamento do scroll (até 120px) nunca mostra vão */\n  margin-left: -140px;\n  animation: un-gal-left 70s linear infinite;\n}\n\n.un-gal .un-gal-row--right .un-gal-track {\n  animation-duration: 80s;\n  animation-direction: reverse;\n}\n\n.un-gal .un-gal-row:hover .un-gal-track {\n  animation-play-state: paused;\n}\n\n@keyframes un-gal-left {\n  from { transform: translateX(0); }\n  to   { transform: translateX(-50%); }\n}\n\n/* Conjunto: padding igual ao gap, para a emenda da cópia ficar invisível */\n.un-gal .un-gal-set {\n  flex-wrap: nowrap;\n}\n\n/* Foto */\n.un-gal .un-gal-photo {\n  position: relative;\n  flex-shrink: 0;\n  overflow: hidden;\n  border-radius: 24px;\n  transition: opacity 0.4s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.un-gal .un-gal-photo img {\n  display: block;\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n/* Foco: as outras fotos da fileira escurecem, a do mouse cresce */\n.un-gal .un-gal-row:hover .un-gal-photo {\n  opacity: 0.55;\n}\n\n.un-gal .un-gal-row:hover .un-gal-photo:hover {\n  opacity: 1;\n  transform: scale(1.03);\n  z-index: 2;\n}\n\n.un-gal .un-gal-photo:hover img {\n  transform: scale(1.06);\n}\n\n/* \"+\" vermelho: indica que abre em tela cheia */\n.un-gal .un-gal-photo::after {\n  content: \"+\";\n  position: absolute;\n  right: 14px;\n  bottom: 14px;\n  width: 38px;\n  height: 38px;\n  border-radius: 50%;\n  background-color: #F10505;\n  color: #FFFFFF;\n  font: 400 26px/38px \"Hanken Grotesk\", sans-serif;\n  text-align: center;\n  opacity: 0;\n  transform: scale(0.6);\n  transition: opacity 0.3s ease, transform 0.3s ease;\n  pointer-events: none;\n}\n\n.un-gal .un-gal-photo:hover::after {\n  opacity: 1;\n  transform: scale(1);\n}\n\n/* Celular: fotos menores, sem foco de hover (toque abre o lightbox) */\n@media (max-width: 767px) {\n  .un-gal .un-gal-track {\n    animation-duration: 50s;\n  }\n\n  .un-gal .un-gal-row--right .un-gal-track {\n    animation-duration: 58s;\n  }\n}\n\n/* Movimento reduzido: fileiras paradas e sem deslocamento de scroll */\n@media (prefers-reduced-motion: reduce) {\n  .un-gal .un-gal-track {\n    animation: none;\n  }\n\n  .un-gal .un-gal-row {\n    transform: none;\n    overflow-x: auto;\n  }\n}\n</style>\n<script>\n/* Unicultura | Seção Galeria - as fileiras deslizam em sentidos opostos com o scroll.\n   Escreve --un-gal-shift em cada .un-gal-row (o CSS aplica o translate).\n   Não roda no editor do Elementor nem com \"reduzir movimento\". */\n(function () {\n  if (document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {\n    return;\n  }\n  var sections = document.querySelectorAll('.un-gal');\n  if (!sections.length) {\n    return;\n  }\n  var ticking = false;\n\n  function update() {\n    ticking = false;\n    var vh = window.innerHeight;\n    sections.forEach(function (section) {\n      var rect = section.getBoundingClientRect();\n      if (rect.bottom < 0 || rect.top > vh) {\n        return;\n      }\n      // -1 quando a seção entra por baixo, +1 quando sai por cima\n      var progress = ((vh - rect.top) / (vh + rect.height)) * 2 - 1;\n      var amount = Math.max(-1, Math.min(1, progress)) * 120;\n      section.querySelectorAll('.un-gal-row').forEach(function (row) {\n        var dir = row.classList.contains('un-gal-row--right') ? 1 : -1;\n        row.style.setProperty('--un-gal-shift', (amount * dir).toFixed(1) + 'px');\n      });\n    });\n  }\n\n  function requestUpdate() {\n    if (!ticking) {\n      ticking = true;\n      window.requestAnimationFrame(update);\n    }\n  }\n\n  update();\n  window.addEventListener('scroll', requestUpdate, { passive: true });\n  window.addEventListener('resize', requestUpdate);\n})();\n</script>"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Unicultura - Seção Galeria",
+  "type": "container"
+}

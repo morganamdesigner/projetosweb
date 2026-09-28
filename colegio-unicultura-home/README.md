@@ -152,3 +152,29 @@ Por isso dá para apagar o bloco antigo sem perder os efeitos das outras seçõe
 
 **Fotos:** o enquadramento no celular (`88% 0`) supõe o rosto à direita da foto. Se for outra foto, ajuste `background-position` na regra `.un-hero .elementor-background-slideshow__slide__image` do CSS.
 
+---
+
+## Seção extra: Galeria (`secao-galeria-elementor.json`)
+
+Substitui a seção atual da galeria (carrossel de imagens) da Home. Gerador: `src/build_secao_galeria.py`. CSS/JS: `src/un-galeria.css` e `src/un-galeria.js`, embutidos num widget HTML da própria seção.
+
+| Parte | Como é |
+|---|---|
+| Cabeçalho | "NOSSO DIA A DIA" em vermelho, H2 "Momentos que *fazem história*" (itálico azul #42468D, entra com efeito de cortina) e um texto curto com "Clique nas fotos para ampliar". |
+| Fotos | **As 6 fotos da galeria atual**, com os mesmos IDs da Biblioteca de Mídia, então não há nada para trocar. Ficam em duas fileiras, com larguras variadas e cantos de 24 px. |
+| Movimento | As fileiras deslizam **sem parar em sentidos opostos**, com bordas laterais esmaecidas. Ao **rolar a página**, elas também deslizam para lados opostos. |
+| Hover | A fileira pausa, a foto sob o mouse cresce e as outras escurecem. Aparece um "+" vermelho. |
+| Clique | Abre a foto no **lightbox** nativo do Elementor (tela cheia). |
+| Celular | As fileiras continuam deslizando, com fotos menores. O toque abre a foto. |
+| Menos movimento | Fileiras paradas, com rolagem lateral manual. |
+
+**Adicionar ou trocar fotos:**
+- Cada fileira tem o **conjunto original** e uma **cópia** logo depois (`un-gal-dup`), que só serve para o movimento contínuo não ter emenda. Faça a mesma alteração nos dois.
+- Para mais fotos, duplique um widget de imagem dentro do conjunto e da cópia.
+- O texto alternativo de cada foto vem da Biblioteca de Mídia.
+
+**Como aplicar:**
+1. Importe o JSON.
+2. Na Home, apague a seção atual da galeria.
+3. Insira o template "Unicultura - Seção Galeria" no mesmo lugar.
+
