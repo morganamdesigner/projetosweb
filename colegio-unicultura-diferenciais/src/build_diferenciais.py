@@ -586,7 +586,12 @@ def step(n, title):
 
 # Linha das etapas: um elemento próprio (o ::before dos containers é a camada de sobreposição do Elementor,
 # que força largura/altura de 100% e bordas). --un-p (0 a 1) vem do un-dif.js conforme o scroll.
-STEPS_LINE = '<div class="un-steps-fill"></div>'
+def steps_line_html():
+    # o CSS/JS da linha vão no próprio widget: a seção funciona mesmo sem o CSS do topo atualizado
+    css = open(os.path.join(HERE, "un-projetos.css"), encoding="utf-8").read().strip()
+    js = open(os.path.join(HERE, "un-projetos.js"), encoding="utf-8").read().strip()
+    return ('<div class="un-steps-fill"></div>\n<style>\n' + css + '\n</style>\n<script>\n' + js
+            + '\n</script>')
 
 
 def build_projetos():
@@ -605,7 +610,7 @@ def build_projetos():
         "flex_gap_mobile": gap(28),
         "padding": dims(8, 0, 0, 0),
         "css_classes": "un-steps",
-    }, [html(STEPS_LINE, "un-steps-line"),
+    }, [html(steps_line_html(), "un-steps-line"),
         step(1, "Investigação"), step(2, "Produção"), step(3, "Conhecimento aplicado")])
     challenge = container({
         "content_width": "full",
@@ -751,6 +756,15 @@ def main():
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     print(f"OK: {os.path.normpath(OUT)}")
+    # JSON só da seção Projetos (para trocar a seção sem reimportar a página)
+    projetos = next(sec for sec in data["content"] if sec["settings"].get("_element_id") == "projetos")
+    out = os.path.join(HERE, "..", "secao-projetos-elementor.json")
+    with open(out, "w", encoding="utf-8") as fh:
+        json.dump({"content": [projetos], "page_settings": [], "version": "0.4",
+                   "title": "Unicultura - Diferenciais - Projetos", "type": "container"},
+                  fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    print(f"OK: {os.path.normpath(out)}")
 
 
 if __name__ == "__main__":
