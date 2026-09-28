@@ -128,21 +128,30 @@ def avatars():
     }, imgs)
 
 
-def hero_card():
-    pill = heading('<span class="un-dot"></span>Ensino Fundamental · 3º ao 5º ano', "p", WHITE,
+HERO_F1 = {
+    "pill": "Ensino Fundamental · 3º ao 5º ano",
+    "title": f'Consolidar conhecimentos. <span style="color:{ORANGE}">Desenvolver autonomia.</span>',
+    "intro_id": "38dccf55",
+    "secondary": ("Conhecer a etapa", "#a-etapa"),
+    "photo": (473, "background-ensino-fundamental-1.webp"),
+    "segment": 2,  # "Fundamental I" em destaque
+}
+
+
+def hero_card(cfg=HERO_F1):
+    pill = heading('<span class="un-dot"></span>' + cfg["pill"], "p", WHITE,
                    typo("typography", HANKEN, 13, 700, lh=16, ls=0.7, transform="uppercase", size_m=11, lh_m=14),
                    extra={"_element_width": "auto", "_background_background": "classic",
                           "_background_color": "rgba(255, 255, 255, 0.06)", "_border_border": "solid",
                           "_border_width": dims(1), "_border_color": "rgba(255, 255, 255, 0.28)",
                           "_border_radius": dims(999), "_padding": dims(10, 18, 10, 16),
                           "_padding_mobile": dims(8, 14, 8, 12)})
-    title = heading(f'Consolidar conhecimentos. <span style="color:{ORANGE}">Desenvolver autonomia.</span>',
-                    "h1", WHITE,
+    title = heading(cfg["title"], "h1", WHITE,
                     typo("typography", HANKEN, 66, 700, lh=66, ls=-2.8, size_t=54, size_m=38, lh_t=56, lh_m=40,
                          ls_m=-1.5),
                     extra={"_element_width": "initial", "_element_custom_width": px(620),
                            "_element_custom_width_tablet": px(100, "%")})
-    intro = text("<p>" + src_text("38dccf55", "editor").strip() + "</p>", "rgba(255, 255, 255, 0.85)",
+    intro = text("<p>" + src_text(cfg["intro_id"], "editor").strip() + "</p>", "rgba(255, 255, 255, 0.85)",
                  typo("typography", HANKEN, 19, 400, lh=30, size_m=16, lh_m=25),
                  extra={"_element_width": "initial", "_element_custom_width": px(540),
                         "_element_custom_width_mobile": px(100, "%")})
@@ -150,10 +159,10 @@ def hero_card():
                      dims(14, 14, 14, 28), radius="999", icon=18, css_classes="un-btn-arrow",
                      shadow={"horizontal": 0, "vertical": 8, "blur": 24, "spread": 0,
                              "color": "rgba(241, 5, 5, 0.25)"})
-    secondary = button("Conhecer a etapa", "rgba(255, 255, 255, 0)", WHITE,
+    secondary = button(cfg["secondary"][0], "rgba(255, 255, 255, 0)", WHITE,
                        typo("typography", HANKEN, 18, 600, lh=24, size_m=16),
                        dims(14, 8, 14, 8), radius="999", css_classes="un-btn-link",
-                       extra={"link": {"url": "#a-etapa", "is_external": "", "nofollow": "", "custom_attributes": ""},
+                       extra={"link": {"url": cfg["secondary"][1], "is_external": "", "nofollow": "", "custom_attributes": ""},
                               "selected_icon": {"value": "fas fa-arrow-down", "library": "fa-solid"},
                               "icon_align": "right", "icon_indent": px(10)})
     actions = container({
@@ -198,7 +207,7 @@ def hero_card():
          for t in ("Educação Infantil", "Fundamental I", "Fundamental II", "Ensino Médio")],
         typo("icon_typography", HANKEN, 16, 600, lh=22, size_m=14),
         "rgba(255, 255, 255, 0.72)", icon_color=RED, inline=True, space=20, icon_size=6, text_indent=18,
-        extra={"_css_classes": "un-segments un-segments--2", "text_color_hover": ORANGE,
+        extra={"_css_classes": "un-segments un-segments--%d" % cfg["segment"], "text_color_hover": ORANGE,
                "space_between_mobile": px(10), "text_indent_mobile": px(10)})
     strip = container({
         "content_width": "full",
@@ -235,7 +244,7 @@ def hero_card():
         # uma foto só (sem slideshow)
         "background_background": "classic",
         "background_color": CARD_BG,
-        "background_image": media(473, "background-ensino-fundamental-1.webp"),
+        "background_image": media(*cfg["photo"]),
         "background_position": "center right",
         "background_repeat": "no-repeat",
         "background_size": "cover",
@@ -263,7 +272,7 @@ def hero_card():
     }, [content, add(strip, anim("fadeIn", 500))])
 
 
-def build_top():
+def build_top(cfg=HERO_F1):
     return container({
         "content_width": "boxed",
         "boxed_width": px(1480),
@@ -275,7 +284,7 @@ def build_top():
         "background_background": "classic",
         "background_color": PAGE_BG,
         "css_classes": "gt-root un-top",
-    }, [home_hero.header(), hero_card(), html_widget(CSS_FILES, JS_FILES)], inner=False)
+    }, [home_hero.header(), hero_card(cfg), html_widget(CSS_FILES, JS_FILES)], inner=False)
 
 
 # ---------------------------------------------------------------------------
@@ -483,11 +492,12 @@ def build_galeria():
 # 5. Sistema de ensino (Poliedro)
 # ---------------------------------------------------------------------------
 
-def build_poliedro():
-    title = heading(src_text("182465e6"), "h2", NAVY,
+def build_poliedro(ids=("182465e6", "64cbc719", "29d6236e")):
+    title_id, text_id, logo_id = ids
+    title = heading(src_text(title_id), "h2", NAVY,
                     typo("typography", HANKEN, 46, 700, lh=50, ls=-1.6, size_t=40, size_m=32, lh_t=44, lh_m=36,
                          ls_m=-1.1))
-    body = text("<p>" + src_text("64cbc719", "editor").strip() + "</p>", INK,
+    body = text("<p>" + src_text(text_id, "editor").strip() + "</p>", INK,
                 typo("typography", HANKEN, 18, 400, lh=29, size_m=16, lh_m=26))
     text_col = container({
         "content_width": "full",
@@ -499,7 +509,7 @@ def build_poliedro():
         add(title, anim("fadeIn", 100), classes="un-reveal"),
         add(body, anim("fadeInUp", 200))])
     logo = widget("image", {
-        "image": find(page["content"], "29d6236e")["settings"]["image"],
+        "image": find(page["content"], logo_id)["settings"]["image"],
         "image_size": "full",
         "width": px(100, "%"),
         "_element_width": "initial",
@@ -557,14 +567,20 @@ def build_poliedro():
 # 6. Nossa equipe de professores (carrossel nativo da página atual, corrigido)
 # ---------------------------------------------------------------------------
 
-TEACHER_NAMES = {  # slide -> nome; os dois primeiros estavam errados na página atual (CONFIRMAR)
-    "45297d99": "Camila",   # a foto é camila.webp, mas o nome estava "Beatriz" (repetido)
-    "8161799": "Lucas",     # a foto é lucas.webp, mas o nome estava "Nome do Professor"
+TEACHER_NAMES = {  # foto do slide -> nome; estavam errados na página atual (CONFIRMAR)
+    "camila.webp": "Camila",   # o nome estava "Beatriz" (repetido)
+    "lucas.webp": "Lucas",     # o nome estava "Nome do Professor"
 }
 
 
-def build_equipe():
-    sec = src("44663ada")
+def teacher_name(slide):
+    photo = slide["elements"][0]["settings"].get("image", {}).get("url", "")
+    fixed = TEACHER_NAMES.get(photo.rsplit("/", 1)[-1])
+    return fixed or slide["elements"][1]["settings"]["title"]
+
+
+def build_equipe(section_id="44663ada"):
+    sec = src(section_id)
     hanken(sec)
     s = sec["settings"]
     s["css_classes"] = "gt-root un-equipe"
@@ -580,8 +596,7 @@ def build_equipe():
     # só os 4 slides com conteúdo (os outros 6 estavam vazios e apareciam como cards brancos)
     carousel["elements"] = [c for c in carousel["elements"] if c["elements"]]
     cs = carousel["settings"]
-    cs["carousel_items"] = [{"slide_title": c["elements"][1]["settings"]["title"] if c["id"] not in TEACHER_NAMES
-                             else TEACHER_NAMES[c["id"]], "_id": item["_id"]}
+    cs["carousel_items"] = [{"slide_title": teacher_name(c), "_id": item["_id"]}
                             for c, item in zip(carousel["elements"], cs["carousel_items"])]
     for slide in carousel["elements"]:
         slide["settings"]["css_classes"] = "un-teacher"
@@ -590,8 +605,7 @@ def build_equipe():
         name["settings"]["header_size"] = "h3"  # nomes eram H2
         name["settings"]["typography_font_style"] = "normal"
         name["settings"]["typography_font_weight"] = "600"
-        if slide["id"] in TEACHER_NAMES:
-            name["settings"]["title"] = TEACHER_NAMES[slide["id"]]
+        name["settings"]["title"] = teacher_name(slide)
     add(carousel, anim("fadeInUp", 200))
     return sec
 
@@ -600,8 +614,8 @@ def build_equipe():
 # 7. Quer conhecer o colégio de perto? (formulário da página atual)
 # ---------------------------------------------------------------------------
 
-def build_cta():
-    sec = src("1792b8a5")
+def build_cta(section_id="1792b8a5"):
+    sec = src(section_id)
     hanken(sec)
     sec["settings"]["css_classes"] = "gt-root un-cta"
     sec["settings"]["html_tag"] = "section"
