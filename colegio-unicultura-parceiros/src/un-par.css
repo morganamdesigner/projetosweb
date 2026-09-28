@@ -1,0 +1,252 @@
+/* ==========================================================================
+   Colégio Unicultura | Parceiros - efeitos da página
+   Vai embutido no widget HTML do topo, depois de un-home-v2.css, un-fund1.css e
+   un-dif.css (capítulos, número gigante, pílulas, índice lateral, selo flutuante, CTA).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO: rede Unicultura -> parceiros
+   -------------------------------------------------------------------------- */
+
+.un-net {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.un-net-line {
+  fill: none;
+  stroke: #FFB867;
+  stroke-opacity: 0.55;
+  stroke-width: 2;
+  stroke-dasharray: 6 8;
+  animation: un-flow 1.6s linear infinite;
+}
+
+@keyframes un-flow {
+  to { stroke-dashoffset: -28; }
+}
+
+.un-net-core {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: un-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes un-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.04); }
+}
+
+.un-net-node rect {
+  transition: fill 0.3s ease;
+}
+
+.un-net-node text {
+  transition: fill 0.3s ease;
+}
+
+.un-net-node:hover rect,
+.un-net-node:focus-visible rect {
+  fill: #F10505;
+}
+
+.un-net-node:hover text,
+.un-net-node:focus-visible text {
+  fill: #FFFFFF;
+}
+
+/* Widgets das ilustrações ocupam a coluna toda (num contêiner centralizado o
+   widget encolheria até o tamanho do conteúdo e o SVG ficaria pequeno) */
+body .un-net-wrap.elementor-widget,
+body .un-illu.elementor-widget {
+  width: 100%;
+  max-width: 540px;
+  align-self: center;
+}
+
+/* --------------------------------------------------------------------------
+   CAPÍTULOS DOS PARCEIROS
+   -------------------------------------------------------------------------- */
+
+/* Ilustração */
+.un-illu-svg {
+  display: block;
+  width: 100%;
+  max-width: 540px;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+/* Selo do logo: flutua no canto da ilustração (posição vem do .un-float-badge do un-dif.css) */
+body .un-chapter .un-logo-badge.e-con {
+  left: 4%;
+  bottom: 40px;
+}
+
+.un-logo-badge .un-logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  body .un-chapter .un-logo-badge.e-con {
+    left: 16px;
+    bottom: -12px;
+  }
+}
+
+/* Etapa atendida (pílula com borda) */
+.un-stage .elementor-heading-title {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(241, 5, 5, 0.35);
+  border-radius: 999px;
+  background: rgba(241, 5, 5, 0.06);
+}
+
+.un-stage--dark .elementor-heading-title {
+  border-color: rgba(255, 184, 103, 0.45);
+  background: rgba(255, 184, 103, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   ANIMAÇÕES DAS ILUSTRAÇÕES (SVG)
+   -------------------------------------------------------------------------- */
+
+.un-illu-svg g,
+.un-illu-svg rect,
+.un-illu-svg circle,
+.un-illu-svg path {
+  transform-box: fill-box;
+}
+
+.un-float-a { animation: un-bob 6s ease-in-out infinite; }
+.un-float-b { animation: un-bob 5s ease-in-out infinite -2s; }
+.un-float-c { animation: un-bob 4.5s ease-in-out infinite -1s; }
+
+/* un-bob (sobe e desce) vem do un-fund1.css */
+
+/* Poliedro: barras crescem, poliedro gira devagar */
+.un-bar {
+  transform-origin: 50% 100%;
+  animation: un-grow 3.6s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+}
+
+.un-bar:nth-of-type(2) { animation-delay: 0.15s; }
+.un-bar:nth-of-type(3) { animation-delay: 0.3s; }
+.un-bar:nth-of-type(4) { animation-delay: 0.45s; }
+
+@keyframes un-grow {
+  0%       { transform: scaleY(0.2); }
+  35%, 80% { transform: scaleY(1); }
+  100%     { transform: scaleY(0.2); }
+}
+
+.un-poly {
+  transform-origin: center;
+  animation: un-spin-slow 18s linear infinite;
+}
+
+@keyframes un-spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+/* Lidere: caminho tracejado andando, foguete subindo */
+.un-draw-path {
+  animation: un-flow 1.4s linear infinite;
+}
+
+.un-rocket {
+  animation: un-launch 3s ease-in-out infinite;
+}
+
+.un-flame {
+  transform-origin: 50% 0;
+  animation: un-flicker 0.3s ease-in-out infinite alternate;
+}
+
+@keyframes un-launch {
+  0%, 100% { transform: translate(0, 0); }
+  50%      { transform: translate(4px, -12px); }
+}
+
+@keyframes un-flicker {
+  from { transform: scaleY(0.7); }
+  to   { transform: scaleY(1.2); }
+}
+
+/* Sim Inova: engrenagens girando, robô piscando e acenando */
+.un-gear {
+  transform-origin: center;
+  animation: un-spin-slow 8s linear infinite;
+}
+
+.un-gear--rev {
+  animation-direction: reverse;
+  animation-duration: 6s;
+}
+
+.un-robot {
+  animation: un-bob 5s ease-in-out infinite;
+}
+
+.un-eyes {
+  transform-origin: center;
+  animation: un-eye-blink 4s infinite;
+}
+
+@keyframes un-eye-blink {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95%           { transform: scaleY(0.1); }
+}
+
+.un-antenna {
+  animation: un-glow-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes un-glow-dot {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+.un-arm {
+  transform-origin: 0% 50%;
+  animation: un-wave 2.4s ease-in-out infinite;
+}
+
+@keyframes un-wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  70%           { transform: rotate(-18deg); }
+  80%           { transform: rotate(8deg); }
+  90%           { transform: rotate(-12deg); }
+}
+
+/* Simple Education: globo e órbita girando */
+.un-orbit-ring-svg {
+  transform-origin: center;
+  animation: un-spin-slow 24s linear infinite;
+}
+
+.un-globe {
+  transform-origin: center;
+  animation: un-pulse 6s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   MOVIMENTO REDUZIDO
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .un-net-line,
+  .un-net-core,
+  .un-illu-svg *,
+  .un-float-a,
+  .un-float-b,
+  .un-float-c {
+    animation: none !important;
+  }
+}

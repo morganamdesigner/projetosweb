@@ -1,0 +1,26 @@
+<svg class="un-illu-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração: tablet com gráfico de desempenho, livro e um poliedro">
+  <circle cx="260" cy="215" r="185" fill="#EDEEFA"/>
+  <g class="un-float-a">
+    <rect x="128" y="96" width="250" height="180" rx="22" fill="#010658"/>
+    <rect x="144" y="112" width="218" height="148" rx="12" fill="#FFFFFF"/>
+    <text x="160" y="140" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="14" font-weight="800">Desempenho</text>
+    <rect class="un-bar" x="168" y="170" width="30" height="74" rx="6" fill="#D7D8E5"/>
+    <rect class="un-bar" x="212" y="190" width="30" height="54" rx="6" fill="#FFB867"/>
+    <rect class="un-bar" x="256" y="158" width="30" height="86" rx="6" fill="#42468D"/>
+    <rect class="un-bar" x="300" y="134" width="30" height="110" rx="6" fill="#F10505"/>
+  </g>
+  <g class="un-float-b">
+    <path d="M150 300 C 190 286, 230 290, 262 306 L 262 360 C 230 344, 190 340, 150 354 Z" fill="#F10505"/>
+    <path d="M374 300 C 334 286, 294 290, 262 306 L 262 360 C 294 344, 334 340, 374 354 Z" fill="#C90404"/>
+    <path d="M166 310 C 196 300, 226 302, 250 314 M166 324 C 196 314, 226 316, 250 328" stroke="#FFFFFF" stroke-opacity=".5" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <g class="un-poly" fill="none" stroke="#010658" stroke-width="3" stroke-linejoin="round">
+    <polygon points="425,52 469,77 469,127 425,152 381,127 381,77" fill="#FFB867" fill-opacity=".25"/>
+    <polygon points="425,72 452,118 398,118"/>
+    <path d="M425 52 L425 72 M469 77 L452 118 M469 127 L452 118 M425 152 L398 118 M381 127 L398 118 M381 77 L425 72 M469 77 L425 72"/>
+  </g>
+  <g class="un-float-c">
+    <circle cx="92" cy="138" r="30" fill="#F10505"/>
+    <path d="M78 139 l10 10 l18 -20" stroke="#FFFFFF" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -690,15 +690,15 @@ def build_esportes():
 # CTA final
 # ---------------------------------------------------------------------------
 
-def build_cta():
-    title = heading(f'Quer conhecer de perto <span style="color:{ORANGE}">essas experiências?</span>', "h2", WHITE,
+def build_cta(title_html=f'Quer conhecer de perto <span style="color:{ORANGE}">essas experiências?</span>',
+              body_copy="Agende uma visita e veja como cada um desses diferenciais entra na rotina do seu filho."):
+    title = heading(title_html, "h2", WHITE,
                     typo("typography", HANKEN, 56, 700, lh=60, ls=-2.2, size_t=46, size_m=32, lh_t=50, lh_m=36,
                          ls_m=-1.1),
                     align="center",
                     extra={"_element_width": "initial", "_element_custom_width": px(760),
                            "_element_custom_width_tablet": px(100, "%")})
-    body = para("Agende uma visita e veja como cada um desses diferenciais entra na rotina do seu filho.",
-                "rgba(255, 255, 255, 0.82)", size=19, align="center", width=560)
+    body = para(body_copy, "rgba(255, 255, 255, 0.82)", size=19, align="center", width=560)
     primary = button("Agendar visita", WHITE, INK, typo("typography", HANKEN, 18, 700, lh=24, size_m=16),
                      dims(14, 14, 14, 28), radius="999", icon=18, css_classes="un-btn-arrow",
                      extra={"link": link("/matriculas")})

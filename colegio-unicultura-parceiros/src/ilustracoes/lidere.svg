@@ -1,0 +1,24 @@
+<svg class="un-illu-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração: degraus de crescimento com coração, moeda e foguete">
+  <circle cx="260" cy="215" r="185" fill="#EDEEFA"/>
+  <path class="un-draw-path" d="M96 330 C 170 320, 190 250, 260 240 S 360 170, 420 90" fill="none" stroke="#F10505" stroke-width="3" stroke-dasharray="8 10" stroke-linecap="round"/>
+  <rect x="80" y="300" width="120" height="70" rx="10" fill="#42468D"/>
+  <rect x="200" y="235" width="120" height="135" rx="10" fill="#1C1F4F"/>
+  <rect x="320" y="165" width="120" height="205" rx="10" fill="#010658"/>
+  <g class="un-float-a">
+    <circle cx="140" cy="262" r="30" fill="#FFFFFF"/>
+    <path d="M140 276 s-16 -10 -16 -21 a8 8 0 0 1 16 -4 a8 8 0 0 1 16 4 c0 11 -16 21 -16 21z" fill="#F10505"/>
+  </g>
+  <g class="un-float-b">
+    <circle cx="260" cy="196" r="30" fill="#FFB867"/>
+    <circle cx="260" cy="196" r="21" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <text x="260" y="204" text-anchor="middle" fill="#FFFFFF" font-family="Hanken Grotesk, sans-serif" font-size="22" font-weight="800">$</text>
+  </g>
+  <g class="un-rocket">
+    <path d="M380 150 c 0 -34 12 -56 20 -66 c 8 10 20 32 20 66 z" fill="#FFFFFF"/>
+    <circle cx="400" cy="112" r="7" fill="#42468D"/>
+    <path d="M380 136 l-12 18 l12 0 z M420 136 l12 18 l-12 0 z" fill="#F10505"/>
+    <path class="un-flame" d="M390 152 q10 22 20 0 z" fill="#FFB867"/>
+  </g>
+  <path d="M438 60 l0 -30 l22 8 l-22 8" fill="#F10505" stroke="#F10505" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="438" y1="30" x2="438" y2="72" stroke="#010658" stroke-width="3" stroke-linecap="round"/>
+</svg>

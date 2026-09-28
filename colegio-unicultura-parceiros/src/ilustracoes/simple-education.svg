@@ -1,0 +1,23 @@
+<svg class="un-illu-svg" viewBox="0 0 520 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustração: balões Hello e Olá, globo e blocos ABC">
+  <circle cx="260" cy="215" r="185" fill="#EDEEFA"/>
+  <g class="un-globe" transform-origin="260 232">
+    <circle cx="260" cy="232" r="96" fill="#010658"/>
+    <g fill="none" stroke="#FFFFFF" stroke-opacity=".35" stroke-width="2">
+      <ellipse cx="260" cy="232" rx="96" ry="34"/><ellipse cx="260" cy="232" rx="40" ry="96"/><line x1="164" y1="232" x2="356" y2="232"/><line x1="260" y1="136" x2="260" y2="328"/>
+    </g>
+  </g>
+  <circle cx="260" cy="232" r="122" fill="none" stroke="#F10505" stroke-width="2" stroke-dasharray="6 10" class="un-orbit-ring-svg" transform-origin="260 232"/>
+  <g class="un-float-a">
+    <path d="M60 70 h150 a22 22 0 0 1 22 22 v34 a22 22 0 0 1 -22 22 h-110 l-22 20 v-20 h-18 a22 22 0 0 1 -22 -22 v-34 a22 22 0 0 1 22 -22z" fill="#F10505"/>
+    <text x="135" y="124" text-anchor="middle" fill="#FFFFFF" font-family="Hanken Grotesk, sans-serif" font-size="34" font-weight="800">Hello!</text>
+  </g>
+  <g class="un-float-b">
+    <path d="M330 262 h118 a22 22 0 0 1 22 22 v34 a22 22 0 0 1 -22 22 h-18 v20 l-22 -20 h-78 a22 22 0 0 1 -22 -22 v-34 a22 22 0 0 1 22 -22z" fill="#FFFFFF" stroke="#010658" stroke-width="3"/>
+    <text x="389" y="316" text-anchor="middle" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="34" font-weight="800">Olá!</text>
+  </g>
+  <g class="un-float-c" font-family="Hanken Grotesk, sans-serif" font-size="26" font-weight="800" text-anchor="middle">
+    <rect x="70" y="318" width="46" height="46" rx="10" fill="#FFB867"/><text x="93" y="350" fill="#010658">A</text>
+    <rect x="120" y="318" width="46" height="46" rx="10" fill="#42468D"/><text x="143" y="350" fill="#FFFFFF">B</text>
+    <rect x="95" y="268" width="46" height="46" rx="10" fill="#F10505"/><text x="118" y="300" fill="#FFFFFF">C</text>
+  </g>
+</svg>

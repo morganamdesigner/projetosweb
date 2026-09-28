@@ -1,0 +1,22 @@
+<svg class="un-net" viewBox="0 0 520 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Unicultura no centro, ligada aos parceiros Poliedro, Lidere, Sim Inova e Simple Education">
+  <circle cx="260" cy="235" r="200" fill="none" stroke="#FFFFFF" stroke-opacity=".08"/>
+  <circle cx="260" cy="235" r="140" fill="none" stroke="#FFFFFF" stroke-opacity=".1" stroke-dasharray="4 8"/>
+  <path id="un-l1" class="un-net-line" d="M260 235 C 200 190, 150 150, 110 95"/>
+  <path id="un-l2" class="un-net-line" d="M260 235 C 320 190, 370 150, 410 95"/>
+  <path id="un-l3" class="un-net-line" d="M260 235 C 320 280, 370 320, 410 375"/>
+  <path id="un-l4" class="un-net-line" d="M260 235 C 200 280, 150 320, 110 375"/>
+  <circle r="5" fill="#FFB867"><animateMotion dur="3.2s" repeatCount="indefinite"><mpath href="#un-l1"/></animateMotion></circle>
+  <circle r="5" fill="#FFB867"><animateMotion dur="3.6s" begin="-1s" repeatCount="indefinite"><mpath href="#un-l2"/></animateMotion></circle>
+  <circle r="5" fill="#FFB867"><animateMotion dur="3.4s" begin="-2s" repeatCount="indefinite"><mpath href="#un-l3"/></animateMotion></circle>
+  <circle r="5" fill="#FFB867"><animateMotion dur="3.8s" begin="-.5s" repeatCount="indefinite"><mpath href="#un-l4"/></animateMotion></circle>
+  <g class="un-net-core">
+    <circle cx="260" cy="235" r="92" fill="#F10505" opacity=".14"/>
+    <circle cx="260" cy="235" r="70" fill="#F10505"/>
+    <text x="260" y="231" text-anchor="middle" fill="#FFFFFF" font-family="Hanken Grotesk, sans-serif" font-size="13" font-weight="700" letter-spacing="1.5">COLÉGIO</text>
+    <text x="260" y="254" text-anchor="middle" fill="#FFFFFF" font-family="Hanken Grotesk, sans-serif" font-size="21" font-weight="800">Unicultura</text>
+  </g>
+  <a href="#poliedro" class="un-net-node"><rect x="35" y="66" width="150" height="50" rx="25" fill="#FFFFFF"/><text x="110" y="97" text-anchor="middle" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="16" font-weight="800">Poliedro</text></a>
+  <a href="#lidere" class="un-net-node"><rect x="335" y="66" width="150" height="50" rx="25" fill="#FFFFFF"/><text x="410" y="97" text-anchor="middle" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="16" font-weight="800">Lidere</text></a>
+  <a href="#sim-inova" class="un-net-node"><rect x="335" y="350" width="150" height="50" rx="25" fill="#FFFFFF"/><text x="410" y="381" text-anchor="middle" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="16" font-weight="800">Sim Inova</text></a>
+  <a href="#simple-education" class="un-net-node"><rect x="25" y="350" width="170" height="50" rx="25" fill="#FFFFFF"/><text x="110" y="381" text-anchor="middle" fill="#010658" font-family="Hanken Grotesk, sans-serif" font-size="16" font-weight="800">Simple Education</text></a>
+</svg>
