@@ -1,0 +1,735 @@
+/* ==========================================================================
+   Colégio Unicultura | Diferenciais - efeitos da página
+   Vai embutido no widget HTML do topo, depois de un-home-v2.css e un-fund1.css
+   (cabeçalho flutuante, botões com seta, entradas suaves, .un-io/.is-in, anéis).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   HERO: brilho no cartão + órbita dos 8 diferenciais
+   -------------------------------------------------------------------------- */
+
+.un-hero--dif {
+  position: relative;
+  isolation: isolate;
+}
+
+.un-hero--dif::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  z-index: -1;
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(241, 5, 5, 0.28), rgba(255, 184, 103, 0.08) 45%, transparent 70%);
+  animation: un-glow 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.un-hero--dif::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.2px, transparent 1.2px);
+  background-size: 24px 24px;
+  -webkit-mask-image: linear-gradient(250deg, #000 5%, transparent 55%);
+  mask-image: linear-gradient(250deg, #000 5%, transparent 55%);
+  pointer-events: none;
+}
+
+@keyframes un-glow {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-15%, 20%) scale(1.15); }
+}
+
+.un-orbit {
+  --size: 460px;
+  position: relative;
+  width: var(--size);
+  height: var(--size);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.un-orbit-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  background: #F10505;
+  color: #FFFFFF;
+  font-family: "Hanken Grotesk", sans-serif;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 14px rgba(241, 5, 5, 0.14), 0 0 0 30px rgba(241, 5, 5, 0.06);
+}
+
+.un-orbit-core strong {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.un-orbit-core span {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.un-orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  animation: un-spin 60s linear infinite;
+}
+
+.un-orbit-ring--1 {
+  --r: 138px;
+  width: 276px;
+  height: 276px;
+  margin: -138px 0 0 -138px;
+}
+
+.un-orbit-ring--2 {
+  --r: 222px;
+  width: 444px;
+  height: 444px;
+  margin: -222px 0 0 -222px;
+  animation-direction: reverse;
+  animation-duration: 80s;
+}
+
+.un-orbit-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(var(--a)) translate(var(--r)) rotate(calc(-1 * var(--a)));
+}
+
+/* A bolha gira ao contrário do anel, para o ícone ficar sempre em pé */
+.un-orbit-bubble {
+  position: absolute;
+  top: -29px;
+  left: -29px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #010658;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+  animation: un-spin 60s linear infinite reverse;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.un-orbit-ring--2 .un-orbit-bubble {
+  animation-direction: normal;
+  animation-duration: 80s;
+}
+
+.un-orbit-bubble svg {
+  width: 26px;
+  height: 26px;
+}
+
+.un-orbit-label {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #FFB867;
+  color: #010658;
+  font: 700 12px/1.2 "Hanken Grotesk", sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translate(-50%, -4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.un-orbit:hover .un-orbit-ring,
+.un-orbit:hover .un-orbit-bubble {
+  animation-play-state: paused;
+}
+
+.un-orbit-item:hover .un-orbit-bubble,
+.un-orbit-item:focus-visible .un-orbit-bubble {
+  background: #F10505;
+  color: #FFFFFF;
+}
+
+.un-orbit-item:hover .un-orbit-label,
+.un-orbit-item:focus-visible .un-orbit-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes un-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 1024px) {
+  .un-orbit {
+    transform: scale(0.85);
+    margin: -30px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .un-orbit {
+    transform: scale(0.62);
+    margin: -80px auto -70px;
+  }
+}
+
+/* Índice do hero: primeiro item sem o ponto separador */
+.un-hero-nav .elementor-icon-list-item:first-child .elementor-icon-list-icon {
+  display: none;
+}
+
+/* --------------------------------------------------------------------------
+   CAPÍTULOS: número gigante vazado ao fundo
+   -------------------------------------------------------------------------- */
+
+.un-chapter > .e-con-inner {
+  position: relative;
+}
+
+body .un-chapter .un-bignum.elementor-widget {
+  position: absolute;
+  top: -70px;
+  right: -10px;
+  z-index: 0;
+  width: auto;
+  margin: 0;
+  pointer-events: none;
+}
+
+.un-chapter .un-bignum .elementor-heading-title {
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(1, 6, 88, 0.08);
+}
+
+.un-chapter .un-bignum--dark .elementor-heading-title {
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.1);
+}
+
+.un-chapter > .e-con-inner > .e-con,
+.un-chapter > .e-con-inner > .elementor-element:not(.un-bignum) {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  body .un-chapter .un-bignum.elementor-widget {
+    top: -40px;
+    right: -6px;
+  }
+}
+
+/* Marca-texto que passa por trás da palavra quando o título entra na tela */
+.un-chapter .un-mark {
+  background: linear-gradient(transparent 62%, rgba(241, 5, 5, 0.18) 62%) no-repeat 0 0 / 100% 100%;
+  transition: background-size 1.2s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s;
+}
+
+.un-js .un-chapter .un-io:not(.is-in) .un-mark,
+.un-js .un-chapter .un-io.un-banner:not(.is-in) .un-mark {
+  background-size: 0% 100%;
+}
+
+/* Fotos: "cortina" de baixo para cima */
+.un-chapter .un-clip {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.un-chapter .un-clip.animated img {
+  animation: un-clip 1.4s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes un-clip {
+  from { clip-path: inset(100% 0 0 0); transform: scale(1.15); }
+  to   { clip-path: inset(0 0 0 0); transform: none; }
+}
+
+/* Pílulas de palavras-chave */
+.un-pills .elementor-icon-list-icon {
+  display: none;
+}
+
+.un-pills .elementor-icon-list-item {
+  padding: 9px 16px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(1, 6, 88, 0.12);
+  border-radius: 999px;
+  background-color: #FFFFFF;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.un-pills--dark .elementor-icon-list-item {
+  border-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+@media (hover: hover) {
+  .un-pills .elementor-icon-list-item:hover {
+    transform: translateY(-2px);
+    background-color: #010658;
+  }
+
+  .un-pills .elementor-icon-list-item:hover .elementor-icon-list-text {
+    color: #FFFFFF;
+  }
+
+  .un-pills--dark .elementor-icon-list-item:hover {
+    background-color: #F10505;
+  }
+}
+
+/* Checks em círculos */
+.un-checks .elementor-icon-list-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: rgba(241, 5, 5, 0.1);
+}
+
+/* Cards: sobem no hover e o ícone gira */
+.un-chapter .un-card {
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.45s ease, border-color 0.45s ease;
+}
+
+.un-chapter .un-card-icon .elementor-icon {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease, color 0.4s ease;
+}
+
+@media (hover: hover) {
+  .un-chapter .un-card:not(.un-tilt):hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(1, 6, 88, 0.12);
+  }
+
+  .un-chapter .un-card:hover .un-card-icon .elementor-icon {
+    transform: rotate(-10deg) scale(1.08);
+  }
+}
+
+/* Foto + selo flutuante */
+.un-chapter .un-media {
+  position: relative;
+}
+
+body .un-chapter .un-float-badge.e-con {
+  position: absolute;
+  left: -24px;
+  bottom: 36px;
+  z-index: 2;
+  transition: opacity 0.7s ease 0.5s, transform 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s;
+}
+
+.un-js .un-chapter .un-io:not(.is-in) .un-float-badge {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.92);
+}
+
+@media (max-width: 1024px) {
+  body .un-chapter .un-float-badge.e-con {
+    left: 16px;
+    bottom: -24px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   01 OLIMPÍADAS: medalha balançando
+   -------------------------------------------------------------------------- */
+
+.un-medal-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.un-medal-card::before {
+  content: "";
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  margin-left: -180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 184, 103, 0.25), transparent 65%);
+  pointer-events: none;
+}
+
+.un-medal {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin: 0 auto;
+  transform-origin: 50% 0;
+  animation: un-swing 4.5s ease-in-out infinite;
+}
+
+.un-medal-shine {
+  animation: un-twinkle 3s ease-in-out infinite;
+}
+
+@keyframes un-swing {
+  0%, 100% { transform: rotate(5deg); }
+  50%      { transform: rotate(-5deg); }
+}
+
+@keyframes un-twinkle {
+  0%, 100% { opacity: 0.15; }
+  50%      { opacity: 0.6; }
+}
+
+/* --------------------------------------------------------------------------
+   03 CLUBE DE LEITURA: palavras vazadas que se preenchem
+   -------------------------------------------------------------------------- */
+
+.un-words-list .un-fill-word .elementor-heading-title {
+  color: #010658;
+  background: linear-gradient(90deg, #F10505, #F10505) no-repeat 0 100% / 0 3px;
+  transition: color 0.8s ease, -webkit-text-stroke-color 0.8s ease, background-size 0.9s ease 0.2s;
+}
+
+.un-js .un-words-list .un-fill-word:not(.is-in) .elementor-heading-title {
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(1, 6, 88, 0.35);
+}
+
+.un-words-list .un-fill-word.is-in:last-child .elementor-heading-title {
+  color: #F10505;
+}
+
+@media (hover: hover) {
+  .un-words-list .un-fill-word .elementor-heading-title:hover {
+    background-size: 100% 3px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   04 PENSAMENTO COMPUTACIONAL: grade + terminal + cards com inclinação 3D
+   -------------------------------------------------------------------------- */
+
+.un-grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.un-term {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.2);
+  color: #FFB867;
+  font: 600 15px/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.un-term-prompt {
+  color: #F10505;
+}
+
+.un-term-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 23ch;
+  animation: un-type 2.6s steps(23) 0.6s both;
+}
+
+.un-term-caret {
+  width: 9px;
+  height: 18px;
+  background: #FFB867;
+  animation: un-blink 1s steps(1) infinite;
+}
+
+@keyframes un-type {
+  from { width: 0; }
+  to   { width: 23ch; }
+}
+
+@keyframes un-blink {
+  50% { opacity: 0; }
+}
+
+.un-chapter .un-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+@media (hover: hover) {
+  .un-chapter .un-tilt:hover {
+    border-color: rgba(255, 184, 103, 0.5);
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   06 BILÍNGUE: balões flutuando sobre a foto
+   -------------------------------------------------------------------------- */
+
+body .un-chapter .un-bubbles-wrap.elementor-widget {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  margin: 0;
+  pointer-events: none;
+}
+
+.un-bubble {
+  position: absolute;
+  padding: 14px 22px;
+  border-radius: 22px;
+  font: 800 26px/1 "Hanken Grotesk", sans-serif;
+  box-shadow: 0 16px 36px rgba(1, 6, 88, 0.2);
+  animation: un-bob 5s ease-in-out infinite;
+}
+
+.un-bubble--en {
+  top: 28px;
+  left: -22px;
+  border-bottom-left-radius: 4px;
+  background: #F10505;
+  color: #FFFFFF;
+}
+
+.un-bubble--pt {
+  right: -18px;
+  bottom: 44px;
+  border-bottom-right-radius: 4px;
+  background: #FFFFFF;
+  color: #010658;
+  animation-delay: -2.5s;
+}
+
+@media (max-width: 1024px) {
+  .un-bubble--en { left: 14px; }
+  .un-bubble--pt { right: 14px; }
+}
+
+@media (max-width: 767px) {
+  .un-bubble {
+    padding: 10px 16px;
+    font-size: 20px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   07 PROJETOS: etapas ligadas por uma linha que se desenha
+   -------------------------------------------------------------------------- */
+
+.un-steps {
+  position: relative;
+}
+
+.un-steps::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: calc((100% - 48px) / 3 - 30px); /* termina no centro da 3ª etapa */
+  height: 2px;
+  background: linear-gradient(90deg, #F10505, #FFB867);
+  transform-origin: 0 50%;
+  transition: transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s;
+}
+
+.un-js .un-steps:not(.is-in)::before {
+  transform: scaleX(0);
+}
+
+.un-step .un-step-dot .elementor-heading-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #F10505;
+  box-shadow: 0 0 0 8px #010658, 0 0 0 9px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+  .un-steps::before {
+    top: 30px;
+    bottom: 30px;
+    left: 29px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, #F10505, #FFB867);
+    transform-origin: 50% 0;
+  }
+
+  .un-js .un-steps:not(.is-in)::before {
+    transform: scaleY(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   CTA FINAL
+   -------------------------------------------------------------------------- */
+
+.un-cta-card {
+  position: relative;
+  isolation: isolate;
+}
+
+.un-cta-card::before,
+.un-cta-card::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 520px;
+  height: 520px;
+  margin: -260px 0 0 -260px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  animation: un-ring 6s ease-out infinite;
+  pointer-events: none;
+}
+
+.un-cta-card::after {
+  animation-delay: 3s;
+}
+
+.un-btn-whats .elementor-button {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.un-btn-whats .elementor-button:hover {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+}
+
+/* --------------------------------------------------------------------------
+   ÍNDICE LATERAL FIXO (criado pelo un-dif.js) - só em telas grandes
+   -------------------------------------------------------------------------- */
+
+.un-chapnav {
+  position: fixed;
+  top: 50%;
+  right: 22px;
+  z-index: 998;
+  display: none;
+  margin: 0;
+  padding: 12px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(1, 6, 88, 0.14);
+  list-style: none;
+  opacity: 0;
+  transform: translate(20px, -50%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.un-chapnav.is-visible {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+@media (min-width: 1200px) {
+  .un-chapnav {
+    display: block;
+  }
+}
+
+.un-chapnav li {
+  margin: 0;
+}
+
+.un-chapnav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  text-decoration: none;
+}
+
+.un-chapnav a::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(1, 6, 88, 0.25);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.un-chapnav a.is-active::before {
+  background: #F10505;
+  transform: scale(1.5);
+}
+
+.un-chapnav span {
+  position: absolute;
+  right: calc(100% + 10px);
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: #010658;
+  color: #FFFFFF;
+  font: 700 12px/1.2 "Hanken Grotesk", sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(6px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+}
+
+.un-chapnav a:hover span,
+.un-chapnav a.is-active span {
+  opacity: 1;
+  transform: none;
+}
+
+/* --------------------------------------------------------------------------
+   MOVIMENTO REDUZIDO
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .un-hero--dif::before,
+  .un-orbit-ring,
+  .un-orbit-bubble,
+  .un-medal,
+  .un-medal-shine,
+  .un-term-text,
+  .un-term-caret,
+  .un-bubble,
+  .un-cta-card::before,
+  .un-cta-card::after,
+  .un-chapter .un-clip.animated img {
+    animation: none;
+  }
+}
