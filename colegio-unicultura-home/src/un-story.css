@@ -68,7 +68,7 @@ body .un-hero > .elementor-element.un-story-wrap {
   left: var(--x);
   width: 3px;
   margin-left: -1.5px;
-  background: linear-gradient(180deg, rgba(255, 184, 103, 0), #FFB867 20%, #F10505 80%, rgba(241, 5, 5, 0));
+  background: linear-gradient(180deg, rgba(241, 5, 5, 0), #F10505 20%, #F10505 80%, rgba(241, 5, 5, 0));
   box-shadow: 0 0 24px 6px rgba(241, 5, 5, 0.45);
   opacity: var(--lo, 1);
   pointer-events: none;
@@ -92,77 +92,14 @@ body .un-hero > .elementor-element.un-story-wrap {
   transform: translate(-50%, -50%);
 }
 
-/* Selo "1º dia de aula ●━━● Formatura" */
-.un-story-time {
-  position: absolute;
-  right: 40px;
-  bottom: 150px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: 999px;
-  background: rgba(1, 6, 88, 0.55);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  color: rgba(255, 255, 255, 0.55);
-  font: 700 13px/1 "Hanken Grotesk", sans-serif;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-.un-story-time span {
-  transition: color 0.4s ease;
-}
-
-.un-story-bar {
-  position: relative;
-  width: 90px;
-  height: 4px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.un-story-bar i {
-  position: absolute;
-  inset: 0;
-  border-radius: 4px;
-  background: linear-gradient(90deg, #FFB867, #F10505);
-  transform: scaleX(var(--p));
-  transform-origin: 0 50%;
-}
-
-.un-story-bar::before,
-.un-story-bar::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  margin-top: -5px;
-  border-radius: 50%;
-  background: #FFB867;
-}
-
-.un-story-bar::before { left: -5px; }
-.un-story-bar::after  { right: -5px; background: #F10505; }
-
-.un-hero:not(.is-future) .un-story-time .un-t-a,
-.un-hero.is-future .un-story-time .un-t-b {
-  color: #FFFFFF;
-}
-
-/* Título: o trecho da foto atual fica destacado */
+/* Título: o trecho da foto atual ganha um marca-texto vermelho suave (o texto continua branco) */
 .un-hero .un-hl {
-  background: linear-gradient(transparent 64%, rgba(255, 184, 103, 0.35) 64%) no-repeat 0 0 / 0% 100%;
-  transition: background-size 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.4s ease;
+  background: linear-gradient(transparent 60%, rgba(241, 5, 5, 0.32) 60%) no-repeat 0 0 / 0% 100%;
+  transition: background-size 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
 .un-hero:not(.is-future) .un-hl--a,
 .un-hero.is-future .un-hl--b {
-  color: #FFB867;
   background-size: 100% 100%;
 }
 
@@ -186,20 +123,6 @@ body .un-hero > .elementor-element.un-story-wrap {
     width: 34px;
     height: 34px;
     font-size: 14px;
-  }
-
-  .un-story-time {
-    top: calc(62vw - 52px);
-    right: 50%;
-    bottom: auto;
-    transform: translateX(50%);
-    padding: 9px 14px;
-    font-size: 11px;
-    white-space: nowrap;
-  }
-
-  .un-story-bar {
-    width: 56px;
   }
 }
 

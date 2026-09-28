@@ -20,6 +20,8 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else (
 OUT_PAGE = os.path.join(HERE, "..", "home-story-elementor.json")
 OUT_HERO = os.path.join(HERE, "..", "hero-home-story-elementor.json")
 
+PHOTO_FORMATURA = "https://colegiounicultura.com.br/wp-content/uploads/2026/09/bg_1_unicultura.webp"
+
 TITLE = ('Do <span class="un-hl un-hl--a">primeiro dia de aula</span> à '
          '<span class="un-hl un-hl--b">formatura</span>, aqui começa a <strong>trajetória</strong> do seu filho.')
 
@@ -47,8 +49,6 @@ def story_widget(photo_a, photo_b):
         f'<div class="un-story-img un-story-img--b" style="background-image:url(\'{photo_b}\')"></div>'
         '<div class="un-story-shade"></div>'
         '<div class="un-story-line"><span class="un-story-handle">‹›</span></div>'
-        '<div class="un-story-time"><span class="un-t-a">1º dia de aula</span>'
-        '<span class="un-story-bar"><i></i></span><span class="un-t-b">Formatura</span></div>'
         '</div>'
     )
     return {
@@ -70,6 +70,7 @@ def main():
     photos = [img["url"] for img in s.get("background_slideshow_gallery", [])]
     if len(photos) < 2:
         sys.exit("O cartão .un-hero precisa ter as 2 fotos no slideshow (primeiro dia, formatura).")
+    photos[1] = PHOTO_FORMATURA  # a cliente trocou a foto da formatura
 
     # o fundo passa a ser só a cor; fotos e degradê agora vêm do widget da história
     for k in list(s):
@@ -78,6 +79,17 @@ def main():
     s["background_background"] = "classic"
     s["background_color"] = "#0D1261"
     card["elements"].insert(0, story_widget(photos[0], photos[1]))
+
+    # sem amarelo nos textos do hero: estrelas brancas, hover dos segmentos em vermelho suave
+    def recolor(e):
+        st = e["settings"] if isinstance(e["settings"], dict) else {}
+        if st.get("title_color", "").upper() == "#FFB867":
+            st["title_color"] = "#FFFFFF"
+        if st.get("text_color_hover", "").upper() == "#FFB867":
+            st["text_color_hover"] = "#FF8A8A"
+        for c in e.get("elements", []):
+            recolor(c)
+    recolor(card)
 
     title = find([card], lambda e: e.get("widgetType") == "heading" and "trajetória" in e["settings"].get("title", ""))
     if title:
