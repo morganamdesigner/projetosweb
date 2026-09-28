@@ -216,6 +216,12 @@ def build_aprofundar():
         "flex_gap": gap(22),
     }, [add(eyebrow("Rumo ao Ensino Médio", ORANGE), anim("fadeInUp")), title,
         add(body, anim("fadeInUp", 500))])
+    return photo_card_section(content, find(page["content"], "4f893229")["settings"]["background_image"],
+                              "un-aprofundar")
+
+
+def photo_card_section(content, background_image, section_class):
+    """Cartão azul com foto (degradê como o do hero; no celular a foto fica no topo)."""
     content["settings"]["margin_mobile"] = {"unit": "vw", "top": "62", "right": "0", "bottom": "0",
                                             "left": "0", "isLinked": False}
     card = container({
@@ -232,7 +238,7 @@ def build_aprofundar():
         "border_radius_mobile": dims(28),
         "background_background": "classic",
         "background_color": CARD_BG,
-        "background_image": find(page["content"], "4f893229")["settings"]["background_image"],
+        "background_image": background_image,
         "background_position": "center right",
         "background_repeat": "no-repeat",
         "background_size": "cover",
@@ -266,7 +272,7 @@ def build_aprofundar():
         "padding_mobile": dims(8, 12, 64, 12),
         "background_background": "classic",
         "background_color": PAGE_BG,
-        "css_classes": "gt-root un-aprofundar",
+        "css_classes": "gt-root " + section_class,
     }, [add(card, anim("fadeInUp"))], inner=False)
 
 

@@ -1,0 +1,141 @@
+/* ==========================================================================
+   Colégio Unicultura | Ensino Médio - efeitos próprios desta página
+   Vai embutido no widget HTML do topo, depois de un-home-v2.css, un-fund1.css e
+   un-fund2.css (cabeçalho, hero, .un-io/.is-in, faixa de palavras, cards, galeria...).
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   UMA TRAJETÓRIA QUE CONSOLIDA
+   -------------------------------------------------------------------------- */
+
+/* Card em destaque (ENEM e vestibulares): azul, com brilho passando */
+.un-proposta .un-prio--hl {
+  box-shadow: 0 16px 36px rgba(1, 6, 88, 0.22);
+}
+
+.un-proposta .un-prio--hl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+  transform: skewX(-18deg);
+  animation: un-shine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes un-shine {
+  0%, 55% { left: -60%; }
+  100%    { left: 130%; }
+}
+
+/* --------------------------------------------------------------------------
+   DIFERENCIAIS: chips claros sobre a foto
+   -------------------------------------------------------------------------- */
+
+.un-diferenciais .un-chips .elementor-icon-list-item {
+  padding: 8px 14px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+}
+
+/* --------------------------------------------------------------------------
+   MANIFESTO: caminho desenhado com o scroll + frase acendendo palavra por palavra
+   -------------------------------------------------------------------------- */
+
+.un-manifesto .e-con-inner > .elementor-element:not(.un-path-wrap) {
+  position: relative;
+  z-index: 1;
+}
+
+body .un-manifesto .un-path-wrap.elementor-widget {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 0;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.un-manifesto .un-path {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* --un-draw (0 a 1) vem do un-medio.js */
+.un-manifesto .un-path-line {
+  fill: none;
+  stroke: #FFB867;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--un-draw, 1));
+  opacity: 0.4;
+  vector-effect: non-scaling-stroke;
+}
+
+.un-manifesto .un-path-dot {
+  fill: #F10505;
+  stroke: #FFB867;
+  stroke-width: 3;
+  vector-effect: non-scaling-stroke;
+}
+
+/* "caminho próprio": laranja, itálico, com sublinhado que se desenha */
+.un-manifesto .un-way {
+  position: relative;
+  color: #FFB867;
+  font-style: italic;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.un-manifesto .un-way::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.06em;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #F10505;
+  transform: scaleX(var(--un-draw, 1));
+  transform-origin: 0 50%;
+}
+
+/* Frase: cada palavra começa apagada e acende com o scroll (as spans são criadas pelo JS) */
+.un-scrub .un-w {
+  opacity: 0.22;
+  transition: opacity 0.35s ease;
+}
+
+.un-scrub .un-w.is-on {
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .un-manifesto .un-way {
+    white-space: normal;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   MOVIMENTO REDUZIDO
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .un-proposta .un-prio--hl::before {
+    animation: none;
+    display: none;
+  }
+}

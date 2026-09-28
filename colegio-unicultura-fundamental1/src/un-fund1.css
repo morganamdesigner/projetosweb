@@ -32,8 +32,10 @@
   margin-left: -12px;
 }
 
-/* Segmentos: o item desta página (Fundamental I) fica destacado */
-.un-hero .un-segments--2 .elementor-icon-list-item:nth-child(2) .elementor-icon-list-text {
+/* Segmentos: o item da página atual fica destacado (--2 Fund. I, --3 Fund. II, --4 Ensino Médio) */
+.un-hero .un-segments--2 .elementor-icon-list-item:nth-child(2) .elementor-icon-list-text,
+.un-hero .un-segments--3 .elementor-icon-list-item:nth-child(3) .elementor-icon-list-text,
+.un-hero .un-segments--4 .elementor-icon-list-item:nth-child(4) .elementor-icon-list-text {
   color: #FFB867;
 }
 
