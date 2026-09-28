@@ -34,10 +34,11 @@ PHOTOS = [  # (id na Biblioteca de Mídia, arquivo) - as mesmas da galeria atual
     (337, "foto2-home.webp"),
     (338, "has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp"),
 ]
-# larguras variadas (ritmo "editorial"); cada fileira usa uma ordem diferente
-ROW_TOP = [(0, 440), (1, 320), (2, 520), (3, 360), (4, 460), (5, 340)]
-ROW_BOTTOM = [(3, 380), (5, 500), (0, 320), (4, 420), (1, 480), (2, 340)]
-GAP = 20
+# As fotos são verticais (480x652, proporção 0,736): molduras verticais na mesma proporção.
+# Uma faixa só, em "degraus" (fotos pares mais baixas, via CSS).
+PHOTO_W, PHOTO_H = 340, 462          # desktop
+PHOTO_W_M, PHOTO_H_M = 220, 299      # celular
+GAP = 24
 
 NAVY = "#010658"
 INK = "#1C1F4F"
@@ -45,7 +46,7 @@ RED = "#F10505"
 BG = "#F5F5F5"  # fundo atual da seção da galeria
 
 
-def photo(index, width, height, height_m):
+def photo(index):
     id_, file = PHOTOS[index]
     return widget("image", {
         "image": {"id": id_, "url": UPLOADS + file, "alt": "", "source": "library", "size": ""},
@@ -54,38 +55,40 @@ def photo(index, width, height, height_m):
         "link_to": "file",
         "open_lightbox": "yes",
         "width": px(100, "%"),
-        "height": px(height),
-        "height_mobile": px(height_m),
+        "height": px(PHOTO_H),
+        "height_mobile": px(PHOTO_H_M),
         "object-fit": "cover",
         "object-position": "center center",
         "image_border_radius": dims(24),
         "_element_width": "initial",
-        "_element_custom_width": px(width),
-        "_element_custom_width_mobile": px(round(width * 0.62)),
+        "_element_custom_width": px(PHOTO_W),
+        "_element_custom_width_mobile": px(PHOTO_W_M),
         "_css_classes": "un-gal-photo",
     })
 
 
-def photo_set(row, height, height_m, duplicate=False):
+def photo_set(duplicate=False):
     s = {
         "content_width": "full",
         "flex_direction": "row",
         "flex_direction_mobile": "row",
         "flex_wrap_mobile": "nowrap",
         "flex_gap": gap(GAP),
-        "flex_gap_mobile": gap(12),
+        "flex_gap_mobile": gap(14),
+        "flex_align_items": "flex-start",
         "padding": dims(0, GAP, 0, 0),  # = gap: a emenda com a cópia fica invisível
-        "padding_mobile": dims(0, 12, 0, 0),
+        "padding_mobile": dims(0, 14, 0, 0),
         "width": {"unit": "custom", "size": "max-content", "sizes": []},
         "_flex_size": "none",
         "css_classes": "un-gal-set" + (" un-gal-dup" if duplicate else ""),
     }
     if duplicate:
         s["_attributes"] = "aria-hidden|true"  # cópia só para o movimento contínuo (Pro)
-    return container(s, [photo(i, w, height, height_m) for i, w in row])
+    # as 6 fotos 2x por conjunto (~4.400px): sem vão nem em monitores muito largos
+    return container(s, [photo(i % len(PHOTOS)) for i in range(len(PHOTOS) * 2)])
 
 
-def photo_row(row, height, height_m, right=False):
+def photo_row():
     track = container({
         "content_width": "full",
         "flex_direction": "row",
@@ -94,7 +97,7 @@ def photo_row(row, height, height_m, right=False):
         "flex_gap": gap(0),
         "width": {"unit": "custom", "size": "max-content", "sizes": []},
         "css_classes": "un-gal-track",
-    }, [photo_set(row, height, height_m), photo_set(row, height, height_m, duplicate=True)])
+    }, [photo_set(), photo_set(duplicate=True)])
     return container({
         "content_width": "full",
         "width": px(100, "%"),
@@ -102,40 +105,35 @@ def photo_row(row, height, height_m, right=False):
         "flex_direction_mobile": "row",
         "flex_wrap_mobile": "nowrap",
         "overflow": "hidden",
-        "css_classes": "un-gal-row" + (" un-gal-row--right" if right else ""),
+        "padding": dims(0, 0, 56, 0),       # espaço para os "degraus"
+        "padding_mobile": dims(0, 0, 28, 0),
+        "css_classes": "un-gal-row",
     }, [track])
 
 
 def header():
     eyebrow = heading("Nosso dia a dia", "p", RED,
-                      typo("typography", HANKEN, 14, 700, lh=14, ls=1.4, transform="uppercase"))
+                      typo("typography", HANKEN, 14, 700, lh=14, ls=1.4, transform="uppercase"), align="center")
     title = heading('Momentos que <span style="color:#42468D;font-style:italic;font-weight:400">fazem história</span>',
                     "h2", NAVY,
-                    typo("typography", HANKEN, 52, 600, lh=56, ls=-2, size_t=44, size_m=34, lh_t=48, lh_m=38, ls_m=-1.2))
-    left = container({
-        "content_width": "full",
-        "flex_direction": "column",
-        "flex_gap": gap(14),
-        "_flex_size": "none",
-    }, [add(eyebrow, anim("fadeInUp")), add(title, anim("fadeIn", 100), classes="un-reveal")])
+                    typo("typography", HANKEN, 52, 600, lh=56, ls=-2, size_t=44, size_m=34, lh_t=48, lh_m=38, ls_m=-1.2),
+                    align="center")
     intro = text("<p>Descobertas, amizades, projetos e conquistas: um pouco do que se vive todos os dias na "
                  "Unicultura. <strong>Clique nas fotos para ampliar.</strong></p>",
-                 INK, typo("typography", HANKEN, 17, 400, lh=26, size_m=16, lh_m=24),
-                 extra={"_element_width": "initial", "_element_custom_width": px(420),
+                 INK, typo("typography", HANKEN, 17, 400, lh=26, size_m=16, lh_m=24), align="center",
+                 extra={"_element_width": "initial", "_element_custom_width": px(620),
                         "_element_custom_width_tablet": px(100, "%")})
     return container({
         "content_width": "boxed",
-        "boxed_width": px(1240),
-        "flex_direction": "row",
-        "flex_direction_tablet": "column",
-        "flex_justify_content": "space-between",
-        "flex_align_items": "flex-end",
-        "flex_align_items_tablet": "flex-start",
-        "flex_gap": gap(40),
-        "flex_gap_mobile": gap(16),
+        "boxed_width": px(760),
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_gap": gap(16),
         "padding": dims(0, 24, 0, 24),
         "padding_mobile": dims(0, 16, 0, 16),
-    }, [left, add(intro, anim("fadeInUp", 200))])
+    }, [add(eyebrow, anim("fadeInUp")),
+        add(title, anim("fadeIn", 100), classes="un-reveal"),
+        add(intro, anim("fadeInUp", 200))])
 
 
 def build_section():
@@ -147,7 +145,7 @@ def build_section():
         "flex_direction": "column",
         "flex_gap": gap(GAP),
         "flex_gap_mobile": gap(12),
-    }, [photo_row(ROW_TOP, 320, 200), photo_row(ROW_BOTTOM, 260, 170, right=True),
+    }, [photo_row(),
         widget("html", {"html": "<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"})])
     return container({
         "content_width": "full",

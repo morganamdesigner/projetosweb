@@ -160,21 +160,20 @@ Substitui a seção atual da galeria (carrossel de imagens) da Home. Gerador: `s
 
 | Parte | Como é |
 |---|---|
-| Cabeçalho | "NOSSO DIA A DIA" em vermelho, H2 "Momentos que *fazem história*" (itálico azul #42468D, entra com efeito de cortina) e um texto curto com "Clique nas fotos para ampliar". |
-| Fotos | **As 6 fotos da galeria atual**, com os mesmos IDs da Biblioteca de Mídia, então não há nada para trocar. Ficam em duas fileiras, com larguras variadas e cantos de 24 px. |
-| Movimento | As fileiras deslizam **sem parar em sentidos opostos**, com bordas laterais esmaecidas. Ao **rolar a página**, elas também deslizam para lados opostos. |
-| Hover | A fileira pausa, a foto sob o mouse cresce e as outras escurecem. Aparece um "+" vermelho. |
-| Clique | Abre a foto no **lightbox** nativo do Elementor (tela cheia). |
-| Celular | As fileiras continuam deslizando, com fotos menores. O toque abre a foto. |
-| Menos movimento | Fileiras paradas, com rolagem lateral manual. |
+| Cabeçalho | **Centralizado e empilhado**: "NOSSO DIA A DIA" em vermelho, H2 "Momentos que *fazem história*" (itálico azul #42468D, com efeito de cortina) e o texto embaixo, com até 620 px de largura. |
+| Fotos | **As 6 fotos da galeria atual** (mesmos IDs da Biblioteca de Mídia), em **molduras verticais na proporção delas (480×652)**: 340×462 no desktop e 220×299 no celular. Cantos de 24 px. |
+| Faixa | Uma faixa em **"degraus"**: as fotos pares ficam 56 px mais baixas (28 px no celular). |
+| Movimento | A faixa desliza sem parar e também anda com o scroll da página. As bordas laterais são esmaecidas. |
+| Hover | A faixa pausa, a foto em foco cresce e as outras escurecem. Aparece um "+" vermelho. |
+| Clique | Abre a foto no **lightbox** nativo do Elementor. |
+| Menos movimento | Faixa parada, com rolagem lateral manual. |
 
 **Adicionar ou trocar fotos:**
-- Cada fileira tem o **conjunto original** e uma **cópia** logo depois (`un-gal-dup`), que só serve para o movimento contínuo não ter emenda. Faça a mesma alteração nos dois.
-- Para mais fotos, duplique um widget de imagem dentro do conjunto e da cópia.
-- O texto alternativo de cada foto vem da Biblioteca de Mídia.
+- Cada conjunto repete as 6 fotos 2×, para não aparecer vão em telas largas.
+- O conjunto é seguido de uma **cópia** (`un-gal-dup`), que só existe para o movimento contínuo não ter emenda. Faça a mesma alteração nos dois.
+- Use fotos verticais na mesma proporção (480×652).
 
 **Como aplicar:**
 1. Importe o JSON.
-2. Na Home, apague a seção atual da galeria.
+2. Apague a seção atual da galeria na Home.
 3. Insira o template "Unicultura - Seção Galeria" no mesmo lugar.
-

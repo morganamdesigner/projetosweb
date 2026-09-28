@@ -1,7 +1,8 @@
 /* ==========================================================================
    Colégio Unicultura | Home - Seção "Galeria" (vai embutido no JSON dela)
-   Duas fileiras de fotos em movimento contínuo (sentidos opostos) que também
-   deslizam com o scroll (un-galeria.js). Hover: fileira pausa, foto em foco.
+   Uma faixa de fotos verticais (proporção 480x652) em "degraus", em movimento
+   contínuo, que também desliza com o scroll (un-galeria.js). Hover: faixa pausa,
+   foto em foco.
    Escopo: .un-gal
    ========================================================================== */
 
@@ -42,6 +43,17 @@
 /* Conjunto: padding igual ao gap, para a emenda da cópia ficar invisível */
 .un-gal .un-gal-set {
   flex-wrap: nowrap;
+}
+
+/* "Degraus": fotos pares um pouco mais baixas (ritmo sem cortar as fotos verticais) */
+.un-gal .un-gal-set > .un-gal-photo:nth-child(even) {
+  margin-top: 56px;
+}
+
+@media (max-width: 767px) {
+  .un-gal .un-gal-set > .un-gal-photo:nth-child(even) {
+    margin-top: 28px;
+  }
 }
 
 /* Foto */
