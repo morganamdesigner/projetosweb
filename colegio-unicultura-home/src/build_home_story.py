@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Hero da Home "do primeiro dia de aula à formatura", aplicado sobre o export atual da Home.
 
-Troca o slideshow do cartão azul por uma "linha do tempo": a linha de luz atravessa a foto do
-primeiro dia revelando a formatura, e o título destaca o trecho da foto atual (un-story.css/js,
+Troca o slideshow do cartão azul por uma "linha do tempo": a foto do primeiro dia dá lugar à
+formatura num fade suave (com leve zoom), e o título destaca o trecho da foto atual (un-story.css/js,
 embutidos num widget HTML dentro do próprio cartão). Mantém tudo o mais do export.
 Saídas: ../home-story-elementor.json (página inteira) e ../hero-home-story-elementor.json (só o topo)
 
@@ -20,7 +20,8 @@ SRC = sys.argv[1] if len(sys.argv) > 1 else (
 OUT_PAGE = os.path.join(HERE, "..", "home-story-elementor.json")
 OUT_HERO = os.path.join(HERE, "..", "hero-home-story-elementor.json")
 
-PHOTO_FORMATURA = "https://colegiounicultura.com.br/wp-content/uploads/2026/09/bg_1_unicultura.webp"
+PHOTO_PRIMEIRO_DIA = "https://colegiounicultura.com.br/wp-content/uploads/2026/09/group_14.webp"
+PHOTO_FORMATURA = "https://colegiounicultura.com.br/wp-content/uploads/2026/09/group_15.webp"
 
 TITLE = ('Do <span class="un-hl un-hl--a">primeiro dia de aula</span> à '
          '<span class="un-hl un-hl--b">formatura</span>, aqui começa a <strong>trajetória</strong> do seu filho.')
@@ -48,7 +49,6 @@ def story_widget(photo_a, photo_b):
         f'<div class="un-story-img un-story-img--a" style="background-image:url(\'{photo_a}\')"></div>'
         f'<div class="un-story-img un-story-img--b" style="background-image:url(\'{photo_b}\')"></div>'
         '<div class="un-story-shade"></div>'
-        '<div class="un-story-line"><span class="un-story-handle">‹›</span></div>'
         '</div>'
     )
     return {
@@ -70,7 +70,8 @@ def main():
     photos = [img["url"] for img in s.get("background_slideshow_gallery", [])]
     if len(photos) < 2:
         sys.exit("O cartão .un-hero precisa ter as 2 fotos no slideshow (primeiro dia, formatura).")
-    photos[1] = PHOTO_FORMATURA  # a cliente trocou a foto da formatura
+    photos[0] = PHOTO_PRIMEIRO_DIA  # fotos atuais da cliente
+    photos[1] = PHOTO_FORMATURA
 
     # o fundo passa a ser só a cor; fotos e degradê agora vêm do widget da história
     for k in list(s):

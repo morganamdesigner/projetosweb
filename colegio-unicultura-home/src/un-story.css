@@ -1,6 +1,6 @@
 /* Colégio Unicultura | Home - hero "do primeiro dia à formatura" (JS em un-story.js)
    Vai DENTRO do widget HTML da história, no cartão azul do hero (funciona sozinho).
-   --x (onde está a linha, em % da largura) e --p (0 = primeiro dia, 1 = formatura) vêm do JS. */
+   O JS alterna a classe .is-future no cartão: a formatura aparece num fade e o destaque do título troca. */
 
 /* O widget ocupa o cartão inteiro, atrás do conteúdo */
 body .un-hero > .elementor-element.un-story-wrap {
@@ -22,15 +22,13 @@ body .un-hero > .elementor-element.un-story-wrap {
 }
 
 .un-story {
-  --x: 100%;
-  --p: 0;
   position: absolute;
   inset: 0;
   overflow: hidden;
   background: #0D1261;
 }
 
-/* As duas fotos, uma sobre a outra; a formatura é "recortada" a partir da linha */
+/* As duas fotos, uma sobre a outra; a formatura surge por cima num fade suave */
 .un-story-img {
   position: absolute;
   inset: 0;
@@ -41,8 +39,15 @@ body .un-hero > .elementor-element.un-story-wrap {
 }
 
 .un-story-img--b {
-  clip-path: inset(0 0 0 var(--x));
+  opacity: 0;
+  scale: 1.05;
   animation-delay: -8s;
+  transition: opacity 1.8s cubic-bezier(0.4, 0, 0.2, 1), scale 2.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.un-hero.is-future .un-story-img--b {
+  opacity: 1;
+  scale: 1;
 }
 
 @keyframes un-story-zoom {
@@ -60,41 +65,9 @@ body .un-hero > .elementor-element.un-story-wrap {
   pointer-events: none;
 }
 
-/* Linha de luz na borda do recorte */
-.un-story-line {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: var(--x);
-  width: 3px;
-  margin-left: -1.5px;
-  background: linear-gradient(180deg, rgba(241, 5, 5, 0), #F10505 20%, #F10505 80%, rgba(241, 5, 5, 0));
-  box-shadow: 0 0 24px 6px rgba(241, 5, 5, 0.45);
-  opacity: var(--lo, 1);
-  pointer-events: none;
-}
-
-.un-story-handle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  color: #010658;
-  font: 800 18px/1 "Hanken Grotesk", sans-serif;
-  letter-spacing: 2px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transform: translate(-50%, -50%);
-}
-
 /* Título: o trecho da foto atual ganha um marca-texto vermelho suave (o texto continua branco) */
 .un-hero .un-hl {
-  background: linear-gradient(transparent 60%, rgba(241, 5, 5, 0.32) 60%) no-repeat 0 0 / 0% 100%;
+  background: linear-gradient(transparent 90%, rgba(241, 5, 5, 0.92) 60%) no-repeat 0 0 / 0% 100%;
   transition: background-size 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
@@ -113,21 +86,14 @@ body .un-hero > .elementor-element.un-story-wrap {
   .un-story-shade {
     background: linear-gradient(0deg, #0D1261 48%, rgba(13, 18, 97, 0.6) 58%, rgba(13, 18, 97, 0) 74%);
   }
-
-  .un-story-line {
-    bottom: auto;
-    height: 64vw;
-  }
-
-  .un-story-handle {
-    width: 34px;
-    height: 34px;
-    font-size: 14px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .un-story-img {
     animation: none;
+  }
+
+  .un-story-img--b {
+    transition: none;
   }
 }
