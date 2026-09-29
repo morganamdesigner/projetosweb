@@ -1,0 +1,918 @@
+{
+  "content": [
+    {
+      "id": "f6150ae",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "56",
+          "row": "56",
+          "isLinked": true,
+          "unit": "px",
+          "size": 56
+        },
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "html_tag": "section",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_justify_content": "flex-start",
+        "flex_align_items": "center",
+        "flex_gap_mobile": {
+          "column": "32",
+          "row": "32",
+          "isLinked": true,
+          "unit": "px",
+          "size": 32
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "64",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "16",
+          "bottom": "56",
+          "left": "16",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "shape_divider_top_color": "#010658",
+        "shape_divider_top_width": {
+          "unit": "%",
+          "size": 104,
+          "sizes": []
+        },
+        "shape_divider_top_height": {
+          "unit": "px",
+          "size": 66,
+          "sizes": []
+        },
+        "shape_divider_top_height_mobile": {
+          "unit": "px",
+          "size": 28,
+          "sizes": []
+        },
+        "css_classes": "gt-root gt-depois gt-next",
+        "__globals__": {
+          "background_color": "",
+          "shape_divider_top_color": ""
+        },
+        "flex_gap_tablet": {
+          "column": "24",
+          "row": "24",
+          "isLinked": true,
+          "unit": "px",
+          "size": 24
+        }
+      },
+      "elements": [
+        {
+          "id": "8dba87b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 42,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "min_height": {
+              "unit": "px",
+              "size": 460,
+              "sizes": []
+            },
+            "min_height_tablet": {
+              "unit": "px",
+              "size": 360,
+              "sizes": []
+            },
+            "min_height_mobile": {
+              "unit": "px",
+              "size": 260,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "css_classes": "gt-next-media"
+          },
+          "elements": [
+            {
+              "id": "3c9c2e7",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"gt-next-decor\" aria-hidden=\"true\"><span class=\"gt-next-blob\"></span><svg class=\"gt-star gt-star--1\" viewBox=\"0 0 24 24\"><path d=\"M12 2l2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4z\"/></svg><svg class=\"gt-star gt-star--2\" viewBox=\"0 0 24 24\"><path d=\"M12 2l2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4z\"/></svg><svg class=\"gt-star gt-star--3\" viewBox=\"0 0 24 24\"><path d=\"M12 2l2.6 6.6L21 11l-6.4 2.4L12 20l-2.6-6.6L3 11l6.4-2.4z\"/></svg><span class=\"gt-next-dot gt-next-dot--1\"></span><span class=\"gt-next-dot gt-next-dot--2\"></span></div>\n<style>\n/* Garatuja | Seção \"E depois da Garatuja?\" - vai DENTRO do widget HTML da própria seção.\n   Escopo: .gt-next   (a classe .is-in vem do gt-depois.js quando a seção aparece) */\n\n/* o anel e o brilho do círculo não podem criar rolagem lateral */\n.gt-next {\n  overflow: hidden;\n}\n\n.gt-next .gt-next-media {\n  position: relative;\n}\n\n/* Decoração atrás do leão: círculo amarelo, anel tracejado, estrelas e bolinhas */\nbody .gt-next .gt-next-decor-wrap.elementor-widget {\n  position: absolute;\n  inset: 0;\n  z-index: 0;\n  width: auto;\n  max-width: none;\n  margin: 0;\n  pointer-events: none;\n}\n\n.gt-next-decor-wrap .elementor-widget-container,\n.gt-next-decor {\n  position: absolute;\n  inset: 0;\n}\n\n.gt-next-blob {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: min(400px, 86%);\n  aspect-ratio: 1;\n  border-radius: 50%;\n  background: radial-gradient(circle at 35% 30%, #FFE08A, #F2CA50 70%);\n  transform: translate(-50%, -50%);\n  box-shadow: 0 30px 60px rgba(242, 202, 80, 0.35);\n}\n\n.gt-next-blob::after {\n  content: \"\";\n  position: absolute;\n  inset: -22px;\n  border: 2px dashed rgba(1, 6, 88, 0.18);\n  border-radius: 50%;\n  animation: gt-spin 40s linear infinite;\n}\n\n.gt-star {\n  position: absolute;\n  width: 28px;\n  height: 28px;\n  fill: #010658;\n  animation: gt-twinkle 3s ease-in-out infinite;\n}\n\n.gt-star--1 { top: 10%; left: 12%; }\n.gt-star--2 { top: 18%; right: 10%; width: 20px; height: 20px; fill: #F10505; animation-delay: -1s; }\n.gt-star--3 { bottom: 12%; right: 16%; width: 24px; height: 24px; animation-delay: -2s; }\n\n.gt-next-dot {\n  position: absolute;\n  border-radius: 50%;\n  background: #010658;\n  animation: gt-bob 5s ease-in-out infinite;\n}\n\n.gt-next-dot--1 { bottom: 20%; left: 10%; width: 14px; height: 14px; }\n.gt-next-dot--2 { top: 8%; left: 58%; width: 10px; height: 10px; background: #F10505; animation-delay: -2.5s; }\n\n/* Leão por cima, flutuando */\n.gt-next .gt-next-lion {\n  position: relative;\n  z-index: 1;\n}\n\n.gt-next .gt-next-lion img {\n  animation: gt-bob 6s ease-in-out infinite;\n  filter: drop-shadow(0 24px 28px rgba(1, 6, 88, 0.22));\n}\n\n@keyframes gt-bob {\n  0%, 100% { transform: translateY(0); }\n  50%      { transform: translateY(-12px); }\n}\n\n@keyframes gt-twinkle {\n  0%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }\n  50%      { transform: scale(0.6) rotate(20deg); opacity: 0.5; }\n}\n\n@keyframes gt-spin {\n  to { transform: rotate(360deg); }\n}\n\n/* Título: marca-texto amarelo em \"Garatuja?\" que se pinta ao aparecer */\n.gt-next .gt-mark {\n  background: linear-gradient(transparent 58%, rgba(242, 202, 80, 0.75) 58%) no-repeat 0 0 / 100% 100%;\n  transition: background-size 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) 0.4s;\n}\n\n.gt-next.gt-js:not(.is-in) .gt-mark {\n  background-size: 0% 100%;\n}\n\n/* --------------------------------------------------------------------------\n   TRILHA Garatuja -> Unicultura\n   -------------------------------------------------------------------------- */\n\n.gt-next .gt-chip {\n  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.4s ease;\n}\n\n.gt-next .gt-chip--garatuja {\n  box-shadow: 0 10px 26px rgba(242, 202, 80, 0.35);\n}\n\n.gt-next .gt-chip--unicultura {\n  box-shadow: 0 10px 26px rgba(241, 5, 5, 0.15);\n}\n\n@media (hover: hover) {\n  .gt-next .gt-chip:hover {\n    transform: translateY(-4px);\n  }\n}\n\n/* A linha ocupa o espaço entre os dois logos */\nbody .gt-next .gt-trail > .gt-trail-line-wrap.elementor-widget {\n  flex: 1 1 auto;\n  min-width: 60px;\n  width: auto;\n}\n\n.gt-trail-line {\n  position: relative;\n  height: 4px;\n  border-radius: 4px;\n  background: repeating-linear-gradient(90deg, rgba(1, 6, 88, 0.18) 0 8px, transparent 8px 14px);\n}\n\n/* Preenchimento amarelo -> vermelho que se desenha */\n.gt-trail-fill {\n  position: absolute;\n  inset: 0;\n  border-radius: 4px;\n  background: linear-gradient(90deg, #F2CA50, #F10505);\n  transform-origin: 0 50%;\n  transition: transform 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) 0.5s;\n}\n\n.gt-next.gt-js:not(.is-in) .gt-trail-fill {\n  transform: scaleX(0);\n}\n\n/* Ponta de seta no fim */\n.gt-trail-line::after {\n  content: \"\";\n  position: absolute;\n  top: 50%;\n  right: -2px;\n  width: 12px;\n  height: 12px;\n  border-top: 4px solid #F10505;\n  border-right: 4px solid #F10505;\n  border-radius: 2px;\n  transform: translateY(-50%) rotate(45deg);\n}\n\n/* Ponto viajando da Garatuja para a Unicultura */\n.gt-trail-dot {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  width: 16px;\n  height: 16px;\n  margin: -8px 0 0 -8px;\n  border: 3px solid #FFFFFF;\n  border-radius: 50%;\n  background: #010658;\n  box-shadow: 0 4px 10px rgba(1, 6, 88, 0.3);\n  animation: gt-travel 3.2s cubic-bezier(0.45, 0, 0.2, 1) infinite 2s;\n}\n\n@keyframes gt-travel {\n  0%   { left: 0; background: #F2CA50; }\n  80%  { left: calc(100% - 10px); background: #F10505; }\n  100% { left: calc(100% - 10px); background: #F10505; opacity: 0; }\n}\n\n/* Botão: seta que avança no hover */\n.gt-next .gt-next-btn .elementor-button-icon {\n  transition: transform 0.3s ease;\n}\n\n.gt-next .gt-next-btn .elementor-button:hover .elementor-button-icon {\n  transform: translateX(5px);\n}\n\nbody .gt-next .gt-trail.e-con {\n  width: 100%;\n  max-width: 620px;\n}\n\n/* Celular: trilha na vertical (a linha desce da Garatuja para a Unicultura) */\n@media (max-width: 767px) {\n  .gt-star { width: 20px; height: 20px; }\n\n  body .gt-next .gt-trail > .gt-trail-line-wrap.elementor-widget {\n    flex: 0 0 auto;\n    min-width: 0;\n    width: auto;\n  }\n\n  .gt-trail-line {\n    width: 4px;\n    height: 48px;\n    margin: 0 auto;\n    background: repeating-linear-gradient(180deg, rgba(1, 6, 88, 0.18) 0 7px, transparent 7px 12px);\n  }\n\n  .gt-trail-fill {\n    background: linear-gradient(180deg, #F2CA50, #F10505);\n    transform-origin: 50% 0;\n  }\n\n  .gt-next.gt-js:not(.is-in) .gt-trail-fill {\n    transform: scaleY(0);\n  }\n\n  .gt-trail-line::after {\n    top: auto;\n    right: auto;\n    bottom: -2px;\n    left: 50%;\n    transform: translateX(-50%) rotate(135deg);\n  }\n\n  .gt-trail-dot {\n    left: 50%;\n    width: 12px;\n    height: 12px;\n    margin: 0 0 0 -6px;\n    border-width: 2px;\n    animation-name: gt-travel-down;\n  }\n}\n\n@keyframes gt-travel-down {\n  0%   { top: 0; background: #F2CA50; }\n  80%  { top: calc(100% - 12px); background: #F10505; }\n  100% { top: calc(100% - 12px); background: #F10505; opacity: 0; }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .gt-next-blob::after,\n  .gt-star,\n  .gt-next-dot,\n  .gt-next .gt-next-lion img,\n  .gt-trail-dot {\n    animation: none;\n  }\n}\n</style>\n<script>\n/* Garatuja | Seção \"E depois da Garatuja?\": marca a seção com .is-in quando ela aparece\n   (a trilha se desenha e o marca-texto pinta o título). Sem JS/no editor, tudo aparece pronto. */\n(function () {\n  var script = document.currentScript;\n  var section = script && script.closest('.gt-next');\n  if (!section || document.body.classList.contains('elementor-editor-active')) {\n    return;\n  }\n  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {\n    return;\n  }\n  section.classList.add('gt-js');\n  var observer = new IntersectionObserver(function (entries) {\n    if (entries[0].isIntersecting) {\n      section.classList.add('is-in');\n      observer.disconnect();\n    }\n  }, { threshold: 0.3 });\n  observer.observe(section);\n})();\n</script>",
+                "_css_classes": "gt-next-decor-wrap"
+              },
+              "elements": []
+            },
+            {
+              "id": "caea7bc",
+              "settings": {
+                "image": {
+                  "id": "",
+                  "url": "https://colegiounicultura.com.br/wp-content/plugins/elementor/assets/images/placeholder.png"
+                },
+                "image_size": "full",
+                "align": "center",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 420,
+                  "sizes": []
+                },
+                "_element_custom_width_tablet": {
+                  "unit": "px",
+                  "size": 320,
+                  "sizes": []
+                },
+                "_element_custom_width_mobile": {
+                  "unit": "px",
+                  "size": 220,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_animation": "zoomIn",
+                "animation_duration": "fast",
+                "_css_classes": "gt-lion gt-next-lion"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "image",
+              "elType": "widget"
+            }
+          ]
+        },
+        {
+          "id": "91975d5",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "22",
+              "row": "22",
+              "isLinked": true,
+              "unit": "px",
+              "size": 22
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 58,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_align_items": "flex-start",
+            "flex_align_items_tablet": "center",
+            "flex_gap_mobile": {
+              "column": "18",
+              "row": "18",
+              "isLinked": true,
+              "unit": "px",
+              "size": 18
+            },
+            "css_classes": "gt-next-text"
+          },
+          "elements": [
+            {
+              "id": "0e7479f",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Próximo capítulo",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#010658",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.6,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "_element_width": "auto",
+                "_background_background": "classic",
+                "_background_color": "#F2CA50",
+                "_border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": true
+                },
+                "_padding": {
+                  "unit": "px",
+                  "top": "8",
+                  "right": "14",
+                  "bottom": "8",
+                  "left": "14",
+                  "isLinked": false
+                },
+                "_css_classes": "gt-next-eyebrow",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": "",
+                  "_background_color": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast"
+              },
+              "elements": []
+            },
+            {
+              "id": "dca4f2b",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "E depois da <span class=\"gt-mark\">Garatuja?</span>",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#010658",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 62,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 66,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -3.1,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 58,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -1.5,
+                  "sizes": []
+                },
+                "_css_classes": "gt-next-title",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 100
+              },
+              "elements": []
+            },
+            {
+              "id": "f429497",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>A jornada não para no 2º ano. A partir do 3º ano do Ensino Fundamental, seu filho segue crescendo — com a mesma essência, novos desafios — no Colégio Unicultura.</p>",
+                "align": "left",
+                "text_color": "#010658",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 26,
+                  "sizes": []
+                },
+                "typography_font_weight": "300",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 34,
+                  "sizes": []
+                },
+                "typography_font_style": "italic",
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 24,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 19,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 27,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 560,
+                  "sizes": []
+                },
+                "_element_custom_width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": []
+            },
+            {
+              "id": "81eba8e",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_wrap": "nowrap",
+                "flex_align_items": "center",
+                "flex_gap_mobile": {
+                  "column": "10",
+                  "row": "10",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 10
+                },
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "8",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "css_classes": "gt-trail",
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 300
+              },
+              "elements": [
+                {
+                  "id": "bc30952",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "18",
+                      "bottom": "14",
+                      "left": "18",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "10",
+                      "left": "12",
+                      "isLinked": false
+                    },
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "rgba(1, 6, 88, 0.1)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20",
+                      "isLinked": true
+                    },
+                    "border_radius_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "16",
+                      "left": "16",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none",
+                    "css_classes": "gt-chip gt-chip--garatuja",
+                    "__globals__": {
+                      "background_color": "",
+                      "border_color": ""
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "e7f6b99",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "id": 27,
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-garatuha.webp",
+                          "alt": "Escola Garatuja",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 46,
+                          "sizes": []
+                        },
+                        "height_mobile": {
+                          "unit": "px",
+                          "size": 38,
+                          "sizes": []
+                        },
+                        "object-fit": "contain",
+                        "align": "center",
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 130,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 120,
+                          "sizes": []
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "b8eb42a",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "até o 2º ano",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#010658",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 0.3,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "59c68f5",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"gt-trail-line\" aria-hidden=\"true\"><span class=\"gt-trail-fill\"></span><i class=\"gt-trail-dot\"></i></div>",
+                    "_css_classes": "gt-trail-line-wrap"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "248d4e9",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "18",
+                      "bottom": "14",
+                      "left": "18",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "width": {
+                      "unit": "custom",
+                      "size": "max-content",
+                      "sizes": []
+                    },
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "12",
+                      "right": "12",
+                      "bottom": "10",
+                      "left": "12",
+                      "isLinked": false
+                    },
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "rgba(1, 6, 88, 0.1)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "20",
+                      "bottom": "20",
+                      "left": "20",
+                      "isLinked": true
+                    },
+                    "border_radius_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "16",
+                      "left": "16",
+                      "isLinked": true
+                    },
+                    "_flex_size": "none",
+                    "css_classes": "gt-chip gt-chip--unicultura",
+                    "__globals__": {
+                      "background_color": "",
+                      "border_color": ""
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "9726f14",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "image",
+                      "settings": {
+                        "image": {
+                          "id": 79,
+                          "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-unicultura-svg-1.svg",
+                          "alt": "Colégio Unicultura",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "height": {
+                          "unit": "px",
+                          "size": 46,
+                          "sizes": []
+                        },
+                        "height_mobile": {
+                          "unit": "px",
+                          "size": 38,
+                          "sizes": []
+                        },
+                        "object-fit": "contain",
+                        "align": "center",
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 130,
+                          "sizes": []
+                        },
+                        "_element_custom_width_mobile": {
+                          "unit": "px",
+                          "size": 120,
+                          "sizes": []
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "0839c9a",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "do 3º ano ao Ensino Médio",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#010658",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 0.3,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "36988b3",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "button",
+              "settings": {
+                "text": "Conheça o Colégio Unicultura",
+                "link": {
+                  "url": "https://colegiounicultura.com.br/",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "size": "md",
+                "button_text_color": "#FFFFFF",
+                "hover_color": "#FFFFFF",
+                "text_padding": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "14",
+                  "bottom": "14",
+                  "left": "26",
+                  "isLinked": false
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": true
+                },
+                "background_background": "classic",
+                "background_color": "#010658",
+                "button_background_hover_background": "classic",
+                "button_background_hover_color": "#F10505",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "selected_icon": {
+                  "value": "fas fa-arrow-right",
+                  "library": "fa-solid"
+                },
+                "icon_align": "right",
+                "icon_indent": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "_css_classes": "gt-next-btn",
+                "__globals__": {
+                  "button_text_color": "",
+                  "hover_color": "",
+                  "background_color": "",
+                  "button_background_hover_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 400
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Garatuja - E depois da Garatuja?",
+  "type": "container"
+}
