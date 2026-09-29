@@ -1,0 +1,541 @@
+{
+  "content": [
+    {
+      "id": "a0d0732",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "36",
+          "row": "36",
+          "isLinked": true,
+          "unit": "px",
+          "size": 36
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "isLinked": false
+        },
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "flex_gap_mobile": {
+          "column": "24",
+          "row": "24",
+          "isLinked": true,
+          "unit": "px",
+          "size": 24
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "88",
+          "right": "0",
+          "bottom": "80",
+          "left": "0",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "0",
+          "bottom": "56",
+          "left": "0",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F5F5",
+        "css_classes": "gt-root un-car",
+        "__globals__": {
+          "background_color": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "3c9b848",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
+              "unit": "px",
+              "size": 24
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "24",
+              "bottom": "0",
+              "left": "24",
+              "isLinked": false
+            },
+            "content_width": "boxed",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1240,
+              "sizes": []
+            },
+            "flex_direction": "row",
+            "flex_direction_mobile": "column",
+            "flex_align_items": "flex-end",
+            "flex_align_items_mobile": "flex-start",
+            "flex_justify_content": "space-between",
+            "flex_gap_mobile": {
+              "column": "18",
+              "row": "18",
+              "isLinked": true,
+              "unit": "px",
+              "size": 18
+            },
+            "padding_mobile": {
+              "unit": "px",
+              "top": "0",
+              "right": "16",
+              "bottom": "0",
+              "left": "16",
+              "isLinked": false
+            }
+          },
+          "elements": [
+            {
+              "id": "85a41d7",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 12
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                }
+              },
+              "elements": [
+                {
+                  "id": "92ab83e",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Nosso dia a dia",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#F10505",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 1.4,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "be7bd90",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Momentos que <span class=\"un-mark-red\">fazem história</span>",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#010658",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 52,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -1.8,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_line_height_tablet": {
+                      "unit": "px",
+                      "size": 44,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing_mobile": {
+                      "unit": "px",
+                      "size": -1,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 100
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "692fd87",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Descobertas, amizades, projetos e conquistas. Toque nas fotos para ampliar.</p>",
+                    "align": "left",
+                    "text_color": "#1C1F4F",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 26,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 23,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    },
+                    "_animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "_animation_delay": 200
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "208fe7c",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"un-car-nav\"><button type=\"button\" class=\"un-car-btn un-car-prev\" aria-label=\"Foto anterior\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M15 5l-7 7 7 7\"/></svg></button><span class=\"un-car-count\" aria-live=\"polite\"><b>01</b> / 06</span><button type=\"button\" class=\"un-car-btn un-car-next\" aria-label=\"Próxima foto\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M9 5l7 7-7 7\"/></svg></button></div>\n<style>\n/* Colégio Unicultura | Carrossel de fotos (seção \"Galeria\" das páginas Unicultura)\n   Fotos verticais (480x652) numa trilha com rolagem nativa + encaixe (desliza com o dedo no\n   celular), setas, contador e barra de progresso (un-carrossel.js).\n   Vai DENTRO do widget HTML da própria seção: funciona em qualquer página. Escopo: .un-car */\n\n.un-car {\n  overflow: hidden;\n}\n\n/* Trilha: começa alinhada ao conteúdo e \"sangra\" até a borda direita da tela */\nbody .un-car .un-car-track.e-con {\n  --un-car-edge: max(16px, calc((100vw - 1240px) / 2 + 24px));\n  display: flex;\n  flex-wrap: nowrap !important;\n  gap: 20px;\n  overflow-x: auto;\n  overscroll-behavior-x: contain;\n  scroll-snap-type: x mandatory;\n  scroll-padding-left: var(--un-car-edge);\n  padding: 8px var(--un-car-edge) 24px !important;\n  scrollbar-width: none;\n  -webkit-overflow-scrolling: touch;\n  cursor: grab;\n}\n\n.un-car .un-car-track::-webkit-scrollbar {\n  display: none;\n}\n\n.un-car .un-car-track.is-dragging {\n  cursor: grabbing;\n  scroll-snap-type: none;\n  user-select: none;\n}\n\n/* Foto: proporção 480x652 */\nbody .un-car .un-car-track > .un-car-item.elementor-widget {\n  flex: 0 0 clamp(240px, 24vw, 340px);\n  width: clamp(240px, 24vw, 340px) !important;\n  max-width: none;\n  margin: 0;\n  scroll-snap-align: start;\n}\n\n.un-car .un-car-item .elementor-widget-container,\n.un-car .un-car-item a {\n  display: block;\n  overflow: hidden;\n  border-radius: 24px;\n}\n\n.un-car .un-car-item img {\n  display: block;\n  width: 100% !important;\n  height: auto !important;\n  aspect-ratio: 480 / 652;\n  object-fit: cover;\n  border-radius: 24px;\n  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);\n  -webkit-user-drag: none;\n  user-select: none;\n}\n\n@media (hover: hover) {\n  .un-car .un-car-item:hover img {\n    transform: scale(1.05);\n  }\n}\n\n/* Setas + contador */\n.un-car-nav {\n  display: flex;\n  align-items: center;\n  gap: 14px;\n}\n\n.un-car-btn {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 54px;\n  height: 54px;\n  padding: 0;\n  border: 1px solid rgba(1, 6, 88, 0.15);\n  border-radius: 50%;\n  background: #FFFFFF;\n  color: #010658;\n  cursor: pointer;\n  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease,\n    opacity 0.3s ease;\n}\n\n.un-car-btn svg {\n  width: 20px;\n  height: 20px;\n}\n\n.un-car-btn:hover:not(:disabled),\n.un-car-btn:focus-visible {\n  border-color: #F10505;\n  background: #F10505;\n  color: #FFFFFF;\n  transform: scale(1.06);\n}\n\n.un-car-btn:disabled {\n  opacity: 0.35;\n  cursor: default;\n}\n\n.un-car-count {\n  min-width: 64px;\n  white-space: nowrap;\n  color: #010658;\n  font: 700 15px/1 \"Hanken Grotesk\", sans-serif;\n  letter-spacing: 0.08em;\n  text-align: center;\n}\n\n.un-car-count b {\n  color: #F10505;\n}\n\n/* Barra de progresso sob as fotos */\n.un-car-progress {\n  height: 3px;\n  margin: 0 max(16px, calc((100vw - 1240px) / 2 + 24px));\n  border-radius: 3px;\n  background: rgba(1, 6, 88, 0.1);\n  overflow: hidden;\n}\n\n.un-car-progress i {\n  display: block;\n  height: 100%;\n  border-radius: 3px;\n  background: linear-gradient(90deg, #F10505, #FF5A36);\n  transform: scaleX(var(--un-car-p, 0.17));\n  transform-origin: 0 50%;\n  transition: transform 0.25s ease;\n}\n\n/* Título: marca-texto vermelho suave */\n.un-car .un-mark-red {\n  background: linear-gradient(transparent 60%, rgba(241, 5, 5, 0.22) 60%) no-repeat 0 0 / 100% 100%;\n}\n\n/* Celular: fotos maiores (a próxima aparece pela metade), setas menores */\n@media (max-width: 767px) {\n  body .un-car .un-car-track.e-con {\n    gap: 12px;\n  }\n\n  body .un-car .un-car-track > .un-car-item.elementor-widget {\n    flex-basis: 72vw;\n    width: 72vw !important;\n  }\n\n  .un-car-btn {\n    width: 46px;\n    height: 46px;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-car .un-car-track {\n    scroll-behavior: auto;\n  }\n\n  .un-car .un-car-item img {\n    transition: none;\n  }\n}\n</style>\n<script>\n/* Colégio Unicultura | Carrossel de fotos (CSS em un-carrossel.css).\n   Setas (uma foto por clique), contador \"01 / 06\", barra de progresso e arrastar com o mouse.\n   No celular a trilha já desliza com o dedo (rolagem nativa com encaixe). */\n(function () {\n  var script = document.currentScript;\n  var section = script && script.closest('.un-car');\n  if (!section) {\n    return;\n  }\n\n  // a trilha vem depois deste widget no HTML: começa quando a página terminar de carregar\n  function start() {\n    var track = section.querySelector('.un-car-track');\n    if (!track) {\n      return;\n    }\n    var items = Array.prototype.slice.call(track.querySelectorAll('.un-car-item'));\n    var prev = section.querySelector('.un-car-prev');\n    var next = section.querySelector('.un-car-next');\n    var count = section.querySelector('.un-car-count');\n    var progress = section.querySelector('.un-car-progress');\n    var total = items.length;\n    var smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';\n\n    function pad(n) {\n      return (n < 10 ? '0' : '') + n;\n    }\n\n    function step() {\n      if (items.length < 2) {\n        return track.clientWidth;\n      }\n      return items[1].getBoundingClientRect().left - items[0].getBoundingClientRect().left;\n    }\n\n    function current() {\n      var s = step() || 1;\n      return Math.max(0, Math.min(total - 1, Math.round(track.scrollLeft / s)));\n    }\n\n    // fotos inteiras na tela agora (no computador são várias; no celular, uma)\n    function visibleRange() {\n      var box = track.getBoundingClientRect();\n      var seen = [];\n      items.forEach(function (item, i) {\n        var r = item.getBoundingClientRect();\n        if (r.left >= box.left - 2 && r.right <= box.right + 2) {\n          seen.push(i);\n        }\n      });\n      if (!seen.length) {\n        var c = current();\n        return [c, c];\n      }\n      return [seen[0], seen[seen.length - 1]];\n    }\n\n    function update() {\n      var max = track.scrollWidth - track.clientWidth;\n      var atEnd = track.scrollLeft >= max - 4;\n      var range = visibleRange();\n      if (count) {\n        var label = range[0] === range[1] ? pad(range[0] + 1) : pad(range[0] + 1) + '–' + pad(range[1] + 1);\n        count.innerHTML = '<b>' + label + '</b> / ' + pad(total);\n      }\n      if (prev) {\n        prev.disabled = track.scrollLeft <= 4;\n      }\n      if (next) {\n        next.disabled = atEnd;\n      }\n      if (progress) {\n        var p = max > 0 ? track.scrollLeft / max : 1;\n        progress.style.setProperty('--un-car-p', Math.max(1 / total, p).toFixed(3));\n      }\n    }\n\n    function go(direction) {\n      track.scrollBy({ left: direction * step(), behavior: smooth });\n    }\n\n    if (prev) {\n      prev.addEventListener('click', function () { go(-1); });\n    }\n    if (next) {\n      next.addEventListener('click', function () { go(1); });\n    }\n    track.setAttribute('tabindex', '0');\n    track.setAttribute('aria-label', 'Galeria de fotos');\n    track.addEventListener('keydown', function (e) {\n      if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }\n      if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }\n    });\n\n    var ticking = false;\n    track.addEventListener('scroll', function () {\n      if (!ticking) {\n        ticking = true;\n        window.requestAnimationFrame(function () {\n          ticking = false;\n          update();\n        });\n      }\n    }, { passive: true });\n    window.addEventListener('resize', update);\n\n    // arrastar com o mouse (no toque a rolagem nativa já resolve)\n    var drag = null;\n    track.addEventListener('pointerdown', function (e) {\n      if (e.pointerType !== 'mouse' || e.button !== 0) {\n        return;\n      }\n      drag = { x: e.clientX, left: track.scrollLeft, moved: false };\n    });\n    window.addEventListener('pointermove', function (e) {\n      if (!drag) {\n        return;\n      }\n      var dx = e.clientX - drag.x;\n      if (!drag.moved && Math.abs(dx) > 6) {\n        drag.moved = true;\n        track.classList.add('is-dragging');\n      }\n      if (drag.moved) {\n        track.scrollLeft = drag.left - dx;\n      }\n    });\n    window.addEventListener('pointerup', function () {\n      if (!drag) {\n        return;\n      }\n      var moved = drag.moved;\n      drag = null;\n      track.classList.remove('is-dragging');\n      if (moved) {\n        // solta no encaixe mais próximo e não abre a foto\n        var s = step() || 1;\n        track.scrollTo({ left: Math.round(track.scrollLeft / s) * s, behavior: smooth });\n        var block = function (ev) {\n          ev.preventDefault();\n          ev.stopPropagation();\n        };\n        track.addEventListener('click', block, true);\n        window.setTimeout(function () {\n          track.removeEventListener('click', block, true);\n        }, 60);\n      }\n    });\n\n    update();\n  }\n\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start);\n  } else {\n    start();\n  }\n})();\n</script>",
+                "_css_classes": "un-car-nav-wrap",
+                "_flex_size": "none"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "2735a8c",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px",
+              "size": 20
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_direction_mobile": "row",
+            "flex_wrap": "nowrap",
+            "flex_wrap_mobile": "nowrap",
+            "css_classes": "un-car-track",
+            "animation": "fadeIn",
+            "animation_duration": "fast",
+            "animation_delay": 150
+          },
+          "elements": [
+            {
+              "id": "37b08b6",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 333,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-3-home.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 1",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            },
+            {
+              "id": "8020a86",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 334,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-4-home.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 2",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            },
+            {
+              "id": "2845f14",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 335,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-5-home.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 3",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            },
+            {
+              "id": "8005259",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 336,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto-6-home.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 4",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            },
+            {
+              "id": "1a7b2d7",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 337,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/foto2-home.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 5",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            },
+            {
+              "id": "cfe94c1",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "id": 338,
+                  "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/has_eae_slider_elementor_element_elementor_element_733a2199_e_flex_e_con_boxed_e_con_e_child.webp",
+                  "alt": "Dia a dia no Colégio Unicultura - foto 6",
+                  "source": "library",
+                  "size": ""
+                },
+                "image_size": "large",
+                "link_to": "file",
+                "open_lightbox": "yes",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "_css_classes": "un-car-item"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "88a3fad",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "settings": {
+            "html": "<div class=\"un-car-progress\" aria-hidden=\"true\"><i></i></div>"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Unicultura - Seção Galeria (carrossel)",
+  "type": "container"
+}

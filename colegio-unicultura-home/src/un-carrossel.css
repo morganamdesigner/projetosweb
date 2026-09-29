@@ -1,0 +1,173 @@
+/* Colégio Unicultura | Carrossel de fotos (seção "Galeria" das páginas Unicultura)
+   Fotos verticais (480x652) numa trilha com rolagem nativa + encaixe (desliza com o dedo no
+   celular), setas, contador e barra de progresso (un-carrossel.js).
+   Vai DENTRO do widget HTML da própria seção: funciona em qualquer página. Escopo: .un-car */
+
+.un-car {
+  overflow: hidden;
+}
+
+/* Trilha: começa alinhada ao conteúdo e "sangra" até a borda direita da tela */
+body .un-car .un-car-track.e-con {
+  --un-car-edge: max(16px, calc((100vw - 1240px) / 2 + 24px));
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--un-car-edge);
+  padding: 8px var(--un-car-edge) 24px !important;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.un-car .un-car-track::-webkit-scrollbar {
+  display: none;
+}
+
+.un-car .un-car-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+
+/* Foto: proporção 480x652 */
+body .un-car .un-car-track > .un-car-item.elementor-widget {
+  flex: 0 0 clamp(240px, 24vw, 340px);
+  width: clamp(240px, 24vw, 340px) !important;
+  max-width: none;
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.un-car .un-car-item .elementor-widget-container,
+.un-car .un-car-item a {
+  display: block;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.un-car .un-car-item img {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: 480 / 652;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+@media (hover: hover) {
+  .un-car .un-car-item:hover img {
+    transform: scale(1.05);
+  }
+}
+
+/* Setas + contador */
+.un-car-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.un-car-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 1px solid rgba(1, 6, 88, 0.15);
+  border-radius: 50%;
+  background: #FFFFFF;
+  color: #010658;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.un-car-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.un-car-btn:hover:not(:disabled),
+.un-car-btn:focus-visible {
+  border-color: #F10505;
+  background: #F10505;
+  color: #FFFFFF;
+  transform: scale(1.06);
+}
+
+.un-car-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.un-car-count {
+  min-width: 64px;
+  white-space: nowrap;
+  color: #010658;
+  font: 700 15px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.un-car-count b {
+  color: #F10505;
+}
+
+/* Barra de progresso sob as fotos */
+.un-car-progress {
+  height: 3px;
+  margin: 0 max(16px, calc((100vw - 1240px) / 2 + 24px));
+  border-radius: 3px;
+  background: rgba(1, 6, 88, 0.1);
+  overflow: hidden;
+}
+
+.un-car-progress i {
+  display: block;
+  height: 100%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #F10505, #FF5A36);
+  transform: scaleX(var(--un-car-p, 0.17));
+  transform-origin: 0 50%;
+  transition: transform 0.25s ease;
+}
+
+/* Título: marca-texto vermelho suave */
+.un-car .un-mark-red {
+  background: linear-gradient(transparent 60%, rgba(241, 5, 5, 0.22) 60%) no-repeat 0 0 / 100% 100%;
+}
+
+/* Celular: fotos maiores (a próxima aparece pela metade), setas menores */
+@media (max-width: 767px) {
+  body .un-car .un-car-track.e-con {
+    gap: 12px;
+  }
+
+  body .un-car .un-car-track > .un-car-item.elementor-widget {
+    flex-basis: 72vw;
+    width: 72vw !important;
+  }
+
+  .un-car-btn {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-car .un-car-track {
+    scroll-behavior: auto;
+  }
+
+  .un-car .un-car-item img {
+    transition: none;
+  }
+}
