@@ -39,7 +39,7 @@
     }
   }
 
-  update();
+  requestUpdate();  // no próximo quadro, não durante o carregamento
   window.addEventListener('scroll', requestUpdate, { passive: true });
   window.addEventListener('resize', requestUpdate);
 })();

@@ -15,14 +15,24 @@
   bar.setAttribute('aria-hidden', 'true');
   document.body.appendChild(bar);
 
+  // Lê primeiro e escreve depois (evita "reflow forçado"); a altura da página só é medida
+  // quando ela muda (load/resize), não a cada scroll.
   var ticking = false;
+  var max = 0;
+  var scrolled = null;
+  function measure() {
+    max = document.documentElement.scrollHeight - window.innerHeight;
+  }
   function onScroll() {
     ticking = false;
     var y = window.scrollY;
-    tops.forEach(function (el) {
-      el.classList.toggle('gt-scrolled', y > 40);
-    });
-    var max = document.documentElement.scrollHeight - window.innerHeight;
+    var isScrolled = y > 40;
+    if (isScrolled !== scrolled) {
+      scrolled = isScrolled;
+      tops.forEach(function (el) {
+        el.classList.toggle('gt-scrolled', isScrolled);
+      });
+    }
     bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
   }
   function requestScroll() {
@@ -31,9 +41,16 @@
       window.requestAnimationFrame(onScroll);
     }
   }
-  onScroll();
+  function remeasure() {
+    window.requestAnimationFrame(function () {
+      measure();
+      onScroll();
+    });
+  }
+  remeasure();  // no próximo quadro, não durante o carregamento
   window.addEventListener('scroll', requestScroll, { passive: true });
-  window.addEventListener('resize', requestScroll);
+  window.addEventListener('resize', remeasure);
+  window.addEventListener('load', remeasure);
 
   /* 3. Contador: o primeiro número do título com a classe .un-count (ex.: "+1.200 famílias")
         conta de 0 até o valor quando aparece. data-delay (ms) espera outra animação terminar. */

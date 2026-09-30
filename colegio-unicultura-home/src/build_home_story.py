@@ -45,6 +45,8 @@ def story_widget(photo_a, photo_b):
     css = open(os.path.join(HERE, "un-story.css"), encoding="utf-8").read().strip()
     js = open(os.path.join(HERE, "un-story.js"), encoding="utf-8").read().strip()
     markup = (
+        # a 1ª foto é o LCP da página: pré-carregada com prioridade alta
+        f'<link rel="preload" as="image" href="{photo_a}" fetchpriority="high">'
         '<div class="un-story" aria-hidden="true">'
         f'<div class="un-story-img un-story-img--a" style="background-image:url(\'{photo_a}\')"></div>'
         f'<div class="un-story-img un-story-img--b" style="background-image:url(\'{photo_b}\')"></div>'
@@ -96,6 +98,16 @@ def main():
     if title:
         title["settings"]["title"] = TITLE
         title["settings"]["header_size"] = "h1"
+
+    # scripts da página atualizados (sem reflow forçado no carregamento - PageSpeed)
+    for marker, js_file in (("Barra de progresso de leitura", "un-home-v2.js"), ("un-gal-shift", "un-galeria.js")):
+        holder = find(page["content"], lambda e: e.get("widgetType") == "html"
+                      and marker in (e["settings"].get("html") or ""))
+        if holder:
+            js = open(os.path.join(HERE, js_file), encoding="utf-8").read().strip()
+            h = holder["settings"]["html"]
+            a = h.index("<script>") + len("<script>")
+            holder["settings"]["html"] = h[:a] + "\n" + js + "\n" + h[h.index("</script>", a):]
 
     with open(OUT_PAGE, "w", encoding="utf-8") as fh:
         json.dump(page, fh, ensure_ascii=False, indent=2)
