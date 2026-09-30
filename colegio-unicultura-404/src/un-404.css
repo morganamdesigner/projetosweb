@@ -1,0 +1,199 @@
+/* Colégio Unicultura | Página 404 - vai DENTRO do widget HTML da própria página.
+   Escopo: .un-404   A agulha da bússola (o "0") procura o caminho e aponta para o botão
+   "Voltar para a Home"; passando o mouse num link, ela aponta para ele (un-404.js). */
+
+.un-404 {
+  overflow: hidden;
+}
+
+/* "4 [bússola] 4" */
+.un-404-art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.06em;
+  color: #FFFFFF;
+  font: 800 clamp(120px, 20vw, 240px)/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: -0.04em;
+  user-select: none;
+}
+
+.un-404-digit {
+  display: block;
+  animation: un404-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.un-404-digit:last-child {
+  animation-delay: 0.15s;
+}
+
+/* A bússola no lugar do zero */
+.un-404-compass {
+  position: relative;
+  width: 0.74em;
+  height: 0.74em;
+  margin: 0 0.04em;
+  border: 0.07em solid #FFFFFF;
+  border-radius: 50%;
+  animation: un404-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both, un404-bob 5s ease-in-out 1s infinite;
+}
+
+/* anel tracejado girando devagar */
+.un-404-ring {
+  position: absolute;
+  inset: -0.12em;
+  border: 2px dashed rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  animation: un404-spin 30s linear infinite;
+}
+
+/* marcas N / L / S / O */
+.un-404-ticks {
+  position: absolute;
+  inset: 0;
+}
+
+.un-404-ticks i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.03em;
+  height: 0.07em;
+  margin: -0.035em 0 0 -0.015em;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.un-404-ticks i:nth-child(1) { transform: rotate(0deg)   translateY(-0.26em); }
+.un-404-ticks i:nth-child(2) { transform: rotate(90deg)  translateY(-0.26em); }
+.un-404-ticks i:nth-child(3) { transform: rotate(180deg) translateY(-0.26em); }
+.un-404-ticks i:nth-child(4) { transform: rotate(270deg) translateY(-0.26em); }
+
+.un-404-needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.14em;
+  height: 0.46em;
+  margin: -0.23em 0 0 -0.07em;
+  transform: rotate(var(--un-404-a, 0deg));
+  transition: transform 1.1s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.un-404-needle svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.un-404.is-seeking .un-404-needle {
+  animation: un404-seek 2.6s ease-in-out both;
+}
+
+.un-404-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.07em;
+  height: 0.07em;
+  margin: -0.035em 0 0 -0.035em;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 0.015em #010658;
+}
+
+/* Brilho vermelho suave atrás do número */
+.un-404-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: 3.2em;
+  height: 1.6em;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(241, 5, 5, 0.28), rgba(241, 5, 5, 0));
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Pontinhos flutuando */
+.un-404-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  animation: un404-bob 6s ease-in-out infinite;
+}
+
+.un-404-dot--1 { top: 6%;  left: 8%;  width: 10px; height: 10px; }
+.un-404-dot--2 { top: 78%; left: 14%; width: 6px;  height: 6px; animation-delay: -2s; }
+.un-404-dot--3 { top: 12%; right: 10%; width: 8px; height: 8px; background: #F10505; animation-delay: -4s; }
+.un-404-dot--4 { bottom: 4%; right: 16%; width: 12px; height: 12px; background: rgba(255, 255, 255, 0.25); animation-delay: -1s; }
+
+@keyframes un404-in {
+  from { opacity: 0; transform: translateY(40px) scale(0.9); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes un404-bob {
+  0%, 100% { translate: 0 0; }
+  50%      { translate: 0 -10px; }
+}
+
+@keyframes un404-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* a agulha "procura" o caminho antes de apontar */
+@keyframes un404-seek {
+  0%   { transform: rotate(-60deg); }
+  25%  { transform: rotate(80deg); }
+  45%  { transform: rotate(-35deg); }
+  65%  { transform: rotate(30deg); }
+  82%  { transform: rotate(-10deg); }
+  100% { transform: rotate(var(--un-404-a, 0deg)); }
+}
+
+/* Título: marca-texto vermelho suave (o texto continua branco) */
+.un-404 .un-mark-red {
+  background: linear-gradient(transparent 62%, rgba(241, 5, 5, 0.55) 62%) no-repeat 0 0 / 100% 100%;
+}
+
+/* Botões: seta que avança no hover */
+.un-404 .elementor-button-icon {
+  transition: transform 0.3s ease;
+}
+
+.un-404 .elementor-button:hover .elementor-button-icon {
+  transform: translateX(4px);
+}
+
+.un-404 .un-404-pill .elementor-button {
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.un-404 .un-404-pill .elementor-button:hover,
+.un-404 .un-404-pill .elementor-button:focus-visible {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 767px) {
+  .un-404-art {
+    font-size: 34vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-404-digit,
+  .un-404-compass,
+  .un-404-ring,
+  .un-404-dot,
+  .un-404.is-seeking .un-404-needle {
+    animation: none;
+  }
+
+  .un-404-needle {
+    transition: none;
+  }
+}

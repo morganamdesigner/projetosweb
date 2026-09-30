@@ -1,0 +1,1101 @@
+{
+  "content": [
+    {
+      "id": "4cbdd86",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "40",
+          "row": "40",
+          "isLinked": true,
+          "unit": "px",
+          "size": 40
+        },
+        "padding": {
+          "unit": "px",
+          "top": "36",
+          "right": "24",
+          "bottom": "64",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1000,
+          "sizes": []
+        },
+        "html_tag": "main",
+        "min_height": {
+          "unit": "vh",
+          "size": 100,
+          "sizes": []
+        },
+        "flex_direction": "column",
+        "flex_align_items": "center",
+        "flex_justify_content": "space-between",
+        "flex_gap_mobile": {
+          "column": "28",
+          "row": "28",
+          "isLinked": true,
+          "unit": "px",
+          "size": 28
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "24",
+          "right": "16",
+          "bottom": "48",
+          "left": "16",
+          "isLinked": false
+        },
+        "background_background": "gradient",
+        "background_color": "#010658",
+        "background_color_stop": {
+          "unit": "%",
+          "size": 0,
+          "sizes": []
+        },
+        "background_color_b": "#0D1261",
+        "background_color_b_stop": {
+          "unit": "%",
+          "size": 100,
+          "sizes": []
+        },
+        "background_gradient_type": "radial",
+        "background_gradient_position": "center center",
+        "css_classes": "gt-root un-404",
+        "__globals__": {
+          "background_color": "",
+          "background_color_b": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "be991fa",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "image",
+          "settings": {
+            "image": {
+              "id": 814,
+              "url": "https://colegiounicultura.com.br/wp-content/uploads/2026/09/logo-branca-uni-1.svg",
+              "alt": "Colégio Unicultura",
+              "source": "library",
+              "size": ""
+            },
+            "image_size": "full",
+            "link_to": "custom",
+            "link": {
+              "url": "https://colegiounicultura.com.br/",
+              "is_external": "",
+              "nofollow": "",
+              "custom_attributes": ""
+            },
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "align": "center",
+            "_element_width": "initial",
+            "_element_custom_width": {
+              "unit": "px",
+              "size": 170,
+              "sizes": []
+            },
+            "_element_custom_width_mobile": {
+              "unit": "px",
+              "size": 140,
+              "sizes": []
+            },
+            "_animation": "fadeInDown",
+            "animation_duration": "fast"
+          },
+          "elements": []
+        },
+        {
+          "id": "d6296e6",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "18",
+              "row": "18",
+              "isLinked": true,
+              "unit": "px",
+              "size": 18
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "flex_justify_content": "center",
+            "flex_gap_mobile": {
+              "column": "14",
+              "row": "14",
+              "isLinked": true,
+              "unit": "px",
+              "size": 14
+            }
+          },
+          "elements": [
+            {
+              "id": "6d0ea86",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"un-404-art\" role=\"img\" aria-label=\"Erro 404\"><span class=\"un-404-glow\"></span><span class=\"un-404-dot un-404-dot--1\"></span><span class=\"un-404-dot un-404-dot--2\"></span><span class=\"un-404-dot un-404-dot--3\"></span><span class=\"un-404-dot un-404-dot--4\"></span><span class=\"un-404-digit\">4</span><span class=\"un-404-compass\"><span class=\"un-404-ring\"></span><span class=\"un-404-ticks\"><i></i><i></i><i></i><i></i></span><span class=\"un-404-needle\"><svg viewBox=\"0 0 20 60\"><path d=\"M10 0L20 30H0z\" fill=\"#F10505\"/><path d=\"M0 30h20L10 60z\" fill=\"#FFFFFF\"/></svg></span><span class=\"un-404-pin\"></span></span><span class=\"un-404-digit\">4</span></div>\n<style>\n/* Colégio Unicultura | Página 404 - vai DENTRO do widget HTML da própria página.\n   Escopo: .un-404   A agulha da bússola (o \"0\") procura o caminho e aponta para o botão\n   \"Voltar para a Home\"; passando o mouse num link, ela aponta para ele (un-404.js). */\n\n.un-404 {\n  overflow: hidden;\n}\n\n/* \"4 [bússola] 4\" */\n.un-404-art {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 0.06em;\n  color: #FFFFFF;\n  font: 800 clamp(120px, 20vw, 240px)/1 \"Hanken Grotesk\", sans-serif;\n  letter-spacing: -0.04em;\n  user-select: none;\n}\n\n.un-404-digit {\n  display: block;\n  animation: un404-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;\n}\n\n.un-404-digit:last-child {\n  animation-delay: 0.15s;\n}\n\n/* A bússola no lugar do zero */\n.un-404-compass {\n  position: relative;\n  width: 0.74em;\n  height: 0.74em;\n  margin: 0 0.04em;\n  border: 0.07em solid #FFFFFF;\n  border-radius: 50%;\n  animation: un404-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.08s both, un404-bob 5s ease-in-out 1s infinite;\n}\n\n/* anel tracejado girando devagar */\n.un-404-ring {\n  position: absolute;\n  inset: -0.12em;\n  border: 2px dashed rgba(255, 255, 255, 0.22);\n  border-radius: 50%;\n  animation: un404-spin 30s linear infinite;\n}\n\n/* marcas N / L / S / O */\n.un-404-ticks {\n  position: absolute;\n  inset: 0;\n}\n\n.un-404-ticks i {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0.03em;\n  height: 0.07em;\n  margin: -0.035em 0 0 -0.015em;\n  border-radius: 2px;\n  background: rgba(255, 255, 255, 0.55);\n}\n\n.un-404-ticks i:nth-child(1) { transform: rotate(0deg)   translateY(-0.26em); }\n.un-404-ticks i:nth-child(2) { transform: rotate(90deg)  translateY(-0.26em); }\n.un-404-ticks i:nth-child(3) { transform: rotate(180deg) translateY(-0.26em); }\n.un-404-ticks i:nth-child(4) { transform: rotate(270deg) translateY(-0.26em); }\n\n.un-404-needle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0.14em;\n  height: 0.46em;\n  margin: -0.23em 0 0 -0.07em;\n  transform: rotate(var(--un-404-a, 0deg));\n  transition: transform 1.1s cubic-bezier(0.34, 1.56, 0.64, 1);\n}\n\n.un-404-needle svg {\n  display: block;\n  width: 100%;\n  height: 100%;\n  overflow: visible;\n}\n\n.un-404.is-seeking .un-404-needle {\n  animation: un404-seek 2.6s ease-in-out both;\n}\n\n.un-404-pin {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  width: 0.07em;\n  height: 0.07em;\n  margin: -0.035em 0 0 -0.035em;\n  border-radius: 50%;\n  background: #FFFFFF;\n  box-shadow: 0 0 0 0.015em #010658;\n}\n\n/* Brilho vermelho suave atrás do número */\n.un-404-glow {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  z-index: -1;\n  width: 3.2em;\n  height: 1.6em;\n  border-radius: 50%;\n  background: radial-gradient(closest-side, rgba(241, 5, 5, 0.28), rgba(241, 5, 5, 0));\n  transform: translate(-50%, -50%);\n  pointer-events: none;\n}\n\n/* Pontinhos flutuando */\n.un-404-dot {\n  position: absolute;\n  border-radius: 50%;\n  background: rgba(255, 255, 255, 0.5);\n  animation: un404-bob 6s ease-in-out infinite;\n}\n\n.un-404-dot--1 { top: 6%;  left: 8%;  width: 10px; height: 10px; }\n.un-404-dot--2 { top: 78%; left: 14%; width: 6px;  height: 6px; animation-delay: -2s; }\n.un-404-dot--3 { top: 12%; right: 10%; width: 8px; height: 8px; background: #F10505; animation-delay: -4s; }\n.un-404-dot--4 { bottom: 4%; right: 16%; width: 12px; height: 12px; background: rgba(255, 255, 255, 0.25); animation-delay: -1s; }\n\n@keyframes un404-in {\n  from { opacity: 0; transform: translateY(40px) scale(0.9); }\n  to   { opacity: 1; transform: none; }\n}\n\n@keyframes un404-bob {\n  0%, 100% { translate: 0 0; }\n  50%      { translate: 0 -10px; }\n}\n\n@keyframes un404-spin {\n  to { transform: rotate(360deg); }\n}\n\n/* a agulha \"procura\" o caminho antes de apontar */\n@keyframes un404-seek {\n  0%   { transform: rotate(-60deg); }\n  25%  { transform: rotate(80deg); }\n  45%  { transform: rotate(-35deg); }\n  65%  { transform: rotate(30deg); }\n  82%  { transform: rotate(-10deg); }\n  100% { transform: rotate(var(--un-404-a, 0deg)); }\n}\n\n/* Título: marca-texto vermelho suave (o texto continua branco) */\n.un-404 .un-mark-red {\n  background: linear-gradient(transparent 62%, rgba(241, 5, 5, 0.55) 62%) no-repeat 0 0 / 100% 100%;\n}\n\n/* Botões: seta que avança no hover */\n.un-404 .elementor-button-icon {\n  transition: transform 0.3s ease;\n}\n\n.un-404 .elementor-button:hover .elementor-button-icon {\n  transform: translateX(4px);\n}\n\n.un-404 .un-404-pill .elementor-button {\n  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;\n}\n\n.un-404 .un-404-pill .elementor-button:hover,\n.un-404 .un-404-pill .elementor-button:focus-visible {\n  transform: translateY(-3px);\n}\n\n@media (max-width: 767px) {\n  .un-404-art {\n    font-size: 34vw;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-404-digit,\n  .un-404-compass,\n  .un-404-ring,\n  .un-404-dot,\n  .un-404.is-seeking .un-404-needle {\n    animation: none;\n  }\n\n  .un-404-needle {\n    transition: none;\n  }\n}\n</style>\n<script>\n/* Colégio Unicultura | Página 404 (CSS em un-404.css).\n   A agulha da bússola \"procura\" o caminho e depois aponta para o botão \"Voltar para a Home\".\n   Com o mouse (ou o foco do teclado) num botão/link da página, ela aponta para ele. */\n(function () {\n  var script = document.currentScript;\n  var page = script && script.closest('.un-404');\n  var needle = page && page.querySelector('.un-404-needle');\n  if (!needle) {\n    return;\n  }\n  var home = null;  // o botão vem depois deste widget: procurado quando a página carrega\n  var current = 0;\n\n  function pointTo(target) {\n    if (!target) {\n      return;\n    }\n    var n = needle.getBoundingClientRect();\n    var t = target.getBoundingClientRect();\n    var dx = t.left + t.width / 2 - (n.left + n.width / 2);\n    var dy = t.top + t.height / 2 - (n.top + n.height / 2);\n    var angle = Math.atan2(dx, -dy) * 180 / Math.PI;\n    // gira pelo caminho mais curto\n    while (angle - current > 180) { angle -= 360; }\n    while (angle - current < -180) { angle += 360; }\n    current = angle;\n    page.style.setProperty('--un-404-a', angle.toFixed(1) + 'deg');\n  }\n\n  function pointHome() {\n    pointTo(home);\n  }\n\n  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  function start() {\n    home = page.querySelector('.un-404-home .elementor-button');\n    page.querySelectorAll('.elementor-button').forEach(function (btn) {\n      btn.addEventListener('pointerenter', function () { pointTo(btn); });\n      btn.addEventListener('focus', function () { pointTo(btn); });\n      btn.addEventListener('pointerleave', pointHome);\n      btn.addEventListener('blur', pointHome);\n    });\n    pointHome();\n    if (!reduceMotion) {\n      page.classList.add('is-seeking');\n      needle.addEventListener('animationend', function () {\n        page.classList.remove('is-seeking');\n      }, { once: true });\n    }\n  }\n  if (document.readyState === 'loading') {\n    document.addEventListener('DOMContentLoaded', start);\n  } else {\n    start();\n  }\n  window.addEventListener('load', pointHome);\n  window.addEventListener('resize', pointHome);\n})();\n</script>",
+                "_css_classes": "un-404-art-wrap",
+                "_animation": "fadeIn",
+                "animation_duration": "fast"
+              },
+              "elements": []
+            },
+            {
+              "id": "7686443",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Página não encontrada",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.6,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "_element_width": "auto",
+                "_background_background": "classic",
+                "_background_color": "#F10505",
+                "_border_radius": {
+                  "unit": "px",
+                  "top": "999",
+                  "right": "999",
+                  "bottom": "999",
+                  "left": "999",
+                  "isLinked": true
+                },
+                "_padding": {
+                  "unit": "px",
+                  "top": "8",
+                  "right": "14",
+                  "bottom": "8",
+                  "left": "14",
+                  "isLinked": false
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": "",
+                  "_background_color": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": []
+            },
+            {
+              "id": "6c3fa58",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Ops! Esta página <span class=\"un-mark-red\">mudou de endereço</span>",
+                "header_size": "h1",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 58,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -2,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 50,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -1,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 300
+              },
+              "elements": []
+            },
+            {
+              "id": "e15d710",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Nosso site foi renovado e alguns links antigos deixaram de existir. Mas não se preocupe: a gente te ajuda a encontrar o caminho.</p>",
+                "align": "center",
+                "text_color": "rgba(255, 255, 255, 0.82)",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 19,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 29,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 25,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 600,
+                  "sizes": []
+                },
+                "_element_custom_width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 400
+              },
+              "elements": []
+            },
+            {
+              "id": "1010234",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "width": {
+                  "unit": "custom",
+                  "size": "max-content",
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_direction": "row",
+                "flex_direction_mobile": "column",
+                "flex_justify_content": "center",
+                "flex_align_items": "center",
+                "flex_align_items_mobile": "stretch",
+                "margin": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 500
+              },
+              "elements": [
+                {
+                  "id": "94733d1",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Voltar para a Home",
+                    "link": {
+                      "url": "https://colegiounicultura.com.br/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "align": "left",
+                    "size": "md",
+                    "button_text_color": "#FFFFFF",
+                    "hover_color": "#010658",
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "28",
+                      "bottom": "16",
+                      "left": "28",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "999",
+                      "right": "999",
+                      "bottom": "999",
+                      "left": "999",
+                      "isLinked": true
+                    },
+                    "background_background": "classic",
+                    "background_color": "#F10505",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "button_box_shadow_box_shadow_type": "yes",
+                    "button_box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 14,
+                      "blur": 30,
+                      "spread": 0,
+                      "color": "rgba(241, 5, 5, 0.35)"
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-arrow-right",
+                      "library": "fa-solid"
+                    },
+                    "icon_align": "right",
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "_css_classes": "un-404-home",
+                    "__globals__": {
+                      "button_text_color": "",
+                      "hover_color": "",
+                      "background_color": "",
+                      "button_background_hover_color": "",
+                      "typography_typography": ""
+                    },
+                    "align_mobile": "justify"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "96a724f",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Fale com a gente",
+                    "link": {
+                      "url": "https://colegiounicultura.com.br/contato/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "align": "left",
+                    "size": "md",
+                    "button_text_color": "#FFFFFF",
+                    "hover_color": "#010658",
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "26",
+                      "bottom": "15",
+                      "left": "26",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "999",
+                      "right": "999",
+                      "bottom": "999",
+                      "left": "999",
+                      "isLinked": true
+                    },
+                    "background_background": "classic",
+                    "background_color": "rgba(255, 255, 255, 0)",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "_css_classes": "un-404-contact",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "rgba(255, 255, 255, 0.4)",
+                    "button_hover_border_color": "#FFFFFF",
+                    "__globals__": {
+                      "button_text_color": "",
+                      "hover_color": "",
+                      "background_color": "",
+                      "button_background_hover_color": "",
+                      "typography_typography": "",
+                      "border_color": "",
+                      "button_hover_border_color": ""
+                    },
+                    "align_mobile": "justify"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "4df270a",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 12
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "margin": {
+                  "unit": "px",
+                  "top": "26",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "margin_mobile": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 600
+              },
+              "elements": [
+                {
+                  "id": "cb9a571",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Ou vá direto para:",
+                    "header_size": "p",
+                    "align": "center",
+                    "title_color": "rgba(255, 255, 255, 0.6)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "600",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 0.4,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "a4cd1f8",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "flex_direction": "row",
+                    "flex_direction_mobile": "row",
+                    "flex_wrap": "wrap",
+                    "flex_wrap_mobile": "wrap",
+                    "flex_justify_content": "center",
+                    "flex_gap_mobile": {
+                      "column": "8",
+                      "row": "8",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 8
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "a0b2182",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Fundamental I",
+                        "link": {
+                          "url": "https://colegiounicultura.com.br/fundamental-1/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "20",
+                          "bottom": "12",
+                          "left": "20",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.06)",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#F10505",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-404-pill",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(255, 255, 255, 0.22)",
+                        "button_hover_border_color": "#F10505",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": "",
+                          "border_color": "",
+                          "button_hover_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "f8756d2",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Fundamental II",
+                        "link": {
+                          "url": "https://colegiounicultura.com.br/fundamental-2/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "20",
+                          "bottom": "12",
+                          "left": "20",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.06)",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#F10505",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-404-pill",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(255, 255, 255, 0.22)",
+                        "button_hover_border_color": "#F10505",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": "",
+                          "border_color": "",
+                          "button_hover_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "12ff444",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Ensino Médio",
+                        "link": {
+                          "url": "https://colegiounicultura.com.br/ensino-medio/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "20",
+                          "bottom": "12",
+                          "left": "20",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.06)",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#F10505",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-404-pill",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(255, 255, 255, 0.22)",
+                        "button_hover_border_color": "#F10505",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": "",
+                          "border_color": "",
+                          "button_hover_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "c8d90ff",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Diferenciais",
+                        "link": {
+                          "url": "https://colegiounicultura.com.br/diferenciais/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "20",
+                          "bottom": "12",
+                          "left": "20",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.06)",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#F10505",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-404-pill",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(255, 255, 255, 0.22)",
+                        "button_hover_border_color": "#F10505",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": "",
+                          "border_color": "",
+                          "button_hover_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "21c3cf7",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "button",
+                      "settings": {
+                        "text": "Garatuja",
+                        "link": {
+                          "url": "https://colegiounicultura.com.br/garatuja/",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        },
+                        "align": "left",
+                        "size": "md",
+                        "button_text_color": "#FFFFFF",
+                        "hover_color": "#FFFFFF",
+                        "text_padding": {
+                          "unit": "px",
+                          "top": "12",
+                          "right": "20",
+                          "bottom": "12",
+                          "left": "20",
+                          "isLinked": false
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "background_background": "classic",
+                        "background_color": "rgba(255, 255, 255, 0.06)",
+                        "button_background_hover_background": "classic",
+                        "button_background_hover_color": "#F10505",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "600",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 18,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-404-pill",
+                        "border_border": "solid",
+                        "border_width": {
+                          "unit": "px",
+                          "top": "1",
+                          "right": "1",
+                          "bottom": "1",
+                          "left": "1",
+                          "isLinked": true
+                        },
+                        "border_color": "rgba(255, 255, 255, 0.22)",
+                        "button_hover_border_color": "#F10505",
+                        "__globals__": {
+                          "button_text_color": "",
+                          "hover_color": "",
+                          "background_color": "",
+                          "button_background_hover_color": "",
+                          "typography_typography": "",
+                          "border_color": "",
+                          "button_hover_border_color": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "27d506a",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "spacer",
+          "settings": {
+            "space": {
+              "unit": "px",
+              "size": 1,
+              "sizes": []
+            }
+          },
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Unicultura - Página 404",
+  "type": "error-404"
+}
