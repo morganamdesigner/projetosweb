@@ -1,0 +1,189 @@
+/* Colégio Unicultura | Seção FAQ - vai DENTRO do widget HTML da própria seção. Escopo: .un-faq
+   Coluna da esquerda fixa (sticky) no computador; à direita, cartões do acordeão aninhado do
+   Elementor com número, ícone +/- e o item aberto destacado. */
+
+/* Coluna da esquerda acompanha a rolagem (só no computador) */
+@media (min-width: 1025px) {
+  body .un-faq .un-faq-side.e-con {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+/* Widget do estilo não ocupa espaço */
+body .un-faq .un-faq-style.elementor-widget {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Título: marca-texto vermelho suave */
+.un-faq .un-mark-red {
+  background: linear-gradient(transparent 62%, rgba(241, 5, 5, 0.18) 62%) no-repeat 0 0 / 100% 100%;
+}
+
+/* ---------- Cartões das perguntas ---------- */
+.un-faq .e-n-accordion {
+  counter-reset: un-faq;
+}
+
+.un-faq .e-n-accordion-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(1, 6, 88, 0.08);
+  border-radius: 20px;
+  background: #FFFFFF;
+  box-shadow: 0 6px 18px rgba(1, 6, 88, 0.04);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;
+}
+
+/* faixa vermelha à esquerda no item aberto */
+.un-faq .e-n-accordion-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: #F10505;
+  transform: scaleY(0);
+  transform-origin: 50% 0;
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.un-faq .e-n-accordion-item[open] {
+  border-color: rgba(1, 6, 88, 0.12);
+  box-shadow: 0 18px 40px rgba(1, 6, 88, 0.1);
+}
+
+.un-faq .e-n-accordion-item[open]::after {
+  transform: scaleY(1);
+}
+
+@media (hover: hover) {
+  .un-faq .e-n-accordion-item:not([open]):hover {
+    border-color: rgba(241, 5, 5, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+/* Linha do título: número + pergunta + ícone */
+.un-faq .e-n-accordion-item-title {
+  cursor: pointer;
+}
+
+.un-faq .e-n-accordion-item-title-header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.un-faq .e-n-accordion-item-title-header::before {
+  counter-increment: un-faq;
+  content: counter(un-faq, decimal-leading-zero);
+  flex: none;
+  min-width: 26px;
+  color: #F10505;
+  font: 800 14px/1 "Hanken Grotesk", sans-serif;
+  letter-spacing: 0.06em;
+}
+
+/* Ícone + / - num círculo */
+.un-faq .e-n-accordion-item-title-icon {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #F1F2F8;
+  transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.un-faq .e-n-accordion-item[open] .e-n-accordion-item-title-icon {
+  background: #F10505;
+  transform: rotate(180deg);
+}
+
+/* ---------- Respostas ---------- */
+.un-faq .un-faq-answer p {
+  margin: 0 0 14px;
+}
+
+.un-faq .un-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+/* Lista de documentos com "check" vermelho, em 2 colunas no computador */
+.un-faq .un-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 22px;
+  margin: 4px 0 18px;
+  padding: 0;
+  list-style: none;
+}
+
+.un-faq .un-faq-list li {
+  position: relative;
+  padding-left: 30px;
+  line-height: 1.45;
+}
+
+.un-faq .un-faq-list li::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(241, 5, 5, 0.1)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F10505' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E")
+    center / 12px no-repeat;
+}
+
+/* Observação no fim da resposta */
+.un-faq .un-faq-note {
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #F5F6FA;
+  color: #010658;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Cartão de ajuda: seta do botão avança no hover */
+.un-faq .un-faq-help .elementor-button-icon {
+  transition: transform 0.3s ease;
+}
+
+.un-faq .un-faq-help .elementor-button:hover .elementor-button-icon {
+  transform: translateX(4px);
+}
+
+@media (max-width: 767px) {
+  .un-faq .e-n-accordion-item-title-header {
+    gap: 12px;
+  }
+
+  .un-faq .e-n-accordion-item-title-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .un-faq .un-faq-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-faq .e-n-accordion-item,
+  .un-faq .e-n-accordion-item::after,
+  .un-faq .e-n-accordion-item-title-icon {
+    transition: none;
+  }
+}

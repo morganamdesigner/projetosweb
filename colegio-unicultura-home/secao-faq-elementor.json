@@ -1,0 +1,964 @@
+{
+  "content": [
+    {
+      "id": "cc1a43c",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "64",
+          "row": "64",
+          "isLinked": true,
+          "unit": "px",
+          "size": 64
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "boxed",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "html_tag": "section",
+        "flex_direction": "row",
+        "flex_direction_tablet": "column",
+        "flex_align_items": "flex-start",
+        "flex_align_items_tablet": "stretch",
+        "flex_gap_tablet": {
+          "column": "36",
+          "row": "36",
+          "isLinked": true,
+          "unit": "px",
+          "size": 36
+        },
+        "flex_wrap": "nowrap",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "88",
+          "right": "24",
+          "bottom": "88",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "16",
+          "bottom": "64",
+          "left": "16",
+          "isLinked": false
+        },
+        "background_background": "classic",
+        "background_color": "#F5F6FA",
+        "css_classes": "gt-root un-faq",
+        "__globals__": {
+          "background_color": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "8a07ba5",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "14",
+              "row": "14",
+              "isLinked": true,
+              "unit": "px",
+              "size": 14
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 38,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column",
+            "css_classes": "un-faq-side"
+          },
+          "elements": [
+            {
+              "id": "1876a83",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<style>\n/* Colégio Unicultura | Seção FAQ - vai DENTRO do widget HTML da própria seção. Escopo: .un-faq\n   Coluna da esquerda fixa (sticky) no computador; à direita, cartões do acordeão aninhado do\n   Elementor com número, ícone +/- e o item aberto destacado. */\n\n/* Coluna da esquerda acompanha a rolagem (só no computador) */\n@media (min-width: 1025px) {\n  body .un-faq .un-faq-side.e-con {\n    position: sticky;\n    top: 120px;\n  }\n}\n\n/* Widget do estilo não ocupa espaço */\nbody .un-faq .un-faq-style.elementor-widget {\n  position: absolute;\n  width: 0;\n  height: 0;\n  margin: 0;\n  overflow: hidden;\n}\n\n/* Título: marca-texto vermelho suave */\n.un-faq .un-mark-red {\n  background: linear-gradient(transparent 62%, rgba(241, 5, 5, 0.18) 62%) no-repeat 0 0 / 100% 100%;\n}\n\n/* ---------- Cartões das perguntas ---------- */\n.un-faq .e-n-accordion {\n  counter-reset: un-faq;\n}\n\n.un-faq .e-n-accordion-item {\n  position: relative;\n  overflow: hidden;\n  border: 1px solid rgba(1, 6, 88, 0.08);\n  border-radius: 20px;\n  background: #FFFFFF;\n  box-shadow: 0 6px 18px rgba(1, 6, 88, 0.04);\n  transition: box-shadow 0.35s ease, border-color 0.35s ease, transform 0.35s ease;\n}\n\n/* faixa vermelha à esquerda no item aberto */\n.un-faq .e-n-accordion-item::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  width: 4px;\n  background: #F10505;\n  transform: scaleY(0);\n  transform-origin: 50% 0;\n  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.un-faq .e-n-accordion-item[open] {\n  border-color: rgba(1, 6, 88, 0.12);\n  box-shadow: 0 18px 40px rgba(1, 6, 88, 0.1);\n}\n\n.un-faq .e-n-accordion-item[open]::after {\n  transform: scaleY(1);\n}\n\n@media (hover: hover) {\n  .un-faq .e-n-accordion-item:not([open]):hover {\n    border-color: rgba(241, 5, 5, 0.25);\n    transform: translateY(-2px);\n  }\n}\n\n/* Linha do título: número + pergunta + ícone */\n.un-faq .e-n-accordion-item-title {\n  cursor: pointer;\n}\n\n.un-faq .e-n-accordion-item-title-header {\n  display: flex;\n  align-items: baseline;\n  gap: 16px;\n}\n\n.un-faq .e-n-accordion-item-title-header::before {\n  counter-increment: un-faq;\n  content: counter(un-faq, decimal-leading-zero);\n  flex: none;\n  min-width: 26px;\n  color: #F10505;\n  font: 800 14px/1 \"Hanken Grotesk\", sans-serif;\n  letter-spacing: 0.06em;\n}\n\n/* Ícone + / - num círculo */\n.un-faq .e-n-accordion-item-title-icon {\n  display: flex;\n  flex: none;\n  align-items: center;\n  justify-content: center;\n  width: 40px;\n  height: 40px;\n  border-radius: 50%;\n  background: #F1F2F8;\n  transition: background-color 0.3s ease, transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);\n}\n\n.un-faq .e-n-accordion-item[open] .e-n-accordion-item-title-icon {\n  background: #F10505;\n  transform: rotate(180deg);\n}\n\n/* ---------- Respostas ---------- */\n.un-faq .un-faq-answer p {\n  margin: 0 0 14px;\n}\n\n.un-faq .un-faq-answer p:last-child {\n  margin-bottom: 0;\n}\n\n/* Lista de documentos com \"check\" vermelho, em 2 colunas no computador */\n.un-faq .un-faq-list {\n  display: grid;\n  grid-template-columns: repeat(2, minmax(0, 1fr));\n  gap: 10px 22px;\n  margin: 4px 0 18px;\n  padding: 0;\n  list-style: none;\n}\n\n.un-faq .un-faq-list li {\n  position: relative;\n  padding-left: 30px;\n  line-height: 1.45;\n}\n\n.un-faq .un-faq-list li::before {\n  content: \"\";\n  position: absolute;\n  top: 1px;\n  left: 0;\n  width: 20px;\n  height: 20px;\n  border-radius: 50%;\n  background: rgba(241, 5, 5, 0.1)\n    url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F10505' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E\")\n    center / 12px no-repeat;\n}\n\n/* Observação no fim da resposta */\n.un-faq .un-faq-note {\n  padding: 14px 16px;\n  border-radius: 14px;\n  background: #F5F6FA;\n  color: #010658;\n  font-size: 15px;\n  line-height: 1.5;\n}\n\n/* Cartão de ajuda: seta do botão avança no hover */\n.un-faq .un-faq-help .elementor-button-icon {\n  transition: transform 0.3s ease;\n}\n\n.un-faq .un-faq-help .elementor-button:hover .elementor-button-icon {\n  transform: translateX(4px);\n}\n\n@media (max-width: 767px) {\n  .un-faq .e-n-accordion-item-title-header {\n    gap: 12px;\n  }\n\n  .un-faq .e-n-accordion-item-title-icon {\n    width: 34px;\n    height: 34px;\n  }\n\n  .un-faq .un-faq-list {\n    grid-template-columns: 1fr;\n  }\n}\n\n@media (prefers-reduced-motion: reduce) {\n  .un-faq .e-n-accordion-item,\n  .un-faq .e-n-accordion-item::after,\n  .un-faq .e-n-accordion-item-title-icon {\n    transition: none;\n  }\n}\n</style>",
+                "_css_classes": "un-faq-style"
+              },
+              "elements": []
+            },
+            {
+              "id": "43f36b0",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Tire suas dúvidas",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#F10505",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast"
+              },
+              "elements": []
+            },
+            {
+              "id": "1a66d98",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Perguntas <span class=\"un-mark-red\">frequentes</span>",
+                "header_size": "h2",
+                "align": "left",
+                "title_color": "#010658",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 48,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -1.8,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 32,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -1,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 100
+              },
+              "elements": []
+            },
+            {
+              "id": "22f5680",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "text-editor",
+              "settings": {
+                "editor": "<p>Reunimos as respostas para as dúvidas mais comuns das famílias sobre aulas, matrícula, transporte e período integral.</p>",
+                "align": "left",
+                "text_color": "#3B3F6B",
+                "typography_typography": "custom",
+                "typography_font_family": "Hanken Grotesk",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 27,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 25,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": []
+            },
+            {
+              "id": "ac7c7cc",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 12
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "28",
+                  "bottom": "30",
+                  "left": "28",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "flex-start",
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "20",
+                  "bottom": "24",
+                  "left": "20",
+                  "isLinked": false
+                },
+                "margin": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "background_background": "gradient",
+                "background_color": "rgba(241, 5, 5, 0.5)",
+                "background_color_stop": {
+                  "unit": "%",
+                  "size": 0,
+                  "sizes": []
+                },
+                "background_color_b": "#010658",
+                "background_color_b_stop": {
+                  "unit": "%",
+                  "size": 55,
+                  "sizes": []
+                },
+                "background_gradient_type": "radial",
+                "background_gradient_position": "top right",
+                "css_classes": "un-faq-help",
+                "__globals__": {
+                  "background_color": "",
+                  "background_color_b": ""
+                },
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 300
+              },
+              "elements": [
+                {
+                  "id": "cdcb019",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Ainda com dúvidas?",
+                    "header_size": "h3",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 24,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 21,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 27,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "f3fbc40",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Nossa equipe de matrículas está pronta para ajudar e receber sua família para uma visita.</p>",
+                    "align": "left",
+                    "text_color": "rgba(255, 255, 255, 0.8)",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 25,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 23,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "111b746",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "button",
+                  "settings": {
+                    "text": "Agendar uma visita",
+                    "link": {
+                      "url": "https://colegiounicultura.com.br/contato/",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    },
+                    "align": "left",
+                    "size": "md",
+                    "button_text_color": "#FFFFFF",
+                    "hover_color": "#010658",
+                    "text_padding": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "24",
+                      "bottom": "14",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "999",
+                      "right": "999",
+                      "bottom": "999",
+                      "left": "999",
+                      "isLinked": true
+                    },
+                    "background_background": "classic",
+                    "background_color": "#F10505",
+                    "button_background_hover_background": "classic",
+                    "button_background_hover_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Hanken Grotesk",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 20,
+                      "sizes": []
+                    },
+                    "selected_icon": {
+                      "value": "fas fa-arrow-right",
+                      "library": "fa-solid"
+                    },
+                    "icon_align": "right",
+                    "icon_indent": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "button_text_color": "",
+                      "hover_color": "",
+                      "background_color": "",
+                      "button_background_hover_color": "",
+                      "typography_typography": ""
+                    },
+                    "_margin": {
+                      "unit": "px",
+                      "top": "6",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "754184b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "width": {
+              "unit": "%",
+              "size": 62,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_direction": "column"
+          },
+          "elements": [
+            {
+              "id": "910bb3d",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "nested-accordion",
+              "settings": {
+                "items": [
+                  {
+                    "item_title": "Como funcionam as aulas e como conhecer a escola?",
+                    "_id": "25602bd"
+                  },
+                  {
+                    "item_title": "Quais documentos são necessários para efetivar a matrícula?",
+                    "_id": "95d95cb"
+                  },
+                  {
+                    "item_title": "O colégio oferece transporte escolar?",
+                    "_id": "5b93e8c"
+                  },
+                  {
+                    "item_title": "Existe período integral disponível?",
+                    "_id": "0d6c89a"
+                  }
+                ],
+                "title_tag": "h3",
+                "default_state": "expanded",
+                "max_items_expended": "one",
+                "faq_schema": "yes",
+                "accordion_item_title_position_horizontal": "stretch",
+                "accordion_item_title_icon_position": "end",
+                "accordion_item_title_icon": {
+                  "value": "fas fa-plus",
+                  "library": "fa-solid"
+                },
+                "accordion_item_title_icon_active": {
+                  "value": "fas fa-minus",
+                  "library": "fa-solid"
+                },
+                "accordion_item_title_space_between": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "accordion_item_title_distance_from_content": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "accordion_padding": {
+                  "unit": "px",
+                  "top": "24",
+                  "right": "24",
+                  "bottom": "24",
+                  "left": "24",
+                  "isLinked": true
+                },
+                "accordion_padding_mobile": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "18",
+                  "bottom": "18",
+                  "left": "18",
+                  "isLinked": true
+                },
+                "accordion_border_radius": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "isLinked": true
+                },
+                "accordion_border_normal_border": "none",
+                "accordion_border_hover_border": "none",
+                "accordion_border_active_border": "none",
+                "content_border_border": "none",
+                "title_typography_typography": "custom",
+                "title_typography_font_family": "Hanken Grotesk",
+                "title_typography_font_size": {
+                  "unit": "px",
+                  "size": 19,
+                  "sizes": []
+                },
+                "title_typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 17,
+                  "sizes": []
+                },
+                "title_typography_font_weight": "600",
+                "title_typography_line_height": {
+                  "unit": "px",
+                  "size": 26,
+                  "sizes": []
+                },
+                "title_typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 23,
+                  "sizes": []
+                },
+                "normal_title_color": "#010658",
+                "hover_title_color": "#F10505",
+                "active_title_color": "#010658",
+                "normal_icon_color": "#010658",
+                "hover_icon_color": "#F10505",
+                "active_icon_color": "#FFFFFF",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "icon_spacing": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "_css_classes": "un-faq-acc",
+                "__globals__": {
+                  "title_typography_typography": "",
+                  "normal_title_color": "",
+                  "hover_title_color": "",
+                  "active_title_color": "",
+                  "normal_icon_color": "",
+                  "hover_icon_color": "",
+                  "active_icon_color": ""
+                },
+                "_animation": "fadeInUp",
+                "animation_duration": "fast",
+                "_animation_delay": 200
+              },
+              "elements": [
+                {
+                  "id": "40cc4ec",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "28",
+                      "bottom": "28",
+                      "left": "74",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "18",
+                      "bottom": "22",
+                      "left": "18",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "3b9fa1d",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Nossa proposta pedagógica reúne diferentes abordagens e estratégias de ensino para promover uma aprendizagem significativa, contemplando as diversas áreas do conhecimento e o desenvolvimento integral dos alunos.</p><p>Para conhecer nossa estrutura e saber mais sobre a proposta pedagógica, entre em contato com o departamento de matrículas e agende uma visita. <strong>Será um prazer receber sua família!</strong></p>",
+                        "align": "left",
+                        "text_color": "#3B3F6B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 27,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 25,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-faq-answer",
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "95e51a0",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "28",
+                      "bottom": "28",
+                      "left": "74",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "18",
+                      "bottom": "22",
+                      "left": "18",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "126416d",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>Para a matrícula, é necessário preencher o requerimento e apresentar os seguintes documentos:</p><ul class=\"un-faq-list\"><li>1 foto 3×4 recente;</li><li>Cópia da certidão de nascimento do aluno;</li><li>Cópias do RG e CPF do aluno;</li><li>Cópias do RG e CPF do responsável financeiro;</li><li>Cópia de um comprovante de residência atualizado;</li><li>Cópia da carteirinha do convênio médico, caso possua;</li><li>Declaração de escolaridade atual;</li><li>Declaração de transferência original, para alunos que vêm de outra escola;</li><li>Histórico escolar original, que poderá ser entregue posteriormente, substituindo a declaração de transferência;</li><li>Laudo médico, quando houver, para subsidiar o planejamento do atendimento às necessidades educacionais do aluno.</li></ul><p class=\"un-faq-note\">O departamento de matrículas orientará a família sobre os documentos aplicáveis à etapa escolar do aluno e os prazos de entrega.</p>",
+                        "align": "left",
+                        "text_color": "#3B3F6B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 27,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 25,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-faq-answer",
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "ababef9",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "28",
+                      "bottom": "28",
+                      "left": "74",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "18",
+                      "bottom": "22",
+                      "left": "18",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "ef14b40",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p>O colégio disponibiliza uma lista de indicações de prestadores de transporte escolar que atendem à unidade. A contratação, os valores, as rotas e os horários devem ser combinados diretamente entre a família e o prestador escolhido.</p>",
+                        "align": "left",
+                        "text_color": "#3B3F6B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 27,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 25,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-faq-answer",
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "5471cd2",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "28",
+                      "bottom": "28",
+                      "left": "74",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "18",
+                      "bottom": "22",
+                      "left": "18",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "8779e91",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "settings": {
+                        "editor": "<p><strong>Sim!</strong> Oferecemos as modalidades integral e semi-integral, com uma rotina organizada para conciliar as atividades escolares com momentos de recreação, alimentação e cuidados.</p><p>Para consultar horários, valores e disponibilidade para cada faixa etária, entre em contato com o departamento de matrículas.</p>",
+                        "align": "left",
+                        "text_color": "#3B3F6B",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Hanken Grotesk",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 27,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 25,
+                          "sizes": []
+                        },
+                        "_css_classes": "un-faq-answer",
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Unicultura - Seção FAQ",
+  "type": "container"
+}
