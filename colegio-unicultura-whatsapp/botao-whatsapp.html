@@ -1,0 +1,343 @@
+<!-- Colégio Unicultura | Botão flutuante do WhatsApp (todas as páginas)
+     Cole em Elementor > Custom Code (Local: Final do <body>, Condição: Todo o site).
+     TROQUE o número em data-phone (só números: 55 + DDD + número) e, se quiser, a mensagem. -->
+<div class="un-wa" data-phone="5500000000000"
+     data-message="Olá! Vim pelo site e gostaria de saber mais sobre o Colégio Unicultura.">
+  <div class="un-wa-bubble" role="status" aria-live="polite">
+    <button type="button" class="un-wa-close" aria-label="Fechar mensagem">&times;</button>
+    <div class="un-wa-bubble-head">
+      <span class="un-wa-avatar" aria-hidden="true">U</span>
+      <div>
+        <strong>Colégio Unicultura</strong>
+        <span class="un-wa-online">Equipe de matrículas</span>
+      </div>
+    </div>
+    <p>Olá! 👋 Quer <b>agendar uma visita</b> ou tirar dúvidas sobre a matrícula? Fale com a gente!</p>
+    <a class="un-wa-cta" href="#" target="_blank" rel="noopener">Conversar no WhatsApp</a>
+  </div>
+  <a class="un-wa-btn" href="#" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+    <span class="un-wa-label">Fale conosco</span>
+    <span class="un-wa-icon">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16.04 3C9.07 3 3.4 8.66 3.4 15.63c0 2.23.58 4.4 1.69 6.32L3.3 28.7l6.93-1.82a12.6 12.6 0 0 0 5.8 1.42h.01c6.97 0 12.64-5.67 12.64-12.64 0-3.38-1.31-6.55-3.7-8.94A12.56 12.56 0 0 0 16.04 3zm0 23.15h-.01a10.5 10.5 0 0 1-5.35-1.47l-.38-.23-4.11 1.08 1.1-4.01-.25-.41a10.48 10.48 0 0 1-1.6-5.58c0-5.8 4.72-10.51 10.52-10.51 2.81 0 5.45 1.1 7.43 3.08a10.44 10.44 0 0 1 3.08 7.44c0 5.8-4.72 10.51-10.53 10.51zm5.77-7.87c-.32-.16-1.87-.92-2.16-1.03-.29-.1-.5-.16-.71.16-.21.32-.82 1.03-1 1.24-.18.21-.37.24-.69.08-.32-.16-1.33-.49-2.54-1.57-.94-.84-1.57-1.87-1.75-2.19-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.8.66.75.24 1.44.21 1.98.13.6-.09 1.87-.77 2.13-1.5.26-.74.26-1.37.18-1.5-.08-.13-.29-.21-.61-.37z"/></svg>
+    </span>
+    <span class="un-wa-badge" aria-hidden="true">1</span>
+  </a>
+</div>
+
+<style>
+.un-wa {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 9990;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+/* Botão: círculo verde com ondas pulsando; no computador mostra "Fale conosco" ao passar o mouse */
+.un-wa-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 62px;
+  padding: 0;
+  border-radius: 999px;
+  background: #25D366;
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45), 0 4px 10px rgba(1, 6, 88, 0.15);
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s ease;
+  animation: un-wa-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) 0.8s both;
+}
+
+.un-wa-btn::before,
+.un-wa-btn::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25D366;
+  z-index: -1;
+  animation: un-wa-ring 2.6s ease-out infinite;
+}
+
+.un-wa-btn::after {
+  animation-delay: 1.3s;
+}
+
+.un-wa-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 62px;
+  height: 62px;
+  flex: none;
+}
+
+.un-wa-icon svg {
+  width: 32px;
+  height: 32px;
+  animation: un-wa-wiggle 6s ease-in-out 3s infinite;
+}
+
+.un-wa-label {
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0;
+  transition: max-width 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), opacity 0.3s ease, padding 0.45s ease;
+}
+
+@media (hover: hover) {
+  .un-wa-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(37, 211, 102, 0.55), 0 4px 10px rgba(1, 6, 88, 0.15);
+  }
+
+  .un-wa-btn:hover .un-wa-label {
+    max-width: 160px;
+    padding-left: 22px;
+    opacity: 1;
+  }
+}
+
+/* Bolinha vermelha de "1 mensagem" */
+.un-wa-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  background: #F10505;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  transform: scale(0);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.un-wa.has-badge .un-wa-badge {
+  transform: scale(1);
+}
+
+/* Balão de mensagem */
+.un-wa-bubble {
+  position: relative;
+  width: 290px;
+  padding: 18px 18px 16px;
+  border-radius: 20px 20px 6px 20px;
+  background: #FFFFFF;
+  color: #1C1F4F;
+  box-shadow: 0 20px 50px rgba(1, 6, 88, 0.22);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.96);
+  transform-origin: 100% 100%;
+  transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s 0.45s;
+}
+
+.un-wa.is-open .un-wa-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.4s ease, transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1), visibility 0s;
+}
+
+.un-wa-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #F1F2F8;
+  color: #010658;
+  font-size: 18px;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+.un-wa-bubble-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.un-wa-bubble-head strong {
+  display: block;
+  color: #010658;
+}
+
+.un-wa-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex: none;
+  border-radius: 50%;
+  background: #010658;
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.un-wa-online {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1A9E4B;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.un-wa-online::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25D366;
+  animation: un-wa-blink 1.6s ease-in-out infinite;
+}
+
+.un-wa-bubble p {
+  margin: 0 0 14px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.un-wa-bubble p b {
+  color: #010658;
+}
+
+.un-wa-cta {
+  display: block;
+  padding: 11px 14px;
+  border-radius: 999px;
+  background: #25D366;
+  color: #FFFFFF !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none !important;
+  transition: background-color 0.3s ease;
+}
+
+.un-wa-cta:hover {
+  background: #1EB857;
+}
+
+@keyframes un-wa-in {
+  from { opacity: 0; transform: translateY(30px) scale(0.6); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes un-wa-ring {
+  0%   { opacity: 0.55; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+
+@keyframes un-wa-wiggle {
+  0%, 88%, 100% { transform: rotate(0); }
+  91% { transform: rotate(-14deg); }
+  94% { transform: rotate(12deg); }
+  97% { transform: rotate(-6deg); }
+}
+
+@keyframes un-wa-blink {
+  50% { opacity: 0.35; }
+}
+
+@media (max-width: 767px) {
+  .un-wa {
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .un-wa-btn,
+  .un-wa-icon,
+  .un-wa-btn::before,
+  .un-wa-btn::after {
+    width: 56px;
+    height: 56px;
+  }
+
+  .un-wa-bubble {
+    width: min(280px, calc(100vw - 32px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .un-wa-btn,
+  .un-wa-btn::before,
+  .un-wa-btn::after,
+  .un-wa-icon svg,
+  .un-wa-online::before {
+    animation: none;
+  }
+}
+</style>
+
+<script>
+(function () {
+  var root = document.querySelector('.un-wa');
+  if (!root || document.body.classList.contains('elementor-editor-active')) {
+    if (root) { root.style.display = 'none'; }
+    return;
+  }
+  var url = 'https://wa.me/' + root.getAttribute('data-phone') +
+    '?text=' + encodeURIComponent(root.getAttribute('data-message') || '');
+  root.querySelectorAll('a').forEach(function (a) {
+    a.href = url;
+    a.addEventListener('click', function () {
+      try { sessionStorage.setItem('un-wa-seen', '1'); } catch (e) {}
+      root.classList.remove('is-open', 'has-badge');
+      // conta o clique como lead (se o Pixel do Facebook / Google Analytics estiverem no site)
+      if (window.fbq) { window.fbq('track', 'Contact'); }
+      if (window.gtag) { window.gtag('event', 'whatsapp_click'); }
+    });
+  });
+
+  var seen = false;
+  try { seen = sessionStorage.getItem('un-wa-seen') === '1'; } catch (e) {}
+
+  // O balão aparece uma vez por visita: depois de 6s ou quando a pessoa rolar 40% da página
+  function open() {
+    if (seen || root.classList.contains('is-open')) { return; }
+    root.classList.add('is-open', 'has-badge');
+  }
+  if (!seen) {
+    var timer = window.setTimeout(open, 6000);
+    window.addEventListener('scroll', function onScroll() {
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max > 0 && window.scrollY / max > 0.4) {
+        window.clearTimeout(timer);
+        window.removeEventListener('scroll', onScroll);
+        open();
+      }
+    }, { passive: true });
+  }
+
+  root.querySelector('.un-wa-close').addEventListener('click', function () {
+    root.classList.remove('is-open');
+    seen = true;
+    try { sessionStorage.setItem('un-wa-seen', '1'); } catch (e) {}
+  });
+})();
+</script>
