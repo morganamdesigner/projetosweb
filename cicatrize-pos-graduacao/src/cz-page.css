@@ -41,6 +41,15 @@ body .cz-css .elementor-widget-html {
   overflow: hidden;
 }
 
+/* Quando o CSS/JS vem dentro do próprio hero (arquivo do hero completo) */
+body .cz-assets.elementor-widget {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
 /* Âncoras não ficam escondidas atrás do topo */
 .cz[id] {
   scroll-margin-top: 0;
@@ -256,8 +265,9 @@ body .cz-css .elementor-widget-html {
   isolation: isolate;
 }
 
-/* camada de leitura: escurece a esquerda para o texto ficar legível sobre a foto de fundo */
-.cz-hero.e-con::before {
+/* camada de leitura (opcional, classe cz-camada no hero): escurece a esquerda para o texto ficar
+   legível sobre a foto de fundo */
+.cz-hero.cz-camada.e-con::before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -268,8 +278,8 @@ body .cz-css .elementor-widget-html {
   pointer-events: none;
 }
 
-/* ruído fino (textura de filme) */
-.cz-hero.e-con::after {
+/* ruído fino (textura de filme), também só com cz-camada */
+.cz-hero.cz-camada.e-con::after {
   content: "";
   position: absolute;
   z-index: 0;
@@ -296,7 +306,7 @@ body .cz-css .elementor-widget-html {
 }
 
 @media (max-width: 1024px) {
-  .cz-hero.e-con::before {
+  .cz-hero.cz-camada.e-con::before {
     background:
       radial-gradient(80% 50% at 80% 10%, rgba(207, 138, 134, 0.2), transparent 60%),
       linear-gradient(180deg, rgba(15, 79, 92, 0.75) 0%, rgba(11, 60, 70, 0.96) 55%);

@@ -96,7 +96,7 @@
           io.unobserve(e.target);
           if (e.target.classList.contains("cz-vagas")) runVagas(e.target);
         });
-      }, { threshold: 0.25, rootMargin: "0px 0px -8% 0px" });
+      }, { threshold: 0.25, rootMargin: "0px 0px -4% 0px" });
       ioTargets.forEach(function (el) { io.observe(el); });
     } else {
       ioTargets.forEach(function (el) {

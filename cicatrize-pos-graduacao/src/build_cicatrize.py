@@ -426,7 +426,7 @@ def reveal(items, start=0):
 # 0. CSS + JS + CTA fixo do celular
 # ---------------------------------------------------------------------------
 
-def build_assets():
+def assets_html():
     css = open(CSS_FILE, encoding="utf-8").read().strip()
     js = open(JS_FILE, encoding="utf-8").read().strip()
     sticky = (f'<a class="cz-sticky" href="{OFERTA}" aria-label="Quero minha vaga de Membro Fundador">'
@@ -436,6 +436,11 @@ def build_assets():
               '</svg></a>')
     code = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
             "<style>\n" + css + "\n</style>\n" + sticky + "\n<script>\n" + js + "\n</script>")
+    return code
+
+
+def build_assets():
+    code = assets_html()
     return container({
         "content_width": "full",
         "min_height": px(0),
@@ -551,7 +556,7 @@ def build_hero():
         "background_color": TEAL_DEEP,
         "background_position": "center right",
         "background_size": "cover",
-        "css_classes": "cz cz-hero",
+        "css_classes": "cz cz-hero cz-camada",
     }, [content, vagas], inner=False, title="1 · HERO (inserir foto de fundo em Estilo > Fundo)")
 
 

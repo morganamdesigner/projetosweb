@@ -6,6 +6,22 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Hero completo num arquivo só: `hero-completo-elementor.json`
+
+Traz o hero inteiro num arquivo:
+- o container da foto de fundo, já com as classes `cz cz-hero`;
+- o conteúdo com os selos do MEC e da Anhanguera;
+- a barra de vagas;
+- o CSS e o JS da página, num widget HTML invisível ("⚙ CSS + JS da página").
+
+**Como usar:**
+1. Suba `assets/selo-reconhecido-mec.webp` e `assets/logo-anhanguera.svg` na Biblioteca de Mídia, sem renomear.
+2. Importe o arquivo e coloque-o no lugar do hero atual.
+3. **Coloque a foto de fundo de novo:** Estilo > Fundo > Imagem, no computador e no celular. No celular, a posição já vem em "top center".
+4. **Apague o container "⚙ Estilos e animações" do topo da página,** se ele ainda existir. O CSS e o JS agora vêm dentro do hero, e com os dois o script rodaria em dobro.
+
+**Camada escura:** vem desligada, porque a sua foto de fundo já tem o design pronto. Para ligar o degradê escuro e a textura de filme, acrescente `cz-camada` em Avançado > Classes CSS do hero.
+
 ## Atualização do hero: selos do MEC e da Anhanguera (07/10)
 
 Arquivos novos:
