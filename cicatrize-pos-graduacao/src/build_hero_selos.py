@@ -11,7 +11,8 @@ logo, margens, tamanhos no celular, faixa "Turma de Membros Fundadores" etc.) e:
      selo "Reconhecido pelo MEC" e logo da Anhanguera num cartão branco, flutuando sobre a foto
      (sai também o brilho rosé dessa coluna, que ficaria por cima do rosto do expert).
      No computador eles ficam soltos sobre a foto de fundo (posição nativa do Elementor, ajustável em
-     Avançado > Posição); no tablet e no celular aparecem lado a lado, logo abaixo do texto de apoio.
+     Avançado > Posição); no celular também flutuam, sobre a foto do expert no topo; no tablet
+     aparecem lado a lado, logo abaixo do texto de apoio.
 Entrada: entrada/hero-atual-2026-10-07.json (export do Elementor)
 Saídas:  ../hero-selos-elementor.json     só o container de conteúdo (para trocar dentro do hero)
          ../hero-completo-elementor.json  o hero inteiro num arquivo só: container da foto de fundo
@@ -184,9 +185,10 @@ def main():
             "padding": dims(0),
             "hide_desktop": "hidden-desktop",
             "hide_laptop": "hidden-laptop",
+            "hide_mobile": "hidden-mobile",  # no celular os selos flutuam sobre a foto (3c)
             "animation": "fadeInUp",
             "animation_delay": 300,
-            "_title": "Selos lado a lado (só tablet e celular)",
+            "_title": "Selos lado a lado (só tablet)",
         },
         "elements": [
             selo_mec(96, {"_element_custom_width_mobile": px(78)}),
@@ -196,6 +198,35 @@ def main():
     left = find(hero, "614852df")
     sub_index = next(i for i, e in enumerate(left["elements"]) if e["id"] == "2f51f14f")
     left["elements"].insert(sub_index + 1, row)
+
+    # 3c. celular: selos flutuando sobre a foto do expert (topo do hero). A coluna de texto começa
+    # 74vw abaixo do topo (margem que deixa a foto aparecer), então as posições usam vw a partir do
+    # topo da coluna: valores negativos sobem para cima da foto. Ajuste em Avançado > Posição.
+    only_mobile = {"hide_desktop": "hidden-desktop", "hide_laptop": "hidden-laptop", "hide_tablet": "hidden-tablet",
+                   "_position": "absolute", "_z_index": 3}
+    mec_mob = selo_mec(96, {
+        **only_mobile,
+        "_element_custom_width_mobile": {"unit": "vw", "size": 24, "sizes": []},
+        "_offset_orientation_h": "start",
+        "_offset_x": px(0, "px"),
+        "_offset_orientation_v": "start",
+        "_offset_y": {"unit": "vw", "size": -32, "sizes": []},
+        "_animation": "zoomIn",
+        "_animation_delay": 400,
+        "_title": "Selo MEC sobre a foto (só celular)",
+    })
+    anh_mob = selo_anh(150, {
+        **only_mobile,
+        "_element_custom_width_mobile": {"unit": "vw", "size": 36, "sizes": []},
+        "_offset_orientation_h": "end",
+        "_offset_x_end": px(0, "px"),
+        "_offset_orientation_v": "start",
+        "_offset_y": {"unit": "vw", "size": -64, "sizes": []},
+        "_animation": "fadeInDown",
+        "_animation_delay": 650,
+        "_title": "Logo Anhanguera sobre a foto (só celular)",
+    })
+    left["elements"][0:0] = [mec_mob, anh_mob]
 
     out = {"content": [hero], "page_settings": [], "version": "0.4",
            "title": "Cicatrize - Hero com selos MEC e Anhanguera", "type": "container"}

@@ -105,6 +105,147 @@
           },
           "elements": [
             {
+              "id": "b40a2a3",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/selo-reconhecido-mec.webp",
+                  "id": "",
+                  "size": "",
+                  "source": "library",
+                  "alt": "Selo: curso reconhecido pelo MEC"
+                },
+                "image_size": "full",
+                "align": "center",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 96,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_css_classes": "cz-selo cz-selo-mec",
+                "_title": "Selo MEC sobre a foto (só celular)",
+                "hide_desktop": "hidden-desktop",
+                "hide_laptop": "hidden-laptop",
+                "hide_tablet": "hidden-tablet",
+                "_position": "absolute",
+                "_z_index": 3,
+                "_element_custom_width_mobile": {
+                  "unit": "vw",
+                  "size": 24,
+                  "sizes": []
+                },
+                "_offset_orientation_h": "start",
+                "_offset_x": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "start",
+                "_offset_y": {
+                  "unit": "vw",
+                  "size": -32,
+                  "sizes": []
+                },
+                "_animation": "zoomIn",
+                "_animation_delay": 400
+              },
+              "elements": []
+            },
+            {
+              "id": "670493a",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/logo-anhanguera.svg",
+                  "id": "",
+                  "size": "",
+                  "source": "library",
+                  "alt": "Diploma emitido pela Faculdade Anhanguera"
+                },
+                "image_size": "full",
+                "align": "center",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 150,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_css_classes": "cz-selo cz-selo-anh",
+                "_title": "Logo Anhanguera sobre a foto (só celular)",
+                "_background_background": "classic",
+                "_background_color": "#FFFFFF",
+                "_padding": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "20",
+                  "bottom": "14",
+                  "left": "20",
+                  "isLinked": false
+                },
+                "_padding_mobile": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "14",
+                  "bottom": "10",
+                  "left": "14",
+                  "isLinked": false
+                },
+                "_border_radius": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "14",
+                  "bottom": "14",
+                  "left": "14",
+                  "isLinked": true
+                },
+                "__globals__": {
+                  "_background_color": ""
+                },
+                "hide_desktop": "hidden-desktop",
+                "hide_laptop": "hidden-laptop",
+                "hide_tablet": "hidden-tablet",
+                "_position": "absolute",
+                "_z_index": 3,
+                "_element_custom_width_mobile": {
+                  "unit": "vw",
+                  "size": 36,
+                  "sizes": []
+                },
+                "_offset_orientation_h": "end",
+                "_offset_x_end": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "start",
+                "_offset_y": {
+                  "unit": "vw",
+                  "size": -64,
+                  "sizes": []
+                },
+                "_animation": "fadeInDown",
+                "_animation_delay": 650
+              },
+              "elements": []
+            },
+            {
               "id": "7a3059ca",
               "settings": {
                 "image_size": "full",
@@ -381,9 +522,10 @@
                 },
                 "hide_desktop": "hidden-desktop",
                 "hide_laptop": "hidden-laptop",
+                "hide_mobile": "hidden-mobile",
                 "animation": "fadeInUp",
                 "animation_delay": 300,
-                "_title": "Selos lado a lado (só tablet e celular)"
+                "_title": "Selos lado a lado (só tablet)"
               },
               "elements": [
                 {

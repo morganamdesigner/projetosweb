@@ -20,6 +20,8 @@ Traz o hero inteiro num arquivo:
 3. **Coloque a foto de fundo de novo:** Estilo > Fundo > Imagem, no computador e no celular. No celular, a posição já vem em "top center".
 4. **Apague o container "⚙ Estilos e animações" do topo da página,** se ele ainda existir. O CSS e o JS agora vêm dentro do hero, e com os dois o script rodaria em dobro.
 
+**Selos no celular:** flutuam sobre a foto do expert, no topo do hero. O selo do MEC fica embaixo à esquerda e a logo da Anhanguera em cima à direita, como no computador. As posições usam `vw` a partir do topo da coluna de texto, a mesma medida da margem de 74vw que deixa a foto aparecer. Para ajustar, use **Avançado > Posição** de cada imagem (no Navegador: "Selo MEC sobre a foto (só celular)" e "Logo Anhanguera sobre a foto (só celular)"). Valores mais negativos sobem a imagem. No tablet, os selos continuam lado a lado abaixo do texto.
+
 **Camada escura:** vem desligada, porque a sua foto de fundo já tem o design pronto. Para ligar o degradê escuro e a textura de filme, acrescente `cz-camada` em Avançado > Classes CSS do hero.
 
 ## Atualização do hero: selos do MEC e da Anhanguera (07/10)
