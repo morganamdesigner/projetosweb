@@ -1494,6 +1494,17 @@ body .cz-assets.elementor-widget {
     aspect-ratio: auto;
   }
 
+  /* foto 36% + texto 64%, sem encolher nem esconder o texto */
+  .cz .cz-prof.e-con > .cz-prof-photo {
+    flex: 0 0 36%;
+    max-width: 36%;
+  }
+
+  .cz .cz-prof.e-con > .e-con {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
   /* Quem é o Dr. Cicatriz: moldura rosé não encosta na borda da tela */
   .cz .cz-bio-photo.e-con::before {
     inset: 12px -8px -8px 12px;

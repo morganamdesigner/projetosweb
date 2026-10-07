@@ -1,0 +1,2294 @@
+{
+  "content": [
+    {
+      "id": "43d950f2",
+      "settings": {
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "24",
+          "bottom": "120",
+          "left": "24",
+          "isLinked": false
+        },
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "html_tag": "section",
+        "flex_direction": "column",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "96",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "72",
+          "right": "16",
+          "bottom": "72",
+          "left": "16",
+          "isLinked": false
+        },
+        "css_classes": "cz cz-docentes",
+        "background_background": "classic",
+        "background_color": "#F3F7F7",
+        "_title": "7 · CORPO DOCENTE",
+        "__globals__": {
+          "background_color": ""
+        },
+        "ha_cmc_text": "Happy Addons"
+      },
+      "elements": [
+        {
+          "id": "ad10aee",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "elements": [],
+          "settings": {
+            "html": "<style>@media (max-width:767px){.cz .cz-prof.e-con>.cz-prof-photo{flex:0 0 36%;max-width:36%;height:auto}.cz .cz-prof.e-con>.e-con{flex:1 1 0;min-width:0;width:auto}.cz .cz-prof .cz-prof-photo .elementor-widget-container{height:100%}.cz .cz-prof .cz-prof-photo img{height:100%;min-height:168px;aspect-ratio:auto;object-fit:cover}}</style>",
+            "_css_classes": "cz-assets",
+            "_title": "CSS dos cartões no celular"
+          }
+        },
+        {
+          "id": "4169f505",
+          "settings": {
+            "flex_gap": {
+              "column": "20",
+              "row": "20",
+              "isLinked": true,
+              "unit": "px",
+              "size": 20
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "boxed_width": {
+              "unit": "px",
+              "size": 900,
+              "sizes": []
+            },
+            "width": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "id": "e99ada4",
+              "settings": {
+                "title": "Você vai aprender com quem vive a prática — <span class=\"cz-rose\">e tem titulação para provar.</span>",
+                "align": "center",
+                "title_color": "#0F4F5C",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 46,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 52,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -1.2,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 30,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -0.6,
+                  "sizes": []
+                },
+                "_css_classes": "cz-split",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "42db8829",
+          "settings": {
+            "flex_gap": {
+              "column": "32",
+              "row": "32",
+              "isLinked": true,
+              "unit": "px",
+              "size": 32
+            },
+            "padding": {
+              "unit": "px",
+              "top": "14",
+              "right": "14",
+              "bottom": "14",
+              "left": "14",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "flex_direction_tablet": "column",
+            "flex_gap_tablet": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
+              "unit": "px",
+              "size": 24
+            },
+            "border_radius": {
+              "unit": "px",
+              "top": "28",
+              "right": "28",
+              "bottom": "28",
+              "left": "28",
+              "isLinked": true
+            },
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "rgba(15, 79, 92, 0.1)",
+            "margin": {
+              "unit": "px",
+              "top": "56",
+              "right": "0",
+              "bottom": "24",
+              "left": "0",
+              "isLinked": false
+            },
+            "margin_mobile": {
+              "unit": "px",
+              "top": "40",
+              "right": "0",
+              "bottom": "20",
+              "left": "0",
+              "isLinked": false
+            },
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "css_classes": "cz-prof cz-rv cz-d0",
+            "__globals__": {
+              "border_color": "",
+              "background_color": ""
+            },
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "id": "790da3d1",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "%",
+                  "size": 42,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "overflow": "hidden",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "isLinked": true
+                },
+                "css_classes": "cz-ph-wrap",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "id": "53fd3d40",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-expert cz-lead-photo",
+                    "_title": "📷 FOTO DO EXPERT (Dr. Cicatriz) — horizontal ou retrato",
+                    "image": {
+                      "id": 16567,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-4.png"
+                    },
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "5e508fe0",
+              "settings": {
+                "flex_gap": {
+                  "column": "16",
+                  "row": "16",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 16
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "44",
+                  "right": "44",
+                  "bottom": "44",
+                  "left": "8",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "%",
+                  "size": 58,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "flex_justify_content": "center",
+                "padding_tablet": {
+                  "unit": "px",
+                  "top": "8",
+                  "right": "32",
+                  "bottom": "36",
+                  "left": "32",
+                  "isLinked": false
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "4",
+                  "right": "20",
+                  "bottom": "28",
+                  "left": "20",
+                  "isLinked": false
+                },
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [
+                {
+                  "id": "4a29b68c",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "flex_align_items": "center",
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "id": "3729b6aa",
+                      "settings": {
+                        "title": "Coordenador",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 1.6,
+                          "sizes": []
+                        },
+                        "typography_text_transform": "uppercase",
+                        "_flex_size": "none",
+                        "_css_classes": "cz-price-badge",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "79c21ab3",
+                      "settings": {
+                        "title": "Leciona 6 disciplinas",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#CF8A86",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 13,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": 1.2,
+                          "sizes": []
+                        },
+                        "typography_text_transform": "uppercase",
+                        "_flex_size": "none",
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "67f33e91",
+                  "settings": {
+                    "title": "Dr. Cicatriz <span class=\"cz-rose\">(Abdeel Oliveira Martins Junior)</span>",
+                    "header_size": "h3",
+                    "align": "left",
+                    "title_color": "#0F4F5C",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Lato",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 24,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "elType": "widget"
+                },
+                {
+                  "id": "1071bc8",
+                  "settings": {
+                    "editor": "<p>Enfermeiro, especialista em Enfermagem Dermatológica com ênfase em Tratamento de Feridas. Coordena a pós e leciona pessoalmente 6 disciplinas:</p>",
+                    "align": "left",
+                    "text_color": "#3B5C66",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Lato",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "px",
+                      "size": 29,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "typography_line_height_mobile": {
+                      "unit": "px",
+                      "size": 26,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    },
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "elType": "widget"
+                },
+                {
+                  "id": "17360d44",
+                  "settings": {
+                    "view": "inline",
+                    "icon_list": [
+                      {
+                        "_id": "6ead5da",
+                        "text": "Semiologia e Avaliação Clínica"
+                      },
+                      {
+                        "_id": "d9108b2",
+                        "text": "Podiatria Clínica e Biomecânica"
+                      },
+                      {
+                        "_id": "79b3a99",
+                        "text": "Podopatias e Onicopatias"
+                      },
+                      {
+                        "_id": "50f4237",
+                        "text": "Técnicas Corretivas"
+                      },
+                      {
+                        "_id": "168da18",
+                        "text": "Órteses e Alívio de Pressão"
+                      },
+                      {
+                        "_id": "e4188c8",
+                        "text": "Biomateriais e Inovação em Curativos"
+                      }
+                    ],
+                    "space_between": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "text_color": "#0F4F5C",
+                    "text_color_hover": "#0F4F5C",
+                    "icon_color": "#CF8A86",
+                    "icon_color_hover": "#CF8A86",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 11,
+                      "sizes": []
+                    },
+                    "text_indent": {
+                      "unit": "px",
+                      "size": 8,
+                      "sizes": []
+                    },
+                    "icon_self_vertical_align": "center",
+                    "icon_typography_typography": "custom",
+                    "icon_typography_font_family": "Lato",
+                    "icon_typography_font_size": {
+                      "unit": "px",
+                      "size": 14,
+                      "sizes": []
+                    },
+                    "icon_typography_font_weight": "700",
+                    "icon_typography_line_height": {
+                      "unit": "px",
+                      "size": 18,
+                      "sizes": []
+                    },
+                    "_css_classes": "cz-chips",
+                    "__globals__": {
+                      "text_color": "",
+                      "icon_color": "",
+                      "icon_typography_typography": ""
+                    },
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "icon-list",
+                  "elType": "widget"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "29bd17c6",
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "container_type": "grid",
+            "grid_columns_grid_tablet": {
+              "unit": "fr",
+              "size": 2,
+              "sizes": []
+            },
+            "grid_rows_grid_tablet": {
+              "unit": "fr",
+              "size": 3,
+              "sizes": []
+            },
+            "grid_rows_grid_mobile": {
+              "unit": "fr",
+              "size": 6,
+              "sizes": []
+            },
+            "grid_gaps": {
+              "column": "24",
+              "row": "24",
+              "isLinked": true,
+              "unit": "px"
+            },
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "id": "512db63e",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d0",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "3fdea189",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Me. Cibele dos Anjos Marcondes",
+                    "image": {
+                      "id": 16568,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-5.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "1208a61f",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "7db32db2",
+                      "settings": {
+                        "title": "Profa. Me. Cibele dos Anjos Marcondes",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "5071efc8",
+                      "settings": {
+                        "title": "Mestre em Morfologia e Biologia Molecular pela UNICAMP, pós-graduada em Cuidados Paliativos pelo Hospital Albert Einstein e habilitada em Laserterapia.",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#CF8A86",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "2a2c101",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Anatomia, Fisiologia da Cicatrização e Biossegurança.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "33059cd2",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d1",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "1c3d2905",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Dra. Maria Carliana Mota",
+                    "image": {
+                      "id": 16569,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-6.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "57ac5541",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "61506f16",
+                      "settings": {
+                        "title": "Profa. Dra. Maria Carliana Mota",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "24b8cfae",
+                      "settings": {
+                        "title": "Nutricionista, Mestre, Doutora e Pós-Doutora em Ciências da Saúde pela UFU.",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#CF8A86",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "25739f51",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Nutrição nas Lesões Cutâneas.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "42c3a9b",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d2",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "7da96717",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Patricia Lasmar Buiatti",
+                    "image": {
+                      "id": 16570,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-7.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "11caa0ea",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "165f869d",
+                      "settings": {
+                        "title": "Profa. Patricia Lasmar Buiatti",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "53d808e6",
+                      "settings": {
+                        "title": "Graduada pela UFU, especialista em Educação do Ensino Superior.",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#CF8A86",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "3c171952",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Farmacologia no Tratamento de Feridas e Podiatria.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "40ce7d2b",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d3",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "354f4cd1",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Rosângela Maria Pereira",
+                    "image": {
+                      "id": 16571,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-8.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "7a4736d3",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "652607ad",
+                      "settings": {
+                        "title": "Profa. Rosângela Maria Pereira",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "3df105f0",
+                      "settings": {
+                        "title": "Enfermeira Especialista em Estomaterapia pela Escola de Enfermagem da USP.",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#CF8A86",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "62c937c4",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Feridas Complexas, Queimaduras e Radiodermites, Estomias e Ferida Oncológica.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "38d64d52",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d4",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "738f6c88",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Dra. Danielle Cristina Garbuio",
+                    "image": {
+                      "id": 16572,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-9.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "52b3ded0",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "108cad52",
+                      "settings": {
+                        "title": "Profa. Dra. Danielle Cristina Garbuio",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "2d844733",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Emergências na Pessoa Idosa e Prevenção de Quedas.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "78e912c1",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "border_radius": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "22",
+                  "bottom": "22",
+                  "left": "22",
+                  "isLinked": true
+                },
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(15, 79, 92, 0.1)",
+                "background_background": "classic",
+                "background_color": "#FFFFFF",
+                "css_classes": "cz-prof cz-rv cz-d5",
+                "__globals__": {
+                  "border_color": "",
+                  "background_color": ""
+                },
+                "ha_cmc_text": "Happy Addons",
+                "flex_direction_mobile": "row",
+                "flex_align_items_mobile": "stretch"
+              },
+              "elements": [
+                {
+                  "id": "58259901",
+                  "settings": {
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "_css_classes": "cz-ph cz-ph-prof cz-prof-photo",
+                    "_title": "📷 Foto — Profa. Me. Thais Cereda Ravasi",
+                    "image": {
+                      "id": 16573,
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/placeholder-10.png"
+                    },
+                    "ha_cmc_text": "Happy Addons",
+                    "_element_width_mobile": "initial",
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "_flex_size_mobile": "none"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "2214e3da",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "10",
+                      "row": "10",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 10
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "28",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "ha_cmc_text": "Happy Addons",
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 64,
+                      "sizes": []
+                    },
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "16",
+                      "right": "16",
+                      "bottom": "18",
+                      "left": "16",
+                      "isLinked": false
+                    },
+                    "flex_gap_mobile": {
+                      "column": "6",
+                      "row": "6",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 6
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "6a8deaca",
+                      "settings": {
+                        "title": "Profa. Me. Thais Cereda Ravasi",
+                        "header_size": "h3",
+                        "align": "left",
+                        "title_color": "#0F4F5C",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 26,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.2,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "70b4cebc",
+                      "settings": {
+                        "editor": "<p><strong>Ensina:</strong> Gestão e Empreendedorismo e Marketing Digital.</p>",
+                        "align": "left",
+                        "text_color": "#3B5C66",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Lato",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "400",
+                        "typography_line_height": {
+                          "unit": "px",
+                          "size": 23,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "text_color": "",
+                          "typography_typography": ""
+                        },
+                        "ha_cmc_text": "Happy Addons",
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_line_height_mobile": {
+                          "unit": "px",
+                          "size": 20,
+                          "sizes": []
+                        }
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "text-editor",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "59801103",
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "72",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding_mobile": {
+              "unit": "px",
+              "top": "48",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "id": "57c63b0b",
+              "settings": {
+                "title": "Mestres, doutores e especialista, <span class=\"cz-rose\">reunidos em uma única formação.</span>",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#0F4F5C",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 30,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 38,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -0.5,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 29,
+                  "sizes": []
+                },
+                "_css_classes": "cz-scrub",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Cicatrize - Corpo docente",
+  "type": "container"
+}

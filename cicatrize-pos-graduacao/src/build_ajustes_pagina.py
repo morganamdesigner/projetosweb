@@ -33,6 +33,7 @@ import build_cicatrize as bc  # noqa: E402
 
 SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, "entrada", "pagina-completa-2026-10-07.json")
 OUT = os.path.join(HERE, "..", "pagina-completa-elementor.json")
+OUT_DOCENTES = os.path.join(HERE, "..", "secao-corpo-docente-elementor.json")
 
 _counter = [0]
 
@@ -162,6 +163,9 @@ def main():
             "_flex_size_mobile": "none",
         })
         info["settings"].update({
+            # largura explícita: sem ela o texto ficava com 100% ao lado da foto e o cartão
+            # (overflow: hidden) escondia o texto
+            "width_mobile": px(64, "%"),
             "padding_mobile": dims(16, 16, 18, 16),
             "flex_gap_mobile": gap(6),
         })
@@ -182,6 +186,25 @@ def main():
         if w.get("widgetType") == "heading":
             w["settings"]["align_mobile"] = "center"
     log.append("rodapé centralizado")
+
+    # só a seção do corpo docente, para colar no lugar da atual
+    docentes = json.loads(json.dumps(
+        next(e for e in data["content"] if "CORPO DOCENTE" in e["settings"].get("_title", ""))))
+    # regras de celular dos cartões embutidas na seção (funciona mesmo sem atualizar o CSS do hero)
+    style = ("<style>@media (max-width:767px){"
+             ".cz .cz-prof.e-con>.cz-prof-photo{flex:0 0 36%;max-width:36%;height:auto}"
+             ".cz .cz-prof.e-con>.e-con{flex:1 1 0;min-width:0;width:auto}"
+             ".cz .cz-prof .cz-prof-photo .elementor-widget-container{height:100%}"
+             ".cz .cz-prof .cz-prof-photo img{height:100%;min-height:168px;aspect-ratio:auto;object-fit:cover}"
+             "}</style>")
+    docentes["elements"].insert(0, {"id": new_id(), "elType": "widget", "isInner": False, "widgetType": "html",
+                                    "elements": [], "settings": {"html": style, "_css_classes": "cz-assets",
+                                                                 "_title": "CSS dos cartões no celular"}})
+    sec = {"content": [docentes], "page_settings": [], "version": "0.4",
+           "title": "Cicatrize - Corpo docente", "type": "container"}
+    with open(OUT_DOCENTES, "w", encoding="utf-8") as fh:
+        json.dump(sec, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
 
     data["title"] = "Cicatrize - Página de vendas (ajustes de celular)"
     with open(OUT, "w", encoding="utf-8") as fh:

@@ -25,6 +25,8 @@ Parte da página exportada do site (`src/entrada/pagina-completa-2026-10-07.json
 
 **Como usar:** importe o arquivo e substitua o conteúdo da página por ele. O CSS e o JS já vão dentro do hero.
 
+**Correção do corpo docente no celular:** `secao-corpo-docente-elementor.json` traz só a seção 7, para colar no lugar da atual. No celular, o texto dos cartões das professoras sumia porque ficava com 100% de largura ao lado da foto e o cartão escondia o que passava da borda. Agora a foto ocupa 36% e o texto 64%. As regras de CSS desses cartões vão dentro da própria seção, então ela funciona mesmo sem atualizar o CSS do hero.
+
 Para refazer a partir de um export novo: `python3 src/build_ajustes_pagina.py export.json`.
 
 ## Cards da seção 2 em 1 com imagens: `grid-2em1-imagens-elementor.json`
