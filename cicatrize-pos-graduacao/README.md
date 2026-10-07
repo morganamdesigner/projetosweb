@@ -6,6 +6,21 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Cards da seção 2 em 1 com imagens: `grid-2em1-imagens-elementor.json`
+
+Os ícones dos 3 cards ("Raciocínio clínico", "Cicatrização mais rápida", "Atuação ampliada na podiatria") deram lugar a uma imagem grande no topo de cada card:
+- a imagem ocupa a largura toda do card, com altura de 240 px no computador, 320 px no tablet e 210 px no celular, recortada para cobrir o espaço;
+- no hover, a imagem dá um zoom suave (Animação ao passar o mouse: Crescer);
+- o número (01, 02, 03) virou uma etiqueta sobre o canto da imagem;
+- o título, a linha rosé e o texto continuam iguais, logo abaixo.
+
+**Como usar:** importe o arquivo e troque o grid antigo da seção 2 em 1 por este. Depois clique em cada imagem e escolha a foto. No Navegador, cada uma diz o que mostrar:
+- **Card 01:** avaliação clínica de uma ferida;
+- **Card 02:** curativo ou ferida em cicatrização;
+- **Card 03:** avaliação podológica do pé.
+
+Tamanho ideal: horizontal, cerca de 1200 × 800 px, em WebP ou JPG. Mantenha o assunto no centro, porque a imagem é recortada pelas bordas.
+
 ## Hero completo num arquivo só: `hero-completo-elementor.json`
 
 Traz o hero inteiro num arquivo:

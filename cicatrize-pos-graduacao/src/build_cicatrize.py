@@ -671,19 +671,33 @@ CHANGES = [
 ]
 
 
+CHANGE_PHOTOS = ["avaliação clínica de uma ferida", "curativo / ferida em cicatrização",
+                 "avaliação podológica do pé"]
+
+
 def change_card(i, icon_name, title, desc):
-    top = row([
-        icon(icon_name, ROSE, bg="rgba(207, 138, 134, 0.14)", size=20, pad=14, radius=14),
-        heading(f"0{i}", "p", "rgba(255, 255, 255, 0.28)", typo("typography", 40, 900, lh=40, ls=-1),
-                align="right", classes="cz-num", extra={"_flex_size": "grow"}),
-    ], flex_justify_content="space-between", flex_align_items="center")
-    return card([
-        top,
-        heading(title, "h3", WHITE, typo("typography", 22, 800, lh=28, ls=-0.3, size_m=20, lh_m=26),
-                extra={"_margin": dims(10, 0, 0, 0)}),
+    """Card com imagem grande no topo (placeholder), número em etiqueta sobre a imagem e texto embaixo.
+    icon_name fica só como referência do tema da imagem."""
+    img = widget("image", {
+        "image_size": "full", "align": "center", "width": px(100, "%"),
+        "height": px(240), "height_tablet": px(320), "height_mobile": px(210),
+        "object-fit": "cover", "object-position": "center center",
+        "image_border_radius": dims(0), "hover_animation": "grow",
+    }, title=f"📷 Card 0{i}: {CHANGE_PHOTOS[i - 1]}")
+    num = heading(f"0{i}", "p", WHITE, typo("typography", 13, 900, lh=16, ls=1.2), classes="cz-num", extra={
+        "_background_background": "classic", "_background_color": "rgba(15, 79, 92, 0.88)",
+        "_padding": dims(8, 14, 8, 14), "_border_radius": dims(999),
+        "_border_border": "solid", "_border_width": dims(1), "_border_color": "rgba(207, 138, 134, 0.6)",
+        "_position": "absolute", "_offset_orientation_h": "end", "_offset_x_end": px(16),
+        "_offset_orientation_v": "start", "_offset_y": px(16), "_z_index": 2, "_element_width": "auto",
+    })
+    text_block = col([
+        heading(title, "h3", WHITE, typo("typography", 22, 800, lh=28, ls=-0.3, size_m=20, lh_m=26)),
         container({"content_width": "full", "css_classes": "cz-card-line"}, []),
         body(f"<p>{desc}</p>", color=WHITE_80, size=16),
-    ], dark=True, classes="cz-tilt")
+    ], flex_gap=gap(14), padding=dims(26, 30, 32, 30), padding_mobile=dims(22, 22, 26, 22))
+    return card([img, num, text_block], dark=True, pad=(0, 0, 0, 0), classes="cz-tilt",
+                padding_mobile=dims(0), flex_gap=gap(0), overflow="hidden")
 
 
 def build_dois_em_um():
