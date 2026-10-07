@@ -304,7 +304,7 @@ body .cz-css .elementor-widget-html {
 }
 
 /* orbe rosé que flutua atrás da foto */
-.cz-hero .cz-orb {
+.cz-orb {
   position: absolute;
   z-index: -1;
   top: 8%;
@@ -324,8 +324,13 @@ body .cz-css .elementor-widget-html {
   50% { transform: translate(-46%, -18px) scale(1.06); }
 }
 
+/* o brilho se posiciona pela coluna, não pelo widget HTML (que tem altura zero) */
+.cz-hero-photo .elementor-widget-html {
+  position: static;
+}
+
 /* H1: primeira linha menor, fina e rosé */
-.cz-hero .cz-h1 .cz-pre {
+.cz-h1 .cz-pre {
   display: block;
   margin-bottom: 6px;
   color: var(--cz-rose);
@@ -335,47 +340,47 @@ body .cz-css .elementor-widget-html {
 }
 
 /* Selos do hero: cartão "vidro" */
-.cz-hero .cz-seals.e-con {
+.cz-seals.e-con {
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
 }
 
-.cz-hero .cz-seal .elementor-icon {
+.cz-seal .elementor-icon {
   transition: transform 0.5s var(--cz-ease), background-color 0.3s ease;
 }
 
 @media (hover: hover) {
-  .cz-hero .cz-seal:hover .elementor-icon {
+  .cz-seal:hover .elementor-icon {
     transform: rotate(-8deg) scale(1.08);
   }
 }
 
 /* Foto do expert (placeholder) */
-.cz-hero .cz-hero-photo.e-con {
+.cz-hero-photo.e-con {
   position: relative;
 }
 
-.cz-hero .cz-hero-photo img {
+.cz-hero-photo img {
   width: 100%;
   -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
   mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
 }
 
-.cz-hero .cz-float-chip.e-con {
+.cz-float-chip.e-con {
   position: absolute;
   z-index: 2;
   box-shadow: 0 18px 40px -12px rgba(11, 60, 70, 0.55);
   animation: cz-bob 5s ease-in-out infinite;
 }
 
-.cz-hero .cz-chip-a.e-con {
+.cz-chip-a.e-con {
   left: -4%;
   bottom: 22%;
 }
 
-.cz-hero .cz-chip-b.e-con {
+.cz-chip-b.e-con {
   right: 0;
   top: 16%;
   animation-delay: -2.5s;
@@ -387,8 +392,42 @@ body .cz-css .elementor-widget-html {
 }
 
 @media (max-width: 767px) {
-  .cz-hero .cz-chip-a.e-con { left: 0; bottom: 14%; }
-  .cz-hero .cz-chip-b.e-con { right: 0; top: 6%; }
+  .cz-chip-a.e-con { left: 0; bottom: 14%; }
+  .cz-chip-b.e-con { right: 0; top: 6%; }
+}
+
+/* Selos MEC e Anhanguera (imagens). A posição é nativa do Elementor (Avançado > Posição);
+   aqui só a flutuação, a sombra e o hover. A flutuação fica na <img> para não brigar com a
+   animação de entrada do widget. */
+.cz-selo img {
+  animation: cz-bob 5s ease-in-out infinite;
+  transition: scale 0.5s var(--cz-ease);
+}
+
+.cz-selo-mec img {
+  rotate: -8deg;
+  filter: drop-shadow(0 18px 28px rgba(0, 0, 0, 0.4));
+}
+
+.cz-selo-anh img {
+  animation-delay: -2.5s;
+}
+
+.cz-selo-anh.elementor-widget {
+  box-shadow: 0 18px 40px -14px rgba(11, 60, 70, 0.6);
+}
+
+@media (hover: hover) {
+  .cz-selo:hover img {
+    scale: 1.06;
+  }
+}
+
+/* No celular/tablet os selos ficam lado a lado e não flutuam tanto */
+@media (max-width: 1024px) {
+  .cz-selo img {
+    animation-duration: 6s;
+  }
 }
 
 /* Barra "vagas preenchidas" */

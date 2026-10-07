@@ -6,6 +6,31 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Atualização do hero: selos do MEC e da Anhanguera (07/10)
+
+Arquivos novos:
+- `hero-selos-elementor.json`: o container de conteúdo do hero, montado a partir do que está publicado no site (mantém suas edições).
+- `estilos-animacoes-elementor.json`: o container "⚙ Estilos e animações" com o CSS e o JS atualizados.
+- `assets/selo-reconhecido-mec.webp` e `assets/logo-anhanguera.svg`: as imagens dos selos.
+
+**Por que as animações e o fundo dos ícones sumiram:** tudo isso dependia das classes `cz cz-hero` no container de fora do hero (onde fica a foto de fundo). Quando o fundo foi trocado, essas classes saíram. Agora:
+- o container de conteúdo do hero tem a classe `cz` própria;
+- o fundo "vidro" dos ícones é configuração nativa (Estilo > Fundo e Borda);
+- o CSS do hero não depende mais de `.cz-hero`.
+
+**Selos separados:**
+- **No computador:** o selo do MEC (redondo) e a logo da Anhanguera (num cartão branco) flutuam sobre a foto de fundo. Para mudar a posição, use **Avançado > Posição** de cada imagem.
+- **No tablet e no celular:** os dois ficam lado a lado, logo abaixo do texto de apoio.
+- O brilho rosé dessa coluna saiu, porque ficaria por cima do rosto do expert.
+
+**Passo a passo:**
+1. Envie as 2 imagens de `assets/` para a **Biblioteca de Mídia**, sem renomear. O JSON aponta para `.../uploads/2026/10/selo-reconhecido-mec.webp` e `.../uploads/2026/10/logo-anhanguera.svg`. Se o WordPress mudar o nome (ex.: `-1`), é só clicar na imagem e escolher de novo.
+2. Importe `hero-selos-elementor.json` e coloque o container no lugar do conteúdo atual do hero, dentro do container que tem a foto de fundo.
+3. Importe `estilos-animacoes-elementor.json` e coloque-o no topo da página, no lugar do "⚙ Estilos e animações" antigo. Se ele tiver sido apagado, é por isso que as animações pararam na página toda.
+4. (Opcional) Volte as classes `cz cz-hero` em **Avançado > Classes CSS** do container com a foto de fundo. Elas trazem de volta a camada escura de leitura sobre a foto e a textura de filme.
+
+O script `src/build_hero_selos.py` refaz esse hero a partir de um export novo: `python3 src/build_hero_selos.py export.json`.
+
 ## Estrutura (nomes no Navegador do Elementor)
 
 | # | Seção | O que tem |

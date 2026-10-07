@@ -1,0 +1,1700 @@
+{
+  "content": [
+    {
+      "id": "687d7da1",
+      "settings": {
+        "flex_gap": {
+          "column": "40",
+          "row": "40",
+          "isLinked": true,
+          "unit": "px",
+          "size": 40
+        },
+        "padding": {
+          "unit": "px",
+          "top": "48",
+          "right": "24",
+          "bottom": "72",
+          "left": "24",
+          "isLinked": false
+        },
+        "flex_direction": "row",
+        "flex_wrap": "nowrap",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1200,
+          "sizes": []
+        },
+        "flex_direction_tablet": "column",
+        "flex_align_items": "center",
+        "flex_align_items_tablet": "flex-start",
+        "flex_gap_tablet": {
+          "column": "48",
+          "row": "48",
+          "isLinked": true,
+          "unit": "px",
+          "size": 48
+        },
+        "padding_tablet": {
+          "unit": "px",
+          "top": "40",
+          "right": "24",
+          "bottom": "56",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "28",
+          "right": "16",
+          "bottom": "48",
+          "left": "16",
+          "isLinked": false
+        },
+        "ha_cmc_text": "Happy Addons",
+        "css_classes": "cz cz-hero-content",
+        "_title": "1 · HERO · conteúdo"
+      },
+      "elements": [
+        {
+          "id": "614852df",
+          "settings": {
+            "flex_gap": {
+              "column": "22",
+              "row": "22",
+              "isLinked": true,
+              "unit": "px",
+              "size": 22
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 54,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_gap_mobile": {
+              "column": "18",
+              "row": "18",
+              "isLinked": true,
+              "unit": "px",
+              "size": 18
+            },
+            "margin_mobile": {
+              "unit": "vw",
+              "top": "74",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": false
+            },
+            "ha_cmc_text": "Happy Addons"
+          },
+          "elements": [
+            {
+              "id": "7a3059ca",
+              "settings": {
+                "image_size": "full",
+                "align": "left",
+                "width": {
+                  "unit": "px",
+                  "size": 246,
+                  "sizes": []
+                },
+                "image_border_radius": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "width_mobile": {
+                  "unit": "px",
+                  "size": 258,
+                  "sizes": []
+                },
+                "_title": "📷 LOGO (subir o SVG do Figma)",
+                "_animation": "fadeIn",
+                "image": {
+                  "id": 16582,
+                  "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/logo-pos-graduacao.svg",
+                  "alt": "",
+                  "source": "library",
+                  "size": ""
+                },
+                "align_mobile": "center",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "image",
+              "elType": "widget"
+            },
+            {
+              "id": "3484f670",
+              "settings": {
+                "title": "Turma de Membros Fundadores · Vagas limitadas",
+                "header_size": "p",
+                "align": "left",
+                "title_color": "#CF8A86",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 1.8,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 8,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "_animation_delay": 100,
+                "_margin": {
+                  "unit": "px",
+                  "top": "36",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "_margin_mobile": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "align_mobile": "center",
+                "_padding": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "10",
+                  "bottom": "10",
+                  "left": "10",
+                  "isLinked": true
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 432,
+                  "sizes": []
+                },
+                "ha_cmc_text": "Happy Addons",
+                "_background_background": "classic",
+                "_background_color": "#CF8A8626",
+                "_border_radius": {
+                  "unit": "px",
+                  "top": "5",
+                  "right": "5",
+                  "bottom": "5",
+                  "left": "5",
+                  "isLinked": true
+                }
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            },
+            {
+              "id": "66c20ce2",
+              "settings": {
+                "title": "<span class=\"cz-pre\">Você já trata feridas.</span>Torne-se o <em>Especialista</em> na área <span class=\"cz-rose cz-mark\">certificado pelo MEC</span> que os pacientes procuram quando o caso é grave.",
+                "header_size": "h1",
+                "align": "left",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 44,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -1,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 40,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 26,
+                  "sizes": []
+                },
+                "typography_line_height_tablet": {
+                  "unit": "px",
+                  "size": 48,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "em",
+                  "size": 1.1,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -0.5,
+                  "sizes": []
+                },
+                "_css_classes": "cz-h1 cz-split",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "align_mobile": "center",
+                "typography_line_height_laptop": {
+                  "unit": "em",
+                  "size": "",
+                  "sizes": []
+                },
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            },
+            {
+              "id": "2f51f14f",
+              "settings": {
+                "editor": "<p>Pós-graduação em <strong>Tratamento de Feridas e Podiatria</strong>. Duas especialidades em uma única formação, com raciocínio clínico estruturado que acelera a cicatrização e diploma reconhecido pelo MEC.</p>",
+                "align": "left",
+                "text_color": "rgba(255, 255, 255, 0.82)",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_font_weight": "400",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 29,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 26,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "_animation_delay": 250,
+                "align_mobile": "center",
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "text-editor",
+              "elType": "widget"
+            },
+            {
+              "id": "47faa71",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_direction_mobile": "row",
+                "flex_wrap": "nowrap",
+                "flex_justify_content": "flex-start",
+                "flex_justify_content_mobile": "center",
+                "flex_align_items": "center",
+                "flex_gap": {
+                  "column": "18",
+                  "row": "18",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 18
+                },
+                "flex_gap_mobile": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "hide_desktop": "hidden-desktop",
+                "hide_laptop": "hidden-laptop",
+                "animation": "fadeInUp",
+                "animation_delay": 300,
+                "_title": "Selos lado a lado (só tablet e celular)"
+              },
+              "elements": [
+                {
+                  "id": "edcb1c9",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/selo-reconhecido-mec.webp",
+                      "id": "",
+                      "size": "",
+                      "source": "library",
+                      "alt": "Selo: curso reconhecido pelo MEC"
+                    },
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "_element_width": "initial",
+                    "_element_custom_width": {
+                      "unit": "px",
+                      "size": 96,
+                      "sizes": []
+                    },
+                    "_flex_size": "none",
+                    "_css_classes": "cz-selo cz-selo-mec",
+                    "_title": "Selo Reconhecido pelo MEC",
+                    "_element_custom_width_mobile": {
+                      "unit": "px",
+                      "size": 78,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "9546858",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/logo-anhanguera.svg",
+                      "id": "",
+                      "size": "",
+                      "source": "library",
+                      "alt": "Diploma emitido pela Faculdade Anhanguera"
+                    },
+                    "image_size": "full",
+                    "align": "center",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "_element_width": "initial",
+                    "_element_custom_width": {
+                      "unit": "px",
+                      "size": 170,
+                      "sizes": []
+                    },
+                    "_flex_size": "none",
+                    "_css_classes": "cz-selo cz-selo-anh",
+                    "_title": "Logo Faculdade Anhanguera",
+                    "_background_background": "classic",
+                    "_background_color": "#FFFFFF",
+                    "_padding": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "20",
+                      "bottom": "14",
+                      "left": "20",
+                      "isLinked": false
+                    },
+                    "_padding_mobile": {
+                      "unit": "px",
+                      "top": "10",
+                      "right": "14",
+                      "bottom": "10",
+                      "left": "14",
+                      "isLinked": false
+                    },
+                    "_border_radius": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "14",
+                      "bottom": "14",
+                      "left": "14",
+                      "isLinked": true
+                    },
+                    "__globals__": {
+                      "_background_color": ""
+                    },
+                    "_element_custom_width_mobile": {
+                      "unit": "px",
+                      "size": 140,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "4eddc539",
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "22",
+                  "bottom": "20",
+                  "left": "22",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "container_type": "grid",
+                "grid_columns_grid": {
+                  "unit": "fr",
+                  "size": 2,
+                  "sizes": []
+                },
+                "grid_columns_grid_tablet": {
+                  "unit": "fr",
+                  "size": 2,
+                  "sizes": []
+                },
+                "grid_rows_grid_tablet": {
+                  "unit": "fr",
+                  "size": 2,
+                  "sizes": []
+                },
+                "grid_rows_grid_mobile": {
+                  "unit": "fr",
+                  "size": 4,
+                  "sizes": []
+                },
+                "grid_gaps": {
+                  "column": "18",
+                  "row": "18",
+                  "isLinked": true,
+                  "unit": "px"
+                },
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "16",
+                  "bottom": "18",
+                  "left": "16",
+                  "isLinked": false
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "18",
+                  "right": "18",
+                  "bottom": "18",
+                  "left": "18",
+                  "isLinked": true
+                },
+                "css_classes": "cz-seals",
+                "ha_cmc_text": "Happy Addons",
+                "background_background": "classic",
+                "background_color": "rgba(255, 255, 255, 0.06)",
+                "border_border": "solid",
+                "border_width": {
+                  "unit": "px",
+                  "top": "1",
+                  "right": "1",
+                  "bottom": "1",
+                  "left": "1",
+                  "isLinked": true
+                },
+                "border_color": "rgba(255, 255, 255, 0.14)",
+                "__globals__": {
+                  "background_color": "",
+                  "border_color": ""
+                }
+              },
+              "elements": [
+                {
+                  "id": "469c93ed",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 12
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_align_items": "center",
+                    "css_classes": "cz-seal",
+                    "animation": "fadeIn",
+                    "animation_delay": 300,
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "id": "55db1fdf",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-graduation-cap",
+                          "library": "fa-solid"
+                        },
+                        "align": "left",
+                        "size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "view": "stacked",
+                        "shape": "square",
+                        "primary_color": "rgba(207, 138, 134, 0.22)",
+                        "secondary_color": "#FFFFFF",
+                        "icon_padding": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "primary_color": "",
+                          "secondary_color": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "icon",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "226aa998",
+                      "settings": {
+                        "flex_gap": {
+                          "column": "2",
+                          "row": "2",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 2
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [
+                        {
+                          "id": "57d7f63c",
+                          "settings": {
+                            "title": "Reconhecida pelo MEC",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 19,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 18,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        },
+                        {
+                          "id": "318e9870",
+                          "settings": {
+                            "title": "Faculdade Anhanguera",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "rgba(255, 255, 255, 0.62)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 13,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 17,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        }
+                      ],
+                      "isInner": true,
+                      "elType": "container"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "12bf1c5",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 12
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_align_items": "center",
+                    "css_classes": "cz-seal",
+                    "animation": "fadeIn",
+                    "animation_delay": 390,
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "id": "6f9339f2",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-laptop",
+                          "library": "fa-solid"
+                        },
+                        "align": "left",
+                        "size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "view": "stacked",
+                        "shape": "square",
+                        "primary_color": "rgba(207, 138, 134, 0.22)",
+                        "secondary_color": "#FFFFFF",
+                        "icon_padding": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "primary_color": "",
+                          "secondary_color": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "icon",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "20c00212",
+                      "settings": {
+                        "flex_gap": {
+                          "column": "2",
+                          "row": "2",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 2
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [
+                        {
+                          "id": "46238e6",
+                          "settings": {
+                            "title": "100% online",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 19,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 18,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        },
+                        {
+                          "id": "479e09b0",
+                          "settings": {
+                            "title": "Estude de onde estiver",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "rgba(255, 255, 255, 0.62)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 13,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 17,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        }
+                      ],
+                      "isInner": true,
+                      "elType": "container"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "2ca06ce6",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 12
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_align_items": "center",
+                    "css_classes": "cz-seal",
+                    "animation": "fadeIn",
+                    "animation_delay": 480,
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "id": "20a48448",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-book-open",
+                          "library": "fa-solid"
+                        },
+                        "align": "left",
+                        "size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "view": "stacked",
+                        "shape": "square",
+                        "primary_color": "rgba(207, 138, 134, 0.22)",
+                        "secondary_color": "#FFFFFF",
+                        "icon_padding": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "primary_color": "",
+                          "secondary_color": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "icon",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "793b947c",
+                      "settings": {
+                        "flex_gap": {
+                          "column": "2",
+                          "row": "2",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 2
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [
+                        {
+                          "id": "4ca800e1",
+                          "settings": {
+                            "title": "400 horas",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 19,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 18,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        },
+                        {
+                          "id": "20f2dd38",
+                          "settings": {
+                            "title": "17 disciplinas",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "rgba(255, 255, 255, 0.62)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 13,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 17,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        }
+                      ],
+                      "isInner": true,
+                      "elType": "container"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "38d5571f",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "12",
+                      "row": "12",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 12
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_align_items": "center",
+                    "css_classes": "cz-seal",
+                    "animation": "fadeIn",
+                    "animation_delay": 570,
+                    "ha_cmc_text": "Happy Addons"
+                  },
+                  "elements": [
+                    {
+                      "id": "346d0922",
+                      "settings": {
+                        "selected_icon": {
+                          "value": "fas fa-video",
+                          "library": "fa-solid"
+                        },
+                        "align": "left",
+                        "size": {
+                          "unit": "px",
+                          "size": 16,
+                          "sizes": []
+                        },
+                        "_flex_size": "none",
+                        "view": "stacked",
+                        "shape": "square",
+                        "primary_color": "rgba(207, 138, 134, 0.22)",
+                        "secondary_color": "#FFFFFF",
+                        "icon_padding": {
+                          "unit": "px",
+                          "size": 11,
+                          "sizes": []
+                        },
+                        "border_radius": {
+                          "unit": "px",
+                          "top": "10",
+                          "right": "10",
+                          "bottom": "10",
+                          "left": "10",
+                          "isLinked": true
+                        },
+                        "__globals__": {
+                          "primary_color": "",
+                          "secondary_color": ""
+                        },
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "icon",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "23470927",
+                      "settings": {
+                        "flex_gap": {
+                          "column": "2",
+                          "row": "2",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 2
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "flex_justify_content": "center",
+                        "ha_cmc_text": "Happy Addons"
+                      },
+                      "elements": [
+                        {
+                          "id": "49ee60c",
+                          "settings": {
+                            "title": "Ao vivo todo mês",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "#FFFFFF",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 19,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 18,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        },
+                        {
+                          "id": "67f7fbf6",
+                          "settings": {
+                            "title": "Encontro com o tutor",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "rgba(255, 255, 255, 0.62)",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Lato",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 13,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "px",
+                              "size": 17,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 12,
+                              "sizes": []
+                            },
+                            "typography_line_height_mobile": {
+                              "unit": "px",
+                              "size": 16,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            },
+                            "ha_cmc_text": "Happy Addons"
+                          },
+                          "elements": [],
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "elType": "widget"
+                        }
+                      ],
+                      "isInner": true,
+                      "elType": "container"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ],
+              "isInner": true,
+              "elType": "container"
+            },
+            {
+              "id": "3063369",
+              "settings": {
+                "text": "QUERO MINHA VAGA DE MEMBRO FUNDADOR",
+                "link": {
+                  "url": "#oferta",
+                  "is_external": "",
+                  "nofollow": "",
+                  "custom_attributes": ""
+                },
+                "align": "left",
+                "align_mobile": "justify",
+                "size": "lg",
+                "selected_icon": {
+                  "value": "fas fa-arrow-right",
+                  "library": "fa-solid"
+                },
+                "icon_align": "right",
+                "icon_indent": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "button_text_color": "#FFFFFF",
+                "hover_color": "#FFFFFF",
+                "background_color": "#1FBF5C",
+                "button_background_hover_color": "#1FBF5C",
+                "text_padding": {
+                  "unit": "px",
+                  "top": "22",
+                  "right": "34",
+                  "bottom": "22",
+                  "left": "34",
+                  "isLinked": false
+                },
+                "text_padding_mobile": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "isLinked": true
+                },
+                "border_radius": {
+                  "unit": "px",
+                  "top": "12",
+                  "right": "12",
+                  "bottom": "12",
+                  "left": "12",
+                  "isLinked": true
+                },
+                "_css_classes": "cz-btn",
+                "typography_typography": "custom",
+                "typography_font_family": "Lato",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "typography_font_weight": "900",
+                "typography_line_height": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 0.6,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "typography_line_height_mobile": {
+                  "unit": "px",
+                  "size": 18,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": 0.3,
+                  "sizes": []
+                },
+                "_title": "Botão de ação (verde)",
+                "__globals__": {
+                  "button_text_color": "",
+                  "hover_color": "",
+                  "background_color": "",
+                  "button_background_hover_color": "",
+                  "typography_typography": ""
+                },
+                "_animation": "fadeInUp",
+                "_animation_delay": 450,
+                "_margin": {
+                  "unit": "px",
+                  "top": "8",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "button",
+              "elType": "widget"
+            },
+            {
+              "id": "5a92155b",
+              "settings": {
+                "icon_list": [
+                  {
+                    "_id": "1122786",
+                    "text": "Condição exclusiva da primeira turma. Não vai se repetir.",
+                    "selected_icon": {
+                      "value": "fas fa-hourglass-half",
+                      "library": "fa-solid"
+                    }
+                  }
+                ],
+                "space_between": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "text_color": "rgba(255, 255, 255, 0.82)",
+                "text_color_hover": "rgba(255, 255, 255, 0.82)",
+                "icon_color": "#CF8A86",
+                "icon_color_hover": "#CF8A86",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "text_indent": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                },
+                "icon_self_vertical_align": "center",
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Lato",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 14,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "400",
+                "icon_typography_line_height": {
+                  "unit": "px",
+                  "size": 20,
+                  "sizes": []
+                },
+                "icon_typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "_css_classes": "cz-micro",
+                "__globals__": {
+                  "text_color": "",
+                  "icon_color": "",
+                  "icon_typography_typography": ""
+                },
+                "icon_align": "left",
+                "icon_align_mobile": "center",
+                "_animation": "fadeIn",
+                "_animation_delay": 600,
+                "ha_cmc_text": "Happy Addons"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "icon-list",
+              "elType": "widget"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "5635289f",
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "column",
+            "width": {
+              "unit": "%",
+              "size": 46,
+              "sizes": []
+            },
+            "width_tablet": {
+              "unit": "%",
+              "size": 70,
+              "sizes": []
+            },
+            "width_mobile": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_justify_content": "flex-end",
+            "css_classes": "cz-hero-photo cz-par-2",
+            "ha_cmc_text": "Happy Addons",
+            "min_height": {
+              "unit": "px",
+              "size": 560,
+              "sizes": []
+            },
+            "min_height_laptop": {
+              "unit": "px",
+              "size": 500,
+              "sizes": []
+            },
+            "hide_tablet": "hidden-tablet",
+            "hide_mobile": "hidden-mobile",
+            "_title": "Selos sobre a foto (só computador) — ajuste em Avançado > Posição"
+          },
+          "elements": [
+            {
+              "id": "590193b",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/selo-reconhecido-mec.webp",
+                  "id": "",
+                  "size": "",
+                  "source": "library",
+                  "alt": "Selo: curso reconhecido pelo MEC"
+                },
+                "image_size": "full",
+                "align": "center",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 150,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_css_classes": "cz-selo cz-selo-mec",
+                "_title": "Selo Reconhecido pelo MEC",
+                "_animation": "zoomIn",
+                "_animation_delay": 500,
+                "_position": "absolute",
+                "_offset_orientation_h": "start",
+                "_offset_x": {
+                  "unit": "%",
+                  "size": 4,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "end",
+                "_offset_y_end": {
+                  "unit": "%",
+                  "size": 12,
+                  "sizes": []
+                },
+                "_z_index": 3,
+                "_element_custom_width_laptop": {
+                  "unit": "px",
+                  "size": 130,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "9b1c192",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "image",
+              "settings": {
+                "image": {
+                  "url": "https://lp.morganamdesigner.com/wp-content/uploads/2026/10/logo-anhanguera.svg",
+                  "id": "",
+                  "size": "",
+                  "source": "library",
+                  "alt": "Diploma emitido pela Faculdade Anhanguera"
+                },
+                "image_size": "full",
+                "align": "center",
+                "width": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 190,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_css_classes": "cz-selo cz-selo-anh",
+                "_title": "Logo Faculdade Anhanguera",
+                "_background_background": "classic",
+                "_background_color": "#FFFFFF",
+                "_padding": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "20",
+                  "bottom": "14",
+                  "left": "20",
+                  "isLinked": false
+                },
+                "_padding_mobile": {
+                  "unit": "px",
+                  "top": "10",
+                  "right": "14",
+                  "bottom": "10",
+                  "left": "14",
+                  "isLinked": false
+                },
+                "_border_radius": {
+                  "unit": "px",
+                  "top": "14",
+                  "right": "14",
+                  "bottom": "14",
+                  "left": "14",
+                  "isLinked": true
+                },
+                "__globals__": {
+                  "_background_color": ""
+                },
+                "_animation": "fadeInDown",
+                "_animation_delay": 750,
+                "_position": "absolute",
+                "_offset_orientation_h": "end",
+                "_offset_x_end": {
+                  "unit": "%",
+                  "size": 0,
+                  "sizes": []
+                },
+                "_offset_orientation_v": "start",
+                "_offset_y": {
+                  "unit": "%",
+                  "size": 14,
+                  "sizes": []
+                },
+                "_z_index": 3,
+                "_element_custom_width_laptop": {
+                  "unit": "px",
+                  "size": 170,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        }
+      ],
+      "isInner": true,
+      "elType": "container"
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Cicatrize - Hero com selos MEC e Anhanguera",
+  "type": "container"
+}

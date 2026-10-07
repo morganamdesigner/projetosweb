@@ -16,6 +16,7 @@ import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "cicatrize-pos-elementor.json")
+OUT_ASSETS = os.path.join(HERE, "..", "estilos-animacoes-elementor.json")
 CSS_FILE = os.path.join(HERE, "cz-page.css")
 JS_FILE = os.path.join(HERE, "cz-page.js")
 
@@ -1375,6 +1376,14 @@ def main():
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
     print(f"OK: {os.path.normpath(OUT)} ({_counter[0]} ids)")
+
+    # só o container "⚙ Estilos e animações", para atualizar o CSS/JS numa página já montada
+    assets = {"content": [build_assets()], "page_settings": [], "version": "0.4",
+              "title": "Cicatrize - Estilos e animações", "type": "container"}
+    with open(OUT_ASSETS, "w", encoding="utf-8") as fh:
+        json.dump(assets, fh, ensure_ascii=False, indent=2)
+        fh.write("\n")
+    print(f"OK: {os.path.normpath(OUT_ASSETS)}")
 
 
 if __name__ == "__main__":
