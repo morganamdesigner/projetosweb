@@ -147,7 +147,8 @@
         pars.forEach(function (p) {
           var r = p.el.getBoundingClientRect();
           var center = r.top + r.height / 2 - vh / 2;
-          p.el.style.translate = "0 " + (center * -0.04 * p.speed).toFixed(1) + "px";
+          var shift = Math.max(-40, Math.min(40, center * -0.04 * p.speed));  // no máximo 40 px
+          p.el.style.translate = "0 " + shift.toFixed(1) + "px";
         });
       }
 

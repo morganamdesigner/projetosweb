@@ -1465,3 +1465,48 @@ body .cz-assets.elementor-widget {
 .cz .cz-bonus-who .elementor-heading-title {
   border-radius: 10px;
 }
+
+/* ---------------------------------------------------------------------------
+   Ajustes de celular (07/10)
+--------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  /* Grade curricular: cartão do bloco escuro, para o texto branco ter contraste
+     (a imagem do bloco continua no topo; no computador o cartão segue claro) */
+  .cz-grade .cz-block.e-con {
+    background-color: var(--cz-teal) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* ícone do bloco em rosé (o petróleo sumiria no cartão petróleo) */
+  .cz-grade .cz-block .elementor-view-stacked .elementor-icon {
+    background-color: var(--cz-rose) !important;
+  }
+
+  /* Corpo docente: foto ocupa a altura toda do cartão horizontal */
+  .cz .cz-prof .cz-prof-photo,
+  .cz .cz-prof .cz-prof-photo .elementor-widget-container {
+    height: 100%;
+  }
+
+  .cz .cz-prof .cz-prof-photo img {
+    height: 100%;
+    min-height: 168px;
+    aspect-ratio: auto;
+  }
+
+  /* Quem é o Dr. Cicatriz: moldura rosé não encosta na borda da tela */
+  .cz .cz-bio-photo.e-con::before {
+    inset: 12px -8px -8px 12px;
+  }
+
+  .cz .cz-bio-photo.e-con.is-in::before {
+    inset: 8px -6px -6px 8px;
+  }
+
+  /* Paradoxo: fotos lado a lado, inclinação mais leve */
+  .cz .cz-shot-a.e-con { transform: rotate(3deg); }
+  .cz .cz-shot-b.e-con { transform: rotate(-3deg); }
+
+  /* Como funciona: ícone não muda de lugar ao tocar */
+  .cz .cz-info .elementor-icon { transform: none !important; }
+}

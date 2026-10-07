@@ -6,6 +6,27 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Página completa com ajustes de celular: `pagina-completa-elementor.json` (07/10)
+
+Parte da página exportada do site (`src/entrada/pagina-completa-2026-10-07.json`) e muda só o que está listado abaixo. Textos, imagens e as outras edições continuam iguais.
+
+**Celular:**
+- **Grade curricular:** os cartões dos blocos ficam escuros (petróleo) e o ícone do bloco fica rosé, para "BLOCO 01" e "5 disciplinas" terem contraste. No computador nada muda.
+- **Faixa "Turma de Membros Fundadores" (hero):** tinha largura fixa de 432 px, maior que a tela, e por isso a fonte estava em 8 px. Agora ela ocupa 100% da largura e a fonte vai para 10 px.
+- **Botões verdes:** cabem em uma linha (13 px).
+- **Paradoxo:** as 2 fotos ficam lado a lado em vez de empilhadas.
+- **Como funciona:** os 8 cartões viram uma lista compacta, com o ícone à esquerda e o texto à direita.
+- **Corpo docente:** os cartões das professoras ficam horizontais, com a foto à esquerda e o texto à direita.
+- **Quem é o Dr. Cicatriz:** a moldura rosé não encosta mais na borda da tela.
+- **Rodapé:** textos centralizados.
+
+**Geral:**
+- O parallax das fotos fica limitado a 40 px, para não sobrepor os textos em telas altas.
+
+**Como usar:** importe o arquivo e substitua o conteúdo da página por ele. O CSS e o JS já vão dentro do hero.
+
+Para refazer a partir de um export novo: `python3 src/build_ajustes_pagina.py export.json`.
+
 ## Cards da seção 2 em 1 com imagens: `grid-2em1-imagens-elementor.json`
 
 Os ícones dos 3 cards ("Raciocínio clínico", "Cicatrização mais rápida", "Atuação ampliada na podiatria") deram lugar a uma imagem grande no topo de cada card:
