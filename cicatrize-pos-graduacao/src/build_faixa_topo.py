@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """Faixa de aviso acima do hero: "Turma de Membros Fundadores · Vagas limitadas".
 
-Faixa rosé (cor de destaque da identidade; o verde fica só para os botões de ação) com texto
-petróleo em movimento contínuo, ponto pulsando, separadores em bolinha (sem símbolos) e brilho passando. A faixa inteira é um link para
+Faixa verde-água com texto branco em movimento contínuo (122s no computador, 24s no celular), ponto pulsando, separadores em bolinha (sem símbolos) e brilho passando. A faixa inteira é um link para
 a oferta (#oferta). Pausa ao passar o mouse; com "reduzir movimento" o texto fica parado e
 centralizado. CSS embutido no próprio widget (funciona sozinha).
 Saída: ../faixa-topo-elementor.json
@@ -20,28 +19,27 @@ LINK = "#oferta"
 ITEMS = ["Turma de Membros Fundadores", "Vagas limitadas", "Condição exclusiva da primeira turma"]
 
 CSS = """
-.cz-topbar{--tb-teal:#0F4F5C;--tb-rose:#CF8A86;display:block;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,#C47F7B,var(--tb-rose) 30%,#DDA19D 50%,var(--tb-rose) 70%,#C47F7B);
-  color:var(--tb-teal)!important;text-decoration:none!important;font-family:"Lato",sans-serif;
-  border-bottom:1px solid rgba(15,79,92,.18)}
+.cz-topbar{--tb-aqua:#1FA394;--tb-ink:#FFFFFF;display:block;position:relative;overflow:hidden;
+  background:linear-gradient(90deg,#16897D,var(--tb-aqua) 30%,#2BB8A8 50%,var(--tb-aqua) 70%,#16897D);
+  color:var(--tb-ink)!important;text-decoration:none!important;font-family:"Lato",sans-serif;
+  border-bottom:1px solid rgba(15,79,92,.25)}
 .cz-topbar::after{content:"";position:absolute;top:0;left:-30%;width:20%;height:100%;pointer-events:none;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);
   animation:cz-tb-shine 5s ease-in-out infinite}
-.cz-topbar-track{display:flex;width:max-content;animation:cz-tb-move 32s linear infinite}
+.cz-topbar-track{display:flex;width:max-content;animation:cz-tb-move 122s linear infinite}
 .cz-topbar:hover .cz-topbar-track,.cz-topbar:focus-visible .cz-topbar-track{animation-play-state:paused}
 .cz-topbar-group{display:flex;align-items:center;flex:none}
 .cz-topbar-item{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;white-space:nowrap;
-  font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;line-height:1}
-.cz-topbar-sep{width:5px;height:5px;border-radius:50%;background:var(--tb-teal);opacity:.45;flex:none}
-.cz-topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--tb-teal);flex:none;
-  box-shadow:0 0 0 0 rgba(15,79,92,.55);animation:cz-tb-ping 1.8s infinite}
-.cz-topbar-cta{display:inline-flex;align-items:center;gap:6px;margin-left:4px;padding:6px 12px;border-radius:999px;
-  background:var(--tb-teal);color:#fff;font-size:11px;letter-spacing:.12em}
-.cz-topbar:focus-visible{outline:3px solid var(--tb-teal);outline-offset:-3px}
+  font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;line-height:1;
+  text-shadow:0 1px 0 rgba(15,79,92,.25)}
+.cz-topbar-sep{width:5px;height:5px;border-radius:50%;background:var(--tb-ink);opacity:.6;flex:none}
+.cz-topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--tb-ink);flex:none;
+  box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:cz-tb-ping 1.8s infinite}
+.cz-topbar:focus-visible{outline:3px solid #0F4F5C;outline-offset:-3px}
 @keyframes cz-tb-move{to{transform:translateX(-50%)}}
 @keyframes cz-tb-shine{0%,55%{left:-30%}100%{left:130%}}
-@keyframes cz-tb-ping{0%{box-shadow:0 0 0 0 rgba(15,79,92,.55)}70%{box-shadow:0 0 0 8px rgba(15,79,92,0)}
-  100%{box-shadow:0 0 0 0 rgba(15,79,92,0)}}
+@keyframes cz-tb-ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
 @media (max-width:767px){.cz-topbar-item{padding:11px 16px;font-size:12px;letter-spacing:.1em}
   .cz-topbar-track{animation-duration:24s}}
 @media (prefers-reduced-motion:reduce){.cz-topbar::after,.cz-topbar-dot{animation:none}
@@ -57,8 +55,6 @@ def build_html():
             dot = '<span class="cz-topbar-dot"></span>' if i == 0 else ""
             parts.append(f'<span class="cz-topbar-item">{dot}{text}</span>')
             parts.append('<span class="cz-topbar-sep" aria-hidden="true"></span>')
-        parts.append('<span class="cz-topbar-item"><span class="cz-topbar-cta">Garantir minha vaga →</span></span>')
-        parts.append('<span class="cz-topbar-sep" aria-hidden="true"></span>')
         aria = ' aria-hidden="true"' if hidden else ""
         return f'<span class="cz-topbar-group"{aria}>{"".join(parts * 2)}</span>'
 
@@ -82,7 +78,7 @@ def main():
         "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True},
         "min_height": {"unit": "px", "size": 0, "sizes": []},
         "background_background": "classic",
-        "background_color": "#CF8A86",
+        "background_color": "#1FA394",
         "z_index": 5,
         "css_classes": "cz",
         "_title": "0 · FAIXA DO TOPO (acima do hero)",

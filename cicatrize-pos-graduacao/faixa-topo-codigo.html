@@ -1,0 +1,26 @@
+<style>.cz-topbar{--tb-aqua:#1FA394;--tb-ink:#FFFFFF;display:block;position:relative;overflow:hidden;
+  background:linear-gradient(90deg,#16897D,var(--tb-aqua) 30%,#2BB8A8 50%,var(--tb-aqua) 70%,#16897D);
+  color:var(--tb-ink)!important;text-decoration:none!important;font-family:"Lato",sans-serif;
+  border-bottom:1px solid rgba(15,79,92,.25)}
+.cz-topbar::after{content:"";position:absolute;top:0;left:-30%;width:20%;height:100%;pointer-events:none;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);
+  animation:cz-tb-shine 5s ease-in-out infinite}
+.cz-topbar-track{display:flex;width:max-content;animation:cz-tb-move 122s linear infinite}
+.cz-topbar:hover .cz-topbar-track,.cz-topbar:focus-visible .cz-topbar-track{animation-play-state:paused}
+.cz-topbar-group{display:flex;align-items:center;flex:none}
+.cz-topbar-item{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;white-space:nowrap;
+  font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;line-height:1;
+  text-shadow:0 1px 0 rgba(15,79,92,.25)}
+.cz-topbar-sep{width:5px;height:5px;border-radius:50%;background:var(--tb-ink);opacity:.6;flex:none}
+.cz-topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--tb-ink);flex:none;
+  box-shadow:0 0 0 0 rgba(255,255,255,.7);animation:cz-tb-ping 1.8s infinite}
+.cz-topbar:focus-visible{outline:3px solid #0F4F5C;outline-offset:-3px}
+@keyframes cz-tb-move{to{transform:translateX(-50%)}}
+@keyframes cz-tb-shine{0%,55%{left:-30%}100%{left:130%}}
+@keyframes cz-tb-ping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.7)}70%{box-shadow:0 0 0 8px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+@media (max-width:767px){.cz-topbar-item{padding:11px 16px;font-size:12px;letter-spacing:.1em}
+  .cz-topbar-track{animation-duration:24s}}
+@media (prefers-reduced-motion:reduce){.cz-topbar::after,.cz-topbar-dot{animation:none}
+  .cz-topbar-track{animation:none;width:auto;justify-content:center}
+  .cz-topbar-group+.cz-topbar-group{display:none}.cz-topbar-group{flex-wrap:wrap;justify-content:center}}</style><a class="cz-topbar" href="#oferta" aria-label="Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma. Ir para a oferta."><span class="cz-topbar-track"><span class="cz-topbar-group"><span class="cz-topbar-item"><span class="cz-topbar-dot"></span>Turma de Membros Fundadores</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Vagas limitadas</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Condição exclusiva da primeira turma</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item"><span class="cz-topbar-dot"></span>Turma de Membros Fundadores</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Vagas limitadas</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Condição exclusiva da primeira turma</span><span class="cz-topbar-sep" aria-hidden="true"></span></span><span class="cz-topbar-group" aria-hidden="true"><span class="cz-topbar-item"><span class="cz-topbar-dot"></span>Turma de Membros Fundadores</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Vagas limitadas</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Condição exclusiva da primeira turma</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item"><span class="cz-topbar-dot"></span>Turma de Membros Fundadores</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Vagas limitadas</span><span class="cz-topbar-sep" aria-hidden="true"></span><span class="cz-topbar-item">Condição exclusiva da primeira turma</span><span class="cz-topbar-sep" aria-hidden="true"></span></span></span></a>
