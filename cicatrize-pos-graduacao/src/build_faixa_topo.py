@@ -2,7 +2,7 @@
 """Faixa de aviso acima do hero: "Turma de Membros Fundadores · Vagas limitadas".
 
 Faixa rosé (cor de destaque da identidade; o verde fica só para os botões de ação) com texto
-petróleo em movimento contínuo, ponto pulsando e brilho passando. A faixa inteira é um link para
+petróleo em movimento contínuo, ponto pulsando, separadores em bolinha (sem símbolos) e brilho passando. A faixa inteira é um link para
 a oferta (#oferta). Pausa ao passar o mouse; com "reduzir movimento" o texto fica parado e
 centralizado. CSS embutido no próprio widget (funciona sozinha).
 Saída: ../faixa-topo-elementor.json
@@ -32,7 +32,7 @@ CSS = """
 .cz-topbar-group{display:flex;align-items:center;flex:none}
 .cz-topbar-item{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;white-space:nowrap;
   font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;line-height:1}
-.cz-topbar-star{font-size:13px;opacity:.7}
+.cz-topbar-sep{width:5px;height:5px;border-radius:50%;background:var(--tb-teal);opacity:.45;flex:none}
 .cz-topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--tb-teal);flex:none;
   box-shadow:0 0 0 0 rgba(15,79,92,.55);animation:cz-tb-ping 1.8s infinite}
 .cz-topbar-cta{display:inline-flex;align-items:center;gap:6px;margin-left:4px;padding:6px 12px;border-radius:999px;
@@ -56,9 +56,9 @@ def build_html():
         for i, text in enumerate(ITEMS):
             dot = '<span class="cz-topbar-dot"></span>' if i == 0 else ""
             parts.append(f'<span class="cz-topbar-item">{dot}{text}</span>')
-            parts.append('<span class="cz-topbar-star" aria-hidden="true">✦</span>')
+            parts.append('<span class="cz-topbar-sep" aria-hidden="true"></span>')
         parts.append('<span class="cz-topbar-item"><span class="cz-topbar-cta">Garantir minha vaga →</span></span>')
-        parts.append('<span class="cz-topbar-star" aria-hidden="true">✦</span>')
+        parts.append('<span class="cz-topbar-sep" aria-hidden="true"></span>')
         aria = ' aria-hidden="true"' if hidden else ""
         return f'<span class="cz-topbar-group"{aria}>{"".join(parts * 2)}</span>'
 

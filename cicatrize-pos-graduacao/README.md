@@ -18,6 +18,19 @@ O verde ficou de fora de propósito: ele continua exclusivo dos botões de açã
 
 **Como usar:** importe o arquivo e coloque o container acima do hero, como primeiro item da página. A etiqueta "Turma de Membros Fundadores · Vagas limitadas" que está dentro do hero passa a repetir a faixa, então você pode tirá-la.
 
+## Faixa do topo: `faixa-topo-elementor.json` (08/10)
+
+Faixa rosé acima do hero com "Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma":
+- o texto em petróleo corre sem parar e pausa quando o mouse passa por cima;
+- as frases são separadas por bolinhas feitas em CSS, sem símbolos;
+- um ponto pulsa no início e um brilho atravessa a faixa;
+- no fim tem a etiqueta "Garantir minha vaga →";
+- a faixa inteira é um link para a oferta (`#oferta`).
+
+O verde ficou de fora de propósito: ele continua exclusivo dos botões de ação. O CSS vai dentro do próprio widget.
+
+**Como usar:** importe o arquivo e coloque o container acima do hero, como primeiro item da página. A etiqueta "Turma de Membros Fundadores · Vagas limitadas" que está dentro do hero passa a repetir a faixa, então você pode tirá-la.
+
 ## Oferta mais conversiva: `secao-oferta-elementor.json` (08/10)
 
 Parte da seção exportada do site, com as suas imagens (`src/entrada/secao-oferta-2026-10-08.json`). Cole no lugar da seção 9. O CSS vai dentro da própria seção.
