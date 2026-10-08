@@ -1,0 +1,55 @@
+{
+  "content": [
+    {
+      "id": "a33f7c1",
+      "elType": "container",
+      "isInner": false,
+      "elements": [
+        {
+          "id": "914cc78",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "elements": [],
+          "settings": {
+            "html": "<style>.cz-topbar{--tb-teal:#0F4F5C;--tb-rose:#CF8A86;display:block;position:relative;overflow:hidden;\n  background:linear-gradient(90deg,#C47F7B,var(--tb-rose) 30%,#DDA19D 50%,var(--tb-rose) 70%,#C47F7B);\n  color:var(--tb-teal)!important;text-decoration:none!important;font-family:\"Lato\",sans-serif;\n  border-bottom:1px solid rgba(15,79,92,.18)}\n.cz-topbar::after{content:\"\";position:absolute;top:0;left:-30%;width:20%;height:100%;pointer-events:none;\n  background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);\n  animation:cz-tb-shine 5s ease-in-out infinite}\n.cz-topbar-track{display:flex;width:max-content;animation:cz-tb-move 32s linear infinite}\n.cz-topbar:hover .cz-topbar-track,.cz-topbar:focus-visible .cz-topbar-track{animation-play-state:paused}\n.cz-topbar-group{display:flex;align-items:center;flex:none}\n.cz-topbar-item{display:inline-flex;align-items:center;gap:10px;padding:12px 22px;white-space:nowrap;\n  font-size:14px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;line-height:1}\n.cz-topbar-star{font-size:13px;opacity:.7}\n.cz-topbar-dot{width:8px;height:8px;border-radius:50%;background:var(--tb-teal);flex:none;\n  box-shadow:0 0 0 0 rgba(15,79,92,.55);animation:cz-tb-ping 1.8s infinite}\n.cz-topbar-cta{display:inline-flex;align-items:center;gap:6px;margin-left:4px;padding:6px 12px;border-radius:999px;\n  background:var(--tb-teal);color:#fff;font-size:11px;letter-spacing:.12em}\n.cz-topbar:focus-visible{outline:3px solid var(--tb-teal);outline-offset:-3px}\n@keyframes cz-tb-move{to{transform:translateX(-50%)}}\n@keyframes cz-tb-shine{0%,55%{left:-30%}100%{left:130%}}\n@keyframes cz-tb-ping{0%{box-shadow:0 0 0 0 rgba(15,79,92,.55)}70%{box-shadow:0 0 0 8px rgba(15,79,92,0)}\n  100%{box-shadow:0 0 0 0 rgba(15,79,92,0)}}\n@media (max-width:767px){.cz-topbar-item{padding:11px 16px;font-size:12px;letter-spacing:.1em}\n  .cz-topbar-track{animation-duration:24s}}\n@media (prefers-reduced-motion:reduce){.cz-topbar::after,.cz-topbar-dot{animation:none}\n  .cz-topbar-track{animation:none;width:auto;justify-content:center}\n  .cz-topbar-group+.cz-topbar-group{display:none}.cz-topbar-group{flex-wrap:wrap;justify-content:center}}</style><a class=\"cz-topbar\" href=\"#oferta\" aria-label=\"Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma. Ir para a oferta.\"><span class=\"cz-topbar-track\"><span class=\"cz-topbar-group\"><span class=\"cz-topbar-item\"><span class=\"cz-topbar-dot\"></span>Turma de Membros Fundadores</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Vagas limitadas</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Condição exclusiva da primeira turma</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-cta\">Garantir minha vaga →</span></span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-dot\"></span>Turma de Membros Fundadores</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Vagas limitadas</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Condição exclusiva da primeira turma</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-cta\">Garantir minha vaga →</span></span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span></span><span class=\"cz-topbar-group\" aria-hidden=\"true\"><span class=\"cz-topbar-item\"><span class=\"cz-topbar-dot\"></span>Turma de Membros Fundadores</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Vagas limitadas</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Condição exclusiva da primeira turma</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-cta\">Garantir minha vaga →</span></span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-dot\"></span>Turma de Membros Fundadores</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Vagas limitadas</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\">Condição exclusiva da primeira turma</span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span><span class=\"cz-topbar-item\"><span class=\"cz-topbar-cta\">Garantir minha vaga →</span></span><span class=\"cz-topbar-star\" aria-hidden=\"true\">✦</span></span></span></a>",
+            "_title": "Faixa: Turma de Membros Fundadores"
+          }
+        }
+      ],
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "min_height": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "#CF8A86",
+        "z_index": 5,
+        "css_classes": "cz",
+        "_title": "0 · FAIXA DO TOPO (acima do hero)"
+      }
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Cicatrize - Faixa do topo",
+  "type": "container"
+}
