@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Faixa de aviso acima do hero: "Turma de Membros Fundadores · Vagas limitadas".
 
-Faixa verde-água com texto branco em movimento contínuo (122s no computador, 24s no celular), ponto pulsando, separadores em bolinha (sem símbolos) e brilho passando. A faixa inteira é um link para
+Faixa verde-água escuro com texto branco em movimento contínuo (122s no computador, 24s no celular), ponto pulsando, separadores em bolinha (sem símbolos) e brilho passando. A faixa inteira é um link para
 a oferta (#oferta). Pausa ao passar o mouse; com "reduzir movimento" o texto fica parado e
 centralizado. CSS embutido no próprio widget (funciona sozinha).
 Saída: ../faixa-topo-elementor.json
@@ -19,12 +19,12 @@ LINK = "#oferta"
 ITEMS = ["Turma de Membros Fundadores", "Vagas limitadas", "Condição exclusiva da primeira turma"]
 
 CSS = """
-.cz-topbar{--tb-aqua:#1FA394;--tb-ink:#FFFFFF;display:block;position:relative;overflow:hidden;
-  background:linear-gradient(90deg,#16897D,var(--tb-aqua) 30%,#2BB8A8 50%,var(--tb-aqua) 70%,#16897D);
+.cz-topbar{--tb-aqua:#0E7C72;--tb-ink:#FFFFFF;display:block;position:relative;overflow:hidden;
+  background:linear-gradient(90deg,#0A615A,var(--tb-aqua) 30%,#13917F 50%,var(--tb-aqua) 70%,#0A615A);
   color:var(--tb-ink)!important;text-decoration:none!important;font-family:"Lato",sans-serif;
   border-bottom:1px solid rgba(15,79,92,.25)}
 .cz-topbar::after{content:"";position:absolute;top:0;left:-30%;width:20%;height:100%;pointer-events:none;
-  background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.25),transparent);transform:skewX(-20deg);
   animation:cz-tb-shine 5s ease-in-out infinite}
 .cz-topbar-track{display:flex;width:max-content;animation:cz-tb-move 122s linear infinite}
 .cz-topbar:hover .cz-topbar-track,.cz-topbar:focus-visible .cz-topbar-track{animation-play-state:paused}
@@ -78,7 +78,7 @@ def main():
         "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True},
         "min_height": {"unit": "px", "size": 0, "sizes": []},
         "background_background": "classic",
-        "background_color": "#1FA394",
+        "background_color": "#0E7C72",
         "z_index": 5,
         "css_classes": "cz",
         "_title": "0 · FAIXA DO TOPO (acima do hero)",

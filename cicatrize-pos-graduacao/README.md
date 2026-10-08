@@ -8,7 +8,7 @@ Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Container
 
 ## Faixa do topo: `faixa-topo-elementor.json` (08/10)
 
-Faixa verde-água acima do hero com "Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma":
+Faixa verde-água escuro (#0E7C72) acima do hero com "Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma":
 - o texto em branco corre sem parar (122 s no computador, 24 s no celular) e pausa quando o mouse passa por cima;
 - as frases são separadas por bolinhas feitas em CSS, sem símbolos;
 - um ponto pulsa no início e um brilho atravessa a faixa;
