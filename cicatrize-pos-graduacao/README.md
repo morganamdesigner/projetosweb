@@ -6,6 +6,25 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Oferta mais conversiva: `secao-oferta-elementor.json` (08/10)
+
+Parte da seção exportada do site, com as suas imagens (`src/entrada/secao-oferta-2026-10-08.json`). Cole no lugar da seção 9. O CSS vai dentro da própria seção.
+
+**Bônus:**
+- Faixa diagonal "BÔNUS 1", "BÔNUS 2"... no canto de cada cartão, com um brilho que passa de tempos em tempos.
+- O valor voltou nos 4 cartões. Ele tinha sumido dos 3 primeiros quando os ícones foram trocados pelas imagens. Os 3 primeiros mostram "Valor R$ 677 · GRÁTIS PARA VOCÊ" e o Doppler mostra "Valor R$ 1.500 · SORTEIO".
+- O ícone saiu, porque a imagem já mostra o bônus.
+- No celular, cada cartão fica horizontal: imagem 40% e texto 60%.
+
+**Preço:**
+- "De ~~R$ 11.800~~ por" no lugar de "Valor da pós-graduação".
+- Selo "Economize R$ 8.300 pagando no Pix" (11.800 − 3.500).
+- Linha de confiança abaixo do botão: "Pagamento seguro · Pix ou cartão em até 12x".
+
+**"O que recebe":**
+- Novo item: "Chance de levar os bônus exclusivos da Aula Magna (veja abaixo)".
+- No celular e no tablet, essa lista aparece **antes** do cartão de preço, para a pessoa ver o valor antes do preço.
+
 ## Página completa com ajustes de celular: `pagina-completa-elementor.json` (07/10)
 
 Parte da página exportada do site (`src/entrada/pagina-completa-2026-10-07.json`) e muda só o que está listado abaixo. Textos, imagens e as outras edições continuam iguais.

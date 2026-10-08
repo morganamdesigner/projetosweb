@@ -1,0 +1,195 @@
+/* Cicatrize 3X | Seção de oferta: bônus com faixa diagonal, valor, selo de economia.
+   Vai num widget HTML dentro da própria seção (escopo .cz-oferta). */
+
+body .cz-assets.elementor-widget {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ---------- Cartões de bônus ---------- */
+.cz-oferta .cz-bonus.e-con {
+  position: relative;
+  box-shadow: 0 24px 48px -30px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .cz-oferta .cz-bonus.e-con:hover {
+    border-color: rgba(207, 138, 134, 0.9) !important;
+    box-shadow: 0 30px 60px -28px rgba(207, 138, 134, 0.45);
+  }
+}
+
+.cz-oferta .cz-bonus-media.e-con {
+  overflow: hidden;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.cz-oferta .cz-bonus-img img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .cz-oferta .cz-bonus:hover .cz-bonus-img img {
+    transform: scale(1.05);
+  }
+}
+
+/* Faixa diagonal "BÔNUS N" no canto superior esquerdo */
+.cz-oferta .cz-bonus .cz-ribbon.elementor-widget {
+  position: absolute !important;
+  z-index: 4;
+  top: 26px;
+  left: -44px;
+  width: 170px !important;
+  max-width: none !important;
+  margin: 0 !important;
+  transform: rotate(-45deg);
+  pointer-events: none;
+}
+
+.cz-oferta .cz-ribbon .elementor-heading-title {
+  position: relative;
+  overflow: hidden;
+  padding: 7px 0;
+  background: linear-gradient(90deg, #B86F6B, #CF8A86 50%, #B86F6B);
+  box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.55);
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* brilho passando pela faixa */
+.cz-oferta .cz-ribbon .elementor-heading-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  animation: cz-ribbon-shine 4.5s ease-in-out infinite;
+}
+
+.cz-oferta .cz-bonus:nth-child(2) .cz-ribbon .elementor-heading-title::after { animation-delay: 0.6s; }
+.cz-oferta .cz-bonus:nth-child(3) .cz-ribbon .elementor-heading-title::after { animation-delay: 1.2s; }
+.cz-oferta .cz-bonus:nth-child(4) .cz-ribbon .elementor-heading-title::after { animation-delay: 1.8s; }
+
+@keyframes cz-ribbon-shine {
+  0%, 60% { left: -40%; }
+  100% { left: 130%; }
+}
+
+/* Quem ganha: etiqueta */
+.cz-oferta .cz-bonus-who .elementor-heading-title {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 10px;
+  background: rgba(207, 138, 134, 0.16);
+}
+
+/* Valor do bônus */
+.cz-oferta .cz-bonus-price .elementor-heading-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.18);
+}
+
+.cz-oferta .cz-bonus-price span {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.cz-oferta .cz-bonus-price s {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cz-oferta .cz-bonus-price b {
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: #CF8A86;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---------- Cartão de preço ---------- */
+.cz-oferta .cz-save .elementor-heading-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #CF8A86;
+  animation: cz-save-pulse 2.6s ease-in-out infinite;
+}
+
+.cz-oferta .cz-save .elementor-heading-title::before {
+  content: "↓";
+  font-weight: 900;
+}
+
+@keyframes cz-save-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(207, 138, 134, 0.5); }
+  50% { box-shadow: 0 0 0 8px rgba(207, 138, 134, 0); }
+}
+
+.cz-oferta .cz-trust .elementor-icon-list-items {
+  gap: 6px 18px;
+}
+
+/* ---------- Celular: cartão de bônus horizontal ---------- */
+@media (max-width: 767px) {
+  .cz-oferta .cz-bonus.e-con > .cz-bonus-media {
+    flex: 0 0 40%;
+    max-width: 40%;
+    width: 40%;
+  }
+
+  .cz-oferta .cz-bonus.e-con > .cz-bonus-info {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+  }
+
+  .cz-oferta .cz-bonus .cz-ribbon.elementor-widget {
+    top: 16px;
+    left: -40px;
+    width: 130px !important;
+  }
+
+  .cz-oferta .cz-ribbon .elementor-heading-title {
+    padding: 5px 0;
+    font-size: 10px !important;
+    letter-spacing: 0.12em !important;
+  }
+
+  .cz-oferta .cz-bonus-who .elementor-heading-title {
+    padding: 4px 9px;
+    font-size: 10px !important;
+  }
+
+  .cz-oferta .cz-bonus-price .elementor-heading-title {
+    padding-top: 6px;
+    font-size: 12px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cz-oferta .cz-ribbon .elementor-heading-title::after,
+  .cz-oferta .cz-save .elementor-heading-title {
+    animation: none !important;
+  }
+}
