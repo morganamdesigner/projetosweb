@@ -1,0 +1,51 @@
+{
+  "content": [
+    {
+      "id": "34728ab",
+      "elType": "container",
+      "isInner": false,
+      "elements": [
+        {
+          "id": "6f70d13",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "elements": [],
+          "settings": {
+            "html": "<style>.cz-wa{position:fixed;z-index:9990;right:22px;bottom:22px;display:flex;align-items:center;gap:12px;\n  font-family:\"Lato\",sans-serif;pointer-events:none;opacity:0;transform:translateY(24px) scale(.9);\n  transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}\n.cz-wa.is-on{opacity:1;transform:none;pointer-events:auto}\n.cz-wa-btn{position:relative;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;\n  background:#0F4F5C;color:#fff!important;text-decoration:none!important;\n  box-shadow:0 14px 30px -10px rgba(11,60,70,.65),inset 0 0 0 2px rgba(207,138,134,.55);\n  transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s ease}\n.cz-wa-btn svg{width:30px;height:30px}\n.cz-wa-btn::before{content:\"\";position:absolute;inset:0;border-radius:50%;\n  animation:cz-wa-ring 2.8s ease-out infinite}\n.cz-wa-btn:hover{transform:scale(1.06);background:#13606F}\n.cz-wa-btn:focus-visible{outline:3px solid #CF8A86;outline-offset:3px}\n@keyframes cz-wa-ring{0%{box-shadow:0 0 0 0 rgba(207,138,134,.45)}80%,100%{box-shadow:0 0 0 14px rgba(207,138,134,0)}}\n.cz-wa-tip{position:relative;max-width:230px;padding:12px 34px 12px 14px;border-radius:14px 14px 4px 14px;\n  background:#fff;color:#0F4F5C;box-shadow:0 14px 32px -12px rgba(11,60,70,.45);font-size:14px;line-height:1.35;\n  opacity:0;transform:translateX(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.2,1);\n  pointer-events:none}\n.cz-wa-tip b{display:block;font-weight:900}\n.cz-wa-tip span{color:#3B5C66}\n.cz-wa.tip-on .cz-wa-tip{opacity:1;transform:none;pointer-events:auto}\n.cz-wa-x{position:absolute;top:6px;right:6px;width:22px;height:22px;border:0;border-radius:50%;cursor:pointer;\n  background:rgba(15,79,92,.08);color:#0F4F5C;font:700 14px/22px \"Lato\",sans-serif;padding:0}\n@media (max-width:767px){\n  .cz-wa{right:14px;bottom:86px}\n  .cz-wa-btn{width:54px;height:54px}.cz-wa-btn svg{width:27px;height:27px}\n  .cz-wa-tip{max-width:200px;font-size:13px}}\n@media (prefers-reduced-motion:reduce){.cz-wa,.cz-wa-tip{transition:none}.cz-wa-btn::before{animation:none}}\n.elementor-editor-active .cz-wa{opacity:1;transform:none;pointer-events:auto}</style><div class=\"cz-wa\" data-delay=\"25\" data-after=\".cz-hero\"><div class=\"cz-wa-tip\" role=\"status\"><b>Dúvidas?</b><span>Fale com a nossa equipe no WhatsApp.</span><button class=\"cz-wa-x\" type=\"button\" aria-label=\"Fechar aviso\">×</button></div><a class=\"cz-wa-btn\" href=\"https://wa.me/55SUBSTITUIR-NUMERO?text=Ol%C3%A1%21%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20P%C3%B3s-gradua%C3%A7%C3%A3o%20em%20Tratamento%20de%20Feridas%20e%20Podiatria.\" target=\"_blank\" rel=\"noopener\" aria-label=\"Tirar dúvidas pelo WhatsApp\"><svg viewBox=\"0 0 32 32\" aria-hidden=\"true\" focusable=\"false\"><path fill=\"currentColor\" d=\"M16.04 3C8.88 3 3.07 8.82 3.07 15.98c0 2.29.6 4.52 1.75 6.49L3 29l6.72-1.76a13 13 0 0 0 6.31 1.6h.01c7.16 0 12.97-5.83 12.97-12.99 0-3.47-1.35-6.73-3.8-9.18A12.9 12.9 0 0 0 16.04 3Zm0 23.65h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.99 1.04 1.07-3.88-.26-.4a10.72 10.72 0 0 1-1.65-5.7c0-5.95 4.85-10.79 10.8-10.79 2.88 0 5.59 1.12 7.62 3.16a10.7 10.7 0 0 1 3.16 7.63c0 5.95-4.85 10.68-10.84 10.68Zm5.92-8.08c-.32-.16-1.92-.95-2.22-1.06-.3-.11-.51-.16-.73.16-.21.32-.84 1.06-1.03 1.27-.19.22-.38.24-.7.08-.32-.16-1.37-.5-2.6-1.6a9.78 9.78 0 0 1-1.8-2.24c-.19-.32-.02-.5.14-.65.15-.15.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.05-.4-.03-.56-.08-.16-.73-1.76-1-2.41-.26-.63-.53-.55-.73-.56h-.62c-.21 0-.56.08-.86.4-.3.32-1.13 1.1-1.13 2.69 0 1.58 1.16 3.12 1.32 3.33.16.21 2.28 3.48 5.53 4.88.77.33 1.37.53 1.84.68.77.25 1.48.21 2.03.13.62-.09 1.92-.78 2.19-1.54.27-.76.27-1.41.19-1.54-.08-.13-.29-.21-.61-.37Z\"/></svg></a></div><script>(function(){\n  var root=document.currentScript&&document.currentScript.previousElementSibling;\n  if(!root||!root.classList.contains('cz-wa'))root=document.querySelector('.cz-wa');\n  if(!root||root.dataset.czInit)return;root.dataset.czInit='1';\n  var delay=(parseFloat(root.getAttribute('data-delay'))||25)*1000;\n  var after=document.querySelector(root.getAttribute('data-after')||'.cz-hero');\n  var timeOk=false,scrollOk=!after,shown=false;\n  function store(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v)}catch(e){return null}}\n  function check(){\n    if(!scrollOk&&after){scrollOk=after.getBoundingClientRect().bottom<0}\n    if(timeOk&&scrollOk&&!shown){\n      shown=true;root.classList.add('is-on');window.removeEventListener('scroll',check);\n      if(!store('czWaTip')){store('czWaTip','1');\n        setTimeout(function(){root.classList.add('tip-on')},700);\n        setTimeout(function(){root.classList.remove('tip-on')},7700);}\n    }\n  }\n  setTimeout(function(){timeOk=true;check()},delay);\n  window.addEventListener('scroll',check,{passive:true});\n  var x=root.querySelector('.cz-wa-x');\n  if(x)x.addEventListener('click',function(){root.classList.remove('tip-on')});\n})();</script>",
+            "_title": "WhatsApp flutuante (número no link wa.me)"
+          }
+        }
+      ],
+      "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "min_height": {
+          "unit": "px",
+          "size": 0,
+          "sizes": []
+        },
+        "_title": "WhatsApp flutuante (aparece depois de 25 s e do hero)"
+      }
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "Cicatrize - WhatsApp flutuante",
+  "type": "container"
+}
