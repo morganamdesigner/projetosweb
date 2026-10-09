@@ -1,0 +1,139 @@
+/* Cicatrize 3X | Grade curricular com 17 módulos. Vai num widget HTML dentro da própria seção.
+   Escopo: .cz-grade */
+
+body .cz-assets.elementor-widget {
+  position: absolute;
+  width: 0;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* o cartão do bloco segue escuro em todas as telas (a regra antiga deixava petróleo só no celular) */
+.cz-grade .cz-block2.e-con {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* mockup pequeno sobre o quadro claro */
+.cz-grade .cz-block-media.e-con {
+  overflow: hidden;
+}
+
+.cz-grade .cz-block-img img {
+  display: block;
+  width: 100%;
+  max-width: 240px;
+  margin: 0 auto;
+  transition: transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@media (hover: hover) {
+  .cz-grade .cz-block2:hover .cz-block-img img {
+    transform: scale(1.04) rotate(-1deg);
+  }
+}
+
+/* título do módulo: "Módulo 01 · 20 h" em cima, nome embaixo */
+.cz-grade .cz-grade-acc .cz-dn {
+  display: block;
+  margin-bottom: 4px;
+  color: #CF8A86;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cz-grade .cz-grade-acc .e-n-accordion {
+  gap: 8px;
+}
+
+/* tópicos */
+.cz-grade .cz-mbody p {
+  margin: 0;
+}
+
+.cz-grade .cz-msub {
+  margin: 4px 0 8px !important;
+  color: #0F4F5C;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cz-grade .cz-topics {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 18px;
+  margin: 0 0 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.cz-grade .cz-topics li {
+  position: relative;
+  padding-left: 16px;
+}
+
+.cz-grade .cz-topics li::before {
+  content: "";
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #CF8A86;
+}
+
+.cz-grade .cz-mprof {
+  padding-top: 12px;
+  border-top: 1px dashed rgba(15, 79, 92, 0.18);
+  color: #0F4F5C;
+  font-weight: 700;
+}
+
+.cz-grade .cz-mprof span {
+  color: #3B5C66;
+  font-weight: 400;
+}
+
+/* tablet e celular: mockup como miniatura ao lado do nome do bloco */
+@media (max-width: 1024px) {
+  .cz-grade .cz-block-side.e-con > .cz-block-media {
+    flex: 0 0 34%;
+    max-width: 34%;
+    width: 34%;
+  }
+
+  .cz-grade .cz-block-side.e-con > .cz-block-info {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+  }
+
+  .cz-grade .cz-block-img img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .cz-grade .cz-topics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .cz-grade .cz-grade-acc .cz-dn {
+    font-size: 10px;
+  }
+}
+
+/* computador: mockup + nome do bloco acompanham a rolagem da lista */
+@media (min-width: 1025px) {
+  .cz-grade .cz-block-side.e-con {
+    position: sticky;
+    top: 40px;
+    align-self: flex-start;
+  }
+}

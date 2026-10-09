@@ -6,6 +6,27 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Grade curricular com os 17 módulos novos: `secao-grade-elementor.json` (09/10)
+
+Montada a partir do conteúdo programático atualizado e da seção exportada do site. Mantém o fundo, o título, os contadores e os mockups. Cole no lugar da seção 5.
+
+- **5 blocos, com os módulos em ordem crescente:**
+  - Base clínica: 01–06 (140 h);
+  - Feridas complexas: 07–10 (80 h);
+  - Podiatria: 11–14 (80 h);
+  - Tecnologia: 15 (20 h);
+  - Carreira: 16–17 (80 h).
+  O Módulo 02 (Emergências na pessoa idosa) foi para Base clínica para manter a sequência.
+- **Mockups menores:** até 240 px no computador e miniatura ao lado do nome do bloco no celular, sobre o quadro claro original. No computador, o mockup e o nome acompanham a rolagem.
+- **Cada módulo fechado** mostra "Módulo 01 · 20 h" e o nome. Aberto, mostra os tópicos (em 2 colunas no computador) e quem ensina. Os módulos 03, 04, 06 e 07 têm duas disciplinas, cada uma com seu subtítulo.
+- **Título e contador:** "17 módulos. 400 horas." e o contador "Disciplinas" virou "Módulos".
+- **Ficou de fora:** CPFs, e-mails, coordenadoras da Anhanguera e bibliografia.
+
+**Conferir:**
+- **Carga horária:** o documento diz "Total 450 horas", mas a soma dos módulos dá 400 h (14 × 20 h + 3 × 40 h). A seção usa 400 h.
+- **Resto da página:** ainda fala em "17 disciplinas" (selos do hero, Como funciona, FAQ, oferta). Se for mudar para "17 módulos" ou para outra carga horária, é preciso ajustar lá também.
+- **Nome dos blocos:** se os mockups já trazem o nome do bloco escrito, dá para apagar o título "Base clínica" e os outros ao lado da imagem.
+
 ## Faixa do topo: `faixa-topo-elementor.json` (08/10)
 
 Faixa verde-água escuro (#0E7C72) acima do hero com "Turma de Membros Fundadores · Vagas limitadas · Condição exclusiva da primeira turma":
