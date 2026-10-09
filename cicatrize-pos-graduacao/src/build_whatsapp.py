@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""Botão flutuante de WhatsApp (dúvidas) que só aparece depois de um tempo na página.
+"""Botão flutuante de WhatsApp (dúvidas), só o ícone.
 
-A página converte ali mesmo; o WhatsApp é só para dúvidas, então o botão:
-  - aparece só quando a pessoa já passou do hero E está há pelo menos 25 s na página
-    (as duas condições; ajustável em data-delay / data-after);
-  - é petróleo com o ícone branco (o verde da página é só dos botões de ação);
-  - ao aparecer, mostra por 7 s o balão "Dúvidas? Fale com a nossa equipe" (uma vez por visita;
-    dá para fechar no ×);
+  - aparece quando a 3ª seção ("A pós 2 em 1", .cz-2em1) entra na tela, sem esperar tempo
+    (ajustável em data-show-at);
+  - verde (#1FBF5C), escurece no hover; anel pulsando;
   - no celular fica acima da barra verde fixa "Quero minha vaga";
   - abre o WhatsApp com uma mensagem pronta.
 CSS e JS embutidos no widget HTML (funciona sozinho, em qualquer lugar da página).
@@ -25,8 +22,7 @@ OUT_HTML = os.path.join(HERE, "..", "whatsapp-flutuante-codigo.html")
 
 NUMERO = "55SUBSTITUIR-NUMERO"  # DDI + DDD + número, só dígitos. Ex.: 5534999999999
 MENSAGEM = "Olá! Tenho uma dúvida sobre a Pós-graduação em Tratamento de Feridas e Podiatria."
-DELAY_S = 25          # segundos na página antes de poder aparecer
-AFTER = ".cz-hero"    # só depois de passar deste elemento (o hero)
+SHOW_AT = ".cz-2em1"  # aparece quando esta seção (3 · A pós 2 em 1) entra na tela
 
 ICON = ('<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16.04 3C8.88 3 '
         '3.07 8.82 3.07 15.98c0 2.29.6 4.52 1.75 6.49L3 29l6.72-1.76a13 13 0 0 0 6.31 1.6h.01c7.16 0 12.97-5.83 '
@@ -40,34 +36,23 @@ ICON = ('<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path fil
         '.27-1.41.19-1.54-.08-.13-.29-.21-.61-.37Z"/></svg>')
 
 CSS = """
-.cz-wa{position:fixed;z-index:9990;right:22px;bottom:22px;display:flex;align-items:center;gap:12px;
-  font-family:"Lato",sans-serif;pointer-events:none;opacity:0;transform:translateY(24px) scale(.9);
-  transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.cz-wa{position:fixed;z-index:9990;right:22px;bottom:22px;pointer-events:none;opacity:0;
+  transform:translateY(24px) scale(.9);transition:opacity .5s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
 .cz-wa.is-on{opacity:1;transform:none;pointer-events:auto}
 .cz-wa-btn{position:relative;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;
-  background:#0F4F5C;color:#fff!important;text-decoration:none!important;
-  box-shadow:0 14px 30px -10px rgba(11,60,70,.65),inset 0 0 0 2px rgba(207,138,134,.55);
+  background:#1FBF5C;color:#fff!important;text-decoration:none!important;
+  box-shadow:0 14px 30px -10px rgba(11,60,70,.65);
   transition:transform .3s cubic-bezier(.2,.7,.2,1),background-color .3s ease}
 .cz-wa-btn svg{width:30px;height:30px}
 .cz-wa-btn::before{content:"";position:absolute;inset:0;border-radius:50%;
   animation:cz-wa-ring 2.8s ease-out infinite}
-.cz-wa-btn:hover{transform:scale(1.06);background:#13606F}
-.cz-wa-btn:focus-visible{outline:3px solid #CF8A86;outline-offset:3px}
-@keyframes cz-wa-ring{0%{box-shadow:0 0 0 0 rgba(207,138,134,.45)}80%,100%{box-shadow:0 0 0 14px rgba(207,138,134,0)}}
-.cz-wa-tip{position:relative;max-width:230px;padding:12px 34px 12px 14px;border-radius:14px 14px 4px 14px;
-  background:#fff;color:#0F4F5C;box-shadow:0 14px 32px -12px rgba(11,60,70,.45);font-size:14px;line-height:1.35;
-  opacity:0;transform:translateX(10px);transition:opacity .4s ease,transform .5s cubic-bezier(.2,.7,.2,1);
-  pointer-events:none}
-.cz-wa-tip b{display:block;font-weight:900}
-.cz-wa-tip span{color:#3B5C66}
-.cz-wa.tip-on .cz-wa-tip{opacity:1;transform:none;pointer-events:auto}
-.cz-wa-x{position:absolute;top:6px;right:6px;width:22px;height:22px;border:0;border-radius:50%;cursor:pointer;
-  background:rgba(15,79,92,.08);color:#0F4F5C;font:700 14px/22px "Lato",sans-serif;padding:0}
+.cz-wa-btn:hover{transform:scale(1.06);background:#169C4B}
+.cz-wa-btn:focus-visible{outline:3px solid #0F4F5C;outline-offset:3px}
+@keyframes cz-wa-ring{0%{box-shadow:0 0 0 0 rgba(31,191,92,.5)}80%,100%{box-shadow:0 0 0 14px rgba(31,191,92,0)}}
 @media (max-width:767px){
   .cz-wa{right:14px;bottom:86px}
-  .cz-wa-btn{width:54px;height:54px}.cz-wa-btn svg{width:27px;height:27px}
-  .cz-wa-tip{max-width:200px;font-size:13px}}
-@media (prefers-reduced-motion:reduce){.cz-wa,.cz-wa-tip{transition:none}.cz-wa-btn::before{animation:none}}
+  .cz-wa-btn{width:54px;height:54px}.cz-wa-btn svg{width:27px;height:27px}}
+@media (prefers-reduced-motion:reduce){.cz-wa{transition:none}.cz-wa-btn::before{animation:none}}
 .elementor-editor-active .cz-wa{opacity:1;transform:none;pointer-events:auto}
 """.strip()
 
@@ -76,23 +61,13 @@ JS = """
   var root=document.currentScript&&document.currentScript.previousElementSibling;
   if(!root||!root.classList.contains('cz-wa'))root=document.querySelector('.cz-wa');
   if(!root||root.dataset.czInit)return;root.dataset.czInit='1';
-  var delay=(parseFloat(root.getAttribute('data-delay'))||25)*1000;
-  var after=document.querySelector(root.getAttribute('data-after')||'.cz-hero');
-  var timeOk=false,scrollOk=!after,shown=false;
-  function store(k,v){try{if(v===undefined)return sessionStorage.getItem(k);sessionStorage.setItem(k,v)}catch(e){return null}}
+  var target=document.querySelector(root.getAttribute('data-show-at')||'.cz-2em1');
   function check(){
-    if(!scrollOk&&after){scrollOk=after.getBoundingClientRect().bottom<0}
-    if(timeOk&&scrollOk&&!shown){
-      shown=true;root.classList.add('is-on');window.removeEventListener('scroll',check);
-      if(!store('czWaTip')){store('czWaTip','1');
-        setTimeout(function(){root.classList.add('tip-on')},700);
-        setTimeout(function(){root.classList.remove('tip-on')},7700);}
-    }
+    var ok=!target||target.getBoundingClientRect().top<window.innerHeight*0.85;
+    if(ok){root.classList.add('is-on');window.removeEventListener('scroll',check)}
   }
-  setTimeout(function(){timeOk=true;check()},delay);
   window.addEventListener('scroll',check,{passive:true});
-  var x=root.querySelector('.cz-wa-x');
-  if(x)x.addEventListener('click',function(){root.classList.remove('tip-on')});
+  check();
 })();
 """.strip()
 
@@ -100,9 +75,7 @@ JS = """
 def build_html():
     url = f"https://wa.me/{NUMERO}?text={urllib.parse.quote(MENSAGEM)}"
     return (f"<style>{CSS}</style>"
-            f'<div class="cz-wa" data-delay="{DELAY_S}" data-after="{AFTER}">'
-            f'<div class="cz-wa-tip" role="status"><b>Dúvidas?</b><span>Fale com a nossa equipe no WhatsApp.</span>'
-            f'<button class="cz-wa-x" type="button" aria-label="Fechar aviso">×</button></div>'
+            f'<div class="cz-wa" data-show-at="{SHOW_AT}">'
             f'<a class="cz-wa-btn" href="{url}" target="_blank" rel="noopener" '
             f'aria-label="Tirar dúvidas pelo WhatsApp">{ICON}</a></div>'
             f"<script>{JS}</script>")
@@ -122,7 +95,7 @@ def main():
         "flex_gap": {"column": "0", "row": "0", "isLinked": True, "unit": "px", "size": 0},
         "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True},
         "min_height": {"unit": "px", "size": 0, "sizes": []},
-        "_title": "WhatsApp flutuante (aparece depois de 25 s e do hero)",
+        "_title": "WhatsApp flutuante (aparece na seção 3)",
     }}
     data = {"content": [container], "page_settings": [], "version": "0.4",
             "title": "Cicatrize - WhatsApp flutuante", "type": "container"}

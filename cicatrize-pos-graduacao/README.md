@@ -8,14 +8,13 @@ Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Container
 
 ## WhatsApp flutuante: `whatsapp-flutuante-elementor.json` (09/10)
 
-Botão de WhatsApp só para dúvidas, sem roubar a atenção da conversão:
-- **Quando aparece:** quando a pessoa já passou do hero **e** está há pelo menos 25 s na página. As duas condições valem juntas, então nunca aparece de cara.
-- **Cor:** petróleo com o ícone branco e um anel rosé pulsando, porque o verde da página é só dos botões de ação.
-- **Balão:** quando o botão aparece, mostra "Dúvidas? Fale com a nossa equipe no WhatsApp" por 7 s, uma vez por visita, com um × para fechar.
+Botão redondo só com o ícone, para dúvidas:
+- **Quando aparece:** quando a 3ª seção ("A pós 2 em 1") entra na tela, sem esperar tempo. Para mudar o ponto, troque `data-show-at=".cz-2em1"` pela classe de outra seção.
+- **Visual:** verde (#1FBF5C), escurece no hover e tem um anel pulsando.
 - **Celular:** fica acima da barra verde fixa "Quero minha vaga".
 - **Mensagem pronta:** abre o WhatsApp com "Olá! Tenho uma dúvida sobre a Pós-graduação em Tratamento de Feridas e Podiatria."
 
-**Como usar:** importe e coloque o container em qualquer lugar da página; o fim é o melhor. Depois troque `55SUBSTITUIR-NUMERO` no link `wa.me` pelo número com DDI e DDD, só dígitos (ex.: `5534999999999`). Para mudar o tempo, altere `data-delay="25"`. `whatsapp-flutuante-codigo.html` traz só o código do widget.
+**Como usar:** importe e coloque o container em qualquer lugar da página. Depois troque `55SUBSTITUIR-NUMERO` no link `wa.me` pelo número com DDI e DDD, só dígitos. `whatsapp-flutuante-codigo.html` traz só o código do widget.
 
 ## Grade curricular com os 17 módulos novos: `secao-grade-elementor.json` (09/10)
 
