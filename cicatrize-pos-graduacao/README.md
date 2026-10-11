@@ -8,7 +8,11 @@ Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Container
 
 ## Faixas cruzadas em X: `faixas-cruzadas-elementor.json` (11/10)
 
-Duas faixas diagonais que se cruzam, com o texto andando para lados opostos: "Pós-graduação online · Reconhecida pelo MEC · Sem TCC · Feridas e Podiatria · Faculdade Anhanguera".
+Duas faixas diagonais que se cruzam, com o texto andando para lados opostos:
+- **Faixa verde-água:** "Pós-graduação online · Reconhecida pelo MEC · Sem TCC · Feridas e Podiatria · Faculdade Anhanguera".
+- **Faixa rosé:** "Enfermeiros · Profissionais da saúde".
+
+O código mantém os ajustes de inclinação feitos no site.
 - **Faixa verde-água escuro (#0E7C72):** texto branco, andando para a esquerda.
 - **Faixa rosé:** texto petróleo, andando para a direita.
 - **Separadores:** bolinhas feitas em CSS, sem símbolos.

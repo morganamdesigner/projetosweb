@@ -3,7 +3,8 @@
 
 Faixa A: verde-água escuro (#0E7C72, a mesma da faixa do topo), texto branco, inclinada para cima,
          texto andando para a esquerda.
-Faixa B: rosé (#CF8A86), texto petróleo, inclinada para baixo, texto andando para a direita.
+Faixa B: rosé (#CF8A86), texto petróleo ("Enfermeiros · Profissionais da saúde"), inclinada para
+         baixo, texto andando para a direita.
 Separadores em bolinha (CSS, sem símbolos). Pausa ao passar o mouse; com "reduzir movimento" para.
 CSS embutido no widget HTML (funciona sozinho). O container tem margem negativa (metade da altura em cima e embaixo) e z-index 20, para ficar
 metade sobre o hero e metade sobre a seção seguinte; fundo transparente e sem bloquear cliques.
@@ -20,16 +21,17 @@ OUT = os.path.join(HERE, "..", "faixas-cruzadas-elementor.json")
 OUT_HTML = os.path.join(HERE, "..", "faixas-cruzadas-codigo.html")
 
 ITEMS = ["Pós-graduação online", "Reconhecida pelo MEC", "Sem TCC", "Feridas e Podiatria",
-         "Faculdade Anhanguera"]
+         "Faculdade Anhanguera"]          # faixa verde-água
+ITEMS_B = ["Enfermeiros", "Profissionais da saúde"]  # faixa rosé
 
 CSS = """
 .cz-x{position:relative;height:210px;overflow:hidden;font-family:"Lato",sans-serif;pointer-events:none}
 .cz-x-band{position:absolute;top:50%;left:-10%;width:120%;overflow:hidden;
   box-shadow:0 18px 36px -18px rgba(7,34,37,.55)}
 .cz-x-a{z-index:1;background:linear-gradient(90deg,#0A615A,#0E7C72 40%,#13917F 60%,#0E7C72);color:#fff;
-  transform:translateY(-50%) rotate(-4deg)}
+  transform:translateY(-50%) rotate(-2deg)}
 .cz-x-b{z-index:2;background:linear-gradient(90deg,#C47F7B,#CF8A86 40%,#DDA19D 60%,#CF8A86);color:#0F4F5C;
-  transform:translateY(-50%) rotate(4deg)}
+  transform:translateY(-50%) rotate(2deg)}
 .cz-x-track{display:flex;width:max-content}
 .cz-x-a .cz-x-track{animation:cz-x-left 40s linear infinite}
 .cz-x-b .cz-x-track{animation:cz-x-right 40s linear infinite}
@@ -42,7 +44,7 @@ CSS = """
 @keyframes cz-x-right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
 @media (max-width:1024px){.cz-x{height:170px}.cz-x-item{font-size:17px;padding:15px 20px}}
 @media (max-width:767px){.cz-x{height:160px}
-  .cz-x-a{transform:translateY(-50%) rotate(-9deg)}.cz-x-b{transform:translateY(-50%) rotate(9deg)}
+  .cz-x-a{transform:translateY(-70%) rotate(-5deg)}.cz-x-b{transform:translateY(-90%) rotate(3deg)}
   .cz-x-item{font-size:13px;padding:12px 14px;letter-spacing:.06em}.cz-x-sep{width:6px;height:6px}
   .cz-x-a .cz-x-track,.cz-x-b .cz-x-track{animation-duration:26s}}
 @media (prefers-reduced-motion:reduce){.cz-x-track{animation:none!important}}
@@ -50,22 +52,21 @@ CSS = """
 
 
 def build_html():
-    def group(hidden):
-        parts = []
-        for t in ITEMS * 2:
-            parts.append(f'<span class="cz-x-item">{t}</span><span class="cz-x-sep"></span>')
+    def group(items, repeat, hidden):
+        parts = [f'<span class="cz-x-item">{t}</span><span class="cz-x-sep"></span>' for t in items * repeat]
         aria = ' aria-hidden="true"' if hidden else ""
         return f'<span class="cz-x-group"{aria}>{"".join(parts)}</span>'
 
-    def band(cls, hidden):
+    def band(cls, items, repeat, hidden):
         aria = ' aria-hidden="true"' if hidden else ""
         return (f'<div class="cz-x-band {cls}"{aria}>'
-                f'<div class="cz-x-track">{group(False)}{group(True)}</div></div>')
+                f'<div class="cz-x-track">{group(items, repeat, False)}{group(items, repeat, True)}</div></div>')
 
-    label = " · ".join(ITEMS)
+    # cada grupo precisa ser mais largo que a faixa (120% da tela) para o movimento não ter emenda
+    label = " · ".join(ITEMS) + " · " + " e ".join(ITEMS_B)
     return (f"<style>{CSS}</style>"
             f'<div class="cz-x" role="img" aria-label="{label}">'
-            f'{band("cz-x-a", False)}{band("cz-x-b", True)}</div>')
+            f'{band("cz-x-a", ITEMS, 2, False)}{band("cz-x-b", ITEMS_B, 5, True)}</div>')
 
 
 def new_id(n):
