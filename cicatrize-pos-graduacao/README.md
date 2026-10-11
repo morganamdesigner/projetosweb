@@ -6,6 +6,19 @@
 
 Requisitos: Elementor 3.16 ou mais recente (containers em grade) com **Containers** e **Nested Elements** ativos em Elementor > Configurações > Recursos.
 
+## Faixas cruzadas em X: `faixas-cruzadas-elementor.json` (11/10)
+
+Duas faixas diagonais que se cruzam, com o texto andando para lados opostos: "Pós-graduação online · Reconhecida pelo MEC · Sem TCC · Feridas e Podiatria · Faculdade Anhanguera".
+- **Faixa verde-água escuro (#0E7C72):** texto branco, andando para a esquerda.
+- **Faixa rosé:** texto petróleo, andando para a direita.
+- **Separadores:** bolinhas feitas em CSS, sem símbolos.
+- **Movimento:** pausa quando o mouse passa por cima. No celular as faixas ficam mais inclinadas, para as duas aparecerem.
+- **Fundo:** o container é transparente e herda a cor de onde for colocado. Se quiser outra cor, troque em Estilo > Fundo.
+
+`faixas-cruzadas-codigo.html` traz só o código do widget. Para mudar os textos, edite os `<span class="cz-x-item">` no código, ou a lista `ITEMS` em `src/build_faixas_cruzadas.py`.
+
+**Conferir:** o FAQ ainda tem "Preciso fazer TCC? [confirmar]" e o Como funciona tem "[confirmar: sem TCC...]". Se "Sem TCC" está confirmado, vale atualizar esses dois pontos.
+
 ## WhatsApp flutuante: `whatsapp-flutuante-elementor.json` (09/10)
 
 Botão redondo só com o ícone, para dúvidas:
