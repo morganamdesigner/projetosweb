@@ -15,6 +15,14 @@ Duas faixas diagonais que se cruzam, com o texto andando para lados opostos: "P�
 - **Movimento:** pausa quando o mouse passa por cima. No celular as faixas ficam mais inclinadas, para as duas aparecerem.
 - **Fundo:** o container é transparente e herda a cor de onde for colocado. Se quiser outra cor, troque em Estilo > Fundo.
 
+**Entre o hero e a seção 2:** coloque o container logo abaixo do hero. Ele já vem pronto para ficar metade sobre o hero e metade sobre a seção 2:
+- **Margem:** −105 px em cima e embaixo no computador, −85 px no tablet e −80 px no celular (Avançado > Margem). É a metade da altura das faixas.
+- **Z-index:** 20, para ficar por cima das duas seções.
+- **Fundo:** transparente.
+- **Cliques:** as faixas não bloqueiam os cliques no que fica por baixo.
+
+No computador, a ponta das faixas cobre a barra "vagas preenchidas" do hero. Para deixar a barra livre, aumente uns 90 px no espaçamento inferior do container dessa barra (Avançado > Preenchimento inferior).
+
 `faixas-cruzadas-codigo.html` traz só o código do widget. Para mudar os textos, edite os `<span class="cz-x-item">` no código, ou a lista `ITEMS` em `src/build_faixas_cruzadas.py`.
 
 **Conferir:** o FAQ ainda tem "Preciso fazer TCC? [confirmar]" e o Como funciona tem "[confirmar: sem TCC...]". Se "Sem TCC" está confirmado, vale atualizar esses dois pontos.

@@ -5,8 +5,8 @@ Faixa A: verde-água escuro (#0E7C72, a mesma da faixa do topo), texto branco, i
          texto andando para a esquerda.
 Faixa B: rosé (#CF8A86), texto petróleo, inclinada para baixo, texto andando para a direita.
 Separadores em bolinha (CSS, sem símbolos). Pausa ao passar o mouse; com "reduzir movimento" para.
-CSS embutido no widget HTML (funciona sozinho). O fundo do container fica transparente, para
-herdar a cor de onde for colocado (ou escolha uma em Estilo > Fundo).
+CSS embutido no widget HTML (funciona sozinho). O container tem margem negativa (metade da altura em cima e embaixo) e z-index 20, para ficar
+metade sobre o hero e metade sobre a seção seguinte; fundo transparente e sem bloquear cliques.
 Saídas: ../faixas-cruzadas-elementor.json e ../faixas-cruzadas-codigo.html
 
 Uso:  python3 build_faixas_cruzadas.py
@@ -23,7 +23,7 @@ ITEMS = ["Pós-graduação online", "Reconhecida pelo MEC", "Sem TCC", "Feridas 
          "Faculdade Anhanguera"]
 
 CSS = """
-.cz-x{position:relative;height:210px;overflow:hidden;font-family:"Lato",sans-serif}
+.cz-x{position:relative;height:210px;overflow:hidden;font-family:"Lato",sans-serif;pointer-events:none}
 .cz-x-band{position:absolute;top:50%;left:-10%;width:120%;overflow:hidden;
   box-shadow:0 18px 36px -18px rgba(7,34,37,.55)}
 .cz-x-a{z-index:1;background:linear-gradient(90deg,#0A615A,#0E7C72 40%,#13917F 60%,#0E7C72);color:#fff;
@@ -82,8 +82,13 @@ def main():
         "flex_gap": {"column": "0", "row": "0", "isLinked": True, "unit": "px", "size": 0},
         "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True},
         "overflow": "hidden",
+        # metade por cima do hero, metade por cima da seção seguinte (altura: 210 / 170 / 160 px)
+        "margin": {"unit": "px", "top": "-105", "right": "0", "bottom": "-105", "left": "0", "isLinked": False},
+        "margin_tablet": {"unit": "px", "top": "-85", "right": "0", "bottom": "-85", "left": "0", "isLinked": False},
+        "margin_mobile": {"unit": "px", "top": "-80", "right": "0", "bottom": "-80", "left": "0", "isLinked": False},
+        "z_index": 20,
         "css_classes": "cz",
-        "_title": "Faixas cruzadas em X",
+        "_title": "Faixas cruzadas em X (entre o hero e a seção 2)",
     }}
     data = {"content": [container], "page_settings": [], "version": "0.4",
             "title": "Cicatrize - Faixas cruzadas", "type": "container"}
