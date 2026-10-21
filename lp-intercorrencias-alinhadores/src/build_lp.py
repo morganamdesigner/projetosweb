@@ -431,14 +431,64 @@ def s04_apresentacao():
                    dark=True), "zoomIn", 450)
     right = col([body("<p>Cada intercorrência segue o mesmo raciocínio:</p>", INK, 14, weight=500), s1, arrow(), s2,
                  arrow(), s3], 6, "Método", **w(47, 100))
+    top = row([col(left, 20, "Texto", **w(46)), right], 72, "Texto e método", **r("row", "column"),
+              flex_align_items="center", flex_gap_tablet=gap(48))
     return section({
-        "flex_direction": "row",
-        "flex_direction_tablet": "column",
-        "flex_align_items": "center",
-        "flex_gap": gap(72),
-        "flex_gap_tablet": gap(48),
+        "flex_gap": gap(80),
+        "flex_gap_tablet": gap(64),
         **grad("#FBFAFC", "#EEF3F7", 180),
-    }, [col(left, 20, "Texto", **w(46)), right], "04 · Apresentação", "lp-apres")
+    }, [top, laptop()], "04 · Apresentação", "lp-apres")
+
+
+PAGE_IMG = "https://placehold.co/1046x1482/F4F8FB/0B2D4A.png?text=Troque+pela+p%C3%A1gina+do+guia"
+
+
+def laptop():
+    """Notebook que abre com o scroll, com uma página do guia na tela (seção 04)."""
+    css = open(os.path.join(HERE, "lp-laptop.css"), encoding="utf-8").read().strip()
+    js = open(os.path.join(HERE, "lp-laptop.js"), encoding="utf-8").read().strip()
+    code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
+                _title="Notebook · estilos e animação (não apagar)", _position="absolute",
+                _element_width="initial", _element_custom_width=px(0))
+
+    bar = row([
+        row([container({"width": px(8), "min_height": px(8), "border_radius": dims(8), **solid(c), "_flex_size": "none"},
+                       [], "Ponto") for c in ("#FF6B6B", "#FFC94D", "#3DDC84")], 5, "Botões da janela",
+            flex_align_items="center", width=px(44), _flex_size="none"),
+        heading("Guia Prático · Intercorrências com Alinhadores.pdf", "rgba(255, 255, 255, 0.85)",
+                typo("typography", 11, 600, lh=1.3, size_m=8), align="center", _flex_size="shrink"),
+        heading("p. 05", AZC, typo("typography", 11, 700, lh=1.3, size_m=8)),
+    ], 12, "Barra do leitor de PDF", flex_align_items="center", flex_justify_content="space-between",
+        padding=dims(9, 14), padding_mobile=dims(6, 10), **solid(PROF), _flex_size="none")
+    page = cls(image(PAGE_IMG, "Página do guia: Intercorrência 01, Alinhador não encaixa de forma generalizada",
+                     width=(100, "%"), image_box_shadow_box_shadow_type="yes",
+                     image_box_shadow_box_shadow=shadow(0, 20, 40, -16, "rgba(11, 45, 74, 0.35)")),
+               "lp-screen-page")
+    setv(page, _element_width="initial", _element_custom_width=px(60, "%"),
+         _element_custom_width_mobile=px(70, "%"), _flex_align_self="center", _margin=dims(18, 0, 0, 0),
+         _margin_mobile=dims(10, 0, 0, 0), _title="Página do guia (tela)")
+    content = col([page], 0, "Conteúdo da tela", flex_align_items="center", css_classes="lp-screen-content",
+                  _flex_size="shrink")
+    screen = col([bar, content], 0, "Tela", overflow="hidden", border_radius=dims(6),
+                 **grad("#EEF3F7", "#DCE5EC", 180), css_classes="lp-screen")
+    front = col([screen], 0, "Tampa · frente (tela)", padding=dims(14), padding_mobile=dims(7),
+                border_radius=dims(18, 18, 0, 0), **grad("#1C2733", "#0B121A", 180),
+                box_shadow_box_shadow_type="yes", box_shadow_box_shadow=shadow(0, 0, 0, 1, "rgba(255, 255, 255, 0.08)"),
+                css_classes="lp-lid-front")
+    back = col([icon("fas fa-tooth", "rgba(255, 255, 255, 0.55)", 30, align="center")], 0, "Tampa · costas",
+               flex_justify_content="center", flex_align_items="center", border_radius=dims(18, 18, 0, 0),
+               **grad("#C9D2DB", "#8E9BA8", 180), css_classes="lp-lid-back")
+    lid = container({"flex_direction": "column", "css_classes": "lp-lid"}, [front, back], "Tampa (abre no scroll)")
+    notch = container({"width": px(16, "%"), "min_height": px(7), "border_radius": dims(0, 0, 8, 8),
+                       **solid("#8E9BA8")}, [], "Entalhe")
+    base = col([notch], 0, "Base", flex_align_items="center", min_height=px(20), min_height_mobile=px(12),
+               border_radius=dims(2, 2, 16, 16), **grad("#E3E9EF", "#9AA7B4", 180), css_classes="lp-base",
+               box_shadow_box_shadow_type="yes",
+               box_shadow_box_shadow=shadow(0, 30, 50, -18, "rgba(11, 45, 74, 0.45)"))
+    caption = body("<p>Role a página: o guia abre como no seu computador, pronto para consultar na cadeira.</p>",
+                   INK, 14, "center", weight=500)
+    return col([code, lid, base, setv(caption, _margin=dims(18, 0, 0, 0))], 0, "Notebook (abre no scroll)",
+               flex_align_items="center", content_width="boxed", boxed_width=px(920), css_classes="lp-laptop")
 
 
 # ---------------------------------------------------------------------------
