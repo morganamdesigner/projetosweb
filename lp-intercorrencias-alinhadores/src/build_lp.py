@@ -323,32 +323,37 @@ def s03_dor():
 # ---------------------------------------------------------------------------
 
 def s03b_impact():
-    """Fundo turquesa, seção presa: "improviso:" sai do desfoque para o foco com o scroll e, no fim,
-    tudo desfoca e o fundo escurece até a cor da 03c (passagem sem corte). CSS/JS no widget da seção."""
+    """Painel turquesa que sobe com os cantos chanfrados e trava na tela: "Sem critério," entra pela
+    esquerda, "a consulta vira" pela direita e "improviso:" vem gigante e desfocado até entrar em foco
+    (mesma coreografia da seção amarela da referência). CSS/JS no widget da própria seção."""
     css = open(os.path.join(HERE, "lp-crit.css"), encoding="utf-8").read().strip()
     js = open(os.path.join(HERE, "lp-crit.js"), encoding="utf-8").read().strip()
     code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
                 _title="Sem critério · estilos e animação (não apagar)", _position="absolute",
                 _element_width="initial", _element_custom_width=px(0))
     hex_bg = container({"css_classes": "lp-crit-hex"}, [], "Textura de pontos (decorativa)")
-    fade = container({"css_classes": "lp-crit-fade"}, [], "Escurecimento da saída (decorativo)")
-    over = cls(heading("Sem critério", "rgba(1, 19, 36, 0.75)",
+    over = cls(heading("Sem critério", "rgba(255, 255, 255, 0.85)",
                        typo("typography", 12, 700, lh=1.3, ls=3.2, transform="uppercase", size_m=11), align="center"),
                "lp-crit-over")
-    l1 = cls(h2("Sem critério, a consulta vira", NOITE, 56, "center", t=42, m=22, lh=1.2), "lp-crit-l1")
-    word = heading("improviso:", NOITE, typo("typography", 190, 900, lh=1.0, ls=-5, size_t=124, size_m=56),
-                   align="center", typography_letter_spacing_mobile=px(-2))
+    half = typo("typography", 52, 800, lh=1.15, ls=-0.6, size_t=40, size_m=22)
+    left = cls(heading("Sem critério,", WHITE, half, tag="p"), "lp-crit-split lp-crit-left")
+    right = cls(heading("a consulta vira", WHITE, half, tag="p"), "lp-crit-split lp-crit-right")
+    split = row([left, right], 14, "Frase (as metades entram pelas laterais)", flex_justify_content="center",
+                flex_align_items="center", flex_wrap="wrap", flex_gap_mobile=gap(7))
+    word = heading("improviso:", WHITE, typo("typography", 196, 900, lh=1.0, ls=-5, size_t=128, size_m=58),
+                   tag="h2", align="center", typography_font_style="italic",
+                   typography_letter_spacing_mobile=px(-2))
     cls(word, "lp-crit-word")
     line = setv(html('<div class="lp-crit-line" aria-hidden="true"><svg viewBox="0 0 960 22">'
-                     '<path d="M6 15 C 220 7, 560 3, 954 10" pathLength="1" fill="none" stroke="#011324" '
+                     '<path d="M6 15 C 220 7, 560 3, 954 10" pathLength="1" fill="none" stroke="#FFFFFF" '
                      'stroke-width="5" stroke-linecap="round"/></svg></div>'),
                 _title="Sublinhado (desenha no scroll)", _element_width="initial", _element_custom_width=px(860),
                 _element_custom_width_tablet=px(80, "%"), _element_custom_width_mobile=px(86, "%"),
-                _margin=dims(-4, 0, 0, 0))
-    hint = cls(icon_list([{"text": "role para ver o que acontece", "icon": "fas fa-mouse"}], "rgba(1, 19, 36, 0.7)",
-                         typo("icon_typography", 13, 600, lh=1.4), icon_color="rgba(1, 19, 36, 0.7)", icon_size=16,
+                _margin=dims(-2, 0, 0, 0))
+    hint = cls(icon_list([{"text": "role para ver o que acontece", "icon": "fas fa-mouse"}], "rgba(255, 255, 255, 0.85)",
+                         typo("icon_typography", 13, 600, lh=1.4), icon_color="rgba(255, 255, 255, 0.85)", icon_size=16,
                          icon_align="center", _margin=dims(30, 0, 0, 0)), "lp-crit-hint")
-    content = col([over, l1, word, line, hint], 12, "Frase", flex_align_items="center", css_classes="lp-crit-content",
+    content = col([over, split, word, line, hint], 12, "Frase", flex_align_items="center", css_classes="lp-crit-content",
                   flex_gap_mobile=gap(8))
     return section({
         "content_width": "full",
@@ -357,8 +362,8 @@ def s03b_impact():
         "flex_align_items": "center",
         "padding": dims(80, 24),
         "padding_mobile": dims(64, 16),
-        **grad("#13DDE8", "#00B3C9", 160),
-    }, [code, hex_bg, content, fade], "03b · Sem critério (frase presa no scroll)", "lp-crit", boxed=False)
+        **grad("#13DDE8", "#00AFC6", 160),
+    }, [code, hex_bg, content], "03b · Sem critério (frase presa no scroll)", "lp-crit", boxed=False)
 
 
 # ---------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-/* 03b · Sem critério: seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,
+/* 03b · Sem critério: entrada do painel com cantos chanfrados e seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,
    sincronizada com o ScrollTrigger, para as passagens entre seções ficarem fluidas.
    Carrega GSAP/ScrollTrigger/Lenis do CDN se ainda não estiverem na página. */
 (function () {
@@ -49,32 +49,42 @@
 
   function section(sec) {
     var $ = function (s) { return sec.querySelector(s); };
-    var content = $('.lp-crit-content'), over = $('.lp-crit-over'), l1 = $('.lp-crit-l1'), word = $('.lp-crit-word');
-    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex'), fade = $('.lp-crit-fade');
-    if (!content || !word) return;
+    var over = $('.lp-crit-over'), left = $('.lp-crit-left'), right = $('.lp-crit-right'), word = $('.lp-crit-word');
+    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex');
+    if (!word) return;
     var title = word.querySelector('.elementor-heading-title') || word;
     var mobile = window.matchMedia('(max-width: 767px)').matches;
 
-    gsap.set([over, l1].filter(Boolean), { autoAlpha: 0, y: 34, filter: 'blur(8px)' });
-    gsap.set(title, { scale: mobile ? 1.18 : 1.3, filter: 'blur(' + (mobile ? 14 : 22) + 'px)', autoAlpha: 0.25 });
+    // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.
+    gsap.fromTo(sec, { '--chamfer': mobile ? '36px' : '84px' }, {
+      '--chamfer': '0px', ease: 'none',
+      scrollTrigger: { trigger: sec, start: 'top bottom', end: 'top top', scrub: true }
+    });
+
+    // 2. Estado inicial da frase.
+    if (over) gsap.set(over, { autoAlpha: 0, y: 14 });
+    if (left) gsap.set(left, { xPercent: -140, autoAlpha: 0 });
+    if (right) gsap.set(right, { xPercent: 140, autoAlpha: 0 });
+    gsap.set(title, { scale: mobile ? 1.7 : 2.1, filter: 'blur(' + (mobile ? 16 : 26) + 'px)', autoAlpha: 0 });
     if (path) gsap.set(path, { '--draw': 1 });
     if (hint) gsap.set(hint, { autoAlpha: 0, y: 10 });
 
+    // 3. Seção presa: data → metades pelas laterais → palavra em foco → traço → dica → pausa.
     var tl = gsap.timeline({
       defaults: { ease: 'none' },
       scrollTrigger: {
-        trigger: sec, start: 'top top', end: mobile ? '+=140%' : '+=190%',
+        trigger: sec, start: 'top top', end: mobile ? '+=170%' : '+=230%',
         pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true
       }
     });
-    tl.to([over, l1].filter(Boolean), { autoAlpha: 1, y: 0, filter: 'blur(0px)', stagger: 0.06, duration: 0.22, ease: 'power2.out' })
-      .to(title, { scale: 1, filter: 'blur(0px)', autoAlpha: 1, duration: 0.42, ease: 'power2.out' }, '<0.05');
-    if (path) tl.to(path, { '--draw': 0, duration: 0.22 }, '>-0.08');
-    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.08 }, '>-0.05');
-    tl.to({}, { duration: 0.14 }) // segura a frase nítida por um instante
-      .to(content, { scale: 0.92, y: -30, autoAlpha: 0, filter: 'blur(10px)', duration: 0.26, ease: 'power1.in' })
-      .to(fade, { opacity: 1, duration: 0.26, ease: 'power1.in' }, '<0.04');
-    if (hex) tl.fromTo(hex, { y: 30 }, { y: -50, duration: tl.duration() }, 0);
+    if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });
+    tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')
+      .to(title, { autoAlpha: 1, duration: 0.06 }, '<0.12')
+      .to(title, { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<');
+    if (path) tl.to(path, { '--draw': 0, duration: 0.16 }, '>-0.04');
+    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.07 }, '>-0.02');
+    tl.to({}, { duration: 0.22 }); // segura a frase pronta antes de a seção seguir
+    if (hex) tl.fromTo(hex, { y: 40 }, { y: -40, duration: tl.duration() }, 0);
   }
 
   function init() {

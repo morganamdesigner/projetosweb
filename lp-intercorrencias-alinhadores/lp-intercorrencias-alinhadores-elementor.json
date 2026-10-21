@@ -2767,7 +2767,7 @@
       ]
     },
     {
-      "id": "e596019",
+      "id": "7d5d777",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -2820,7 +2820,7 @@
           "size": 0,
           "sizes": []
         },
-        "background_color_b": "#00B3C9",
+        "background_color_b": "#00AFC6",
         "background_color_b_stop": {
           "unit": "%",
           "size": 100,
@@ -2845,7 +2845,7 @@
           "isInner": false,
           "widgetType": "html",
           "settings": {
-            "html": "<style>\n/* 03b · \"Sem critério, a consulta vira improviso:\" — fundo turquesa, seção presa na tela.\n   A palavra começa grande e desfocada e entra em foco com o scroll; no fim, tudo desfoca e o fundo\n   escurece até a cor da seção seguinte, para a passagem não ter corte. */\nhtml, html.lenis { scroll-behavior: auto !important; }\nhtml.lenis, html.lenis body { height: auto; }\n.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }\n.lenis.lenis-stopped { overflow: hidden; }\n\n.lp-crit { position: relative; overflow: hidden; isolation: isolate; }\n.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;\n  background-image: radial-gradient(rgba(1, 19, 36, .16) 1.4px, transparent 1.6px);\n  background-size: 26px 26px;\n  -webkit-mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%);\n  mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%); }\n.lp-crit-fade { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 3; pointer-events: none;\n  background: #0A1D31; opacity: 0; }\n.lp-crit-content { position: relative; z-index: 2; will-change: transform, filter, opacity; }\n.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }\n.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }\n.lp-crit-hint .elementor-icon-list-item { justify-content: center; }\n.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: \"\"; width: 48px; height: 1px; background: currentColor; }\n.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter; }\n.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }\n.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }\n\n@media (prefers-reduced-motion: reduce) { .lp-crit-fade { display: none; } }\n</style>\n<script>\n/* 03b · Sem critério: seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,\n   sincronizada com o ScrollTrigger, para as passagens entre seções ficarem fluidas.\n   Carrega GSAP/ScrollTrigger/Lenis do CDN se ainda não estiverem na página. */\n(function () {\n  if (window.__lpCrit) return;\n  window.__lpCrit = true;\n\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    st: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  function load(src, ok) {\n    var s = document.createElement('script');\n    s.src = src; s.onload = ok; s.onerror = ok;\n    document.head.appendChild(s);\n  }\n  function need(cb) {\n    var steps = [];\n    if (!window.gsap) steps.push(CDN.gsap);\n    if (!window.ScrollTrigger) steps.push(CDN.st);\n    if (!window.Lenis) steps.push(CDN.lenis);\n    (function next() { if (!steps.length) return cb(); load(steps.shift(), next); })();\n  }\n\n  var edit = function () { return document.body.classList.contains('elementor-editor-active'); };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  function smoothScroll() {\n    if (window.__lpLenis || !window.Lenis || reduce || edit()) return;\n    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return; // só desktop\n    var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });\n    window.__lpLenis = lenis;\n    lenis.on('scroll', ScrollTrigger.update);\n    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });\n    gsap.ticker.lagSmoothing(0);\n    // Links de âncora (#oferta, #por-dentro) com a mesma rolagem suave.\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n\n  function section(sec) {\n    var $ = function (s) { return sec.querySelector(s); };\n    var content = $('.lp-crit-content'), over = $('.lp-crit-over'), l1 = $('.lp-crit-l1'), word = $('.lp-crit-word');\n    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex'), fade = $('.lp-crit-fade');\n    if (!content || !word) return;\n    var title = word.querySelector('.elementor-heading-title') || word;\n    var mobile = window.matchMedia('(max-width: 767px)').matches;\n\n    gsap.set([over, l1].filter(Boolean), { autoAlpha: 0, y: 34, filter: 'blur(8px)' });\n    gsap.set(title, { scale: mobile ? 1.18 : 1.3, filter: 'blur(' + (mobile ? 14 : 22) + 'px)', autoAlpha: 0.25 });\n    if (path) gsap.set(path, { '--draw': 1 });\n    if (hint) gsap.set(hint, { autoAlpha: 0, y: 10 });\n\n    var tl = gsap.timeline({\n      defaults: { ease: 'none' },\n      scrollTrigger: {\n        trigger: sec, start: 'top top', end: mobile ? '+=140%' : '+=190%',\n        pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true\n      }\n    });\n    tl.to([over, l1].filter(Boolean), { autoAlpha: 1, y: 0, filter: 'blur(0px)', stagger: 0.06, duration: 0.22, ease: 'power2.out' })\n      .to(title, { scale: 1, filter: 'blur(0px)', autoAlpha: 1, duration: 0.42, ease: 'power2.out' }, '<0.05');\n    if (path) tl.to(path, { '--draw': 0, duration: 0.22 }, '>-0.08');\n    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.08 }, '>-0.05');\n    tl.to({}, { duration: 0.14 }) // segura a frase nítida por um instante\n      .to(content, { scale: 0.92, y: -30, autoAlpha: 0, filter: 'blur(10px)', duration: 0.26, ease: 'power1.in' })\n      .to(fade, { opacity: 1, duration: 0.26, ease: 'power1.in' }, '<0.04');\n    if (hex) tl.fromTo(hex, { y: 30 }, { y: -50, duration: tl.duration() }, 0);\n  }\n\n  function init() {\n    var secs = document.querySelectorAll('.lp-crit');\n    if (!secs.length) return;\n    if (reduce || edit()) return; // conteúdo fica visível e parado\n    need(function () {\n      if (!window.gsap || !window.ScrollTrigger) return;\n      gsap.registerPlugin(ScrollTrigger);\n      ScrollTrigger.config({ ignoreMobileResize: true });\n      smoothScroll();\n      Array.prototype.forEach.call(secs, section);\n      var refresh = function () { ScrollTrigger.refresh(); };\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);\n      window.addEventListener('load', refresh);\n    });\n  }\n\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+            "html": "<style>\n/* 03b · \"Sem critério, a consulta vira improviso:\" — painel turquesa que sobe com os cantos de cima\n   chanfrados, trava na tela e monta a frase: as duas metades entram pelas laterais e \"improviso:\"\n   vem gigante e desfocado até entrar em foco. Depois a seção segue o scroll normalmente. */\nhtml, html.lenis { scroll-behavior: auto !important; }\nhtml.lenis, html.lenis body { height: auto; }\n.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }\n.lenis.lenis-stopped { overflow: hidden; }\n\n.lp-crit { --chamfer: 0px; position: relative; overflow: hidden; isolation: isolate;\n  clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }\n.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;\n  background-image: radial-gradient(rgba(255, 255, 255, .28) 1.4px, transparent 1.6px);\n  background-size: 26px 26px;\n  -webkit-mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%);\n  mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%); }\n.lp-crit-content { position: relative; z-index: 2; }\n.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }\n.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: \"\"; width: 48px; height: 1px; background: currentColor; opacity: .7; }\n.lp-crit-split { will-change: transform, opacity; }\n.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter;\n  text-shadow: 0 12px 40px rgba(1, 19, 36, .18); }\n.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }\n.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }\n.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }\n.lp-crit-hint .elementor-icon-list-item { justify-content: center; }\n\n@media (prefers-reduced-motion: reduce) { .lp-crit { clip-path: none; } }\n</style>\n<script>\n/* 03b · Sem critério: entrada do painel com cantos chanfrados e seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,\n   sincronizada com o ScrollTrigger, para as passagens entre seções ficarem fluidas.\n   Carrega GSAP/ScrollTrigger/Lenis do CDN se ainda não estiverem na página. */\n(function () {\n  if (window.__lpCrit) return;\n  window.__lpCrit = true;\n\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    st: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  function load(src, ok) {\n    var s = document.createElement('script');\n    s.src = src; s.onload = ok; s.onerror = ok;\n    document.head.appendChild(s);\n  }\n  function need(cb) {\n    var steps = [];\n    if (!window.gsap) steps.push(CDN.gsap);\n    if (!window.ScrollTrigger) steps.push(CDN.st);\n    if (!window.Lenis) steps.push(CDN.lenis);\n    (function next() { if (!steps.length) return cb(); load(steps.shift(), next); })();\n  }\n\n  var edit = function () { return document.body.classList.contains('elementor-editor-active'); };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  function smoothScroll() {\n    if (window.__lpLenis || !window.Lenis || reduce || edit()) return;\n    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return; // só desktop\n    var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });\n    window.__lpLenis = lenis;\n    lenis.on('scroll', ScrollTrigger.update);\n    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });\n    gsap.ticker.lagSmoothing(0);\n    // Links de âncora (#oferta, #por-dentro) com a mesma rolagem suave.\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n\n  function section(sec) {\n    var $ = function (s) { return sec.querySelector(s); };\n    var over = $('.lp-crit-over'), left = $('.lp-crit-left'), right = $('.lp-crit-right'), word = $('.lp-crit-word');\n    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex');\n    if (!word) return;\n    var title = word.querySelector('.elementor-heading-title') || word;\n    var mobile = window.matchMedia('(max-width: 767px)').matches;\n\n    // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.\n    gsap.fromTo(sec, { '--chamfer': mobile ? '36px' : '84px' }, {\n      '--chamfer': '0px', ease: 'none',\n      scrollTrigger: { trigger: sec, start: 'top bottom', end: 'top top', scrub: true }\n    });\n\n    // 2. Estado inicial da frase.\n    if (over) gsap.set(over, { autoAlpha: 0, y: 14 });\n    if (left) gsap.set(left, { xPercent: -140, autoAlpha: 0 });\n    if (right) gsap.set(right, { xPercent: 140, autoAlpha: 0 });\n    gsap.set(title, { scale: mobile ? 1.7 : 2.1, filter: 'blur(' + (mobile ? 16 : 26) + 'px)', autoAlpha: 0 });\n    if (path) gsap.set(path, { '--draw': 1 });\n    if (hint) gsap.set(hint, { autoAlpha: 0, y: 10 });\n\n    // 3. Seção presa: data → metades pelas laterais → palavra em foco → traço → dica → pausa.\n    var tl = gsap.timeline({\n      defaults: { ease: 'none' },\n      scrollTrigger: {\n        trigger: sec, start: 'top top', end: mobile ? '+=170%' : '+=230%',\n        pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true\n      }\n    });\n    if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });\n    tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')\n      .to(title, { autoAlpha: 1, duration: 0.06 }, '<0.12')\n      .to(title, { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<');\n    if (path) tl.to(path, { '--draw': 0, duration: 0.16 }, '>-0.04');\n    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.07 }, '>-0.02');\n    tl.to({}, { duration: 0.22 }); // segura a frase pronta antes de a seção seguir\n    if (hex) tl.fromTo(hex, { y: 40 }, { y: -40, duration: tl.duration() }, 0);\n  }\n\n  function init() {\n    var secs = document.querySelectorAll('.lp-crit');\n    if (!secs.length) return;\n    if (reduce || edit()) return; // conteúdo fica visível e parado\n    need(function () {\n      if (!window.gsap || !window.ScrollTrigger) return;\n      gsap.registerPlugin(ScrollTrigger);\n      ScrollTrigger.config({ ignoreMobileResize: true });\n      smoothScroll();\n      Array.prototype.forEach.call(secs, section);\n      var refresh = function () { ScrollTrigger.refresh(); };\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);\n      window.addEventListener('load', refresh);\n    });\n  }\n\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
             "_title": "Sem critério · estilos e animação (não apagar)",
             "_position": "absolute",
             "_element_width": "initial",
@@ -2884,7 +2884,7 @@
           "elements": []
         },
         {
-          "id": "a25a607",
+          "id": "e596019",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -2918,7 +2918,7 @@
           },
           "elements": [
             {
-              "id": "d4350d8",
+              "id": "fede93b",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -2926,7 +2926,7 @@
                 "title": "Sem critério",
                 "header_size": "p",
                 "align": "center",
-                "title_color": "rgba(1, 19, 36, 0.75)",
+                "title_color": "rgba(255, 255, 255, 0.85)",
                 "typography_typography": "custom",
                 "typography_font_family": "Montserrat",
                 "typography_font_size": {
@@ -2960,66 +2960,153 @@
               "elements": []
             },
             {
-              "id": "5a2cc64",
-              "elType": "widget",
-              "isInner": false,
-              "widgetType": "heading",
+              "id": "4281b13",
+              "elType": "container",
+              "isInner": true,
               "settings": {
-                "title": "Sem critério, a consulta vira",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#011324",
-                "typography_typography": "custom",
-                "typography_font_family": "Montserrat",
-                "typography_font_size": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
                   "unit": "px",
-                  "size": 56,
-                  "sizes": []
+                  "size": 14
                 },
-                "typography_font_weight": "800",
-                "typography_line_height": {
-                  "unit": "em",
-                  "size": 1.2,
-                  "sizes": []
-                },
-                "typography_letter_spacing": {
+                "padding": {
                   "unit": "px",
-                  "size": -0.5,
-                  "sizes": []
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
                 },
-                "typography_font_size_tablet": {
+                "content_width": "full",
+                "flex_direction": "row",
+                "flex_wrap": "wrap",
+                "flex_justify_content": "center",
+                "flex_align_items": "center",
+                "flex_gap_mobile": {
+                  "column": "7",
+                  "row": "7",
+                  "isLinked": true,
                   "unit": "px",
-                  "size": 42,
-                  "sizes": []
+                  "size": 7
                 },
-                "typography_font_size_mobile": {
-                  "unit": "px",
-                  "size": 22,
-                  "sizes": []
-                },
-                "__globals__": {
-                  "title_color": "",
-                  "typography_typography": ""
-                },
-                "_css_classes": "lp-crit-l1"
+                "_title": "Frase (as metades entram pelas laterais)"
               },
-              "elements": []
+              "elements": [
+                {
+                  "id": "d4350d8",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Sem critério,",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 52,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.15,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.6,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-crit-split lp-crit-left",
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "5a2cc64",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "a consulta vira",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 52,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.15,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.6,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 22,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-crit-split lp-crit-right",
+                    "_element_width": "auto",
+                    "_flex_size": "none"
+                  },
+                  "elements": []
+                }
+              ]
             },
             {
-              "id": "4281b13",
+              "id": "625c618",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
               "settings": {
                 "title": "improviso:",
-                "header_size": "p",
+                "header_size": "h2",
                 "align": "center",
-                "title_color": "#011324",
+                "title_color": "#FFFFFF",
                 "typography_typography": "custom",
                 "typography_font_family": "Montserrat",
                 "typography_font_size": {
                   "unit": "px",
-                  "size": 190,
+                  "size": 196,
                   "sizes": []
                 },
                 "typography_font_weight": "900",
@@ -3035,14 +3122,15 @@
                 },
                 "typography_font_size_tablet": {
                   "unit": "px",
-                  "size": 124,
+                  "size": 128,
                   "sizes": []
                 },
                 "typography_font_size_mobile": {
                   "unit": "px",
-                  "size": 56,
+                  "size": 58,
                   "sizes": []
                 },
+                "typography_font_style": "italic",
                 "typography_letter_spacing_mobile": {
                   "unit": "px",
                   "size": -2,
@@ -3057,12 +3145,12 @@
               "elements": []
             },
             {
-              "id": "625c618",
+              "id": "bdae3f0",
               "elType": "widget",
               "isInner": false,
               "widgetType": "html",
               "settings": {
-                "html": "<div class=\"lp-crit-line\" aria-hidden=\"true\"><svg viewBox=\"0 0 960 22\"><path d=\"M6 15 C 220 7, 560 3, 954 10\" pathLength=\"1\" fill=\"none\" stroke=\"#011324\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg></div>",
+                "html": "<div class=\"lp-crit-line\" aria-hidden=\"true\"><svg viewBox=\"0 0 960 22\"><path d=\"M6 15 C 220 7, 560 3, 954 10\" pathLength=\"1\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg></div>",
                 "_title": "Sublinhado (desenha no scroll)",
                 "_element_width": "initial",
                 "_element_custom_width": {
@@ -3082,7 +3170,7 @@
                 },
                 "_margin": {
                   "unit": "px",
-                  "top": "-4",
+                  "top": "-2",
                   "right": "0",
                   "bottom": "0",
                   "left": "0",
@@ -3092,7 +3180,7 @@
               "elements": []
             },
             {
-              "id": "4eccd07",
+              "id": "a25a607",
               "elType": "widget",
               "isInner": false,
               "widgetType": "icon-list",
@@ -3100,7 +3188,7 @@
                 "view": "traditional",
                 "icon_list": [
                   {
-                    "_id": "bdae3f0",
+                    "_id": "4eccd07",
                     "text": "role para ver o que acontece",
                     "selected_icon": {
                       "value": "fas fa-mouse",
@@ -3119,8 +3207,8 @@
                   "size": 12,
                   "sizes": []
                 },
-                "text_color": "rgba(1, 19, 36, 0.7)",
-                "text_color_hover": "rgba(1, 19, 36, 0.7)",
+                "text_color": "rgba(255, 255, 255, 0.85)",
+                "text_color_hover": "rgba(255, 255, 255, 0.85)",
                 "icon_size": {
                   "unit": "px",
                   "size": 16,
@@ -3138,8 +3226,8 @@
                   "size": 3,
                   "sizes": []
                 },
-                "icon_color": "rgba(1, 19, 36, 0.7)",
-                "icon_color_hover": "rgba(1, 19, 36, 0.7)",
+                "icon_color": "rgba(255, 255, 255, 0.85)",
+                "icon_color_hover": "rgba(255, 255, 255, 0.85)",
                 "icon_typography_typography": "custom",
                 "icon_typography_font_family": "Montserrat",
                 "icon_typography_font_size": {
@@ -3172,37 +3260,11 @@
               "elements": []
             }
           ]
-        },
-        {
-          "id": "fede93b",
-          "elType": "container",
-          "isInner": true,
-          "settings": {
-            "flex_gap": {
-              "column": "0",
-              "row": "0",
-              "isLinked": true,
-              "unit": "px",
-              "size": 0
-            },
-            "padding": {
-              "unit": "px",
-              "top": "0",
-              "right": "0",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": true
-            },
-            "content_width": "full",
-            "css_classes": "lp-crit-fade",
-            "_title": "Escurecimento da saída (decorativo)"
-          },
-          "elements": []
         }
       ]
     },
     {
-      "id": "11ad34c",
+      "id": "b3ef03b",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -3272,7 +3334,7 @@
       },
       "elements": [
         {
-          "id": "1583ad2",
+          "id": "fe3f33e",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -3313,7 +3375,7 @@
           },
           "elements": [
             {
-              "id": "7d5d777",
+              "id": "1583ad2",
               "elType": "widget",
               "isInner": false,
               "widgetType": "image",
@@ -3341,7 +3403,7 @@
           ]
         },
         {
-          "id": "fef379b",
+          "id": "11ad34c",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -3381,7 +3443,7 @@
           },
           "elements": [
             {
-              "id": "31343a0",
+              "id": "fb05ed3",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3443,7 +3505,7 @@
               },
               "elements": [
                 {
-                  "id": "fe3f33e",
+                  "id": "6a1647d",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "counter",
@@ -3489,7 +3551,7 @@
                   "elements": []
                 },
                 {
-                  "id": "6a1647d",
+                  "id": "31343a0",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3526,7 +3588,7 @@
               ]
             },
             {
-              "id": "e5339f6",
+              "id": "631a092",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3589,7 +3651,7 @@
               },
               "elements": [
                 {
-                  "id": "fb05ed3",
+                  "id": "d2ce45e",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "counter",
@@ -3635,7 +3697,7 @@
                   "elements": []
                 },
                 {
-                  "id": "d2ce45e",
+                  "id": "e5339f6",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3672,7 +3734,7 @@
               ]
             },
             {
-              "id": "5ac2430",
+              "id": "634982b",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3735,7 +3797,7 @@
               },
               "elements": [
                 {
-                  "id": "631a092",
+                  "id": "4789410",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "counter",
@@ -3781,7 +3843,7 @@
                   "elements": []
                 },
                 {
-                  "id": "4789410",
+                  "id": "5ac2430",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3818,7 +3880,7 @@
               ]
             },
             {
-              "id": "8ca1b41",
+              "id": "b5423c3",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -3881,7 +3943,7 @@
               },
               "elements": [
                 {
-                  "id": "634982b",
+                  "id": "c385181",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "counter",
@@ -3927,7 +3989,7 @@
                   "elements": []
                 },
                 {
-                  "id": "c385181",
+                  "id": "8ca1b41",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -3964,7 +4026,7 @@
               ]
             },
             {
-              "id": "3d8e51d",
+              "id": "85f0899",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -4030,7 +4092,7 @@
               },
               "elements": [
                 {
-                  "id": "b5423c3",
+                  "id": "3d8e51d",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -4066,7 +4128,7 @@
               ]
             },
             {
-              "id": "85f0899",
+              "id": "fef379b",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -4124,7 +4186,7 @@
       ]
     },
     {
-      "id": "52dca55",
+      "id": "0acbc53",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -4202,7 +4264,7 @@
       },
       "elements": [
         {
-          "id": "0a28951",
+          "id": "eaf536b",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -4237,7 +4299,7 @@
           },
           "elements": [
             {
-              "id": "7d41c75",
+              "id": "0a28951",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -4277,7 +4339,7 @@
               },
               "elements": [
                 {
-                  "id": "b3ef03b",
+                  "id": "a20b228",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -4316,7 +4378,7 @@
                   "elements": []
                 },
                 {
-                  "id": "a20b228",
+                  "id": "c9410b9",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -4364,7 +4426,7 @@
                   "elements": []
                 },
                 {
-                  "id": "c9410b9",
+                  "id": "10416ad",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -4401,7 +4463,7 @@
                   "elements": []
                 },
                 {
-                  "id": "b2dfef3",
+                  "id": "86c4282",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -4476,7 +4538,7 @@
                   },
                   "elements": [
                     {
-                      "id": "10416ad",
+                      "id": "08511cd",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "icon",
@@ -4500,7 +4562,7 @@
                       "elements": []
                     },
                     {
-                      "id": "08511cd",
+                      "id": "b2dfef3",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -4538,7 +4600,7 @@
               ]
             },
             {
-              "id": "d5530ec",
+              "id": "7d41c75",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -4578,7 +4640,7 @@
               },
               "elements": [
                 {
-                  "id": "7f9e1fa",
+                  "id": "7bb59fd",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -4612,7 +4674,7 @@
                   "elements": []
                 },
                 {
-                  "id": "141b38c",
+                  "id": "189f06f",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -4681,7 +4743,7 @@
                   },
                   "elements": [
                     {
-                      "id": "86c4282",
+                      "id": "4fdead3",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -4755,7 +4817,7 @@
                       "elements": []
                     },
                     {
-                      "id": "24f408b",
+                      "id": "141b38c",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -4780,7 +4842,7 @@
                       },
                       "elements": [
                         {
-                          "id": "4fdead3",
+                          "id": "907a28d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -4816,305 +4878,12 @@
                           "elements": []
                         },
                         {
-                          "id": "907a28d",
+                          "id": "24f408b",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
                           "settings": {
                             "editor": "<p>O que você observa na consulta de retorno.</p>",
-                            "align": "left",
-                            "text_color": "#0B2D4A",
-                            "typography_typography": "custom",
-                            "typography_font_family": "Montserrat",
-                            "typography_font_size": {
-                              "unit": "px",
-                              "size": 15,
-                              "sizes": []
-                            },
-                            "typography_font_weight": "500",
-                            "typography_line_height": {
-                              "unit": "em",
-                              "size": 1.5,
-                              "sizes": []
-                            },
-                            "typography_font_size_mobile": {
-                              "unit": "px",
-                              "size": 14,
-                              "sizes": []
-                            },
-                            "__globals__": {
-                              "text_color": "",
-                              "typography_typography": ""
-                            }
-                          },
-                          "elements": []
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "id": "7bb59fd",
-                  "elType": "container",
-                  "isInner": true,
-                  "settings": {
-                    "flex_gap": {
-                      "column": "0",
-                      "row": "0",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 0
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "0",
-                      "bottom": "0",
-                      "left": "0",
-                      "isLinked": true
-                    },
-                    "content_width": "full",
-                    "min_height": {
-                      "unit": "px",
-                      "size": 34,
-                      "sizes": []
-                    },
-                    "width": {
-                      "unit": "px",
-                      "size": 48,
-                      "sizes": []
-                    },
-                    "margin": {
-                      "unit": "px",
-                      "top": "0",
-                      "right": "0",
-                      "bottom": "0",
-                      "left": "24",
-                      "isLinked": false
-                    },
-                    "css_classes": "lp-arrow lp-io",
-                    "_flex_size": "none",
-                    "_title": "Seta (desenha)",
-                    "width_mobile": {
-                      "unit": "px",
-                      "size": 48,
-                      "sizes": []
-                    }
-                  },
-                  "elements": []
-                },
-                {
-                  "id": "482223a",
-                  "elType": "container",
-                  "isInner": true,
-                  "settings": {
-                    "flex_gap": {
-                      "column": "18",
-                      "row": "18",
-                      "isLinked": true,
-                      "unit": "px",
-                      "size": 18
-                    },
-                    "padding": {
-                      "unit": "px",
-                      "top": "20",
-                      "right": "24",
-                      "bottom": "20",
-                      "left": "24",
-                      "isLinked": false
-                    },
-                    "content_width": "full",
-                    "flex_direction": "row",
-                    "flex_wrap": "nowrap",
-                    "flex_align_items": "center",
-                    "padding_mobile": {
-                      "unit": "px",
-                      "top": "18",
-                      "right": "18",
-                      "bottom": "18",
-                      "left": "18",
-                      "isLinked": true
-                    },
-                    "border_radius": {
-                      "unit": "px",
-                      "top": "18",
-                      "right": "18",
-                      "bottom": "18",
-                      "left": "18",
-                      "isLinked": true
-                    },
-                    "box_shadow_box_shadow_type": "yes",
-                    "box_shadow_box_shadow": {
-                      "horizontal": 0,
-                      "vertical": 18,
-                      "blur": 40,
-                      "spread": -24,
-                      "color": "rgba(11, 45, 74, 0.35)"
-                    },
-                    "background_background": "classic",
-                    "background_color": "#FFFFFF",
-                    "border_border": "solid",
-                    "border_width": {
-                      "unit": "px",
-                      "top": "1",
-                      "right": "1",
-                      "bottom": "1",
-                      "left": "1",
-                      "isLinked": true
-                    },
-                    "border_color": "#E3EBF1",
-                    "_title": "Etapa 02",
-                    "__globals__": {
-                      "background_color": "",
-                      "border_color": ""
-                    },
-                    "animation": "fadeInUp",
-                    "animation_duration": "fast",
-                    "animation_delay": 150
-                  },
-                  "elements": [
-                    {
-                      "id": "189f06f",
-                      "elType": "widget",
-                      "isInner": false,
-                      "widgetType": "heading",
-                      "settings": {
-                        "title": "02",
-                        "header_size": "p",
-                        "align": "center",
-                        "title_color": "#011324",
-                        "typography_typography": "custom",
-                        "typography_font_family": "Montserrat",
-                        "typography_font_size": {
-                          "unit": "px",
-                          "size": 15,
-                          "sizes": []
-                        },
-                        "typography_font_weight": "800",
-                        "typography_line_height": {
-                          "unit": "em",
-                          "size": 1.46,
-                          "sizes": []
-                        },
-                        "_element_width": "initial",
-                        "_element_custom_width": {
-                          "unit": "px",
-                          "size": 48,
-                          "sizes": []
-                        },
-                        "_padding": {
-                          "unit": "px",
-                          "top": "13",
-                          "right": "0",
-                          "bottom": "13",
-                          "left": "0",
-                          "isLinked": false
-                        },
-                        "_border_radius": {
-                          "unit": "px",
-                          "top": "999",
-                          "right": "999",
-                          "bottom": "999",
-                          "left": "999",
-                          "isLinked": true
-                        },
-                        "_flex_size": "none",
-                        "_background_background": "gradient",
-                        "_background_color": "#07E3F3",
-                        "_background_color_stop": {
-                          "unit": "%",
-                          "size": 0,
-                          "sizes": []
-                        },
-                        "_background_color_b": "#0A92C4",
-                        "_background_color_b_stop": {
-                          "unit": "%",
-                          "size": 100,
-                          "sizes": []
-                        },
-                        "_background_gradient_type": "linear",
-                        "_background_gradient_angle": {
-                          "unit": "deg",
-                          "size": 135,
-                          "sizes": []
-                        },
-                        "__globals__": {
-                          "title_color": "",
-                          "typography_typography": "",
-                          "_background_color": "",
-                          "_background_color_b": ""
-                        }
-                      },
-                      "elements": []
-                    },
-                    {
-                      "id": "537043c",
-                      "elType": "container",
-                      "isInner": true,
-                      "settings": {
-                        "flex_gap": {
-                          "column": "4",
-                          "row": "4",
-                          "isLinked": true,
-                          "unit": "px",
-                          "size": 4
-                        },
-                        "padding": {
-                          "unit": "px",
-                          "top": "0",
-                          "right": "0",
-                          "bottom": "0",
-                          "left": "0",
-                          "isLinked": true
-                        },
-                        "content_width": "full",
-                        "flex_direction": "column",
-                        "_title": "Texto"
-                      },
-                      "elements": [
-                        {
-                          "id": "95ca5ce",
-                          "elType": "widget",
-                          "isInner": false,
-                          "widgetType": "heading",
-                          "settings": {
-                            "title": "Avaliação",
-                            "header_size": "p",
-                            "align": "left",
-                            "title_color": "#0A92C4",
-                            "typography_typography": "custom",
-                            "typography_font_family": "Montserrat",
-                            "typography_font_size": {
-                              "unit": "px",
-                              "size": 11,
-                              "sizes": []
-                            },
-                            "typography_font_weight": "800",
-                            "typography_line_height": {
-                              "unit": "em",
-                              "size": 1.3,
-                              "sizes": []
-                            },
-                            "typography_letter_spacing": {
-                              "unit": "px",
-                              "size": 2.2,
-                              "sizes": []
-                            },
-                            "typography_text_transform": "uppercase",
-                            "__globals__": {
-                              "title_color": "",
-                              "typography_typography": ""
-                            }
-                          },
-                          "elements": []
-                        },
-                        {
-                          "id": "2e8a70a",
-                          "elType": "widget",
-                          "isInner": false,
-                          "widgetType": "text-editor",
-                          "settings": {
-                            "editor": "<p>O que checar, e em que ordem, para chegar à causa provável.</p>",
                             "align": "left",
                             "text_color": "#0B2D4A",
                             "typography_typography": "custom",
@@ -5197,7 +4966,300 @@
                   "elements": []
                 },
                 {
-                  "id": "c5da618",
+                  "id": "2f8cbc3",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "18",
+                      "row": "18",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 18
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "20",
+                      "right": "24",
+                      "bottom": "20",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "nowrap",
+                    "flex_align_items": "center",
+                    "padding_mobile": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 18,
+                      "blur": 40,
+                      "spread": -24,
+                      "color": "rgba(11, 45, 74, 0.35)"
+                    },
+                    "background_background": "classic",
+                    "background_color": "#FFFFFF",
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "#E3EBF1",
+                    "_title": "Etapa 02",
+                    "__globals__": {
+                      "background_color": "",
+                      "border_color": ""
+                    },
+                    "animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "animation_delay": 150
+                  },
+                  "elements": [
+                    {
+                      "id": "95ca5ce",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "02",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#011324",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 15,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.46,
+                          "sizes": []
+                        },
+                        "_element_width": "initial",
+                        "_element_custom_width": {
+                          "unit": "px",
+                          "size": 48,
+                          "sizes": []
+                        },
+                        "_padding": {
+                          "unit": "px",
+                          "top": "13",
+                          "right": "0",
+                          "bottom": "13",
+                          "left": "0",
+                          "isLinked": false
+                        },
+                        "_border_radius": {
+                          "unit": "px",
+                          "top": "999",
+                          "right": "999",
+                          "bottom": "999",
+                          "left": "999",
+                          "isLinked": true
+                        },
+                        "_flex_size": "none",
+                        "_background_background": "gradient",
+                        "_background_color": "#07E3F3",
+                        "_background_color_stop": {
+                          "unit": "%",
+                          "size": 0,
+                          "sizes": []
+                        },
+                        "_background_color_b": "#0A92C4",
+                        "_background_color_b_stop": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "_background_gradient_type": "linear",
+                        "_background_gradient_angle": {
+                          "unit": "deg",
+                          "size": 135,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": "",
+                          "_background_color": "",
+                          "_background_color_b": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "482223a",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "4",
+                          "row": "4",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 4
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "0",
+                          "bottom": "0",
+                          "left": "0",
+                          "isLinked": true
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "_title": "Texto"
+                      },
+                      "elements": [
+                        {
+                          "id": "2e8a70a",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "heading",
+                          "settings": {
+                            "title": "Avaliação",
+                            "header_size": "p",
+                            "align": "left",
+                            "title_color": "#0A92C4",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 11,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "800",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.3,
+                              "sizes": []
+                            },
+                            "typography_letter_spacing": {
+                              "unit": "px",
+                              "size": 2.2,
+                              "sizes": []
+                            },
+                            "typography_text_transform": "uppercase",
+                            "__globals__": {
+                              "title_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        },
+                        {
+                          "id": "537043c",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>O que checar, e em que ordem, para chegar à causa provável.</p>",
+                            "align": "left",
+                            "text_color": "#0B2D4A",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "500",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.5,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "d5530ec",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "0",
+                      "row": "0",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 0
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "min_height": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "width": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "24",
+                      "isLinked": false
+                    },
+                    "css_classes": "lp-arrow lp-io",
+                    "_flex_size": "none",
+                    "_title": "Seta (desenha)",
+                    "width_mobile": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "7f9e1fa",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -5274,7 +5336,7 @@
                   },
                   "elements": [
                     {
-                      "id": "2f8cbc3",
+                      "id": "73302ba",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -5348,7 +5410,7 @@
                       "elements": []
                     },
                     {
-                      "id": "7645c18",
+                      "id": "c5da618",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -5373,7 +5435,7 @@
                       },
                       "elements": [
                         {
-                          "id": "73302ba",
+                          "id": "7f664a6",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -5409,7 +5471,7 @@
                           "elements": []
                         },
                         {
-                          "id": "7f664a6",
+                          "id": "7645c18",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -5451,7 +5513,7 @@
           ]
         },
         {
-          "id": "f9fea55",
+          "id": "52dca55",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -5483,7 +5545,7 @@
           },
           "elements": [
             {
-              "id": "eaf536b",
+              "id": "68a71c1",
               "elType": "widget",
               "isInner": false,
               "widgetType": "html",
@@ -5501,7 +5563,7 @@
               "elements": []
             },
             {
-              "id": "03d60e2",
+              "id": "331a99a",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -5527,7 +5589,7 @@
               },
               "elements": [
                 {
-                  "id": "5d3c180",
+                  "id": "fe9c2b9",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -5600,7 +5662,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0fa4909",
+                      "id": "5d3c180",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -5658,7 +5720,7 @@
                       },
                       "elements": [
                         {
-                          "id": "62bebea",
+                          "id": "761ef72",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -5700,7 +5762,7 @@
                           },
                           "elements": [
                             {
-                              "id": "24f769b",
+                              "id": "81af30a",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -5738,7 +5800,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "68a71c1",
+                                  "id": "c103e0a",
                                   "elType": "container",
                                   "isInner": true,
                                   "settings": {
@@ -5792,7 +5854,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "c103e0a",
+                                  "id": "31c3e3f",
                                   "elType": "container",
                                   "isInner": true,
                                   "settings": {
@@ -5846,7 +5908,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "31c3e3f",
+                                  "id": "24f769b",
                                   "elType": "container",
                                   "isInner": true,
                                   "settings": {
@@ -5902,7 +5964,7 @@
                               ]
                             },
                             {
-                              "id": "81af30a",
+                              "id": "cd1bafc",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -5938,7 +6000,7 @@
                               "elements": []
                             },
                             {
-                              "id": "cd1bafc",
+                              "id": "62bebea",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -5977,7 +6039,7 @@
                           ]
                         },
                         {
-                          "id": "c26c67a",
+                          "id": "0fa4909",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -6005,7 +6067,7 @@
                           },
                           "elements": [
                             {
-                              "id": "761ef72",
+                              "id": "c26c67a",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "image",
@@ -6073,7 +6135,7 @@
                   ]
                 },
                 {
-                  "id": "429c026",
+                  "id": "03d60e2",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6132,7 +6194,7 @@
                   },
                   "elements": [
                     {
-                      "id": "fe9c2b9",
+                      "id": "429c026",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "icon",
@@ -6160,7 +6222,7 @@
               ]
             },
             {
-              "id": "06ca730",
+              "id": "dbd9522",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -6236,7 +6298,7 @@
               },
               "elements": [
                 {
-                  "id": "331a99a",
+                  "id": "06ca730",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6291,7 +6353,7 @@
               ]
             },
             {
-              "id": "dbd9522",
+              "id": "f9fea55",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -6337,7 +6399,7 @@
       ]
     },
     {
-      "id": "3d6bc3a",
+      "id": "af9cee8",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -6402,7 +6464,7 @@
       },
       "elements": [
         {
-          "id": "bc22a8f",
+          "id": "788ca8d",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -6435,7 +6497,7 @@
           },
           "elements": [
             {
-              "id": "0acbc53",
+              "id": "1a34c85",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -6472,7 +6534,7 @@
               "elements": []
             },
             {
-              "id": "1a34c85",
+              "id": "bc22a8f",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -6519,7 +6581,7 @@
           ]
         },
         {
-          "id": "6e0db54",
+          "id": "3d6bc3a",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -6549,7 +6611,7 @@
           },
           "elements": [
             {
-              "id": "1a94e1b",
+              "id": "c7049b7",
               "elType": "widget",
               "isInner": false,
               "widgetType": "nested-carousel",
@@ -6558,23 +6620,23 @@
                 "carousel_items": [
                   {
                     "slide_title": "Página p.06",
-                    "_id": "c1cff70"
-                  },
-                  {
-                    "slide_title": "Página p.04",
                     "_id": "b2461c3"
                   },
                   {
-                    "slide_title": "Página p.07",
+                    "slide_title": "Página p.04",
                     "_id": "802ef3a"
                   },
                   {
-                    "slide_title": "Página p.12",
+                    "slide_title": "Página p.07",
                     "_id": "ef52aad"
                   },
                   {
-                    "slide_title": "Página p.22",
+                    "slide_title": "Página p.12",
                     "_id": "ad4ad43"
+                  },
+                  {
+                    "slide_title": "Página p.22",
+                    "_id": "1a94e1b"
                   }
                 ],
                 "slides_to_show": "5",
@@ -6639,7 +6701,7 @@
               },
               "elements": [
                 {
-                  "id": "060de83",
+                  "id": "1c15a27",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6665,7 +6727,7 @@
                   },
                   "elements": [
                     {
-                      "id": "788ca8d",
+                      "id": "cf97b3a",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "image",
@@ -6699,7 +6761,7 @@
                       "elements": []
                     },
                     {
-                      "id": "cf97b3a",
+                      "id": "060de83",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -6732,7 +6794,7 @@
                   ]
                 },
                 {
-                  "id": "4c6e83c",
+                  "id": "0cedefe",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6758,7 +6820,7 @@
                   },
                   "elements": [
                     {
-                      "id": "1c15a27",
+                      "id": "45e439b",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "image",
@@ -6792,7 +6854,7 @@
                       "elements": []
                     },
                     {
-                      "id": "45e439b",
+                      "id": "4c6e83c",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -6825,7 +6887,7 @@
                   ]
                 },
                 {
-                  "id": "41c9ec2",
+                  "id": "9b2813e",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6851,7 +6913,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0cedefe",
+                      "id": "b9e1c58",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "image",
@@ -6885,7 +6947,7 @@
                       "elements": []
                     },
                     {
-                      "id": "b9e1c58",
+                      "id": "41c9ec2",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -6918,7 +6980,7 @@
                   ]
                 },
                 {
-                  "id": "06b88e1",
+                  "id": "f224908",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -6944,7 +7006,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9b2813e",
+                      "id": "2264726",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "image",
@@ -6978,7 +7040,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2264726",
+                      "id": "06b88e1",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -7011,7 +7073,7 @@
                   ]
                 },
                 {
-                  "id": "cdddafc",
+                  "id": "c1cff70",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -7037,7 +7099,7 @@
                   },
                   "elements": [
                     {
-                      "id": "f224908",
+                      "id": "89ef84d",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "image",
@@ -7071,7 +7133,7 @@
                       "elements": []
                     },
                     {
-                      "id": "89ef84d",
+                      "id": "cdddafc",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -7108,7 +7170,7 @@
           ]
         },
         {
-          "id": "fbb2f83",
+          "id": "6e0db54",
           "elType": "widget",
           "isInner": false,
           "widgetType": "icon-list",
@@ -7116,7 +7178,7 @@
             "view": "traditional",
             "icon_list": [
               {
-                "_id": "c7049b7",
+                "_id": "fbb2f83",
                 "text": "Toque em uma página para ampliar",
                 "selected_icon": {
                   "value": "fas fa-search-plus",
@@ -7181,7 +7243,7 @@
       ]
     },
     {
-      "id": "d6d7304",
+      "id": "1a32a73",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -7236,7 +7298,7 @@
       },
       "elements": [
         {
-          "id": "eb4e474",
+          "id": "14a4c00",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7282,7 +7344,7 @@
           },
           "elements": [
             {
-              "id": "1778371",
+              "id": "18d6fc5",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -7321,7 +7383,7 @@
               "elements": []
             },
             {
-              "id": "18d6fc5",
+              "id": "a3f37a5",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -7369,7 +7431,7 @@
               "elements": []
             },
             {
-              "id": "a3f37a5",
+              "id": "81467aa",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -7406,7 +7468,7 @@
               "elements": []
             },
             {
-              "id": "b00ad9e",
+              "id": "40f6687",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -7467,7 +7529,7 @@
               },
               "elements": [
                 {
-                  "id": "af9cee8",
+                  "id": "d4ec395",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -7505,7 +7567,7 @@
                   "elements": []
                 },
                 {
-                  "id": "a224487",
+                  "id": "b00ad9e",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -7531,7 +7593,7 @@
                   },
                   "elements": [
                     {
-                      "id": "416c356",
+                      "id": "a224487",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -7561,7 +7623,7 @@
                       "elements": []
                     },
                     {
-                      "id": "d4ec395",
+                      "id": "416c356",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -7624,7 +7686,7 @@
               ]
             },
             {
-              "id": "cd37340",
+              "id": "1778371",
               "elType": "widget",
               "isInner": false,
               "widgetType": "icon-list",
@@ -7632,7 +7694,7 @@
                 "view": "traditional",
                 "icon_list": [
                   {
-                    "_id": "40f6687",
+                    "_id": "5588b50",
                     "text": "Encaixe e tracking",
                     "selected_icon": {
                       "value": "fas fa-circle",
@@ -7646,7 +7708,7 @@
                     }
                   },
                   {
-                    "_id": "5588b50",
+                    "_id": "91ffe20",
                     "text": "Attachment e IPR",
                     "selected_icon": {
                       "value": "fas fa-circle",
@@ -7660,7 +7722,7 @@
                     }
                   },
                   {
-                    "_id": "91ffe20",
+                    "_id": "5056c8a",
                     "text": "Paciente e uso",
                     "selected_icon": {
                       "value": "fas fa-circle",
@@ -7674,7 +7736,7 @@
                     }
                   },
                   {
-                    "_id": "5056c8a",
+                    "_id": "cd37340",
                     "text": "Movimento e mecânica",
                     "selected_icon": {
                       "value": "fas fa-circle",
@@ -7737,7 +7799,7 @@
               "elements": []
             },
             {
-              "id": "81467aa",
+              "id": "eb4e474",
               "elType": "widget",
               "isInner": false,
               "widgetType": "button",
@@ -7865,7 +7927,7 @@
           ]
         },
         {
-          "id": "b56e070",
+          "id": "d6d7304",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -7941,7 +8003,7 @@
           },
           "elements": [
             {
-              "id": "15afe23",
+              "id": "dc0e992",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8000,7 +8062,7 @@
               },
               "elements": [
                 {
-                  "id": "32f5010",
+                  "id": "4e1c32f",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -8028,7 +8090,7 @@
                   },
                   "elements": [
                     {
-                      "id": "14a4c00",
+                      "id": "48fb0f4",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "icon",
@@ -8070,7 +8132,7 @@
                       "elements": []
                     },
                     {
-                      "id": "97f0356",
+                      "id": "32f5010",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -8095,7 +8157,7 @@
                       },
                       "elements": [
                         {
-                          "id": "48fb0f4",
+                          "id": "14452e7",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -8130,7 +8192,7 @@
                           "elements": []
                         },
                         {
-                          "id": "14452e7",
+                          "id": "97f0356",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -8164,7 +8226,7 @@
                   ]
                 },
                 {
-                  "id": "1eb2911",
+                  "id": "15afe23",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -8204,7 +8266,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4e1c32f",
+                      "id": "0e03924",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -8255,7 +8317,7 @@
                       "elements": []
                     },
                     {
-                      "id": "0e03924",
+                      "id": "1eb2911",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -8310,7 +8372,7 @@
               ]
             },
             {
-              "id": "3cbad08",
+              "id": "b56e070",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -8344,7 +8406,7 @@
               },
               "elements": [
                 {
-                  "id": "020b2b9",
+                  "id": "ed0e1f5",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -8377,7 +8439,7 @@
                   },
                   "elements": [
                     {
-                      "id": "dc0e992",
+                      "id": "020b2b9",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -8435,7 +8497,7 @@
                   ]
                 },
                 {
-                  "id": "b704bfa",
+                  "id": "68f787f",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -8470,7 +8532,7 @@
                   },
                   "elements": [
                     {
-                      "id": "cce5e7e",
+                      "id": "b704bfa",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -8526,7 +8588,7 @@
                       "elements": []
                     },
                     {
-                      "id": "1d99dd7",
+                      "id": "cce5e7e",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -8587,7 +8649,7 @@
                       },
                       "elements": [
                         {
-                          "id": "3e45583",
+                          "id": "d2157b3",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -8613,7 +8675,7 @@
                           },
                           "elements": [
                             {
-                              "id": "291332c",
+                              "id": "ff6bff1",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -8640,7 +8702,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "ed0e1f5",
+                                  "id": "4870ff5",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -8679,7 +8741,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "4870ff5",
+                                  "id": "291332c",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -8739,7 +8801,7 @@
                               ]
                             },
                             {
-                              "id": "ff6bff1",
+                              "id": "9c6d3fa",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -8775,7 +8837,7 @@
                               "elements": []
                             },
                             {
-                              "id": "9c6d3fa",
+                              "id": "3e45583",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -8812,7 +8874,7 @@
                           ]
                         },
                         {
-                          "id": "d2157b3",
+                          "id": "f2761b3",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -8864,7 +8926,7 @@
                           "elements": []
                         },
                         {
-                          "id": "f2761b3",
+                          "id": "1d99dd7",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -8906,7 +8968,7 @@
                   ]
                 },
                 {
-                  "id": "a5af02e",
+                  "id": "d587dfb",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -8941,7 +9003,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0886e45",
+                      "id": "a5af02e",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -8997,7 +9059,7 @@
                       "elements": []
                     },
                     {
-                      "id": "e2b2bdd",
+                      "id": "0886e45",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -9058,7 +9120,7 @@
                       },
                       "elements": [
                         {
-                          "id": "ee4c444",
+                          "id": "93ac35c",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -9084,7 +9146,7 @@
                           },
                           "elements": [
                             {
-                              "id": "9eafeee",
+                              "id": "879a8a2",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -9111,7 +9173,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "68f787f",
+                                  "id": "b4e9699",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -9150,7 +9212,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "b4e9699",
+                                  "id": "9eafeee",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -9210,7 +9272,7 @@
                               ]
                             },
                             {
-                              "id": "879a8a2",
+                              "id": "76ef27b",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -9246,7 +9308,7 @@
                               "elements": []
                             },
                             {
-                              "id": "76ef27b",
+                              "id": "ee4c444",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -9283,7 +9345,7 @@
                           ]
                         },
                         {
-                          "id": "93ac35c",
+                          "id": "279ebaf",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -9335,7 +9397,7 @@
                           "elements": []
                         },
                         {
-                          "id": "279ebaf",
+                          "id": "e2b2bdd",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -9377,7 +9439,7 @@
                   ]
                 },
                 {
-                  "id": "90b1af0",
+                  "id": "5fea8a9",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -9412,7 +9474,7 @@
                   },
                   "elements": [
                     {
-                      "id": "46192bd",
+                      "id": "90b1af0",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -9468,7 +9530,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2e965bd",
+                      "id": "46192bd",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -9529,7 +9591,7 @@
                       },
                       "elements": [
                         {
-                          "id": "e9e91de",
+                          "id": "b910a87",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -9555,7 +9617,7 @@
                           },
                           "elements": [
                             {
-                              "id": "9d0ae14",
+                              "id": "2d9aa59",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -9582,7 +9644,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "d587dfb",
+                                  "id": "be9703b",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -9621,7 +9683,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "be9703b",
+                                  "id": "9d0ae14",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -9681,7 +9743,7 @@
                               ]
                             },
                             {
-                              "id": "2d9aa59",
+                              "id": "07c16f8",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -9717,7 +9779,7 @@
                               "elements": []
                             },
                             {
-                              "id": "07c16f8",
+                              "id": "e9e91de",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -9754,7 +9816,7 @@
                           ]
                         },
                         {
-                          "id": "b910a87",
+                          "id": "1e3a2e2",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -9806,7 +9868,7 @@
                           "elements": []
                         },
                         {
-                          "id": "1e3a2e2",
+                          "id": "2e965bd",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -9848,7 +9910,7 @@
                   ]
                 },
                 {
-                  "id": "b122334",
+                  "id": "71f4568",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -9883,7 +9945,7 @@
                   },
                   "elements": [
                     {
-                      "id": "144c9f8",
+                      "id": "b122334",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -9939,7 +10001,7 @@
                       "elements": []
                     },
                     {
-                      "id": "5997f0c",
+                      "id": "144c9f8",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -10000,7 +10062,7 @@
                       },
                       "elements": [
                         {
-                          "id": "0916d00",
+                          "id": "8028ab6",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -10026,7 +10088,7 @@
                           },
                           "elements": [
                             {
-                              "id": "d0630cc",
+                              "id": "43a1f63",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -10053,7 +10115,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "5fea8a9",
+                                  "id": "e11a4b0",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -10092,7 +10154,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "e11a4b0",
+                                  "id": "d0630cc",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -10152,7 +10214,7 @@
                               ]
                             },
                             {
-                              "id": "43a1f63",
+                              "id": "df5d97b",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -10188,7 +10250,7 @@
                               "elements": []
                             },
                             {
-                              "id": "df5d97b",
+                              "id": "0916d00",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -10225,7 +10287,7 @@
                           ]
                         },
                         {
-                          "id": "8028ab6",
+                          "id": "0f92440",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -10277,7 +10339,7 @@
                           "elements": []
                         },
                         {
-                          "id": "0f92440",
+                          "id": "5997f0c",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -10319,7 +10381,7 @@
                   ]
                 },
                 {
-                  "id": "e79be51",
+                  "id": "a271914",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -10354,7 +10416,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3843f5b",
+                      "id": "e79be51",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -10410,7 +10472,7 @@
                       "elements": []
                     },
                     {
-                      "id": "36154ad",
+                      "id": "3843f5b",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -10471,7 +10533,7 @@
                       },
                       "elements": [
                         {
-                          "id": "af9c327",
+                          "id": "843c586",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -10497,7 +10559,7 @@
                           },
                           "elements": [
                             {
-                              "id": "352c298",
+                              "id": "30bf4b8",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -10524,7 +10586,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "71f4568",
+                                  "id": "e2ea659",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -10563,7 +10625,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "e2ea659",
+                                  "id": "352c298",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -10623,7 +10685,7 @@
                               ]
                             },
                             {
-                              "id": "30bf4b8",
+                              "id": "0876d73",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -10659,7 +10721,7 @@
                               "elements": []
                             },
                             {
-                              "id": "0876d73",
+                              "id": "af9c327",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -10696,7 +10758,7 @@
                           ]
                         },
                         {
-                          "id": "843c586",
+                          "id": "46bdc63",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -10748,7 +10810,7 @@
                           "elements": []
                         },
                         {
-                          "id": "46bdc63",
+                          "id": "36154ad",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -10790,7 +10852,7 @@
                   ]
                 },
                 {
-                  "id": "24c92fc",
+                  "id": "ba1d720",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -10825,7 +10887,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ef4fb9f",
+                      "id": "24c92fc",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -10881,7 +10943,7 @@
                       "elements": []
                     },
                     {
-                      "id": "3e7ba0f",
+                      "id": "ef4fb9f",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -10942,7 +11004,7 @@
                       },
                       "elements": [
                         {
-                          "id": "e9ae8f9",
+                          "id": "b674704",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -10968,7 +11030,7 @@
                           },
                           "elements": [
                             {
-                              "id": "ae3b50b",
+                              "id": "7178653",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -10995,7 +11057,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "a271914",
+                                  "id": "ed621bc",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -11034,7 +11096,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "ed621bc",
+                                  "id": "ae3b50b",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -11094,7 +11156,7 @@
                               ]
                             },
                             {
-                              "id": "7178653",
+                              "id": "170433f",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -11130,7 +11192,7 @@
                               "elements": []
                             },
                             {
-                              "id": "170433f",
+                              "id": "e9ae8f9",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -11167,7 +11229,7 @@
                           ]
                         },
                         {
-                          "id": "b674704",
+                          "id": "018ee55",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -11219,7 +11281,7 @@
                           "elements": []
                         },
                         {
-                          "id": "018ee55",
+                          "id": "3e7ba0f",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -11261,7 +11323,7 @@
                   ]
                 },
                 {
-                  "id": "b5a4333",
+                  "id": "a15fe7e",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -11296,7 +11358,7 @@
                   },
                   "elements": [
                     {
-                      "id": "88114f7",
+                      "id": "b5a4333",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -11352,7 +11414,7 @@
                       "elements": []
                     },
                     {
-                      "id": "c7c90d3",
+                      "id": "88114f7",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -11413,7 +11475,7 @@
                       },
                       "elements": [
                         {
-                          "id": "d5b09f0",
+                          "id": "2e7dc36",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -11439,7 +11501,7 @@
                           },
                           "elements": [
                             {
-                              "id": "d4583d6",
+                              "id": "db9afc9",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -11466,7 +11528,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "ba1d720",
+                                  "id": "bf989df",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -11505,7 +11567,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "bf989df",
+                                  "id": "d4583d6",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -11565,7 +11627,7 @@
                               ]
                             },
                             {
-                              "id": "db9afc9",
+                              "id": "8fb7332",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -11601,7 +11663,7 @@
                               "elements": []
                             },
                             {
-                              "id": "8fb7332",
+                              "id": "d5b09f0",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -11638,7 +11700,7 @@
                           ]
                         },
                         {
-                          "id": "2e7dc36",
+                          "id": "420b874",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -11690,7 +11752,7 @@
                           "elements": []
                         },
                         {
-                          "id": "420b874",
+                          "id": "c7c90d3",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -11732,7 +11794,7 @@
                   ]
                 },
                 {
-                  "id": "96e7425",
+                  "id": "4f6062a",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -11767,7 +11829,7 @@
                   },
                   "elements": [
                     {
-                      "id": "654ae20",
+                      "id": "96e7425",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -11823,7 +11885,7 @@
                       "elements": []
                     },
                     {
-                      "id": "5758698",
+                      "id": "654ae20",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -11884,7 +11946,7 @@
                       },
                       "elements": [
                         {
-                          "id": "45fd965",
+                          "id": "562dac2",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -11910,7 +11972,7 @@
                           },
                           "elements": [
                             {
-                              "id": "9ae2f55",
+                              "id": "f478de4",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -11937,7 +11999,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "a15fe7e",
+                                  "id": "2879a18",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -11976,7 +12038,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "2879a18",
+                                  "id": "9ae2f55",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -12036,7 +12098,7 @@
                               ]
                             },
                             {
-                              "id": "f478de4",
+                              "id": "3454f08",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -12072,7 +12134,7 @@
                               "elements": []
                             },
                             {
-                              "id": "3454f08",
+                              "id": "45fd965",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -12109,7 +12171,7 @@
                           ]
                         },
                         {
-                          "id": "562dac2",
+                          "id": "78b936d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -12161,7 +12223,7 @@
                           "elements": []
                         },
                         {
-                          "id": "78b936d",
+                          "id": "5758698",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -12203,7 +12265,7 @@
                   ]
                 },
                 {
-                  "id": "9621390",
+                  "id": "09fc37f",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -12238,7 +12300,7 @@
                   },
                   "elements": [
                     {
-                      "id": "3fb77e1",
+                      "id": "9621390",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -12294,7 +12356,7 @@
                       "elements": []
                     },
                     {
-                      "id": "e93c940",
+                      "id": "3fb77e1",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -12355,7 +12417,7 @@
                       },
                       "elements": [
                         {
-                          "id": "3ff3ba0",
+                          "id": "33bdda1",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -12381,7 +12443,7 @@
                           },
                           "elements": [
                             {
-                              "id": "815048e",
+                              "id": "b30d73e",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -12408,7 +12470,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "4f6062a",
+                                  "id": "8fd6822",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -12447,7 +12509,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "8fd6822",
+                                  "id": "815048e",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -12507,7 +12569,7 @@
                               ]
                             },
                             {
-                              "id": "b30d73e",
+                              "id": "2a81a02",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -12543,7 +12605,7 @@
                               "elements": []
                             },
                             {
-                              "id": "2a81a02",
+                              "id": "3ff3ba0",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -12580,7 +12642,7 @@
                           ]
                         },
                         {
-                          "id": "33bdda1",
+                          "id": "adbe0a6",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -12632,7 +12694,7 @@
                           "elements": []
                         },
                         {
-                          "id": "adbe0a6",
+                          "id": "e93c940",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -12674,7 +12736,7 @@
                   ]
                 },
                 {
-                  "id": "e911d8b",
+                  "id": "5dd03a3",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -12709,7 +12771,7 @@
                   },
                   "elements": [
                     {
-                      "id": "01da74f",
+                      "id": "e911d8b",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -12765,7 +12827,7 @@
                       "elements": []
                     },
                     {
-                      "id": "4e30e3c",
+                      "id": "01da74f",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -12826,7 +12888,7 @@
                       },
                       "elements": [
                         {
-                          "id": "882575e",
+                          "id": "58c5995",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -12852,7 +12914,7 @@
                           },
                           "elements": [
                             {
-                              "id": "afec3c1",
+                              "id": "8f996ea",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -12879,7 +12941,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "09fc37f",
+                                  "id": "ac15f76",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -12918,7 +12980,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "ac15f76",
+                                  "id": "afec3c1",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -12978,7 +13040,7 @@
                               ]
                             },
                             {
-                              "id": "8f996ea",
+                              "id": "2ef52a4",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -13014,7 +13076,7 @@
                               "elements": []
                             },
                             {
-                              "id": "2ef52a4",
+                              "id": "882575e",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -13051,7 +13113,7 @@
                           ]
                         },
                         {
-                          "id": "58c5995",
+                          "id": "d509462",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -13103,7 +13165,7 @@
                           "elements": []
                         },
                         {
-                          "id": "d509462",
+                          "id": "4e30e3c",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -13145,7 +13207,7 @@
                   ]
                 },
                 {
-                  "id": "05b98c1",
+                  "id": "865f270",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -13180,7 +13242,7 @@
                   },
                   "elements": [
                     {
-                      "id": "86e8c9e",
+                      "id": "05b98c1",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -13236,7 +13298,7 @@
                       "elements": []
                     },
                     {
-                      "id": "c1cac5a",
+                      "id": "86e8c9e",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -13297,7 +13359,7 @@
                       },
                       "elements": [
                         {
-                          "id": "c76547b",
+                          "id": "d322cda",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -13323,7 +13385,7 @@
                           },
                           "elements": [
                             {
-                              "id": "c750edf",
+                              "id": "c948bd8",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -13350,7 +13412,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "5dd03a3",
+                                  "id": "2fc3a43",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -13389,7 +13451,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "2fc3a43",
+                                  "id": "c750edf",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -13449,7 +13511,7 @@
                               ]
                             },
                             {
-                              "id": "c948bd8",
+                              "id": "a0bd5a1",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -13485,7 +13547,7 @@
                               "elements": []
                             },
                             {
-                              "id": "a0bd5a1",
+                              "id": "c76547b",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -13522,7 +13584,7 @@
                           ]
                         },
                         {
-                          "id": "d322cda",
+                          "id": "273fbf9",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -13574,7 +13636,7 @@
                           "elements": []
                         },
                         {
-                          "id": "273fbf9",
+                          "id": "c1cac5a",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -13616,7 +13678,7 @@
                   ]
                 },
                 {
-                  "id": "36e9368",
+                  "id": "f6ac3de",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -13651,7 +13713,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9d8d535",
+                      "id": "36e9368",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -13707,7 +13769,7 @@
                       "elements": []
                     },
                     {
-                      "id": "26eb6a4",
+                      "id": "9d8d535",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -13768,7 +13830,7 @@
                       },
                       "elements": [
                         {
-                          "id": "2aa88c8",
+                          "id": "e677821",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -13794,7 +13856,7 @@
                           },
                           "elements": [
                             {
-                              "id": "42c32fe",
+                              "id": "9865e64",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -13821,7 +13883,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "865f270",
+                                  "id": "6640cf4",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -13860,7 +13922,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "6640cf4",
+                                  "id": "42c32fe",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -13920,7 +13982,7 @@
                               ]
                             },
                             {
-                              "id": "9865e64",
+                              "id": "5571fd9",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -13956,7 +14018,7 @@
                               "elements": []
                             },
                             {
-                              "id": "5571fd9",
+                              "id": "2aa88c8",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -13993,7 +14055,7 @@
                           ]
                         },
                         {
-                          "id": "e677821",
+                          "id": "b9172ba",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -14045,7 +14107,7 @@
                           "elements": []
                         },
                         {
-                          "id": "b9172ba",
+                          "id": "26eb6a4",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -14087,7 +14149,7 @@
                   ]
                 },
                 {
-                  "id": "99104a0",
+                  "id": "2df5336",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -14122,7 +14184,7 @@
                   },
                   "elements": [
                     {
-                      "id": "73da531",
+                      "id": "99104a0",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -14178,7 +14240,7 @@
                       "elements": []
                     },
                     {
-                      "id": "f617828",
+                      "id": "73da531",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -14239,7 +14301,7 @@
                       },
                       "elements": [
                         {
-                          "id": "272565f",
+                          "id": "2830c74",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -14265,7 +14327,7 @@
                           },
                           "elements": [
                             {
-                              "id": "2e29066",
+                              "id": "91faa33",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -14292,7 +14354,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "f6ac3de",
+                                  "id": "0ece113",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -14331,7 +14393,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "0ece113",
+                                  "id": "2e29066",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -14391,7 +14453,7 @@
                               ]
                             },
                             {
-                              "id": "91faa33",
+                              "id": "61a27ae",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -14427,7 +14489,7 @@
                               "elements": []
                             },
                             {
-                              "id": "61a27ae",
+                              "id": "272565f",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -14464,7 +14526,7 @@
                           ]
                         },
                         {
-                          "id": "2830c74",
+                          "id": "0421eff",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -14516,7 +14578,7 @@
                           "elements": []
                         },
                         {
-                          "id": "0421eff",
+                          "id": "f617828",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -14558,7 +14620,7 @@
                   ]
                 },
                 {
-                  "id": "8035b8d",
+                  "id": "74f76bb",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -14593,7 +14655,7 @@
                   },
                   "elements": [
                     {
-                      "id": "bc0e7e3",
+                      "id": "8035b8d",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -14649,7 +14711,7 @@
                       "elements": []
                     },
                     {
-                      "id": "7596c2d",
+                      "id": "bc0e7e3",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -14710,7 +14772,7 @@
                       },
                       "elements": [
                         {
-                          "id": "e728e5e",
+                          "id": "6c7fd16",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -14736,7 +14798,7 @@
                           },
                           "elements": [
                             {
-                              "id": "535f9f2",
+                              "id": "03bbe47",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -14763,7 +14825,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "2df5336",
+                                  "id": "3e096a4",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -14802,7 +14864,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "3e096a4",
+                                  "id": "535f9f2",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -14862,7 +14924,7 @@
                               ]
                             },
                             {
-                              "id": "03bbe47",
+                              "id": "9f03755",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -14898,7 +14960,7 @@
                               "elements": []
                             },
                             {
-                              "id": "9f03755",
+                              "id": "e728e5e",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -14935,7 +14997,7 @@
                           ]
                         },
                         {
-                          "id": "6c7fd16",
+                          "id": "87e098d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -14987,7 +15049,7 @@
                           "elements": []
                         },
                         {
-                          "id": "87e098d",
+                          "id": "7596c2d",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -15029,7 +15091,7 @@
                   ]
                 },
                 {
-                  "id": "d1faa07",
+                  "id": "3cbad08",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -15064,7 +15126,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4c24216",
+                      "id": "d1faa07",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -15120,7 +15182,7 @@
                       "elements": []
                     },
                     {
-                      "id": "58d73e4",
+                      "id": "4c24216",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -15181,7 +15243,7 @@
                       },
                       "elements": [
                         {
-                          "id": "88ad05b",
+                          "id": "082aeaf",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -15207,7 +15269,7 @@
                           },
                           "elements": [
                             {
-                              "id": "c091df3",
+                              "id": "27a72e0",
                               "elType": "container",
                               "isInner": true,
                               "settings": {
@@ -15234,7 +15296,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "74f76bb",
+                                  "id": "7e4b5ab",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -15273,7 +15335,7 @@
                                   "elements": []
                                 },
                                 {
-                                  "id": "7e4b5ab",
+                                  "id": "c091df3",
                                   "elType": "widget",
                                   "isInner": false,
                                   "widgetType": "heading",
@@ -15333,7 +15395,7 @@
                               ]
                             },
                             {
-                              "id": "27a72e0",
+                              "id": "6ca087f",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -15369,7 +15431,7 @@
                               "elements": []
                             },
                             {
-                              "id": "6ca087f",
+                              "id": "88ad05b",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "text-editor",
@@ -15406,7 +15468,7 @@
                           ]
                         },
                         {
-                          "id": "082aeaf",
+                          "id": "d470b58",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -15458,7 +15520,7 @@
                           "elements": []
                         },
                         {
-                          "id": "d470b58",
+                          "id": "58d73e4",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "heading",
@@ -15506,7 +15568,7 @@
       ]
     },
     {
-      "id": "194919f",
+      "id": "01004e1",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -15574,7 +15636,7 @@
       },
       "elements": [
         {
-          "id": "8bcf182",
+          "id": "eff54dd",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -15602,7 +15664,7 @@
           },
           "elements": [
             {
-              "id": "1a32a73",
+              "id": "6dbe53f",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -15639,7 +15701,7 @@
               "elements": []
             },
             {
-              "id": "6dbe53f",
+              "id": "8a1fc95",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -15684,7 +15746,7 @@
               "elements": []
             },
             {
-              "id": "8a1fc95",
+              "id": "8bcf182",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -15720,7 +15782,7 @@
           ]
         },
         {
-          "id": "72f868b",
+          "id": "194919f",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -15748,7 +15810,7 @@
           },
           "elements": [
             {
-              "id": "b7b7335",
+              "id": "68edf52",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -15850,7 +15912,7 @@
               },
               "elements": [
                 {
-                  "id": "eff54dd",
+                  "id": "b7b7335",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -15975,7 +16037,7 @@
               ]
             },
             {
-              "id": "20ebfc8",
+              "id": "72f868b",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -16015,7 +16077,7 @@
               },
               "elements": [
                 {
-                  "id": "e383bbe",
+                  "id": "8586e47",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -16041,7 +16103,7 @@
                   },
                   "elements": [
                     {
-                      "id": "5937306",
+                      "id": "a98c705",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16109,7 +16171,7 @@
                       },
                       "elements": [
                         {
-                          "id": "a3d09f0",
+                          "id": "5937306",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16145,7 +16207,7 @@
                       ]
                     },
                     {
-                      "id": "f35842c",
+                      "id": "1b346c6",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16213,7 +16275,7 @@
                       },
                       "elements": [
                         {
-                          "id": "a98c705",
+                          "id": "f35842c",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16249,7 +16311,7 @@
                       ]
                     },
                     {
-                      "id": "93018a4",
+                      "id": "98f2d43",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16317,7 +16379,7 @@
                       },
                       "elements": [
                         {
-                          "id": "1b346c6",
+                          "id": "93018a4",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16353,7 +16415,7 @@
                       ]
                     },
                     {
-                      "id": "e589ae8",
+                      "id": "f576765",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16421,7 +16483,7 @@
                       },
                       "elements": [
                         {
-                          "id": "98f2d43",
+                          "id": "e589ae8",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16457,7 +16519,7 @@
                       ]
                     },
                     {
-                      "id": "ad77e3f",
+                      "id": "7df06b8",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16525,7 +16587,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f576765",
+                          "id": "ad77e3f",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16561,7 +16623,7 @@
                       ]
                     },
                     {
-                      "id": "6d9d04e",
+                      "id": "e383bbe",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16629,7 +16691,7 @@
                       },
                       "elements": [
                         {
-                          "id": "7df06b8",
+                          "id": "6d9d04e",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -16665,7 +16727,7 @@
                       ]
                     },
                     {
-                      "id": "ebcbcec",
+                      "id": "a3d09f0",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16714,7 +16776,7 @@
                       },
                       "elements": [
                         {
-                          "id": "68edf52",
+                          "id": "69867fd",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -16756,7 +16818,7 @@
                           "elements": []
                         },
                         {
-                          "id": "5405118",
+                          "id": "ebcbcec",
                           "elType": "container",
                           "isInner": true,
                           "settings": {
@@ -16781,7 +16843,7 @@
                           },
                           "elements": [
                             {
-                              "id": "69867fd",
+                              "id": "020a1bf",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -16812,7 +16874,7 @@
                               "elements": []
                             },
                             {
-                              "id": "020a1bf",
+                              "id": "5405118",
                               "elType": "widget",
                               "isInner": false,
                               "widgetType": "heading",
@@ -16855,7 +16917,7 @@
                   ]
                 },
                 {
-                  "id": "160035f",
+                  "id": "20ebfc8",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -16888,7 +16950,7 @@
                   },
                   "elements": [
                     {
-                      "id": "8586e47",
+                      "id": "bc1e187",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -16923,7 +16985,7 @@
                       "elements": []
                     },
                     {
-                      "id": "bf1c2ac",
+                      "id": "f0550fe",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -16980,7 +17042,7 @@
                       },
                       "elements": [
                         {
-                          "id": "bc1e187",
+                          "id": "bf1c2ac",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -17017,7 +17079,7 @@
                       ]
                     },
                     {
-                      "id": "fcff82e",
+                      "id": "d5c5476",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -17074,7 +17136,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f0550fe",
+                          "id": "fcff82e",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -17111,7 +17173,7 @@
                       ]
                     },
                     {
-                      "id": "d1cb075",
+                      "id": "160035f",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -17168,7 +17230,7 @@
                       },
                       "elements": [
                         {
-                          "id": "d5c5476",
+                          "id": "d1cb075",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -17213,7 +17275,7 @@
       ]
     },
     {
-      "id": "5fb08b5",
+      "id": "a8c5fa5",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -17293,7 +17355,7 @@
       },
       "elements": [
         {
-          "id": "4bced97",
+          "id": "ad0596f",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -17356,7 +17418,7 @@
           },
           "elements": [
             {
-              "id": "f1c6cef",
+              "id": "52b80ce",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -17440,7 +17502,7 @@
               },
               "elements": [
                 {
-                  "id": "01004e1",
+                  "id": "53b68bb",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17497,7 +17559,7 @@
                   "elements": []
                 },
                 {
-                  "id": "53b68bb",
+                  "id": "f27a6d3",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon",
@@ -17530,7 +17592,7 @@
                   "elements": []
                 },
                 {
-                  "id": "f27a6d3",
+                  "id": "f1c6cef",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17562,7 +17624,7 @@
               ]
             },
             {
-              "id": "2d9fa95",
+              "id": "4bced97",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -17588,7 +17650,7 @@
               },
               "elements": [
                 {
-                  "id": "52b80ce",
+                  "id": "1c32ea3",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17627,7 +17689,7 @@
                   "elements": []
                 },
                 {
-                  "id": "1c32ea3",
+                  "id": "fe08efa",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17675,7 +17737,7 @@
                   "elements": []
                 },
                 {
-                  "id": "fe08efa",
+                  "id": "ecb78c3",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -17712,7 +17774,7 @@
                   "elements": []
                 },
                 {
-                  "id": "ecb78c3",
+                  "id": "2d9fa95",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17754,7 +17816,7 @@
           ]
         },
         {
-          "id": "74ac297",
+          "id": "4930c73",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -17806,7 +17868,7 @@
           },
           "elements": [
             {
-              "id": "b0660bf",
+              "id": "dff65b5",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -17871,7 +17933,7 @@
               },
               "elements": [
                 {
-                  "id": "f41ec3c",
+                  "id": "b0660bf",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "image",
@@ -17899,7 +17961,7 @@
               ]
             },
             {
-              "id": "dff65b5",
+              "id": "74ac297",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -17948,7 +18010,7 @@
               },
               "elements": [
                 {
-                  "id": "3fdc862",
+                  "id": "b7e546b",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -17985,7 +18047,7 @@
                   "elements": []
                 },
                 {
-                  "id": "c5980b8",
+                  "id": "d5172a4",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -17993,7 +18055,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "b7e546b",
+                        "_id": "f979c8d",
                         "text": "Guia Prático em PDF: as 15 intercorrências em sinais, avaliação e conduta",
                         "selected_icon": {
                           "value": "fas fa-check-square",
@@ -18007,7 +18069,7 @@
                         }
                       },
                       {
-                        "_id": "f979c8d",
+                        "_id": "c5980b8",
                         "text": "Bônus: 2 aulas gravadas de aplicação clínica",
                         "selected_icon": {
                           "value": "fas fa-check-square",
@@ -18074,7 +18136,7 @@
                   "elements": []
                 },
                 {
-                  "id": "d5172a4",
+                  "id": "b929013",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -18113,7 +18175,7 @@
                   "elements": []
                 },
                 {
-                  "id": "cbafff2",
+                  "id": "3fdc862",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -18140,7 +18202,7 @@
                   },
                   "elements": [
                     {
-                      "id": "ad0596f",
+                      "id": "9683b8d",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -18180,7 +18242,7 @@
                       "elements": []
                     },
                     {
-                      "id": "9683b8d",
+                      "id": "f9f11eb",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "counter",
@@ -18221,7 +18283,7 @@
                       "elements": []
                     },
                     {
-                      "id": "f9f11eb",
+                      "id": "cbafff2",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -18263,7 +18325,7 @@
                   ]
                 },
                 {
-                  "id": "b929013",
+                  "id": "3f42a91",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -18297,7 +18359,7 @@
                   "elements": []
                 },
                 {
-                  "id": "3f42a91",
+                  "id": "576e8e4",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "button",
@@ -18420,7 +18482,7 @@
                   "elements": []
                 },
                 {
-                  "id": "cb5838c",
+                  "id": "f41ec3c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon-list",
@@ -18428,7 +18490,7 @@
                     "view": "traditional",
                     "icon_list": [
                       {
-                        "_id": "576e8e4",
+                        "_id": "cb5838c",
                         "text": "Compra segura · Material 100% digital · Pagamento único · Garantia de 7 dias",
                         "selected_icon": {
                           "value": "fas fa-lock",
@@ -18494,7 +18556,7 @@
           ]
         },
         {
-          "id": "0a2e213",
+          "id": "5fb08b5",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -18519,7 +18581,7 @@
           },
           "elements": [
             {
-              "id": "a5e651d",
+              "id": "0a2e213",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -18554,7 +18616,7 @@
               "elements": []
             },
             {
-              "id": "4109252",
+              "id": "a5e651d",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -18626,7 +18688,7 @@
               },
               "elements": [
                 {
-                  "id": "9924c9a",
+                  "id": "d924ef0",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -18677,7 +18739,7 @@
                   },
                   "elements": [
                     {
-                      "id": "4930c73",
+                      "id": "265d4bf",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -18707,7 +18769,7 @@
                       "elements": []
                     },
                     {
-                      "id": "265d4bf",
+                      "id": "9924c9a",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -18743,7 +18805,7 @@
                   ]
                 },
                 {
-                  "id": "07b3844",
+                  "id": "eaca82f",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -18795,7 +18857,7 @@
                   },
                   "elements": [
                     {
-                      "id": "d924ef0",
+                      "id": "2b6052e",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -18825,7 +18887,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2b6052e",
+                      "id": "07b3844",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -18861,7 +18923,7 @@
                   ]
                 },
                 {
-                  "id": "38855ff",
+                  "id": "134233b",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -18913,7 +18975,7 @@
                   },
                   "elements": [
                     {
-                      "id": "eaca82f",
+                      "id": "ce2f4e6",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -18943,7 +19005,7 @@
                       "elements": []
                     },
                     {
-                      "id": "ce2f4e6",
+                      "id": "38855ff",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -18979,7 +19041,7 @@
                   ]
                 },
                 {
-                  "id": "b5aa737",
+                  "id": "4109252",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -19031,7 +19093,7 @@
                   },
                   "elements": [
                     {
-                      "id": "134233b",
+                      "id": "4fe189f",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -19061,7 +19123,7 @@
                       "elements": []
                     },
                     {
-                      "id": "4fe189f",
+                      "id": "b5aa737",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "text-editor",
@@ -19103,7 +19165,7 @@
       ]
     },
     {
-      "id": "2e58d16",
+      "id": "8372f12",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -19177,7 +19239,7 @@
       },
       "elements": [
         {
-          "id": "a8c5fa5",
+          "id": "75c1d08",
           "elType": "widget",
           "isInner": false,
           "widgetType": "html",
@@ -19195,7 +19257,7 @@
           "elements": []
         },
         {
-          "id": "92a6e8b",
+          "id": "9c7ce2e",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -19264,7 +19326,7 @@
           },
           "elements": [
             {
-              "id": "fa35f1d",
+              "id": "35d4181",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -19308,7 +19370,7 @@
               },
               "elements": [
                 {
-                  "id": "75c1d08",
+                  "id": "fa35f1d",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "image",
@@ -19335,7 +19397,7 @@
               ]
             },
             {
-              "id": "93da21c",
+              "id": "92a6e8b",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -19361,7 +19423,7 @@
               },
               "elements": [
                 {
-                  "id": "35d4181",
+                  "id": "3a1d986",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -19398,7 +19460,7 @@
                   "elements": []
                 },
                 {
-                  "id": "3a1d986",
+                  "id": "8dbc01d",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -19443,7 +19505,7 @@
                   "elements": []
                 },
                 {
-                  "id": "8dbc01d",
+                  "id": "93da21c",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -19481,7 +19543,7 @@
           ]
         },
         {
-          "id": "c65f76f",
+          "id": "0978de3",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -19516,7 +19578,7 @@
           },
           "elements": [
             {
-              "id": "ec67dbf",
+              "id": "99cbc72",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -19563,7 +19625,7 @@
               },
               "elements": [
                 {
-                  "id": "f05fcee",
+                  "id": "ec67dbf",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "image",
@@ -19607,7 +19669,7 @@
                   "elements": []
                 },
                 {
-                  "id": "03452dd",
+                  "id": "f05fcee",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -19703,7 +19765,7 @@
                   },
                   "elements": [
                     {
-                      "id": "9c7ce2e",
+                      "id": "6abe912",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -19733,7 +19795,7 @@
                       "elements": []
                     },
                     {
-                      "id": "6abe912",
+                      "id": "03452dd",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -19767,7 +19829,7 @@
               ]
             },
             {
-              "id": "8237334",
+              "id": "c65f76f",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -19793,7 +19855,7 @@
               },
               "elements": [
                 {
-                  "id": "99cbc72",
+                  "id": "deb8df0",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -19830,7 +19892,7 @@
                   "elements": []
                 },
                 {
-                  "id": "deb8df0",
+                  "id": "add1083",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -19875,7 +19937,7 @@
                   "elements": []
                 },
                 {
-                  "id": "add1083",
+                  "id": "8237334",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -19913,7 +19975,7 @@
           ]
         },
         {
-          "id": "b2bdab8",
+          "id": "2e58d16",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -19948,7 +20010,7 @@
           },
           "elements": [
             {
-              "id": "b1bf57a",
+              "id": "92af287",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -19991,7 +20053,7 @@
               },
               "elements": [
                 {
-                  "id": "22467af",
+                  "id": "8e520d5",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -20028,7 +20090,7 @@
                   "elements": []
                 },
                 {
-                  "id": "8e520d5",
+                  "id": "b1bf57a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -20075,7 +20137,7 @@
               ]
             },
             {
-              "id": "92af287",
+              "id": "b2bdab8",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -20104,7 +20166,7 @@
               },
               "elements": [
                 {
-                  "id": "7eabe0e",
+                  "id": "da6bac1",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "nested-accordion",
@@ -20112,35 +20174,35 @@
                     "items": [
                       {
                         "item_title": "Já tenho o planejamento do laboratório. Por que preciso do guia?",
-                        "_id": "0978de3"
-                      },
-                      {
-                        "item_title": "Serve para qualquer marca de alinhador?",
                         "_id": "d7118d5"
                       },
                       {
-                        "item_title": "Serve para quem está começando com alinhadores?",
+                        "item_title": "Serve para qualquer marca de alinhador?",
                         "_id": "b737d25"
                       },
                       {
-                        "item_title": "Em que formato recebo o guia?",
+                        "item_title": "Serve para quem está começando com alinhadores?",
                         "_id": "57ba6f2"
                       },
                       {
-                        "item_title": "Como funcionam as 2 aulas bônus?",
+                        "item_title": "Em que formato recebo o guia?",
                         "_id": "fef2944"
                       },
                       {
-                        "item_title": "O pagamento é único ou é assinatura?",
+                        "item_title": "Como funcionam as 2 aulas bônus?",
                         "_id": "6084a2f"
                       },
                       {
-                        "item_title": "Como funciona a garantia?",
+                        "item_title": "O pagamento é único ou é assinatura?",
                         "_id": "a25b808"
                       },
                       {
-                        "item_title": "Como recebo o acesso?",
+                        "item_title": "Como funciona a garantia?",
                         "_id": "759acc2"
+                      },
+                      {
+                        "item_title": "Como recebo o acesso?",
+                        "_id": "7eabe0e"
                       }
                     ],
                     "title_tag": "h3",
@@ -20286,7 +20348,7 @@
                   },
                   "elements": [
                     {
-                      "id": "84f920c",
+                      "id": "405118d",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20319,7 +20381,7 @@
                       },
                       "elements": [
                         {
-                          "id": "da6bac1",
+                          "id": "84f920c",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20355,7 +20417,7 @@
                       ]
                     },
                     {
-                      "id": "52a1bc6",
+                      "id": "f11a670",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20388,7 +20450,7 @@
                       },
                       "elements": [
                         {
-                          "id": "405118d",
+                          "id": "52a1bc6",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20424,7 +20486,7 @@
                       ]
                     },
                     {
-                      "id": "11ab2d6",
+                      "id": "358482b",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20457,7 +20519,7 @@
                       },
                       "elements": [
                         {
-                          "id": "f11a670",
+                          "id": "11ab2d6",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20493,7 +20555,7 @@
                       ]
                     },
                     {
-                      "id": "04cbb43",
+                      "id": "b9391fc",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20526,7 +20588,7 @@
                       },
                       "elements": [
                         {
-                          "id": "358482b",
+                          "id": "04cbb43",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20562,7 +20624,7 @@
                       ]
                     },
                     {
-                      "id": "15f2e43",
+                      "id": "3e34a4d",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20595,7 +20657,7 @@
                       },
                       "elements": [
                         {
-                          "id": "b9391fc",
+                          "id": "15f2e43",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20631,7 +20693,7 @@
                       ]
                     },
                     {
-                      "id": "0f92756",
+                      "id": "0a1f96a",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20664,7 +20726,7 @@
                       },
                       "elements": [
                         {
-                          "id": "3e34a4d",
+                          "id": "0f92756",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20700,7 +20762,7 @@
                       ]
                     },
                     {
-                      "id": "03dd55a",
+                      "id": "8b9b6e2",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20733,7 +20795,7 @@
                       },
                       "elements": [
                         {
-                          "id": "0a1f96a",
+                          "id": "03dd55a",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20769,7 +20831,7 @@
                       ]
                     },
                     {
-                      "id": "86079d3",
+                      "id": "22467af",
                       "elType": "container",
                       "isInner": true,
                       "settings": {
@@ -20802,7 +20864,7 @@
                       },
                       "elements": [
                         {
-                          "id": "8b9b6e2",
+                          "id": "86079d3",
                           "elType": "widget",
                           "isInner": false,
                           "widgetType": "text-editor",
@@ -20846,7 +20908,7 @@
       ]
     },
     {
-      "id": "1e3bdc2",
+      "id": "38ef3ce",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -20918,7 +20980,7 @@
       },
       "elements": [
         {
-          "id": "fd5ee52",
+          "id": "1e3bdc2",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -20945,7 +21007,7 @@
           "elements": []
         },
         {
-          "id": "30cca24",
+          "id": "fd5ee52",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -20976,7 +21038,7 @@
           },
           "elements": [
             {
-              "id": "8372f12",
+              "id": "dfee5e6",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -21024,7 +21086,7 @@
               "elements": []
             },
             {
-              "id": "dfee5e6",
+              "id": "e70ceb2",
               "elType": "widget",
               "isInner": false,
               "widgetType": "text-editor",
@@ -21061,7 +21123,7 @@
               "elements": []
             },
             {
-              "id": "e70ceb2",
+              "id": "b5701fe",
               "elType": "widget",
               "isInner": false,
               "widgetType": "button",
@@ -21195,7 +21257,7 @@
               "elements": []
             },
             {
-              "id": "98cfa65",
+              "id": "30cca24",
               "elType": "widget",
               "isInner": false,
               "widgetType": "icon-list",
@@ -21203,7 +21265,7 @@
                 "view": "traditional",
                 "icon_list": [
                   {
-                    "_id": "b5701fe",
+                    "_id": "98cfa65",
                     "text": "R$ 27 · Pagamento único · Acesso imediato · Garantia de 7 dias",
                     "selected_icon": {
                       "value": "fas fa-lock",
@@ -21273,7 +21335,7 @@
       ]
     },
     {
-      "id": "f43c9fc",
+      "id": "33ff8be",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -21326,7 +21388,7 @@
       },
       "elements": [
         {
-          "id": "8a137f9",
+          "id": "4f10d3e",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -21355,7 +21417,7 @@
           },
           "elements": [
             {
-              "id": "c36445d",
+              "id": "8a137f9",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -21392,7 +21454,7 @@
               },
               "elements": [
                 {
-                  "id": "b4e0fae",
+                  "id": "0ba038a",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "icon",
@@ -21426,7 +21488,7 @@
                   "elements": []
                 },
                 {
-                  "id": "548cdaa",
+                  "id": "c36445d",
                   "elType": "container",
                   "isInner": true,
                   "settings": {
@@ -21450,7 +21512,7 @@
                   },
                   "elements": [
                     {
-                      "id": "0ba038a",
+                      "id": "2d7c751",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -21486,7 +21548,7 @@
                       "elements": []
                     },
                     {
-                      "id": "2d7c751",
+                      "id": "6178715",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -21516,7 +21578,7 @@
                       "elements": []
                     },
                     {
-                      "id": "6178715",
+                      "id": "548cdaa",
                       "elType": "widget",
                       "isInner": false,
                       "widgetType": "heading",
@@ -21555,7 +21617,7 @@
               ]
             },
             {
-              "id": "ec925d4",
+              "id": "b4e0fae",
               "elType": "container",
               "isInner": true,
               "settings": {
@@ -21595,7 +21657,7 @@
               },
               "elements": [
                 {
-                  "id": "38ef3ce",
+                  "id": "e115962",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
@@ -21625,7 +21687,7 @@
                   "elements": []
                 },
                 {
-                  "id": "e115962",
+                  "id": "198a2de",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -21659,7 +21721,7 @@
                   "elements": []
                 },
                 {
-                  "id": "198a2de",
+                  "id": "ec925d4",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "text-editor",
@@ -21697,7 +21759,7 @@
           ]
         },
         {
-          "id": "4f10d3e",
+          "id": "ff88d86",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -21737,7 +21799,7 @@
           "elements": []
         },
         {
-          "id": "5ced114",
+          "id": "f43c9fc",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -21765,7 +21827,7 @@
           },
           "elements": [
             {
-              "id": "0f1cd6e",
+              "id": "43b4991",
               "elType": "widget",
               "isInner": false,
               "widgetType": "icon-list",
@@ -21773,7 +21835,7 @@
                 "view": "inline",
                 "icon_list": [
                   {
-                    "_id": "ff88d86",
+                    "_id": "b6184f6",
                     "text": "Termos de uso",
                     "selected_icon": {
                       "value": "",
@@ -21787,7 +21849,7 @@
                     }
                   },
                   {
-                    "_id": "b6184f6",
+                    "_id": "22416f2",
                     "text": "Política de privacidade",
                     "selected_icon": {
                       "value": "",
@@ -21801,7 +21863,7 @@
                     }
                   },
                   {
-                    "_id": "22416f2",
+                    "_id": "0f1cd6e",
                     "text": "Contato",
                     "selected_icon": {
                       "value": "",
@@ -21861,7 +21923,7 @@
               "elements": []
             },
             {
-              "id": "43b4991",
+              "id": "5ced114",
               "elType": "widget",
               "isInner": false,
               "widgetType": "heading",
@@ -21897,7 +21959,7 @@
       ]
     },
     {
-      "id": "1e07b7a",
+      "id": "f0310a1",
       "elType": "container",
       "isInner": false,
       "settings": {
@@ -21959,7 +22021,7 @@
       },
       "elements": [
         {
-          "id": "33ff8be",
+          "id": "1ad4694",
           "elType": "widget",
           "isInner": false,
           "widgetType": "heading",
@@ -21991,7 +22053,7 @@
           "elements": []
         },
         {
-          "id": "1ad4694",
+          "id": "1e07b7a",
           "elType": "widget",
           "isInner": false,
           "widgetType": "button",
