@@ -485,7 +485,7 @@ def laptop():
                border_radius=dims(2, 2, 16, 16), **grad("#E3E9EF", "#9AA7B4", 180), css_classes="lp-base",
                box_shadow_box_shadow_type="yes",
                box_shadow_box_shadow=shadow(0, 30, 50, -18, "rgba(11, 45, 74, 0.45)"))
-    caption = body("<p>Role a página: o guia abre como no seu computador, pronto para consultar na cadeira.</p>",
+    caption = body("<p>O guia abre como no seu computador, pronto para consultar na cadeira.</p>",
                    INK, 14, "center", weight=500)
     return col([code, lid, base, setv(caption, _margin=dims(18, 0, 0, 0))], 0, "Notebook (abre no scroll)",
                flex_align_items="center", content_width="boxed", boxed_width=px(920), css_classes="lp-laptop")
@@ -1041,6 +1041,10 @@ def fix_rows(el):
                 cs["_flex_size"] = "none"
             elif "_flex_size" not in cs:
                 cs["_flex_size"] = "shrink"
+    # O controle de largura do container tem padrão 100% no celular: sem width_mobile, uma largura fixa
+    # (bolinhas da janela, anel do medidor, setas, selos) vira 100% no celular.
+    if el["elType"] == "container" and s.get("width") and "width_mobile" not in s:
+        s["width_mobile"] = dict(s.get("width_tablet") or s["width"])
     for ch in el["elements"]:
         fix_rows(ch)
     return el

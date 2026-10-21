@@ -145,7 +145,12 @@
                   "size": 100,
                   "sizes": []
                 },
-                "_title": "Texto"
+                "_title": "Texto",
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                }
               },
               "elements": [
                 {
@@ -441,7 +446,12 @@
                   "size": 100,
                   "sizes": []
                 },
-                "_title": "Método"
+                "_title": "Método",
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                }
               },
               "elements": [
                 {
@@ -761,7 +771,12 @@
                     },
                     "css_classes": "lp-arrow lp-io",
                     "_flex_size": "none",
-                    "_title": "Seta (desenha)"
+                    "_title": "Seta (desenha)",
+                    "width_mobile": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    }
                   },
                   "elements": []
                 },
@@ -1049,7 +1064,12 @@
                     },
                     "css_classes": "lp-arrow lp-io",
                     "_flex_size": "none",
-                    "_title": "Seta (desenha)"
+                    "_title": "Seta (desenha)",
+                    "width_mobile": {
+                      "unit": "px",
+                      "size": 48,
+                      "sizes": []
+                    }
                   },
                   "elements": []
                 },
@@ -1345,7 +1365,7 @@
               "isInner": false,
               "widgetType": "html",
               "settings": {
-                "html": "<style>\n/* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende\n   (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */\n.lp-laptop, .lp-laptop > .e-con-inner { perspective: 2200px; perspective-origin: 50% -30%; }\n.lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }\n.lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;\n  transform-style: preserve-3d; transform: rotateX(var(--lid)); will-change: transform; background: transparent !important; }\n.lp-lid-front, .lp-lid-back { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%;\n  backface-visibility: hidden; -webkit-backface-visibility: hidden; }\n.lp-lid-back { transform: rotateX(180deg); }\n.lp-screen { width: 100% !important; height: 100%; }\n.lp-screen-content { opacity: var(--lit); transition: opacity .2s linear; flex: 1 1 auto; min-height: 0; overflow: hidden; }\n.lp-screen-page img { transform: translateY(var(--scroll)); will-change: transform; }\n.lp-base { width: 100% !important; }\n@media (max-width: 767px) { .lp-lid { width: 92% !important; } }\n@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }\n</style>\n<script>\n/* Notebook da seção 04: abre conforme o scroll (GSAP ScrollTrigger se estiver na página; senão,\n   cálculo próprio no scroll). No editor do Elementor e com movimento reduzido, fica aberto. */\n(function () {\n  if (window.__lpLaptop) return;\n  window.__lpLaptop = true;\n\n  function init() {\n    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n    var edit = document.body.classList.contains('elementor-editor-active');\n    Array.prototype.forEach.call(document.querySelectorAll('.lp-laptop'), function (el) {\n      var lid = el.querySelector('.lp-lid');\n      if (!lid) return;\n      var set = function (p) {\n        p = Math.min(1, Math.max(0, p));\n        var e = 1 - Math.pow(1 - p, 3);\n        el.style.setProperty('--lid', (-100 + 100 * e).toFixed(2) + 'deg');\n        el.style.setProperty('--lit', Math.max(0, (p - 0.45) / 0.55).toFixed(3));\n        el.style.setProperty('--scroll', (-22 * Math.max(0, (p - 0.6) / 0.4)).toFixed(2) + '%');\n      };\n      if (reduce || edit) { set(1); return; }\n      set(0);\n      if (window.gsap && window.ScrollTrigger) {\n        gsap.registerPlugin(ScrollTrigger);\n        ScrollTrigger.create({ trigger: el, start: 'top 90%', end: 'center 45%', onUpdate: function (st) { set(st.progress); } });\n        return;\n      }\n      var tick = false;\n      var calc = function () {\n        tick = false;\n        var r = el.getBoundingClientRect(), vh = window.innerHeight;\n        var start = vh * 0.9, end = vh * 0.45 - r.height / 2;\n        set((start - r.top) / Math.max(1, start - end));\n      };\n      window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(calc); } }, { passive: true });\n      window.addEventListener('resize', calc);\n      calc();\n    });\n  }\n\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+                "html": "<style>\n/* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende\n   (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */\n.lp-laptop, .lp-laptop > .e-con-inner { perspective: 1800px; perspective-origin: 50% 35%; }\n.lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }\n.lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;\n  transform-style: preserve-3d; transform: rotateX(var(--lid)); will-change: transform; background: transparent !important; }\n.lp-lid-front, .lp-lid-back { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%;\n  backface-visibility: hidden; -webkit-backface-visibility: hidden; }\n.lp-lid-back { transform: rotateX(180deg); }\n.lp-screen { width: 100% !important; height: 100%; }\n.lp-screen-content { opacity: var(--lit); transition: opacity .2s linear; flex: 1 1 auto; min-height: 0; overflow: hidden; }\n.lp-screen-page img { transform: translateY(var(--scroll)); will-change: transform; }\n.lp-base { width: 100% !important; }\n@media (max-width: 767px) { .lp-lid { width: 92% !important; } }\n@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }\n</style>\n<script>\n/* Notebook da seção 04: a tela \"trava\" (pin) e o notebook abre aos poucos conforme o scroll.\n   Etapas: a tampa sobe (0–55%), a tela acende (45–70%) e a página rola no leitor (70–100%).\n   Com GSAP + ScrollTrigger usa pin + scrub (também no celular); sem GSAP, abre sem travar.\n   No editor do Elementor e com movimento reduzido, fica aberto. */\n(function () {\n  if (window.__lpLaptop) return;\n  window.__lpLaptop = true;\n  var clamp = function (v) { return Math.min(1, Math.max(0, v)); };\n\n  function setup(el) {\n    if (el.dataset.lpLaptop) return;\n    el.dataset.lpLaptop = '1';\n    var set = function (p) {\n      p = clamp(p);\n      var a = clamp(p / 0.55), e = 1 - Math.pow(1 - a, 3);\n      el.style.setProperty('--lid', (-80 + 80 * e).toFixed(2) + 'deg');\n      el.style.setProperty('--lit', clamp((p - 0.45) / 0.25).toFixed(3));\n      el.style.setProperty('--scroll', (-26 * clamp((p - 0.7) / 0.3)).toFixed(2) + '%');\n    };\n    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n    var edit = document.body.classList.contains('elementor-editor-active');\n    if (reduce || edit) { set(1); return; }\n    set(0);\n    if (window.gsap && window.ScrollTrigger) {\n      gsap.registerPlugin(ScrollTrigger);\n      ScrollTrigger.config({ ignoreMobileResize: true });\n      var state = { p: 0 };\n      gsap.to(state, {\n        p: 1, ease: 'none', onUpdate: function () { set(state.p); },\n        // Trava a seção inteira (não o notebook): o pai do notebook é flex e o espaçador do pin não\n        // empurraria a próxima seção. A trava começa quando o notebook chega ao meio da tela.\n        scrollTrigger: { trigger: el, start: 'center center', end: '+=160%', pin: el.closest('.lp-apres') || el,\n                         scrub: 0.8, anticipatePin: 1, invalidateOnRefresh: true }\n      });\n      window.addEventListener('load', function () { ScrollTrigger.refresh(); });\n      return;\n    }\n    var tick = false;\n    var calc = function () {\n      tick = false;\n      var r = el.getBoundingClientRect(), vh = window.innerHeight;\n      var start = vh * 0.9, end = vh * 0.45 - r.height / 2;\n      set((start - r.top) / Math.max(1, start - end));\n    };\n    window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(calc); } }, { passive: true });\n    window.addEventListener('resize', calc);\n    calc();\n  }\n\n  function init() { Array.prototype.forEach.call(document.querySelectorAll('.lp-laptop'), setup); }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
                 "_title": "Notebook · estilos e animação (não apagar)",
                 "_position": "absolute",
                 "_element_width": "initial",
@@ -1586,7 +1606,12 @@
                                   "sizes": []
                                 },
                                 "_flex_size": "none",
-                                "_title": "Botões da janela"
+                                "_title": "Botões da janela",
+                                "width_mobile": {
+                                  "unit": "px",
+                                  "size": 44,
+                                  "sizes": []
+                                }
                               },
                               "elements": [
                                 {
@@ -1634,6 +1659,11 @@
                                     "_title": "Ponto",
                                     "__globals__": {
                                       "background_color": ""
+                                    },
+                                    "width_mobile": {
+                                      "unit": "px",
+                                      "size": 8,
+                                      "sizes": []
                                     }
                                   },
                                   "elements": []
@@ -1683,6 +1713,11 @@
                                     "_title": "Ponto",
                                     "__globals__": {
                                       "background_color": ""
+                                    },
+                                    "width_mobile": {
+                                      "unit": "px",
+                                      "size": 8,
+                                      "sizes": []
                                     }
                                   },
                                   "elements": []
@@ -1732,6 +1767,11 @@
                                     "_title": "Ponto",
                                     "__globals__": {
                                       "background_color": ""
+                                    },
+                                    "width_mobile": {
+                                      "unit": "px",
+                                      "size": 8,
+                                      "sizes": []
                                     }
                                   },
                                   "elements": []
@@ -2116,6 +2156,11 @@
                     "_title": "Entalhe",
                     "__globals__": {
                       "background_color": ""
+                    },
+                    "width_mobile": {
+                      "unit": "%",
+                      "size": 16,
+                      "sizes": []
                     }
                   },
                   "elements": []
@@ -2128,7 +2173,7 @@
               "isInner": false,
               "widgetType": "text-editor",
               "settings": {
-                "editor": "<p>Role a página: o guia abre como no seu computador, pronto para consultar na cadeira.</p>",
+                "editor": "<p>O guia abre como no seu computador, pronto para consultar na cadeira.</p>",
                 "align": "center",
                 "text_color": "#4A5F73",
                 "typography_typography": "custom",

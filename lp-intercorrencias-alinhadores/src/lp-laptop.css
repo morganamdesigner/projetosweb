@@ -1,6 +1,6 @@
 /* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende
    (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */
-.lp-laptop, .lp-laptop > .e-con-inner { perspective: 2200px; perspective-origin: 50% -30%; }
+.lp-laptop, .lp-laptop > .e-con-inner { perspective: 1800px; perspective-origin: 50% 35%; }
 .lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }
 .lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;
   transform-style: preserve-3d; transform: rotateX(var(--lid)); will-change: transform; background: transparent !important; }
