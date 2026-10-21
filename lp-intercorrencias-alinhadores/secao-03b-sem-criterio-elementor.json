@@ -1,0 +1,443 @@
+{
+  "content": [
+    {
+      "id": "a38d42a",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "80",
+          "right": "24",
+          "bottom": "80",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "96",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "64",
+          "right": "16",
+          "bottom": "64",
+          "left": "16",
+          "isLinked": false
+        },
+        "css_classes": "lp lp-crit",
+        "min_height": {
+          "unit": "vh",
+          "size": 100,
+          "sizes": []
+        },
+        "flex_justify_content": "center",
+        "flex_align_items": "center",
+        "background_background": "gradient",
+        "background_color": "#13DDE8",
+        "background_color_stop": {
+          "unit": "%",
+          "size": 0,
+          "sizes": []
+        },
+        "background_color_b": "#00B3C9",
+        "background_color_b_stop": {
+          "unit": "%",
+          "size": 100,
+          "sizes": []
+        },
+        "background_gradient_type": "linear",
+        "background_gradient_angle": {
+          "unit": "deg",
+          "size": 160,
+          "sizes": []
+        },
+        "_title": "03b · Sem critério (frase presa no scroll)",
+        "__globals__": {
+          "background_color": "",
+          "background_color_b": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "cf89c27",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "settings": {
+            "html": "<style>\n/* 03b · \"Sem critério, a consulta vira improviso:\" — fundo turquesa, seção presa na tela.\n   A palavra começa grande e desfocada e entra em foco com o scroll; no fim, tudo desfoca e o fundo\n   escurece até a cor da seção seguinte, para a passagem não ter corte. */\nhtml, html.lenis { scroll-behavior: auto !important; }\nhtml.lenis, html.lenis body { height: auto; }\n.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }\n.lenis.lenis-stopped { overflow: hidden; }\n\n.lp-crit { position: relative; overflow: hidden; isolation: isolate; }\n.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;\n  background-image: radial-gradient(rgba(1, 19, 36, .16) 1.4px, transparent 1.6px);\n  background-size: 26px 26px;\n  -webkit-mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%);\n  mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%); }\n.lp-crit-fade { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 3; pointer-events: none;\n  background: #0A1D31; opacity: 0; }\n.lp-crit-content { position: relative; z-index: 2; will-change: transform, filter, opacity; }\n.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }\n.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }\n.lp-crit-hint .elementor-icon-list-item { justify-content: center; }\n.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: \"\"; width: 48px; height: 1px; background: currentColor; }\n.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter; }\n.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }\n.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }\n\n@media (prefers-reduced-motion: reduce) { .lp-crit-fade { display: none; } }\n</style>\n<script>\n/* 03b · Sem critério: seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,\n   sincronizada com o ScrollTrigger, para as passagens entre seções ficarem fluidas.\n   Carrega GSAP/ScrollTrigger/Lenis do CDN se ainda não estiverem na página. */\n(function () {\n  if (window.__lpCrit) return;\n  window.__lpCrit = true;\n\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    st: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  function load(src, ok) {\n    var s = document.createElement('script');\n    s.src = src; s.onload = ok; s.onerror = ok;\n    document.head.appendChild(s);\n  }\n  function need(cb) {\n    var steps = [];\n    if (!window.gsap) steps.push(CDN.gsap);\n    if (!window.ScrollTrigger) steps.push(CDN.st);\n    if (!window.Lenis) steps.push(CDN.lenis);\n    (function next() { if (!steps.length) return cb(); load(steps.shift(), next); })();\n  }\n\n  var edit = function () { return document.body.classList.contains('elementor-editor-active'); };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  function smoothScroll() {\n    if (window.__lpLenis || !window.Lenis || reduce || edit()) return;\n    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return; // só desktop\n    var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });\n    window.__lpLenis = lenis;\n    lenis.on('scroll', ScrollTrigger.update);\n    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });\n    gsap.ticker.lagSmoothing(0);\n    // Links de âncora (#oferta, #por-dentro) com a mesma rolagem suave.\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n\n  function section(sec) {\n    var $ = function (s) { return sec.querySelector(s); };\n    var content = $('.lp-crit-content'), over = $('.lp-crit-over'), l1 = $('.lp-crit-l1'), word = $('.lp-crit-word');\n    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex'), fade = $('.lp-crit-fade');\n    if (!content || !word) return;\n    var title = word.querySelector('.elementor-heading-title') || word;\n    var mobile = window.matchMedia('(max-width: 767px)').matches;\n\n    gsap.set([over, l1].filter(Boolean), { autoAlpha: 0, y: 34, filter: 'blur(8px)' });\n    gsap.set(title, { scale: mobile ? 1.18 : 1.3, filter: 'blur(' + (mobile ? 14 : 22) + 'px)', autoAlpha: 0.25 });\n    if (path) gsap.set(path, { '--draw': 1 });\n    if (hint) gsap.set(hint, { autoAlpha: 0, y: 10 });\n\n    var tl = gsap.timeline({\n      defaults: { ease: 'none' },\n      scrollTrigger: {\n        trigger: sec, start: 'top top', end: mobile ? '+=140%' : '+=190%',\n        pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true\n      }\n    });\n    tl.to([over, l1].filter(Boolean), { autoAlpha: 1, y: 0, filter: 'blur(0px)', stagger: 0.06, duration: 0.22, ease: 'power2.out' })\n      .to(title, { scale: 1, filter: 'blur(0px)', autoAlpha: 1, duration: 0.42, ease: 'power2.out' }, '<0.05');\n    if (path) tl.to(path, { '--draw': 0, duration: 0.22 }, '>-0.08');\n    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.08 }, '>-0.05');\n    tl.to({}, { duration: 0.14 }) // segura a frase nítida por um instante\n      .to(content, { scale: 0.92, y: -30, autoAlpha: 0, filter: 'blur(10px)', duration: 0.26, ease: 'power1.in' })\n      .to(fade, { opacity: 1, duration: 0.26, ease: 'power1.in' }, '<0.04');\n    if (hex) tl.fromTo(hex, { y: 30 }, { y: -50, duration: tl.duration() }, 0);\n  }\n\n  function init() {\n    var secs = document.querySelectorAll('.lp-crit');\n    if (!secs.length) return;\n    if (reduce || edit()) return; // conteúdo fica visível e parado\n    need(function () {\n      if (!window.gsap || !window.ScrollTrigger) return;\n      gsap.registerPlugin(ScrollTrigger);\n      ScrollTrigger.config({ ignoreMobileResize: true });\n      smoothScroll();\n      Array.prototype.forEach.call(secs, section);\n      var refresh = function () { ScrollTrigger.refresh(); };\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);\n      window.addEventListener('load', refresh);\n    });\n  }\n\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+            "_title": "Sem critério · estilos e animação (não apagar)",
+            "_position": "absolute",
+            "_element_width": "initial",
+            "_element_custom_width": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "bf6ab56",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "css_classes": "lp-crit-hex",
+            "_title": "Textura de pontos (decorativa)"
+          },
+          "elements": []
+        },
+        {
+          "id": "a2b9d9b",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "12",
+              "row": "12",
+              "isLinked": true,
+              "unit": "px",
+              "size": 12
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "css_classes": "lp-crit-content",
+            "flex_gap_mobile": {
+              "column": "8",
+              "row": "8",
+              "isLinked": true,
+              "unit": "px",
+              "size": 8
+            },
+            "_title": "Frase"
+          },
+          "elements": [
+            {
+              "id": "664b8e3",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Sem critério",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "rgba(1, 19, 36, 0.75)",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 3.2,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 11,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_css_classes": "lp-crit-over"
+              },
+              "elements": []
+            },
+            {
+              "id": "e26f247",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "Sem critério, a consulta vira",
+                "header_size": "h2",
+                "align": "center",
+                "title_color": "#011324",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.2,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -0.5,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 42,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 22,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_css_classes": "lp-crit-l1"
+              },
+              "elements": []
+            },
+            {
+              "id": "84bc158",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "heading",
+              "settings": {
+                "title": "improviso:",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#011324",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 190,
+                  "sizes": []
+                },
+                "typography_font_weight": "900",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.0,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -5,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 124,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 56,
+                  "sizes": []
+                },
+                "typography_letter_spacing_mobile": {
+                  "unit": "px",
+                  "size": -2,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_css_classes": "lp-crit-word"
+              },
+              "elements": []
+            },
+            {
+              "id": "6af23d6",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<div class=\"lp-crit-line\" aria-hidden=\"true\"><svg viewBox=\"0 0 960 22\"><path d=\"M6 15 C 220 7, 560 3, 954 10\" pathLength=\"1\" fill=\"none\" stroke=\"#011324\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg></div>",
+                "_title": "Sublinhado (desenha no scroll)",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 860,
+                  "sizes": []
+                },
+                "_element_custom_width_tablet": {
+                  "unit": "%",
+                  "size": 80,
+                  "sizes": []
+                },
+                "_element_custom_width_mobile": {
+                  "unit": "%",
+                  "size": 86,
+                  "sizes": []
+                },
+                "_margin": {
+                  "unit": "px",
+                  "top": "-4",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "ce5e962",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "icon-list",
+              "settings": {
+                "view": "traditional",
+                "icon_list": [
+                  {
+                    "_id": "3a7e18f",
+                    "text": "role para ver o que acontece",
+                    "selected_icon": {
+                      "value": "fas fa-mouse",
+                      "library": "fa-solid"
+                    },
+                    "link": {
+                      "url": "",
+                      "is_external": "",
+                      "nofollow": "",
+                      "custom_attributes": ""
+                    }
+                  }
+                ],
+                "space_between": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "text_color": "rgba(1, 19, 36, 0.7)",
+                "text_color_hover": "rgba(1, 19, 36, 0.7)",
+                "icon_size": {
+                  "unit": "px",
+                  "size": 16,
+                  "sizes": []
+                },
+                "text_indent": {
+                  "unit": "px",
+                  "size": 10,
+                  "sizes": []
+                },
+                "icon_self_align": "left",
+                "icon_self_vertical_align": "flex-start",
+                "icon_vertical_offset": {
+                  "unit": "px",
+                  "size": 3,
+                  "sizes": []
+                },
+                "icon_color": "rgba(1, 19, 36, 0.7)",
+                "icon_color_hover": "rgba(1, 19, 36, 0.7)",
+                "icon_typography_typography": "custom",
+                "icon_typography_font_family": "Montserrat",
+                "icon_typography_font_size": {
+                  "unit": "px",
+                  "size": 13,
+                  "sizes": []
+                },
+                "icon_typography_font_weight": "600",
+                "icon_typography_line_height": {
+                  "unit": "em",
+                  "size": 1.4,
+                  "sizes": []
+                },
+                "icon_align": "center",
+                "_margin": {
+                  "unit": "px",
+                  "top": "30",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": false
+                },
+                "__globals__": {
+                  "text_color": "",
+                  "icon_color": "",
+                  "icon_typography_typography": ""
+                },
+                "_css_classes": "lp-crit-hint"
+              },
+              "elements": []
+            }
+          ]
+        },
+        {
+          "id": "c369e04",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "css_classes": "lp-crit-fade",
+            "_title": "Escurecimento da saída (decorativo)"
+          },
+          "elements": []
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "LP Alinhadores · 03b Sem critério (improviso)",
+  "type": "container"
+}

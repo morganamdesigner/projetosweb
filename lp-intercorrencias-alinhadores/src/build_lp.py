@@ -323,29 +323,42 @@ def s03_dor():
 # ---------------------------------------------------------------------------
 
 def s03b_impact():
-    dots = container({"css_classes": "lp-dots"}, [], "Grade de pontos (decorativa)")
-    over = eyebrow("Sem critério", "#5B7083", center=True, extra_cls="lp-eyebrow--both lp-impact-over")
-    l1 = cls(h2("Sem critério, a consulta vira", PROF, 56, "center", t=44, m=28, lh=1.15), "lp-impact-l1")
-    word = cls(heading("improviso:", PROF, typo("typography", 190, 900, lh=1.0, ls=-5, size_t=128, size_m=72),
-                       align="center"), "lp-impact-word")
-    line = setv(html('<div class="lp-impact-line" aria-hidden="true"><svg viewBox="0 0 960 22">'
-                     '<path d="M6 15 C 220 7, 560 3, 954 10" pathLength="1" fill="none" stroke="#0B2D4A" '
+    """Fundo turquesa, seção presa: "improviso:" sai do desfoque para o foco com o scroll e, no fim,
+    tudo desfoca e o fundo escurece até a cor da 03c (passagem sem corte). CSS/JS no widget da seção."""
+    css = open(os.path.join(HERE, "lp-crit.css"), encoding="utf-8").read().strip()
+    js = open(os.path.join(HERE, "lp-crit.js"), encoding="utf-8").read().strip()
+    code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
+                _title="Sem critério · estilos e animação (não apagar)", _position="absolute",
+                _element_width="initial", _element_custom_width=px(0))
+    hex_bg = container({"css_classes": "lp-crit-hex"}, [], "Textura de pontos (decorativa)")
+    fade = container({"css_classes": "lp-crit-fade"}, [], "Escurecimento da saída (decorativo)")
+    over = cls(heading("Sem critério", "rgba(1, 19, 36, 0.75)",
+                       typo("typography", 12, 700, lh=1.3, ls=3.2, transform="uppercase", size_m=11), align="center"),
+               "lp-crit-over")
+    l1 = cls(h2("Sem critério, a consulta vira", NOITE, 56, "center", t=42, m=22, lh=1.2), "lp-crit-l1")
+    word = heading("improviso:", NOITE, typo("typography", 190, 900, lh=1.0, ls=-5, size_t=124, size_m=56),
+                   align="center", typography_letter_spacing_mobile=px(-2))
+    cls(word, "lp-crit-word")
+    line = setv(html('<div class="lp-crit-line" aria-hidden="true"><svg viewBox="0 0 960 22">'
+                     '<path d="M6 15 C 220 7, 560 3, 954 10" pathLength="1" fill="none" stroke="#011324" '
                      'stroke-width="5" stroke-linecap="round"/></svg></div>'),
                 _title="Sublinhado (desenha no scroll)", _element_width="initial", _element_custom_width=px(860),
                 _element_custom_width_tablet=px(80, "%"), _element_custom_width_mobile=px(86, "%"),
-                _margin=dims(-6, 0, 0, 0))
-    hint = cls(icon_list([{"text": "role para ver o que acontece", "icon": "fas fa-mouse"}], "#5B7083",
-                         typo("icon_typography", 13, 500, lh=1.4), icon_color="#5B7083", icon_size=16,
-                         _margin=dims(28, 0, 0, 0)), "lp-impact-hint")
+                _margin=dims(-4, 0, 0, 0))
+    hint = cls(icon_list([{"text": "role para ver o que acontece", "icon": "fas fa-mouse"}], "rgba(1, 19, 36, 0.7)",
+                         typo("icon_typography", 13, 600, lh=1.4), icon_color="rgba(1, 19, 36, 0.7)", icon_size=16,
+                         icon_align="center", _margin=dims(30, 0, 0, 0)), "lp-crit-hint")
+    content = col([over, l1, word, line, hint], 12, "Frase", flex_align_items="center", css_classes="lp-crit-content",
+                  flex_gap_mobile=gap(8))
     return section({
         "content_width": "full",
         "min_height": px(100, "vh"),
         "flex_justify_content": "center",
         "flex_align_items": "center",
-        "flex_gap": gap(10),
-        **solid("#E8EDF1"),
-    }, [dots, over, l1, word, line, hint], "03b · Sem critério (frase presa no scroll)", "lp-impact lp-orbits",
-        boxed=False)
+        "padding": dims(80, 24),
+        "padding_mobile": dims(64, 16),
+        **grad("#13DDE8", "#00B3C9", 160),
+    }, [code, hex_bg, content, fade], "03b · Sem critério (frase presa no scroll)", "lp-crit", boxed=False)
 
 
 # ---------------------------------------------------------------------------

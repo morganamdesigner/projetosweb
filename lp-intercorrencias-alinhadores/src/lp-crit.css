@@ -1,0 +1,26 @@
+/* 03b · "Sem critério, a consulta vira improviso:" — fundo turquesa, seção presa na tela.
+   A palavra começa grande e desfocada e entra em foco com o scroll; no fim, tudo desfoca e o fundo
+   escurece até a cor da seção seguinte, para a passagem não ter corte. */
+html, html.lenis { scroll-behavior: auto !important; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+.lp-crit { position: relative; overflow: hidden; isolation: isolate; }
+.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(1, 19, 36, .16) 1.4px, transparent 1.6px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse 55% 50% at 50% 50%, #000 0%, transparent 75%); }
+.lp-crit-fade { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 3; pointer-events: none;
+  background: #0A1D31; opacity: 0; }
+.lp-crit-content { position: relative; z-index: 2; will-change: transform, filter, opacity; }
+.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }
+.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }
+.lp-crit-hint .elementor-icon-list-item { justify-content: center; }
+.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: ""; width: 48px; height: 1px; background: currentColor; }
+.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter; }
+.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }
+.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }
+
+@media (prefers-reduced-motion: reduce) { .lp-crit-fade { display: none; } }

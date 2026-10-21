@@ -139,30 +139,6 @@
     }
   }
 
-  /* 03b · Sem critério: frase presa na tela, "improviso:" cresce e se preenche */
-  function initImpact() {
-    var sec = $('.lp-impact');
-    if (!sec || reduce || !hasGsap()) return;
-    var over = $('.lp-impact-over', sec), l1 = $('.lp-impact-l1', sec), word = $('.lp-impact-word', sec);
-    var path = $('.lp-impact-line path', sec), hint = $('.lp-impact-hint', sec), dots = $('.lp-dots', sec);
-    var build = function (tl) {
-      tl.from([over, l1].filter(Boolean), { y: 40, autoAlpha: 0, stagger: 0.1, duration: 0.3 })
-        .fromTo(word, { scale: 0.6, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.35 }, '<0.15')
-        .fromTo(word, { '--fill': '0%' }, { '--fill': '100%', duration: 0.5, ease: 'none' }, '<0.1');
-      if (path) tl.fromTo(path, { '--draw': 1 }, { '--draw': 0, duration: 0.4, ease: 'none' }, '<0.25');
-      if (hint) tl.from(hint, { autoAlpha: 0, y: 10, duration: 0.2 }, '>-0.1');
-      if (dots) tl.to(dots, { y: -60, duration: tl.duration(), ease: 'none' }, 0);
-      return tl;
-    };
-    var mm = gsap.matchMedia();
-    mm.add('(min-width: 768px)', function () {
-      build(gsap.timeline({ scrollTrigger: { trigger: sec, start: 'top top', end: '+=150%', pin: true, scrub: 0.6, anticipatePin: 1 } }));
-    });
-    mm.add('(max-width: 767px)', function () {
-      build(gsap.timeline({ defaults: { ease: 'power2.out' }, scrollTrigger: { trigger: sec, start: 'top 70%', toggleActions: 'play none none none' } })).timeScale(0.6);
-    });
-  }
-
   /* 06 · Agenda: a linha AGORA desce com o scroll e acende o card da vez */
   function initAgenda() {
     var wrap = $('.lp-slots');
@@ -244,7 +220,6 @@
     initMarquee();
     initReveal();
     initScene();
-    initImpact();
     initAgenda();
     initSwitches();
     initMobileBar();

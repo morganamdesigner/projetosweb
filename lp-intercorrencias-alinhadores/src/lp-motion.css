@@ -14,7 +14,6 @@
   --lp-ease: cubic-bezier(.2, .8, .2, 1);
 }
 
-html { scroll-behavior: smooth; }
 body { overflow-x: hidden; }
 .lp { overflow-x: clip; }
 
@@ -122,17 +121,6 @@ body { overflow-x: hidden; }
 .lp-dor-row.is-on .lp-dor-num .elementor-heading-title { color: var(--lp-turquesa) !important; }
 .lp-dor-q .elementor-heading-title { background: var(--lp-grad); -webkit-background-clip: text; background-clip: text; color: transparent; opacity: .25; transition: opacity .6s; }
 .lp-dor-q.is-on .elementor-heading-title { opacity: 1; }
-
-/* ---------------------------------------------------------------------------
-   03b · Sem critério: frase de impacto
-   --------------------------------------------------------------------------- */
-.lp-impact { position: relative; overflow: hidden; --o1: 900px; --o1x: 74%; --o1y: 57%; --o2: 700px; --o2x: 80%; --o2y: 69%; }
-.lp-impact::before, .lp-impact::after { border-color: rgba(11, 45, 74, .08); border-top-color: rgba(0, 194, 199, .25); }
-.lp-dots { position: absolute !important; left: 0; top: 0; width: 616px !important; height: 392px; background-image: radial-gradient(rgba(11, 45, 74, .18) 1.6px, transparent 1.7px); background-size: 28px 28px; -webkit-mask-image: linear-gradient(135deg, #000 30%, transparent 75%); mask-image: linear-gradient(135deg, #000 30%, transparent 75%); pointer-events: none; }
-.lp-impact-word { --fill: 100%; }
-.lp-impact-word .elementor-heading-title { background: linear-gradient(90deg, #07E3F3 0%, #00B5D0 calc(var(--fill) * .5), #0A92C4 var(--fill), rgba(11, 45, 74, .14) var(--fill)); -webkit-background-clip: text; background-clip: text; color: transparent; display: inline-block; transform-origin: 50% 60%; }
-.lp-impact-line svg { width: 100%; height: auto; display: block; overflow: visible; }
-.lp-impact-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }
 
 /* ---------------------------------------------------------------------------
    03c · Consequências
@@ -264,7 +252,6 @@ body { overflow-x: hidden; }
    --------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .lp-hero-visual::before { width: 56%; left: 2%; top: -14%; }
-  .lp-dots { width: 360px !important; height: 240px; }
 }
 @media (max-width: 767px) {
   .lp-hero-visual::before { width: 62%; left: -2%; top: -8%; }
@@ -280,7 +267,6 @@ body { overflow-x: hidden; }
 
 /* Movimento reduzido: sem marquee, parallax, giros e flutuação */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
   .lp-marquee__track, .lp-orbits::before, .lp-orbits::after, .lp-glow::before, .lp-float img, .lp-seal::before,
   .lp-author-photo::before, .lp-btn .elementor-button::after, .lp-play .elementor-icon::after, .lp-shine { animation: none !important; }
   .lp-shine { background-position: 50% 0; }
