@@ -14,11 +14,6 @@
       var mm = gsap.matchMedia();
       mm.add({ mobile: '(max-width: 767px)', desktop: '(min-width: 768px)' }, function (ctx) {
         var mobile = ctx.conditions.mobile;
-        // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.
-        gsap.fromTo(sec, { '--chamfer': mobile ? '36px' : '84px' }, {
-          '--chamfer': '0px', ease: 'none',
-          scrollTrigger: { trigger: sec, start: 'top bottom', end: 'top top', scrub: true }
-        });
         // 2. Estado inicial da frase.
         if (over) gsap.set(over, { autoAlpha: 0, y: 14 });
         if (left) gsap.set(left, { xPercent: -140, autoAlpha: 0 });
@@ -35,11 +30,19 @@
         if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });
         tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')
           .to(title, { autoAlpha: 1, duration: 0.06 }, '<0.12')
-          .to(title, { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<');
+          .to(title, { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<')
+          .set(title, { filter: 'none' }); // sem filtro depois do foco: camada leve na hora de soltar a trava
         if (path) tl.to(path, { '--draw': 0, duration: 0.16 }, '>-0.04');
         if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.07 }, '>-0.02');
         tl.to({}, { duration: 0.22 }); // segura a frase pronta antes de a seção seguir
         if (hex) tl.fromTo(hex, { y: 40 }, { y: -40, duration: tl.duration() }, 0);
+        // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.
+        //    O recorte vale também para o espaço da trava (pin-spacer), que tem o fundo da seção.
+        var spacer = sec.parentNode && sec.parentNode.classList.contains('pin-spacer') ? sec.parentNode : null;
+        gsap.fromTo([sec, spacer].filter(Boolean), { '--chamfer': mobile ? '36px' : '84px' }, {
+          '--chamfer': '0px', ease: 'none',
+          scrollTrigger: { trigger: spacer || sec, start: 'top bottom', end: 'top top', scrub: true }
+        });
       });
     };
   }

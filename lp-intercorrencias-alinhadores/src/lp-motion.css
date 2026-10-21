@@ -15,6 +15,9 @@
 }
 
 body { overflow-x: hidden; }
+/* Fundo da página escuro: é o que aparece nos cantos chanfrados da 03b e em qualquer quadro que o
+   navegador perca ao soltar uma trava (no lugar do branco do tema). */
+html, body { background-color: #011324 !important; }
 .lp { overflow-x: clip; }
 
 /* ---------------------------------------------------------------------------

@@ -52,6 +52,17 @@
       lenis.scrollTo(target, { offset: -50 });
     }, true);
   }
+  /* O espaço reservado pela trava (pin-spacer) recebe o fundo da própria seção. Se o navegador
+     perder um quadro ao soltar a trava (redesenho de camada pesada), aparece a cor da seção e não o
+     fundo branco da página. */
+  function paintSpacers() {
+    ScrollTrigger.getAll().forEach(function (st) {
+      if (!st.pin || !st.spacer || st.spacer === st.pin) return;
+      var cs = getComputedStyle(st.pin);
+      st.spacer.style.backgroundColor = cs.backgroundColor;
+      st.spacer.style.backgroundImage = cs.backgroundImage;
+    });
+  }
   function run(item) {
     try { item.fn(window.gsap, window.ScrollTrigger); } catch (err) { if (window.console) console.error('[LP]', err); }
   }
@@ -66,6 +77,8 @@
       smooth();
       queue.sort(byPosition).forEach(run);
       ready = true;
+      paintSpacers();
+      ScrollTrigger.addEventListener('refresh', paintSpacers);
       var refresh = function () { ScrollTrigger.refresh(); };
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
       window.addEventListener('load', refresh);

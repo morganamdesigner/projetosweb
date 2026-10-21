@@ -8,6 +8,8 @@ html.lenis, html.lenis body { height: auto; }
 
 .lp-crit { --chamfer: 0px; position: relative; overflow: hidden; isolation: isolate;
   clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }
+.pin-spacer:has(> .lp-crit) { --chamfer: 0px;
+  clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }
 .lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;
   background-image: radial-gradient(rgba(255, 255, 255, .28) 1.4px, transparent 1.6px);
   background-size: 26px 26px;
@@ -16,12 +18,10 @@ html.lenis, html.lenis body { height: auto; }
 .lp-crit-content { position: relative; z-index: 2; }
 .lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }
 .lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: ""; width: 48px; height: 1px; background: currentColor; opacity: .7; }
-.lp-crit-split { will-change: transform, opacity; }
-.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter;
-  text-shadow: 0 12px 40px rgba(1, 19, 36, .18); }
+.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; }
 .lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }
 .lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }
 .lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }
 .lp-crit-hint .elementor-icon-list-item { justify-content: center; }
 
-@media (prefers-reduced-motion: reduce) { .lp-crit { clip-path: none; } }
+@media (prefers-reduced-motion: reduce) { .lp-crit, .pin-spacer:has(> .lp-crit) { clip-path: none; } }
