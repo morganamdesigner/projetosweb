@@ -1,0 +1,57 @@
+/* 08 · Oferta: bônus em destaque, ícones do que se recebe, preço ancorado e faixa de confiança. */
+@property --lp-ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+
+/* Card do bônus: borda luminosa girando (container vazio .lp-bonus-ring, atrás do conteúdo) */
+.lp-bonus { position: relative; isolation: isolate; }
+.lp-bonus > .e-con:not(.lp-bonus-ring), .lp-bonus > .elementor-element { position: relative; z-index: 1; }
+.lp-bonus-ring { position: absolute !important; inset: 0; width: 100% !important; z-index: 0 !important; pointer-events: none;
+  border-radius: inherit; padding: 1.5px !important;
+  background: conic-gradient(from var(--lp-ang), rgba(0, 194, 199, .08) 0deg, #07E3F3 60deg, rgba(0, 194, 199, .08) 140deg, rgba(0, 194, 199, .08) 220deg, #0A92C4 290deg, rgba(0, 194, 199, .08) 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: lpRing360 6s linear infinite; }
+.lp-bonus::after { content: ""; position: absolute; inset: -40px; z-index: -1; border-radius: 40px; pointer-events: none;
+  background: radial-gradient(60% 60% at 50% 50%, rgba(0, 194, 199, .22), transparent 70%); }
+@keyframes lpRing360 { to { --lp-ang: 360deg; } }
+
+/* Fita no topo do card */
+.lp-ribbon-tag .elementor-heading-title { display: inline-flex; align-items: center; gap: 8px; }
+.lp-ribbon-tag .elementor-heading-title::before { content: "🎁"; font-size: 14px; animation: lpGift 2.4s ease-in-out infinite; }
+@keyframes lpGift { 0%, 100% { transform: translateY(0) rotate(0); } 20% { transform: translateY(-3px) rotate(-10deg); } 40% { transform: translateY(0) rotate(8deg); } 60% { transform: rotate(0); } }
+
+/* Capa da aula: brilho atravessando e selo +2 */
+.lp-cover { position: relative; overflow: hidden; }
+.lp-cover::after { content: ""; position: absolute; inset: 0 auto 0 -60%; width: 40%; pointer-events: none;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .14), transparent); transform: skewX(-20deg);
+  animation: lpSheen 5s 1s ease-in-out infinite; }
+.lp-cover-badge { position: absolute !important; right: 16px; top: 16px; width: 72px !important; height: 72px; min-height: 72px !important; z-index: 2;
+  animation: lpBadge 3s ease-in-out infinite; }
+@keyframes lpBadge { 0%, 100% { transform: rotate(-8deg) scale(1); } 50% { transform: rotate(6deg) scale(1.06); } }
+.lp-cover::before { content: ""; position: absolute; left: 50%; top: 45%; width: 220px; height: 220px; transform: translate(-50%, -50%); border: 0; opacity: 1; mix-blend-mode: normal;
+  border-radius: 50%; background: radial-gradient(circle, rgba(0, 194, 199, .35), transparent 70%); pointer-events: none; }
+.lp-ribbon-tag, .lp-save { align-self: flex-start !important; width: auto !important; max-width: max-content; }
+
+/* Ícones do "O que você recebe" e dos passos */
+.lp-get-ico .elementor-icon { background-image: linear-gradient(135deg, #07E3F3, #0A92C4) !important; box-shadow: 0 10px 24px -10px rgba(0, 194, 199, .8); }
+.lp-get-row { transition: transform .3s cubic-bezier(.2, .8, .2, 1), box-shadow .3s; }
+.lp-get-row:hover { transform: translateY(-2px); box-shadow: 0 16px 34px -22px rgba(11, 45, 74, .5); }
+.lp-step-ico .elementor-icon { box-shadow: 0 0 0 6px rgba(0, 194, 199, .1); }
+.lp-free .elementor-heading-title { display: inline-block; }
+
+/* Selo de economia */
+.lp-save .elementor-heading-title { display: inline-block; animation: lpSavePulse 2.6s ease-in-out infinite; }
+@keyframes lpSavePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+
+/* Botão: anel pulsando por fora */
+.lp-cta-pulse .elementor-button { animation: lpCtaPulse 2.4s ease-out infinite; }
+@keyframes lpCtaPulse { 0% { box-shadow: 0 0 0 0 rgba(0, 194, 199, .55), 0 14px 34px -12px rgba(0, 194, 199, .55); }
+  70% { box-shadow: 0 0 0 16px rgba(0, 194, 199, 0), 0 14px 34px -12px rgba(0, 194, 199, .55); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 194, 199, 0), 0 14px 34px -12px rgba(0, 194, 199, .55); } }
+
+/* Faixa de confiança */
+.lp-trustbar .elementor-icon-list-items { justify-content: center; row-gap: 8px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-bonus-ring, .lp-ribbon-tag .elementor-heading-title::before, .lp-cover::after, .lp-save .elementor-heading-title,
+  .lp-cta-pulse .elementor-button, .lp-cover-badge { animation: none !important; }
+}
