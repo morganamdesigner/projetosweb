@@ -1,0 +1,19 @@
+/* Bloco do alinhador 3D (seção Apresentação). Trilha + palco preso: ver lp-track.css. */
+.lp-track--aligner { height: 300vh; }
+@media (max-width: 767px) { .lp-track--aligner { height: 240vh; } }
+.lp-stage--aligner { display: flex !important; flex-direction: column; align-items: center; background-color: #F2F6F9; }
+.lp-stage--aligner > .lp-al-wrap { flex: 1 1 auto !important; width: 100% !important; min-height: 0; }
+.lp-al-wrap > .elementor-widget-container { height: 100%; }
+.lp-al { --al-bg: #F2F6F9; position: relative; width: 100%; height: 100%; min-height: 320px; }
+.lp-al canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity .6s; }
+.lp-al.is-3d canvas { opacity: 1; }
+.lp-al-fallback { position: absolute; left: 50%; top: 50%; width: min(560px, 80%); transform: translate(-50%, -50%);
+  transition: opacity .6s; animation: lpAlFloat 6s ease-in-out infinite; pointer-events: none; }
+.lp-al.is-3d .lp-al-fallback { opacity: 0; }
+@keyframes lpAlFloat { 0%, 100% { transform: translate(-50%, -50%) rotate(-2deg); } 50% { transform: translate(-50%, -54%) rotate(2deg); } }
+.lp-al-hud { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px;
+  padding: 9px 16px; border-radius: 999px; background: #0B2D4A; color: #fff; font: 700 12px/1.2 Montserrat, Arial, sans-serif;
+  letter-spacing: 1.6px; text-transform: uppercase; white-space: nowrap; box-shadow: 0 14px 30px -14px rgba(11, 45, 74, .6); }
+.lp-al.is-fallback .lp-al-hud { display: none; }
+.lp-al-dot { width: 8px; height: 8px; border-radius: 50%; background: #00C2C7; box-shadow: 0 0 10px #00C2C7; }
+@media (prefers-reduced-motion: reduce) { .lp-al-fallback { animation: none; } }

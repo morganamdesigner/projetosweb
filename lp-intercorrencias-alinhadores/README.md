@@ -110,6 +110,12 @@ Para a cena durar mais ou menos, mude a altura em `src/lp-track.css`. No Navegad
 
 Para aplicar a versão atual dos widgets num export do site: `python3 src/patch_export.py <export.json> lp-intercorrencias-alinhadores-elementor.json <saída.json>`.
 
+## Bloco extra: alinhador 3D montado no scroll
+
+Arquivo: `bloco-alinhador-3d-elementor.json`, gerado por `src/build_bloco_alinhador_3d.py`. Importe em *Templates → Import* e insira dentro da seção **04 · Apresentação**: entre "Texto e método" e o notebook, ou no lugar do notebook.
+
+Os 14 dentes do alinhador chegam soltos no espaço e se encaixam um a um na arcada, do centro para trás, com o contador "Encaixe 00/14". Depois a borda do alinhador se desenha e a peça gira até a vista de 3/4 ("Encaixe perfeito ✓"). O 3D é feito com Three.js (carregado do CDN) e usa o mesmo motor de palco preso das outras cenas. Sem WebGL, aparece a foto do alinhador flutuando. A sobrelinha e o título são widgets nativos e podem ser editados.
+
 ## Regerar o JSON
 
 ```bash

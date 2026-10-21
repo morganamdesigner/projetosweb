@@ -1,0 +1,196 @@
+{
+  "content": [
+    {
+      "id": "b002d73",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "0",
+          "row": "0",
+          "isLinked": true,
+          "unit": "px",
+          "size": 0
+        },
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
+        "content_width": "full",
+        "flex_direction": "column",
+        "css_classes": "lp-track lp-track--aligner",
+        "_title": "Alinhador 3D · trilha do scroll"
+      },
+      "elements": [
+        {
+          "id": "315e374",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "css_classes": "lp-stage lp-stage--aligner",
+            "_title": "Palco do alinhador (preso na tela)"
+          },
+          "elements": [
+            {
+              "id": "8a38748",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 12
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "56",
+                  "right": "24",
+                  "bottom": "0",
+                  "left": "24",
+                  "isLinked": false
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "padding_mobile": {
+                  "unit": "px",
+                  "top": "40",
+                  "right": "16",
+                  "bottom": "0",
+                  "left": "16",
+                  "isLinked": false
+                },
+                "_flex_size": "none",
+                "_title": "Título"
+              },
+              "elements": [
+                {
+                  "id": "d0d3805",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Cada peça no lugar",
+                    "header_size": "p",
+                    "align": "center",
+                    "title_color": "#0A92C4",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 3,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-eyebrow lp-eyebrow--center"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "82566f6",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Com critério, cada etapa <span class=\"lp-hl\">encaixa</span>.",
+                    "header_size": "h2",
+                    "align": "center",
+                    "title_color": "#0B2D4A",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.15,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 26,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "0666c83",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<style>\n/* Cenas presas no scroll: trilha alta (.lp-track) + palco preso na tela (.lp-stage, sticky).\n   O comprimento da trilha define quanto se rola com a cena parada. */\nhtml, body { overflow-x: clip !important; }\n#page, .site, .site-content, #content, .site-main, .elementor { overflow-x: clip !important; overflow-y: visible !important; }\n.lp-track { position: relative; display: block !important; padding: 0 !important; min-height: 0 !important; overflow: visible !important; }\n.lp-track--dor { height: 400vh; }\n.lp-track--crit { height: 330vh; }\n.lp-track--laptop { height: 260vh; }\n.lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }\n.lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }\n@media (max-width: 767px) {\n  .lp-track--crit { height: 270vh; }\n  .lp-track--laptop { height: 220vh; }\n  /* Na cena do paciente, cena e card empilhados não cabem numa tela: sem palco preso, a cena\n     avança enquanto a seção passa pela tela. */\n  .lp-track--dor { height: auto; }\n  .lp-track--dor > .lp-stage { position: relative !important; height: auto; }\n}\n/* Editor do Elementor e movimento reduzido: tudo no fluxo normal. */\n.elementor-editor-active .lp-track, .lp-static .lp-track { height: auto !important; }\n.elementor-editor-active .lp-stage, .lp-static .lp-stage { position: relative !important; height: auto; }\n/* Bloco do alinhador 3D (seção Apresentação). Trilha + palco preso: ver lp-track.css. */\n.lp-track--aligner { height: 300vh; }\n@media (max-width: 767px) { .lp-track--aligner { height: 240vh; } }\n.lp-stage--aligner { display: flex !important; flex-direction: column; align-items: center; background-color: #F2F6F9; }\n.lp-stage--aligner > .lp-al-wrap { flex: 1 1 auto !important; width: 100% !important; min-height: 0; }\n.lp-al-wrap > .elementor-widget-container { height: 100%; }\n.lp-al { --al-bg: #F2F6F9; position: relative; width: 100%; height: 100%; min-height: 320px; }\n.lp-al canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; opacity: 0; transition: opacity .6s; }\n.lp-al.is-3d canvas { opacity: 1; }\n.lp-al-fallback { position: absolute; left: 50%; top: 50%; width: min(560px, 80%); transform: translate(-50%, -50%);\n  transition: opacity .6s; animation: lpAlFloat 6s ease-in-out infinite; pointer-events: none; }\n.lp-al.is-3d .lp-al-fallback { opacity: 0; }\n@keyframes lpAlFloat { 0%, 100% { transform: translate(-50%, -50%) rotate(-2deg); } 50% { transform: translate(-50%, -54%) rotate(2deg); } }\n.lp-al-hud { position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 10px;\n  padding: 9px 16px; border-radius: 999px; background: #0B2D4A; color: #fff; font: 700 12px/1.2 Montserrat, Arial, sans-serif;\n  letter-spacing: 1.6px; text-transform: uppercase; white-space: nowrap; box-shadow: 0 14px 30px -14px rgba(11, 45, 74, .6); }\n.lp-al.is-fallback .lp-al-hud { display: none; }\n.lp-al-dot { width: 8px; height: 8px; border-radius: 50%; background: #00C2C7; box-shadow: 0 0 10px #00C2C7; }\n@media (prefers-reduced-motion: reduce) { .lp-al-fallback { animation: none; } }\n</style>\n<div class=\"lp-al\" style=\"--al-bg:#F2F6F9\"><canvas role=\"img\" aria-label=\"Alinhador transparente em 3D: os dentes se encaixam um a um na arcada\"></canvas><img class=\"lp-al-fallback\" src=\"https://cdn.jsdelivr.net/gh/morganamdesigner/projetosweb@6b1cc2883363f3565ce71200e8f0ec280c351940/lp-intercorrencias-alinhadores/assets/alinhador-foto.webp\" alt=\"Alinhador transparente\" loading=\"lazy\" decoding=\"async\"><div class=\"lp-al-hud\" aria-hidden=\"true\"><span class=\"lp-al-dot\"></span><span class=\"lp-al-count\">Encaixe 00/14</span></div></div>\n<script>\n/* Motor das cenas presas no scroll (03 Dor, 03b Sem critério, notebook da 04). Vai repetido nos\n   widgets que usam cenas, mas só a primeira cópia roda.\n\n   Sem \"pin\" por JavaScript: cada cena fica num palco (.lp-stage) com position: sticky dentro de uma\n   trilha alta (.lp-track). Quem segura o palco na tela é o próprio navegador, sem tremor e sem troca\n   de camada. Este motor só mede quanto da trilha já foi rolado (0 → 1) e entrega esse progresso\n   para cada cena, no mesmo quadro da rolagem. No desktop, a rolagem suave (Lenis) roda no mesmo laço. */\n(function () {\n  if (window.lpScroll) return;\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  var scenes = [], started = false, needLayout = true, lastY = -1, lenis = null;\n  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };\n  var edit = function () {\n    return document.body.classList.contains('elementor-editor-active') ||\n      !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());\n  };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var desktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;\n\n  function load(src) {\n    return new Promise(function (ok) {\n      var s = document.createElement('script');\n      s.src = src; s.onload = ok; s.onerror = ok;\n      document.head.appendChild(s);\n    });\n  }\n\n  // Mede a posição das trilhas (só quando o layout muda; nunca a cada quadro).\n  function layout() {\n    needLayout = false;\n    var y = window.scrollY, vh = window.innerHeight;\n    scenes.forEach(function (s) {\n      var r = s.track.getBoundingClientRect();\n      s.top = r.top + y;\n      s.height = r.height;\n      s.stageH = s.stage.offsetHeight;\n      s.sticky = getComputedStyle(s.stage).position === 'sticky' && s.height > s.stageH + 10;\n      s.vh = vh;\n    });\n  }\n  function frame() {\n    if (needLayout) { layout(); lastY = -1; }\n    var y = window.scrollY;\n    if (y === lastY) return;\n    lastY = y;\n    scenes.forEach(function (s) {\n      var p, enter = clamp((y + s.vh - s.top) / s.vh);\n      if (s.sticky) p = clamp((y - s.top) / (s.height - s.stageH));\n      else p = clamp((y + s.vh * 0.65 - s.top) / Math.max(1, s.height)); // celular sem palco preso\n      if (p !== s.p || enter !== s.enter) { s.p = p; s.enter = enter; s.fn(p, enter); }\n    });\n  }\n  function loop(t) {\n    if (lenis) lenis.raf(t);\n    frame();\n    requestAnimationFrame(loop);\n  }\n  function smooth() {\n    if (!window.Lenis || !desktop || reduce) return;\n    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });\n    window.__lpLenis = lenis;\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n  function start() {\n    if (started) return;\n    started = true;\n    if (edit() || reduce) {\n      document.documentElement.classList.add('lp-static');\n      scenes.forEach(function (s) { if (s.done) s.done(); });\n      return;\n    }\n    var p = Promise.resolve();\n    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });\n    if (desktop && !window.Lenis) p = p.then(function () { return load(CDN.lenis); });\n    p.then(function () {\n      scenes.forEach(function (s) { if (s.init) s.init(window.gsap); });\n      smooth();\n      var dirty = function () { needLayout = true; };\n      window.addEventListener('resize', dirty);\n      window.addEventListener('load', dirty);\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(dirty);\n      if (window.ResizeObserver) new ResizeObserver(dirty).observe(document.body);\n      requestAnimationFrame(loop);\n    });\n  }\n\n  window.lpScroll = {\n    /* stage: o palco (.lp-stage) dentro da trilha (.lp-track).\n       opts.init(gsap): prepara a cena; opts.update(p, enter): progresso da trilha (0–1) e da\n       entrada da seção na tela (0–1); opts.done(): estado final (editor, movimento reduzido). */\n    scene: function (stage, opts) {\n      if (!stage) return;\n      var track = stage.closest('.lp-track') || stage;\n      scenes.push({ stage: stage, track: track, init: opts.init, fn: opts.update, done: opts.done, p: -1, enter: -1 });\n      needLayout = true;\n    },\n    reduce: reduce\n  };\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });\n  else setTimeout(start, 0);\n})();\n/* Alinhador 3D montado pelo scroll (bloco da seção Apresentação).\n   14 dentes translúcidos chegam soltos no espaço e se encaixam um a um na arcada (do centro para\n   trás); cada encaixe acende em turquesa. Depois a borda do alinhador se desenha em volta da arcada\n   e a peça pronta gira até a vista de 3/4, como na foto. O palco fica preso na tela (sticky) e o\n   motor (lp-boot.js) entrega o progresso da trilha. Three.js vem do CDN (só o núcleo).\n   Sem WebGL ou se o CDN falhar, fica a foto do alinhador flutuando. */\n(function () {\n  if (window.__lpAligner) return;\n  window.__lpAligner = true;\n\n  var THREE_URL = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.min.js';\n  var clamp = function (v, a, b) { return v < a ? a : v > b ? b : v; };\n  var easeOut = function (t) { return 1 - Math.pow(1 - t, 3); };\n  var easeInOut = function (t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; };\n  var pad = function (n) { return (n < 10 ? '0' : '') + n; };\n  function rng(seed) { return function () { seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646; }; }\n\n  // Do centro para trás: incisivo central, lateral, canino, pré-molares e molares.\n  var TEETH = [\n    { w: 0.86, h: 1.05, d: 0.55, flat: true },\n    { w: 0.70, h: 0.95, d: 0.52, flat: true },\n    { w: 0.78, h: 1.05, d: 0.68, point: true },\n    { w: 0.72, h: 0.86, d: 0.82, cusps: 1 },\n    { w: 0.70, h: 0.84, d: 0.82, cusps: 1 },\n    { w: 1.00, h: 0.78, d: 0.98, cusps: 2 },\n    { w: 0.95, h: 0.74, d: 0.95, cusps: 2 }\n  ];\n\n  function toothGeometry(THREE, t) {\n    var g = new THREE.CapsuleGeometry(0.5, 0.5, 8, 20); // altura 1,5 no eixo y\n    var pos = g.attributes.position, v = new THREE.Vector3();\n    for (var i = 0; i < pos.count; i++) {\n      v.fromBufferAttribute(pos, i);\n      var top = clamp((v.y - 0.15) / 0.6, 0, 1);\n      if (t.flat && v.y > 0.35) v.y = 0.35 + (v.y - 0.35) * 0.4;                       // borda incisal reta\n      if (t.point) v.y += top * top * 0.28 * Math.max(0, 1 - Math.abs(v.x) * 1.8);    // ponta do canino\n      if (t.cusps) {                                                                   // cúspides\n        var cx = Math.cos(v.x * Math.PI * (t.cusps + 0.5)), cz = Math.cos(v.z * Math.PI * (t.cusps > 1 ? 2.2 : 1.2));\n        v.y += top * 0.1 * cx * cz - top * 0.06;\n      }\n      v.x *= t.w; v.y *= t.h / 1.5; v.z *= t.d;\n      pos.setXYZ(i, v.x, v.y, v.z);\n    }\n    g.computeVertexNormals();\n    return g;\n  }\n\n  function softShadowTexture(THREE) {\n    var c = document.createElement('canvas'); c.width = c.height = 256;\n    var x = c.getContext('2d'), gr = x.createRadialGradient(128, 128, 0, 128, 128, 128);\n    gr.addColorStop(0, 'rgba(11,45,74,0.32)'); gr.addColorStop(0.55, 'rgba(11,45,74,0.12)'); gr.addColorStop(1, 'rgba(11,45,74,0)');\n    x.fillStyle = gr; x.fillRect(0, 0, 256, 256);\n    var t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;\n    return t;\n  }\n\n  function build(THREE, box) {\n    var canvas = box.querySelector('canvas'), label = box.querySelector('.lp-al-count');\n    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: 'high-performance' });\n    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));\n    renderer.outputColorSpace = THREE.SRGBColorSpace;\n    renderer.toneMapping = THREE.ACESFilmicToneMapping;\n    renderer.toneMappingExposure = 1.05;\n\n    var scene = new THREE.Scene();\n    var bg = (getComputedStyle(box).getPropertyValue('--al-bg') || '#F2F6F9').trim();\n    scene.background = new THREE.Color(bg);\n\n    // Estúdio para os reflexos do material (caixas de luz brancas e uma turquesa).\n    var pmrem = new THREE.PMREMGenerator(renderer), env = new THREE.Scene(), cube = new THREE.BoxGeometry(1, 1, 1);\n    env.background = new THREE.Color('#d9e3ea');\n    [['#ffffff', 3.2, [0, 6, 0], [12, 0.2, 12]], ['#ffffff', 2.2, [-6, 2, 2], [0.2, 4, 7]],\n     ['#6fe6ee', 2.4, [6, 1.5, -2], [0.2, 4, 6]], ['#ffffff', 1.6, [0, 1.5, 7], [9, 3, 0.2]]].forEach(function (b) {\n      var m = new THREE.Mesh(cube, new THREE.MeshBasicMaterial({ color: new THREE.Color(b[0]).multiplyScalar(b[1]) }));\n      m.position.fromArray(b[2]); m.scale.fromArray(b[3]); env.add(m);\n    });\n    scene.environment = pmrem.fromScene(env, 0.04).texture;\n    scene.add(new THREE.HemisphereLight('#ffffff', '#cfe4ec', 0.6));\n    var key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(3, 6, 5); scene.add(key);\n\n    var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);\n    var arch = new THREE.Group(); scene.add(arch);\n\n    // Arcada: curva em U; os dentes são posicionados pelo comprimento da curva.\n    var curve = new THREE.CatmullRomCurve3([\n      new THREE.Vector3(-2.35, 0, -2.7), new THREE.Vector3(-2.2, 0, -1.3), new THREE.Vector3(-1.75, 0, -0.15),\n      new THREE.Vector3(-0.95, 0, 0.65), new THREE.Vector3(0, 0, 0.95), new THREE.Vector3(0.95, 0, 0.65),\n      new THREE.Vector3(1.75, 0, -0.15), new THREE.Vector3(2.2, 0, -1.3), new THREE.Vector3(2.35, 0, -2.7)\n    ]);\n    var L = curve.getLength(), half = TEETH.reduce(function (s, t) { return s + t.w; }, 0);\n    var k = (L * 0.94) / (half * 2);                       // escala para a arcada ficar cheia\n\n    var material = new THREE.MeshPhysicalMaterial({\n      color: '#eafcf9', roughness: 0.16, metalness: 0, transmission: 1, thickness: 0.6, ior: 1.42,\n      attenuationColor: new THREE.Color('#9fe3dc'), attenuationDistance: 1.4,\n      clearcoat: 1, clearcoatRoughness: 0.1, envMapIntensity: 1.3, specularIntensity: 1\n    });\n    var rand = rng(7), teeth = [], center = new THREE.Vector3(0, 0, -0.9);\n    TEETH.forEach(function (t, idx) {\n      var geo = toothGeometry(THREE, t), s = 0;\n      for (var j = 0; j < idx; j++) s += TEETH[j].w;\n      s = (s + t.w / 2) * k;\n      [1, -1].forEach(function (side) {\n        var u = 0.5 + side * s / L, p = curve.getPointAt(u), tan = curve.getTangentAt(u);\n        var mat = material.clone(); mat.emissive = new THREE.Color('#00C2C7'); mat.emissiveIntensity = 0;\n        var mesh = new THREE.Mesh(geo, mat);\n        mesh.scale.setScalar(k);\n        var endPos = new THREE.Vector3(p.x, (t.h * k) / 2, p.z);\n        var endQ = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), Math.atan2(-tan.z, tan.x));\n        var a = rand() * Math.PI * 2, r = 4.5 + rand() * 3.5;\n        var startPos = new THREE.Vector3(Math.cos(a) * r, -1.5 + rand() * 5, center.z + Math.sin(a) * r * 0.8);\n        var startQ = new THREE.Quaternion().setFromEuler(new THREE.Euler(rand() * 6.3, rand() * 6.3, rand() * 6.3));\n        var rank = idx * 2 + (side > 0 ? 0 : 1);\n        teeth.push({ mesh: mesh, startPos: startPos, endPos: endPos, startQ: startQ, endQ: endQ,\n                     t0: 0.1 + rank * 0.034, spin: rand() * 2 - 1 });\n        arch.add(mesh);\n      });\n    });\n\n    // Borda do alinhador: dois frisos (por fora e por dentro) que se desenham em volta da arcada.\n    var u0 = 0.5 - (half * k) / L, u1 = 0.5 + (half * k) / L, bands = [];\n    [1, -1].forEach(function (dir) {\n      var pts = [];\n      for (var i = 0; i <= 80; i++) {\n        var u = u0 + (u1 - u0) * i / 80, p = curve.getPointAt(u), tan = curve.getTangentAt(u);\n        var out = new THREE.Vector3(-tan.z, 0, tan.x).multiplyScalar(dir * 0.38 * k);\n        pts.push(new THREE.Vector3(p.x + out.x, 0.1 * k, p.z + out.z));\n      }\n      var geo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 240, 0.07 * k, 10, false);\n      var mesh = new THREE.Mesh(geo, material);\n      geo.setDrawRange(0, 0);\n      bands.push(mesh); arch.add(mesh);\n    });\n\n    var shadow = new THREE.Mesh(new THREE.PlaneGeometry(9, 7), new THREE.MeshBasicMaterial({\n      map: softShadowTexture(THREE), transparent: true, depthWrite: false, opacity: 0 }));\n    shadow.rotation.x = -Math.PI / 2; shadow.position.set(0, -0.02, center.z); arch.add(shadow);\n\n    var tmpQ = new THREE.Quaternion(), aspect = 1;\n    function resize() {\n      var w = box.clientWidth, h = box.clientHeight;\n      if (!w || !h) return;\n      renderer.setSize(w, h, false);\n      aspect = w / h; camera.aspect = aspect; camera.updateProjectionMatrix();\n    }\n\n    function pose(p, time) {\n      var landed = 0;\n      teeth.forEach(function (o) {\n        var raw = (p - o.t0) / 0.2, t = clamp(raw, 0, 1), e = easeOut(t);\n        o.mesh.position.lerpVectors(o.startPos, o.endPos, e);\n        o.mesh.position.y += Math.sin(Math.PI * t) * 1.1;\n        if (t < 1) o.mesh.position.y += Math.sin(time * 0.9 + o.spin * 3) * 0.08 * (1 - t);\n        tmpQ.slerpQuaternions(o.startQ, o.endQ, easeInOut(t));\n        o.mesh.quaternion.copy(tmpQ);\n        o.mesh.material.opacity = 1;\n        var glow = raw >= 1 ? clamp(1 - (p - o.t0 - 0.2) / 0.07, 0, 1) : 0;\n        o.mesh.material.emissiveIntensity = glow * 0.55;\n        if (raw >= 1) landed++;\n      });\n      var b = easeInOut(clamp((p - 0.7) / 0.16, 0, 1));\n      bands.forEach(function (m) { var n = m.geometry.index.count; m.geometry.setDrawRange(0, Math.floor(n * b / 6) * 6); });\n      shadow.material.opacity = 0.15 + 0.4 * easeOut(clamp((p - 0.25) / 0.5, 0, 1));\n\n      // Câmera: de frente, perto e baixa (peças soltas) para a vista de 3/4 de cima (peça pronta).\n      var c = easeInOut(clamp(p / 0.9, 0, 1));\n      var az = -0.55 * c, el = 0.14 + 0.5 * c, r = 10.5 - 1.2 * c;\n      // A arcada (≈ 6,4 de largura com folga) sempre cabe na largura da tela, inclusive no celular.\n      var fovH = 2 * Math.atan(Math.tan(camera.fov * Math.PI / 360) * aspect);\n      r = Math.max(r, 2.95 / Math.tan(fovH / 2) + 1.8);\n      camera.position.set(center.x + Math.sin(az) * Math.cos(el) * r, 0.5 + Math.sin(el) * r, center.z + Math.cos(az) * Math.cos(el) * r);\n      camera.lookAt(center.x, 0.45, center.z);\n      arch.rotation.y = 0.35 * easeInOut(clamp((p - 0.82) / 0.18, 0, 1)) + Math.sin(time * 0.5) * 0.03;\n      arch.position.y = Math.sin(time * 0.8) * 0.05;\n\n      if (label) {\n        var txt = b >= 1 ? 'Encaixe perfeito ✓' : 'Encaixe ' + pad(landed) + '/14';\n        if (label.textContent !== txt) label.textContent = txt;\n      }\n    }\n\n    resize();\n    if (window.ResizeObserver) new ResizeObserver(resize).observe(box);\n    return { pose: pose, render: function () { renderer.render(scene, camera); } };\n  }\n\n  function setup(box) {\n    var stage = box.closest('.lp-stage') || box;\n    var target = 0, current = 0, api = null, visible = true, running = false, t0 = performance.now();\n    window.lpScroll.scene(stage, { update: function (p) { target = p; }, done: function () { target = current = 1; } });\n    if ('IntersectionObserver' in window) {\n      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) loop(); }, { rootMargin: '200px 0px' }).observe(box);\n    }\n    function loop() {\n      if (running || !api) return;\n      running = true;\n      (function tick(now) {\n        if (!visible) { running = false; return; }\n        current += (target - current) * 0.2;                  // suaviza sem atrasar a rolagem\n        if (Math.abs(target - current) < 0.0005) current = target;\n        api.pose(current, (now - t0) / 1000);\n        api.render();\n        requestAnimationFrame(tick);\n      })(performance.now());\n    }\n    var gl = document.createElement('canvas');\n    if (!(gl.getContext('webgl2') || gl.getContext('webgl'))) { box.classList.add('is-fallback'); return; }\n    import(THREE_URL).then(function (THREE) {\n      api = build(THREE, box);\n      api.pose(current, 0); api.render();\n      box.classList.add('is-3d');\n      loop();\n    }).catch(function () { box.classList.add('is-fallback'); });\n  }\n\n  function init() { Array.prototype.forEach.call(document.querySelectorAll('.lp-al'), setup); }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+                "_title": "Alinhador 3D (cena · não apagar)",
+                "_css_classes": "lp-al-wrap"
+              },
+              "elements": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "LP Alinhadores · Alinhador 3D (montagem no scroll)",
+  "type": "container"
+}
