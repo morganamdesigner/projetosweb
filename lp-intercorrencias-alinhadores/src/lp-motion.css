@@ -94,6 +94,7 @@ body { overflow-x: hidden; }
 .lp-hero { --o1: 820px; --o1x: 58%; --o1y: -12%; --o2: 1100px; --o2x: 50%; --o2y: -26%; overflow: hidden; }
 .lp-hero-visual { position: relative; }
 .lp-hero-visual::before { content: ""; position: absolute; left: -7%; top: -54%; width: 80%; height: auto; aspect-ratio: 717 / 1692; border: 0; opacity: 1; mix-blend-mode: normal; border-radius: 0; transform: none; background: url("data:image/svg+xml,%3Csvg width='717' height='1692' viewBox='0 0 717 1692' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath id='Vector 1' d='M599.068 59.8787C641.083 48.7174 702.376 71.2117 611.425 250.479C497.737 474.564 176.443 724.406 131.957 799.1C87.4698 873.795 65.2264 1087.58 277.774 1188.03C447.813 1268.39 187.153 1527.16 35.5686 1646.5' stroke-width='115' stroke='%2301C1D9'/%3E%3C/svg%3E") center / 100% 100% no-repeat; pointer-events: none; z-index: 0; }
+.lp-hero-text { position: relative; z-index: 2; }
 .lp-hero-visual > .elementor-element { position: relative; z-index: 1; }
 .lp-float img { animation: lpFloat 6s ease-in-out infinite; }
 @keyframes lpFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
@@ -262,7 +263,7 @@ body { overflow-x: hidden; }
    Responsivo
    --------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .lp-hero-visual::before { width: 62%; left: 2%; top: -32%; }
+  .lp-hero-visual::before { width: 56%; left: 2%; top: -14%; }
   .lp-dots { width: 360px !important; height: 240px; }
 }
 @media (max-width: 767px) {

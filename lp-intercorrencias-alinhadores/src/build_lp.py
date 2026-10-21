@@ -199,7 +199,7 @@ def s01_hero():
     texts = [tag, h1, sub, method, checks, ctas, note]
     for i, el in enumerate(texts):
         anim(el, "fadeInUp", i * 80)
-    text_col = col(texts, 24, "Texto", **w(56), flex_justify_content="center")
+    text_col = col(texts, 24, "Texto", **w(54), flex_justify_content="center", css_classes="lp-hero-text")
 
     visual = image(ASSET + "hero-composicao.webp",
                    "Dra. Joyce Duarte com páginas do guia Intercorrências com Alinhadores, o ebook e um tablet",
@@ -209,7 +209,7 @@ def s01_hero():
                    motion_fx_translateY_affectedRange={"unit": "%", "size": "", "sizes": {"start": 0, "end": 100}},
                    motion_fx_devices=["desktop"])
     cls(visual, "lp-float")
-    visual_col = anim(col([visual], 0, "Composição (expert + ebook)", _flex_size="grow",
+    visual_col = anim(col([visual], 0, "Composição (expert + ebook)", width=px(42, "%"),
                           flex_justify_content="center", css_classes="lp-hero-visual",
                           _flex_align_self_tablet="center",
                           width_tablet=px(80, "%"), width_mobile=px(100, "%")), "fadeInUp", 200)
@@ -286,7 +286,8 @@ def s03_dor():
 
     def case_row(n, label):
         num = cls(heading(n, "rgba(126, 211, 230, 0.4)", typo("typography", 11, 700, lh=1, ls=2.2)), "lp-dor-num")
-        txt = heading(label, "rgba(255, 255, 255, 0.45)", typo("typography", 15, 600, lh=1.45, size_m=14))
+        txt = heading(label, "rgba(255, 255, 255, 0.45)", typo("typography", 15, 600, lh=1.45, size_m=14),
+                      _flex_size="shrink")
         return row([setv(num, _flex_size="none"), txt], 14, f"Linha {n}", flex_align_items="center",
                    padding=dims(16, 18), padding_mobile=dims(12, 14), **solid(GLASS), **border(1, LINE, 14),
                    css_classes="lp-dor-row")
@@ -376,8 +377,7 @@ def s03c_conseq():
                **border(1, "rgba(0, 194, 199, 0.3)", 18), css_classes="lp-cost lp-io", margin=dims(10, 0, 0, 0))
     final = cls(h2('O planejamento você já tem. <span class="lp-grad">Este guia é para quando o caso sai dele.</span>',
                    WHITE, 30, t=28, m=23, lh=1.3, tag="p"), "lp-sweep lp-io")
-    right = col(cards + [cost, setv(final, _margin=dims(18, 0, 0, 0))], 16, "Consequências", width_tablet=px(100, "%"),
-                _flex_size="grow")
+    right = col(cards + [cost, setv(final, _margin=dims(18, 0, 0, 0))], 16, "Consequências", **w(49, 100))
     return section({
         "flex_direction": "row",
         "flex_direction_tablet": "column",
@@ -430,7 +430,7 @@ def s04_apresentacao():
     s3 = anim(step("03", "Conduta", "Manter, recuar, recolar, fazer IPR ou replanejar, com os critérios de cada escolha.",
                    dark=True), "zoomIn", 450)
     right = col([body("<p>Cada intercorrência segue o mesmo raciocínio:</p>", INK, 14, weight=500), s1, arrow(), s2,
-                 arrow(), s3], 6, "Método", _flex_size="grow", width_tablet=px(100, "%"))
+                 arrow(), s3], 6, "Método", **w(47, 100))
     return section({
         "flex_direction": "row",
         "flex_direction_tablet": "column",
@@ -438,7 +438,7 @@ def s04_apresentacao():
         "flex_gap": gap(72),
         "flex_gap_tablet": gap(48),
         **grad("#FBFAFC", "#EEF3F7", 180),
-    }, [col(left, 20, "Texto", **w(48)), right], "04 · Apresentação", "lp-apres")
+    }, [col(left, 20, "Texto", **w(46)), right], "04 · Apresentação", "lp-apres")
 
 
 # ---------------------------------------------------------------------------
@@ -546,7 +546,7 @@ def s06_agenda():
                      **solid("rgba(255, 255, 255, 0.12)"), "css_classes": "lp-agenda-bar"}, [], "Barra de progresso")
     counter_box = row([setv(count, _flex_size="none"),
                        col([heading("de 15 retornos", WHITE, typo("typography", 15, 600, lh=1.4)), bar], 10, "Progresso",
-                           _flex_size="grow")], 18, "Contador", flex_align_items="center", padding=dims(20, 22),
+                           _flex_size="shrink")], 18, "Contador", flex_align_items="center", padding=dims(20, 22),
                       **grad(PROF, NOITE, 135), border_radius=dims(18))
     legend = cls(icon_list([{"text": n} for n, _ in CATEGORIES], INK, typo("icon_typography", 13, 500, lh=1.4),
                            icon_value="fas fa-circle", icon_size=9, space=8, icon_vertical_offset=px(0),
@@ -560,7 +560,7 @@ def s06_agenda():
     ]
     for i, el in enumerate(side_items):
         anim(el, "fadeInUp", i * 80)
-    side = col(side_items, 22, "Coluna fixa (sticky)", width=px(380), width_tablet=px(100, "%"), _flex_size="none",
+    side = col(side_items, 22, "Coluna fixa (sticky)", width=px(34, "%"), width_tablet=px(100, "%"),
                sticky="top", sticky_on=["desktop"], sticky_offset=96, sticky_parent="yes")
 
     # topo da agenda
@@ -571,8 +571,9 @@ def s06_agenda():
                   border_width=dims(1), _flex_size="none"),
              col([heading("Agenda · Consultório", WHITE, typo("typography", 17, 700, lh=1.3, size_m=15)),
                   heading("Terça-feira · dia de retornos", AZC, typo("typography", 13, 500, lh=1.4))], 2, "Títulos")],
-            14, "Título", flex_align_items="center"),
+            14, "Título", flex_align_items="center", _flex_size="shrink"),
         row([tab("Hoje", True), tab("Semana", False)], 6, "Abas", flex_align_items="center", _flex_size="none",
+            width=px(170), flex_justify_content="flex-end",
             hide_mobile="hidden-mobile"),
     ], 16, "Topo da agenda", flex_align_items="center", flex_justify_content="space-between",
         padding=dims(22, 28), padding_mobile=dims(18, 18), **grad(PROF, NOITE, 135))
@@ -592,12 +593,12 @@ def s06_agenda():
                    8, "Paciente", flex_align_items="center")
         info = col([meta,
                     cls(heading(title, PROF, typo("typography", 16, 700, lh=1.35, size_m=15), tag="h3"), "lp-slot-title"),
-                    cls(body(f"<p>{question}</p>", INK, 14, lh=1.5, m=13), "lp-slot-q")], 4, "Consulta", _flex_size="grow")
+                    cls(body(f"<p>{question}</p>", INK, 14, lh=1.5, m=13), "lp-slot-q")], 4, "Consulta", _flex_size="shrink")
         done = cls(heading("✓ conduta definida", AZUL, typo("typography", 11, 700, lh=1.3), _padding=dims(6, 12),
                            _border_radius=dims(999), **solid("#E6F8F9", "_background"), _flex_size="none"),
                    "lp-slot-done")
         num = cls(heading(n, "#C7D3DD", typo("typography", 26, 800, lh=1, size_m=22), _flex_size="none"), "lp-slot-num")
-        card = row([info, done, num], 16, "Card", flex_align_items="center", _flex_size="grow",
+        card = row([info, done, num], 16, "Card", flex_align_items="center", _flex_size="shrink",
                    padding=dims(18, 22, 18, 40), padding_mobile=dims(16, 14, 16, 32), **solid(WHITE),
                    **border(1, "#E6EEF4", 16), css_classes=f"lp-slot-card lp-cat-{cat}")
         state = " is-done" if i < 3 else (" is-active" if i == 3 else "")
@@ -607,7 +608,7 @@ def s06_agenda():
              _element_custom_width_mobile=px(38), _flex_size="none", _margin=dims(20, 0, 0, 0))
     board_slots = col(slots, 2, "Horários", padding=dims(16, 28, 28, 24), padding_mobile=dims(12, 12, 20, 10),
                       css_classes="lp-slots")
-    board = col([top, board_slots], 0, "Agenda", _flex_size="grow", **solid(WHITE), **border(1, "#E3EBF1", 24),
+    board = col([top, board_slots], 0, "Agenda", width=px(61, "%"), **solid(WHITE), **border(1, "#E3EBF1", 24),
                 overflow="hidden", box_shadow_box_shadow_type="yes",
                 box_shadow_box_shadow=shadow(0, 40, 80, -40, "rgba(11, 45, 74, 0.35)"), width_tablet=px(100, "%"))
     return section({
@@ -645,7 +646,7 @@ def s07_para_quem():
         body("<p>Veja quantos interruptores combinam com a sua rotina.</p>", TXT, 16, "center"),
     ], 14, "Título", flex_align_items="center"), "fadeInUp")
 
-    photo = col([btn_primary("Quero o guia por R$ 27", "#oferta")], 0, "Foto da autora", **w(36, 100),
+    photo = col([btn_primary("Quero o guia por R$ 27", "#oferta")], 0, "Foto da autora", **w(34, 100),
                 min_height=px(640), min_height_tablet=px(460), min_height_mobile=px(420),
                 flex_justify_content="flex-end", flex_align_items="center", padding=dims(28),
                 background_background="classic",
@@ -681,7 +682,7 @@ def s07_para_quem():
     switches = col([switch(t, i) for i, t in enumerate(YES, 1)] + [meter], 10, "Para você", css_classes="lp-switches")
     nots = col([heading("Não é para você se:", WHITE, typo("typography", 22, 700, lh=1.3, size_m=19), tag="h3")]
                + [no_row(t, i) for i, t in enumerate(NO, 1)], 10, "Não é para você", margin=dims(26, 0, 0, 0))
-    right = col([switches, nots], 0, "Teste", _flex_size="grow", width_tablet=px(100, "%"))
+    right = col([switches, nots], 0, "Teste", **w(62, 100))
     grid = row([photo, right], 32, "Conteúdo", **r("row", "column"), flex_align_items="stretch")
     return section({
         "flex_gap": gap(56),
@@ -713,7 +714,7 @@ def s08_oferta():
     ]
     for i, el in enumerate(info_items):
         anim(el, "fadeInUp", i * 80)
-    bonus = row([cover, col(info_items, 14, "Texto", _flex_size="grow")], 40, "Card do bônus", **r("row", "column"),
+    bonus = row([cover, col(info_items, 14, "Texto", _flex_size="shrink")], 40, "Card do bônus", **r("row", "column"),
                 flex_align_items="center", flex_align_items_tablet="stretch", padding=dims(32),
                 padding_mobile=dims(18), **solid("rgba(255, 255, 255, 0.04)"), **border(1, LINE, 24))
     anim(bonus, "fadeInUp")
@@ -742,7 +743,7 @@ def s08_oferta():
                         "impresso, páginas soltas e o selo de +2 aulas bônus", width=(100, "%")), "zoomIn")],
             0, "Mockup guia + aula", **w(44, 100), flex_justify_content="center", flex_align_items="center",
             padding=dims(40, 24), **grad("#F4F8FB", "#E1E9F0", 160)),
-        col(buy, 16, "Compra", _flex_size="grow", padding=dims(52, 56), padding_mobile=dims(32, 22),
+        col(buy, 16, "Compra", **w(56, 100), padding=dims(52, 56), padding_mobile=dims(32, 22),
             flex_justify_content="center"),
     ], 0, "Caixa da oferta", **r("row", "column"), flex_align_items="stretch", **solid(WHITE), border_radius=dims(28),
         overflow="hidden", box_shadow_box_shadow_type="yes",
@@ -824,7 +825,7 @@ def s09_confianca():
                      col([h2("Garantia de 7 dias.", PROF, 32, t=30, m=25, lh=1.2, tag="h3"),
                           body("<p>Baixe o guia, assista às aulas e use na sua próxima consulta de retorno. Se não fizer "
                                "sentido para a sua prática, peça o reembolso em até 7 dias e você recebe 100% do valor "
-                               "de volta. Sem perguntas.</p>", INK, 16)], 12, "Texto", _flex_size="grow")],
+                               "de volta. Sem perguntas.</p>", INK, 16)], 12, "Texto", _flex_size="shrink")],
                     48, "Garantia", **r("row", None, "column"), flex_align_items="center", padding=dims(44, 48),
                     padding_mobile=dims(32, 22), flex_gap_mobile=gap(24), **solid(WHITE), border_radius=dims(24),
                     box_shadow_box_shadow_type="yes", box_shadow_box_shadow=shadow(0, 30, 60, -30, "rgba(11, 45, 74, 0.25)"))
@@ -844,7 +845,7 @@ def s09_confianca():
                   col([eyebrow("Quem escreveu", AZUL),
                        h2("Dra. Joyce Duarte", PROF, 40, t=36, m=30),
                        body("<p>Ortodontista, CRO-[UF] [número]. [Formação e especialização.] "
-                            "[Tempo de atuação com alinhadores.]</p>", INK, 17)], 14, "Texto", _flex_size="grow")],
+                            "[Tempo de atuação com alinhadores.]</p>", INK, 17)], 14, "Texto", _flex_size="shrink")],
                  72, "Quem escreveu", **r("row", "column"), flex_align_items="center", flex_gap_tablet=gap(40))
 
     acc = widget("nested-accordion", {
@@ -895,7 +896,7 @@ def s09_confianca():
                        for i, (_, a) in enumerate(FAQ, 1)]
     faq = row([anim(col([eyebrow("FAQ", AZUL), h2("Perguntas frequentes", PROF, 40, t=34, m=28)], 14, "Título",
                         width=px(300), width_tablet=px(100, "%"), _flex_size="none"), "fadeInUp"),
-               anim(col([acc], 0, "Perguntas", _flex_size="grow"), "fadeInUp", 150)],
+               anim(col([acc], 0, "Perguntas", _flex_size="shrink"), "fadeInUp", 150)],
               80, "FAQ", **r("row", "column"), flex_align_items="flex-start", flex_gap_tablet=gap(32))
     return section({"flex_gap": gap(96), "flex_gap_mobile": gap(72), **solid(LIGHT)},
                    [guarantee, author, faq], "09 · Garantia, autora e FAQ", "lp-trust")
@@ -971,6 +972,30 @@ def mobile_bar():
         "Barra fixa no celular (aparece depois do hero)", inner=False)
 
 
+HUG = ("heading", "button", "icon", "counter")
+
+
+def fix_rows(el):
+    """No Elementor, filhos de uma linha têm largura base de 100%. Widgets curtos ficam com
+    largura automática e sem encolher; textos longos encolhem para caber no espaço que sobra."""
+    s = el["settings"]
+    if el["elType"] == "container" and s.get("flex_direction") == "row" and len(el["elements"]) > 1:
+        for ch in el["elements"]:
+            cs = ch["settings"]
+            if ch["elType"] != "widget":
+                continue
+            if "_element_width" in cs:
+                cs.setdefault("_flex_size", "none")
+            elif ch["widgetType"] in HUG and cs.get("_flex_size") in (None, "none"):
+                cs["_element_width"] = "auto"
+                cs["_flex_size"] = "none"
+            elif "_flex_size" not in cs:
+                cs["_flex_size"] = "shrink"
+    for ch in el["elements"]:
+        fix_rows(ch)
+    return el
+
+
 def build():
     content = [
         s00_topbar(),
@@ -989,6 +1014,7 @@ def build():
         s11_rodape(),
         mobile_bar(),
     ]
+    content = [fix_rows(c) for c in content]
     return {
         "content": content,
         "page_settings": {
