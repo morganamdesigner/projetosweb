@@ -116,6 +116,8 @@ Arquivo: `bloco-alinhador-3d-elementor.json`, gerado por `src/build_bloco_alinha
 
 Os 14 dentes do alinhador chegam soltos no espaço e se encaixam um a um na arcada, do centro para trás, com o contador "Encaixe 00/14". Depois a borda do alinhador se desenha e a peça gira até a vista de 3/4 ("Encaixe perfeito ✓"). O 3D é feito com Three.js (carregado do CDN) e usa o mesmo motor de palco preso das outras cenas. Sem WebGL, aparece a foto do alinhador flutuando. A sobrelinha e o título são widgets nativos e podem ser editados.
 
+**Fundo claro ou escuro:** o 3D usa a cor de fundo do container "Palco do alinhador" (*Estilo → Fundo*). Se a cor for escura, ele entra sozinho no modo escuro: brilho turquesa por baixo, luz de contorno e selo turquesa. A versão escura pronta é `bloco-alinhador-3d-escuro-elementor.json`.
+
 ## Regerar o JSON
 
 ```bash

@@ -45,10 +45,11 @@
     return g;
   }
 
-  function softShadowTexture(THREE) {
+  function softShadowTexture(THREE, dark) {
     var c = document.createElement('canvas'); c.width = c.height = 256;
     var x = c.getContext('2d'), gr = x.createRadialGradient(128, 128, 0, 128, 128, 128);
-    gr.addColorStop(0, 'rgba(11,45,74,0.32)'); gr.addColorStop(0.55, 'rgba(11,45,74,0.12)'); gr.addColorStop(1, 'rgba(11,45,74,0)');
+    var rgb = dark ? '0,194,199' : '11,45,74', a = dark ? [0.55, 0.18] : [0.32, 0.12];
+    gr.addColorStop(0, 'rgba(' + rgb + ',' + a[0] + ')'); gr.addColorStop(0.55, 'rgba(' + rgb + ',' + a[1] + ')'); gr.addColorStop(1, 'rgba(' + rgb + ',0)');
     x.fillStyle = gr; x.fillRect(0, 0, 256, 256);
     var t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
     return t;
@@ -63,8 +64,20 @@
     renderer.toneMappingExposure = 1.05;
 
     var scene = new THREE.Scene();
-    var bg = (getComputedStyle(box).getPropertyValue('--al-bg') || '#F2F6F9').trim();
-    scene.background = new THREE.Color(bg);
+    // Fundo: a cor de fundo do palco no Elementor (ou --al-bg, se definida). Fundo escuro liga o
+    // modo escuro: brilho turquesa por baixo no lugar da sombra e luz de contorno mais forte.
+    var bg = (getComputedStyle(box).getPropertyValue('--al-bg') || '').trim();
+    if (!bg) {
+      for (var n = box; n && n !== document.body; n = n.parentElement) {
+        var c = getComputedStyle(n).backgroundColor;
+        if (c && c !== 'transparent' && !/rgba\(.*,\s*0\)$/.test(c)) { bg = c; break; }
+      }
+    }
+    var bgColor = new THREE.Color(bg ? (bg.indexOf('rgb') === 0 ? bg.replace(/rgba?\(([^)]+)\)/, function (m, v) {
+      var a = v.split(',').map(function (x) { return parseFloat(x); }); return 'rgb(' + a[0] + ',' + a[1] + ',' + a[2] + ')'; }) : bg) : '#F2F6F9');
+    var dark = (0.2126 * bgColor.r + 0.7152 * bgColor.g + 0.0722 * bgColor.b) < 0.35;
+    if (dark) box.classList.add('is-dark');
+    scene.background = bgColor;
 
     // Estúdio para os reflexos do material (caixas de luz brancas e uma turquesa).
     var pmrem = new THREE.PMREMGenerator(renderer), env = new THREE.Scene(), cube = new THREE.BoxGeometry(1, 1, 1);
@@ -75,8 +88,9 @@
       m.position.fromArray(b[2]); m.scale.fromArray(b[3]); env.add(m);
     });
     scene.environment = pmrem.fromScene(env, 0.04).texture;
-    scene.add(new THREE.HemisphereLight('#ffffff', '#cfe4ec', 0.6));
-    var key = new THREE.DirectionalLight('#ffffff', 1.4); key.position.set(3, 6, 5); scene.add(key);
+    scene.add(new THREE.HemisphereLight('#ffffff', dark ? '#0b2d4a' : '#cfe4ec', dark ? 0.9 : 0.6));
+    var key = new THREE.DirectionalLight('#ffffff', dark ? 1.8 : 1.4); key.position.set(3, 6, 5); scene.add(key);
+    if (dark) { var rim = new THREE.DirectionalLight('#5fe6ee', 2.2); rim.position.set(-4, 3, -6); scene.add(rim); }
 
     var camera = new THREE.PerspectiveCamera(32, 1, 0.1, 100);
     var arch = new THREE.Group(); scene.add(arch);
@@ -91,9 +105,9 @@
     var k = (L * 0.94) / (half * 2);                       // escala para a arcada ficar cheia
 
     var material = new THREE.MeshPhysicalMaterial({
-      color: '#eafcf9', roughness: 0.16, metalness: 0, transmission: 1, thickness: 0.6, ior: 1.42,
+      color: dark ? '#f2fffd' : '#eafcf9', roughness: 0.16, metalness: 0, transmission: 1, thickness: 0.6, ior: 1.42,
       attenuationColor: new THREE.Color('#9fe3dc'), attenuationDistance: 1.4,
-      clearcoat: 1, clearcoatRoughness: 0.1, envMapIntensity: 1.3, specularIntensity: 1
+      clearcoat: 1, clearcoatRoughness: 0.1, envMapIntensity: dark ? 1.8 : 1.3, specularIntensity: 1
     });
     var rand = rng(7), teeth = [], center = new THREE.Vector3(0, 0, -0.9);
     TEETH.forEach(function (t, idx) {
@@ -133,7 +147,8 @@
     });
 
     var shadow = new THREE.Mesh(new THREE.PlaneGeometry(9, 7), new THREE.MeshBasicMaterial({
-      map: softShadowTexture(THREE), transparent: true, depthWrite: false, opacity: 0 }));
+      map: softShadowTexture(THREE, dark), transparent: true, depthWrite: false, opacity: 0,
+      blending: dark ? THREE.AdditiveBlending : THREE.NormalBlending }));
     shadow.rotation.x = -Math.PI / 2; shadow.position.set(0, -0.02, center.z); arch.add(shadow);
 
     var tmpQ = new THREE.Quaternion(), aspect = 1;
