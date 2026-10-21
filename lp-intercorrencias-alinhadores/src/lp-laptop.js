@@ -24,10 +24,12 @@
         if (window.lpScroll.reduce) return open();
         set(0);
         var state = { p: 0 };
-        // Trava a seção inteira quando o notebook chega ao meio da tela.
-        gsap.to(state, {
+        // Trava a seção inteira quando o notebook chega ao meio da tela. fromTo com valores fixos:
+        // um recálculo das travas no meio da abertura não pode reler o ponto de partida.
+        gsap.fromTo(state, { p: 0 }, {
           p: 1, ease: 'none', onUpdate: function () { set(state.p); },
-          scrollTrigger: { trigger: el, start: 'center center', end: '+=160%', pin: sec, scrub: 0.8, invalidateOnRefresh: true }
+          scrollTrigger: { trigger: el, start: 'center center', end: '+=160%', pin: sec,
+                           scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate() }
         });
       }, { edit: open, fallback: open });
     });

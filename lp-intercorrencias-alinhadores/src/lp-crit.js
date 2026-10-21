@@ -25,7 +25,7 @@
         var tl = gsap.timeline({
           defaults: { ease: 'none' },
           scrollTrigger: { trigger: sec, start: 'top top', end: mobile ? '+=170%' : '+=230%',
-                           pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true }
+                           pin: true, scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate() }
         });
         if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });
         tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')

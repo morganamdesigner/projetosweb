@@ -73,18 +73,28 @@
     libs().then(function () {
       if (!window.gsap || !window.ScrollTrigger) { queue.forEach(function (q) { if (q.fallback) q.fallback(); }); return; }
       gsap.registerPlugin(ScrollTrigger);
-      ScrollTrigger.config({ ignoreMobileResize: true });
+      ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load' });
       smooth();
       queue.sort(byPosition).forEach(run);
       ready = true;
       paintSpacers();
       ScrollTrigger.addEventListener('refresh', paintSpacers);
-      var refresh = function () { ScrollTrigger.refresh(); };
+      // Recalcular as travas no meio de uma rolagem faz a página pular. Os recálculos (fontes,
+      // fim do carregamento, imagens tardias) esperam a rolagem parar.
+      var idleTimer, lastY = -1;
+      var refresh = function () {
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(function () {
+          var y = window.scrollY;
+          if (y !== lastY) { lastY = y; return refresh(); } // ainda rolando: espera mais
+          lastY = -1;
+          ScrollTrigger.refresh();
+        }, 250);
+      };
       if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
       window.addEventListener('load', refresh);
-      // Imagens que carregam depois (lazy load) mudam a altura das seções: recalcula as travas.
       Array.prototype.forEach.call(document.images, function (img) {
-        if (!img.complete) img.addEventListener('load', function () { clearTimeout(window.__lpRf); window.__lpRf = setTimeout(refresh, 150); }, { once: true });
+        if (!img.complete) img.addEventListener('load', refresh, { once: true });
       });
     });
   }
@@ -97,7 +107,11 @@
       queue.push(item);
       if (ready) { run(item); if (ScrollTrigger.sort) ScrollTrigger.sort(); ScrollTrigger.refresh(); }
     },
-    reduce: reduce
+    reduce: reduce,
+    /* Atraso das animações presas: com a rolagem suave (Lenis) ela já suaviza, então a animação
+       acompanha direto; sem Lenis (celular), um atraso curto. */
+    scrub: function () { return window.__lpLenis ? true : 0.4; },
+    anticipate: function () { return window.__lpLenis ? 0 : 1; }
   };
   // Espera os widgets registrarem as seções (eles fazem isso no DOMContentLoaded) antes de começar.
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });
