@@ -27,7 +27,7 @@
   ];
 
   function toothGeometry(THREE, t) {
-    var g = new THREE.CapsuleGeometry(0.5, 0.5, 8, 20); // altura 1,5 no eixo y
+    var g = new THREE.CapsuleGeometry(0.5, 0.5, 6, 16); // altura 1,5 no eixo y
     var pos = g.attributes.position, v = new THREE.Vector3();
     for (var i = 0; i < pos.count; i++) {
       v.fromBufferAttribute(pos, i);
@@ -57,8 +57,9 @@
 
   function build(THREE, box) {
     var canvas = box.querySelector('canvas'), label = box.querySelector('.lp-al-count');
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, powerPreference: 'high-performance' });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    var dpr = window.devicePixelRatio || 1, small = window.matchMedia('(max-width: 767px)').matches;
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: dpr < 2, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(dpr, small ? 1.25 : 1.5));
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.05;
@@ -104,10 +105,13 @@
     var L = curve.getLength(), half = TEETH.reduce(function (s, t) { return s + t.w; }, 0);
     var k = (L * 0.94) / (half * 2);                       // escala para a arcada ficar cheia
 
+    // Acrílico sem refração real (transmission): ela desenha a cena duas vezes por quadro. Transparência
+    // + reflexos do estúdio + verniz dão o mesmo aspecto translúcido por uma fração do custo.
     var material = new THREE.MeshPhysicalMaterial({
-      color: dark ? '#f2fffd' : '#eafcf9', roughness: 0.16, metalness: 0, transmission: 1, thickness: 0.6, ior: 1.42,
-      attenuationColor: new THREE.Color('#9fe3dc'), attenuationDistance: 1.4,
-      clearcoat: 1, clearcoatRoughness: 0.1, envMapIntensity: dark ? 1.8 : 1.3, specularIntensity: 1
+      color: dark ? '#5fc9c2' : '#8fd3cb', roughness: 0.08, metalness: 0, transparent: true,
+      opacity: dark ? 0.34 : 0.42, clearcoat: 1, clearcoatRoughness: 0.05,
+      envMapIntensity: dark ? 0.9 : 0.75, specularIntensity: 1, ior: 1.45, depthWrite: false,
+      side: THREE.DoubleSide
     });
     var rand = rng(7), teeth = [], center = new THREE.Vector3(0, 0, -0.9);
     TEETH.forEach(function (t, idx) {
@@ -140,7 +144,7 @@
         var out = new THREE.Vector3(-tan.z, 0, tan.x).multiplyScalar(dir * 0.38 * k);
         pts.push(new THREE.Vector3(p.x + out.x, 0.1 * k, p.z + out.z));
       }
-      var geo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 240, 0.07 * k, 10, false);
+      var geo = new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 160, 0.07 * k, 8, false);
       var mesh = new THREE.Mesh(geo, material);
       geo.setDrawRange(0, 0);
       bands.push(mesh); arch.add(mesh);
@@ -151,21 +155,22 @@
       blending: dark ? THREE.AdditiveBlending : THREE.NormalBlending }));
     shadow.rotation.x = -Math.PI / 2; shadow.position.set(0, -0.02, center.z); arch.add(shadow);
 
-    var tmpQ = new THREE.Quaternion(), aspect = 1;
+    var tmpQ = new THREE.Quaternion(), aspect = 1, lastP = 0, ready = false;
     function resize() {
       var w = box.clientWidth, h = box.clientHeight;
       if (!w || !h) return;
       renderer.setSize(w, h, false);
       aspect = w / h; camera.aspect = aspect; camera.updateProjectionMatrix();
+      if (ready) { pose(lastP); renderer.render(scene, camera); } // sem laço contínuo: redesenha aqui
     }
 
-    function pose(p, time) {
+    function pose(p) {
+      lastP = p;
       var landed = 0;
       teeth.forEach(function (o) {
         var raw = (p - o.t0) / 0.2, t = clamp(raw, 0, 1), e = easeOut(t);
         o.mesh.position.lerpVectors(o.startPos, o.endPos, e);
         o.mesh.position.y += Math.sin(Math.PI * t) * 1.1;
-        if (t < 1) o.mesh.position.y += Math.sin(time * 0.9 + o.spin * 3) * 0.08 * (1 - t);
         tmpQ.slerpQuaternions(o.startQ, o.endQ, easeInOut(t));
         o.mesh.quaternion.copy(tmpQ);
         o.mesh.material.opacity = 1;
@@ -185,8 +190,7 @@
       r = Math.max(r, 2.95 / Math.tan(fovH / 2) + 1.8);
       camera.position.set(center.x + Math.sin(az) * Math.cos(el) * r, 0.5 + Math.sin(el) * r, center.z + Math.cos(az) * Math.cos(el) * r);
       camera.lookAt(center.x, 0.45, center.z);
-      arch.rotation.y = 0.35 * easeInOut(clamp((p - 0.82) / 0.18, 0, 1)) + Math.sin(time * 0.5) * 0.03;
-      arch.position.y = Math.sin(time * 0.8) * 0.05;
+      arch.rotation.y = 0.35 * easeInOut(clamp((p - 0.82) / 0.18, 0, 1));
 
       if (label) {
         var txt = b >= 1 ? 'Encaixe perfeito ✓' : 'Encaixe ' + pad(landed) + '/14';
@@ -195,37 +199,44 @@
     }
 
     resize();
+    ready = true;
     if (window.ResizeObserver) new ResizeObserver(resize).observe(box);
     return { pose: pose, render: function () { renderer.render(scene, camera); } };
   }
 
   function setup(box) {
     var stage = box.closest('.lp-stage') || box;
-    var target = 0, current = 0, api = null, visible = true, running = false, t0 = performance.now();
-    window.lpScroll.scene(stage, { update: function (p) { target = p; }, done: function () { target = current = 1; } });
-    if ('IntersectionObserver' in window) {
-      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) loop(); }, { rootMargin: '200px 0px' }).observe(box);
-    }
-    function loop() {
-      if (running || !api) return;
+    var target = 0, current = 0, api = null, visible = false, running = false, loading = false;
+    // Desenha só quando o progresso muda: com a página parada, a placa de vídeo descansa.
+    function kick() {
+      if (running || !api || !visible) return;
       running = true;
-      (function tick(now) {
-        if (!visible) { running = false; return; }
+      requestAnimationFrame(function tick() {
         current += (target - current) * 0.2;                  // suaviza sem atrasar a rolagem
         if (Math.abs(target - current) < 0.0005) current = target;
-        api.pose(current, (now - t0) / 1000);
-        api.render();
-        requestAnimationFrame(tick);
-      })(performance.now());
+        api.pose(current); api.render();
+        if (current !== target && visible) requestAnimationFrame(tick); else running = false;
+      });
     }
-    var gl = document.createElement('canvas');
-    if (!(gl.getContext('webgl2') || gl.getContext('webgl'))) { box.classList.add('is-fallback'); return; }
-    import(THREE_URL).then(function (THREE) {
-      api = build(THREE, box);
-      api.pose(current, 0); api.render();
-      box.classList.add('is-3d');
-      loop();
-    }).catch(function () { box.classList.add('is-fallback'); });
+    window.lpScroll.scene(stage, {
+      update: function (p) { target = p; kick(); },
+      done: function () { target = current = 1; if (api) { api.pose(1); api.render(); } }
+    });
+    function load() {
+      if (loading) return;
+      loading = true;
+      var gl = document.createElement('canvas');
+      if (!(gl.getContext('webgl2') || gl.getContext('webgl'))) { box.classList.add('is-fallback'); return; }
+      import(THREE_URL).then(function (THREE) {
+        api = build(THREE, box);
+        current = target; api.pose(current); api.render();
+        box.classList.add('is-3d');
+      }).catch(function () { box.classList.add('is-fallback'); });
+    }
+    if (!('IntersectionObserver' in window)) { visible = true; load(); return; }
+    // O Three.js só é baixado quando a seção está a ~1,5 tela de distância (não pesa na abertura).
+    new IntersectionObserver(function (e) { if (e[0].isIntersecting) load(); }, { rootMargin: '150% 0px' }).observe(box);
+    new IntersectionObserver(function (e) { visible = e[0].isIntersecting; if (visible) kick(); }, { rootMargin: '100px 0px' }).observe(box);
   }
 
   function init() { Array.prototype.forEach.call(document.querySelectorAll('.lp-al'), setup); }
