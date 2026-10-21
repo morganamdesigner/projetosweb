@@ -93,7 +93,7 @@ body { overflow-x: hidden; }
    --------------------------------------------------------------------------- */
 .lp-hero { --o1: 820px; --o1x: 58%; --o1y: -12%; --o2: 1100px; --o2x: 50%; --o2y: -26%; overflow: hidden; }
 .lp-hero-visual { position: relative; }
-.lp-hero-visual::before { content: ""; position: absolute; width: 1100px; height: 1100px; left: 18%; top: 50%; transform: translateY(-50%) rotate(-28deg); border-radius: 50%; border: 70px solid transparent; border-left-color: rgba(0, 194, 199, .95); border-top-color: rgba(0, 194, 199, .35); filter: drop-shadow(0 0 40px rgba(0, 194, 199, .35)); pointer-events: none; z-index: 0; }
+.lp-hero-visual::before { content: ""; position: absolute; left: -12%; top: 50%; width: 74%; height: auto; aspect-ratio: 600 / 1600; border: 0; opacity: 1; mix-blend-mode: normal; border-radius: 0; transform: translateY(-50%); background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 1600' preserveAspectRatio='none'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2307E3F3' stop-opacity='.15'/%3E%3Cstop offset='.18' stop-color='%2307E3F3'/%3E%3Cstop offset='.55' stop-color='%2300C2C7'/%3E%3Cstop offset='.85' stop-color='%230A92C4'/%3E%3Cstop offset='1' stop-color='%230A92C4' stop-opacity='.1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url%28%23g%29' d='M590 0 C 330 250, 0 540, 0 820 C 0 1120, 250 1400, 430 1600 C 320 1400, 150 1120, 150 820 C 150 560, 400 260, 590 0 Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat; filter: drop-shadow(0 0 36px rgba(0, 194, 199, .35)); pointer-events: none; z-index: 0; }
 .lp-hero-visual > .elementor-element { position: relative; z-index: 1; }
 .lp-float img { animation: lpFloat 6s ease-in-out infinite; }
 @keyframes lpFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
@@ -262,11 +262,11 @@ body { overflow-x: hidden; }
    Responsivo
    --------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
-  .lp-hero-visual::before { width: 760px; height: 760px; border-width: 48px; left: 10%; }
+  .lp-hero-visual::before { width: 46%; left: -4%; }
   .lp-dots { width: 360px !important; height: 240px; }
 }
 @media (max-width: 767px) {
-  .lp-hero-visual::before { width: 520px; height: 520px; border-width: 34px; left: 4%; }
+  .lp-hero-visual::before { width: 50%; left: -6%; }
   .lp-orbits::before, .lp-orbits::after { opacity: .6; }
   .lp-scene__prog { display: none; }
   .lp-ribbon--back { top: 8px; }
