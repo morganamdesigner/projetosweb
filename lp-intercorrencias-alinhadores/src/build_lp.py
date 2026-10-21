@@ -865,25 +865,31 @@ FAQ = [
 ]
 
 
+COIN = (f"https://cdn.jsdelivr.net/gh/morganamdesigner/projetosweb@93ae6263c9659be2ec1ecaff054b2f3d5374e96a/"
+        "lp-intercorrencias-alinhadores/assets/moeda-garantia-7-dias.webp")
+DARK_CARD = {**solid("rgba(255, 255, 255, 0.04)"), **border(1, LINE, 24)}
+
+
 def s09_confianca():
-    seal = col([heading("7", TURQ, typo("typography", 64, 800, lh=1), align="center"),
-                heading("dias de garantia", AZC, typo("typography", 9, 700, lh=1.3, ls=2, transform="uppercase"),
-                        align="center")], 4, "Selo 7 dias", width=px(180), min_height=px(180), _flex_size="none",
-               flex_justify_content="center", flex_align_items="center", **grad(PROF, NOITE, 135),
-               border_radius=dims(999), css_classes="lp-seal", width_mobile=px(140), min_height_mobile=px(140))
-    guarantee = row([anim(seal, "zoomIn"),
-                     col([h2("Garantia de 7 dias.", PROF, 32, t=30, m=25, lh=1.2, tag="h3"),
+    css = open(os.path.join(HERE, "lp-coin.css"), encoding="utf-8").read().strip()
+    style = setv(html("<style>\n" + css + "\n</style>"), _title="Moeda · estilos e animação (não apagar)",
+                 _position="absolute", _element_width="initial", _element_custom_width=px(0))
+    coin = cls(image(COIN, "Selo de 7 dias de garantia", width=(100, "%")), "lp-coin")
+    coin_box = col([coin], 0, "Moeda 7 dias (flutua e balança)", width=px(300), width_tablet=px(260),
+                   width_mobile=px(230), _flex_size="none", flex_align_items="center")
+    guarantee = row([anim(coin_box, "zoomIn"),
+                     col([eyebrow("Garantia incondicional", TURQ),
+                          h2("Garantia de 7 dias.", WHITE, 36, t=32, m=27, lh=1.2, tag="h3"),
                           body("<p>Baixe o guia, assista às aulas e use na sua próxima consulta de retorno. Se não fizer "
                                "sentido para a sua prática, peça o reembolso em até 7 dias e você recebe 100% do valor "
-                               "de volta. Sem perguntas.</p>", INK, 16)], 12, "Texto", _flex_size="shrink")],
-                    48, "Garantia", **r("row", None, "column"), flex_align_items="center", padding=dims(44, 48),
-                    padding_mobile=dims(32, 22), flex_gap_mobile=gap(24), **solid(WHITE), border_radius=dims(24),
-                    box_shadow_box_shadow_type="yes", box_shadow_box_shadow=shadow(0, 30, 60, -30, "rgba(11, 45, 74, 0.25)"))
+                               "de volta. Sem perguntas.</p>", TXT, 17)], 14, "Texto", _flex_size="shrink")],
+                    56, "Garantia", **r("row", None, "column"), flex_align_items="center", padding=dims(40, 56),
+                    padding_mobile=dims(32, 22), flex_gap_mobile=gap(16), **DARK_CARD)
     anim(guarantee, "fadeInUp")
 
     tag = anim(col([heading("Dra. Joyce Duarte", WHITE, typo("typography", 17, 700, lh=1.3)),
                     heading("Ortodontista · Especialista em alinhadores", AZC, typo("typography", 12, 500, lh=1.4))], 4,
-                   "Etiqueta do nome", padding=dims(15, 19), **solid(PROF), border_radius=dims(14),
+                   "Etiqueta do nome", padding=dims(15, 19), **grad(MED, PROF, 135), **border(1, LINE), border_radius=dims(14),
                    box_shadow_box_shadow_type="yes", box_shadow_box_shadow=shadow(0, 20, 40, -16, "rgba(1, 19, 36, 0.6)"),
                    margin=dims(-70, 0, 0, 0), margin_mobile=dims(-60, 0, 0, 0), _flex_align_self="flex-end",
                    z_index=2), "fadeInUp", 300)
@@ -892,10 +898,10 @@ def s09_confianca():
                 width=px(400), width_mobile=px(100, "%"), _flex_size="none", css_classes="lp-author-photo",
                 margin=dims(20))
     author = row([anim(photo, "fadeInUp"),
-                  col([eyebrow("Quem escreveu", AZUL),
-                       h2("Dra. Joyce Duarte", PROF, 40, t=36, m=30),
+                  col([eyebrow("Quem escreveu", TURQ),
+                       h2("Dra. Joyce Duarte", WHITE, 40, t=36, m=30),
                        body("<p>Ortodontista, CRO-[UF] [número]. [Formação e especialização.] "
-                            "[Tempo de atuação com alinhadores.]</p>", INK, 17)], 14, "Texto", _flex_size="shrink")],
+                            "[Tempo de atuação com alinhadores.]</p>", TXT, 17)], 14, "Texto", _flex_size="shrink")],
                  72, "Quem escreveu", **r("row", "column"), flex_align_items="center", flex_gap_tablet=gap(40))
 
     acc = widget("nested-accordion", {
@@ -912,44 +918,45 @@ def s09_confianca():
         "accordion_item_title_space_between": px(12),
         "accordion_item_title_distance_from_content": px(0),
         "accordion_background_normal_background": "classic",
-        "accordion_background_normal_color": WHITE,
+        "accordion_background_normal_color": "rgba(255, 255, 255, 0.04)",
         "accordion_background_hover_background": "classic",
-        "accordion_background_hover_color": WHITE,
+        "accordion_background_hover_color": "rgba(255, 255, 255, 0.07)",
         "accordion_background_active_background": "classic",
-        "accordion_background_active_color": WHITE,
+        "accordion_background_active_color": "rgba(0, 194, 199, 0.08)",
         "accordion_padding": dims(22, 26),
         "accordion_padding_mobile": dims(18, 18),
         "accordion_border_radius": dims(18),
         "accordion_border_normal_border": "solid",
         "accordion_border_normal_width": dims(1),
-        "accordion_border_normal_color": "#E3EBF1",
+        "accordion_border_normal_color": "rgba(126, 211, 230, 0.18)",
         "accordion_border_hover_border": "solid",
         "accordion_border_hover_width": dims(1),
-        "accordion_border_hover_color": "#BFEFF0",
+        "accordion_border_hover_color": "rgba(126, 211, 230, 0.4)",
         "accordion_border_active_border": "solid",
         "accordion_border_active_width": dims(1),
         "accordion_border_active_color": TURQ,
         "content_border_border": "none",
         **typo("title_typography", 16, 700, lh=1.45, size_m=15),
-        "normal_title_color": PROF,
-        "hover_title_color": AZUL,
-        "active_title_color": PROF,
-        "normal_icon_color": PROF,
-        "hover_icon_color": AZUL,
+        "normal_title_color": WHITE,
+        "hover_title_color": TURQ,
+        "active_title_color": WHITE,
+        "normal_icon_color": WHITE,
+        "hover_icon_color": TURQ,
         "active_icon_color": WHITE,
         "icon_size": px(12),
         "icon_spacing": px(16),
         "_css_classes": "lp-faq",
     })
-    acc["elements"] = [col([body(f"<p>{a}</p>", INK, 15, lh=1.6, m=14)], 0, f"Resposta {i}",
+    acc["elements"] = [col([body(f"<p>{a}</p>", TXT, 15, lh=1.6, m=14)], 0, f"Resposta {i}",
                            padding=dims(0, 26, 24, 26), padding_mobile=dims(0, 18, 18, 18))
                        for i, (_, a) in enumerate(FAQ, 1)]
-    faq = row([anim(col([eyebrow("FAQ", AZUL), h2("Perguntas frequentes", PROF, 40, t=34, m=28)], 14, "Título",
+    faq = row([anim(col([eyebrow("FAQ", TURQ), h2("Perguntas frequentes", WHITE, 40, t=34, m=28)], 14, "Título",
                         width=px(300), width_tablet=px(100, "%"), _flex_size="none"), "fadeInUp"),
                anim(col([acc], 0, "Perguntas", _flex_size="shrink"), "fadeInUp", 150)],
               80, "FAQ", **r("row", "column"), flex_align_items="flex-start", flex_gap_tablet=gap(32))
-    return section({"flex_gap": gap(96), "flex_gap_mobile": gap(72), **solid(LIGHT)},
-                   [guarantee, author, faq], "09 · Garantia, autora e FAQ", "lp-trust")
+    return section({"flex_gap": gap(96), "flex_gap_mobile": gap(72),
+                    **grad("#0B2D4A", NOITE, 0, 0, 65, kind="radial", position="top center")},
+                   [style, guarantee, author, faq], "09 · Garantia, autora e FAQ", "lp-trust")
 
 
 # ---------------------------------------------------------------------------

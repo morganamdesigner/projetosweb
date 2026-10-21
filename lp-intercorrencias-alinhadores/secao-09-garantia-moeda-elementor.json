@@ -1,0 +1,1751 @@
+{
+  "content": [
+    {
+      "id": "52c5bca",
+      "elType": "container",
+      "isInner": false,
+      "settings": {
+        "flex_gap": {
+          "column": "96",
+          "row": "96",
+          "isLinked": true,
+          "unit": "px",
+          "size": 96
+        },
+        "padding": {
+          "unit": "px",
+          "top": "120",
+          "right": "24",
+          "bottom": "120",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "boxed",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "96",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "72",
+          "right": "16",
+          "bottom": "72",
+          "left": "16",
+          "isLinked": false
+        },
+        "css_classes": "lp lp-trust",
+        "boxed_width": {
+          "unit": "px",
+          "size": 1140,
+          "sizes": []
+        },
+        "flex_gap_mobile": {
+          "column": "72",
+          "row": "72",
+          "isLinked": true,
+          "unit": "px",
+          "size": 72
+        },
+        "background_background": "gradient",
+        "background_color": "#0B2D4A",
+        "background_color_stop": {
+          "unit": "%",
+          "size": 0,
+          "sizes": []
+        },
+        "background_color_b": "#011324",
+        "background_color_b_stop": {
+          "unit": "%",
+          "size": 65,
+          "sizes": []
+        },
+        "background_gradient_type": "radial",
+        "background_gradient_position": "top center",
+        "_title": "09 · Garantia, autora e FAQ",
+        "__globals__": {
+          "background_color": "",
+          "background_color_b": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "60bb932",
+          "elType": "widget",
+          "isInner": false,
+          "widgetType": "html",
+          "settings": {
+            "html": "<style>\n/* Seção 09 em fundo escuro: moeda de garantia flutuando e balançando, com brilho desfocado atrás. */\n.lp-coin, .lp-coin .elementor-widget-container { perspective: 1000px; }\n.lp-coin::before { content: \"\"; position: absolute; left: 50%; top: 52%; width: 135%; aspect-ratio: 1; border-radius: 50%;\n  transform: translate(-50%, -50%); background: radial-gradient(circle, rgba(0, 194, 199, .8), rgba(0, 194, 199, .25) 40%, rgba(0, 194, 199, 0) 68%);\n  filter: blur(36px); animation: lpCoinGlow 6s ease-in-out infinite; pointer-events: none; z-index: 0; }\n.lp-coin img { position: relative; z-index: 1; transform-origin: 50% 50%; animation: lpCoinSwing 6s ease-in-out infinite;\n  filter: drop-shadow(0 34px 34px rgba(0, 0, 0, .55)); will-change: transform; }\n@keyframes lpCoinSwing {\n  0%, 100% { transform: translateY(0) rotateY(-26deg) rotateZ(-4deg); }\n  50% { transform: translateY(-18px) rotateY(26deg) rotateZ(4deg); }\n}\n@keyframes lpCoinGlow {\n  0%, 100% { opacity: .65; transform: translate(-50%, -50%) scale(.92); }\n  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); }\n}\n.lp-trust .lp-author-photo::before { border-color: rgba(126, 211, 230, .14); border-top-color: var(--lp-turquesa, #00C2C7); }\n.lp-trust .lp-faq .e-n-accordion-item-title-icon { background: rgba(255, 255, 255, .08); }\n.lp-trust .lp-faq .e-n-accordion-item[open] { box-shadow: 0 0 0 1.5px #00C2C7, 0 16px 40px -20px rgba(0, 194, 199, .6); }\n.lp-trust .lp-faq .e-n-accordion-item-title { background-color: rgba(255, 255, 255, .04); border: 1px solid rgba(126, 211, 230, .18); transition: background-color .25s, border-color .25s; }\n.lp-trust .lp-faq .e-n-accordion-item-title:hover { background-color: rgba(255, 255, 255, .07); border-color: rgba(126, 211, 230, .4); }\n.lp-trust .lp-faq .e-n-accordion-item[open] > .e-n-accordion-item-title { background-color: rgba(0, 194, 199, .08); border-color: #00C2C7; }\n.lp-trust .lp-faq .e-n-accordion-item-title-text { color: #FFFFFF; }\n.lp-trust .lp-faq .e-n-accordion-item-title:hover .e-n-accordion-item-title-text { color: #00C2C7; }\n.lp-trust .lp-faq .e-n-accordion-item-title-icon { color: #FFFFFF; }\n@media (prefers-reduced-motion: reduce) { .lp-coin img, .lp-coin::before { animation: none; } }\n</style>",
+            "_title": "Moeda · estilos e animação (não apagar)",
+            "_position": "absolute",
+            "_element_width": "initial",
+            "_element_custom_width": {
+              "unit": "px",
+              "size": 0,
+              "sizes": []
+            }
+          },
+          "elements": []
+        },
+        {
+          "id": "fff77c9",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "56",
+              "row": "56",
+              "isLinked": true,
+              "unit": "px",
+              "size": 56
+            },
+            "padding": {
+              "unit": "px",
+              "top": "40",
+              "right": "56",
+              "bottom": "40",
+              "left": "56",
+              "isLinked": false
+            },
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "flex_direction_mobile": "column",
+            "flex_align_items": "center",
+            "padding_mobile": {
+              "unit": "px",
+              "top": "32",
+              "right": "22",
+              "bottom": "32",
+              "left": "22",
+              "isLinked": false
+            },
+            "flex_gap_mobile": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "background_background": "classic",
+            "background_color": "rgba(255, 255, 255, 0.04)",
+            "border_border": "solid",
+            "border_width": {
+              "unit": "px",
+              "top": "1",
+              "right": "1",
+              "bottom": "1",
+              "left": "1",
+              "isLinked": true
+            },
+            "border_color": "rgba(126, 211, 230, 0.18)",
+            "border_radius": {
+              "unit": "px",
+              "top": "24",
+              "right": "24",
+              "bottom": "24",
+              "left": "24",
+              "isLinked": true
+            },
+            "_title": "Garantia",
+            "__globals__": {
+              "background_color": "",
+              "border_color": ""
+            },
+            "animation": "fadeInUp",
+            "animation_duration": "fast"
+          },
+          "elements": [
+            {
+              "id": "dd9db91",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "px",
+                  "size": 300,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "px",
+                  "size": 260,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "px",
+                  "size": 230,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "flex_align_items": "center",
+                "_title": "Moeda 7 dias (flutua e balança)",
+                "animation": "zoomIn",
+                "animation_duration": "fast"
+              },
+              "elements": [
+                {
+                  "id": "f49928f",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://cdn.jsdelivr.net/gh/morganamdesigner/projetosweb@93ae6263c9659be2ec1ecaff054b2f3d5374e96a/lp-intercorrencias-alinhadores/assets/moeda-garantia-7-dias.webp",
+                      "id": "",
+                      "size": "",
+                      "alt": "Selo de 7 dias de garantia",
+                      "source": "library"
+                    },
+                    "image_size": "full",
+                    "align": "center",
+                    "link_to": "none",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "_css_classes": "lp-coin"
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "b44a49a",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "_flex_size": "shrink",
+                "_title": "Texto"
+              },
+              "elements": [
+                {
+                  "id": "02c6edd",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Garantia incondicional",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#00C2C7",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 3,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-eyebrow"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "7383e46",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Garantia de 7 dias.",
+                    "header_size": "h3",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.2,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 32,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 27,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "6dd9f64",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Baixe o guia, assista às aulas e use na sua próxima consulta de retorno. Se não fizer sentido para a sua prática, peça o reembolso em até 7 dias e você recebe 100% do valor de volta. Sem perguntas.</p>",
+                    "align": "left",
+                    "text_color": "#C3D6E3",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "453b7a0",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "72",
+              "row": "72",
+              "isLinked": true,
+              "unit": "px",
+              "size": 72
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "flex_direction_tablet": "column",
+            "flex_align_items": "center",
+            "flex_gap_tablet": {
+              "column": "40",
+              "row": "40",
+              "isLinked": true,
+              "unit": "px",
+              "size": 40
+            },
+            "_title": "Quem escreveu"
+          },
+          "elements": [
+            {
+              "id": "5c89b3b",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "px",
+                  "size": 400,
+                  "sizes": []
+                },
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "css_classes": "lp-author-photo",
+                "margin": {
+                  "unit": "px",
+                  "top": "20",
+                  "right": "20",
+                  "bottom": "20",
+                  "left": "20",
+                  "isLinked": true
+                },
+                "_title": "Foto da autora",
+                "animation": "fadeInUp",
+                "animation_duration": "fast"
+              },
+              "elements": [
+                {
+                  "id": "2e3df80",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "image",
+                  "settings": {
+                    "image": {
+                      "url": "https://cdn.jsdelivr.net/gh/morganamdesigner/projetosweb@51f898463bb3dbb93ae46643a172b2e4d80e09d8/lp-intercorrencias-alinhadores/assets/autora.webp",
+                      "id": "",
+                      "size": "",
+                      "alt": "Dra. Joyce Duarte, autora do guia",
+                      "source": "library"
+                    },
+                    "image_size": "full",
+                    "align": "center",
+                    "link_to": "none",
+                    "width": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "height": {
+                      "unit": "px",
+                      "size": 480,
+                      "sizes": []
+                    },
+                    "object-fit": "cover",
+                    "object-position": "top center",
+                    "image_border_radius": {
+                      "unit": "px",
+                      "top": "24",
+                      "right": "24",
+                      "bottom": "24",
+                      "left": "24",
+                      "isLinked": true
+                    },
+                    "height_mobile": {
+                      "unit": "px",
+                      "size": 400,
+                      "sizes": []
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "3fe014d",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "4",
+                      "row": "4",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 4
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "15",
+                      "right": "19",
+                      "bottom": "15",
+                      "left": "19",
+                      "isLinked": false
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "background_background": "gradient",
+                    "background_color": "#0E3C5E",
+                    "background_color_stop": {
+                      "unit": "%",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "background_color_b": "#0B2D4A",
+                    "background_color_b_stop": {
+                      "unit": "%",
+                      "size": 100,
+                      "sizes": []
+                    },
+                    "background_gradient_type": "linear",
+                    "background_gradient_angle": {
+                      "unit": "deg",
+                      "size": 135,
+                      "sizes": []
+                    },
+                    "border_border": "solid",
+                    "border_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "border_color": "rgba(126, 211, 230, 0.18)",
+                    "border_radius": {
+                      "unit": "px",
+                      "top": "14",
+                      "right": "14",
+                      "bottom": "14",
+                      "left": "14",
+                      "isLinked": true
+                    },
+                    "box_shadow_box_shadow_type": "yes",
+                    "box_shadow_box_shadow": {
+                      "horizontal": 0,
+                      "vertical": 20,
+                      "blur": 40,
+                      "spread": -16,
+                      "color": "rgba(1, 19, 36, 0.6)"
+                    },
+                    "margin": {
+                      "unit": "px",
+                      "top": "-70",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "margin_mobile": {
+                      "unit": "px",
+                      "top": "-60",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "_flex_align_self": "flex-end",
+                    "z_index": 2,
+                    "_title": "Etiqueta do nome",
+                    "__globals__": {
+                      "background_color": "",
+                      "background_color_b": "",
+                      "border_color": ""
+                    },
+                    "animation": "fadeInUp",
+                    "animation_duration": "fast",
+                    "animation_delay": 300
+                  },
+                  "elements": [
+                    {
+                      "id": "c21a203",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Dra. Joyce Duarte",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 17,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "700",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.3,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "7e9743e",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Ortodontista · Especialista em alinhadores",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#7ED3E6",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 12,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.4,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        }
+                      },
+                      "elements": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "87f8437",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "_flex_size": "shrink",
+                "_title": "Texto"
+              },
+              "elements": [
+                {
+                  "id": "e120155",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Quem escreveu",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#00C2C7",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 3,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-eyebrow"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "489e4e7",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Dra. Joyce Duarte",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.15,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 36,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 30,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "961c746",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "text-editor",
+                  "settings": {
+                    "editor": "<p>Ortodontista, CRO-[UF] [número]. [Formação e especialização.] [Tempo de atuação com alinhadores.]</p>",
+                    "align": "left",
+                    "text_color": "#C3D6E3",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 17,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "400",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.6,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "246f610",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "80",
+              "row": "80",
+              "isLinked": true,
+              "unit": "px",
+              "size": 80
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "full",
+            "flex_direction": "row",
+            "flex_wrap": "nowrap",
+            "flex_direction_tablet": "column",
+            "flex_align_items": "flex-start",
+            "flex_gap_tablet": {
+              "column": "32",
+              "row": "32",
+              "isLinked": true,
+              "unit": "px",
+              "size": 32
+            },
+            "_title": "FAQ"
+          },
+          "elements": [
+            {
+              "id": "ca0900f",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "14",
+                  "row": "14",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 14
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "width": {
+                  "unit": "px",
+                  "size": 300,
+                  "sizes": []
+                },
+                "width_tablet": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                },
+                "_flex_size": "none",
+                "_title": "Título",
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "width_mobile": {
+                  "unit": "%",
+                  "size": 100,
+                  "sizes": []
+                }
+              },
+              "elements": [
+                {
+                  "id": "999b0ae",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "FAQ",
+                    "header_size": "p",
+                    "align": "left",
+                    "title_color": "#00C2C7",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "700",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.3,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": 3,
+                      "sizes": []
+                    },
+                    "typography_text_transform": "uppercase",
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    },
+                    "_css_classes": "lp-eyebrow"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "3a5a52e",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "heading",
+                  "settings": {
+                    "title": "Perguntas frequentes",
+                    "header_size": "h2",
+                    "align": "left",
+                    "title_color": "#FFFFFF",
+                    "typography_typography": "custom",
+                    "typography_font_family": "Montserrat",
+                    "typography_font_size": {
+                      "unit": "px",
+                      "size": 40,
+                      "sizes": []
+                    },
+                    "typography_font_weight": "800",
+                    "typography_line_height": {
+                      "unit": "em",
+                      "size": 1.15,
+                      "sizes": []
+                    },
+                    "typography_letter_spacing": {
+                      "unit": "px",
+                      "size": -0.5,
+                      "sizes": []
+                    },
+                    "typography_font_size_tablet": {
+                      "unit": "px",
+                      "size": 34,
+                      "sizes": []
+                    },
+                    "typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 28,
+                      "sizes": []
+                    },
+                    "__globals__": {
+                      "title_color": "",
+                      "typography_typography": ""
+                    }
+                  },
+                  "elements": []
+                }
+              ]
+            },
+            {
+              "id": "8f0b1a8",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "_flex_size": "shrink",
+                "_title": "Perguntas",
+                "animation": "fadeInUp",
+                "animation_duration": "fast",
+                "animation_delay": 150
+              },
+              "elements": [
+                {
+                  "id": "6e9a19d",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "nested-accordion",
+                  "settings": {
+                    "items": [
+                      {
+                        "item_title": "Já tenho o planejamento do laboratório. Por que preciso do guia?",
+                        "_id": "67605eb"
+                      },
+                      {
+                        "item_title": "Serve para qualquer marca de alinhador?",
+                        "_id": "bb43b3c"
+                      },
+                      {
+                        "item_title": "Serve para quem está começando com alinhadores?",
+                        "_id": "c558648"
+                      },
+                      {
+                        "item_title": "Em que formato recebo o guia?",
+                        "_id": "23bae71"
+                      },
+                      {
+                        "item_title": "Como funcionam as 2 aulas bônus?",
+                        "_id": "036948e"
+                      },
+                      {
+                        "item_title": "O pagamento é único ou é assinatura?",
+                        "_id": "5f54abe"
+                      },
+                      {
+                        "item_title": "Como funciona a garantia?",
+                        "_id": "11ec150"
+                      },
+                      {
+                        "item_title": "Como recebo o acesso?",
+                        "_id": "3c7e782"
+                      }
+                    ],
+                    "title_tag": "h3",
+                    "default_state": "expanded",
+                    "max_items_expended": "one",
+                    "faq_schema": "yes",
+                    "n_accordion_animation_duration": {
+                      "unit": "ms",
+                      "size": 250,
+                      "sizes": []
+                    },
+                    "accordion_item_title_position_horizontal": "stretch",
+                    "accordion_item_title_icon_position": "end",
+                    "accordion_item_title_icon": {
+                      "value": "fas fa-plus",
+                      "library": "fa-solid"
+                    },
+                    "accordion_item_title_icon_active": {
+                      "value": "fas fa-plus",
+                      "library": "fa-solid"
+                    },
+                    "accordion_item_title_space_between": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "accordion_item_title_distance_from_content": {
+                      "unit": "px",
+                      "size": 0,
+                      "sizes": []
+                    },
+                    "accordion_background_normal_background": "classic",
+                    "accordion_background_normal_color": "rgba(255, 255, 255, 0.04)",
+                    "accordion_background_hover_background": "classic",
+                    "accordion_background_hover_color": "rgba(255, 255, 255, 0.07)",
+                    "accordion_background_active_background": "classic",
+                    "accordion_background_active_color": "rgba(0, 194, 199, 0.08)",
+                    "accordion_padding": {
+                      "unit": "px",
+                      "top": "22",
+                      "right": "26",
+                      "bottom": "22",
+                      "left": "26",
+                      "isLinked": false
+                    },
+                    "accordion_padding_mobile": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "accordion_border_radius": {
+                      "unit": "px",
+                      "top": "18",
+                      "right": "18",
+                      "bottom": "18",
+                      "left": "18",
+                      "isLinked": true
+                    },
+                    "accordion_border_normal_border": "solid",
+                    "accordion_border_normal_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "accordion_border_normal_color": "rgba(126, 211, 230, 0.18)",
+                    "accordion_border_hover_border": "solid",
+                    "accordion_border_hover_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "accordion_border_hover_color": "rgba(126, 211, 230, 0.4)",
+                    "accordion_border_active_border": "solid",
+                    "accordion_border_active_width": {
+                      "unit": "px",
+                      "top": "1",
+                      "right": "1",
+                      "bottom": "1",
+                      "left": "1",
+                      "isLinked": true
+                    },
+                    "accordion_border_active_color": "#00C2C7",
+                    "content_border_border": "none",
+                    "title_typography_typography": "custom",
+                    "title_typography_font_family": "Montserrat",
+                    "title_typography_font_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "title_typography_font_weight": "700",
+                    "title_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.45,
+                      "sizes": []
+                    },
+                    "title_typography_font_size_mobile": {
+                      "unit": "px",
+                      "size": 15,
+                      "sizes": []
+                    },
+                    "normal_title_color": "#FFFFFF",
+                    "hover_title_color": "#00C2C7",
+                    "active_title_color": "#FFFFFF",
+                    "normal_icon_color": "#FFFFFF",
+                    "hover_icon_color": "#00C2C7",
+                    "active_icon_color": "#FFFFFF",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "icon_spacing": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "_css_classes": "lp-faq",
+                    "__globals__": {
+                      "accordion_background_normal_color": "",
+                      "accordion_background_hover_color": "",
+                      "accordion_background_active_color": "",
+                      "accordion_border_normal_color": "",
+                      "accordion_border_hover_color": "",
+                      "accordion_border_active_color": "",
+                      "title_typography_typography": "",
+                      "normal_title_color": "",
+                      "hover_title_color": "",
+                      "active_title_color": "",
+                      "normal_icon_color": "",
+                      "hover_icon_color": "",
+                      "active_icon_color": ""
+                    }
+                  },
+                  "elements": [
+                    {
+                      "id": "d3f9be9",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 1"
+                      },
+                      "elements": [
+                        {
+                          "id": "f31f49d",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>O planejamento mostra o caminho ideal. O guia é para quando o caso sai dele: ajuda você a identificar a causa provável da intercorrência e a decidir a conduta na própria consulta.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "013a4b6",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 2"
+                      },
+                      "elements": [
+                        {
+                          "id": "d744e0a",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Sim. As condutas partem de sinais clínicos e de princípios de biomecânica, não de um sistema específico. Você aplica com o alinhador que já usa no consultório.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "b74f498",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 3"
+                      },
+                      "elements": [
+                        {
+                          "id": "a48c63d",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Serve para quem já trata ou está começando a tratar com alinhadores. O guia não ensina planejamento do zero: ele organiza a tomada de decisão nas consultas de retorno.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4ad6522",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 4"
+                      },
+                      "elements": [
+                        {
+                          "id": "429c880",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Em PDF, otimizado para consulta rápida no celular, no tablet ou no computador. As aulas bônus ficam na plataforma de acesso.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "16cbb0e",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 5"
+                      },
+                      "elements": [
+                        {
+                          "id": "45667b6",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>São aulas gravadas que mostram como aplicar o guia na rotina clínica, da avaliação na cadeira à decisão de conduta. Assista quando quiser e reveja sempre que precisar.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "9347597",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 6"
+                      },
+                      "elements": [
+                        {
+                          "id": "1c40be9",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>É um pagamento único de R$ 27, no Pix ou no cartão. Não há mensalidade.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4347428",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 7"
+                      },
+                      "elements": [
+                        {
+                          "id": "ac42ea1",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Você tem 7 dias para usar o guia e assistir às aulas. Se não fizer sentido para a sua prática, peça o reembolso e recebe 100% do valor de volta, sem perguntas.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "332816c",
+                      "elType": "container",
+                      "isInner": true,
+                      "settings": {
+                        "flex_gap": {
+                          "column": "0",
+                          "row": "0",
+                          "isLinked": true,
+                          "unit": "px",
+                          "size": 0
+                        },
+                        "padding": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "26",
+                          "bottom": "24",
+                          "left": "26",
+                          "isLinked": false
+                        },
+                        "content_width": "full",
+                        "flex_direction": "column",
+                        "padding_mobile": {
+                          "unit": "px",
+                          "top": "0",
+                          "right": "18",
+                          "bottom": "18",
+                          "left": "18",
+                          "isLinked": false
+                        },
+                        "_title": "Resposta 8"
+                      },
+                      "elements": [
+                        {
+                          "id": "606c35f",
+                          "elType": "widget",
+                          "isInner": false,
+                          "widgetType": "text-editor",
+                          "settings": {
+                            "editor": "<p>Assim que o pagamento é confirmado, você recebe no e-mail o acesso à plataforma, com o download do guia e as aulas.</p>",
+                            "align": "left",
+                            "text_color": "#C3D6E3",
+                            "typography_typography": "custom",
+                            "typography_font_family": "Montserrat",
+                            "typography_font_size": {
+                              "unit": "px",
+                              "size": 15,
+                              "sizes": []
+                            },
+                            "typography_font_weight": "400",
+                            "typography_line_height": {
+                              "unit": "em",
+                              "size": 1.6,
+                              "sizes": []
+                            },
+                            "typography_font_size_mobile": {
+                              "unit": "px",
+                              "size": 14,
+                              "sizes": []
+                            },
+                            "__globals__": {
+                              "text_color": "",
+                              "typography_typography": ""
+                            }
+                          },
+                          "elements": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "page_settings": [],
+  "version": "0.4",
+  "title": "LP Alinhadores · 09 Garantia, autora e FAQ (moeda)",
+  "type": "container"
+}
