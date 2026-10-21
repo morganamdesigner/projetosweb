@@ -261,6 +261,14 @@ body { overflow-x: hidden; }
   .lp-ribbon--front { top: 34px; }
   .lp-switch > .elementor-widget { padding-right: 60px; }
   .lp-slot.is-active .lp-slot-title .elementor-heading-title { font-size: 18px; }
+  /* Card da agenda: o texto ocupa a largura toda; o selo desce e o número vai para o canto. */
+  .lp-slot-card { flex-wrap: wrap !important; row-gap: 8px; }
+  .lp-slot-card > .e-con { flex: 1 1 100% !important; width: 100% !important; padding-right: 36px; }
+  .lp-slot.is-active .lp-slot-card > .e-con { padding-right: 54px; }
+  .lp-slot.is-active .lp-slot-num { top: auto; bottom: 12px; }
+  .lp-slot-card > .e-con > .e-con { flex-wrap: wrap !important; row-gap: 4px; }
+  .lp-slot-num { position: absolute !important; top: 14px; right: 12px; }
+  .lp-slot-done { flex: 0 0 auto !important; }
   .lp-slot.is-active .lp-slot-num .elementor-heading-title { font-size: 30px; }
   .lp-author-photo::before { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
 }

@@ -1,7 +1,7 @@
 /* LP · Intercorrências com Alinhadores
    Interações que o Elementor não faz sozinho. Cada bloco procura as classes lp-* dos containers
-   e widgets nativos e sai em silêncio se a seção não existir. GSAP + ScrollTrigger (cdnjs)
-   cuidam do pin com scrub das seções 03 e 03b. Sem GSAP, tudo fica visível no estado final. */
+   e widgets nativos e sai em silêncio se a seção não existir. As travas com GSAP (seções 03,
+   03b e 04) são criadas pelo orquestrador (lp-boot.js), na ordem da página. */
 (function () {
   if (window.__lpMotion) return;
   window.__lpMotion = true;
@@ -9,8 +9,6 @@
   var doc = document.documentElement;
   doc.classList.add('lp-js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var editMode = false;
-  var hasGsap = function () { return !editMode && !!(window.gsap && window.ScrollTrigger); };
   var $ = function (sel, root) { return (root || document).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); };
   var clamp = function (v, a, b) { return Math.min(b, Math.max(a, v)); };
@@ -119,15 +117,7 @@
     } else { load(); }
 
     if (reduce) { update(1); return; }
-    if (hasGsap()) {
-      var mm = gsap.matchMedia();
-      mm.add('(min-width: 768px)', function () {
-        ScrollTrigger.create({ trigger: sec, start: 'top top', end: '+=300%', pin: true, anticipatePin: 1, onUpdate: function (st) { update(st.progress); } });
-      });
-      mm.add('(max-width: 767px)', function () {
-        ScrollTrigger.create({ trigger: sec, start: 'top 65%', end: 'bottom 35%', onUpdate: function (st) { update(st.progress); } });
-      });
-    } else {
+    var scrollFallback = function () {
       var tick = false;
       var calc = function () {
         tick = false;
@@ -136,7 +126,17 @@
       };
       window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(calc); } }, { passive: true });
       calc();
-    }
+    };
+    // A trava é criada pelo orquestrador (lp-boot.js), na ordem da página.
+    window.lpScroll.add(sec, function (gsap, ScrollTrigger) {
+      var mm = gsap.matchMedia();
+      mm.add('(min-width: 768px)', function () {
+        ScrollTrigger.create({ trigger: sec, start: 'top top', end: '+=300%', pin: true, onUpdate: function (st) { update(st.progress); } });
+      });
+      mm.add('(max-width: 767px)', function () {
+        ScrollTrigger.create({ trigger: sec, start: 'top 65%', end: 'bottom 35%', onUpdate: function (st) { update(st.progress); } });
+      });
+    }, { edit: function () { update(1); }, fallback: scrollFallback });
   }
 
   /* 06 · Agenda: a linha AGORA desce com o scroll e acende o card da vez */
@@ -214,18 +214,12 @@
   }
 
   function init() {
-    // No editor do Elementor: sem pin (o painel recarrega os elementos a todo momento).
-    editMode = document.body.classList.contains('elementor-editor-active') ||
-      !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());
     initMarquee();
     initReveal();
     initScene();
     initAgenda();
     initSwitches();
     initMobileBar();
-    if (hasGsap()) {
-      window.addEventListener('load', function () { ScrollTrigger.refresh(); });
-    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);

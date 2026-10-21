@@ -137,16 +137,15 @@ def logo():
 # 00 · Barra superior (marquee) + widget de estilos/scripts
 # ---------------------------------------------------------------------------
 
+def boot_js():
+    """Orquestrador das travas (GSAP/ScrollTrigger/Lenis carregados uma vez, travas na ordem da página)."""
+    return open(os.path.join(HERE, "lp-boot.js"), encoding="utf-8").read().strip()
+
+
 def motion_widget():
     css = open(os.path.join(HERE, "lp-motion.css"), encoding="utf-8").read().strip()
     js = open(os.path.join(HERE, "lp-motion.js"), encoding="utf-8").read().strip()
-    code = (
-        "<style>\n" + css + "\n</style>\n"
-        '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>\n'
-        '<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>\n'
-        "<script>\nwindow.addEventListener('DOMContentLoaded',function(){if(window.gsap&&window.ScrollTrigger)gsap.registerPlugin(ScrollTrigger);});\n</script>\n"
-        "<script defer>\n" + js + "\n</script>"
-    )
+    code = "<style>\n" + css + "\n</style>\n<script>\n" + boot_js() + "\n" + js + "\n</script>"
     return setv(html(code), _title="LP · estilos e animações (não apagar)", _position="absolute",
                 _element_width="initial", _element_custom_width=px(0), _css_classes="lp-motion")
 
@@ -327,7 +326,7 @@ def s03b_impact():
     esquerda, "a consulta vira" pela direita e "improviso:" vem gigante e desfocado até entrar em foco
     (mesma coreografia da seção amarela da referência). CSS/JS no widget da própria seção."""
     css = open(os.path.join(HERE, "lp-crit.css"), encoding="utf-8").read().strip()
-    js = open(os.path.join(HERE, "lp-crit.js"), encoding="utf-8").read().strip()
+    js = boot_js() + "\n" + open(os.path.join(HERE, "lp-crit.js"), encoding="utf-8").read().strip()
     code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
                 _title="Sem critério · estilos e animação (não apagar)", _position="absolute",
                 _element_width="initial", _element_custom_width=px(0))
@@ -464,7 +463,7 @@ PAGE_IMG = "https://placehold.co/1046x1482/F4F8FB/0B2D4A.png?text=Troque+pela+p%
 def laptop():
     """Notebook que abre com o scroll, com uma página do guia na tela (seção 04)."""
     css = open(os.path.join(HERE, "lp-laptop.css"), encoding="utf-8").read().strip()
-    js = open(os.path.join(HERE, "lp-laptop.js"), encoding="utf-8").read().strip()
+    js = boot_js() + "\n" + open(os.path.join(HERE, "lp-laptop.js"), encoding="utf-8").read().strip()
     code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
                 _title="Notebook · estilos e animação (não apagar)", _position="absolute",
                 _element_width="initial", _element_custom_width=px(0))
