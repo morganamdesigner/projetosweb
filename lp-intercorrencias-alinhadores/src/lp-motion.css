@@ -110,7 +110,7 @@ html, body { background-color: #011324 !important; }
 .lp-scene__ring { position: absolute; left: 50%; top: 44%; width: 24%; aspect-ratio: 1; transform: translate(-50%, -50%) scale(.85); border-radius: 50%; border: 1.5px dashed rgba(0, 194, 199, .8); opacity: 0; transition: all .5s; pointer-events: none; }
 .lp-scene__ring::after { content: ""; position: absolute; inset: -12px; border-radius: 50%; border: 1px solid rgba(126, 211, 230, .25); }
 .lp-scene__ring.is-show { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-.lp-scene__label { position: absolute; left: 50%; bottom: 9%; transform: translate(-50%, 8px); display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: rgba(1, 19, 36, .75); backdrop-filter: blur(8px); border: 1px solid rgba(0, 194, 199, .5); color: #fff; font: 600 13px/1.2 Montserrat, Arial, sans-serif; white-space: nowrap; opacity: 0; transition: all .4s; }
+.lp-scene__label { position: absolute; left: 50%; bottom: 9%; transform: translate(-50%, 8px); display: flex; align-items: center; gap: 10px; padding: 10px 16px; border-radius: 999px; background: rgba(1, 19, 36, .88); border: 1px solid rgba(0, 194, 199, .5); color: #fff; font: 600 13px/1.2 Montserrat, Arial, sans-serif; white-space: nowrap; opacity: 0; transition: all .4s; }
 .lp-scene__label.is-show { opacity: 1; transform: translate(-50%, 0); }
 .lp-scene__label b { color: var(--lp-turquesa); letter-spacing: .15em; }
 .lp-scene__prog { position: absolute; right: 0; top: 50%; transform: translateY(-50%); display: grid; gap: 10px; }

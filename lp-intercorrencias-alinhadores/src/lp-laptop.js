@@ -29,7 +29,8 @@
         gsap.fromTo(state, { p: 0 }, {
           p: 1, ease: 'none', onUpdate: function () { set(state.p); },
           scrollTrigger: { trigger: el, start: 'center center', end: '+=160%', pin: sec,
-                           scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate() }
+                           scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate(),
+                           pinType: window.lpScroll.pinType() }
         });
       }, { edit: open, fallback: open });
     });

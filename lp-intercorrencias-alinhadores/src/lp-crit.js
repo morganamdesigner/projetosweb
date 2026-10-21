@@ -25,7 +25,8 @@
         var tl = gsap.timeline({
           defaults: { ease: 'none' },
           scrollTrigger: { trigger: sec, start: 'top top', end: mobile ? '+=170%' : '+=230%',
-                           pin: true, scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate() }
+                           pin: true, scrub: window.lpScroll.scrub(), anticipatePin: window.lpScroll.anticipate(),
+                           pinType: window.lpScroll.pinType() }
         });
         if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });
         tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')
@@ -39,6 +40,7 @@
         // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.
         //    O recorte vale também para o espaço da trava (pin-spacer), que tem o fundo da seção.
         var spacer = sec.parentNode && sec.parentNode.classList.contains('pin-spacer') ? sec.parentNode : null;
+        if (spacer) spacer.classList.add('lp-crit-spacer');
         gsap.fromTo([sec, spacer].filter(Boolean), { '--chamfer': mobile ? '36px' : '84px' }, {
           '--chamfer': '0px', ease: 'none',
           scrollTrigger: { trigger: spacer || sec, start: 'top bottom', end: 'top top', scrub: true }

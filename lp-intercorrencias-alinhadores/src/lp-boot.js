@@ -111,7 +111,11 @@
     /* Atraso das animações presas: com a rolagem suave (Lenis) ela já suaviza, então a animação
        acompanha direto; sem Lenis (celular), um atraso curto. */
     scrub: function () { return window.__lpLenis ? true : 0.4; },
-    anticipate: function () { return window.__lpLenis ? 0 : 1; }
+    anticipate: function () { return window.__lpLenis ? 0 : 1; },
+    /* Com a rolagem suave (desktop), a trava segura a seção com transform: ela nunca troca de
+       "fixa na tela" para "no fluxo da página", troca que obriga o navegador a redesenhar a camada
+       inteira e às vezes pular um quadro (a seção "some" ao soltar). No celular, rolagem nativa: fixed. */
+    pinType: function () { return window.__lpLenis ? 'transform' : 'fixed'; }
   };
   // Espera os widgets registrarem as seções (eles fazem isso no DOMContentLoaded) antes de começar.
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });

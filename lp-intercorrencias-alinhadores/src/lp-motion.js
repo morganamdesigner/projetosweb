@@ -132,7 +132,8 @@
       var mm = gsap.matchMedia();
       mm.add('(min-width: 768px)', function () {
         ScrollTrigger.create({ trigger: sec, start: 'top top', end: '+=300%', pin: true,
-                               anticipatePin: window.lpScroll.anticipate(), onUpdate: function (st) { update(st.progress); } });
+                               anticipatePin: window.lpScroll.anticipate(), pinType: window.lpScroll.pinType(),
+                               onUpdate: function (st) { update(st.progress); } });
       });
       mm.add('(max-width: 767px)', function () {
         ScrollTrigger.create({ trigger: sec, start: 'top 65%', end: 'bottom 35%', onUpdate: function (st) { update(st.progress); } });
