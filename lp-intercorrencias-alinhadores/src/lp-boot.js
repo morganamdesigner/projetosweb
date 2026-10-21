@@ -1,15 +1,18 @@
-/* Orquestrador único das animações de scroll da LP. Vai repetido nos widgets que usam GSAP (estilos
-   globais, 03b e notebook), mas só a primeira cópia roda. Carrega GSAP, ScrollTrigger e Lenis uma vez
-   e cria as travas (pins) na ordem em que as seções aparecem na página: o ScrollTrigger calcula cada
-   trava contando o espaço das anteriores, então criar fora de ordem desloca as seguintes. */
+/* Motor das cenas presas no scroll (03 Dor, 03b Sem critério, notebook da 04). Vai repetido nos
+   widgets que usam cenas, mas só a primeira cópia roda.
+
+   Sem "pin" por JavaScript: cada cena fica num palco (.lp-stage) com position: sticky dentro de uma
+   trilha alta (.lp-track). Quem segura o palco na tela é o próprio navegador, sem tremor e sem troca
+   de camada. Este motor só mede quanto da trilha já foi rolado (0 → 1) e entrega esse progresso
+   para cada cena, no mesmo quadro da rolagem. No desktop, a rolagem suave (Lenis) roda no mesmo laço. */
 (function () {
   if (window.lpScroll) return;
-  var queue = [], ready = false, started = false;
   var CDN = {
     gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',
-    st: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',
     lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'
   };
+  var scenes = [], started = false, needLayout = true, lastY = -1, lenis = null;
+  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };
   var edit = function () {
     return document.body.classList.contains('elementor-editor-active') ||
       !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());
@@ -24,23 +27,41 @@
       document.head.appendChild(s);
     });
   }
-  function libs() {
-    var p = Promise.resolve();
-    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });
-    p = p.then(function () { if (!window.ScrollTrigger) return load(CDN.st); });
-    if (desktop && !reduce) p = p.then(function () { if (!window.Lenis) return load(CDN.lenis); });
-    return p;
+
+  // Mede a posição das trilhas (só quando o layout muda; nunca a cada quadro).
+  function layout() {
+    needLayout = false;
+    var y = window.scrollY, vh = window.innerHeight;
+    scenes.forEach(function (s) {
+      var r = s.track.getBoundingClientRect();
+      s.top = r.top + y;
+      s.height = r.height;
+      s.stageH = s.stage.offsetHeight;
+      s.sticky = getComputedStyle(s.stage).position === 'sticky' && s.height > s.stageH + 10;
+      s.vh = vh;
+    });
   }
-  function byPosition(a, b) {
-    return a.el.compareDocumentPosition(b.el) & Node.DOCUMENT_POSITION_FOLLOWING ? -1 : 1;
+  function frame() {
+    if (needLayout) { layout(); lastY = -1; }
+    var y = window.scrollY;
+    if (y === lastY) return;
+    lastY = y;
+    scenes.forEach(function (s) {
+      var p, enter = clamp((y + s.vh - s.top) / s.vh);
+      if (s.sticky) p = clamp((y - s.top) / (s.height - s.stageH));
+      else p = clamp((y + s.vh * 0.65 - s.top) / Math.max(1, s.height)); // celular sem palco preso
+      if (p !== s.p || enter !== s.enter) { s.p = p; s.enter = enter; s.fn(p, enter); }
+    });
+  }
+  function loop(t) {
+    if (lenis) lenis.raf(t);
+    frame();
+    requestAnimationFrame(loop);
   }
   function smooth() {
-    if (window.__lpLenis || !window.Lenis || !desktop || reduce) return;
-    var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });
+    if (!window.Lenis || !desktop || reduce) return;
+    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
     window.__lpLenis = lenis;
-    lenis.on('scroll', ScrollTrigger.update);
-    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });
-    gsap.ticker.lagSmoothing(0);
     document.addEventListener('click', function (e) {
       var a = e.target.closest && e.target.closest('a[href^="#"]');
       if (!a) return;
@@ -52,72 +73,41 @@
       lenis.scrollTo(target, { offset: -50 });
     }, true);
   }
-  /* O espaço reservado pela trava (pin-spacer) recebe o fundo da própria seção. Se o navegador
-     perder um quadro ao soltar a trava (redesenho de camada pesada), aparece a cor da seção e não o
-     fundo branco da página. */
-  function paintSpacers() {
-    ScrollTrigger.getAll().forEach(function (st) {
-      if (!st.pin || !st.spacer || st.spacer === st.pin) return;
-      var cs = getComputedStyle(st.pin);
-      st.spacer.style.backgroundColor = cs.backgroundColor;
-      st.spacer.style.backgroundImage = cs.backgroundImage;
-    });
-  }
-  function run(item) {
-    try { item.fn(window.gsap, window.ScrollTrigger); } catch (err) { if (window.console) console.error('[LP]', err); }
-  }
   function start() {
     if (started) return;
     started = true;
-    if (edit()) { queue.forEach(function (q) { if (q.edit) q.edit(); }); return; }
-    libs().then(function () {
-      if (!window.gsap || !window.ScrollTrigger) { queue.forEach(function (q) { if (q.fallback) q.fallback(); }); return; }
-      gsap.registerPlugin(ScrollTrigger);
-      ScrollTrigger.config({ ignoreMobileResize: true, autoRefreshEvents: 'visibilitychange,DOMContentLoaded,load' });
+    if (edit() || reduce) {
+      document.documentElement.classList.add('lp-static');
+      scenes.forEach(function (s) { if (s.done) s.done(); });
+      return;
+    }
+    var p = Promise.resolve();
+    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });
+    if (desktop && !window.Lenis) p = p.then(function () { return load(CDN.lenis); });
+    p.then(function () {
+      scenes.forEach(function (s) { if (s.init) s.init(window.gsap); });
       smooth();
-      queue.sort(byPosition).forEach(run);
-      ready = true;
-      paintSpacers();
-      ScrollTrigger.addEventListener('refresh', paintSpacers);
-      // Recalcular as travas no meio de uma rolagem faz a página pular. Os recálculos (fontes,
-      // fim do carregamento, imagens tardias) esperam a rolagem parar.
-      var idleTimer, lastY = -1;
-      var refresh = function () {
-        clearTimeout(idleTimer);
-        idleTimer = setTimeout(function () {
-          var y = window.scrollY;
-          if (y !== lastY) { lastY = y; return refresh(); } // ainda rolando: espera mais
-          lastY = -1;
-          ScrollTrigger.refresh();
-        }, 250);
-      };
-      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
-      window.addEventListener('load', refresh);
-      Array.prototype.forEach.call(document.images, function (img) {
-        if (!img.complete) img.addEventListener('load', refresh, { once: true });
-      });
+      var dirty = function () { needLayout = true; };
+      window.addEventListener('resize', dirty);
+      window.addEventListener('load', dirty);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(dirty);
+      if (window.ResizeObserver) new ResizeObserver(dirty).observe(document.body);
+      requestAnimationFrame(loop);
     });
   }
+
   window.lpScroll = {
-    /* el: elemento da seção (define a ordem); fn(gsap, ScrollTrigger): cria as animações;
-       opts.edit: estado final no editor; opts.fallback: sem GSAP (CDN bloqueado). */
-    add: function (el, fn, opts) {
-      if (!el) return;
-      var item = { el: el, fn: fn, edit: opts && opts.edit, fallback: opts && opts.fallback };
-      queue.push(item);
-      if (ready) { run(item); if (ScrollTrigger.sort) ScrollTrigger.sort(); ScrollTrigger.refresh(); }
+    /* stage: o palco (.lp-stage) dentro da trilha (.lp-track).
+       opts.init(gsap): prepara a cena; opts.update(p, enter): progresso da trilha (0–1) e da
+       entrada da seção na tela (0–1); opts.done(): estado final (editor, movimento reduzido). */
+    scene: function (stage, opts) {
+      if (!stage) return;
+      var track = stage.closest('.lp-track') || stage;
+      scenes.push({ stage: stage, track: track, init: opts.init, fn: opts.update, done: opts.done, p: -1, enter: -1 });
+      needLayout = true;
     },
-    reduce: reduce,
-    /* Atraso das animações presas: com a rolagem suave (Lenis) ela já suaviza, então a animação
-       acompanha direto; sem Lenis (celular), um atraso curto. */
-    scrub: function () { return window.__lpLenis ? true : 0.4; },
-    anticipate: function () { return window.__lpLenis ? 0 : 1; },
-    /* Com a rolagem suave (desktop), a trava segura a seção com transform: ela nunca troca de
-       "fixa na tela" para "no fluxo da página", troca que obriga o navegador a redesenhar a camada
-       inteira e às vezes pular um quadro (a seção "some" ao soltar). No celular, rolagem nativa: fixed. */
-    pinType: function () { return window.__lpLenis ? 'transform' : 'fixed'; }
+    reduce: reduce
   };
-  // Espera os widgets registrarem as seções (eles fazem isso no DOMContentLoaded) antes de começar.
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });
   else setTimeout(start, 0);
 })();

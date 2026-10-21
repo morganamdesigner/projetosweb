@@ -1,10 +1,21 @@
 {
   "content": [
     {
-      "id": "8231a16",
+      "id": "e0b53f7",
       "elType": "container",
       "isInner": false,
       "settings": {
+        "content_width": "full",
+        "flex_direction": "column",
+        "html_tag": "section",
+        "padding": {
+          "unit": "px",
+          "top": "0",
+          "right": "0",
+          "bottom": "0",
+          "left": "0",
+          "isLinked": true
+        },
         "flex_gap": {
           "column": "0",
           "row": "0",
@@ -12,87 +23,12 @@
           "unit": "px",
           "size": 0
         },
-        "padding": {
-          "unit": "px",
-          "top": "80",
-          "right": "24",
-          "bottom": "80",
-          "left": "24",
-          "isLinked": false
-        },
-        "content_width": "full",
-        "html_tag": "section",
-        "flex_direction": "column",
-        "padding_tablet": {
-          "unit": "px",
-          "top": "96",
-          "right": "24",
-          "bottom": "96",
-          "left": "24",
-          "isLinked": false
-        },
-        "padding_mobile": {
-          "unit": "px",
-          "top": "64",
-          "right": "16",
-          "bottom": "64",
-          "left": "16",
-          "isLinked": false
-        },
-        "css_classes": "lp lp-crit",
-        "min_height": {
-          "unit": "vh",
-          "size": 100,
-          "sizes": []
-        },
-        "flex_justify_content": "center",
-        "flex_align_items": "center",
-        "background_background": "gradient",
-        "background_color": "#13DDE8",
-        "background_color_stop": {
-          "unit": "%",
-          "size": 0,
-          "sizes": []
-        },
-        "background_color_b": "#00AFC6",
-        "background_color_b_stop": {
-          "unit": "%",
-          "size": 100,
-          "sizes": []
-        },
-        "background_gradient_type": "linear",
-        "background_gradient_angle": {
-          "unit": "deg",
-          "size": 160,
-          "sizes": []
-        },
-        "_title": "03b · Sem critério (frase presa no scroll)",
-        "__globals__": {
-          "background_color": "",
-          "background_color_b": ""
-        }
+        "css_classes": "lp-track lp-track--crit",
+        "_title": "03b · Sem critério (frase presa no scroll) · trilha do scroll"
       },
       "elements": [
         {
-          "id": "cf89c27",
-          "elType": "widget",
-          "isInner": false,
-          "widgetType": "html",
-          "settings": {
-            "html": "<style>\n/* 03b · \"Sem critério, a consulta vira improviso:\" — painel turquesa que sobe com os cantos de cima\n   chanfrados, trava na tela e monta a frase: as duas metades entram pelas laterais e \"improviso:\"\n   vem gigante e desfocado até entrar em foco. Depois a seção segue o scroll normalmente. */\nhtml, html.lenis { scroll-behavior: auto !important; }\nhtml.lenis, html.lenis body { height: auto; }\n.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }\n.lenis.lenis-stopped { overflow: hidden; }\n\n.lp-crit { --chamfer: 0px; position: relative; overflow: hidden; isolation: isolate;\n  clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }\n.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;\n  background-image: radial-gradient(rgba(255, 255, 255, .28) 1.4px, transparent 1.6px);\n  background-size: 26px 26px;\n  -webkit-mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%);\n  mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%); }\n.lp-crit-content { position: relative; z-index: 2; }\n.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }\n.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: \"\"; width: 48px; height: 1px; background: currentColor; opacity: .7; }\n.lp-crit-split { will-change: transform, opacity; }\n.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; will-change: transform, filter;\n  text-shadow: 0 12px 40px rgba(1, 19, 36, .18); }\n.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }\n.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }\n.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }\n.lp-crit-hint .elementor-icon-list-item { justify-content: center; }\n\n@media (prefers-reduced-motion: reduce) { .lp-crit { clip-path: none; } }\n</style>\n<script>\n/* 03b · Sem critério: entrada do painel com cantos chanfrados e seção presa com scrub. Também liga a rolagem suave (Lenis) no desktop,\n   sincronizada com o ScrollTrigger, para as passagens entre seções ficarem fluidas.\n   Carrega GSAP/ScrollTrigger/Lenis do CDN se ainda não estiverem na página. */\n(function () {\n  if (window.__lpCrit) return;\n  window.__lpCrit = true;\n\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    st: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  function load(src, ok) {\n    var s = document.createElement('script');\n    s.src = src; s.onload = ok; s.onerror = ok;\n    document.head.appendChild(s);\n  }\n  function need(cb) {\n    var steps = [];\n    if (!window.gsap) steps.push(CDN.gsap);\n    if (!window.ScrollTrigger) steps.push(CDN.st);\n    if (!window.Lenis) steps.push(CDN.lenis);\n    (function next() { if (!steps.length) return cb(); load(steps.shift(), next); })();\n  }\n\n  var edit = function () { return document.body.classList.contains('elementor-editor-active'); };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  function smoothScroll() {\n    if (window.__lpLenis || !window.Lenis || reduce || edit()) return;\n    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return; // só desktop\n    var lenis = new Lenis({ duration: 1.15, easing: function (t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); } });\n    window.__lpLenis = lenis;\n    lenis.on('scroll', ScrollTrigger.update);\n    gsap.ticker.add(function (time) { lenis.raf(time * 1000); });\n    gsap.ticker.lagSmoothing(0);\n    // Links de âncora (#oferta, #por-dentro) com a mesma rolagem suave.\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n\n  function section(sec) {\n    var $ = function (s) { return sec.querySelector(s); };\n    var over = $('.lp-crit-over'), left = $('.lp-crit-left'), right = $('.lp-crit-right'), word = $('.lp-crit-word');\n    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex');\n    if (!word) return;\n    var title = word.querySelector('.elementor-heading-title') || word;\n    var mobile = window.matchMedia('(max-width: 767px)').matches;\n\n    // 1. Entrada: o painel sobe com os cantos de cima chanfrados, que se abrem até a tela cheia.\n    gsap.fromTo(sec, { '--chamfer': mobile ? '36px' : '84px' }, {\n      '--chamfer': '0px', ease: 'none',\n      scrollTrigger: { trigger: sec, start: 'top bottom', end: 'top top', scrub: true }\n    });\n\n    // 2. Estado inicial da frase.\n    if (over) gsap.set(over, { autoAlpha: 0, y: 14 });\n    if (left) gsap.set(left, { xPercent: -140, autoAlpha: 0 });\n    if (right) gsap.set(right, { xPercent: 140, autoAlpha: 0 });\n    gsap.set(title, { scale: mobile ? 1.7 : 2.1, filter: 'blur(' + (mobile ? 16 : 26) + 'px)', autoAlpha: 0 });\n    if (path) gsap.set(path, { '--draw': 1 });\n    if (hint) gsap.set(hint, { autoAlpha: 0, y: 10 });\n\n    // 3. Seção presa: data → metades pelas laterais → palavra em foco → traço → dica → pausa.\n    var tl = gsap.timeline({\n      defaults: { ease: 'none' },\n      scrollTrigger: {\n        trigger: sec, start: 'top top', end: mobile ? '+=170%' : '+=230%',\n        pin: true, scrub: mobile ? 0.6 : 1, invalidateOnRefresh: true\n      }\n    });\n    if (over) tl.to(over, { autoAlpha: 1, y: 0, duration: 0.08 });\n    tl.to([left, right].filter(Boolean), { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')\n      .to(title, { autoAlpha: 1, duration: 0.06 }, '<0.12')\n      .to(title, { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<');\n    if (path) tl.to(path, { '--draw': 0, duration: 0.16 }, '>-0.04');\n    if (hint) tl.to(hint, { autoAlpha: 1, y: 0, duration: 0.07 }, '>-0.02');\n    tl.to({}, { duration: 0.22 }); // segura a frase pronta antes de a seção seguir\n    if (hex) tl.fromTo(hex, { y: 40 }, { y: -40, duration: tl.duration() }, 0);\n  }\n\n  function init() {\n    var secs = document.querySelectorAll('.lp-crit');\n    if (!secs.length) return;\n    if (reduce || edit()) return; // conteúdo fica visível e parado\n    need(function () {\n      if (!window.gsap || !window.ScrollTrigger) return;\n      gsap.registerPlugin(ScrollTrigger);\n      ScrollTrigger.config({ ignoreMobileResize: true });\n      smoothScroll();\n      Array.prototype.forEach.call(secs, section);\n      var refresh = function () { ScrollTrigger.refresh(); };\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);\n      window.addEventListener('load', refresh);\n    });\n  }\n\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
-            "_title": "Sem critério · estilos e animação (não apagar)",
-            "_position": "absolute",
-            "_element_width": "initial",
-            "_element_custom_width": {
-              "unit": "px",
-              "size": 0,
-              "sizes": []
-            }
-          },
-          "elements": []
-        },
-        {
-          "id": "bf6ab56",
+          "id": "8231a16",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -105,105 +41,94 @@
             },
             "padding": {
               "unit": "px",
-              "top": "0",
-              "right": "0",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": true
+              "top": "80",
+              "right": "24",
+              "bottom": "80",
+              "left": "24",
+              "isLinked": false
             },
             "content_width": "full",
-            "css_classes": "lp-crit-hex",
-            "_title": "Textura de pontos (decorativa)"
-          },
-          "elements": []
-        },
-        {
-          "id": "a38d42a",
-          "elType": "container",
-          "isInner": true,
-          "settings": {
-            "flex_gap": {
-              "column": "12",
-              "row": "12",
-              "isLinked": true,
-              "unit": "px",
-              "size": 12
-            },
-            "padding": {
-              "unit": "px",
-              "top": "0",
-              "right": "0",
-              "bottom": "0",
-              "left": "0",
-              "isLinked": true
-            },
-            "content_width": "full",
+            "html_tag": "div",
             "flex_direction": "column",
-            "flex_align_items": "center",
-            "css_classes": "lp-crit-content",
-            "flex_gap_mobile": {
-              "column": "8",
-              "row": "8",
-              "isLinked": true,
+            "padding_tablet": {
               "unit": "px",
-              "size": 8
+              "top": "96",
+              "right": "24",
+              "bottom": "96",
+              "left": "24",
+              "isLinked": false
             },
-            "_title": "Frase"
+            "padding_mobile": {
+              "unit": "px",
+              "top": "64",
+              "right": "16",
+              "bottom": "64",
+              "left": "16",
+              "isLinked": false
+            },
+            "css_classes": "lp lp-crit lp-stage",
+            "min_height": {
+              "unit": "vh",
+              "size": 100,
+              "sizes": []
+            },
+            "flex_justify_content": "center",
+            "flex_align_items": "center",
+            "background_background": "gradient",
+            "background_color": "#13DDE8",
+            "background_color_stop": {
+              "unit": "%",
+              "size": 0,
+              "sizes": []
+            },
+            "background_color_b": "#00AFC6",
+            "background_color_b_stop": {
+              "unit": "%",
+              "size": 100,
+              "sizes": []
+            },
+            "background_gradient_type": "linear",
+            "background_gradient_angle": {
+              "unit": "deg",
+              "size": 160,
+              "sizes": []
+            },
+            "_title": "Palco (preso na tela)",
+            "__globals__": {
+              "background_color": "",
+              "background_color_b": ""
+            }
           },
           "elements": [
             {
-              "id": "c369e04",
+              "id": "cf89c27",
               "elType": "widget",
               "isInner": false,
-              "widgetType": "heading",
+              "widgetType": "html",
               "settings": {
-                "title": "Sem critério",
-                "header_size": "p",
-                "align": "center",
-                "title_color": "rgba(255, 255, 255, 0.85)",
-                "typography_typography": "custom",
-                "typography_font_family": "Montserrat",
-                "typography_font_size": {
+                "html": "<style>\n/* Cenas presas no scroll: trilha alta (.lp-track) + palco preso na tela (.lp-stage, sticky).\n   O comprimento da trilha define quanto se rola com a cena parada. */\nhtml, body { overflow-x: clip !important; }\n#page, .site, .site-content, #content, .site-main, .elementor { overflow-x: clip !important; overflow-y: visible !important; }\n.lp-track { position: relative; display: block !important; padding: 0 !important; min-height: 0 !important; overflow: visible !important; }\n.lp-track--dor { height: 400vh; }\n.lp-track--crit { height: 330vh; }\n.lp-track--laptop { height: 260vh; }\n.lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }\n.lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }\n@media (max-width: 767px) {\n  .lp-track--crit { height: 270vh; }\n  .lp-track--laptop { height: 220vh; }\n  /* Na cena do paciente, cena e card empilhados não cabem numa tela: sem palco preso, a cena\n     avança enquanto a seção passa pela tela. */\n  .lp-track--dor { height: auto; }\n  .lp-track--dor > .lp-stage { position: relative !important; height: auto; }\n}\n/* Editor do Elementor e movimento reduzido: tudo no fluxo normal. */\n.elementor-editor-active .lp-track, .lp-static .lp-track { height: auto !important; }\n.elementor-editor-active .lp-stage, .lp-static .lp-stage { position: relative !important; height: auto; }\n/* 03b · \"Sem critério, a consulta vira improviso:\" — painel turquesa que sobe com os cantos de cima\n   chanfrados, trava na tela e monta a frase: as duas metades entram pelas laterais e \"improviso:\"\n   vem gigante e desfocado até entrar em foco. Depois a seção segue o scroll normalmente. */\nhtml, html.lenis { scroll-behavior: auto !important; }\nhtml.lenis, html.lenis body { height: auto; }\n.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }\n.lenis.lenis-stopped { overflow: hidden; }\n\n.lp-crit { --chamfer: 0px; position: relative; overflow: hidden; isolation: isolate;\n  clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }\n.lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;\n  background-image: radial-gradient(rgba(255, 255, 255, .28) 1.4px, transparent 1.6px);\n  background-size: 26px 26px;\n  -webkit-mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%);\n  mask-image: radial-gradient(ellipse 50% 45% at 50% 52%, #000 0%, transparent 75%); }\n.lp-crit-content { position: relative; z-index: 2; }\n.lp-crit-over .elementor-heading-title { display: flex; justify-content: center; align-items: center; gap: 18px; }\n.lp-crit-over .elementor-heading-title::before, .lp-crit-over .elementor-heading-title::after { content: \"\"; width: 48px; height: 1px; background: currentColor; opacity: .7; }\n.lp-crit-word .elementor-heading-title { display: block; text-align: center; transform-origin: 50% 55%; }\n.lp-crit-line svg { width: 100%; height: auto; display: block; overflow: visible; }\n.lp-crit-line path { stroke-dasharray: 1; stroke-dashoffset: var(--draw, 0); }\n.lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }\n.lp-crit-hint .elementor-icon-list-item { justify-content: center; }\n\n@media (prefers-reduced-motion: reduce) { .lp-crit { clip-path: none; } }\n</style>\n<script>\n/* Motor das cenas presas no scroll (03 Dor, 03b Sem critério, notebook da 04). Vai repetido nos\n   widgets que usam cenas, mas só a primeira cópia roda.\n\n   Sem \"pin\" por JavaScript: cada cena fica num palco (.lp-stage) com position: sticky dentro de uma\n   trilha alta (.lp-track). Quem segura o palco na tela é o próprio navegador, sem tremor e sem troca\n   de camada. Este motor só mede quanto da trilha já foi rolado (0 → 1) e entrega esse progresso\n   para cada cena, no mesmo quadro da rolagem. No desktop, a rolagem suave (Lenis) roda no mesmo laço. */\n(function () {\n  if (window.lpScroll) return;\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  var scenes = [], started = false, needLayout = true, lastY = -1, lenis = null;\n  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };\n  var edit = function () {\n    return document.body.classList.contains('elementor-editor-active') ||\n      !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());\n  };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var desktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;\n\n  function load(src) {\n    return new Promise(function (ok) {\n      var s = document.createElement('script');\n      s.src = src; s.onload = ok; s.onerror = ok;\n      document.head.appendChild(s);\n    });\n  }\n\n  // Mede a posição das trilhas (só quando o layout muda; nunca a cada quadro).\n  function layout() {\n    needLayout = false;\n    var y = window.scrollY, vh = window.innerHeight;\n    scenes.forEach(function (s) {\n      var r = s.track.getBoundingClientRect();\n      s.top = r.top + y;\n      s.height = r.height;\n      s.stageH = s.stage.offsetHeight;\n      s.sticky = getComputedStyle(s.stage).position === 'sticky' && s.height > s.stageH + 10;\n      s.vh = vh;\n    });\n  }\n  function frame() {\n    if (needLayout) { layout(); lastY = -1; }\n    var y = window.scrollY;\n    if (y === lastY) return;\n    lastY = y;\n    scenes.forEach(function (s) {\n      var p, enter = clamp((y + s.vh - s.top) / s.vh);\n      if (s.sticky) p = clamp((y - s.top) / (s.height - s.stageH));\n      else p = clamp((y + s.vh * 0.65 - s.top) / Math.max(1, s.height)); // celular sem palco preso\n      if (p !== s.p || enter !== s.enter) { s.p = p; s.enter = enter; s.fn(p, enter); }\n    });\n  }\n  function loop(t) {\n    if (lenis) lenis.raf(t);\n    frame();\n    requestAnimationFrame(loop);\n  }\n  function smooth() {\n    if (!window.Lenis || !desktop || reduce) return;\n    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });\n    window.__lpLenis = lenis;\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n  function start() {\n    if (started) return;\n    started = true;\n    if (edit() || reduce) {\n      document.documentElement.classList.add('lp-static');\n      scenes.forEach(function (s) { if (s.done) s.done(); });\n      return;\n    }\n    var p = Promise.resolve();\n    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });\n    if (desktop && !window.Lenis) p = p.then(function () { return load(CDN.lenis); });\n    p.then(function () {\n      scenes.forEach(function (s) { if (s.init) s.init(window.gsap); });\n      smooth();\n      var dirty = function () { needLayout = true; };\n      window.addEventListener('resize', dirty);\n      window.addEventListener('load', dirty);\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(dirty);\n      if (window.ResizeObserver) new ResizeObserver(dirty).observe(document.body);\n      requestAnimationFrame(loop);\n    });\n  }\n\n  window.lpScroll = {\n    /* stage: o palco (.lp-stage) dentro da trilha (.lp-track).\n       opts.init(gsap): prepara a cena; opts.update(p, enter): progresso da trilha (0–1) e da\n       entrada da seção na tela (0–1); opts.done(): estado final (editor, movimento reduzido). */\n    scene: function (stage, opts) {\n      if (!stage) return;\n      var track = stage.closest('.lp-track') || stage;\n      scenes.push({ stage: stage, track: track, init: opts.init, fn: opts.update, done: opts.done, p: -1, enter: -1 });\n      needLayout = true;\n    },\n    reduce: reduce\n  };\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });\n  else setTimeout(start, 0);\n})();\n/* 03b · Sem critério: o palco fica preso na tela (sticky) e a frase se monta com o scroll.\n   O motor (lp-boot.js) entrega o progresso; aqui só se aplica na linha do tempo (pausada). */\n(function () {\n  if (window.__lpCrit) return;\n  window.__lpCrit = true;\n\n  function scene(sec) {\n    var $ = function (s) { return sec.querySelector(s); };\n    var over = $('.lp-crit-over'), left = $('.lp-crit-left'), right = $('.lp-crit-right'), word = $('.lp-crit-word');\n    var path = $('.lp-crit-line path'), hint = $('.lp-crit-hint'), hex = $('.lp-crit-hex');\n    if (!word) return;\n    var title = word.querySelector('.elementor-heading-title') || word;\n    var tl = null, chamfer = 0;\n    window.lpScroll.scene(sec, {\n      init: function (gsap) {\n        if (!gsap) return;\n        var mobile = window.matchMedia('(max-width: 767px)').matches;\n        chamfer = mobile ? 36 : 84;\n        tl = gsap.timeline({ paused: true, defaults: { ease: 'none' } });\n        if (over) tl.fromTo(over, { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.08 });\n        tl.fromTo(left, { xPercent: -140, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '>-0.02')\n          .fromTo(right, { xPercent: 140, autoAlpha: 0 }, { xPercent: 0, autoAlpha: 1, duration: 0.24, ease: 'power3.out' }, '<')\n          .fromTo(title, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.06 }, '<0.12')\n          .fromTo(title, { scale: mobile ? 1.7 : 2.1, filter: 'blur(' + (mobile ? 16 : 26) + 'px)' },\n                         { scale: 1, filter: 'blur(0px)', duration: 0.36, ease: 'power2.out' }, '<')\n          .set(title, { filter: 'none' }); // sem filtro depois do foco: camada leve\n        if (path) tl.fromTo(path, { '--draw': 1 }, { '--draw': 0, duration: 0.16 }, '>-0.04');\n        if (hint) tl.fromTo(hint, { autoAlpha: 0, y: 10 }, { autoAlpha: 1, y: 0, duration: 0.07 }, '>-0.02');\n        tl.to({}, { duration: 0.22 }); // segura a frase pronta antes de a seção seguir\n        if (hex) tl.fromTo(hex, { y: 40 }, { y: -40, duration: tl.duration() }, 0);\n        tl.progress(0);\n      },\n      update: function (p, enter) {\n        // Cantos de cima chanfrados enquanto o painel sobe; abertos quando ele chega ao topo.\n        sec.style.setProperty('--chamfer', (chamfer * (1 - enter)).toFixed(1) + 'px');\n        if (tl) tl.progress(p);\n      }\n    });\n  }\n\n  function init() { Array.prototype.forEach.call(document.querySelectorAll('.lp-crit'), scene); }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+                "_title": "Sem critério · estilos e animação (não apagar)",
+                "_position": "absolute",
+                "_element_width": "initial",
+                "_element_custom_width": {
                   "unit": "px",
-                  "size": 12,
+                  "size": 0,
                   "sizes": []
-                },
-                "typography_font_weight": "700",
-                "typography_line_height": {
-                  "unit": "em",
-                  "size": 1.3,
-                  "sizes": []
-                },
-                "typography_letter_spacing": {
-                  "unit": "px",
-                  "size": 3.2,
-                  "sizes": []
-                },
-                "typography_text_transform": "uppercase",
-                "typography_font_size_mobile": {
-                  "unit": "px",
-                  "size": 11,
-                  "sizes": []
-                },
-                "__globals__": {
-                  "title_color": "",
-                  "typography_typography": ""
-                },
-                "_css_classes": "lp-crit-over"
+                }
               },
               "elements": []
             },
             {
-              "id": "84bc158",
+              "id": "bf6ab56",
               "elType": "container",
               "isInner": true,
               "settings": {
                 "flex_gap": {
-                  "column": "14",
-                  "row": "14",
+                  "column": "0",
+                  "row": "0",
                   "isLinked": true,
                   "unit": "px",
-                  "size": 14
+                  "size": 0
                 },
                 "padding": {
                   "unit": "px",
@@ -214,284 +139,388 @@
                   "isLinked": true
                 },
                 "content_width": "full",
-                "flex_direction": "row",
-                "flex_wrap": "wrap",
-                "flex_justify_content": "center",
-                "flex_align_items": "center",
-                "flex_gap_mobile": {
-                  "column": "7",
-                  "row": "7",
+                "css_classes": "lp-crit-hex",
+                "_title": "Textura de pontos (decorativa)"
+              },
+              "elements": []
+            },
+            {
+              "id": "a38d42a",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "12",
+                  "row": "12",
                   "isLinked": true,
                   "unit": "px",
-                  "size": 7
+                  "size": 12
                 },
-                "_title": "Frase (as metades entram pelas laterais)"
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "flex_align_items": "center",
+                "css_classes": "lp-crit-content",
+                "flex_gap_mobile": {
+                  "column": "8",
+                  "row": "8",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 8
+                },
+                "_title": "Frase"
               },
               "elements": [
                 {
-                  "id": "664b8e3",
+                  "id": "c369e04",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
                   "settings": {
-                    "title": "Sem critério,",
+                    "title": "Sem critério",
                     "header_size": "p",
-                    "align": "left",
-                    "title_color": "#FFFFFF",
+                    "align": "center",
+                    "title_color": "rgba(255, 255, 255, 0.85)",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
                       "unit": "px",
-                      "size": 52,
+                      "size": 12,
                       "sizes": []
                     },
-                    "typography_font_weight": "800",
+                    "typography_font_weight": "700",
                     "typography_line_height": {
                       "unit": "em",
-                      "size": 1.15,
+                      "size": 1.3,
                       "sizes": []
                     },
                     "typography_letter_spacing": {
                       "unit": "px",
-                      "size": -0.6,
+                      "size": 3.2,
                       "sizes": []
                     },
-                    "typography_font_size_tablet": {
-                      "unit": "px",
-                      "size": 40,
-                      "sizes": []
-                    },
+                    "typography_text_transform": "uppercase",
                     "typography_font_size_mobile": {
                       "unit": "px",
-                      "size": 22,
+                      "size": 11,
                       "sizes": []
                     },
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
                     },
-                    "_css_classes": "lp-crit-split lp-crit-left",
-                    "_element_width": "auto",
-                    "_flex_size": "none"
+                    "_css_classes": "lp-crit-over"
                   },
                   "elements": []
                 },
                 {
-                  "id": "e26f247",
+                  "id": "84bc158",
+                  "elType": "container",
+                  "isInner": true,
+                  "settings": {
+                    "flex_gap": {
+                      "column": "14",
+                      "row": "14",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 14
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "row",
+                    "flex_wrap": "wrap",
+                    "flex_justify_content": "center",
+                    "flex_align_items": "center",
+                    "flex_gap_mobile": {
+                      "column": "7",
+                      "row": "7",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 7
+                    },
+                    "_title": "Frase (as metades entram pelas laterais)"
+                  },
+                  "elements": [
+                    {
+                      "id": "664b8e3",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "Sem critério,",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 52,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.15,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.6,
+                          "sizes": []
+                        },
+                        "typography_font_size_tablet": {
+                          "unit": "px",
+                          "size": 40,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-crit-split lp-crit-left",
+                        "_element_width": "auto",
+                        "_flex_size": "none"
+                      },
+                      "elements": []
+                    },
+                    {
+                      "id": "e26f247",
+                      "elType": "widget",
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "settings": {
+                        "title": "a consulta vira",
+                        "header_size": "p",
+                        "align": "left",
+                        "title_color": "#FFFFFF",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 52,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "800",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.15,
+                          "sizes": []
+                        },
+                        "typography_letter_spacing": {
+                          "unit": "px",
+                          "size": -0.6,
+                          "sizes": []
+                        },
+                        "typography_font_size_tablet": {
+                          "unit": "px",
+                          "size": 40,
+                          "sizes": []
+                        },
+                        "typography_font_size_mobile": {
+                          "unit": "px",
+                          "size": 22,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-crit-split lp-crit-right",
+                        "_element_width": "auto",
+                        "_flex_size": "none"
+                      },
+                      "elements": []
+                    }
+                  ]
+                },
+                {
+                  "id": "6af23d6",
                   "elType": "widget",
                   "isInner": false,
                   "widgetType": "heading",
                   "settings": {
-                    "title": "a consulta vira",
-                    "header_size": "p",
-                    "align": "left",
+                    "title": "improviso:",
+                    "header_size": "h2",
+                    "align": "center",
                     "title_color": "#FFFFFF",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
                       "unit": "px",
-                      "size": 52,
+                      "size": 196,
                       "sizes": []
                     },
-                    "typography_font_weight": "800",
+                    "typography_font_weight": "900",
                     "typography_line_height": {
                       "unit": "em",
-                      "size": 1.15,
+                      "size": 1.0,
                       "sizes": []
                     },
                     "typography_letter_spacing": {
                       "unit": "px",
-                      "size": -0.6,
+                      "size": -5,
                       "sizes": []
                     },
                     "typography_font_size_tablet": {
                       "unit": "px",
-                      "size": 40,
+                      "size": 128,
                       "sizes": []
                     },
                     "typography_font_size_mobile": {
                       "unit": "px",
-                      "size": 22,
+                      "size": 58,
+                      "sizes": []
+                    },
+                    "typography_font_style": "italic",
+                    "typography_letter_spacing_mobile": {
+                      "unit": "px",
+                      "size": -2,
                       "sizes": []
                     },
                     "__globals__": {
                       "title_color": "",
                       "typography_typography": ""
                     },
-                    "_css_classes": "lp-crit-split lp-crit-right",
-                    "_element_width": "auto",
-                    "_flex_size": "none"
+                    "_css_classes": "lp-crit-word"
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "3a7e18f",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "html",
+                  "settings": {
+                    "html": "<div class=\"lp-crit-line\" aria-hidden=\"true\"><svg viewBox=\"0 0 960 22\"><path d=\"M6 15 C 220 7, 560 3, 954 10\" pathLength=\"1\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg></div>",
+                    "_title": "Sublinhado (desenha no scroll)",
+                    "_element_width": "initial",
+                    "_element_custom_width": {
+                      "unit": "px",
+                      "size": 860,
+                      "sizes": []
+                    },
+                    "_element_custom_width_tablet": {
+                      "unit": "%",
+                      "size": 80,
+                      "sizes": []
+                    },
+                    "_element_custom_width_mobile": {
+                      "unit": "%",
+                      "size": 86,
+                      "sizes": []
+                    },
+                    "_margin": {
+                      "unit": "px",
+                      "top": "-2",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    }
+                  },
+                  "elements": []
+                },
+                {
+                  "id": "a2b9d9b",
+                  "elType": "widget",
+                  "isInner": false,
+                  "widgetType": "icon-list",
+                  "settings": {
+                    "view": "traditional",
+                    "icon_list": [
+                      {
+                        "_id": "ce5e962",
+                        "text": "role para ver o que acontece",
+                        "selected_icon": {
+                          "value": "fas fa-mouse",
+                          "library": "fa-solid"
+                        },
+                        "link": {
+                          "url": "",
+                          "is_external": "",
+                          "nofollow": "",
+                          "custom_attributes": ""
+                        }
+                      }
+                    ],
+                    "space_between": {
+                      "unit": "px",
+                      "size": 12,
+                      "sizes": []
+                    },
+                    "text_color": "rgba(255, 255, 255, 0.85)",
+                    "text_color_hover": "rgba(255, 255, 255, 0.85)",
+                    "icon_size": {
+                      "unit": "px",
+                      "size": 16,
+                      "sizes": []
+                    },
+                    "text_indent": {
+                      "unit": "px",
+                      "size": 10,
+                      "sizes": []
+                    },
+                    "icon_self_align": "left",
+                    "icon_self_vertical_align": "flex-start",
+                    "icon_vertical_offset": {
+                      "unit": "px",
+                      "size": 3,
+                      "sizes": []
+                    },
+                    "icon_color": "rgba(255, 255, 255, 0.85)",
+                    "icon_color_hover": "rgba(255, 255, 255, 0.85)",
+                    "icon_typography_typography": "custom",
+                    "icon_typography_font_family": "Montserrat",
+                    "icon_typography_font_size": {
+                      "unit": "px",
+                      "size": 13,
+                      "sizes": []
+                    },
+                    "icon_typography_font_weight": "600",
+                    "icon_typography_line_height": {
+                      "unit": "em",
+                      "size": 1.4,
+                      "sizes": []
+                    },
+                    "icon_align": "center",
+                    "_margin": {
+                      "unit": "px",
+                      "top": "30",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": false
+                    },
+                    "__globals__": {
+                      "text_color": "",
+                      "icon_color": "",
+                      "icon_typography_typography": ""
+                    },
+                    "_css_classes": "lp-crit-hint"
                   },
                   "elements": []
                 }
               ]
-            },
-            {
-              "id": "6af23d6",
-              "elType": "widget",
-              "isInner": false,
-              "widgetType": "heading",
-              "settings": {
-                "title": "improviso:",
-                "header_size": "h2",
-                "align": "center",
-                "title_color": "#FFFFFF",
-                "typography_typography": "custom",
-                "typography_font_family": "Montserrat",
-                "typography_font_size": {
-                  "unit": "px",
-                  "size": 196,
-                  "sizes": []
-                },
-                "typography_font_weight": "900",
-                "typography_line_height": {
-                  "unit": "em",
-                  "size": 1.0,
-                  "sizes": []
-                },
-                "typography_letter_spacing": {
-                  "unit": "px",
-                  "size": -5,
-                  "sizes": []
-                },
-                "typography_font_size_tablet": {
-                  "unit": "px",
-                  "size": 128,
-                  "sizes": []
-                },
-                "typography_font_size_mobile": {
-                  "unit": "px",
-                  "size": 58,
-                  "sizes": []
-                },
-                "typography_font_style": "italic",
-                "typography_letter_spacing_mobile": {
-                  "unit": "px",
-                  "size": -2,
-                  "sizes": []
-                },
-                "__globals__": {
-                  "title_color": "",
-                  "typography_typography": ""
-                },
-                "_css_classes": "lp-crit-word"
-              },
-              "elements": []
-            },
-            {
-              "id": "3a7e18f",
-              "elType": "widget",
-              "isInner": false,
-              "widgetType": "html",
-              "settings": {
-                "html": "<div class=\"lp-crit-line\" aria-hidden=\"true\"><svg viewBox=\"0 0 960 22\"><path d=\"M6 15 C 220 7, 560 3, 954 10\" pathLength=\"1\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"5\" stroke-linecap=\"round\"/></svg></div>",
-                "_title": "Sublinhado (desenha no scroll)",
-                "_element_width": "initial",
-                "_element_custom_width": {
-                  "unit": "px",
-                  "size": 860,
-                  "sizes": []
-                },
-                "_element_custom_width_tablet": {
-                  "unit": "%",
-                  "size": 80,
-                  "sizes": []
-                },
-                "_element_custom_width_mobile": {
-                  "unit": "%",
-                  "size": 86,
-                  "sizes": []
-                },
-                "_margin": {
-                  "unit": "px",
-                  "top": "-2",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                }
-              },
-              "elements": []
-            },
-            {
-              "id": "a2b9d9b",
-              "elType": "widget",
-              "isInner": false,
-              "widgetType": "icon-list",
-              "settings": {
-                "view": "traditional",
-                "icon_list": [
-                  {
-                    "_id": "ce5e962",
-                    "text": "role para ver o que acontece",
-                    "selected_icon": {
-                      "value": "fas fa-mouse",
-                      "library": "fa-solid"
-                    },
-                    "link": {
-                      "url": "",
-                      "is_external": "",
-                      "nofollow": "",
-                      "custom_attributes": ""
-                    }
-                  }
-                ],
-                "space_between": {
-                  "unit": "px",
-                  "size": 12,
-                  "sizes": []
-                },
-                "text_color": "rgba(255, 255, 255, 0.85)",
-                "text_color_hover": "rgba(255, 255, 255, 0.85)",
-                "icon_size": {
-                  "unit": "px",
-                  "size": 16,
-                  "sizes": []
-                },
-                "text_indent": {
-                  "unit": "px",
-                  "size": 10,
-                  "sizes": []
-                },
-                "icon_self_align": "left",
-                "icon_self_vertical_align": "flex-start",
-                "icon_vertical_offset": {
-                  "unit": "px",
-                  "size": 3,
-                  "sizes": []
-                },
-                "icon_color": "rgba(255, 255, 255, 0.85)",
-                "icon_color_hover": "rgba(255, 255, 255, 0.85)",
-                "icon_typography_typography": "custom",
-                "icon_typography_font_family": "Montserrat",
-                "icon_typography_font_size": {
-                  "unit": "px",
-                  "size": 13,
-                  "sizes": []
-                },
-                "icon_typography_font_weight": "600",
-                "icon_typography_line_height": {
-                  "unit": "em",
-                  "size": 1.4,
-                  "sizes": []
-                },
-                "icon_align": "center",
-                "_margin": {
-                  "unit": "px",
-                  "top": "30",
-                  "right": "0",
-                  "bottom": "0",
-                  "left": "0",
-                  "isLinked": false
-                },
-                "__globals__": {
-                  "text_color": "",
-                  "icon_color": "",
-                  "icon_typography_typography": ""
-                },
-                "_css_classes": "lp-crit-hint"
-              },
-              "elements": []
             }
           ]
         }

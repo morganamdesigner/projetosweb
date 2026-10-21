@@ -8,8 +8,6 @@ html.lenis, html.lenis body { height: auto; }
 
 .lp-crit { --chamfer: 0px; position: relative; overflow: hidden; isolation: isolate;
   clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }
-.lp-crit-spacer { --chamfer: 0px;
-  clip-path: polygon(0 var(--chamfer), var(--chamfer) 0, calc(100% - var(--chamfer)) 0, 100% var(--chamfer), 100% 100%, 0 100%); }
 .lp-crit-hex { position: absolute !important; inset: 0; width: 100% !important; height: 100%; z-index: 0; pointer-events: none;
   background-image: radial-gradient(rgba(255, 255, 255, .28) 1.4px, transparent 1.6px);
   background-size: 26px 26px;
@@ -24,4 +22,4 @@ html.lenis, html.lenis body { height: auto; }
 .lp-crit-hint ul, .lp-crit-hint .elementor-icon-list-items { justify-content: center; }
 .lp-crit-hint .elementor-icon-list-item { justify-content: center; }
 
-@media (prefers-reduced-motion: reduce) { .lp-crit, .lp-crit-spacer { clip-path: none; } }
+@media (prefers-reduced-motion: reduce) { .lp-crit { clip-path: none; } }

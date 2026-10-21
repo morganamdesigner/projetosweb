@@ -4,7 +4,9 @@
 Uso: python3 patch_export.py <export-do-site.json> ../lp-intercorrencias-alinhadores-elementor.json <saída.json>
 Também remove a seção 09 antiga (clara) se estiver duplicada e preenche o texto alternativo das imagens.
 """
-import json, sys
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import tracks
 src, ref, out = sys.argv[1:4]
 d = json.load(open(src)); r = json.load(open(ref))
 new = {}
@@ -46,5 +48,6 @@ def alts(e):
                     img['alt'] = v; log.append('texto alternativo: ' + url.rsplit('/', 1)[1]); break
     for c in e['elements']: alts(c)
 for sec in d['content']: alts(sec)
+d = tracks.apply(d)
 json.dump(d, open(out, 'w'), ensure_ascii=False, indent=2)
 print('\n'.join(log))

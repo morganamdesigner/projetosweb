@@ -13,6 +13,7 @@ Uso:   python3 build_lp.py
 import json
 import os
 
+import tracks
 from el import (MONT, border, button, cls, col, container, counter, dims, gap, grad, heading, html, icon,
                 icon_list, image, link, new_id, px, row, setv, shadow, solid, text, typo, widget, anim)
 
@@ -137,6 +138,11 @@ def logo():
 # 00 · Barra superior (marquee) + widget de estilos/scripts
 # ---------------------------------------------------------------------------
 
+def track_css():
+    """CSS das trilhas e palcos das cenas presas no scroll (vai em cada widget de cena)."""
+    return open(os.path.join(HERE, "lp-track.css"), encoding="utf-8").read().strip()
+
+
 def boot_js():
     """Orquestrador das travas (GSAP/ScrollTrigger/Lenis carregados uma vez, travas na ordem da página)."""
     return open(os.path.join(HERE, "lp-boot.js"), encoding="utf-8").read().strip()
@@ -145,7 +151,7 @@ def boot_js():
 def motion_widget():
     css = open(os.path.join(HERE, "lp-motion.css"), encoding="utf-8").read().strip()
     js = open(os.path.join(HERE, "lp-motion.js"), encoding="utf-8").read().strip()
-    code = "<style>\n" + css + "\n</style>\n<script>\n" + boot_js() + "\n" + js + "\n</script>"
+    code = "<style>\n" + track_css() + "\n" + css + "\n</style>\n<script>\n" + boot_js() + "\n" + js + "\n</script>"
     return setv(html(code), _title="LP · estilos e animações (não apagar)", _position="absolute",
                 _element_width="initial", _element_custom_width=px(0), _css_classes="lp-motion")
 
@@ -325,7 +331,7 @@ def s03b_impact():
     """Painel turquesa que sobe com os cantos chanfrados e trava na tela: "Sem critério," entra pela
     esquerda, "a consulta vira" pela direita e "improviso:" vem gigante e desfocado até entrar em foco
     (mesma coreografia da seção amarela da referência). CSS/JS no widget da própria seção."""
-    css = open(os.path.join(HERE, "lp-crit.css"), encoding="utf-8").read().strip()
+    css = track_css() + "\n" + open(os.path.join(HERE, "lp-crit.css"), encoding="utf-8").read().strip()
     js = boot_js() + "\n" + open(os.path.join(HERE, "lp-crit.js"), encoding="utf-8").read().strip()
     code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
                 _title="Sem critério · estilos e animação (não apagar)", _position="absolute",
@@ -462,7 +468,7 @@ PAGE_IMG = "https://placehold.co/1046x1482/F4F8FB/0B2D4A.png?text=Troque+pela+p%
 
 def laptop():
     """Notebook que abre com o scroll, com uma página do guia na tela (seção 04)."""
-    css = open(os.path.join(HERE, "lp-laptop.css"), encoding="utf-8").read().strip()
+    css = track_css() + "\n" + open(os.path.join(HERE, "lp-laptop.css"), encoding="utf-8").read().strip()
     js = boot_js() + "\n" + open(os.path.join(HERE, "lp-laptop.js"), encoding="utf-8").read().strip()
     code = setv(html("<style>\n" + css + "\n</style>\n<script>\n" + js + "\n</script>"),
                 _title="Notebook · estilos e animação (não apagar)", _position="absolute",
@@ -1093,6 +1099,7 @@ def build():
         mobile_bar(),
     ]
     content = [fix_rows(c) for c in content]
+    content = tracks.apply({"content": content})["content"]
     return {
         "content": content,
         "page_settings": {

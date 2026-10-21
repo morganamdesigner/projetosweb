@@ -1,0 +1,21 @@
+/* Cenas presas no scroll: trilha alta (.lp-track) + palco preso na tela (.lp-stage, sticky).
+   O comprimento da trilha define quanto se rola com a cena parada. */
+html, body { overflow-x: clip !important; }
+#page, .site, .site-content, #content, .site-main, .elementor { overflow-x: clip !important; overflow-y: visible !important; }
+.lp-track { position: relative; display: block !important; padding: 0 !important; min-height: 0 !important; overflow: visible !important; }
+.lp-track--dor { height: 400vh; }
+.lp-track--crit { height: 330vh; }
+.lp-track--laptop { height: 260vh; }
+.lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }
+.lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }
+@media (max-width: 767px) {
+  .lp-track--crit { height: 270vh; }
+  .lp-track--laptop { height: 220vh; }
+  /* Na cena do paciente, cena e card empilhados não cabem numa tela: sem palco preso, a cena
+     avança enquanto a seção passa pela tela. */
+  .lp-track--dor { height: auto; }
+  .lp-track--dor > .lp-stage { position: relative !important; height: auto; }
+}
+/* Editor do Elementor e movimento reduzido: tudo no fluxo normal. */
+.elementor-editor-active .lp-track, .lp-static .lp-track { height: auto !important; }
+.elementor-editor-active .lp-stage, .lp-static .lp-stage { position: relative !important; height: auto; }

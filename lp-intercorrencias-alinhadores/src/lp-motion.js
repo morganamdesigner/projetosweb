@@ -1,7 +1,7 @@
 /* LP · Intercorrências com Alinhadores
    Interações que o Elementor não faz sozinho. Cada bloco procura as classes lp-* dos containers
-   e widgets nativos e sai em silêncio se a seção não existir. As travas com GSAP (seções 03,
-   03b e 04) são criadas pelo orquestrador (lp-boot.js), na ordem da página. */
+   e widgets nativos e sai em silêncio se a seção não existir. As cenas presas no scroll (seções 03,
+   03b e 04) usam o motor de lp-boot.js (palco sticky + progresso). */
 (function () {
   if (window.__lpMotion) return;
   window.__lpMotion = true;
@@ -116,29 +116,8 @@
       pre.observe(sec);
     } else { load(); }
 
-    if (reduce) { update(1); return; }
-    var scrollFallback = function () {
-      var tick = false;
-      var calc = function () {
-        tick = false;
-        var r = sec.getBoundingClientRect(), vh = window.innerHeight;
-        update(clamp((vh * 0.65 - r.top) / Math.max(1, r.height), 0, 1));
-      };
-      window.addEventListener('scroll', function () { if (!tick) { tick = true; requestAnimationFrame(calc); } }, { passive: true });
-      calc();
-    };
-    // A trava é criada pelo orquestrador (lp-boot.js), na ordem da página.
-    window.lpScroll.add(sec, function (gsap, ScrollTrigger) {
-      var mm = gsap.matchMedia();
-      mm.add('(min-width: 768px)', function () {
-        ScrollTrigger.create({ trigger: sec, start: 'top top', end: '+=300%', pin: true,
-                               anticipatePin: window.lpScroll.anticipate(), pinType: window.lpScroll.pinType(),
-                               onUpdate: function (st) { update(st.progress); } });
-      });
-      mm.add('(max-width: 767px)', function () {
-        ScrollTrigger.create({ trigger: sec, start: 'top 65%', end: 'bottom 35%', onUpdate: function (st) { update(st.progress); } });
-      });
-    }, { edit: function () { update(1); }, fallback: scrollFallback });
+    // O palco da cena fica preso na tela (sticky); o motor (lp-boot.js) entrega o progresso.
+    window.lpScroll.scene(sec, { update: function (p) { update(p); }, done: function () { update(1); } });
   }
 
   /* 06 · Agenda: a linha AGORA desce com o scroll e acende o card da vez */

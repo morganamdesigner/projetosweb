@@ -96,6 +96,20 @@ Os arquivos estão em `assets/` e são servidos pelo jsDelivr a partir do commit
 
 Os quadros só começam a baixar quando a seção 03 se aproxima da tela.
 
+## Cenas presas no scroll (como funcionam)
+
+As seções 03 (cena do paciente), 03b ("improviso:") e o notebook da 04 não usam travas por JavaScript. Cada uma está dentro de uma **trilha** alta (`lp-track`), e o conteúdo fica num **palco** (`lp-stage`) com `position: sticky`. Quem segura o palco na tela é o próprio navegador: não treme, não some e não precisa de recálculo. O script (`src/lp-boot.js`) só mede quanto da trilha já foi rolado e anima o conteúdo. No desktop, ele também liga a rolagem suave (Lenis).
+
+| Trilha | Desktop | Celular |
+|---|---|---|
+| `lp-track--dor` | 400vh | sem palco preso (cena e card não cabem numa tela) |
+| `lp-track--crit` | 330vh | 270vh |
+| `lp-track--laptop` | 260vh | 220vh |
+
+Para a cena durar mais ou menos, mude a altura em `src/lp-track.css`. No Navegador do Elementor, essas trilhas aparecem como "… · trilha do scroll" / "Palco (preso na tela)": **não remova esses containers**.
+
+Para aplicar a versão atual dos widgets num export do site: `python3 src/patch_export.py <export.json> lp-intercorrencias-alinhadores-elementor.json <saída.json>`.
+
 ## Regerar o JSON
 
 ```bash
