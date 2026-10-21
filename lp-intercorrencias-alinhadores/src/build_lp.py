@@ -199,7 +199,7 @@ def s01_hero():
     texts = [tag, h1, sub, method, checks, ctas, note]
     for i, el in enumerate(texts):
         anim(el, "fadeInUp", i * 80)
-    text_col = col(texts, 24, "Texto", **w(58), flex_justify_content="center")
+    text_col = col(texts, 24, "Texto", **w(56), flex_justify_content="center")
 
     visual = image(ASSET + "hero-composicao.webp",
                    "Dra. Joyce Duarte com páginas do guia Intercorrências com Alinhadores, o ebook e um tablet",
@@ -209,9 +209,9 @@ def s01_hero():
                    motion_fx_translateY_affectedRange={"unit": "%", "size": "", "sizes": {"start": 0, "end": 100}},
                    motion_fx_devices=["desktop"])
     cls(visual, "lp-float")
-    visual_col = anim(col([visual], 0, "Composição (expert + ebook)", **w(42, None),
+    visual_col = anim(col([visual], 0, "Composição (expert + ebook)", _flex_size="grow",
                           flex_justify_content="center", css_classes="lp-hero-visual",
-                          margin=dims(0, -60, 0, 0), margin_tablet=dims(0), _flex_align_self_tablet="center",
+                          _flex_align_self_tablet="center",
                           width_tablet=px(80, "%"), width_mobile=px(100, "%")), "fadeInUp", 200)
 
     content = row([text_col, visual_col], 40, "Conteúdo", **r("row", "column"), flex_align_items="center",
@@ -355,8 +355,7 @@ def s03c_conseq():
     photo = anim(image(ASSET + "expert-post-it.webp",
                        'Dra. Joyce Duarte segurando um post-it azul escrito "Esse guia vai te salvar"',
                        width=(100, "%")), "fadeInLeft")
-    photo_col = col([photo], 0, "Foto (post-it)", **w(48, None), width_tablet=px(70, "%"), width_mobile=px(100, "%"), _flex_align_self_tablet="center",
-                    margin=dims(0, 0, 0, -80), margin_tablet=dims(0))
+    photo_col = col([photo], 0, "Foto (post-it)", **w(46, None), width_tablet=px(70, "%"), width_mobile=px(100, "%"), _flex_align_self_tablet="center")
     items = [
         "Você prolonga a etapa “para ver se encaixa”",
         "Pede refinamento sem corrigir a causa, e o refinamento herda o erro",
@@ -377,7 +376,7 @@ def s03c_conseq():
                **border(1, "rgba(0, 194, 199, 0.3)", 18), css_classes="lp-cost lp-io", margin=dims(10, 0, 0, 0))
     final = cls(h2('O planejamento você já tem. <span class="lp-grad">Este guia é para quando o caso sai dele.</span>',
                    WHITE, 30, t=28, m=23, lh=1.3, tag="p"), "lp-sweep lp-io")
-    right = col(cards + [cost, setv(final, _margin=dims(18, 0, 0, 0))], 16, "Consequências", **w(49, 100),
+    right = col(cards + [cost, setv(final, _margin=dims(18, 0, 0, 0))], 16, "Consequências", width_tablet=px(100, "%"),
                 _flex_size="grow")
     return section({
         "flex_direction": "row",
@@ -431,7 +430,7 @@ def s04_apresentacao():
     s3 = anim(step("03", "Conduta", "Manter, recuar, recolar, fazer IPR ou replanejar, com os critérios de cada escolha.",
                    dark=True), "zoomIn", 450)
     right = col([body("<p>Cada intercorrência segue o mesmo raciocínio:</p>", INK, 14, weight=500), s1, arrow(), s2,
-                 arrow(), s3], 6, "Método", **w(46))
+                 arrow(), s3], 6, "Método", _flex_size="grow", width_tablet=px(100, "%"))
     return section({
         "flex_direction": "row",
         "flex_direction_tablet": "column",
@@ -439,7 +438,7 @@ def s04_apresentacao():
         "flex_gap": gap(72),
         "flex_gap_tablet": gap(48),
         **grad("#FBFAFC", "#EEF3F7", 180),
-    }, [col(left, 20, "Texto", **w(50)), right], "04 · Apresentação", "lp-apres")
+    }, [col(left, 20, "Texto", **w(48)), right], "04 · Apresentação", "lp-apres")
 
 
 # ---------------------------------------------------------------------------
@@ -682,7 +681,7 @@ def s07_para_quem():
     switches = col([switch(t, i) for i, t in enumerate(YES, 1)] + [meter], 10, "Para você", css_classes="lp-switches")
     nots = col([heading("Não é para você se:", WHITE, typo("typography", 22, 700, lh=1.3, size_m=19), tag="h3")]
                + [no_row(t, i) for i, t in enumerate(NO, 1)], 10, "Não é para você", margin=dims(26, 0, 0, 0))
-    right = col([switches, nots], 0, "Teste", _flex_size="grow", **w(62, 100))
+    right = col([switches, nots], 0, "Teste", _flex_size="grow", width_tablet=px(100, "%"))
     grid = row([photo, right], 32, "Conteúdo", **r("row", "column"), flex_align_items="stretch")
     return section({
         "flex_gap": gap(56),
@@ -835,7 +834,7 @@ def s09_confianca():
                     heading("Ortodontista · Especialista em alinhadores", AZC, typo("typography", 12, 500, lh=1.4))], 4,
                    "Etiqueta do nome", padding=dims(15, 19), **solid(PROF), border_radius=dims(14),
                    box_shadow_box_shadow_type="yes", box_shadow_box_shadow=shadow(0, 20, 40, -16, "rgba(1, 19, 36, 0.6)"),
-                   margin=dims(-70, -20, 0, 0), margin_mobile=dims(-60, 0, 0, 0), _flex_align_self="flex-end",
+                   margin=dims(-70, 0, 0, 0), margin_mobile=dims(-60, 0, 0, 0), _flex_align_self="flex-end",
                    z_index=2), "fadeInUp", 300)
     photo = col([image(ASSET + "autora.webp", "Dra. Joyce Duarte, autora do guia", width=(100, "%"), height=480,
                        radius=24, position="top center", height_mobile=px(400)), tag], 0, "Foto da autora",

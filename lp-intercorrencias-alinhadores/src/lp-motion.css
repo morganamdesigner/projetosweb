@@ -57,7 +57,7 @@ body { overflow-x: hidden; }
 
 /* Órbitas (anéis finos que giram) e brilho que pulsa */
 .lp-orbits { position: relative; }
-.lp-orbits::before, .lp-orbits::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; }
+.lp-orbits::before, .lp-orbits::after { content: ""; position: absolute; border-radius: 50%; pointer-events: none; z-index: 0; opacity: 1; mix-blend-mode: normal; right: auto; bottom: auto; }
 .lp-orbits::before { width: var(--o1, 820px); height: var(--o1, 820px); left: var(--o1x, 60%); top: var(--o1y, -10%); border: 1px solid rgba(126, 211, 230, .16); border-top-color: rgba(0, 194, 199, .55); animation: lpSpin 80s linear infinite; }
 .lp-orbits::after { width: var(--o2, 1100px); height: var(--o2, 1100px); left: var(--o2x, 52%); top: var(--o2y, -24%); border: 1px solid rgba(126, 211, 230, .10); border-bottom-color: rgba(0, 194, 199, .4); animation: lpSpin 90s linear infinite reverse; }
 .lp-orbits > .e-con:not(.lp-glow):not(.lp-dots), .lp-orbits > .e-con-inner, .lp-orbits > .elementor-element:not(.lp-glow):not(.lp-dots) { position: relative; z-index: 1; }
@@ -137,7 +137,7 @@ body { overflow-x: hidden; }
    03c · Consequências
    --------------------------------------------------------------------------- */
 .lp-cost { position: relative; overflow: hidden; }
-.lp-cost::before { content: ""; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: var(--lp-grad); transform: scaleX(var(--lp-io)); transform-origin: left; transition: transform 1.2s .2s var(--lp-ease); }
+.lp-cost::before { content: ""; border-width: 0; border-style: none; opacity: 1; mix-blend-mode: normal; right: auto; bottom: auto; position: absolute; left: 0; top: 0; height: 3px; width: 100%; background: var(--lp-grad); transform: scaleX(var(--lp-io)); transform-origin: left; transition: transform 1.2s .2s var(--lp-ease); }
 .lp-sweep .lp-grad { background: linear-gradient(90deg, #07E3F3, #00B5D0, #0A92C4, rgba(255, 255, 255, .25) 50%, rgba(255, 255, 255, .25)); background-size: 200% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; transition: background-position 1.4s .2s var(--lp-ease); }
 .lp-sweep.is-inview .lp-grad { background-position: 0 0; }
 .lp-conseq-card .elementor-counter { display: block; }
@@ -147,7 +147,7 @@ body { overflow-x: hidden; }
    04 · Apresentação: seta que se desenha
    --------------------------------------------------------------------------- */
 .lp-arrow { position: relative; height: 34px; }
-.lp-arrow::before { content: ""; position: absolute; left: 50%; top: 4px; width: 2px; height: 22px; margin-left: -1px; background: var(--lp-turquesa); transform: scaleY(var(--lp-io)); transform-origin: top; transition: transform .5s .2s var(--lp-ease); }
+.lp-arrow::before { content: ""; border-width: 0; border-style: none; opacity: 1; mix-blend-mode: normal; right: auto; bottom: auto; position: absolute; left: 50%; top: 4px; width: 2px; height: 22px; margin-left: -1px; background: var(--lp-turquesa); transform: scaleY(var(--lp-io)); transform-origin: top; transition: transform .5s .2s var(--lp-ease); }
 .lp-arrow::after { content: ""; position: absolute; left: 50%; bottom: 4px; width: 8px; height: 8px; margin-left: -4px; border-right: 2px solid var(--lp-turquesa); border-bottom: 2px solid var(--lp-turquesa); transform: rotate(45deg); opacity: var(--lp-io); transition: opacity .2s .65s; }
 
 /* ---------------------------------------------------------------------------
@@ -188,7 +188,7 @@ body { overflow-x: hidden; }
 .lp-now::after { content: ""; flex: 1; height: 2px; margin-left: 10px; background: var(--lp-turquesa); box-shadow: 0 0 12px rgba(0, 194, 199, .6); }
 .lp-slot-card { transition: background .45s var(--lp-ease), border-color .45s, box-shadow .45s, transform .45s var(--lp-ease); }
 .lp-slot-card .elementor-heading-title, .lp-slot-card .elementor-widget-text-editor { transition: color .45s; }
-.lp-slot-card::before { content: ""; position: absolute; left: 19px; top: 50%; width: 4px; height: 52px; transform: translateY(-50%); border-radius: 4px; background: var(--lp-cat, #00C2C7); }
+.lp-slot-card::before { content: ""; border-width: 0; border-style: none; opacity: 1; mix-blend-mode: normal; right: auto; bottom: auto; position: absolute; left: 19px; top: 50%; width: 4px; height: 52px; transform: translateY(-50%); border-radius: 4px; background: var(--lp-cat, #00C2C7); }
 .lp-cat-1 { --lp-cat: #00C2C7; } .lp-cat-2 { --lp-cat: #0A92C4; } .lp-cat-3 { --lp-cat: #7ED3E6; } .lp-cat-4 { --lp-cat: #0B2D4A; }
 .lp-slot-done, .lp-slot-chip { display: none !important; }
 .lp-slot.is-done .lp-slot-done { display: block !important; }
@@ -207,14 +207,16 @@ body { overflow-x: hidden; }
    07 · Teste de compatibilidade: interruptores e medidor
    --------------------------------------------------------------------------- */
 .lp-fit { overflow: hidden; }
-.lp-switch { position: relative; padding-right: 92px !important; cursor: default; transition: background-color .35s var(--lp-ease), border-color .35s; }
-.lp-switch::before { content: ""; position: absolute; right: 24px; top: 50%; width: 46px; height: 26px; margin-top: -13px; border-radius: 99px; background: rgba(255, 255, 255, .14); transition: background .3s var(--lp-ease); }
-.lp-switch::after { content: ""; position: absolute; right: 46px; top: 50%; width: 20px; height: 20px; margin-top: -10px; border-radius: 50%; background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .3); transition: right .3s var(--lp-ease); }
+.lp-switch { cursor: default; transition: background-color .35s var(--lp-ease), border-color .35s; }
+.lp-switch > .elementor-widget { width: 100%; padding-right: 76px; }
+.lp-switch > .elementor-widget::before, .lp-switch > .elementor-widget::after { content: ""; position: absolute; top: 50%; border-radius: 99px; pointer-events: none; }
+.lp-switch > .elementor-widget::before { right: 0; width: 46px; height: 26px; margin-top: -13px; background: rgba(255, 255, 255, .16); transition: background .3s var(--lp-ease); }
+.lp-switch > .elementor-widget::after { right: 23px; width: 20px; height: 20px; margin-top: -10px; background: #fff; box-shadow: 0 2px 6px rgba(0, 0, 0, .3); transition: right .3s var(--lp-ease); }
 .lp-switch.is-on { background-color: rgba(0, 194, 199, .22) !important; border-color: rgba(0, 194, 199, .55) !important; }
-.lp-switch.is-on::before { background: var(--lp-turquesa); }
-.lp-switch.is-on::after { right: 27px; }
+.lp-switch.is-on > .elementor-widget::before { background: var(--lp-turquesa); }
+.lp-switch.is-on > .elementor-widget::after { right: 3px; }
 @media (hover: hover) and (min-width: 1025px) { .lp-switch--yes { cursor: pointer; } }
-.lp-switch--no::before { background: #D5DEE6; }
+.lp-switch--no > .elementor-widget::before { background: #D5DEE6; }
 .lp-strike p { display: inline; background-image: linear-gradient(currentColor, currentColor); background-repeat: no-repeat; background-position: 0 55%; background-size: calc(var(--lp-io) * 100%) 1px; transition: background-size 1s .3s var(--lp-ease); }
 .lp-meter-ring { position: relative; width: 64px; height: 64px; border-radius: 50%; background: conic-gradient(var(--lp-turquesa) calc(var(--lp-deg, 0) * 1deg), rgba(255, 255, 255, .12) 0); transition: box-shadow .6s; }
 .lp-meter-ring::after { content: ""; position: absolute; inset: 7px; border-radius: 50%; background: #0B2D4A; }
@@ -231,7 +233,7 @@ body { overflow-x: hidden; }
 .lp-old .elementor-heading-title { position: relative; display: inline-block; }
 .lp-old .elementor-heading-title::after { content: ""; position: absolute; left: -2px; right: -2px; top: 52%; height: 2px; background: #E5484D; transform: scaleX(var(--lp-io)) rotate(-6deg); transform-origin: left; transition: transform .7s .3s var(--lp-ease); }
 .lp-steps { position: relative; }
-.lp-steps::before { content: ""; position: absolute; left: 0; right: 0; top: -14px; height: 2px; background: var(--lp-grad); transform: scaleX(var(--lp-io)); transform-origin: left; transition: transform 1.6s .2s var(--lp-ease); }
+.lp-steps::before { content: ""; border-width: 0; border-style: none; opacity: 1; mix-blend-mode: normal; bottom: auto; position: absolute; left: 0; width: 100%; top: -14px; height: 2px; background: var(--lp-grad); transform: scaleX(var(--lp-io)); transform-origin: left; transition: transform 1.6s .2s var(--lp-ease); }
 .lp-mbar { position: fixed !important; left: 12px; right: 12px; bottom: 12px; z-index: 999; transform: translateY(140%); transition: transform .4s var(--lp-ease); }
 .lp-mbar.is-visible { transform: none; }
 .elementor-editor-active .lp-mbar { position: relative !important; transform: none; left: auto; right: auto; bottom: auto; }
@@ -240,7 +242,7 @@ body { overflow-x: hidden; }
    09 · Garantia, autora, FAQ
    --------------------------------------------------------------------------- */
 .lp-seal { position: relative; }
-.lp-seal::before { content: ""; position: absolute; inset: -9px; border-radius: 50%; border: 2px dashed rgba(0, 194, 199, .7); animation: lpSpin 40s linear infinite; }
+.lp-seal::before { content: ""; position: absolute; top: -9px; left: -9px; width: calc(100% + 18px); height: calc(100% + 18px); opacity: 1; mix-blend-mode: normal; border-radius: 50%; border: 2px dashed rgba(0, 194, 199, .7); animation: lpSpin 40s linear infinite; }
 .lp-author-photo { position: relative; }
 .lp-author-photo::before { content: ""; position: absolute; width: 500px; height: 500px; left: 50%; top: 46%; margin: -250px 0 0 -250px; border-radius: 50%; border: 1px solid rgba(11, 45, 74, .12); border-top-color: var(--lp-turquesa); animation: lpSpin 60s linear infinite; pointer-events: none; }
 .lp-author-photo > .elementor-element { position: relative; z-index: 1; }
@@ -269,10 +271,7 @@ body { overflow-x: hidden; }
   .lp-scene__prog { display: none; }
   .lp-ribbon--back { top: 8px; }
   .lp-ribbon--front { top: 34px; }
-  .lp-switch { padding-right: 78px !important; }
-  .lp-switch::before { right: 16px; }
-  .lp-switch::after { right: 38px; }
-  .lp-switch.is-on::after { right: 19px; }
+  .lp-switch > .elementor-widget { padding-right: 60px; }
   .lp-slot.is-active .lp-slot-title .elementor-heading-title { font-size: 18px; }
   .lp-slot.is-active .lp-slot-num .elementor-heading-title { font-size: 30px; }
   .lp-author-photo::before { width: 340px; height: 340px; margin: -170px 0 0 -170px; }
@@ -286,5 +285,5 @@ body { overflow-x: hidden; }
   .lp-shine { background-position: 50% 0; }
   .lp .elementor-invisible { visibility: visible !important; }
   .lp .animated { animation: none !important; }
-  .lp-dor-row, .lp-slot-card, .lp-switch, .lp-switch::after, .lp-now { transition: none !important; }
+  .lp-dor-row, .lp-slot-card, .lp-switch, .lp-switch > .elementor-widget::after, .lp-now { transition: none !important; }
 }
