@@ -75,7 +75,7 @@ def _wrap_laptop(el):
             if "lp-stage" in _classes(el):
                 return
             stage = {"id": _id(ch["id"]), "elType": "container", "isInner": True,
-                     "settings": {"content_width": "full", "flex_direction": "column",
+                     "settings": {"content_width": "full", "flex_direction": "column", "flex_wrap_mobile": "nowrap",
                                   "flex_justify_content": "center", "flex_align_items": "center",
                                   "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True},
                                   "css_classes": "lp-stage lp-stage--center", "_title": "Palco do notebook (preso na tela)"},

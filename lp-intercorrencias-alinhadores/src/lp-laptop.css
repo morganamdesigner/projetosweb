@@ -1,6 +1,9 @@
 /* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende
    (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */
 .lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }
+/* No celular o Elementor faz todo container flex quebrar linha (--flex-wrap-mobile: wrap). Na tela, de
+   altura fixa, isso jogava a página do guia para uma "segunda coluna" fora da área visível. */
+.lp-laptop, .lp-laptop .e-con { flex-wrap: nowrap !important; }
 .lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;
   transform: perspective(1400px) rotateX(var(--lid)); background: transparent !important; }
 /* A tampa nunca passa de 80°, então o verso nunca aparece: sem preserve-3d nem backface-visibility,

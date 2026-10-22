@@ -6,6 +6,7 @@ html, body { overflow-x: clip !important; }
 .lp-track--dor { height: 400vh; }
 .lp-track--crit { height: 330vh; }
 .lp-track--laptop { height: 260vh; }
+.lp-stage { flex-wrap: nowrap !important; }
 .lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }
 .lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }
 @media (max-width: 767px) {
