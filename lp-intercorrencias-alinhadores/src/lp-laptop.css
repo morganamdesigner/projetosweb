@@ -10,7 +10,12 @@
 .lp-screen { width: 100% !important; height: 100%; }
 .lp-screen-content { opacity: calc(.18 + .82 * var(--lit)); /* nunca some: tela "desligada" ainda mostra a página */ flex: 1 1 auto; min-height: 0; overflow: hidden; }
 .lp-screen-page { width: 60% !important; max-width: 60%; }
-.lp-screen-page img { display: block; width: 100% !important; height: auto !important; max-width: 100%; transform: translateY(var(--scroll)); }
+.lp-screen-page img { display: block; width: 100% !important; height: auto !important; max-width: 100%;
+  /* Rolagem do PDF com margem (e não transform): no Safari, um filho com transform dentro de uma área
+     com overflow hidden + cantos arredondados, numa peça girada em 3D, deixa de ser desenhado. */
+  margin-top: calc(var(--scroll) * 1.417); }
+/* Recorte da tela no jeito que o Safari respeita (máscara + camada própria). */
+.lp-screen, .lp-screen-content { -webkit-mask-image: -webkit-radial-gradient(white, black); isolation: isolate; }
 .lp-base { width: 100% !important; }
 @media (max-width: 767px) { .lp-lid { width: 92% !important; } .lp-screen-page { width: 70% !important; max-width: 70%; } }
-@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { margin-top: 0; } }
