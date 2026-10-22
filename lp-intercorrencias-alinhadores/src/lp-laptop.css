@@ -1,15 +1,16 @@
 /* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende
    (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */
-.lp-laptop, .lp-laptop > .e-con-inner { perspective: 1800px; perspective-origin: 50% 35%; }
 .lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }
 .lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;
-  transform-style: preserve-3d; transform: rotateX(var(--lid)); background: transparent !important; }
-.lp-lid-front, .lp-lid-back { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%;
-  backface-visibility: hidden; -webkit-backface-visibility: hidden; }
-.lp-lid-back { transform: rotateX(180deg); }
+  transform: perspective(1400px) rotateX(var(--lid)); background: transparent !important; }
+/* A tampa nunca passa de 80°, então o verso nunca aparece: sem preserve-3d nem backface-visibility,
+   que no Safari/Chrome do celular fazem a imagem dentro da tela não ser desenhada. */
+.lp-lid-front { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%; }
+.lp-lid-back { display: none !important; }
 .lp-screen { width: 100% !important; height: 100%; }
 .lp-screen-content { opacity: var(--lit); flex: 1 1 auto; min-height: 0; overflow: hidden; }
-.lp-screen-page img { transform: translateY(var(--scroll)); }
+.lp-screen-page { width: 60% !important; max-width: 60%; }
+.lp-screen-page img { display: block; width: 100% !important; height: auto !important; max-width: 100%; transform: translateY(var(--scroll)); }
 .lp-base { width: 100% !important; }
-@media (max-width: 767px) { .lp-lid { width: 92% !important; } }
+@media (max-width: 767px) { .lp-lid { width: 92% !important; } .lp-screen-page { width: 70% !important; max-width: 70%; } }
 @media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }

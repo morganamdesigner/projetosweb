@@ -15,6 +15,14 @@
         el.style.setProperty('--scroll', (-26 * clamp((p - 0.7) / 0.3)).toFixed(2) + '%');
       };
       set(0);
+      // A página do guia carrega logo: o lazy load do WordPress não "vê" a imagem com a tampa inclinada.
+      Array.prototype.forEach.call(el.querySelectorAll('.lp-screen-page img'), function (img) {
+        img.loading = 'eager';
+        img.removeAttribute('loading');
+        if (img.dataset && img.dataset.src && !img.getAttribute('src')) img.src = img.dataset.src;
+        if (img.dataset && img.dataset.lazySrc) img.src = img.dataset.lazySrc;
+        if (img.dataset && img.dataset.srcset) img.srcset = img.dataset.srcset;
+      });
       window.lpScroll.scene(el.closest('.lp-stage') || el, {
         update: function (p) { set(p); },
         done: function () { set(1); }
