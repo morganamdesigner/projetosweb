@@ -63,6 +63,14 @@ def apply(data):
 
 def _wrap_laptop(el):
     for i, ch in enumerate(el["elements"]):
+        # Palco do notebook que perdeu a trilha (removida no editor): recoloca a trilha em volta.
+        if (ch["elType"] == "container" and "lp-stage" in _classes(ch) and "lp-track" not in _classes(el)
+                and any("lp-laptop" in _classes(g) for g in ch["elements"] if g["elType"] == "container")):
+            ch["isInner"] = True
+            track = _track("laptop", ch, "Trilha do notebook (scroll)")
+            track["isInner"] = True
+            el["elements"][i] = track
+            return
         if ch["elType"] == "container" and "lp-laptop" in _classes(ch):
             if "lp-stage" in _classes(el):
                 return

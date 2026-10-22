@@ -1,5 +1,5 @@
 /* Notebook da seção 04: o palco fica preso na tela (sticky) e o notebook abre com o scroll.
-   Etapas: a tampa sobe (0–55%), a tela acende (45–70%) e a página rola no leitor (70–100%).
+   Etapas: a tampa sobe (0–45%), a tela acende (30–50%) e a página rola no leitor (70–100%).
    O motor (lp-boot.js) entrega o progresso. No editor e com movimento reduzido, fica aberto. */
 (function () {
   if (window.__lpLaptop) return;
@@ -9,9 +9,9 @@
   function init() {
     Array.prototype.forEach.call(document.querySelectorAll('.lp-laptop'), function (el) {
       var set = function (p) {
-        var a = clamp(p / 0.55), e = 1 - Math.pow(1 - a, 3);
+        var a = clamp(p / 0.45), e = 1 - Math.pow(1 - a, 3);
         el.style.setProperty('--lid', (-80 + 80 * e).toFixed(2) + 'deg');
-        el.style.setProperty('--lit', clamp((p - 0.45) / 0.25).toFixed(3));
+        el.style.setProperty('--lit', clamp((p - 0.3) / 0.2).toFixed(3));
         el.style.setProperty('--scroll', (-26 * clamp((p - 0.7) / 0.3)).toFixed(2) + '%');
       };
       set(0);

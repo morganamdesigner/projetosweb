@@ -1,7 +1,7 @@
 {
   "content": [
     {
-      "id": "6e384229",
+      "id": "5bc46ce8",
       "settings": {
         "flex_gap": {
           "column": "80",
@@ -49,8 +49,8 @@
           "unit": "px",
           "size": 64
         },
-        "background_background": "gradient",
-        "background_color": "#FBFAFC",
+        "background_background": "classic",
+        "background_color": "#0B2D4A",
         "background_color_b": "#EEF3F7",
         "_title": "04 · Apresentação",
         "__globals__": {
@@ -60,7 +60,7 @@
       },
       "elements": [
         {
-          "id": "1ac40caf",
+          "id": "5c6332eb",
           "settings": {
             "flex_gap": {
               "column": "72",
@@ -93,7 +93,7 @@
           },
           "elements": [
             {
-              "id": "43a34584",
+              "id": "67a5e482",
               "settings": {
                 "flex_gap": {
                   "column": "20",
@@ -131,12 +131,29 @@
               },
               "elements": [
                 {
-                  "id": "4e2b19c0",
+                  "id": "2e6bb104",
+                  "settings": {
+                    "image": {
+                      "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/alinhador-png.webp",
+                      "id": 283,
+                      "size": "",
+                      "alt": "",
+                      "source": "library"
+                    },
+                    "_css_classes": "lp-coin"
+                  },
+                  "elements": [],
+                  "isInner": false,
+                  "widgetType": "image",
+                  "elType": "widget"
+                },
+                {
+                  "id": "841d5e8",
                   "settings": {
                     "title": "Apresentação",
                     "header_size": "p",
                     "align": "left",
-                    "title_color": "#0A92C4",
+                    "title_color": "#C0EEFF",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
@@ -170,11 +187,11 @@
                   "elType": "widget"
                 },
                 {
-                  "id": "69d7d326",
+                  "id": "2e0e1196",
                   "settings": {
                     "title": "Guia Prático: Intercorrências com Alinhadores. <span class=\"lp-hl\">Do diagnóstico à conduta.</span>",
                     "align": "left",
-                    "title_color": "#0B2D4A",
+                    "title_color": "#FFFFFF",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
@@ -217,11 +234,11 @@
                   "elType": "widget"
                 },
                 {
-                  "id": "6ea0cb24",
+                  "id": "2f3ff5f5",
                   "settings": {
                     "editor": "<p>Um material de consulta rápida, escrito para ser aberto na cadeira. Cada intercorrência segue a mesma estrutura, do primeiro sinal à decisão clínica, com referências para aprofundar quando precisar.</p>",
                     "align": "left",
-                    "text_color": "#4A5F73",
+                    "text_color": "#FFFFFF",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
@@ -254,7 +271,7 @@
                   "elType": "widget"
                 },
                 {
-                  "id": "7534892a",
+                  "id": "fab4f63",
                   "settings": {
                     "flex_gap": {
                       "column": "12",
@@ -316,7 +333,7 @@
                   },
                   "elements": [
                     {
-                      "id": "511e68a1",
+                      "id": "1e37652d",
                       "settings": {
                         "selected_icon": {
                           "value": "fas fa-quote-left",
@@ -339,7 +356,7 @@
                       "elType": "widget"
                     },
                     {
-                      "id": "3d9291a5",
+                      "id": "432e5589",
                       "settings": {
                         "editor": "<p>Cada capítulo começa com uma pergunta direta <span style=\"color:#00C2C7\">e termina numa decisão clínica que você aplica na mesma consulta.</span></p>",
                         "align": "left",
@@ -381,7 +398,7 @@
               "elType": "container"
             },
             {
-              "id": "2cb8238",
+              "id": "4438e413",
               "settings": {
                 "flex_gap": {
                   "column": "6",
@@ -419,11 +436,11 @@
               },
               "elements": [
                 {
-                  "id": "237eb473",
+                  "id": "33c52eb0",
                   "settings": {
                     "editor": "<p>Cada intercorrência segue o mesmo raciocínio:</p>",
                     "align": "left",
-                    "text_color": "#4A5F73",
+                    "text_color": "#FFFFFF",
                     "typography_typography": "custom",
                     "typography_font_family": "Montserrat",
                     "typography_font_size": {
@@ -453,7 +470,7 @@
                   "elType": "widget"
                 },
                 {
-                  "id": "5484a3c8",
+                  "id": "492776dc",
                   "settings": {
                     "flex_gap": {
                       "column": "18",
@@ -520,7 +537,7 @@
                   },
                   "elements": [
                     {
-                      "id": "14d13fa0",
+                      "id": "2c5cc8b2",
                       "settings": {
                         "title": "01",
                         "header_size": "p",
@@ -583,7 +600,7 @@
                       "elType": "widget"
                     },
                     {
-                      "id": "4e1e2ff4",
+                      "id": "6ff562a2",
                       "settings": {
                         "flex_gap": {
                           "column": "4",
@@ -606,7 +623,7 @@
                       },
                       "elements": [
                         {
-                          "id": "2241c42c",
+                          "id": "1c46aafe",
                           "settings": {
                             "title": "Sinais",
                             "header_size": "p",
@@ -642,7 +659,7 @@
                           "elType": "widget"
                         },
                         {
-                          "id": "35330e03",
+                          "id": "3aeb0202",
                           "settings": {
                             "editor": "<p>O que você observa na consulta de retorno.</p>",
                             "align": "left",
@@ -684,7 +701,7 @@
                   "elType": "container"
                 },
                 {
-                  "id": "633c02a1",
+                  "id": "65fd66d",
                   "settings": {
                     "flex_gap": {
                       "column": "0",
@@ -734,7 +751,7 @@
                   "elType": "container"
                 },
                 {
-                  "id": "6724bf82",
+                  "id": "74e3049a",
                   "settings": {
                     "flex_gap": {
                       "column": "18",
@@ -802,7 +819,7 @@
                   },
                   "elements": [
                     {
-                      "id": "a7f0bfe",
+                      "id": "1c622fb6",
                       "settings": {
                         "title": "02",
                         "header_size": "p",
@@ -865,7 +882,7 @@
                       "elType": "widget"
                     },
                     {
-                      "id": "57df0539",
+                      "id": "4ece5a65",
                       "settings": {
                         "flex_gap": {
                           "column": "4",
@@ -888,7 +905,7 @@
                       },
                       "elements": [
                         {
-                          "id": "24f983eb",
+                          "id": "2e5deb6a",
                           "settings": {
                             "title": "Avaliação",
                             "header_size": "p",
@@ -924,7 +941,7 @@
                           "elType": "widget"
                         },
                         {
-                          "id": "621b451d",
+                          "id": "5120772d",
                           "settings": {
                             "editor": "<p>O que checar, e em que ordem, para chegar à causa provável.</p>",
                             "align": "left",
@@ -966,7 +983,7 @@
                   "elType": "container"
                 },
                 {
-                  "id": "6133563",
+                  "id": "417b0700",
                   "settings": {
                     "flex_gap": {
                       "column": "0",
@@ -1016,7 +1033,7 @@
                   "elType": "container"
                 },
                 {
-                  "id": "3d9ffc00",
+                  "id": "3062f3b4",
                   "settings": {
                     "flex_gap": {
                       "column": "18",
@@ -1080,7 +1097,7 @@
                   },
                   "elements": [
                     {
-                      "id": "29943ae9",
+                      "id": "3f58c55",
                       "settings": {
                         "title": "03",
                         "header_size": "p",
@@ -1143,7 +1160,7 @@
                       "elType": "widget"
                     },
                     {
-                      "id": "6994851f",
+                      "id": "1d3f217",
                       "settings": {
                         "flex_gap": {
                           "column": "4",
@@ -1166,7 +1183,7 @@
                       },
                       "elements": [
                         {
-                          "id": "17f904e1",
+                          "id": "1e90ffad",
                           "settings": {
                             "title": "Conduta",
                             "header_size": "p",
@@ -1202,7 +1219,7 @@
                           "elType": "widget"
                         },
                         {
-                          "id": "80ba5a6",
+                          "id": "5e042289",
                           "settings": {
                             "editor": "<p>Manter, recuar, recolar, fazer IPR ou replanejar, com os critérios de cada escolha.</p>",
                             "align": "left",
@@ -1252,7 +1269,7 @@
           "elType": "container"
         },
         {
-          "id": "d644c61",
+          "id": "791c7cc",
           "elType": "container",
           "isInner": true,
           "settings": {
@@ -1279,9 +1296,7 @@
           },
           "elements": [
             {
-              "id": "63914cb",
-              "elType": "container",
-              "isInner": true,
+              "id": "be37680",
               "settings": {
                 "content_width": "full",
                 "flex_direction": "column",
@@ -1300,7 +1315,7 @@
               },
               "elements": [
                 {
-                  "id": "58592f72",
+                  "id": "6f74f021",
                   "settings": {
                     "flex_gap": {
                       "column": "0",
@@ -1329,9 +1344,9 @@
                   },
                   "elements": [
                     {
-                      "id": "213a1a45",
+                      "id": "529a281e",
                       "settings": {
-                        "html": "<style>\n/* Cenas presas no scroll: trilha alta (.lp-track) + palco preso na tela (.lp-stage, sticky).\n   O comprimento da trilha define quanto se rola com a cena parada. */\nhtml, body { overflow-x: clip !important; }\n#page, .site, .site-content, #content, .site-main, .elementor { overflow-x: clip !important; overflow-y: visible !important; }\n.lp-track { position: relative; display: block !important; padding: 0 !important; min-height: 0 !important; overflow: visible !important; }\n.lp-track--dor { height: 400vh; }\n.lp-track--crit { height: 330vh; }\n.lp-track--laptop { height: 260vh; }\n.lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }\n.lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }\n@media (max-width: 767px) {\n  .lp-track--crit { height: 270vh; }\n  .lp-track--laptop { height: 220vh; }\n  /* Na cena do paciente, cena e card empilhados não cabem numa tela: sem palco preso, a cena\n     avança enquanto a seção passa pela tela. */\n  .lp-track--dor { height: auto; }\n  .lp-track--dor > .lp-stage { position: relative !important; height: auto; }\n}\n/* Editor do Elementor e movimento reduzido: tudo no fluxo normal. */\n.elementor-editor-active .lp-track, .lp-static .lp-track { height: auto !important; }\n.elementor-editor-active .lp-stage, .lp-static .lp-stage { position: relative !important; height: auto; }\n/* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende\n   (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */\n.lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }\n.lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;\n  transform: perspective(1400px) rotateX(var(--lid)); background: transparent !important; }\n/* A tampa nunca passa de 80°, então o verso nunca aparece: sem preserve-3d nem backface-visibility,\n   que no Safari/Chrome do celular fazem a imagem dentro da tela não ser desenhada. */\n.lp-lid-front { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%; }\n.lp-lid-back { display: none !important; }\n.lp-screen { width: 100% !important; height: 100%; }\n.lp-screen-content { opacity: var(--lit); flex: 1 1 auto; min-height: 0; overflow: hidden; }\n.lp-screen-page { width: 60% !important; max-width: 60%; }\n.lp-screen-page img { display: block; width: 100% !important; height: auto !important; max-width: 100%; transform: translateY(var(--scroll)); }\n.lp-base { width: 100% !important; }\n@media (max-width: 767px) { .lp-lid { width: 92% !important; } .lp-screen-page { width: 70% !important; max-width: 70%; } }\n@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }\n</style>\n<script>\n/* Motor das cenas presas no scroll (03 Dor, 03b Sem critério, notebook da 04). Vai repetido nos\n   widgets que usam cenas, mas só a primeira cópia roda.\n\n   Sem \"pin\" por JavaScript: cada cena fica num palco (.lp-stage) com position: sticky dentro de uma\n   trilha alta (.lp-track). Quem segura o palco na tela é o próprio navegador, sem tremor e sem troca\n   de camada. Este motor só mede quanto da trilha já foi rolado (0 → 1) e entrega esse progresso\n   para cada cena, no mesmo quadro da rolagem. No desktop, a rolagem suave (Lenis) roda no mesmo laço. */\n(function () {\n  if (window.lpScroll) return;\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  var scenes = [], started = false, needLayout = true, lastY = -1, lenis = null;\n  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };\n  var edit = function () {\n    return document.body.classList.contains('elementor-editor-active') ||\n      !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());\n  };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var desktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;\n\n  function load(src) {\n    return new Promise(function (ok) {\n      var s = document.createElement('script');\n      s.src = src; s.onload = ok; s.onerror = ok;\n      document.head.appendChild(s);\n    });\n  }\n\n  // Mede a posição das trilhas (só quando o layout muda; nunca a cada quadro).\n  function layout() {\n    needLayout = false;\n    var y = window.scrollY, vh = window.innerHeight;\n    scenes.forEach(function (s) {\n      var r = s.track.getBoundingClientRect();\n      s.top = r.top + y;\n      s.height = r.height;\n      s.stageH = s.stage.offsetHeight;\n      s.sticky = getComputedStyle(s.stage).position === 'sticky' && s.height > s.stageH + 10;\n      s.vh = vh;\n    });\n  }\n  function frame() {\n    if (needLayout) { layout(); lastY = -1; }\n    var y = window.scrollY;\n    if (y === lastY) return;\n    lastY = y;\n    scenes.forEach(function (s) {\n      var p, enter = clamp((y + s.vh - s.top) / s.vh);\n      if (s.sticky) p = clamp((y - s.top) / (s.height - s.stageH));\n      else p = clamp((y + s.vh * 0.65 - s.top) / Math.max(1, s.height)); // celular sem palco preso\n      if (p !== s.p || enter !== s.enter) { s.p = p; s.enter = enter; s.fn(p, enter); }\n    });\n  }\n  function loop(t) {\n    if (lenis) lenis.raf(t);\n    frame();\n    requestAnimationFrame(loop);\n  }\n  function smooth() {\n    if (!window.Lenis || !desktop || reduce) return;\n    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });\n    window.__lpLenis = lenis;\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n  function start() {\n    if (started) return;\n    started = true;\n    if (edit() || reduce) {\n      document.documentElement.classList.add('lp-static');\n      scenes.forEach(function (s) { if (s.done) s.done(); });\n      return;\n    }\n    var p = Promise.resolve();\n    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });\n    if (desktop && !window.Lenis) p = p.then(function () { return load(CDN.lenis); });\n    p.then(function () {\n      scenes.forEach(function (s) { if (s.init) s.init(window.gsap); });\n      smooth();\n      var dirty = function () { needLayout = true; };\n      window.addEventListener('resize', dirty);\n      window.addEventListener('load', dirty);\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(dirty);\n      if (window.ResizeObserver) new ResizeObserver(dirty).observe(document.body);\n      requestAnimationFrame(loop);\n    });\n  }\n\n  window.lpScroll = {\n    /* stage: o palco (.lp-stage) dentro da trilha (.lp-track).\n       opts.init(gsap): prepara a cena; opts.update(p, enter): progresso da trilha (0–1) e da\n       entrada da seção na tela (0–1); opts.done(): estado final (editor, movimento reduzido). */\n    scene: function (stage, opts) {\n      if (!stage) return;\n      var track = stage.closest('.lp-track') || stage;\n      scenes.push({ stage: stage, track: track, init: opts.init, fn: opts.update, done: opts.done, p: -1, enter: -1 });\n      needLayout = true;\n    },\n    reduce: reduce\n  };\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });\n  else setTimeout(start, 0);\n})();\n/* Notebook da seção 04: o palco fica preso na tela (sticky) e o notebook abre com o scroll.\n   Etapas: a tampa sobe (0–55%), a tela acende (45–70%) e a página rola no leitor (70–100%).\n   O motor (lp-boot.js) entrega o progresso. No editor e com movimento reduzido, fica aberto. */\n(function () {\n  if (window.__lpLaptop) return;\n  window.__lpLaptop = true;\n  var clamp = function (v) { return Math.min(1, Math.max(0, v)); };\n\n  function init() {\n    Array.prototype.forEach.call(document.querySelectorAll('.lp-laptop'), function (el) {\n      var set = function (p) {\n        var a = clamp(p / 0.55), e = 1 - Math.pow(1 - a, 3);\n        el.style.setProperty('--lid', (-80 + 80 * e).toFixed(2) + 'deg');\n        el.style.setProperty('--lit', clamp((p - 0.45) / 0.25).toFixed(3));\n        el.style.setProperty('--scroll', (-26 * clamp((p - 0.7) / 0.3)).toFixed(2) + '%');\n      };\n      set(0);\n      // A página do guia carrega logo: o lazy load do WordPress não \"vê\" a imagem com a tampa inclinada.\n      Array.prototype.forEach.call(el.querySelectorAll('.lp-screen-page img'), function (img) {\n        img.loading = 'eager';\n        img.removeAttribute('loading');\n        if (img.dataset && img.dataset.src && !img.getAttribute('src')) img.src = img.dataset.src;\n        if (img.dataset && img.dataset.lazySrc) img.src = img.dataset.lazySrc;\n        if (img.dataset && img.dataset.srcset) img.srcset = img.dataset.srcset;\n      });\n      window.lpScroll.scene(el.closest('.lp-stage') || el, {\n        update: function (p) { set(p); },\n        done: function () { set(1); }\n      });\n    });\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+                        "html": "<style>\n/* Cenas presas no scroll: trilha alta (.lp-track) + palco preso na tela (.lp-stage, sticky).\n   O comprimento da trilha define quanto se rola com a cena parada. */\nhtml, body { overflow-x: clip !important; }\n#page, .site, .site-content, #content, .site-main, .elementor { overflow-x: clip !important; overflow-y: visible !important; }\n.lp-track { position: relative; display: block !important; padding: 0 !important; min-height: 0 !important; overflow: visible !important; }\n.lp-track--dor { height: 400vh; }\n.lp-track--crit { height: 330vh; }\n.lp-track--laptop { height: 260vh; }\n.lp-stage { position: sticky !important; top: 0; height: 100vh; height: 100svh; }\n.lp-stage--center { display: flex !important; flex-direction: column; justify-content: center; align-items: center; }\n@media (max-width: 767px) {\n  .lp-track--crit { height: 270vh; }\n  .lp-track--laptop { height: 220vh; }\n  /* Na cena do paciente, cena e card empilhados não cabem numa tela: sem palco preso, a cena\n     avança enquanto a seção passa pela tela. */\n  .lp-track--dor { height: auto; }\n  .lp-track--dor > .lp-stage { position: relative !important; height: auto; }\n}\n/* Editor do Elementor e movimento reduzido: tudo no fluxo normal. */\n.elementor-editor-active .lp-track, .lp-static .lp-track { height: auto !important; }\n.elementor-editor-active .lp-stage, .lp-static .lp-stage { position: relative !important; height: auto; }\n/* Notebook que abre com o scroll (seção 04). A tampa gira na dobradiça (--lid), a tela acende\n   (--lit) e a página do guia rola de leve dentro do leitor (--scroll). */\n.lp-laptop { --lid: 0deg; --lit: 1; --scroll: 0%; }\n.lp-lid { position: relative; width: 84% !important; aspect-ratio: 16 / 10; transform-origin: 50% 100%;\n  transform: perspective(1400px) rotateX(var(--lid)); background: transparent !important; }\n/* A tampa nunca passa de 80°, então o verso nunca aparece: sem preserve-3d nem backface-visibility,\n   que no Safari/Chrome do celular fazem a imagem dentro da tela não ser desenhada. */\n.lp-lid-front { position: absolute !important; left: 0; top: 0; width: 100% !important; height: 100%; }\n.lp-lid-back { display: none !important; }\n.lp-screen { width: 100% !important; height: 100%; }\n.lp-screen-content { opacity: calc(.18 + .82 * var(--lit)); /* nunca some: tela \"desligada\" ainda mostra a página */ flex: 1 1 auto; min-height: 0; overflow: hidden; }\n.lp-screen-page { width: 60% !important; max-width: 60%; }\n.lp-screen-page img { display: block; width: 100% !important; height: auto !important; max-width: 100%; transform: translateY(var(--scroll)); }\n.lp-base { width: 100% !important; }\n@media (max-width: 767px) { .lp-lid { width: 92% !important; } .lp-screen-page { width: 70% !important; max-width: 70%; } }\n@media (prefers-reduced-motion: reduce) { .lp-lid { transform: none; } .lp-screen-content { opacity: 1; } .lp-screen-page img { transform: none; } }\n</style>\n<script>\n/* Motor das cenas presas no scroll (03 Dor, 03b Sem critério, notebook da 04). Vai repetido nos\n   widgets que usam cenas, mas só a primeira cópia roda.\n\n   Sem \"pin\" por JavaScript: cada cena fica num palco (.lp-stage) com position: sticky dentro de uma\n   trilha alta (.lp-track). Quem segura o palco na tela é o próprio navegador, sem tremor e sem troca\n   de camada. Este motor só mede quanto da trilha já foi rolado (0 → 1) e entrega esse progresso\n   para cada cena, no mesmo quadro da rolagem. No desktop, a rolagem suave (Lenis) roda no mesmo laço. */\n(function () {\n  if (window.lpScroll) return;\n  var CDN = {\n    gsap: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js',\n    lenis: 'https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js'\n  };\n  var scenes = [], started = false, needLayout = true, lastY = -1, lenis = null;\n  var clamp = function (v) { return v < 0 ? 0 : v > 1 ? 1 : v; };\n  var edit = function () {\n    return document.body.classList.contains('elementor-editor-active') ||\n      !!(window.elementorFrontend && elementorFrontend.isEditMode && elementorFrontend.isEditMode());\n  };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var desktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;\n\n  function load(src) {\n    return new Promise(function (ok) {\n      var s = document.createElement('script');\n      s.src = src; s.onload = ok; s.onerror = ok;\n      document.head.appendChild(s);\n    });\n  }\n\n  // Mede a posição das trilhas (só quando o layout muda; nunca a cada quadro).\n  function layout() {\n    needLayout = false;\n    var y = window.scrollY, vh = window.innerHeight;\n    scenes.forEach(function (s) {\n      var r = s.track.getBoundingClientRect();\n      s.top = r.top + y;\n      s.height = r.height;\n      s.stageH = s.stage.offsetHeight;\n      s.sticky = getComputedStyle(s.stage).position === 'sticky' && s.height > s.stageH + 10;\n      s.vh = vh;\n    });\n  }\n  function frame() {\n    if (needLayout) { layout(); lastY = -1; }\n    var y = window.scrollY;\n    if (y === lastY) return;\n    lastY = y;\n    scenes.forEach(function (s) {\n      var p, enter = clamp((y + s.vh - s.top) / s.vh);\n      if (s.sticky) p = clamp((y - s.top) / (s.height - s.stageH));\n      else p = clamp((y + s.vh * 0.65 - s.top) / Math.max(1, s.height)); // celular sem palco preso\n      if (p !== s.p || enter !== s.enter) { s.p = p; s.enter = enter; s.fn(p, enter); }\n    });\n  }\n  function loop(t) {\n    if (lenis) lenis.raf(t);\n    frame();\n    requestAnimationFrame(loop);\n  }\n  function smooth() {\n    if (!window.Lenis || !desktop || reduce) return;\n    lenis = new Lenis({ lerp: 0.1, smoothWheel: true });\n    window.__lpLenis = lenis;\n    document.addEventListener('click', function (e) {\n      var a = e.target.closest && e.target.closest('a[href^=\"#\"]');\n      if (!a) return;\n      var id = a.getAttribute('href');\n      var target = id.length > 1 && document.querySelector(id);\n      if (!target) return;\n      e.preventDefault();\n      e.stopImmediatePropagation();\n      lenis.scrollTo(target, { offset: -50 });\n    }, true);\n  }\n  function start() {\n    if (started) return;\n    started = true;\n    if (edit() || reduce) {\n      document.documentElement.classList.add('lp-static');\n      scenes.forEach(function (s) { if (s.done) s.done(); });\n      return;\n    }\n    var p = Promise.resolve();\n    if (!window.gsap) p = p.then(function () { return load(CDN.gsap); });\n    if (desktop && !window.Lenis) p = p.then(function () { return load(CDN.lenis); });\n    p.then(function () {\n      scenes.forEach(function (s) { if (s.init) s.init(window.gsap); });\n      smooth();\n      var dirty = function () { needLayout = true; };\n      window.addEventListener('resize', dirty);\n      window.addEventListener('load', dirty);\n      if (document.fonts && document.fonts.ready) document.fonts.ready.then(dirty);\n      if (window.ResizeObserver) new ResizeObserver(dirty).observe(document.body);\n      requestAnimationFrame(loop);\n    });\n  }\n\n  window.lpScroll = {\n    /* stage: o palco (.lp-stage) dentro da trilha (.lp-track).\n       opts.init(gsap): prepara a cena; opts.update(p, enter): progresso da trilha (0–1) e da\n       entrada da seção na tela (0–1); opts.done(): estado final (editor, movimento reduzido). */\n    scene: function (stage, opts) {\n      if (!stage) return;\n      var track = stage.closest('.lp-track') || stage;\n      scenes.push({ stage: stage, track: track, init: opts.init, fn: opts.update, done: opts.done, p: -1, enter: -1 });\n      needLayout = true;\n    },\n    reduce: reduce\n  };\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { setTimeout(start, 0); });\n  else setTimeout(start, 0);\n})();\n/* Notebook da seção 04: o palco fica preso na tela (sticky) e o notebook abre com o scroll.\n   Etapas: a tampa sobe (0–45%), a tela acende (30–50%) e a página rola no leitor (70–100%).\n   O motor (lp-boot.js) entrega o progresso. No editor e com movimento reduzido, fica aberto. */\n(function () {\n  if (window.__lpLaptop) return;\n  window.__lpLaptop = true;\n  var clamp = function (v) { return Math.min(1, Math.max(0, v)); };\n\n  function init() {\n    Array.prototype.forEach.call(document.querySelectorAll('.lp-laptop'), function (el) {\n      var set = function (p) {\n        var a = clamp(p / 0.45), e = 1 - Math.pow(1 - a, 3);\n        el.style.setProperty('--lid', (-80 + 80 * e).toFixed(2) + 'deg');\n        el.style.setProperty('--lit', clamp((p - 0.3) / 0.2).toFixed(3));\n        el.style.setProperty('--scroll', (-26 * clamp((p - 0.7) / 0.3)).toFixed(2) + '%');\n      };\n      set(0);\n      // A página do guia carrega logo: o lazy load do WordPress não \"vê\" a imagem com a tampa inclinada.\n      Array.prototype.forEach.call(el.querySelectorAll('.lp-screen-page img'), function (img) {\n        img.loading = 'eager';\n        img.removeAttribute('loading');\n        if (img.dataset && img.dataset.src && !img.getAttribute('src')) img.src = img.dataset.src;\n        if (img.dataset && img.dataset.lazySrc) img.src = img.dataset.lazySrc;\n        if (img.dataset && img.dataset.srcset) img.srcset = img.dataset.srcset;\n      });\n      window.lpScroll.scene(el.closest('.lp-stage') || el, {\n        update: function (p) { set(p); },\n        done: function () { set(1); }\n      });\n    });\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
                         "_title": "Notebook · estilos e animação (não apagar)",
                         "_position": "absolute",
                         "_element_width": "initial",
@@ -1347,7 +1362,7 @@
                       "elType": "widget"
                     },
                     {
-                      "id": "7621c8c",
+                      "id": "3d222837",
                       "settings": {
                         "flex_gap": {
                           "column": "0",
@@ -1371,7 +1386,7 @@
                       },
                       "elements": [
                         {
-                          "id": "7a28b5ea",
+                          "id": "23ee0891",
                           "settings": {
                             "flex_gap": {
                               "column": "0",
@@ -1426,7 +1441,7 @@
                           },
                           "elements": [
                             {
-                              "id": "6d187c45",
+                              "id": "2627d3b9",
                               "settings": {
                                 "flex_gap": {
                                   "column": "0",
@@ -1466,7 +1481,7 @@
                               },
                               "elements": [
                                 {
-                                  "id": "271fbc29",
+                                  "id": "575bd967",
                                   "settings": {
                                     "flex_gap": {
                                       "column": "12",
@@ -1506,7 +1521,7 @@
                                   },
                                   "elements": [
                                     {
-                                      "id": "8899a01",
+                                      "id": "3d64fac9",
                                       "settings": {
                                         "flex_gap": {
                                           "column": "5",
@@ -1542,7 +1557,7 @@
                                       },
                                       "elements": [
                                         {
-                                          "id": "502b551c",
+                                          "id": "3d7d25b6",
                                           "settings": {
                                             "flex_gap": {
                                               "column": "0",
@@ -1596,7 +1611,7 @@
                                           "elType": "container"
                                         },
                                         {
-                                          "id": "76010b02",
+                                          "id": "193b658e",
                                           "settings": {
                                             "flex_gap": {
                                               "column": "0",
@@ -1650,7 +1665,7 @@
                                           "elType": "container"
                                         },
                                         {
-                                          "id": "7ef84a35",
+                                          "id": "15f75779",
                                           "settings": {
                                             "flex_gap": {
                                               "column": "0",
@@ -1708,7 +1723,7 @@
                                       "elType": "container"
                                     },
                                     {
-                                      "id": "4eaa6b6e",
+                                      "id": "1e2af55a",
                                       "settings": {
                                         "title": "Guia Prático · Intercorrências com Alinhadores.pdf",
                                         "header_size": "p",
@@ -1744,7 +1759,7 @@
                                       "elType": "widget"
                                     },
                                     {
-                                      "id": "3690a5d",
+                                      "id": "247b3609",
                                       "settings": {
                                         "title": "p. 05",
                                         "header_size": "p",
@@ -1785,7 +1800,7 @@
                                   "elType": "container"
                                 },
                                 {
-                                  "id": "2de28732",
+                                  "id": "3bf89e15",
                                   "settings": {
                                     "flex_gap": {
                                       "column": "0",
@@ -1811,11 +1826,11 @@
                                   },
                                   "elements": [
                                     {
-                                      "id": "6f93c2a6",
+                                      "id": "35447516",
                                       "settings": {
                                         "image": {
-                                          "id": "80",
-                                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/guia-pagina-intercorrencia-01-1.webp",
+                                          "id": "134",
+                                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/guia-pagina-intercorrencia-01-1-1.webp",
                                           "alt": "Página do guia: Intercorrência 01, Alinhador não encaixa de forma generalizada"
                                         },
                                         "image_size": "full",
@@ -1882,7 +1897,7 @@
                           "elType": "container"
                         },
                         {
-                          "id": "5012a726",
+                          "id": "125ee06d",
                           "settings": {
                             "flex_gap": {
                               "column": "0",
@@ -1923,7 +1938,7 @@
                           },
                           "elements": [
                             {
-                              "id": "4937c325",
+                              "id": "70352d62",
                               "settings": {
                                 "selected_icon": {
                                   "value": "fas fa-tooth",
@@ -1953,7 +1968,7 @@
                       "elType": "container"
                     },
                     {
-                      "id": "1be463dc",
+                      "id": "4badc46d",
                       "settings": {
                         "flex_gap": {
                           "column": "0",
@@ -2011,7 +2026,7 @@
                       },
                       "elements": [
                         {
-                          "id": "43bdf92",
+                          "id": "20e17ef7",
                           "settings": {
                             "flex_gap": {
                               "column": "0",
@@ -2068,11 +2083,11 @@
                       "elType": "container"
                     },
                     {
-                      "id": "65125a2b",
+                      "id": "60278811",
                       "settings": {
                         "editor": "<p>O guia abre como no seu computador, pronto para consultar na cadeira.</p>",
                         "align": "center",
-                        "text_color": "#4A5F73",
+                        "text_color": "#C3D6E3",
                         "typography_typography": "custom",
                         "typography_font_family": "Montserrat",
                         "typography_font_size": {
@@ -2113,7 +2128,9 @@
                   "isInner": true,
                   "elType": "container"
                 }
-              ]
+              ],
+              "isInner": true,
+              "elType": "container"
             }
           ]
         }
@@ -2122,7 +2139,9 @@
       "elType": "container"
     }
   ],
-  "page_settings": [],
+  "page_settings": {
+    "custom_css": "p{\n    margin: 0px;\n}"
+  },
   "version": "0.4",
   "title": "LP Alinhadores · 04 Apresentação (notebook, correção celular)",
   "type": "container"
