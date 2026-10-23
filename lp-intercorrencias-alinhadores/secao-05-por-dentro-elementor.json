@@ -1,0 +1,759 @@
+{
+  "content": [
+    {
+      "id": "30b1f385",
+      "settings": {
+        "flex_gap": {
+          "column": "48",
+          "row": "48",
+          "isLinked": true,
+          "unit": "px",
+          "size": 48
+        },
+        "padding": {
+          "unit": "px",
+          "top": "110",
+          "right": "24",
+          "bottom": "110",
+          "left": "24",
+          "isLinked": false
+        },
+        "content_width": "full",
+        "html_tag": "section",
+        "flex_direction": "column",
+        "padding_tablet": {
+          "unit": "px",
+          "top": "96",
+          "right": "24",
+          "bottom": "96",
+          "left": "24",
+          "isLinked": false
+        },
+        "padding_mobile": {
+          "unit": "px",
+          "top": "72",
+          "right": "16",
+          "bottom": "72",
+          "left": "16",
+          "isLinked": false
+        },
+        "css_classes": "lp lp-inside lp-orbits",
+        "_element_id": "por-dentro",
+        "flex_align_items": "center",
+        "background_background": "gradient",
+        "background_color": "#0E3C5E",
+        "background_color_b": "#011324",
+        "background_color_b_stop": {
+          "unit": "%",
+          "size": 70,
+          "sizes": []
+        },
+        "background_gradient_type": "radial",
+        "_title": "05 · Veja o guia por dentro (#por-dentro)",
+        "__globals__": {
+          "background_color": "",
+          "background_color_b": ""
+        }
+      },
+      "elements": [
+        {
+          "id": "791eb1a7",
+          "settings": {
+            "flex_gap": {
+              "column": "16",
+              "row": "16",
+              "isLinked": true,
+              "unit": "px",
+              "size": 16
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "boxed_width": {
+              "unit": "px",
+              "size": 720,
+              "sizes": []
+            },
+            "_title": "Título",
+            "animation": "fadeInUp",
+            "animation_duration": "fast"
+          },
+          "elements": [
+            {
+              "id": "6755d2f2",
+              "settings": {
+                "title": "Veja o guia por dentro",
+                "header_size": "p",
+                "align": "center",
+                "title_color": "#00C2C7",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 12,
+                  "sizes": []
+                },
+                "typography_font_weight": "700",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.3,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": 3,
+                  "sizes": []
+                },
+                "typography_text_transform": "uppercase",
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                },
+                "_css_classes": "lp-eyebrow lp-eyebrow--center"
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            },
+            {
+              "id": "245be82",
+              "settings": {
+                "title": "Veja como <span class=\"lp-hl\">cada intercorrência</span> está organizada.",
+                "align": "center",
+                "title_color": "#FFFFFF",
+                "typography_typography": "custom",
+                "typography_font_family": "Montserrat",
+                "typography_font_size": {
+                  "unit": "px",
+                  "size": 42,
+                  "sizes": []
+                },
+                "typography_font_weight": "800",
+                "typography_line_height": {
+                  "unit": "em",
+                  "size": 1.15,
+                  "sizes": []
+                },
+                "typography_letter_spacing": {
+                  "unit": "px",
+                  "size": -0.5,
+                  "sizes": []
+                },
+                "typography_font_size_tablet": {
+                  "unit": "px",
+                  "size": 36,
+                  "sizes": []
+                },
+                "typography_font_size_mobile": {
+                  "unit": "px",
+                  "size": 28,
+                  "sizes": []
+                },
+                "__globals__": {
+                  "title_color": "",
+                  "typography_typography": ""
+                }
+              },
+              "elements": [],
+              "isInner": false,
+              "widgetType": "heading",
+              "elType": "widget"
+            }
+          ],
+          "isInner": true,
+          "elType": "container"
+        },
+        {
+          "id": "3c574ec",
+          "elType": "container",
+          "isInner": true,
+          "settings": {
+            "flex_gap": {
+              "column": "0",
+              "row": "0",
+              "isLinked": true,
+              "unit": "px",
+              "size": 0
+            },
+            "padding": {
+              "unit": "px",
+              "top": "0",
+              "right": "0",
+              "bottom": "0",
+              "left": "0",
+              "isLinked": true
+            },
+            "content_width": "boxed",
+            "flex_direction": "column",
+            "flex_align_items": "center",
+            "boxed_width": {
+              "unit": "px",
+              "size": 1200,
+              "sizes": []
+            },
+            "_title": "Carrossel"
+          },
+          "elements": [
+            {
+              "id": "3cb3762",
+              "elType": "widget",
+              "isInner": false,
+              "widgetType": "html",
+              "settings": {
+                "html": "<style>\n/* 05 · Por dentro: coverflow 3D automático das páginas do guia.\n   Os itens são containers nativos (imagem + legenda); o script só define posição, giro e escala de\n   cada um (variáveis --x, --s, --r, --o, --b) e a página do centro avança sozinha. */\n.lp-flow { --w: clamp(220px, 24vw, 320px); --t: .9s; position: relative; width: 100% !important;\n  height: calc(var(--w) * 1.417 + 90px); perspective: 1400px; perspective-origin: 50% 40%; display: block !important;\n  touch-action: pan-y; user-select: none; -webkit-user-select: none; }\n.lp-flow-item { position: absolute !important; left: 50%; top: 18px; width: var(--w) !important; margin: 0 !important;\n  --x: 0; --s: 1; --r: 0; --o: 1; --b: 1;\n  transform: translateX(-50%) translateX(calc(var(--x) * var(--w))) rotateY(calc(var(--r) * 1deg)) scale(var(--s));\n  opacity: var(--o); z-index: var(--z, 1); transition: transform var(--t) cubic-bezier(.22, .8, .2, 1), opacity var(--t), filter var(--t);\n  filter: brightness(var(--b)); cursor: pointer; }\n.lp-flow-item.is-active { cursor: zoom-in; }\n.lp-flow-item .lp-page-img img { display: block; width: 100%; height: auto; border-radius: 6px;\n  -webkit-box-reflect: below 6px linear-gradient(transparent 72%, rgba(255, 255, 255, .16)); }\n.lp-flow-item .lp-page-cap { opacity: 0; transform: translateY(8px); transition: opacity .5s, transform .5s; }\n.lp-flow-item.is-active .lp-page-cap { opacity: 1; transform: none; transition-delay: .25s; }\n.lp-flow-item.is-active .lp-page-img img { box-shadow: 0 34px 70px -24px rgba(0, 0, 0, .75), 0 0 0 1px rgba(126, 211, 230, .25); }\n@media (hover: hover) and (min-width: 1025px) {\n  .lp-flow-item.is-active:hover .lp-page-img img { transform: translateY(-6px); transition: transform .4s cubic-bezier(.22, .8, .2, 1); }\n}\n.lp-flow-glow { position: absolute; left: 50%; top: 42%; width: calc(var(--w) * 2.2); aspect-ratio: 1; transform: translate(-50%, -50%);\n  border-radius: 50%; background: radial-gradient(circle, rgba(0, 194, 199, .32), rgba(0, 194, 199, 0) 65%); pointer-events: none; z-index: 0; }\n\n/* Navegação: setas, bolinhas e a barra de tempo da bolinha ativa */\n.lp-flow-nav { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 4px; }\n.lp-flow-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(126, 211, 230, .3); background: rgba(255, 255, 255, .04);\n  color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .25s, border-color .25s, transform .25s; padding: 0; }\n.lp-flow-btn:hover { background: #00C2C7; border-color: #00C2C7; color: #011324; transform: scale(1.06); }\n.lp-flow-btn svg { width: 16px; height: 16px; }\n.lp-flow-dots { display: flex; gap: 8px; align-items: center; }\n.lp-flow-dot { width: 8px; height: 8px; border-radius: 99px; border: 0; padding: 0; background: rgba(126, 211, 230, .3); cursor: pointer;\n  position: relative; overflow: hidden; transition: width .4s cubic-bezier(.22, .8, .2, 1), background .3s; }\n.lp-flow-dot.is-active { width: 40px; background: rgba(126, 211, 230, .25); }\n.lp-flow-dot.is-active::after { content: \"\"; position: absolute; inset: 0; background: #00C2C7; transform-origin: left; transform: scaleX(0);\n  animation: lpFlowTime var(--dur, 3.2s) linear forwards; }\n.lp-flow.is-paused + .lp-flow-nav .lp-flow-dot.is-active::after { animation-play-state: paused; }\n@keyframes lpFlowTime { to { transform: scaleX(1); } }\n\n@media (max-width: 767px) {\n  .lp-flow { --w: 58vw; height: calc(var(--w) * 1.417 + 84px); }\n}\n\n/* Editor do Elementor e sem script: páginas lado a lado, para editar com facilidade. */\n.elementor-editor-active .lp-flow, .lp-flow:not(.is-ready) { display: flex !important; height: auto; gap: 16px; overflow-x: auto; perspective: none; }\n.elementor-editor-active .lp-flow-item, .lp-flow:not(.is-ready) .lp-flow-item { position: relative !important; left: auto; top: auto;\n  transform: none; opacity: 1; filter: none; flex: 0 0 var(--w); }\n.lp-flow:not(.is-ready) .lp-page-cap { opacity: 1; transform: none; }\n@media (prefers-reduced-motion: reduce) { .lp-flow { --t: 0s; } .lp-flow-dot.is-active::after { animation: none; transform: scaleX(1); } }\n</style>\n<script>\n/* 05 · Por dentro: coverflow 3D automático. A página do centro avança sozinha a cada 3,2 s, pausa\n   com o mouse em cima, aceita arrastar e clique nas laterais (traz para o centro); o clique na página\n   do centro abre a ampliação do Elementor. Só anima com a seção na tela. */\n(function () {\n  if (window.__lpFlow) return;\n  window.__lpFlow = true;\n  var DUR = 3200;\n  var LEVELS = { // distância do centro: deslocamento (em larguras), escala, giro, opacidade, brilho\n    desktop: [[0, 1, 0, 1, 1], [0.7, 0.8, -28, 0.9, 0.72], [1.25, 0.64, -38, 0.55, 0.5]],\n    mobile: [[0, 1, 0, 1, 1], [0.62, 0.8, -26, 0.85, 0.7], [1.05, 0.62, -34, 0.0, 0.5]]\n  };\n  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n  var svg = function (d) { return '<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"' + d + '\"/></svg>'; };\n\n  function setup(flow) {\n    var items = Array.prototype.filter.call(flow.children, function (c) { return c.classList.contains('lp-flow-item'); });\n    var n = items.length;\n    if (n < 2) return;\n    var active = 0, timer = null, visible = false, hover = false, mobile = false;\n\n    var glow = document.createElement('div'); glow.className = 'lp-flow-glow'; flow.insertBefore(glow, flow.firstChild);\n    var nav = document.createElement('div'); nav.className = 'lp-flow-nav';\n    nav.innerHTML = '<button type=\"button\" class=\"lp-flow-btn\" aria-label=\"Página anterior\">' + svg('M15 5l-7 7 7 7') + '</button>' +\n      '<div class=\"lp-flow-dots\" role=\"tablist\"></div>' +\n      '<button type=\"button\" class=\"lp-flow-btn\" aria-label=\"Próxima página\">' + svg('M9 5l7 7-7 7') + '</button>';\n    flow.parentNode.insertBefore(nav, flow.nextSibling);\n    var dotsBox = nav.querySelector('.lp-flow-dots'), dots = [];\n    items.forEach(function (it, i) {\n      var d = document.createElement('button');\n      d.type = 'button'; d.className = 'lp-flow-dot'; d.setAttribute('aria-label', 'Ir para a página ' + (i + 1));\n      d.addEventListener('click', function () { go(i); });\n      dotsBox.appendChild(d); dots.push(d);\n    });\n    nav.firstChild.addEventListener('click', function () { go(active - 1); });\n    nav.lastChild.addEventListener('click', function () { go(active + 1); });\n    flow.style.setProperty('--dur', DUR + 'ms');\n\n    function layout() {\n      mobile = window.matchMedia('(max-width: 767px)').matches;\n      var L = mobile ? LEVELS.mobile : LEVELS.desktop;\n      items.forEach(function (it, i) {\n        var d = ((i - active) % n + n) % n;\n        if (d > n / 2) d -= n;                                  // distância com sinal, dando a volta\n        var a = Math.abs(d), s = d < 0 ? -1 : 1, v = L[Math.min(a, 2)];\n        it.style.setProperty('--x', (s * v[0]).toFixed(3));\n        it.style.setProperty('--s', v[1]);\n        it.style.setProperty('--r', (s * v[2]).toFixed(1));\n        it.style.setProperty('--o', a > 2 ? 0 : v[3]);\n        it.style.setProperty('--b', v[4]);\n        it.style.setProperty('--z', 10 - a);\n        it.classList.toggle('is-active', a === 0);\n        it.setAttribute('aria-hidden', a === 0 ? 'false' : 'true');\n      });\n      dots.forEach(function (d, i) {\n        d.classList.remove('is-active');\n        if (i === active) { void d.offsetWidth; d.classList.add('is-active'); } // reinicia a barra de tempo\n      });\n    }\n    function go(i) { active = ((i % n) + n) % n; layout(); schedule(); }\n    function schedule() {\n      clearTimeout(timer);\n      var run = visible && !hover && !reduce && !document.hidden;\n      flow.classList.toggle('is-paused', !run);\n      if (run) timer = setTimeout(function () { go(active + 1); }, DUR);\n    }\n\n    // Clique: lateral vem para o centro; centro abre a ampliação (lightbox do Elementor).\n    var dragX = null, dragged = false;\n    flow.addEventListener('click', function (e) {\n      var it = e.target.closest('.lp-flow-item');\n      if (dragged || (it && !it.classList.contains('is-active'))) {\n        e.preventDefault(); e.stopPropagation();\n        if (!dragged && it) go(items.indexOf(it));\n      }\n      dragged = false;\n    }, true);\n    flow.addEventListener('pointerdown', function (e) { dragX = e.clientX; dragged = false; });\n    window.addEventListener('pointerup', function (e) {\n      if (dragX === null) return;\n      var dx = e.clientX - dragX; dragX = null;\n      if (Math.abs(dx) > 40) { dragged = true; go(active + (dx < 0 ? 1 : -1)); }\n    });\n    flow.addEventListener('dragstart', function (e) { e.preventDefault(); });\n    flow.addEventListener('mouseenter', function () { hover = true; schedule(); });\n    flow.addEventListener('mouseleave', function () { hover = false; schedule(); });\n    document.addEventListener('visibilitychange', schedule);\n    window.addEventListener('resize', function () { var m = window.matchMedia('(max-width: 767px)').matches; if (m !== mobile) layout(); });\n    if ('IntersectionObserver' in window) {\n      new IntersectionObserver(function (e) { visible = e[0].isIntersecting; schedule(); }, { threshold: 0.25 }).observe(flow);\n    } else { visible = true; }\n\n    layout();\n    flow.classList.add('is-ready');\n    schedule();\n  }\n\n  function init() {\n    if (document.body.classList.contains('elementor-editor-active')) return;\n    Array.prototype.forEach.call(document.querySelectorAll('.lp-flow'), setup);\n  }\n  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);\n  else init();\n})();\n</script>",
+                "_title": "Carrossel · estilos e animação (não apagar)",
+                "_position": "absolute",
+                "_element_width": "initial",
+                "_element_custom_width": {
+                  "unit": "px",
+                  "size": 0,
+                  "sizes": []
+                }
+              },
+              "elements": []
+            },
+            {
+              "id": "f227bc5",
+              "elType": "container",
+              "isInner": true,
+              "settings": {
+                "flex_gap": {
+                  "column": "0",
+                  "row": "0",
+                  "isLinked": true,
+                  "unit": "px",
+                  "size": 0
+                },
+                "padding": {
+                  "unit": "px",
+                  "top": "0",
+                  "right": "0",
+                  "bottom": "0",
+                  "left": "0",
+                  "isLinked": true
+                },
+                "content_width": "full",
+                "flex_direction": "column",
+                "css_classes": "lp-flow",
+                "flex_wrap_mobile": "nowrap",
+                "_title": "Páginas do guia (coverflow automático)"
+              },
+              "elements": [
+                {
+                  "id": "4bee9ea5",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "_title": "Página p.06",
+                    "css_classes": "lp-flow-item",
+                    "flex_wrap_mobile": "nowrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "427a5844",
+                      "settings": {
+                        "image": {
+                          "id": 238,
+                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/rectangle_6_1x.webp",
+                          "alt": "Página do guia: Sinais, avaliação e conduta em uma página",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "align": "center",
+                        "link_to": "file",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "open_lightbox": "yes",
+                        "_css_classes": "lp-page-img"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "40bdade5",
+                      "settings": {
+                        "title": "Sinais, avaliação e conduta em uma página",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#C3D6E3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-page-cap"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "3a91d34b",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "_title": "Página p.04",
+                    "css_classes": "lp-flow-item",
+                    "flex_wrap_mobile": "nowrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "d417d81",
+                      "settings": {
+                        "image": {
+                          "id": 239,
+                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/rectangle_7_1x.webp",
+                          "alt": "Página do guia: A rotina de checagem para toda consulta de retorno",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "align": "center",
+                        "link_to": "file",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "open_lightbox": "yes",
+                        "_css_classes": "lp-page-img"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "3202e4c1",
+                      "settings": {
+                        "title": "A rotina de checagem para toda consulta de retorno",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#C3D6E3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-page-cap"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "32b13561",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "_title": "Página p.07",
+                    "css_classes": "lp-flow-item",
+                    "flex_wrap_mobile": "nowrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "7c5b50a8",
+                      "settings": {
+                        "image": {
+                          "id": 243,
+                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/rectangle_11_1x.webp",
+                          "alt": "Página do guia: Sinais, avaliação e conduta em uma página",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "align": "center",
+                        "link_to": "file",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "open_lightbox": "yes",
+                        "_css_classes": "lp-page-img"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "598bce5",
+                      "settings": {
+                        "title": "Sinais, avaliação e conduta em uma página",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#C3D6E3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-page-cap"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "3816166a",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "_title": "Página p.12",
+                    "css_classes": "lp-flow-item",
+                    "flex_wrap_mobile": "nowrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "51be8e0b",
+                      "settings": {
+                        "image": {
+                          "id": 242,
+                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/rectangle_10_1x.webp",
+                          "alt": "Página do guia: Sinais, avaliação e conduta em uma página",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "align": "center",
+                        "link_to": "file",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "open_lightbox": "yes",
+                        "_css_classes": "lp-page-img"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "431408a6",
+                      "settings": {
+                        "title": "Sinais, avaliação e conduta em uma página",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#C3D6E3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-page-cap"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                },
+                {
+                  "id": "1da35c46",
+                  "settings": {
+                    "flex_gap": {
+                      "column": "16",
+                      "row": "16",
+                      "isLinked": true,
+                      "unit": "px",
+                      "size": 16
+                    },
+                    "padding": {
+                      "unit": "px",
+                      "top": "0",
+                      "right": "0",
+                      "bottom": "0",
+                      "left": "0",
+                      "isLinked": true
+                    },
+                    "content_width": "full",
+                    "flex_direction": "column",
+                    "flex_align_items": "center",
+                    "_title": "Página p.22",
+                    "css_classes": "lp-flow-item",
+                    "flex_wrap_mobile": "nowrap"
+                  },
+                  "elements": [
+                    {
+                      "id": "72d7c441",
+                      "settings": {
+                        "image": {
+                          "id": 241,
+                          "url": "https://lpjoyce.morganamdesigner.com/wp-content/uploads/2026/10/rectangle_9_1x.webp",
+                          "alt": "Página do guia: Referências em Vancouver, com DOI",
+                          "source": "library",
+                          "size": ""
+                        },
+                        "image_size": "full",
+                        "align": "center",
+                        "link_to": "file",
+                        "width": {
+                          "unit": "%",
+                          "size": 100,
+                          "sizes": []
+                        },
+                        "open_lightbox": "yes",
+                        "_css_classes": "lp-page-img"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "image",
+                      "elType": "widget"
+                    },
+                    {
+                      "id": "5672af7e",
+                      "settings": {
+                        "title": "Referências em Vancouver, com DOI",
+                        "header_size": "p",
+                        "align": "center",
+                        "title_color": "#C3D6E3",
+                        "typography_typography": "custom",
+                        "typography_font_family": "Montserrat",
+                        "typography_font_size": {
+                          "unit": "px",
+                          "size": 14,
+                          "sizes": []
+                        },
+                        "typography_font_weight": "500",
+                        "typography_line_height": {
+                          "unit": "em",
+                          "size": 1.45,
+                          "sizes": []
+                        },
+                        "__globals__": {
+                          "title_color": "",
+                          "typography_typography": ""
+                        },
+                        "_css_classes": "lp-page-cap"
+                      },
+                      "elements": [],
+                      "isInner": false,
+                      "widgetType": "heading",
+                      "elType": "widget"
+                    }
+                  ],
+                  "isInner": true,
+                  "elType": "container"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "774d0d0d",
+          "settings": {
+            "icon_list": [
+              {
+                "_id": "1a34c85",
+                "text": "Toque em uma página para ampliar",
+                "selected_icon": {
+                  "value": "fas fa-search-plus",
+                  "library": "fa-solid"
+                }
+              }
+            ],
+            "space_between": {
+              "unit": "px",
+              "size": 12,
+              "sizes": []
+            },
+            "text_color": "rgba(126, 211, 230, 0.8)",
+            "text_color_hover": "rgba(126, 211, 230, 0.8)",
+            "text_indent": {
+              "unit": "px",
+              "size": 10,
+              "sizes": []
+            },
+            "icon_self_align": "left",
+            "icon_self_vertical_align": "flex-start",
+            "icon_vertical_offset": {
+              "unit": "px",
+              "size": 3,
+              "sizes": []
+            },
+            "icon_color": "#00C2C7",
+            "icon_color_hover": "#00C2C7",
+            "icon_typography_typography": "custom",
+            "icon_typography_font_family": "Montserrat",
+            "icon_typography_font_size": {
+              "unit": "px",
+              "size": 13,
+              "sizes": []
+            },
+            "icon_typography_font_weight": "500",
+            "icon_typography_line_height": {
+              "unit": "em",
+              "size": 1.4,
+              "sizes": []
+            },
+            "icon_align": "center",
+            "__globals__": {
+              "text_color": "",
+              "icon_color": "",
+              "icon_typography_typography": ""
+            }
+          },
+          "elements": [],
+          "isInner": false,
+          "widgetType": "icon-list",
+          "elType": "widget"
+        }
+      ],
+      "isInner": false,
+      "elType": "container"
+    }
+  ],
+  "page_settings": {
+    "custom_css": "p{\n    margin: 0px;\n}"
+  },
+  "version": "0.4",
+  "title": "LP Alinhadores · 05 Por dentro (coverflow automático)",
+  "type": "container"
+}

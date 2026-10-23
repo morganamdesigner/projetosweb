@@ -1,0 +1,48 @@
+/* 05 · Por dentro: coverflow 3D automático das páginas do guia.
+   Os itens são containers nativos (imagem + legenda); o script só define posição, giro e escala de
+   cada um (variáveis --x, --s, --r, --o, --b) e a página do centro avança sozinha. */
+.lp-flow { --w: clamp(220px, 24vw, 320px); --t: .9s; position: relative; width: 100% !important;
+  height: calc(var(--w) * 1.417 + 90px); perspective: 1400px; perspective-origin: 50% 40%; display: block !important;
+  touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.lp-flow-item { position: absolute !important; left: 50%; top: 18px; width: var(--w) !important; margin: 0 !important;
+  --x: 0; --s: 1; --r: 0; --o: 1; --b: 1;
+  transform: translateX(-50%) translateX(calc(var(--x) * var(--w))) rotateY(calc(var(--r) * 1deg)) scale(var(--s));
+  opacity: var(--o); z-index: var(--z, 1); transition: transform var(--t) cubic-bezier(.22, .8, .2, 1), opacity var(--t), filter var(--t);
+  filter: brightness(var(--b)); cursor: pointer; }
+.lp-flow-item.is-active { cursor: zoom-in; }
+.lp-flow-item .lp-page-img img { display: block; width: 100%; height: auto; border-radius: 6px;
+  -webkit-box-reflect: below 6px linear-gradient(transparent 72%, rgba(255, 255, 255, .16)); }
+.lp-flow-item .lp-page-cap { opacity: 0; transform: translateY(8px); transition: opacity .5s, transform .5s; }
+.lp-flow-item.is-active .lp-page-cap { opacity: 1; transform: none; transition-delay: .25s; }
+.lp-flow-item.is-active .lp-page-img img { box-shadow: 0 34px 70px -24px rgba(0, 0, 0, .75), 0 0 0 1px rgba(126, 211, 230, .25); }
+@media (hover: hover) and (min-width: 1025px) {
+  .lp-flow-item.is-active:hover .lp-page-img img { transform: translateY(-6px); transition: transform .4s cubic-bezier(.22, .8, .2, 1); }
+}
+.lp-flow-glow { position: absolute; left: 50%; top: 42%; width: calc(var(--w) * 2.2); aspect-ratio: 1; transform: translate(-50%, -50%);
+  border-radius: 50%; background: radial-gradient(circle, rgba(0, 194, 199, .32), rgba(0, 194, 199, 0) 65%); pointer-events: none; z-index: 0; }
+
+/* Navegação: setas, bolinhas e a barra de tempo da bolinha ativa */
+.lp-flow-nav { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 4px; }
+.lp-flow-btn { width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(126, 211, 230, .3); background: rgba(255, 255, 255, .04);
+  color: #fff; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; transition: background .25s, border-color .25s, transform .25s; padding: 0; }
+.lp-flow-btn:hover { background: #00C2C7; border-color: #00C2C7; color: #011324; transform: scale(1.06); }
+.lp-flow-btn svg { width: 16px; height: 16px; }
+.lp-flow-dots { display: flex; gap: 8px; align-items: center; }
+.lp-flow-dot { width: 8px; height: 8px; border-radius: 99px; border: 0; padding: 0; background: rgba(126, 211, 230, .3); cursor: pointer;
+  position: relative; overflow: hidden; transition: width .4s cubic-bezier(.22, .8, .2, 1), background .3s; }
+.lp-flow-dot.is-active { width: 40px; background: rgba(126, 211, 230, .25); }
+.lp-flow-dot.is-active::after { content: ""; position: absolute; inset: 0; background: #00C2C7; transform-origin: left; transform: scaleX(0);
+  animation: lpFlowTime var(--dur, 3.2s) linear forwards; }
+.lp-flow.is-paused + .lp-flow-nav .lp-flow-dot.is-active::after { animation-play-state: paused; }
+@keyframes lpFlowTime { to { transform: scaleX(1); } }
+
+@media (max-width: 767px) {
+  .lp-flow { --w: 58vw; height: calc(var(--w) * 1.417 + 84px); }
+}
+
+/* Editor do Elementor e sem script: páginas lado a lado, para editar com facilidade. */
+.elementor-editor-active .lp-flow, .lp-flow:not(.is-ready) { display: flex !important; height: auto; gap: 16px; overflow-x: auto; perspective: none; }
+.elementor-editor-active .lp-flow-item, .lp-flow:not(.is-ready) .lp-flow-item { position: relative !important; left: auto; top: auto;
+  transform: none; opacity: 1; filter: none; flex: 0 0 var(--w); }
+.lp-flow:not(.is-ready) .lp-page-cap { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .lp-flow { --t: 0s; } .lp-flow-dot.is-active::after { animation: none; transform: scaleX(1); } }
